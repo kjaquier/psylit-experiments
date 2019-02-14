@@ -69,8 +69,7 @@ def print_tree(tree, prefix=""):
 def match_parents(*y):
 	return lambda token: (t for t in token.ancestors if t.dep_ in y)
 
-def tikenize(doc):
-	
+def tikenize(doc):	
 	roots = (t for t in doc if t.head == t)
 
 	for root in roots:
