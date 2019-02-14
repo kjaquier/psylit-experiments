@@ -63,7 +63,7 @@ testtxt = """
 testdoc = nlp(testtxt)
 
 #%%
-for tree in tokenization.tikenize(testdoc):
+for tree in tikenize(testdoc):
 	print_tree(tree)
 	print("-"*50)
 	#print(" ".join(t.lemma_ for t in tiken))
@@ -87,6 +87,6 @@ with open("counts.txt", "w") as fw:
     for ent, ent_count in sorted(totals.items(), key=lambda x: -x[1])[:100]:
         fw.write(f"{ent.upper()} ({ent_count}):\n")
         fw.write(" "*16)
-        fw.write(", ".join(f"'{i}' ({c})" for i, c in counters[ent].most_common()[:100]) + "\n"*2)
+        fw.write(", ".join(f"'{i}' ({c})" for i, c in counters[ent].most_common()[:1000]) + "\n"*2)
 
 #%%

@@ -13,7 +13,7 @@ from spacy.symbols import nsubj, VERB, ADJ, root
 
 has_info = lambda t: t.dep_ in {'acomp','pobj','neg','iobj','obj','nounmod','nsubjpass'}
 is_entity = lambda t: t.dep == nsubj or t.ent_iob == 'I' or t.lemma_ == '-PRON-'
-is_interesting = lambda t: has_info(t) or is_entity(t)
+is_interesting = lambda t: t.dep_ and (has_info(t) or is_entity(t))
 
 def token_fmt(t):
 	if t.ent_iob == 'I':
@@ -42,15 +42,13 @@ def prune_nodes(nodes):
 	for lefts, token, rights in nodes:
 		lefts = [prune(subtree) for subtree in lefts]
 		rights = [prune(subtree) for subtree in rights]
-		
-		if is_interesting(token):
+				
+		if token.text.strip() and is_interesting(token):
 			yield (lefts, token, rights)
 		
 		else:
 			yield from lefts
 			yield from rights
-
-		break
 		
 def prune(tree):
 	lefts, token, rights = tree
