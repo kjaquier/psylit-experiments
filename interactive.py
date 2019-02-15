@@ -54,11 +54,10 @@ doc = nlp(whole_txt)
 
 #%%
 testtxt = """
-	Alice said that James Bond was attractive. 
-	But James Bond was more attracted to computers. He said Alice was not nice enough.
-	Oscar likes Alice though, but Alice doesn't like Oscar. 
-	Oscar has many friends though James Bond isn't one of them.
+	Alice said that James Bond was attractive, but James was more attracted to computers. He did say Alice was not nice enough.
+	Oscar likes Alice though, but Alice doesn't like him. Although he has many friends, James Bond isn't one of them.
 	James Bond is as sick as a drunk man.
+    George Washington comes to Washington whenever George Do goes to Do.
 """
 testdoc = nlp(testtxt)
 
@@ -83,10 +82,102 @@ totals = {ent: sum(counters[ent].values()) for ent in counters.keys()}
 print("counting done")
 
 #%%
-with open("counts.txt", "w") as fw:
-    for ent, ent_count in sorted(totals.items(), key=lambda x: -x[1])[:100]:
-        fw.write(f"{ent.upper()} ({ent_count}):\n")
-        fw.write(" "*16)
-        fw.write(", ".join(f"'{i}' ({c})" for i, c in counters[ent].most_common()[:1000]) + "\n"*2)
+def write_results(counters, filename, max_subj=None, max_info=None):
+    subjs = sorted(totals.items(), key=lambda x: -x[1])
+    if max_subj:
+        subjs = subjs[:max_subj]
+    with open(filename, "w") as fw:
+        for ent, ent_count in subjs:
+            infos = counters[ent].most_common()
+            if max_info:
+                infos = infos[:max_info]
+            fw.write(f"{ent.upper()} ({ent_count}):\n")
+            fw.write(" "*16)
+            fw.write(", ".join(f"'{i}' ({c})" for i, c in infos) + "\n"*2)
+
+#%%
+import flair
+from flair.data import Sentence
+from flair.models import SequenceTagger
+tagger = SequenceTagger.load('ner-fast')
+import syntok
+from segtok.segmenter import split_single
+
+
+#%%
+sents = [Sentence(sent, use_tokenizer=True) for sent in split_single(testtxt)]
+
+
+for i, sent in enumerate(sents):
+    tagger.predict(sent)
+    print(i, "-"*20)
+    #print(sent.to_tagged_string())
+    for x in sent.get_spans('ner'):
+        print(">",x.text,x.tag)
+    
+    
+#%%
+cnt = defaultdict(Counter)
+for chunk in doc.noun_chunks:
+    if chunk.root.dep_ == 'nsubj':
+        subj = chunk.root.text.upper()
+        info = chunk.root.head.lemma_
+    elif chunk.root.dep_ == 'dobj':
+        subj = chunk.root.text.upper()
+        info = chunk.root.head.lemma_+">"
+    elif chunk.root.dep_ == 'pobj':
+        subj = chunk.root.text.upper()
+        info = " ".join(a.text for a in list(chunk.root.ancestors)[:2][::-1])+">"
+    elif chunk.root.dep_ == 'conj':
+        subj = chunk.root.text.strip().upper() + f"[{chunk.root.dep_}]"
+        #ances = "|".join(t.text for t in list(chunk.root.ancestors)[::-1]))
+        ances = [t.lemma_ for t in chunk.root.ancestors 
+                 if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+        if ances:
+            info = " ".join(ances) + ">"
+        else:
+            continue
+    elif chunk.root.dep_ == 'appos':
+        subj = chunk.root.text.upper() + f"[{chunk.root.dep_}]"
+        ances = [t.lemma_ for t in chunk.root.ancestors 
+                 if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+        descs = [t.lemma_ for t in chunk.root.subtree 
+                 if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+        cnt[subj][" ".join(ances) + ">"] += 1
+        cnt[subj][" ".join(descs)] += 1
+        continue
+    else:
+        subj = f'-NOT IMPL: {chunk.root.dep_}-'
+        ances = list(chunk.root.ancestors)
+        if ances:
+            sent_root = ances[-1]
+            whole_sent_txt = " ".join(t.text for t in sent_root.subtree).strip()
+            info = f"#{chunk.root.text}# {whole_sent_txt}"
+        else:
+            info = chunk.root.text
+
+    #print(repr(subj), repr(info))
+    cnt[subj][info] += 1
+
+totals = {ent: sum(cnt[ent].values()) for ent in cnt.keys()}
+
+print("counting done")
+
+#%%
+
+write_results(cnt,"counts2.txt")
+#%%
+
+# for ent, ent_count in sorted(totals.items(), key=lambda x: -x[1]):
+#     print(f"{ent.upper()} ({ent_count}):")
+#     print(" "*16,end="")
+#     print(", ".join(f"'{i}' ({c})" for i, c in cnt[ent].most_common()[:1000]))
+
+# with open("counts2.txt", "w") as fw:
+#     for ent, ent_count in sorted(totals.items(), key=lambda x: -x[1])[:100]:
+#         fw.write(f"{ent.upper()} ({ent_count}):\n")
+#         fw.write(" "*16)
+#         fw.write(", ".join(f"'{i}' ({c})" for i, c in cnt[ent].most_common()[:1000]) + "\n"*2)
+
 
 #%%
