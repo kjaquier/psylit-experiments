@@ -16,7 +16,7 @@ from os import linesep as EOL
 import re
 
 import pandas as pd
-#from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 import numpy as np
 #import seaborn as sns
 #plt.rcParams['figure.figsize'] = 16,10
@@ -30,7 +30,9 @@ nlp = spacy.load('en')
 from tokenization import *
 
 #%%
-with open('pg4693_FamousAffinitiesOfHistory.txt') as f:
+filename = r'..\tic-personality-words\resources\Text Files\08 David Copperfield text.txt'
+filename = r'pg4693_FamousAffinitiesOfHistory.txt'
+with open(filename, encoding='utf8') as f:
     lines = [l.strip() for l in f.readlines()]
     whole_txt = EOL.join(l for l in lines if l)
     whole_txt = strip_headers(whole_txt)
@@ -140,9 +142,9 @@ for chunk in doc.noun_chunks:
     elif chunk.root.dep_ == 'appos':
         subj = chunk.root.text.upper() + f"[{chunk.root.dep_}]"
         ances = [t.lemma_ for t in chunk.root.ancestors 
-                 if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+                 if t.pos_ in ('VERB', 'NOUN', 'ADP', 'PART')][::-1]
         descs = [t.lemma_ for t in chunk.root.subtree 
-                 if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+                 if t.pos_ in ('VERB', 'NOUN', 'ADP', 'PART')][::-1]
         cnt[subj][" ".join(ances) + ">"] += 1
         cnt[subj][" ".join(descs)] += 1
         continue
@@ -179,5 +181,52 @@ write_results(cnt,"counts2.txt")
 #         fw.write(" "*16)
 #         fw.write(", ".join(f"'{i}' ({c})" for i, c in cnt[ent].most_common()[:1000]) + "\n"*2)
 
+#%%
+from functools import reduce
+
+def coocc_matrix(counters, n_entities, n_words):
+
+    counter_sum = lambda c1, c2: c1 + c2
+    trait_cnt = reduce(lambda c1, c2: c1+c2, counters.values())
+
+    trait_id = {trait: i for i, trait in enumerate(trait_cnt.keys())}
+    most_common_ents = sorted(totals.items(), key=lambda x: -x[1])[:n_entities]
+    X = np.array([
+        [cnt[ent][k]/total for k, total in trait_cnt.most_common()[:n_words]]
+        for ent, _ in most_common_ents
+    ])
+
+    return X
+
+X = coocc_matrix(cnt, 200, 1000)
+
+#%%
+from sklearn.decomposition import PCA, FactorAnalysis, TruncatedSVD
+#pca = PCA()
+#pca.fit(X)
+svd = TruncatedSVD(n_components=100)
+svd.fit(X)
+
+
+#%%
+plt.plot(svd.explained_variance_ratio_)#np.log(s**2/N))
+plt.title("Variance per eigenvectors")
+plt.xlabel("Eigenvector")
+plt.ylabel("Variance")
+plt.show()
+
+#%%
+plt.plot(np.cumsum(svd.explained_variance_ratio_))#np.log(s**2/N))
+plt.title("Cumulative variance per eigenvectors")
+plt.xlabel("Eigenvector")
+plt.ylabel("Variance")
+plt.ylim([0,1])
+plt.show()
+
+
+#%%
+import pickle
+with open("pca.pickle", 'wb') as fw:
+    pickle.dump(pca.explained_variance_, fw, protocol=0) # protocol 0 is printable ASCII
 
 #%%
