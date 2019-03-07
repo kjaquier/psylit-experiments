@@ -162,13 +162,61 @@ def tokenization_by_noun_chunks(doc):
                 info = chunk.root.text
         yield subj, info
 
+def tokenization_by_dep(doc):
+    for chunk in doc.noun_chunks:
+
+        root = chunk.root
+        rootdep = root.dep_
+
+        selected_dep = {'nsubj','dobj','pobj','conj','appos'}
+        selected_pos = {'VERB', 'NOUN', 'ADP', 'PART'}
+
+        if chunk.root.dep_ == 'nsubj':
+            subj = chunk.root.text.upper()
+            info = chunk.root.head.lemma_
+        elif chunk.root.dep_ == 'dobj':
+            subj = chunk.root.text.upper()
+            info = chunk.root.head.lemma_+">"
+        elif chunk.root.dep_ == 'pobj':
+            subj = chunk.root.text.upper()
+            info = " ".join(a.text for a in list(chunk.root.ancestors)[:2][::-1])+">"
+        elif chunk.root.dep_ == 'conj':
+            subj = chunk.root.text.strip().upper() + f"[{chunk.root.dep_}]"
+            #ances = "|".join(t.text for t in list(chunk.root.ancestors)[::-1]))
+            ances = [t.lemma_ for t in chunk.root.ancestors 
+                    if t.pos_ in ('VERB', 'ADP', 'PART')][::-1]
+            if ances:
+                info = " ".join(ances) + ">"
+            else:
+                continue
+        elif chunk.root.dep_ == 'appos':
+            continue
+            subj = chunk.root.text.upper() + f"[{chunk.root.dep_}]"
+            ances = [t.lemma_ for t in chunk.root.ancestors 
+                    if t.pos_ in ('VERB', 'NOUN', 'ADP', 'PART')][::-1]
+            descs = [t.lemma_ for t in chunk.root.subtree 
+                    if t.pos_ in ('VERB', 'NOUN', 'ADP', 'PART')][::-1]
+            cnt[subj][" ".join(ances) + ">"] += 1
+            cnt[subj][" ".join(descs)] += 1
+            continue
+        else:
+            continue
+            subj = f'-NOT IMPL: {chunk.root.dep_}-'
+            ances = list(chunk.root.ancestors)
+            if ances:
+                sent_root = ances[-1]
+                whole_sent_txt = " ".join(t.text for t in sent_root.subtree).strip()
+                info = f"#{chunk.root.text}# {whole_sent_txt}"
+            else:
+                info = chunk.root.text
+        yield subj, info
 
 #%%
 cnt = defaultdict(Counter)
 for subj, info in tokenization_by_noun_chunks(doc):
     cnt[subj][info] += 1
 
-totals = {ent: sum(cnt[ent].values()) for ent in cnt.keys()}
+totals = Counter({ent: sum(cnt[ent].values()) for ent in cnt.keys()})
 
 print("counting done")
 
