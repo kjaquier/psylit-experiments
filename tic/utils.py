@@ -1,7 +1,7 @@
 from itertools import islice
 
-def windowed(seq, window_size=0):
-    for i in range(window_size, len(seq)-window_size):
+def windowed(seq, window_size=0, step=1):
+    for i in range(window_size, len(seq)-window_size, step):
         s = slice(i-window_size, i+window_size+1)
         yield seq[s]
 
