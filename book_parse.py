@@ -45,23 +45,14 @@ def build_pipe(model='en_core_web_sm'):
                      'male.n.02': 'male', 
                      'entity.n.01': 'entity'}
 
-	# hypermatch = myspacy.HypernymMatcher(nlp.vocab, 
-	# 									 hypernym_map,
-	# 								 	 pattern=[{'_': {'in_coref': True}}],
-	# 								     highest_level=2, 
-	# 									 highest_common_level=2,
-	# 									 attr_name='wn_peopletype')
-	#nlp.add_pipe(hypermatch)
+	hmatcher = myspacy.tok_hypernyms_matcher(hypernym_map.keys(),
+													highest_level=10,
+													highest_common_level=0)
 
-	mention_matcher = myspacy.tok_hypernyms_matcher(hypernym_map.keys(),
-													highest_level=2,
-													highest_common_level=2)
 
-	mention_tagger = lambda mention: \
-		{hypernym_map[m] for m in mention_matcher(mention.root)}
-
-	ent_tag = myspacy.EntityTagger(mention_tagger)
-	nlp.add_pipe(ent_tag)
+	ent_cls = entity_classifier(hmatcher)
+	ent_cls_pipe = myspacy.EntityTagger(ent_cls, attr_name='ent_class')
+	nlp.add_pipe(ent_cls_pipe)
 
 	return nlp
 
@@ -97,7 +88,7 @@ def generate_ent_type(ents, level='entity'):
     is_noun = pos == 'NOUN'
     is_irrelevant = ~is_relevant | (ents.NER_CARDINAL > 0) | (ents.NER_DATE > 0)
     
-    is_noun_for_person = is_noun & (ents.WN_person > 0)
+    is_noun_for_person = is_noun & (ents.WN_person > 0) 
     is_person = resolved | is_noun_for_person
     is_unknown = ents.entity_pos.isin(['DET','PRON'])
 
@@ -110,52 +101,51 @@ def generate_ent_type(ents, level='entity'):
 
 
 def get_entities_df(doc):
-        
-    ent_type_hypernym_map = {'person.n.01': 'person', 
-                             'female.n.02':'female', 
-                             'woman.n.01':'female',
-                             'man.n.01':'male',
-                             'male.n.02': 'male', 
-                             'entity.n.01': 'entity'}
-        
-    ent_type_matcher = myspacy.tok_hypernyms_matcher(ent_type_hypernym_map.keys(),
-                                                     highest_level=2,
-                                                     highest_common_level=2)
-    
-    def process(span):
-        x = span.root
-        pos = x.pos_
-        return x.text.strip() if pos == 'PROPN' else pos
 
     ent_rows = []
     for clust in doc._.coref_clusters:
         e = clust.main
-        e_root = e.root.text
+        e_root = e.root.text.lower()
+        #e_selected = e.root._.selected_coref_text
         e_pos = e.root.pos_
-        e_processed = process(e)
+        e_tag = e.root.tag_
         e_txt = e.text
         for mention in clust.mentions:
-            ner_tags = {f'NER_{t.ent_type_}':1 for t in mention if t.ent_type_}
-            wn_tags = {f'WN_{ent_type_hypernym_map[m.name()]}':1 for m in ent_type_matcher(mention.root)}
+            #mlen = len(mention)
+            #ner_tags = Counter(f'NER_{t.ent_type_}' for t in mention if t.ent_type_)
+            #wn_tags = Counter(f'WN_{ent_type_hypernym_map[m.name()]}' for m in ent_type_matcher(mention.root))
             m_root = mention.root
-			ent_rows.append({
+            sent = mention.root.sent
+            ent_rows.append({
                 'i': mention.start,
-                't': m_root.sent.start,
-                'entity': e_processed,
+                't0': sent.start,
+                't1': sent.end,
+                #'entity': e_selected,
                 'entity_root': e_root,
                 'entity_pos': e_pos,
-                'mention': process(mention),
+                'entity_tag': e_tag,
                 'entity_text': e_txt,
                 'mention_text': mention.text,
+                'mention_root': m_root.text.lower(),
                 'mention_pos': m_root.pos_,
-                **wn_tags,
-                **ner_tags
+                'mention_tag': m_root.tag_,
+                'categ': mention._.ent_class,
             })
     df = pd.DataFrame(ent_rows)
     ner_cols = df.columns[list(df.columns.str.startswith('NER_'))]
     df[ner_cols] = df[ner_cols].fillna(0)
     wn_cols = df.columns[list(df.columns.str.startswith('WN_'))]
     df[wn_cols] = df[wn_cols].fillna(0)
+    
+    narrator = df.categ == 'narrator'
+    reader = df.categ == 'reader'
+    
+    df.loc[narrator,'entity_root'] = 'NARRATOR'
+    df.loc[reader,'entity_root'] = 'READER'
+    
+    df.loc[narrator,'categ'] = 'person'
+    df.loc[reader,'categ'] = 'person'
+    
     return df
 
 

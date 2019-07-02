@@ -221,29 +221,27 @@ class HypernymsExtractor:
 def tok_hypernyms_matcher(targets, highest_level=0, highest_common_level=0):
     targets = {wn.synset(k) for k in targets}
 
-    def match(token):
+    def matcher(token):
         matched = set()
         
         hypers_all = hypers_common = {h for s in token._.wordnet.synsets() for h in s.hypernyms()}
         matched |= targets & hypers_all
-        for i in range(highest_level):
+        for _ in range(highest_level):
             hypers_all = {h for s in hypers_all for h in s.hypernyms()}
             if not hypers_all:
-                print("i=",i)
                 break
             matched |= targets & hypers_all
 
-        for i in range(highest_common_level):
+        for _ in range(highest_common_level):
             hypers_pairs = combinations(hypers_common, 2)
             hypers_common = {h for h1, h2 in hypers_pairs for h in h1.lowest_common_hypernyms(h2)}
             if not hypers_common:
-                print("j=",i)
                 break
             matched |= targets & hypers_common
 
         return matched
     
-    return match
+    return matcher
 
 
 class HypernymMatcher:
@@ -290,28 +288,51 @@ class HypernymMatcher:
         return doc
 
 
-class EntityTagger:
-    name = 'entity_tag'
+class EntityMultiTagger:
+    name = 'entity_tags'
 
-    def __init__(self, collector, attr_name='ent_tags', force_ext=True):
+    def __init__(self, tagger, container=set, attr_name='ent_tags', force_ext=True):
         """
-        collector: Function[Span] -> Set[Any]
+        tagger: Function[Cluster, Span] -> Iterable[Hashable]
         """
         Doc.set_extension(attr_name, default=None, force=force_ext)
         Span.set_extension(attr_name, default=None, force=force_ext)
-        self.collector = collector
+        self.tagger = tagger
+        self.container = container
         self.attr_name = attr_name
     
     def __call__(self, doc):
-        collector = self.collector
-        alltags = defaultdict(set)
+        tagger = self.tagger
+        attr_name = self.attr_name
+        alltags = defaultdict(self.container)
         for clust in doc._.coref_clusters:
             clust_id = clust.i
             collected = alltags[clust_id]
             for mention in clust:
-                tags = collector(mention)
-                mention._.set(self.attr_name, tags)
+                tags = tagger(clust, mention)
+                mention._.set(attr_name, tags)
                 collected.update(tags)
         
-        doc._.set(self.attr_name, alltags)
+        doc._.set(attr_name, alltags)
+        return doc
+
+
+class EntityTagger:
+    name = 'entity_tag'
+
+    def __init__(self, tagger, attr_name='ent_tag', force_ext=True):
+        """
+        tagger: Function[Cluster, Span] -> Hashable
+        """
+        Span.set_extension(attr_name, default=None, force=force_ext)
+        self.tagger = tagger
+        self.attr_name = attr_name
+    
+    def __call__(self, doc):
+        tagger = self.tagger
+        attr_name = self.attr_name
+        for clust in doc._.coref_clusters:
+            for mention in clust:
+                tag = tagger(clust, mention)
+                mention._.set(attr_name, tag)
         return doc
