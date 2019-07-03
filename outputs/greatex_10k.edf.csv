@@ -1,0 +1,178 @@
+,categ,entity_pos,entity_root,entity_tag,entity_text,i,mention_pos,mention_root,mention_tag,mention_text,t0,t1
+0,environment,PROPN,pirrip,NNP,Pirrip,9,PROPN,pirrip,NNP,Pirrip,0,33
+1,environment,PROPN,pirrip,NNP,Pirrip,50,PROPN,pirrip,NNP,Pirrip,48,68
+2,environment,PROPN,pirrip,NNP,Pirrip,62,DET,his,PRP$,his,48,68
+3,person,PROPN,pip,NNP,Pip,31,PROPN,pip,NNP,Pip,0,33
+4,person,PROPN,pip,NNP,Pip,45,PROPN,pip,NNP,Pip,33,48
+5,person,NOUN,father,NN,my father or my mother,79,NOUN,father,NN,my father or my mother,75,121
+6,person,NOUN,father,NN,my father or my mother,93,PRON,them,PRP,them,75,121
+7,person,NOUN,father,NN,my father or my mother,96,DET,their,PRP$,their,75,121
+8,person,NOUN,father,NN,my father or my mother,111,PRON,they,PRP,they,75,121
+9,person,NOUN,father,NN,my father or my mother,118,DET,their,PRP$,their,75,121
+10,person,NOUN,father,NN,my father,127,NOUN,father,NN,my father,121,152
+11,person,NOUN,father,NN,my father,137,PRON,he,PRP,he,121,152
+12,unknown,DET,their,PRP$,their,206,DET,their,PRP$,their,183,274
+13,unknown,DET,their,PRP$,their,244,PRON,they,PRP,they,183,274
+14,unknown,DET,their,PRP$,their,250,DET,their,PRP$,their,183,274
+15,unknown,DET,their,PRP$,their,253,DET,their,PRP$,their,183,274
+16,unknown,DET,their,PRP$,their,256,DET,their,PRP$,their,183,274
+17,unknown,DET,their,PRP$,their,265,PRON,them,PRP,them,183,274
+18,person,NOUN,man,NN,"A man with no hat, and with broken shoes, and with an old rag tied round his head",525,NOUN,man,NN,"A man with no hat, and with broken shoes, and with an old rag tied round his head",525,546
+19,person,NOUN,man,NN,"A man with no hat, and with broken shoes, and with an old rag tied round his head",597,DET,his,PRP$,his,546,608
+20,person,NOUN,man,NN,"A man with no hat, and with broken shoes, and with an old rag tied round his head",600,PRON,he,PRP,he,546,608
+21,person,NOUN,head,NN,his head,543,NOUN,head,NN,his head,525,546
+22,person,NOUN,head,NN,his head,597,NOUN,head,NN,his head,546,608
+23,person,NOUN,sir,NN,sir,617,NOUN,sir,NN,sir,611,625
+24,person,NOUN,sir,NN,sir,632,NOUN,sir,NN,sir,626,636
+25,person,NOUN,sir,NN,sir,644,NOUN,man,NN,the man,636,647
+26,person,NOUN,sir,NN,sir,684,NOUN,sir,NN,sir,682,686
+27,person,NOUN,sir,NN,sir,697,NOUN,man,NN,the man,688,700
+28,person,NOUN,sir,NN,sir,738,NOUN,man,NN,The man,738,759
+29,person,NOUN,sir,NN,sir,744,PRON,me,PRP,me,738,759
+30,person,NOUN,sir,NN,sir,791,PRON,me,PRP,me,770,806
+31,person,PRON,us,PRP,us,638,PRON,us,PRP,us,636,647
+32,person,PRON,us,PRP,us,690,PRON,us,PRP,us,688,700
+33,person,NOUN,name,NN,your name,639,NOUN,name,NN,your name,636,647
+34,person,NOUN,name,NN,your name,674,PRON,it,PRP,it,673,677
+35,environment,NOUN,church,NN,the church,734,NOUN,church,NN,the church,706,738
+36,environment,NOUN,church,NN,the church,771,NOUN,church,NN,the church,770,806
+37,environment,NOUN,church,NN,the church,801,NOUN,church,NN,the church,770,806
+38,environment,NOUN,church,NN,the church,805,PRON,itself,PRP,itself,770,806
+39,environment,NOUN,pockets,NNS,my pockets,756,NOUN,pockets,NNS,my pockets,738,759
+40,environment,NOUN,pockets,NNS,my pockets,763,PRON,them,PRP,them,759,770
+41,environment,NOUN,piece,NN,a piece of bread,765,NOUN,piece,NN,a piece of bread,759,770
+42,environment,NOUN,piece,NN,a piece of bread,785,PRON,it,PRP,it,770,806
+43,environment,NOUN,piece,NN,a piece of bread,822,NOUN,bread,NN,the bread,806,827
+44,,PROPN,"itself,—for",NNP,"itself,—for",775,PROPN,"itself,—for",NNP,"itself,—for",770,806
+45,,PROPN,"itself,—for",NNP,"itself,—for",776,PRON,he,PRP,he,770,806
+46,,PROPN,"itself,—for",NNP,"itself,—for",783,PRON,he,PRP,he,770,806
+47,,PROPN,"itself,—for",NNP,"itself,—for",820,PRON,he,PRP,he,806,827
+48,,PROPN,"itself,—for",NNP,"itself,—for",834,NOUN,man,NN,the man,827,850
+49,,PROPN,"itself,—for",NNP,"itself,—for",838,DET,his,PRP$,his,827,850
+50,person,PRON,em,PRP,em,881,PRON,em,PRP,em,874,898
+51,person,PRON,em,PRP,em,893,DET,his,PRP$,his,874,898
+52,person,PRON,em,PRP,em,914,PRON,he,PRP,he,908,948
+53,person,PRON,em,PRP,em,926,PRON,he,PRP,he,908,948
+54,person,PRON,NARRATOR,PRP,em,935,PRON,myself,PRP,myself,908,948
+55,person,PRON,NARRATOR,PRP,em,943,PRON,myself,PRP,myself,908,948
+56,person,PRON,em,PRP,em,955,NOUN,man,NN,the man,948,958
+57,person,NOUN,mother,NN,your mother,961,NOUN,mother,NN,your mother,959,966
+58,person,NOUN,mother,NN,your mother,1007,NOUN,mother,NN,my mother,1005,1010
+59,person,NOUN,sir,NN,sir,969,NOUN,sir,NN,sir,967,991
+60,person,NOUN,sir,NN,sir,974,PRON,he,PRP,He,967,991
+61,person,NOUN,sir,NN,sir,987,DET,his,PRP$,his,967,991
+62,person,NOUN,sir,NN,sir,994,NOUN,sir,NN,sir,992,1001
+63,person,NOUN,sir,NN,sir,1017,PRON,he,PRP,he,1012,1022
+64,person,NOUN,sir,NN,sir,1037,NOUN,sir,NN,sir,1035,1043
+65,person,NOUN,sir,NN,sir,1044,PRON,him,PRP,him,1043,1052
+66,person,NOUN,sir,NN,sir,1058,PRON,he,PRP,he,1058,1064
+67,person,PROPN,blacksmith,NNP,"""Blacksmith",1105,PROPN,blacksmith,NNP,"""Blacksmith",1105,1114
+68,person,PROPN,blacksmith,NNP,"""Blacksmith",1112,PRON,he,PRP,he,1105,1114
+69,person,PROPN,blacksmith,NNP,"""Blacksmith",1118,DET,his,PRP$,his,1114,1122
+70,person,PROPN,blacksmith,NNP,"""Blacksmith",1126,DET,his,PRP$,his,1122,1179
+71,person,PROPN,blacksmith,NNP,"""Blacksmith",1133,PRON,he,PRP,he,1122,1179
+72,person,PROPN,blacksmith,NNP,"""Blacksmith",1153,PRON,he,PRP,he,1122,1179
+73,person,PROPN,blacksmith,NNP,"""Blacksmith",1160,DET,his,PRP$,his,1122,1179
+74,person,PROPN,blacksmith,NNP,"""Blacksmith",1176,PRON,his,PRP,his,1122,1179
+75,person,PROPN,blacksmith,NNP,"""Blacksmith",1185,PRON,he,PRP,he,1180,1201
+76,person,NOUN,sir,NN,sir,1213,NOUN,sir,NN,sir,1211,1217
+77,person,NOUN,sir,NN,sir,1230,NOUN,sir,NN,sir,1228,1234
+78,person,NOUN,sir,NN,sir,1237,PRON,he,PRP,he,1234,1259
+79,person,NOUN,sir,NN,sir,1267,PRON,he,PRP,He,1267,1272
+80,person,NOUN,sir,NN,sir,1280,PRON,he,PRP,He,1280,1285
+81,person,NOUN,sir,NN,sir,1294,PRON,he,PRP,He,1294,1299
+82,person,NOUN,sir,NN,sir,1311,PRON,he,PRP,He,1311,1317
+83,person,NOUN,sir,NN,sir,1329,PRON,him,PRP,him,1317,1365
+84,person,NOUN,sir,NN,sir,1367,PRON,he,PRP,He,1367,1387
+85,person,NOUN,sir,NN,sir,1389,PRON,he,PRP,he,1387,1415
+86,environment,NOUN,wittles,NNS,what wittles,1221,NOUN,wittles,NNS,what wittles,1218,1227
+87,environment,NOUN,wittles,NNS,what wittles,1276,NOUN,wittles,NNS,me wittles,1273,1279
+88,environment,NOUN,church,NN,the church,1379,NOUN,church,NN,the church,1367,1387
+89,environment,NOUN,church,NN,the church,1383,DET,its,PRP$,its,1367,1387
+90,unknown,DET,these,DT,"these fearful terms:—
+",1411,DET,these,DT,"these fearful terms:—
+",1387,1415
+91,unknown,DET,these,DT,"these fearful terms:—
+",1429,PRON,them,PRP,them,1416,1432
+92,person,PRON,NARRATOR,PRP,me,1437,PRON,me,PRP,me,1432,1446
+93,person,PRON,NARRATOR,PRP,me,1472,PRON,me,PRP,me,1446,1487
+94,person,PRON,NARRATOR,PRP,me,1544,PRON,me,PRP,me,1537,1557
+95,person,NOUN,man,NN,which young man,1549,NOUN,man,NN,which young man,1537,1557
+96,person,NOUN,man,NN,which young man,1557,NOUN,man,NN,That young man,1557,1566
+97,person,NOUN,man,NN,which young man,1566,NOUN,man,NN,That young man,1566,1593
+98,person,NOUN,man,NN,which young man,1575,PRON,himself,PRP,himself,1566,1593
+99,person,NOUN,man,NN,which young man,1585,DET,his,PRP$,his,1566,1593
+100,person,NOUN,man,NN,which young man,1590,DET,his,PRP$,his,1566,1593
+101,person,NOUN,man,NN,which young man,1606,NOUN,man,NN,that young man,1593,1610
+102,person,NOUN,man,NN,which young man,2176,NOUN,man,NN,The man,2176,2208
+103,person,NOUN,man,NN,which young man,2187,PRON,he,PRP,he,2176,2208
+104,person,NOUN,man,NN,which young man,2204,PRON,himself,PRP,himself,2176,2208
+105,person,NOUN,man,NN,which young man,2231,PRON,him,PRP,him,2208,2241
+106,person,NOUN,man,NN,which young man,2246,NOUN,man,NN,the horrible young man,2241,2259
+107,person,NOUN,man,NN,which young man,2257,PRON,him,PRP,him,2241,2259
+108,person,NOUN,boy,NN,a boy,1598,NOUN,boy,NN,a boy,1593,1610
+109,person,NOUN,boy,NN,a boy,1604,PRON,himself,PRP,himself,1593,1610
+110,person,NOUN,boy,NN,A boy,1610,NOUN,boy,NN,A boy,1610,1661
+111,person,NOUN,boy,NN,A boy,1614,DET,his,PRP$,his,1610,1661
+112,person,NOUN,boy,NN,A boy,1625,PRON,himself,PRP,himself,1610,1661
+113,person,NOUN,boy,NN,A boy,1633,DET,his,PRP$,his,1610,1661
+114,person,NOUN,boy,NN,A boy,1638,PRON,himself,PRP,himself,1610,1661
+115,person,NOUN,boy,NN,A boy,1645,NOUN,man,NN,young man,1610,1661
+116,person,NOUN,boy,NN,A boy,1652,DET,his,PRP$,his,1610,1661
+117,person,NOUN,boy,NN,A boy,1655,PRON,him,PRP,him,1610,1661
+118,person,NOUN,boy,NN,A boy,1658,PRON,him,PRP,him,1610,1661
+119,person,NOUN,boy,NN,A boy,1665,NOUN,man,NN,that young man,1661,1681
+120,person,NOUN,boy,NN,A boy,1688,NOUN,man,NN,that young man,1681,1696
+121,person,NOUN,boy,NN,A boy,1711,PRON,him,PRP,him,1705,1741
+122,person,NOUN,boy,NN,A boy,1719,PRON,him,PRP,him,1705,1741
+123,person,NOUN,boy,NN,A boy,1733,PRON,him,PRP,him,1705,1741
+124,person,NOUN,boy,NN,A boy,1754,NOUN,man,NN,the man,1741,1758
+125,person,NOUN,boy,NN,A boy,1763,PRON,he,PRP,he,1758,1769
+126,person,NOUN,boy,NN,A boy,1773,PRON,he,PRP,he,1770,1811
+127,person,NOUN,boy,NN,A boy,1787,NOUN,man,NN,that young man,1770,1811
+128,person,NOUN,boy,NN,A boy,1818,PRON,he,PRP,he,1811,1829
+129,person,NOUN,boy,NN,A boy,1822,PRON,him,PRP,him,1811,1829
+130,person,NOUN,boy,NN,A boy,1848,PRON,he,PRP,he,1843,1872
+131,person,NOUN,boy,NN,A boy,1850,DET,his,PRP$,his,1843,1872
+132,person,NOUN,boy,NN,A boy,1855,DET,his,PRP$,his,1843,1872
+133,person,NOUN,boy,NN,A boy,1863,PRON,himself,PRP,himself,1843,1872
+134,person,NOUN,boy,NN,A boy,1875,PRON,him,PRP,him,1872,1934
+135,person,NOUN,boy,NN,A boy,1879,DET,his,PRP$,his,1872,1934
+136,person,NOUN,boy,NN,A boy,1895,PRON,he,PRP,he,1872,1934
+137,person,NOUN,boy,NN,A boy,1903,PRON,he,PRP,he,1872,1934
+138,person,NOUN,boy,NN,A boy,1926,DET,his,PRP$,his,1872,1934
+139,person,NOUN,boy,NN,A boy,1930,PRON,him,PRP,him,1872,1934
+140,person,NOUN,boy,NN,A boy,1935,PRON,he,PRP,he,1934,1967
+141,person,NOUN,boy,NN,A boy,1943,PRON,he,PRP,he,1934,1967
+142,person,NOUN,boy,NN,A boy,1965,PRON,me,PRP,me,1934,1967
+143,person,NOUN,boy,NN,A boy,1970,PRON,him,PRP,him,1967,1989
+144,person,NOUN,boy,NN,A boy,1999,PRON,him,PRP,him,1989,2050
+145,person,NOUN,boy,NN,A boy,2009,PRON,himself,PRP,himself,1989,2050
+146,person,NOUN,boy,NN,A boy,2016,DET,his,PRP$,his,1989,2050
+147,person,NOUN,boy,NN,A boy,2019,DET,his,PRP$,his,1989,2050
+148,person,NOUN,boy,NN,A boy,2067,PRON,him,PRP,him,2050,2105
+149,environment,NOUN,people,NNS,the dead people,1909,NOUN,people,NNS,the dead people,1872,1934
+150,environment,NOUN,people,NNS,the dead people,1918,DET,their,PRP$,their,1872,1934
+151,environment,NOUN,wall,NN,the low church wall,1938,NOUN,wall,NN,the low church wall,1934,1967
+152,environment,NOUN,wall,NN,the low church wall,1946,PRON,it,PRP,it,1934,1967
+153,environment,NOUN,river,NN,the river,2004,NOUN,river,NN,the river,1989,2050
+154,environment,NOUN,river,NN,the river,2070,NOUN,river,NN,the river,2050,2105
+155,environment,NOUN,river,NN,the river,2109,NOUN,river,NN,the river,2105,2176
+156,environment,NOUN,marshes,NNS,the marshes here,2028,NOUN,marshes,NNS,the marshes here,1989,2050
+157,environment,NOUN,marshes,NNS,the marshes here,2050,NOUN,marshes,NNS,The marshes,2050,2105
+158,environment,PRON,it,PRP,it,2155,PRON,it,PRP,it,2105,2176
+159,environment,PRON,it,PRP,it,2168,PRON,it,PRP,it,2105,2176
+160,person,NOUN,pirate,NN,a pirate,2173,NOUN,pirate,NN,a pirate,2105,2176
+161,person,NOUN,pirate,NN,a pirate,2189,NOUN,pirate,NN,the pirate,2176,2208
+162,environment,NOUN,cattle,NNS,the cattle,2223,NOUN,cattle,NNS,the cattle,2208,2241
+163,environment,NOUN,cattle,NNS,the cattle,2226,DET,their,PRP$,their,2208,2241
+164,environment,NOUN,cattle,NNS,the cattle,2236,PRON,they,PRP,they,2208,2241
+165,person,PRON,NARRATOR,PRP,I,2286,PRON,i,PRP,I,2276,2309
+166,person,PRON,NARRATOR,PRP,I,2318,PRON,myself,PRP,myself,2310,2367
+167,person,PRON,NARRATOR,PRP,I,2352,PRON,me,PRP,me,2310,2367
+168,person,PRON,herself,PRP,herself,2295,PRON,herself,PRP,herself,2276,2309
+169,person,PRON,herself,PRP,herself,2300,PRON,she,PRP,she,2276,2309
+170,person,PRON,herself,PRP,herself,2326,PRON,her,PRP,her,2310,2367
+171,person,PRON,herself,PRP,herself,2346,DET,her,PRP$,her,2310,2367
+172,environment,NOUN,expression,NN,the expression,2320,NOUN,expression,NN,the expression,2310,2367
+173,environment,NOUN,expression,NN,the expression,2344,PRON,it,PRP,it,2310,2367

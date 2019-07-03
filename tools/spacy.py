@@ -158,7 +158,7 @@ class SemanticDepParser:
                     elif anc_lemma in POSSESSIVE_LEMMAS:
                         rel = 'possessive'
                     
-                    anc._.sem_deps.append((rel, main))
+                    anc._.sem_deps.append((rel, clust))
         return doc
 
 
@@ -219,6 +219,7 @@ class HypernymsExtractor:
 
 
 def tok_hypernyms_matcher(targets, highest_level=0, highest_common_level=0):
+    print("[WARNING DEPRECATED] MOVED TO processing.entities")
     targets = {wn.synset(k) for k in targets}
 
     def matcher(token):
