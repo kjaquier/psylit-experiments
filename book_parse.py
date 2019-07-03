@@ -6,6 +6,7 @@ import tools.spacy as myspacy
 import tools.pandas as mypd
 
 import processing
+import processing.entities as proc_ent
 import processing.lexicons as lexicons
 import processing.preprocess as preprocess
 
@@ -15,67 +16,55 @@ import neuralcoref
 
 def build_pipe(model='en_core_web_sm'):
 
-	nlp = spacy.load(model)
+    nlp = spacy.load(model)
 
-	merge_ents = nlp.create_pipe("merge_entities")
-	nlp.add_pipe(merge_ents, after="ner")
+    merge_ents = nlp.create_pipe("merge_entities")
+    nlp.add_pipe(merge_ents, after="ner")
 
-	#nlp.add_pipe(WordnetAnnotator(nlp.lang), after='tagger')
+    nlp.add_pipe(WordnetAnnotator(nlp.lang), after='tagger')
 
-	coref = neuralcoref.NeuralCoref(nlp.vocab, max_dist=20, store_scores=False)
-	nlp.add_pipe(coref, name='neuralcoref')
+    coref = neuralcoref.NeuralCoref(nlp.vocab, max_dist=20, store_scores=False)
+    nlp.add_pipe(coref, name='neuralcoref')
 
-	nrc_lex = lexicons.load_nrc_wordlevel()
-	lextag = myspacy.LexiconTagger(nlp.vocab, nrc_lex)
-	nlp.add_pipe(lextag)
+    nrc_lex = lexicons.load_nrc_wordlevel()
+    lextag = myspacy.LexiconTagger(nlp.vocab, nrc_lex)
+    nlp.add_pipe(lextag)
 
-	negtag = myspacy.NegTagger(nlp.vocab)
-	nlp.add_pipe(negtag)
+    negtag = myspacy.NegTagger(nlp.vocab)
+    nlp.add_pipe(negtag)
 
-	semdep = myspacy.SemanticDepParser()
-	nlp.add_pipe(semdep)
+    semdep = myspacy.SemanticDepParser()
+    nlp.add_pipe(semdep)
 
-	predparser = myspacy.PredicateParser(nlp.vocab)
-	nlp.add_pipe(predparser)
+    predparser = myspacy.PredicateParser(nlp.vocab)
+    nlp.add_pipe(predparser)
 
-	hypernym_map = {'person.n.01': 'person', 
-                     'female.n.02':'female', 
-                     'woman.n.01':'female',
-                     'man.n.01':'male',
-                     'male.n.02': 'male', 
-                     'entity.n.01': 'entity'}
+    ent_cls = proc_ent.entity_classifier()
+    ent_cls_pipe = myspacy.EntityTagger(ent_cls, attr_name='ent_class')
+    nlp.add_pipe(ent_cls_pipe)
 
-	hmatcher = myspacy.tok_hypernyms_matcher(hypernym_map.keys(),
-													highest_level=10,
-													highest_common_level=0)
-
-
-	ent_cls = entity_classifier(hmatcher)
-	ent_cls_pipe = myspacy.EntityTagger(ent_cls, attr_name='ent_class')
-	nlp.add_pipe(ent_cls_pipe)
-
-	return nlp
+    return nlp
 
 
 def get_dataframe(doc):
-	fmt = lambda tok: tok.text.strip().lower()[:50] if tok else None
-	data = [
-		{'i': tok.i,
-		't': tok.sent.start,
-		'neg': tok._.negated,
-		'lemma': tok.lemma_[:50],
-		'text': fmt(tok),
-		**{('R_'+r): fmt(t) for r, t in tok._.sem_deps},
-		**{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
-		}
-		for tok in doc if tok._.has_lex
-	]
+    fmt = lambda tok: tok.text.strip().lower() if tok else None
+    data = [
+        {'i': tok.i,
+        't': tok.sent.start,
+        'neg': tok._.negated,
+        'lemma': tok.lemma_[:50],
+        'text': fmt(tok)[:50],
+        **{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps},
+        **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
+        }
+        for tok in doc if tok._.has_lex
+    ]
 
-	table = pd.DataFrame(data)
-	rel_cols = table.columns[list(table.columns.str.startswith('R_'))]
-	lex_cols = table.columns[list(table.columns.str.startswith('L_'))]
-	table[lex_cols] = table[lex_cols].fillna(0)
-	return table
+    table = pd.DataFrame(data)
+    rel_cols = table.columns[list(table.columns.str.startswith('R_'))]
+    lex_cols = table.columns[list(table.columns.str.startswith('L_'))]
+    table[lex_cols] = table[lex_cols].fillna(0)
+    return table
 
 
 def generate_ent_type(ents, level='entity'):
@@ -105,7 +94,8 @@ def get_entities_df(doc):
     ent_rows = []
     for clust in doc._.coref_clusters:
         e = clust.main
-        e_root = e.root.text.lower()
+        e_i = clust.i
+        e_root = e.root.text.strip().lower()
         #e_selected = e.root._.selected_coref_text
         e_pos = e.root.pos_
         e_tag = e.root.tag_
@@ -120,6 +110,7 @@ def get_entities_df(doc):
                 'i': mention.start,
                 't0': sent.start,
                 't1': sent.end,
+                'entity_i': e_i,
                 #'entity': e_selected,
                 'entity_root': e_root,
                 'entity_pos': e_pos,
@@ -132,57 +123,58 @@ def get_entities_df(doc):
                 'categ': mention._.ent_class,
             })
     df = pd.DataFrame(ent_rows)
-    ner_cols = df.columns[list(df.columns.str.startswith('NER_'))]
-    df[ner_cols] = df[ner_cols].fillna(0)
-    wn_cols = df.columns[list(df.columns.str.startswith('WN_'))]
-    df[wn_cols] = df[wn_cols].fillna(0)
+
+    # ner_cols = df.columns[list(df.columns.str.startswith('NER_'))]
+    # df[ner_cols] = df[ner_cols].fillna(0)
+    # wn_cols = df.columns[list(df.columns.str.startswith('WN_'))]
+    # df[wn_cols] = df[wn_cols].fillna(0)
     
-    narrator = df.categ == 'narrator'
-    reader = df.categ == 'reader'
+    # narrator = df.categ == 'narrator'
+    # reader = df.categ == 'reader'
     
-    df.loc[narrator,'entity_root'] = 'NARRATOR'
-    df.loc[reader,'entity_root'] = 'READER'
+    # df.loc[narrator,'entity_root'] = 'NARRATOR'
+    # df.loc[reader,'entity_root'] = 'READER'
     
-    df.loc[narrator,'categ'] = 'person'
-    df.loc[reader,'categ'] = 'person'
+    # df.loc[narrator,'categ'] = 'person'
+    # df.loc[reader,'categ'] = 'person'
     
     return df
 
 
 def main(input_filename:"Raw text of book to read (UTF-8)",
-		 output_filename:"CSV file to write",
-		 save_doc:("File where spacy Doc object is saved",'option','d')=None,
-		 save_entities:("File where entities are saved", 'option','e')=None,
-		 start:("Position to read from",'option','t0')=None,
-		 end:("Position to stop reading after",'option','t1')=None):
+         output_filename:"CSV file to write",
+         save_doc:("File where spacy Doc object is saved",'option','d')=None,
+         save_entities:("File where entities are saved", 'option','e')=None,
+         start:("Position to read from",'option','t0')=None,
+         end:("Position to stop reading after",'option','t1')=None):
 
-	txt = preprocess.read_pg(input_filename)
-	print('start=', repr(start), ' end=', repr(end))
-	start = int(start) if start is not None else 0
-	end = int(end) if end is not None else None
-	n = len(txt)
+    txt = preprocess.read_pg(input_filename)
+    print('start=', repr(start), ' end=', repr(end))
+    start = int(start) if start is not None else 0
+    end = int(end) if end is not None else None
+    n = len(txt)
 
-	txt = txt[start:] if end is None else txt[start:end]
-	
-	print('Processing', len(txt), '/', n, 'chars')
+    txt = txt[start:] if end is None else txt[start:end]
+    
+    print('Processing', len(txt), '/', n, 'chars')
 
-	nlp = build_pipe()
-	print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
-	doc = nlp(txt)
+    nlp = build_pipe()
+    print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
+    doc = nlp(txt)
 
-	entities_df = get_entities_df(doc)
+    entities_df = get_entities_df(doc)
 
-	if save_entities:
-		entities_df.to_csv(save_entities)
+    if save_entities:
+        entities_df.to_csv(save_entities)
 
-	if save_doc:
-		doc.to_disk(save_doc)
+    if save_doc:
+        doc.to_disk(save_doc)
 
-	df = get_dataframe(doc)
-	print("Data frame size: ", df.size)
-	df.to_csv(output_filename)
+    df = get_dataframe(doc)
+    print("Data frame size: ", df.size)
+    df.to_csv(output_filename)
 
 
 if __name__ == '__main__':
-	import plac
-	plac.call(main)
+    import plac
+    plac.call(main)
