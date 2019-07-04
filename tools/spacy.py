@@ -5,17 +5,45 @@ from nltk.corpus import wordnet as wn
 from spacy.matcher import Matcher
 from spacy.tokens import Doc, Span, Token
 
-class LexiconTagger:
+
+class RemoveExtensionsMixin:
+
+    def __init__(self, extensions=None, **kwargs):
+        self.exts = []
+        self.kwargs = kwargs
+        for cls, attr_name, kw in (extensions or []):
+            self.set_extension(cls, attr_name, **kwargs, **kw)
+
+    def set_extension(self, cls, attr_name, **kwargs):
+        print(f"[{self.__class__.__name__}] set extension {cls.__class__.__name__}._.{attr_name} {kwargs!r}")
+        cls.set_extension(attr_name, **self.kwargs, **kwargs)
+        self.exts.append((cls, attr_name, kwargs))
+
+    def remove_extensions(self):
+        for cls, attr_name, _ in self.exts:
+            print(f"[{self.__class__.__name__}] remove extension {cls.__class__.__name__}._.{attr_name}")
+            cls.remove_extension(attr_name)
+
+    def get_extensions_remover_component(self):
+        
+        def component(doc):
+            self.remove_extensions()
+            return doc
+
+        return component
+
+class LexiconTagger(RemoveExtensionsMixin):
     
     name = 'lexicon'
 
-    def __init__(self, vocab, lexicon, tag_attr='lex', flag_attr=None, force_ext=True):
+    def __init__(self, vocab, lexicon, tag_attr='lex', flag_attr=None, force_ext=False):
+        super().__init__(force=force_ext)
         self.tag_attr = tag_attr
         self.flag_attr = flag_attr or ('has_' + tag_attr)
         self.tags = lexicon.columns
         
-        Token.set_extension(self.tag_attr, default=set(), force=force_ext)
-        Token.set_extension(self.flag_attr, default=False, force=force_ext)
+        super().set_extension(Token, self.tag_attr, default=set())
+        super().set_extension(Token, self.flag_attr, default=False)
 
         self.matcher = Matcher(vocab)
         for tag in self.tags:
@@ -39,12 +67,13 @@ class LexiconTagger:
         return doc
 
 
-class HypernymTagger:
+class HypernymTagger(RemoveExtensionsMixin):
     
-    def __init__(self, vocab, wndomains, tag_attr, force_ext=True):
+    def __init__(self, vocab, wndomains, tag_attr, force_ext=False):
+        super().__init__(force=force_ext)
         self.tag_attr = tag_attr
         self.wndomains = wndomains
-        Token.set_extension(tag_attr, default=None, force=force_ext)
+        super().set_extension(Token, tag_attr, default=None)
     
     def __call__(self, doc):
         domains = self.wndomains
@@ -62,11 +91,12 @@ class HypernymTagger:
         return doc
         
 
-class NegTagger:
+class NegTagger(RemoveExtensionsMixin):
     name = 'negation'
     
-    def __init__(self, vocab, force_ext=True):
-        Token.set_extension('negated', default=False, force=force_ext)
+    def __init__(self, vocab, force_ext=False):
+        super().__init__(force=force_ext)
+        super().set_extension(Token, 'negated', default=False)
         self.matcher = Matcher(vocab)
         self.matcher.add('neg', None, [{'DEP': 'neg'}])
         
@@ -81,73 +111,23 @@ class NegTagger:
         return doc
 
 
-class CorefParser__old:
-    
-    name = 'corefparse'
-    relations = ['agent', 'patient', 'predicative']
-    
-    def __init__(self, vocab, force_ext=True):
-        for r in self.relations:
-            Token.set_extension(r, default=None, force=force_ext)
-        self.matcher = Matcher(vocab)
-        self.matcher.add('agent', None, [{'_': {'in_coref': True}}])
-        #self.matcher.add('agent', None, [{'_': {'in_coref': True}, 'DEP': {'IN', ['nsubj', 'csubj']}}])
-        #self.matcher.add('patient', None, [{'_': {'in_coref': True}, 'DEP': {'NOT_IN', ['nsubj', 'csubj']}}])
-        
-    def __call__(self, doc):
-        i=0
-        
-        matches = self.matcher(doc)
-        for relation, start, end_ in matches:
-            #assert end_ - start == 1, f"doc[{start}:{end_}]={doc[start:end_].text!r}"
-            tok = doc[start]
-            
-            is_subj = tok.dep_ in ('nsubj', 'csubj', 'nsubjpass')
-            #for is_subj, tok in ((, t) for t in doc if t._.in_coref):
-            relation = 'agent' if is_subj else 'patient'
-            target = tok._.coref_clusters[0].main
-                
-            for anc in tok.ancestors:
-                if anc._.get(relation):
-                    i+=1
-                anc._.set(relation, target)
-            
-            #for desc in tok.head.subtree: # TODO excluding tok.conjuncts and tok
-            #    desc._.set('predicative', clust.main)
-            
-            #root = tok.sent.root
-            #if anc.lemma_ == 'be':
-            #    candidate_roots = [t for t in root.children if t.dep_ in ('acomp','dcomp')]
-            #    root = candidate_roots[0] if candidate_roots else root
-            #    relation = 'predicative'
-            #clust = tok._.coref_clusters[0]
-            #root._.set(relation, clust.main)
-        
-        if i:
-            print(f'[WARNING] {i} conflicts in coreference resolution!', )
-        
-        return doc
-    
-    #def __del__(self):
-    #    for r in self.relations:
-    #        Token.remove_extension(r)
-
 AGENT_DEPS = {'nsubj', 'csubj', 'nsubjpass', 'poss'}
 PREDICATIVE_LEMMAS = ('be',)
 POSSESSIVE_LEMMAS = ('have', 'possess')
 
-class SemanticDepParser:
+
+class SemanticDepParser(RemoveExtensionsMixin):
 
     name = 'semantic_dep'
 
-    def __init__(self, force_ext=True):
-        Token.set_extension('sem_deps', default=list(), force=force_ext)
+    def __init__(self, force_ext=False):
+        super().__init__()
+        super().set_extension(Token, 'sem_deps', default=list(), force=force_ext)
 
     def __call__(self, doc):
         clusters = doc._.coref_clusters
         print(f"[{self.__class__.__name__}] {len(clusters)} clusters")
         for clust in clusters:
-            main = clust.main
             for mention in clust:
                 root = mention.root
                 rel = 'agent' if root.dep_ in AGENT_DEPS else 'patient'
@@ -162,7 +142,7 @@ class SemanticDepParser:
         return doc
 
 
-class PredicateParser:
+class PredicateParser(RemoveExtensionsMixin):
 
     name = 'predicates'
 
@@ -184,11 +164,12 @@ class PredicateParser:
         return doc
             
 
-class HypernymsExtractor:
+class HypernymsExtractor(RemoveExtensionsMixin):
     name = 'hypernyms'
     
-    def __init__(self, vocab, pattern=None, highest_level=1, force_ext=True):
-        Token.set_extension('hypernyms', default=set(), force=force_ext)
+    def __init__(self, vocab, pattern=None, highest_level=1, force_ext=False):
+        super().__init__()
+        super().set_extension(Token, 'hypernyms', default=set(), force=force_ext)
         if pattern:
             self.matcher = Matcher(vocab)
             self.matcher.add('hypernyms', None, pattern)
@@ -245,14 +226,15 @@ def tok_hypernyms_matcher(targets, highest_level=0, highest_common_level=0):
     return matcher
 
 
-class HypernymMatcher:
+class HypernymMatcher(RemoveExtensionsMixin):
     name = 'hypernym_match'
     
     def __init__(self, vocab, synset2tag, 
                  pattern=None, highest_level=0, 
                  attr_name='hypernym_match', 
-                 highest_common_level=0, force_ext=True):
-        Token.set_extension(attr_name, default=set(), force=force_ext)
+                 highest_common_level=0, force_ext=False):
+        super().__init__(force=force_ext)
+        super().set_extension(Token, attr_name, default=set())
         self.synset2tag = {wn.synset(k):v for k, v in synset2tag.items()}
         if pattern:
             self.matcher = Matcher(vocab)
@@ -289,15 +271,16 @@ class HypernymMatcher:
         return doc
 
 
-class EntityMultiTagger:
+class EntityMultiTagger(RemoveExtensionsMixin):
     name = 'entity_tags'
 
-    def __init__(self, tagger, container=set, attr_name='ent_tags', force_ext=True):
+    def __init__(self, tagger, container=set, attr_name='ent_tags', force_ext=False):
         """
         tagger: Function[Cluster, Span] -> Iterable[Hashable]
         """
-        Doc.set_extension(attr_name, default=None, force=force_ext)
-        Span.set_extension(attr_name, default=None, force=force_ext)
+        super().__init__(force=force_ext)
+        super().set_extension(Doc, attr_name, default=None)
+        super().set_extension(Span, attr_name, default=None)
         self.tagger = tagger
         self.container = container
         self.attr_name = attr_name
@@ -318,14 +301,15 @@ class EntityMultiTagger:
         return doc
 
 
-class EntityTagger:
+class EntityTagger(RemoveExtensionsMixin):
     name = 'entity_tag'
 
-    def __init__(self, tagger, attr_name='ent_tag', force_ext=True):
+    def __init__(self, tagger, attr_name='ent_tag', force_ext=False):
         """
         tagger: Function[Cluster, Span] -> Hashable
         """
-        Span.set_extension(attr_name, default=None, force=force_ext)
+        super().__init__(force=force_ext)
+        super().set_extension(Span, attr_name, default=None)
         self.tagger = tagger
         self.attr_name = attr_name
     
@@ -337,3 +321,5 @@ class EntityTagger:
                 tag = tagger(clust, mention)
                 mention._.set(attr_name, tag)
         return doc
+    
+
