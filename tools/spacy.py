@@ -121,24 +121,27 @@ class SemanticDepParser(RemoveExtensionsMixin):
     name = 'semantic_dep'
 
     def __init__(self, force_ext=False):
-        super().__init__()
-        super().set_extension(Token, 'sem_deps', default=list(), force=force_ext)
+        super().__init__(force=force_ext)
+        super().set_extension(Token, 'sem_deps', default=list())
 
     def __call__(self, doc):
         clusters = doc._.coref_clusters
         print(f"[{self.__class__.__name__}] {len(clusters)} clusters")
+        cnt = Counter()
         for clust in clusters:
             for mention in clust:
                 root = mention.root
                 rel = 'agent' if root.dep_ in AGENT_DEPS else 'patient'
                 for anc in root.ancestors:
                     anc_lemma = anc.lemma_
-                    if anc_lemma == PREDICATIVE_LEMMAS:
+                    if anc_lemma in PREDICATIVE_LEMMAS:
                         rel = 'predicative'
-                    elif anc_lemma in POSSESSIVE_LEMMAS:
+                    elif anc_lemma in POSSESSIVE_LEMMAS or doc.vocab.morphology.tag_map[anc.tag_].get('Poss', '') == 'yes':
                         rel = 'possessive'
-                    
+
                     anc._.sem_deps.append((rel, clust))
+                    cnt[rel] += 1
+        print(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k,v in cnt.items()))
         return doc
 
 
@@ -146,7 +149,8 @@ class PredicateParser(RemoveExtensionsMixin):
 
     name = 'predicates'
 
-    def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}]):
+    def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
+        super().__init__(force=force_ext)
         assert Token.has_extension('sem_deps'), "Need extension 'sem_deps'!"
         self.matcher = Matcher(vocab)
         self.matcher.add('predicate', None, pattern)
@@ -154,13 +158,16 @@ class PredicateParser(RemoveExtensionsMixin):
     def __call__(self, doc):
         matches = self.matcher(doc)
         print(f"[{self.__class__.__name__}] {len(matches)} matches")
+        cnt = Counter()
         for _, start, end in matches:
             heir = doc[start:end].root
-            heir_rels = {}
+            rels = {(rel, clust.i): clust for rel, clust in heir._.sem_deps}
             for anc in heir.ancestors:
                 for rel, target in anc._.sem_deps:
-                    if rel not in heir_rels:
-                        heir_rels[rel] = target
+                    rels[rel, target.i] = target
+                    cnt[rel] += 1
+            heir._.sem_deps = [(rel, clust) for (rel, _), clust in rels.items()]
+        print(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k,v in cnt.items()))
         return doc
             
 
@@ -278,6 +285,7 @@ class EntityMultiTagger(RemoveExtensionsMixin):
         """
         tagger: Function[Cluster, Span] -> Iterable[Hashable]
         """
+        print("[WARNING DEPRECATED] MOVED TO processing.entities")
         super().__init__(force=force_ext)
         super().set_extension(Doc, attr_name, default=None)
         super().set_extension(Span, attr_name, default=None)
@@ -308,6 +316,7 @@ class EntityTagger(RemoveExtensionsMixin):
         """
         tagger: Function[Cluster, Span] -> Hashable
         """
+        print("[WARNING DEPRECATED] MOVED TO processing.entities")
         super().__init__(force=force_ext)
         super().set_extension(Span, attr_name, default=None)
         self.tagger = tagger
