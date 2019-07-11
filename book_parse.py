@@ -39,9 +39,8 @@ def build_pipe(model='en_core_web_sm'):
     predparser = myspacy.PredicateParser(nlp.vocab)
     nlp.add_pipe(predparser)
 
-    ent_cls = proc_ent.entity_classifier()
-    ent_cls_pipe = myspacy.EntityTagger(ent_cls, attr_name='ent_class')
-    nlp.add_pipe(ent_cls_pipe)
+    #ent_cls = proc_ent.entity_classifier(nlp.vocab)
+    #nlp.add_pipe(ent_cls)
 
     return nlp
 
@@ -54,7 +53,8 @@ def get_dataframe(doc):
         'neg': tok._.negated,
         'lemma': tok.lemma_[:50],
         'text': fmt(tok)[:50],
-        **{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps},
+        **{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps}, # FIXME deal with pronouns: join is made on entity_root
+                                                                           # which is either clust.main.root or ent_class (Categorical)
         **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
         }
         for tok in doc if tok._.has_lex
@@ -67,29 +67,34 @@ def get_dataframe(doc):
     return table
 
 
-def generate_ent_type(ents, level='entity'):
-    n = len(ents.index)
+# def generate_ent_type(ents, level='entity'):
+#     n = len(ents.index)
     
-    pos = ents['entity_pos' if level == 'entity' else 'mention_pos']
+#     pos = ents['entity_pos' if level == 'entity' else 'mention_pos']
     
-    is_relevant = pos.isin(['PROPN','NOUN','DET','PRON'])
-    resolved = pos == 'PROPN'
-    is_noun = pos == 'NOUN'
-    is_irrelevant = ~is_relevant | (ents.NER_CARDINAL > 0) | (ents.NER_DATE > 0)
+#     is_relevant = pos.isin(['PROPN','NOUN','DET','PRON'])
+#     resolved = pos == 'PROPN'
+#     is_noun = pos == 'NOUN'
+#     is_irrelevant = ~is_relevant | (ents.NER_CARDINAL > 0) | (ents.NER_DATE > 0)
     
-    is_noun_for_person = is_noun & (ents.WN_person > 0) 
-    is_person = resolved | is_noun_for_person
-    is_unknown = ents.entity_pos.isin(['DET','PRON'])
+#     is_noun_for_person = is_noun & (ents.WN_person > 0) 
+#     is_person = resolved | is_noun_for_person
+#     is_unknown = ents.entity_pos.isin(['DET','PRON'])
 
-    ent_type = pd.Series(np.array(['person'] * n))
-    ent_type[~is_person] = 'environment'
-    ent_type[is_unknown] = 'unknown'
-    ent_type[is_irrelevant] = None
-    ent_type = pd.Categorical(ent_type)
-    return ent_type
+#     ent_type = pd.Series(np.array(['person'] * n))
+#     ent_type[~is_person] = 'environment'
+#     ent_type[is_unknown] = 'unknown'
+#     ent_type[is_irrelevant] = None
+#     ent_type = pd.Categorical(ent_type)
+#     return ent_type
 
 
 def get_entities_df(doc):
+
+    ent_cls = proc_ent.entity_classifier(doc.vocab)
+
+    df = pd.DataFrame(ent_cls(doc))
+    return df 
 
     ent_rows = []
     for clust in doc._.coref_clusters:
