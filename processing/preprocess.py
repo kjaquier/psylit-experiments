@@ -9,6 +9,7 @@ def read_pg(filename):
         lines = cleanup.filter_headers(f.readlines())
         lines = (l.lstrip() for l in lines)
         whole_txt = '\n'.join(l for l in lines if l)
+        whole_txt = whole_txt.replace('—','')
     return whole_txt
 
 
