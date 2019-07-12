@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 import numpy as np
 
@@ -9,6 +10,7 @@ import processing
 import processing.entities as proc_ent
 import processing.lexicons as lexicons
 import processing.preprocess as preprocess
+import processing.doc2graph as d2g
 
 import spacy
 from spacy_wordnet.wordnet_annotator import WordnetAnnotator 
@@ -21,9 +23,11 @@ def build_pipe(model='en_core_web_sm'):
     merge_ents = nlp.create_pipe("merge_entities")
     nlp.add_pipe(merge_ents, after="ner")
 
+    nlp.add_pipe(myspacy.fix_names, after='merge_entities')
+
     nlp.add_pipe(WordnetAnnotator(nlp.lang), after='tagger')
 
-    coref = neuralcoref.NeuralCoref(nlp.vocab, max_dist=20, store_scores=False)
+    coref = neuralcoref.NeuralCoref(nlp.vocab, blacklist=False, max_dist=20, store_scores=False)
     nlp.add_pipe(coref, name='neuralcoref')
 
     nrc_lex = lexicons.load_nrc_wordlevel()
@@ -33,11 +37,11 @@ def build_pipe(model='en_core_web_sm'):
     negtag = myspacy.NegTagger(nlp.vocab)
     nlp.add_pipe(negtag)
 
-    semdep = myspacy.SemanticDepParser()
-    nlp.add_pipe(semdep)
+    #semdep = myspacy.SemanticDepParser()
+    #nlp.add_pipe(semdep)
 
-    predparser = myspacy.PredicateParser(nlp.vocab)
-    nlp.add_pipe(predparser)
+    #predparser = myspacy.PredicateParser(nlp.vocab)
+    #nlp.add_pipe(predparser)
 
     #ent_cls = proc_ent.entity_classifier(nlp.vocab)
     #nlp.add_pipe(ent_cls)
@@ -46,19 +50,35 @@ def build_pipe(model='en_core_web_sm'):
 
 
 def get_dataframe(doc):
-    fmt = lambda tok: tok.text.strip().lower() if tok else None
+    g = d2g.DocGraph(doc, logger=logging.getLogger('d2g'))
+    fmt = lambda txt: txt.strip().lower()[:50]
     data = [
-        {'i': tok.i,
-        't': tok.sent.start,
-        'neg': tok._.negated,
-        'lemma': tok.lemma_[:50],
-        'text': fmt(tok)[:50],
-        **{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps}, # FIXME deal with pronouns: join is made on entity_root
-                                                                           # which is either clust.main.root or ent_class (Categorical)
-        **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
+        {
+            't': t,
+            'i': predicate.i,
+            'neg': predicate._.negated,
+            'lemma': fmt(predicate.lemma_),
+            'text': fmt(predicate.text),
+            'R_agent': fmt(agent.root.text) if agent else None,
+            'R_patient': fmt(patient.root.text) if patient else None,
+            **{('L_'+doc.vocab[cat].text): 1.0 for cat in predicate._.lex}, 
         }
-        for tok in doc if tok._.has_lex
+        for t, predicate, agent, patient in g.iter_frames()
     ]
+
+    # fmt = lambda tok: tok.text.strip().lower() if tok else None
+    # data = [
+    #     {'i': tok.i,
+    #     't': tok.sent.start,
+    #     'neg': tok._.negated,
+    #     'lemma': tok.lemma_[:50],
+    #     'text': fmt(tok)[:50],
+    #     **{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps}, # FIXME deal with pronouns: join is made on entity_root
+    #                                                                        # which is either clust.main.root or ent_class (Categorical)
+    #     **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
+    #     }
+    #     for tok in doc if tok._.has_lex
+    # ]
 
     table = pd.DataFrame(data)
     rel_cols = table.columns[list(table.columns.str.startswith('R_'))]
@@ -96,38 +116,38 @@ def get_entities_df(doc):
     df = pd.DataFrame(ent_cls(doc))
     return df 
 
-    ent_rows = []
-    for clust in doc._.coref_clusters:
-        e = clust.main
-        e_i = clust.i
-        e_root = e.root.text.strip().lower()
-        #e_selected = e.root._.selected_coref_text
-        e_pos = e.root.pos_
-        e_tag = e.root.tag_
-        e_txt = e.text
-        for mention in clust.mentions:
-            #mlen = len(mention)
-            #ner_tags = Counter(f'NER_{t.ent_type_}' for t in mention if t.ent_type_)
-            #wn_tags = Counter(f'WN_{ent_type_hypernym_map[m.name()]}' for m in ent_type_matcher(mention.root))
-            m_root = mention.root
-            sent = mention.root.sent
-            ent_rows.append({
-                'i': mention.start,
-                't0': sent.start,
-                't1': sent.end,
-                'entity_i': e_i,
-                #'entity': e_selected,
-                'entity_root': e_root,
-                'entity_pos': e_pos,
-                'entity_tag': e_tag,
-                'entity_text': e_txt,
-                'mention_text': mention.text,
-                'mention_root': m_root.text.lower(),
-                'mention_pos': m_root.pos_,
-                'mention_tag': m_root.tag_,
-                'categ': mention._.ent_class,
-            })
-    df = pd.DataFrame(ent_rows)
+    # ent_rows = []
+    # for clust in doc._.coref_clusters:
+    #     e = clust.main
+    #     e_i = clust.i
+    #     e_root = e.root.text.strip().lower()
+    #     #e_selected = e.root._.selected_coref_text
+    #     e_pos = e.root.pos_
+    #     e_tag = e.root.tag_
+    #     e_txt = e.text
+    #     for mention in clust.mentions:
+    #         #mlen = len(mention)
+    #         #ner_tags = Counter(f'NER_{t.ent_type_}' for t in mention if t.ent_type_)
+    #         #wn_tags = Counter(f'WN_{ent_type_hypernym_map[m.name()]}' for m in ent_type_matcher(mention.root))
+    #         m_root = mention.root
+    #         sent = mention.root.sent
+    #         ent_rows.append({
+    #             'i': mention.start,
+    #             't0': sent.start,
+    #             't1': sent.end,
+    #             'entity_i': e_i,
+    #             #'entity': e_selected,
+    #             'entity_root': e_root,
+    #             'entity_pos': e_pos,
+    #             'entity_tag': e_tag,
+    #             'entity_text': e_txt,
+    #             'mention_text': mention.text,
+    #             'mention_root': m_root.text.lower(),
+    #             'mention_pos': m_root.pos_,
+    #             'mention_tag': m_root.tag_,
+    #             'categ': mention._.ent_class,
+    #         })
+    # df = pd.DataFrame(ent_rows)
 
     # ner_cols = df.columns[list(df.columns.str.startswith('NER_'))]
     # df[ner_cols] = df[ner_cols].fillna(0)
