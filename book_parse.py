@@ -1,6 +1,6 @@
 import logging
-import pandas as pd
-import numpy as np
+import time
+import sys
 
 import tools
 import tools.spacy as myspacy
@@ -12,9 +12,14 @@ import processing.lexicons as lexicons
 import processing.preprocess as preprocess
 import processing.doc2graph as d2g
 
+import pandas as pd
+import numpy as np
+
 import spacy
 from spacy_wordnet.wordnet_annotator import WordnetAnnotator 
 import neuralcoref
+
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
 def build_pipe(model='en_core_web_sm'):
 
@@ -31,7 +36,7 @@ def build_pipe(model='en_core_web_sm'):
     nlp.add_pipe(coref, name='neuralcoref')
 
     nrc_lex = lexicons.load_nrc_wordlevel()
-    lextag = myspacy.LexiconTagger(nlp.vocab, nrc_lex)
+    lextag = myspacy.FastLexiconTagger(nlp, nrc_lex)
     nlp.add_pipe(lextag)
 
     negtag = myspacy.NegTagger(nlp.vocab)
@@ -50,7 +55,7 @@ def build_pipe(model='en_core_web_sm'):
 
 
 def get_dataframe(doc):
-    g = d2g.DocGraph(doc, logger=logging.getLogger('d2g'))
+    g = d2g.DocGraph(doc)
     fmt = lambda txt: txt.strip().lower()[:50]
     data = [
         {
@@ -171,7 +176,11 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
          save_doc:("File where spacy Doc object is saved",'option','d')=None,
          save_entities:("File where entities are saved", 'option','e')=None,
          start:("Position to read from",'option','t0')=None,
-         end:("Position to stop reading after",'option','t1')=None):
+         end:("Position to stop reading after",'option','t1')=None,
+         benchmark:("Measure execution time", 'flag', 'b')=False):
+
+    if benchmark:
+        t0 = time.clock()
 
     txt = preprocess.read_pg(input_filename)
     print('start=', repr(start), ' end=', repr(end))
@@ -185,8 +194,10 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
 
     nlp = build_pipe()
     print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
-    doc = nlp(txt)
 
+    doc = nlp(txt)
+    
+    
     entities_df = get_entities_df(doc)
 
     if save_entities:
@@ -199,6 +210,9 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
     print("Data frame size: ", df.size)
     df.to_csv(output_filename)
 
+    if benchmark:
+        t1 = time.clock()
+        print(f"Time: {t1 - t0:.5g}s")
 
 if __name__ == '__main__':
     import plac

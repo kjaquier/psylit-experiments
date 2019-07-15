@@ -2,9 +2,9 @@ from itertools import combinations
 from collections import Counter, namedtuple, defaultdict
 
 from nltk.corpus import wordnet as wn
-from spacy.matcher import Matcher
-from spacy.tokens import Doc, Span, Token
 
+import spacy.matcher as spmatch
+from spacy.tokens import Doc, Span, Token
 
 
 def filter_spans(spans):
@@ -31,7 +31,7 @@ def filter_spans(spans):
     
 def fix_names(doc):
     """Spacy pipeline component for merging particles like 'Mr/Mrs' etc."""
-    matcher = Matcher(doc.vocab)
+    matcher = spmatch.Matcher(doc.vocab)
     matcher.add('name_parts', None, [{'DEP': {'IN': ('compound','prt','flat')}, 'ENT_IOB': {'NOT': 'O'}, 'OP':'+'},
                                      {'ENT_IOB': {'NOT': 'O'}}])
     matches = matcher(doc)
@@ -58,13 +58,13 @@ class RemoveExtensionsMixin:
             self.set_extension(cls, attr_name, **kwargs, **kw)
 
     def set_extension(self, cls, attr_name, **kwargs):
-        print(f"[{self.__class__.__name__}] set extension {cls.__class__.__name__}._.{attr_name} {kwargs!r}")
+        print(f"[{self.__class__.__name__}] set extension {cls.__name__}._.{attr_name} {kwargs!r}")
         cls.set_extension(attr_name, **self.kwargs, **kwargs)
         self.exts.append((cls, attr_name, kwargs))
 
     def remove_extensions(self):
         for cls, attr_name, _ in self.exts:
-            print(f"[{self.__class__.__name__}] remove extension {cls.__class__.__name__}._.{attr_name}")
+            print(f"[{self.__class__.__name__}] remove extension {cls.__name__}._.{attr_name}")
             cls.remove_extension(attr_name)
 
     def get_extensions_remover_component(self):
@@ -79,7 +79,7 @@ class LexiconTagger(RemoveExtensionsMixin):
     
     name = 'lexicon'
 
-    def __init__(self, vocab, lexicon, tag_attr='lex', flag_attr=None, force_ext=False):
+    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None, force_ext=False):
         super().__init__(force=force_ext)
         self.tag_attr = tag_attr
         self.flag_attr = flag_attr or ('has_' + tag_attr)
@@ -88,7 +88,7 @@ class LexiconTagger(RemoveExtensionsMixin):
         super().set_extension(Token, self.tag_attr, default=set())
         super().set_extension(Token, self.flag_attr, default=False)
 
-        self.matcher = Matcher(vocab)
+        self.matcher = spmatch.Matcher(nlp.vocab)
         for tag in self.tags:
             terms = lexicon.loc[lexicon[tag] > 0, tag].index # TODO deal with loadings
             terms = list(terms.unique())
@@ -107,6 +107,58 @@ class LexiconTagger(RemoveExtensionsMixin):
                 tok._.get(tag_attr).add(tag)
                 tok._.set(flag_attr, True)
         
+        return doc
+
+
+class FastLexiconTagger(RemoveExtensionsMixin):
+    
+    name = 'lexicon'
+
+    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None, doc_attr='lex_matches', force_ext=False):
+        super().__init__(force=force_ext)
+        self.tag_attr = tag_attr
+        self.flag_attr = flag_attr or ('has_' + tag_attr)
+        self.ances_flag_attr = 'child_' + self.flag_attr
+        self.doc_attr = doc_attr
+        self.tags = lexicon.columns
+        
+        super().set_extension(Token, self.tag_attr, default=set())
+        super().set_extension(Token, self.flag_attr, default=False)
+        super().set_extension(Token, self.ances_flag_attr, default=False)
+        super().set_extension(Doc, self.doc_attr, default=list())
+
+        self.matcher = spmatch.PhraseMatcher(nlp.vocab, attr='LOWER', validate=True) 
+        # FIXME add match on LEMMA, for now doesn't match anything because of https://github.com/explosion/spaCy/commit/d59b2e8a0c595498d7585b23ebb461ce82719809
+        # fixed on spacy 2.1.4+, need to update dependencies
+        
+        for tag in self.tags:
+            terms = lexicon.loc[lexicon[tag] > 0, tag].index # TODO deal with loadings
+            terms = [nlp.make_doc(t) for t in terms.unique()]
+
+            self.matcher.add(tag, None, *terms)
+            
+    def __call__(self, doc):
+        matches = self.matcher(doc)
+        tag_attr = self.tag_attr
+        flag_attr = self.flag_attr
+        doc_attr = self.doc_attr
+        ances_flag_attr = self.ances_flag_attr
+        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+        i = 0
+        for matched_tag, start, end in matches:
+            span = doc[start:end]
+            for tok in span:
+                tok._.get(tag_attr).add(matched_tag)
+                tok._.set(flag_attr, True)
+                tok._.set(ances_flag_attr, True)
+                doc._.get(doc_attr).append(tok)
+            i += 1
+            for ances in span.root.ancestors:
+                if ances._.get(ances_flag_attr):
+                    break
+                ances._.set(ances_flag_attr, True)
+                i += 1
+        print(f"[{self.__class__.__name__}] {i} tags assigned")
         return doc
 
 
@@ -140,7 +192,7 @@ class NegTagger(RemoveExtensionsMixin):
     def __init__(self, vocab, force_ext=False):
         super().__init__(force=force_ext)
         super().set_extension(Token, 'negated', default=False)
-        self.matcher = Matcher(vocab)
+        self.matcher = spmatch.Matcher(vocab)
         self.matcher.add('neg', None, [{'DEP': 'neg'}])
         
     def __call__(self, doc):
@@ -158,8 +210,84 @@ AGENT_DEPS = {'nsubj', 'csubj', 'nsubjpass', 'poss'}
 PREDICATIVE_LEMMAS = ('be',)
 POSSESSIVE_LEMMAS = ('have', 'possess')
 
+def ilen(gen):
+    return sum(1 for _ in gen)
+
+AGENT_DEPS = ('nsubj', 'csubj', 'poss', 'expl')
+PATIENT_DEPS = ('nsubjpass','csubjpass', 'obj','pobj','dobj','iobj','auxpass','nmod')
+DEP_WHITELIST = (
+                 'conj','compound','neg','poss',
+                 'prep','amod','attr','acl','advcl',
+                 'appos','aux','dislocated','obl',
+                 'orphan', # connects agent/patient in the conj of a previous predicate
+                 # clearly excluded:
+                 # 'npadvmod', 'advmod', 'parataxis', 'xcomp'
+                 )
+
 
 class SemanticDepParser(RemoveExtensionsMixin):
+    """Propagates agent to ancestors"""
+
+    name = 'semantic_dep'
+
+    def __init__(self, force_ext=False):
+        super().__init__(force=force_ext)
+        super().set_extension(Token, 'agents', default=set())
+        #super().set_extension(Doc, 'predicates', default=list())
+
+    def __call__(self, doc):
+        
+        dep_passthrough = DEP_WHITELIST + PATIENT_DEPS
+        clusters = doc._.coref_clusters
+        cnt = Counter()
+        roots = set()
+        for clust in clusters:
+            ent = clust.main
+            for mention in clust:
+                is_agent = mention.dep_ in AGENT_DEPS
+                
+                if is_agent:
+
+                    head = mention.root.head
+                    #if head._.agent:
+                        #print(f"[{self.__class__.__name__}] WARNING {mention.text!r} agent of {head.text!r} in sent at {mention.root.sent.start}")
+                    
+                    head._.get('agents').add(ent)
+
+                    cnt[head._.child_has_lex] += 1
+                    
+                    #if head._.child_has_lex:  # no because we may miss a patient
+                    roots.add(head)
+        
+        print(f"[{self.__class__.__name__}] roots with matched words: {cnt}")
+        
+        for root in roots:
+            stack = [root]
+            while stack:
+                tok = stack.pop()
+
+                # current node is a predicate: update agent
+                if tok._.has_lex and not tok._.agents:
+                    for ances in stack: # FIXME slow!
+                        # TODO shouldn't go all the way up
+                        tok._.agents.update(ances.agents)
+
+                # current node is a coreference: update previous predicate patient
+                elif stack and tok._.in_coref:
+                    for ances in stack:  # FIXME slow!
+                        if ances._.has_lex:
+                            for clust in tok._.coref_clusters:
+                                ances._.patients.add(clust.main)
+                            break
+
+                selected_childs = (c for c in tok.children if c.dep_ in dep_passthrough)
+                stack.extend(reversed(selected_childs))
+
+
+
+
+
+class SemanticDepParser__old(RemoveExtensionsMixin):
 
     name = 'semantic_dep'
 
@@ -195,7 +323,7 @@ class PredicateParser(RemoveExtensionsMixin):
     def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
         super().__init__(force=force_ext)
         assert Token.has_extension('sem_deps'), "Need extension 'sem_deps'!"
-        self.matcher = Matcher(vocab)
+        self.matcher = spmatch.Matcher(vocab)
         self.matcher.add('predicate', None, pattern)
 
     def __call__(self, doc):
@@ -221,7 +349,7 @@ class HypernymsExtractor(RemoveExtensionsMixin):
         super().__init__()
         super().set_extension(Token, 'hypernyms', default=set(), force=force_ext)
         if pattern:
-            self.matcher = Matcher(vocab)
+            self.matcher = spmatch.Matcher(vocab)
             self.matcher.add('hypernyms', None, pattern)
         else:
             self.matcher = None
@@ -287,7 +415,7 @@ class HypernymMatcher(RemoveExtensionsMixin):
         super().set_extension(Token, attr_name, default=set())
         self.synset2tag = {wn.synset(k):v for k, v in synset2tag.items()}
         if pattern:
-            self.matcher = Matcher(vocab)
+            self.matcher = spmatch.Matcher(vocab)
             self.matcher.add(attr_name, None, pattern)
         else:
             self.matcher = None

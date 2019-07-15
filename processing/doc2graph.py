@@ -41,11 +41,13 @@ def doc_at(doc, indices):
 
 class LoggerMixin:
 
-    def __init__(self, logger=None):
-        if logger:
-            self._log = lambda msg,lvl=logging.INFO,*a,**kw: logger.log(lvl, f"[{self.__class__.__name__}] {msg}",*a,**kw)
-        else:
-            self._log = lambda *a,**kw: None
+    def __init__(self, logger=None, default_lvl=logging.DEBUG):
+        self.logger = logger or logging.getLogger(self.__class__.__name__)
+        self.logger.setLevel(default_lvl)
+        self.default_lvl = default_lvl
+
+    def _log(self, msg, *args, **kwargs):
+        self.logger.log(self.default_lvl, f"[{self.__class__.__name__}] {msg}", *args, **kwargs)
 
 class DocGraph(LoggerMixin):
 
@@ -83,6 +85,7 @@ class DocGraph(LoggerMixin):
         A.pop('dst_dep')
         
         g.add_edges_from(A.itertuples(index=False))
+        self._log(f"{nx.number_of_edges(g)} edges, {nx.number_of_nodes(g)} nodes")
 
         # connect coreferences by their root
         mentions_edges = []
