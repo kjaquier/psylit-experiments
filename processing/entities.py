@@ -104,17 +104,29 @@ def entity_classifier(vocab, doc_attr='classified_ents', force_ext=False):
 
     
     exceptions_matcher = Matcher(vocab)
-    exceptions_matcher.add('detpron', None, [{'POS': {'IN': ('DET','PRON')}, '_': {'in_coref': False}}])
-    
+    exceptions_matcher.add('detpron', None, [{'POS': {'IN': ('DET','PRON')}}])#, '_': {'in_coref': False}}])
+
     def iter_entities(doc):
+        import time
+        t = time.clock()
+        coref_tokens = {
+            t.i for c in doc._.coref_clusters for m in c.mentions for t in m
+        }#doc._.coref_tokens
+        t = time.clock() - t
+        print(f"[entities_classifier.iter_entities] {len(coref_tokens)} coref tokens [{t} s]")
+
+        t = time.clock()
         #exceptions_i = {-i, k for i, k in enumerate(exceptions.keys())}
         matches = exceptions_matcher(doc)
+        t = time.clock() - t
 
-        print(f"[entities_classifier.iter_entities] {len(matches)} matches (pronouns)")
+        print(f"[entities_classifier.iter_entities] {len(matches)} matches (pronouns) [{t} s]")
         for _, start, end in exceptions_matcher(doc):
             mention = doc[start:end]
             m_root = mention.root
-            assert not m_root._.in_coref, f"{m_root.text!r} in {m_root.coref_clusters[0].main.text!r}"
+            if m_root.i in coref_tokens:
+                continue
+            # assert not m_root._.in_coref, f"{m_root.text!r} in {m_root.coref_clusters[0].main.text!r}"
             m_root_text = m_root.text.lower()
             ent_class = exceptions.get(m_root_text, UNK)
 

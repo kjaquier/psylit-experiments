@@ -110,6 +110,40 @@ class LexiconTagger(RemoveExtensionsMixin):
         return doc
 
 
+class FlagLookup(RemoveExtensionsMixin):
+
+    def __init__(self, cls, attr, doc_attr=None):
+        super().__init__()
+        self.cls = cls
+        self.attr = attr
+        self.doc_attr = doc_attr or f"lookup_{cls.__name__}_{attr}"
+        assert cls.has_extension(attr), "Extension {attr!r} not registered in {cls.__name__!r}"
+        super().set_extension(Doc, self.doc_attr, default=set())
+
+    def _get_doc_attr(self):
+        """Doesn't work on Doc"""
+        return Doc._.get(self.doc_attr)
+
+    def __call__(self, doc):
+        raise NotImplementedError
+
+
+class CorefLookup(FlagLookup):
+
+    def __init__(self):
+        attr='coref_tokens'
+        super().__init__(Token, 'in_coref', doc_attr=attr)
+    
+    def __call__(self, doc):
+        #indices = {
+        #    t.i for c in doc._.coref_clusters for m in c.mentions for t in m
+        #}
+        #print(f"[{self.__class__.__name__}] {len(indices)} to be cached")
+        #self._get_doc_attr().update(indices)
+        #Doc._.get('coref_tokens').update(indices)
+        return doc
+
+
 class FastLexiconTagger(RemoveExtensionsMixin):
     
     name = 'lexicon'
@@ -233,6 +267,7 @@ class SemanticDepParser(RemoveExtensionsMixin):
     def __init__(self, force_ext=False):
         super().__init__(force=force_ext)
         super().set_extension(Token, 'agents', default=set())
+        super().set_extension(Token, 'patients', default=set())
         #super().set_extension(Doc, 'predicates', default=list())
 
     def __call__(self, doc):
@@ -241,50 +276,66 @@ class SemanticDepParser(RemoveExtensionsMixin):
         clusters = doc._.coref_clusters
         cnt = Counter()
         roots = set()
+        corefs = set()
         for clust in clusters:
             ent = clust.main
             for mention in clust:
-                is_agent = mention.dep_ in AGENT_DEPS
+                mention_root = mention.root
+                is_agent = mention_root.dep_ in AGENT_DEPS
                 
                 if is_agent:
 
-                    head = mention.root.head
+                    head = mention_root.head
                     #if head._.agent:
                         #print(f"[{self.__class__.__name__}] WARNING {mention.text!r} agent of {head.text!r} in sent at {mention.root.sent.start}")
                     
                     head._.get('agents').add(ent)
 
-                    cnt[head._.child_has_lex] += 1
+                   # cnt[head._.child_has_lex] += 1
                     
                     #if head._.child_has_lex:  # no because we may miss a patient
                     roots.add(head)
         
-        print(f"[{self.__class__.__name__}] roots with matched words: {cnt}")
+        print(f"[{self.__class__.__name__}] {len(roots)} roots")
         
+        def union(sets):
+            u = set()
+            for s in sets:
+                u |= s
+            return u
+
+        coref_tokens = {
+            t.i for c in doc._.coref_clusters for m in c.mentions for t in m
+        }#doc._.coref_tokens
+
         for root in roots:
             stack = [root]
+            agents_stack = [root._.agents]
             while stack:
                 tok = stack.pop()
+                tok_agents = agents_stack.pop()
 
                 # current node is a predicate: update agent
-                if tok._.has_lex and not tok._.agents:
-                    for ances in stack: # FIXME slow!
-                        # TODO shouldn't go all the way up
-                        tok._.agents.update(ances.agents)
+                if tok._.has_lex:# and not tok._.agents:
+                    tok_agents.update(union(agents_stack)) # TODO can probably be optimised
 
                 # current node is a coreference: update previous predicate patient
-                elif stack and tok._.in_coref:
-                    for ances in stack:  # FIXME slow!
+                elif stack and tok.i in coref_tokens:
+                    for ances in stack:  # FIXME probably slow!
                         if ances._.has_lex:
                             for clust in tok._.coref_clusters:
                                 ances._.patients.add(clust.main)
-                            break
+                            break  # only concerns the closest predicate in the tree
 
-                selected_childs = (c for c in tok.children if c.dep_ in dep_passthrough)
+                selected_childs = [
+                    c for c in tok.children 
+                    if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
+                       not c._.agents   # if a node in the tree has an agent, we will propagate that one instead
+                ]
                 stack.extend(reversed(selected_childs))
+                agents_stack.extend(reversed([c._.agents for c in selected_childs]))
 
-
-
+        return doc
 
 
 class SemanticDepParser__old(RemoveExtensionsMixin):
