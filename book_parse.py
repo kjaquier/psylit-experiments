@@ -1,6 +1,8 @@
 import logging
 import time
 import sys
+import json
+import os
 
 import tools
 import tools.spacy as myspacy
@@ -62,7 +64,7 @@ def build_pipe(model='en_core_web_sm'):
     #nlp.add_pipe(benchmark(coref_lu))
 
     nrc_lex = lexicons.load_nrc_wordlevel()
-    lextag = myspacy.FastLexiconTagger(nlp, nrc_lex)
+    lextag = myspacy.LexiconTagger(nlp, nrc_lex)
     nlp.add_pipe(benchmark(lextag))
 
     negtag = myspacy.NegTagger(nlp.vocab)
@@ -208,47 +210,84 @@ def get_entities_df(doc):
 
 
 def main(input_filename:"Raw text of book to read (UTF-8)",
-         output_filename:"CSV file to write",
-         save_doc:("File where spacy Doc object is saved",'option','d')=None,
-         save_entities:("File where entities are saved", 'option','e')=None,
+         run_name:"Name of the run for output files",
+         output_dir:"Folder to write output files",
+         save_doc:("File where spacy Doc object is saved", 'flag', 'd')=False,
+         save_entities:("File where entities are saved", 'flag', 'e')=False,
+         save_meta:("Write metadata file about the run", 'flag', 'm')=False,
          start:("Position to read from",'option','t0')=None,
          end:("Position to stop reading after",'option','t1')=None,
          benchmark:("Measure execution time", 'flag', 'b')=False):
 
-    if benchmark:
-        t0 = time.clock()
 
-    txt = preprocess.read_pg(input_filename)
     print('start=', repr(start), ' end=', repr(end))
     start = int(start) if start is not None else 0
     end = int(end) if end is not None else None
+
+    if benchmark:
+        t0 = time.clock()
+    txt = preprocess.read_pg(input_filename)
     n = len(txt)
-
     txt = txt[start:] if end is None else txt[start:end]
-    
     print('Processing', len(txt), '/', n, 'chars')
-
     nlp = build_pipe()
     print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
 
+    if benchmark:
+        t_init = time.clock() - t0
+        print(f"Read and pipeline init time: {t_init*1000:.5n}ms")
+        t1 = time.clock()
+
     doc = nlp(txt)
-    
-    
     entities_df = get_entities_df(doc)
-
-    if save_entities:
-        entities_df.to_csv(save_entities)
-
-    if save_doc:
-        doc.to_disk(save_doc)
-
     df = get_dataframe(doc)
-    print("Data frame size: ", df.size)
-    df.to_csv(output_filename)
 
     if benchmark:
-        t1 = time.clock()
-        print(f"Time: {t1 - t0:.5g}s")
+        t_process = time.clock() - t1
+        print(f"Process time: {t_process*1000:.5n}ms")
+        t2 = time.clock()
+
+    ent_file = os.path.join(output_dir, run_name) + '.ent.csv'
+    doc_file = os.path.join(output_dir, run_name) + '.doc.pkl'
+    data_file = os.path.join(output_dir, run_name) + '.data.csv'
+    meta_file = os.path.join(output_dir, run_name) + '.meta.json'
+
+    if save_entities:
+        print(f"Saving entities")
+        entities_df.to_csv(ent_file)
+
+    if save_doc:
+        print(f"Saving doc object")
+        doc.to_disk(save_doc)
+
+    print(f"Saving data")
+    df.to_csv(data_file)
+
+    if benchmark:
+        t_write = time.clock() - t2
+        print(f"Write time: {t_write*1000:.5n}ms")
+
+    if save_meta:
+        metadata = {
+            'cmd': sys.argv,
+            'input_filename': input_filename,
+            'time_init': t_init if benchmark else None,
+            'time_process': t_process if benchmark else None,
+            'time_write': t_write if benchmark else None,
+            'n_predicates': len(df.index),
+            'n_corefs': len(entities_df.index),
+            'ent_file': ent_file,
+            'doc_file': doc_file,
+            'data_file': data_file,
+        }
+
+        for k in ['n_predicates', 'n_corefs']:
+            print(k, ':', metadata[k])
+
+        print(f"Saving meta data")
+        with open(meta_file, 'w') as f:
+            json.dump(metadata, f)
+
 
 if __name__ == '__main__':
     import plac
