@@ -74,7 +74,7 @@ class DocGraph(LoggerMixin):
                 tok, head = head, tok
                 
             # dep tree goes from leaf to root, now we go from root to leaf
-            edges.append((head.i, tok.i, head.dep_, tok.dep_))
+            edges.append((head, tok, head.dep_, tok.dep_))
         
         # remove all incoming edges for roots other than agent relations (will be the entry points)
         A = pd.DataFrame(edges, columns=['src','dst','src_dep','dst_dep'])
@@ -90,9 +90,9 @@ class DocGraph(LoggerMixin):
         # connect coreferences by their root
         mentions_edges = []
         for clust in doc._.coref_clusters:
-            c_i = clust.main.root.i
+            c_i = clust.main.root
             for mention in clust.mentions:
-                m_i = mention.root.i
+                m_i = mention.root
                 mentions_edges.append((c_i, m_i))
         g.add_edges_from(mentions_edges)
 
@@ -121,21 +121,21 @@ class DocGraph(LoggerMixin):
         curr_predicate = None
         for clust in doc._.coref_clusters:
             ent = clust.main
-            for src, dst, edge_type in nx.dfs_labeled_edges(self.graph, source=ent.root.i):
+            for src, dst, edge_type in nx.dfs_labeled_edges(self.graph, source=ent.root):
                 if edge_type == 'forward':
-                    dst_tok = doc[dst]
+                    dst_tok = dst
                     t = dst_tok.sent.start
-                    dst_cat = categ[dst]
+                    dst_cat = categ[dst.i]
                     if dst_cat == 'Matched':
                         curr_predicate = dst_tok
                         yield Frame(t, curr_predicate, ent, None)
                     elif dst_cat == 'Entity' and t == curr_t and curr_predicate:
-                        dst_ent = ents[dst]
+                        dst_ent = ents[dst.i]
                         yield Frame(t, curr_predicate, ent, dst_ent)
                     curr_t = t
 
-                elif edge_type == 'reverse' and categ[src] == 'Matched':
-                    curr_predicate = doc[src]
+                elif edge_type == 'reverse' and categ[src.i] == 'Matched':
+                    curr_predicate = src
                 else: # edge_type == 'nontree' or ('reverse' but irrelevant)
                     curr_predicate = None
             
