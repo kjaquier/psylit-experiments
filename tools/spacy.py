@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import combinations, product
 from collections import Counter, namedtuple, defaultdict
 
 from nltk.corpus import wordnet as wn
@@ -290,6 +290,7 @@ class SemanticDepParser(RemoveExtensionsMixin):
         super().__init__(force=force_ext)
         super().set_extension(Token, 'agents', default=set())
         super().set_extension(Token, 'patients', default=set())
+        super().set_extension(Span, 'predicates', default=set())
         #super().set_extension(Doc, 'predicates', default=list())
         self.predicate_flag = predicate_flag
 
@@ -315,54 +316,45 @@ class SemanticDepParser(RemoveExtensionsMixin):
                 
                 if is_agent:
                     # TODO also add ancestors through conj etc. 
-                    head._.get('agents').add(ent)
-                    roots.add(head)
-                else: # then patient
-                    for ances in mention_root.ancestors:
-                        if ances._.get(predicate_flag):
-                            ances._.patients.add(ent)
-                            break  # only concerns the closest predicate in the tree
+                    #head._.get('agents').add(ent)
+                    roots.add((head, ent))
+                
+                #else: # then patient
+                #    for ances in mention_root.ancestors:
+                #        if ances._.get(predicate_flag):
+                #            ances._.patients.add(ent)
+                #            break  # only concerns the closest predicate in the tree
         
         print(f"[{self.__class__.__name__}] {len(roots)} roots")
 
+        def dfs(tok, agent=None, predicate=None):
+            if tok._.get(predicate_flag):
+                predicate = tok
+                yield (predicate, agent)
+            for c in tok.children:
+                yield from dfs(c)
+
         # now that agents are collected, propagate them in lower nodes
-        for root in roots:
-            stack = [root]
-            #agents_stack = [root._.agents]  # to avoid too many calls to ._.
-            while stack:
-                tok = stack.pop()
-                #tok_agents = agents_stack.pop()
-                tok_agents = tok._.get('agents')
-                
-                # current node is a predicate: link it to all current agents
+        cnt = Counter()
+        for root, agent in roots:
+            patients = set()
+            predicates = set()
+            for tok in root.subtree:
                 if tok._.get(predicate_flag):
-                    visited[tok.i] |={ '+Pr'}
-                    propagated_agents = union(a._.agents for a in stack)
-                    if propagated_agents:
-                        visited[tok.i] |={ '+A'}
-                    tok_agents.update(propagated_agents)
-                    assert propagated_agents <= tok._.agents
+                    predicates.add(tok)
+                else:
+                    for clust in tok._.coref_clusters:
+                        patients.add(clust.main)
+                    #tok._.agents.update(root._.agents)
+            root.sent._.predicates.update((pred, agent, patient) for pred, patient in product(predicates, patients))
 
-                # current node is a coreference: link it as patient to the current predicate
-                # elif tok.i in coref_tokens:
-                #     visited[tok.i] = 'potential patient'
-                #     for ances in stack:
-                #         visited[tok.i] = 'potential patient predicate'
-                #         if ances._.get(predicate_flag):
-                #             visited[ances.i] = 'patient predicate'
-                #             for clust in tok._.coref_clusters:
-                #                 ances._.patients.add(clust.main)
-                #             break  # only concerns the closest predicate in the tree
+            # selected_childs = [
+            #         c for c in tok.children 
+            #         #if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
+            #         #   not c in roots   # if a node in the tree has an agent, we will propagate that one instead
+            #     ]
 
-                selected_childs = [
-                    c for c in tok.children 
-                    #if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
-                    #   not c in roots   # if a node in the tree has an agent, we will propagate that one instead
-                ]
-                stack.extend(reversed(selected_childs))
-                #agents_stack.extend(reversed([c._.agents for c in selected_childs]))
-
-        print(f"[{self.__class__.__name__}] visited: {Counter('.'.join(v) for v in visited.values())}")
+        print(f"[{self.__class__.__name__}] {cnt}")
 
         return doc
 
