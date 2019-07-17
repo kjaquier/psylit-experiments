@@ -82,6 +82,24 @@ def build_pipe(model='en_core_web_sm'):
     return nlp
 
 
+def get_features(doc):
+    data = [
+        {'i': tok.i,
+        't': tok.sent.start,
+        'neg': tok._.negated,
+        'lemma': tok.lemma_,
+        'text': tok.text,
+        'dep': tok.dep_,
+        'pos': tok.pos_,
+        'agents': ','.join(t.root.text for t in tok._.agents) or None,
+        'patients': ','.join(t.root.text for t in tok._.patients) or None,
+        'lex': ','.join(doc.vocab[cat].text for cat in tok._.lex) or None}
+        for tok in doc
+    ]
+
+    table = pd.DataFrame(data)
+    return table
+
 def get_dataframe(doc):
     #g = d2g.DocGraph(doc)
     # fmt = lambda txt: txt.strip().lower()[:50]
@@ -212,8 +230,9 @@ def get_entities_df(doc):
 def main(input_filename:"Raw text of book to read (UTF-8)",
          run_name:"Name of the run for output files",
          output_dir:"Folder to write output files",
-         save_doc:("File where spacy Doc object is saved", 'flag', 'd')=False,
-         save_entities:("File where entities are saved", 'flag', 'e')=False,
+         save_doc:("Save spacy Doc object", 'flag', 'd')=False,
+         save_features:("Save tokens and features as csv", 'flag', 'f')=False,
+         no_save_entities:("Don't save entities as csv", 'flag', 'e')=False,
          save_meta:("Write metadata file about the run", 'flag', 'm')=False,
          start:("Position to read from",'option','t0')=None,
          end:("Position to stop reading after",'option','t1')=None,
@@ -249,12 +268,18 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
 
     ent_file = os.path.join(output_dir, run_name) + '.ent.csv'
     doc_file = os.path.join(output_dir, run_name) + '.doc.pkl'
+    tok_file = os.path.join(output_dir, run_name) + '.tok.csv'
     data_file = os.path.join(output_dir, run_name) + '.data.csv'
     meta_file = os.path.join(output_dir, run_name) + '.meta.json'
 
-    if save_entities:
+    if not no_save_entities:
         print(f"Saving entities")
         entities_df.to_csv(ent_file)
+
+    if save_features:
+        print(f"Saving features")
+        feat_df = get_features(doc)
+        feat_df.to_csv(tok_file)
 
     if save_doc:
         print(f"Saving doc object")

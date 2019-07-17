@@ -75,40 +75,6 @@ class RemoveExtensionsMixin:
 
         return component
 
-class LexiconTagger(RemoveExtensionsMixin):
-    
-    name = 'lexicon'
-
-    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None, force_ext=False):
-        super().__init__(force=force_ext)
-        self.tag_attr = tag_attr
-        self.flag_attr = flag_attr or ('has_' + tag_attr)
-        self.tags = lexicon.columns
-        
-        super().set_extension(Token, self.tag_attr, default=set())
-        super().set_extension(Token, self.flag_attr, default=False)
-
-        self.matcher = spmatch.Matcher(nlp.vocab)
-        for tag in self.tags:
-            terms = lexicon.loc[lexicon[tag] > 0, tag].index # TODO deal with loadings
-            terms = list(terms.unique())
-            
-            self.matcher.add(tag, None, [{'LOWER': {'IN': terms}}])
-            self.matcher.add(tag, None, [{'LEMMA': {'IN': terms}}])
-    
-    def __call__(self, doc):
-        matches = self.matcher(doc)
-        tag_attr = self.tag_attr
-        flag_attr = self.flag_attr
-        print(f"[{self.__class__.__name__}] {len(matches)} matches")
-        for matched_tag, start, end in matches:
-            tag = matched_tag
-            for tok in doc[start:end]:
-                tok._.get(tag_attr).add(tag)
-                tok._.set(flag_attr, True)
-        
-        return doc
-
 
 class FlagLookup(RemoveExtensionsMixin):
 
@@ -141,6 +107,56 @@ class CorefLookup(FlagLookup):
         #print(f"[{self.__class__.__name__}] {len(indices)} to be cached")
         #self._get_doc_attr().update(indices)
         #Doc._.get('coref_tokens').update(indices)
+        return doc
+
+
+class LexiconTagger(RemoveExtensionsMixin):
+    
+    name = 'lexicon'
+
+    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None, doc_attr='lex_matches', force_ext=False):
+        super().__init__(force=force_ext)
+        self.tag_attr = tag_attr
+        self.flag_attr = flag_attr or ('has_' + tag_attr)
+        self.ances_flag_attr = 'child_' + self.flag_attr
+        self.doc_attr = doc_attr
+        self.tags = lexicon.columns
+        
+        super().set_extension(Token, self.tag_attr, default=set())
+        super().set_extension(Token, self.flag_attr, default=False)
+        super().set_extension(Token, self.ances_flag_attr, default=False)
+        super().set_extension(Doc, self.doc_attr, default=list())
+
+        self.matcher = spmatch.Matcher(nlp.vocab)
+        for tag in self.tags:
+            terms = lexicon.loc[lexicon[tag] > 0, tag].index # TODO deal with loadings
+            terms = list(terms.unique())
+            
+            self.matcher.add(tag, None, [{'LOWER': {'IN': terms}}])
+            self.matcher.add(tag, None, [{'LEMMA': {'IN': terms}}])
+    
+    def __call__(self, doc):
+        matches = self.matcher(doc)
+        tag_attr = self.tag_attr
+        flag_attr = self.flag_attr
+        doc_attr = self.doc_attr
+        ances_flag_attr = self.ances_flag_attr
+        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+        i = 0
+        for matched_tag, start, end in matches:
+            span = doc[start:end]
+            for tok in span:
+                tok._.get(tag_attr).add(matched_tag)
+                tok._.set(flag_attr, True)
+                tok._.set(ances_flag_attr, True)
+                doc._.get(doc_attr).append(tok)
+            i += 1
+            for ances in span.root.ancestors:
+                if ances._.get(ances_flag_attr):
+                    break
+                ances._.set(ances_flag_attr, True)
+                i += 1
+        print(f"[{self.__class__.__name__}] {i} tags assigned")
         return doc
 
 
@@ -258,95 +274,111 @@ DEP_WHITELIST = (
                  # 'npadvmod', 'advmod', 'parataxis', 'xcomp'
                  )
 
+def union(sets):
+    u = set()
+    for s in sets:
+        u |= s
+    return u
+
 
 class SemanticDepParser(RemoveExtensionsMixin):
     """Propagates agent to ancestors"""
 
     name = 'semantic_dep'
 
-    def __init__(self, force_ext=False):
+    def __init__(self, force_ext=False, predicate_flag='has_lex'):
         super().__init__(force=force_ext)
         super().set_extension(Token, 'agents', default=set())
         super().set_extension(Token, 'patients', default=set())
         #super().set_extension(Doc, 'predicates', default=list())
+        self.predicate_flag = predicate_flag
 
     def __call__(self, doc):
-        
+        #coref_tokens = {
+        #    t.i for c in doc._.coref_clusters for m in c.mentions for t in m
+        #}
+        predicate_flag = self.predicate_flag
         dep_passthrough = DEP_WHITELIST + PATIENT_DEPS
+        
+        visited = defaultdict(lambda: set())
+        visited.update({t.i:{'Pr'} for t in doc if t._.get(predicate_flag)})
+        
         clusters = doc._.coref_clusters
-        cnt = Counter()
         roots = set()
-        corefs = set()
         for clust in clusters:
             ent = clust.main
             for mention in clust:
                 mention_root = mention.root
+                head = mention_root.head 
                 is_agent = mention_root.dep_ in AGENT_DEPS
+                #is_co_agent = mention_root.dep_ == 'conj' and head.dep_ == in AGENT_DEPS) # FIXME doesn't deal with "X but Y" etc.
                 
                 if is_agent:
-
-                    head = mention_root.head
-                    #if head._.agent:
-                        #print(f"[{self.__class__.__name__}] WARNING {mention.text!r} agent of {head.text!r} in sent at {mention.root.sent.start}")
-                    
+                    # TODO also add ancestors through conj etc. 
                     head._.get('agents').add(ent)
-
-                   # cnt[head._.child_has_lex] += 1
-                    
-                    #if head._.child_has_lex:  # no because we may miss a patient
                     roots.add(head)
+                else: # then patient
+                    for ances in mention_root.ancestors:
+                        if ances._.get(predicate_flag):
+                            ances._.patients.add(ent)
+                            break  # only concerns the closest predicate in the tree
         
         print(f"[{self.__class__.__name__}] {len(roots)} roots")
-        
-        def union(sets):
-            u = set()
-            for s in sets:
-                u |= s
-            return u
 
-        coref_tokens = {
-            t.i for c in doc._.coref_clusters for m in c.mentions for t in m
-        }#doc._.coref_tokens
-
+        # now that agents are collected, propagate them in lower nodes
         for root in roots:
             stack = [root]
-            agents_stack = [root._.agents]
+            #agents_stack = [root._.agents]  # to avoid too many calls to ._.
             while stack:
                 tok = stack.pop()
-                tok_agents = agents_stack.pop()
+                #tok_agents = agents_stack.pop()
+                tok_agents = tok._.get('agents')
+                
+                # current node is a predicate: link it to all current agents
+                if tok._.get(predicate_flag):
+                    visited[tok.i] |={ '+Pr'}
+                    propagated_agents = union(a._.agents for a in stack)
+                    if propagated_agents:
+                        visited[tok.i] |={ '+A'}
+                    tok_agents.update(propagated_agents)
+                    assert propagated_agents <= tok._.agents
 
-                # current node is a predicate: update agent
-                if tok._.has_lex:# and not tok._.agents:
-                    tok_agents.update(union(agents_stack)) # TODO can probably be optimised
-
-                # current node is a coreference: update previous predicate patient
-                elif stack and tok.i in coref_tokens:
-                    for ances in stack:  # FIXME probably slow!
-                        if ances._.has_lex:
-                            for clust in tok._.coref_clusters:
-                                ances._.patients.add(clust.main)
-                            break  # only concerns the closest predicate in the tree
+                # current node is a coreference: link it as patient to the current predicate
+                # elif tok.i in coref_tokens:
+                #     visited[tok.i] = 'potential patient'
+                #     for ances in stack:
+                #         visited[tok.i] = 'potential patient predicate'
+                #         if ances._.get(predicate_flag):
+                #             visited[ances.i] = 'patient predicate'
+                #             for clust in tok._.coref_clusters:
+                #                 ances._.patients.add(clust.main)
+                #             break  # only concerns the closest predicate in the tree
 
                 selected_childs = [
                     c for c in tok.children 
-                    if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
-                       not c._.agents   # if a node in the tree has an agent, we will propagate that one instead
+                    #if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
+                    #   not c in roots   # if a node in the tree has an agent, we will propagate that one instead
                 ]
                 stack.extend(reversed(selected_childs))
-                agents_stack.extend(reversed([c._.agents for c in selected_childs]))
+                #agents_stack.extend(reversed([c._.agents for c in selected_childs]))
+
+        print(f"[{self.__class__.__name__}] visited: {Counter('.'.join(v) for v in visited.values())}")
 
         return doc
 
 
-class SemanticDepParser__old(RemoveExtensionsMixin):
+class PredicateParser(RemoveExtensionsMixin):
 
-    name = 'semantic_dep'
+    name = 'predicates'
 
-    def __init__(self, force_ext=False):
+    def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
         super().__init__(force=force_ext)
         super().set_extension(Token, 'sem_deps', default=list())
+        self.matcher = spmatch.Matcher(vocab)
+        self.matcher.add('predicate', None, pattern)
 
     def __call__(self, doc):
+        
         clusters = doc._.coref_clusters
         print(f"[{self.__class__.__name__}] {len(clusters)} clusters")
         cnt = Counter()
@@ -364,20 +396,7 @@ class SemanticDepParser__old(RemoveExtensionsMixin):
                     anc._.sem_deps.append((rel, clust))
                     cnt[rel] += 1
         print(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k,v in cnt.items()))
-        return doc
 
-
-class PredicateParser(RemoveExtensionsMixin):
-
-    name = 'predicates'
-
-    def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
-        super().__init__(force=force_ext)
-        assert Token.has_extension('sem_deps'), "Need extension 'sem_deps'!"
-        self.matcher = spmatch.Matcher(vocab)
-        self.matcher.add('predicate', None, pattern)
-
-    def __call__(self, doc):
         matches = self.matcher(doc)
         print(f"[{self.__class__.__name__}] {len(matches)} matches")
         cnt = Counter()
@@ -553,4 +572,5 @@ class EntityTagger(RemoveExtensionsMixin):
                 mention._.set(attr_name, tag)
         return doc
     
+
 
