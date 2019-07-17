@@ -124,15 +124,18 @@ def get_dataframe(doc):
         'neg': tok._.negated,
         'lemma': tok.lemma_,
         'text': tok.text,
+        #f"R_{rel}": ent.root.text,
         'R_agent': agent.root.text if agent else None,
         'R_patient': patient.root.text if patient else None,
         #**{('R_'+r): fmt(clust.main.root) for r, clust in tok._.sem_deps}, # FIXME deal with pronouns: join is made on entity_root
         #                                                                   # which is either clust.main.root or ent_class (Categorical)
         **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
         }
-        for tok in doc._.lex_matches #doc if tok._.has_lex
-        for agent in tok._.agents
-        for patient in (tok._.patients or [None])
+        #for tok in doc._.lex_matches #doc if tok._.has_lex
+        #for agent in tok._.agents
+        #for patient in (tok._.patients or [None])
+        for sent in doc.sents
+        for tok, agent, patient in sent._.predicates
     ]
 
     table = pd.DataFrame(data)
