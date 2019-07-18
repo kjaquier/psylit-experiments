@@ -302,10 +302,13 @@ class SemanticDepParser(RemoveExtensionsMixin):
         dep_passthrough = DEP_WHITELIST + PATIENT_DEPS
         
         visited = defaultdict(lambda: set())
-        visited.update({t.i:{'Pr'} for t in doc if t._.get(predicate_flag)})
+        #visited.update({t.i:{'Pr'} for t in doc if t._.get(predicate_flag)})
         
+        cnt = Counter()
         clusters = doc._.coref_clusters
-        roots = set()
+        patients = set()
+
+        # find agents and patients
         for clust in clusters:
             ent = clust.main
             for mention in clust:
@@ -315,38 +318,72 @@ class SemanticDepParser(RemoveExtensionsMixin):
                 #is_co_agent = mention_root.dep_ == 'conj' and head.dep_ == in AGENT_DEPS) # FIXME doesn't deal with "X but Y" etc.
                 
                 if is_agent:
+                    #cnt['Ag'] += 1
                     # TODO also add ancestors through conj etc. 
-                    #head._.get('agents').add(ent)
-                    roots.add((head, ent))
+                    head._.get('agents').add(ent)
+                    if head != mention_root:
+                        pass
+                        #cnt['Head'] += 1
+                    #roots.add((head, ent))
                 
-                #else: # then patient
-                #    for ances in mention_root.ancestors:
-                #        if ances._.get(predicate_flag):
-                #            ances._.patients.add(ent)
-                #            break  # only concerns the closest predicate in the tree
-        
-        print(f"[{self.__class__.__name__}] {len(roots)} roots")
+                else: # then patient
+                    patients.add(mention)
 
-        def dfs(tok, agent=None, predicate=None):
-            if tok._.get(predicate_flag):
-                predicate = tok
-                yield (predicate, agent)
-            for c in tok.children:
-                yield from dfs(c)
+                    #cnt['Pat'] += 1
 
-        # now that agents are collected, propagate them in lower nodes
-        cnt = Counter()
-        for root, agent in roots:
-            patients = set()
-            predicates = set()
-            for tok in root.subtree:
-                if tok._.get(predicate_flag):
-                    predicates.add(tok)
+        # resolve predicate of all patients by looking at ancestors
+        # until resolved or hit a subsentence root
+        for patient in patients:
+            patient_root = patient.root
+            if patient_root.dep_ in dep_passthrough: 
+                for ances in patient_root.ancestors:
+                    if ances._.get(predicate_flag):
+                        ances._.patients.add(patient)
+                        #cnt['+Pat'] += 1
+                        break
+
+                    if ances._.agents or ances.dep_ not in dep_passthrough: # resolved or subsentence root
+                        #cnt['^Pat Stub :('] += 1
+                        #cnt['Stub :('] += 1
+                        break
+            else:
+                pass
+                #cnt['Pat Stub :('] += 1
+                #cnt['Stub :('] += 1
+
+        # resolve agents of all predicates by looking at ancestors
+        # until resolved or hit a subsentence root
+        for predicate in doc._.lex_matches: # TODO make it more generic
+            predicate_agents = predicate._.agents
+            #cnt['W'] += 1
+
+            # resolved?
+            if predicate_agents:
+                #cnt['+Ag'] += 1
+                #cnt['W+Head+Ag'] += 1
+                continue
+            
+            # not resolved: iter ancestors
+            if predicate.dep_ in dep_passthrough: 
+                for ances in predicate.ancestors:
+                    agents = ances._.agents
+                    if agents:
+                        #cnt['*Ag'] += 1
+                        #cnt['+Ag'] += 1
+                        predicate._.agents.update(agents) # propagate agents
+                        break # resolved
+                    
+                    if ances.dep_ not in dep_passthrough:
+                        #cnt['Stub :('] += 1
+                        #cnt['W^ Stub :('] += 1
+                        break
                 else:
-                    for clust in tok._.coref_clusters:
-                        patients.add(clust.main)
-                    #tok._.agents.update(root._.agents)
-            root.sent._.predicates.update((pred, agent, patient) for pred, patient in product(predicates, patients))
+                    #cnt['Root :('] += 1
+                    pass
+            else:
+                pass
+                #cnt['W Stub :('] += 1
+                #cnt['Stub :('] += 1
 
             # selected_childs = [
             #         c for c in tok.children 
@@ -354,6 +391,7 @@ class SemanticDepParser(RemoveExtensionsMixin):
             #         #   not c in roots   # if a node in the tree has an agent, we will propagate that one instead
             #     ]
 
+        #print(f"[{self.__class__.__name__}] {Counter(' '.join(v) for v in visited.values())}")
         print(f"[{self.__class__.__name__}] {cnt}")
 
         return doc

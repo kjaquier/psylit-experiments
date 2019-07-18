@@ -110,7 +110,7 @@ def entity_classifier(vocab, doc_attr='classified_ents', force_ext=False):
         import time
         t = time.clock()
         coref_tokens = {
-            t.i for c in doc._.coref_clusters for m in c.mentions for t in m
+            t.i for c in (doc._.coref_clusters or []) for m in (c.mentions or []) for t in m
         }#doc._.coref_tokens
         t = time.clock() - t
         print(f"[entities_classifier.iter_entities] {len(coref_tokens)} coref tokens [{t} s]")

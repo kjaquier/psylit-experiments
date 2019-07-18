@@ -3,6 +3,7 @@ import time
 import sys
 import json
 import os
+import datetime as dt
 
 import tools
 import tools.spacy as myspacy
@@ -131,11 +132,11 @@ def get_dataframe(doc):
         #                                                                   # which is either clust.main.root or ent_class (Categorical)
         **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
         }
-        #for tok in doc._.lex_matches #doc if tok._.has_lex
-        #for agent in tok._.agents
-        #for patient in (tok._.patients or [None])
-        for sent in doc.sents
-        for tok, agent, patient in sent._.predicates
+        for tok in doc._.lex_matches #doc if tok._.has_lex
+        for agent in tok._.agents
+        for patient in (tok._.patients or [None])
+        #for sent in doc.sents
+        #for tok, agent, patient in sent._.predicates
     ]
 
     table = pd.DataFrame(data)
@@ -237,20 +238,26 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
          save_features:("Save tokens and features as csv", 'flag', 'f')=False,
          no_save_entities:("Don't save entities as csv", 'flag', 'e')=False,
          save_meta:("Write metadata file about the run", 'flag', 'm')=False,
-         start:("Position to read from",'option','t0')=None,
-         end:("Position to stop reading after",'option','t1')=None,
+         #sent:("Only read the sentence at position t",'option','t')=0,
+         start:("Position to read from",'option','t0')=0,
+         end:("Position to stop reading after",'option','t1')=0,
          benchmark:("Measure execution time", 'flag', 'b')=False):
 
+    now = dt.datetime.now().isoformat()
 
+    #sent = int(sent)
+    start = int(start)
+    end = int(end)
     print('start=', repr(start), ' end=', repr(end))
-    start = int(start) if start is not None else 0
-    end = int(end) if end is not None else None
+
+    #if sent and not end:
+    #    print("[WARNING] end not specified: will read and process entire file!")
 
     if benchmark:
         t0 = time.clock()
     txt = preprocess.read_pg(input_filename)
     n = len(txt)
-    txt = txt[start:] if end is None else txt[start:end]
+    txt = txt[start:end] if end else txt[start:]
     print('Processing', len(txt), '/', n, 'chars')
     nlp = build_pipe()
     print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
@@ -261,6 +268,8 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
         t1 = time.clock()
 
     doc = nlp(txt)
+    #if sent:
+    #    doc = doc[sent].sent.as_doc() # not supported by NeuralCoref :(
     entities_df = get_entities_df(doc)
     df = get_dataframe(doc)
 
@@ -298,6 +307,7 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
     if save_meta:
         metadata = {
             'cmd': sys.argv,
+            'time': now,
             'input_filename': input_filename,
             'time_init': t_init if benchmark else None,
             'time_process': t_process if benchmark else None,
