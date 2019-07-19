@@ -44,6 +44,8 @@ def fix_names(doc):
                 'DEP': root.dep,
                 'POS': root.pos,
                 'TAG': root.tag,
+                'ENT_TYPE': root.ent_type,
+                'ENT_IOB': root.ent_iob,
             }
             retokenizer.merge(span, attrs)
     return doc

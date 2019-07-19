@@ -285,19 +285,19 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
     meta_file = os.path.join(output_dir, run_name) + '.meta.json'
 
     if not no_save_entities:
-        print(f"Saving entities")
+        print(f"Saving entities to",ent_file)
         entities_df.to_csv(ent_file)
 
     if save_features:
-        print(f"Saving features")
+        print(f"Saving features to", tok_file)
         feat_df = get_features(doc)
         feat_df.to_csv(tok_file)
 
     if save_doc:
-        print(f"Saving doc object")
+        print(f"Saving doc object to", doc_file)
         doc.to_disk(save_doc)
 
-    print(f"Saving data")
+    print(f"Saving data to", data_file)
     df.to_csv(data_file)
 
     if benchmark:
@@ -322,7 +322,7 @@ def main(input_filename:"Raw text of book to read (UTF-8)",
         for k in ['n_predicates', 'n_corefs']:
             print(k, ':', metadata[k])
 
-        print(f"Saving meta data")
+        print(f"Saving meta data to", meta_file)
         with open(meta_file, 'w') as f:
             json.dump(metadata, f)
 
