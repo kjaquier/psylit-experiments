@@ -119,9 +119,11 @@ def get_dataframe(doc):
     # ]
 
     #fmt = lambda tok: tok.text.strip().lower() if tok else None
+    predicates = doc._.lex_matches
     data = [
         {'i': tok.i,
-        't': tok.sent.start,
+        'sent_i': tok.sent.start,
+        't': tok._.subsent_root.i,
         'neg': tok._.negated,
         'lemma': tok.lemma_,
         'text': tok.text,
@@ -132,7 +134,7 @@ def get_dataframe(doc):
         #                                                                   # which is either clust.main.root or ent_class (Categorical)
         **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex}, 
         }
-        for tok in doc._.lex_matches #doc if tok._.has_lex
+        for tok in predicates
         for agent in tok._.agents
         for patient in (tok._.patients or [None])
         #for sent in doc.sents
