@@ -293,6 +293,7 @@ class SemanticDepParser(RemoveExtensionsMixin):
         super().set_extension(Token, 'agents', default=set())
         super().set_extension(Token, 'patients', default=set())
         super().set_extension(Span, 'predicates', default=set())
+        super().set_extension(Token, 'subsent_root', default=None)
         #super().set_extension(Doc, 'predicates', default=list())
         self.predicate_flag = predicate_flag
 
@@ -301,9 +302,9 @@ class SemanticDepParser(RemoveExtensionsMixin):
         #    t.i for c in doc._.coref_clusters for m in c.mentions for t in m
         #}
         predicate_flag = self.predicate_flag
-        dep_passthrough = DEP_WHITELIST + PATIENT_DEPS
+        dep_inside_subsentence = DEP_WHITELIST + PATIENT_DEPS
         
-        visited = defaultdict(lambda: set())
+        #visited = defaultdict(lambda: set())
         #visited.update({t.i:{'Pr'} for t in doc if t._.get(predicate_flag)})
         
         cnt = Counter()
@@ -323,6 +324,8 @@ class SemanticDepParser(RemoveExtensionsMixin):
                     #cnt['Ag'] += 1
                     # TODO also add ancestors through conj etc. 
                     head._.get('agents').add(ent)
+                    mention_root._.set('subsent_root', head)
+
                     if head != mention_root:
                         pass
                         #cnt['Head'] += 1
@@ -337,18 +340,23 @@ class SemanticDepParser(RemoveExtensionsMixin):
         # until resolved or hit a subsentence root
         for patient in patients:
             patient_root = patient.root
-            if patient_root.dep_ in dep_passthrough: 
+            if patient_root.dep_ in dep_inside_subsentence: 
                 for ances in patient_root.ancestors:
                     if ances._.get(predicate_flag):
                         ances._.patients.add(patient)
+                        patient_root._.set('subsent_root', ances)
                         #cnt['+Pat'] += 1
                         break
 
-                    if ances._.agents or ances.dep_ not in dep_passthrough: # resolved or subsentence root
+                    if ances._.agents or ances.dep_ not in dep_inside_subsentence: # resolved or subsentence root
+                        patient_root._.set('subsent_root', ances)
                         #cnt['^Pat Stub :('] += 1
                         #cnt['Stub :('] += 1
                         break
+                else:
+                    patient_root._.set('subsent_root', patient_root.sent.root)
             else:
+                patient_root._.set('subsent_root', patient_root)
                 pass
                 #cnt['Pat Stub :('] += 1
                 #cnt['Stub :('] += 1
@@ -363,33 +371,38 @@ class SemanticDepParser(RemoveExtensionsMixin):
             if predicate_agents:
                 #cnt['+Ag'] += 1
                 #cnt['W+Head+Ag'] += 1
+                predicate._.set('subsent_root', predicate)
                 continue
             
             # not resolved: iter ancestors
-            if predicate.dep_ in dep_passthrough: 
+            if predicate.dep_ in dep_inside_subsentence: 
                 for ances in predicate.ancestors:
                     agents = ances._.agents
                     if agents:
                         #cnt['*Ag'] += 1
                         #cnt['+Ag'] += 1
                         predicate._.agents.update(agents) # propagate agents
-                        break # resolved
+                        predicate._.set('subsent_root', ances)
+                        break
                     
-                    if ances.dep_ not in dep_passthrough:
+                    if ances.dep_ not in dep_inside_subsentence:
                         #cnt['Stub :('] += 1
                         #cnt['W^ Stub :('] += 1
+                        predicate._.set('subsent_root', ances)
                         break
                 else:
                     #cnt['Root :('] += 1
+                    predicate._.set('subsent_root', predicate.sent.root)
                     pass
             else:
+                predicate._.set('subsent_root', predicate)
                 pass
                 #cnt['W Stub :('] += 1
                 #cnt['Stub :('] += 1
 
             # selected_childs = [
             #         c for c in tok.children 
-            #         #if c.dep_ in dep_passthrough and  # some edges represent sub-sentences that we want to keep separate
+            #         #if c.dep_ in dep_inside_subsentence and  # some edges represent sub-sentences that we want to keep separate
             #         #   not c in roots   # if a node in the tree has an agent, we will propagate that one instead
             #     ]
 
