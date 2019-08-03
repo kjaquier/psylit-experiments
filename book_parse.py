@@ -86,7 +86,8 @@ def build_pipe(model='en_core_web_sm'):
 def get_features(doc):
     data = [
         {'i': tok.i,
-        't': tok.sent.start,
+        'sent_i': tok.sent.start,
+        't': tok._.subsent_root.i,
         'neg': tok._.negated,
         'lemma': tok.lemma_,
         'text': tok.text,

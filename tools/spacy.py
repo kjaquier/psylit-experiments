@@ -32,7 +32,7 @@ def filter_spans(spans):
 def fix_names(doc):
     """Spacy pipeline component for merging particles like 'Mr/Mrs' etc."""
     matcher = spmatch.Matcher(doc.vocab)
-    matcher.add('name_parts', None, [{'DEP': {'IN': ('compound','prt','flat')}, 'ENT_IOB': {'NOT': 'O'}, 'OP':'+'},
+    matcher.add('name_parts', None, [{'DEP': {'IN': ('compound','prt','flat', 'poss')}, 'ENT_IOB': {'NOT': 'O'}, 'OP':'+'},
                                      {'ENT_IOB': {'NOT': 'O'}}])
     matches = matcher(doc)
     spans = filter_spans(doc[s:e] for _, s, e in matches)
