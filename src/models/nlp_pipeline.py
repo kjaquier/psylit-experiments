@@ -1,5 +1,5 @@
 import logging
-import sys
+from collections import Counter
 
 import pandas as pd
 import spacy
@@ -16,9 +16,7 @@ from features import semantic_parsing as sem
 
 from data import lexicons
 
-
-logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-
+logger = logging.getLogger(__name__)
 
 class BookParsePipeline:
 
@@ -59,7 +57,7 @@ class BookParsePipeline:
         data = [
             {'i': tok.i,
              'sent_i': tok.sent.start,
-             't': getattr(tok._.subsent_root, 'i', tok.sent.start),
+             't': getattr(tok._.subsent_root, 'i', None),
              'neg': tok._.negated,
              'lemma': tok.lemma_,
              'text': tok.text,
@@ -80,6 +78,10 @@ class BookParsePipeline:
             raise Exception('Need to run parse() first!')
 
         predicates = doc._.lex_matches
+        logger.debug(f"{len(predicates)} predicates")
+        logger.debug(f"# of duplicates (i): {Counter(Counter(tok.i for tok in predicates).values())}")
+        logger.debug(f"# of agents per predicates (incl. None): {Counter(len(tok._.agents or [None]) for tok in predicates)}")
+        logger.debug(f"# of patients per predicates (incl. None): {Counter(len(tok._.patients or [None]) for tok in predicates)}")
         data = [
             {'i': tok.i,
              'sent_i': tok.sent.start,
@@ -92,7 +94,7 @@ class BookParsePipeline:
              **{('L_'+doc.vocab[cat].text): 1.0 for cat in tok._.lex},
              }
             for tok in predicates
-            for agent in tok._.agents
+            for agent in (tok._.agents or [None])
             for patient in (tok._.patients or [None])
         ]
 

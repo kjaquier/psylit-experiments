@@ -1,18 +1,17 @@
-from itertools import combinations, product
-from collections import Counter, namedtuple, defaultdict
-
-from nltk.corpus import wordnet as wn
+from collections import Counter
+import logging
 
 import spacy.matcher as spmatch
-from spacy.tokens import Doc, Span, Token
+from spacy.tokens import Doc, Token
 
 from utils import spacy as spacy_utils
 
-class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
-    
+
+class LexiconTagger(spacy_utils.RemoveExtensionsMixin):   
     name = 'lexicon'
 
-    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None, doc_attr='lex_matches', force_ext=False):
+    def __init__(self, nlp, lexicon, tag_attr='lex', flag_attr=None,
+                 doc_attr='lex_matches', force_ext=False):
         super().__init__(force=force_ext)
         self.tag_attr = tag_attr
         self.flag_attr = flag_attr or ('has_' + tag_attr)
@@ -29,32 +28,43 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
         for tag in self.tags:
             terms = lexicon.loc[lexicon[tag] > 0, tag].index # TODO deal with loadings
             terms = list(terms.unique())
-            
-            self.matcher.add(tag, None, [{'LOWER': {'IN': terms}}])
-            self.matcher.add(tag, None, [{'LEMMA': {'IN': terms}}])
-    
+            self.matcher.add(tag, None, [{'LOWER': {'IN': terms}}], [{'LEMMA': {'IN': terms}}])
+
     def __call__(self, doc):
         matches = self.matcher(doc)
         tag_attr = self.tag_attr
         flag_attr = self.flag_attr
         doc_attr = self.doc_attr
         ances_flag_attr = self.ances_flag_attr
-        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+
+        logging.info(f"[{self.__class__.__name__}] {len(matches)} matches")
+
+        tok_list = doc._.get(doc_attr)
+
+        tagged = set()
+
         i = 0
+        j = 0
         for matched_tag, start, end in matches:
             span = doc[start:end]
             for tok in span:
                 tok._.get(tag_attr).add(matched_tag)
                 tok._.set(flag_attr, True)
                 tok._.set(ances_flag_attr, True)
-                doc._.get(doc_attr).append(tok)
-            i += 1
+                i += 1
+                
+                if tok not in tagged:    
+                    tok_list.append(tok)
+                    tagged.add(tok)
+                
             for ances in span.root.ancestors:
                 if ances._.get(ances_flag_attr):
                     break
                 ances._.set(ances_flag_attr, True)
-                i += 1
-        print(f"[{self.__class__.__name__}] {i} tags assigned")
+                j += 1
+
+        logging.debug(f"[{self.__class__.__name__}] {i} tags assigned on {len(tagged)}"
+                      f" tokens, {j} ancestors flagged")
         return doc
 
 
@@ -91,7 +101,9 @@ class FastLexiconTagger(spacy_utils.RemoveExtensionsMixin):
         flag_attr = self.flag_attr
         doc_attr = self.doc_attr
         ances_flag_attr = self.ances_flag_attr
-        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+
+        logging.info(f"[{self.__class__.__name__}] {len(matches)} matches")
+
         i = 0
         for matched_tag, start, end in matches:
             span = doc[start:end]
@@ -106,13 +118,15 @@ class FastLexiconTagger(spacy_utils.RemoveExtensionsMixin):
                     break
                 ances._.set(ances_flag_attr, True)
                 i += 1
-        print(f"[{self.__class__.__name__}] {i} tags assigned")
+        
+        logging.info(f"[{self.__class__.__name__}] {i} tags assigned")
+
         return doc
 
 
 class HypernymTagger(spacy_utils.RemoveExtensionsMixin):
     
-    def __init__(self, vocab, wndomains, tag_attr, force_ext=False):
+    def __init__(self, wndomains, tag_attr, force_ext=False):
         super().__init__(force=force_ext)
         self.tag_attr = tag_attr
         self.wndomains = wndomains
@@ -152,4 +166,3 @@ class NegTagger(spacy_utils.RemoveExtensionsMixin):
                 head._.set('negated', True)
 
         return doc
-

@@ -1,3 +1,4 @@
+import logging
 import time
 
 def benchmark(f):
@@ -15,7 +16,7 @@ def benchmark(f):
         t = time.clock()
         res = f(*args, **kwargs)
         t = time.clock() - t
-        print(f"[Time] {name} {t*1000:.3n}ms")
+        logging.debug(f"Time for {name}:  {t*1000:.3n}ms")
         return res
 
     if rename:
