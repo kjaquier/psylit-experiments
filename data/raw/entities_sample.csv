@@ -1,0 +1,720 @@
+,NER_CARDINAL,NER_DATE,NER_GPE,NER_ORG,NER_PERSON,WN_entity,WN_female,WN_male,WN_person,entity_pos,entity_root,entity_tag,entity_text,i,mention_pos,mention_root,mention_tag,mention_text,t,mention_categ
+0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,It,120,PRON,it,PRP,It,120,environment
+1,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,It,130,PRON,it,PRP,it,120,environment
+2,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,story,NN,my story,288,NOUN,story,NN,my story,284,environment
+3,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,story,NN,my story,297,PRON,it,PRP,It,297,environment
+4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,508,PRON,we,PRP,we,497,person
+5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,519,PRON,ourselves,PRP,ourselves,497,person
+6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,532,DET,our,PRP$,our,497,person
+7,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,we,PRP,we,539,PRON,us,PRP,us,535,person
+8,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friends,NNS,my two friends,603,NOUN,friends,NNS,my two friends,593,
+9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,friends,NNS,my two friends,623,PRON,they,PRP,they,593,environment
+10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,friends,NNS,my two friends,629,DET,their,PRP$,their,593,environment
+11,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,668,PROPN,england,NNP,England,662,person
+12,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,2031,PROPN,england,NNP,England,2027,person
+13,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,3543,PROPN,england,NNP,England,3539,person
+14,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,3580,PROPN,england,NNP,England,3576,person
+15,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,england,NNP,England,3586,DET,its,PRP$,its,3576,environment
+16,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,3683,PROPN,england,NNP,England,3659,person
+17,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,england,NNP,England,3901,PROPN,england,NNP,England,3897,person
+18,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,dreams,NNS,my day dreams,808,NOUN,dreams,NNS,my day dreams,801,environment
+19,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,dreams,NNS,my day dreams,2433,NOUN,dreams,NNS,my day dreams,2422,environment
+20,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,pole,NN,the pole,825,NOUN,pole,NN,the pole,817,person
+21,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,pole,NN,the pole,835,PRON,it,PRP,it,817,environment
+22,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,pole,NN,the pole,838,PRON,itself,PRP,itself,817,environment
+23,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,Margaret,852,PROPN,margaret,NNP,Margaret,850,person
+24,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,Margaret,1985,PROPN,margaret,NNP,Margaret,1979,person
+25,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,Margaret,2143,PROPN,margaret,NNP,Margaret,2138,person
+26,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,sun,NN,the sun,854,NOUN,sun,NN,the sun,850,person
+27,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sun,NN,the sun,861,DET,its,PRP$,its,850,environment
+28,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sun,NN,the sun,931,DET,its,PRP$,Its,931,environment
+29,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,voyage,NN,only this voyage,988,NOUN,voyage,NN,only this voyage,966,environment
+30,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,voyage,NN,only this voyage,1057,NOUN,voyage,NN,this laborious voyage,1033,environment
+31,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,these,DT,These,1033,DET,these,DT,These,1033,environment
+32,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,these,DT,These,1039,PRON,they,PRP,they,1033,person
+33,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,child,NN,a child,1063,NOUN,child,NN,a child,1033,person
+34,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,child,NN,a child,1067,PRON,he,PRP,he,1033,environment
+35,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,child,NN,a child,1075,DET,his,PRP$,his,1033,environment
+36,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,child,NN,a child,1085,DET,his,PRP$,his,1033,environment
+37,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,soul,NN,the soul,1212,NOUN,soul,NN,the soul,1168,environment
+38,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,soul,NN,the soul,1216,DET,its,PRP$,its,1168,environment
+39,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,NOUN,uncle,NN,our good uncle Thomas's library,1280,NOUN,uncle,NN,our good uncle Thomas's library,1260,person
+40,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,uncle,NN,our good uncle Thomas's library,1336,NOUN,uncle,NN,my uncle,1300,person
+41,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,volumes,NNS,These volumes,1300,NOUN,volumes,NNS,These volumes,1300,environment
+42,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,volumes,NNS,These volumes,1313,PRON,them,PRP,them,1300,environment
+43,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,effusions,NNS,whose effusions,1363,NOUN,effusions,NNS,whose effusions,1349,environment
+44,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,effusions,NNS,whose effusions,1371,PRON,it,PRP,it,1349,environment
+45,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,heaven,NNP,heaven,1373,PROPN,heaven,NNP,heaven,1349,person
+46,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,heaven,NNP,heaven,1987,PROPN,heaven,NNP,Heaven,1987,person
+47,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,enterprise,NN,this great enterprise,1484,NOUN,enterprise,NN,this great enterprise,1469,environment
+48,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,enterprise,NN,this great enterprise,2063,NOUN,enterprise,NN,my enterprise,2056,environment
+49,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,enterprise,NN,this great enterprise,2627,NOUN,enterprise,NN,my enterprise,2599,environment
+50,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,dear Margaret,1571,PRON,myself,PRP,myself,1567,environment
+51,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,dear Margaret,1584,PRON,myself,PRP,myself,1567,environment
+52,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,margaret,NNP,dear Margaret,1631,PROPN,margaret,NNP,dear Margaret,1628,person
+53,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,captain,NN,my captain,1598,NOUN,captain,NN,my captain,1591,person
+54,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,captain,NN,my captain,1622,PRON,he,PRP,he,1591,environment
+55,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,spirits,NNS,my spirits,1695,NOUN,spirits,NNS,my spirits,1681,environment
+56,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,spirits,NNS,my spirits,3505,NOUN,spirits,NNS,my spirits,3478,environment
+57,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,spirits,NNS,the spirits of others,1730,NOUN,spirits,NNS,the spirits of others,1701,environment
+58,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,spirits,NNS,the spirits of others,1743,PRON,theirs,PRP,theirs,1701,environment
+59,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,spirits,NNS,the spirits of others,1759,PRON,they,PRP,They,1759,environment
+60,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,spirits,NNS,the spirits of others,1766,DET,their,PRP$,their,1759,environment
+61,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,sister,NN,dear sister,1935,NOUN,sister,NN,dear sister,1933,person
+62,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,sister,NN,dear sister,1958,PRON,you,PRP,you,1945,environment
+63,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,sister,NN,dear sister,1992,PRON,you,PRP,you,1987,environment
+64,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,saville,NNP,"Mrs. Saville, England",2028,PROPN,saville,NNP,"Mrs. Saville, England",2027,person
+65,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,saville,NNP,"Mrs. Saville, England",3898,PROPN,saville,NNP,"Mrs. Saville, England",3897,person
+66,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,saville,NNP,"Mrs. Saville, England.
+",2028,PROPN,saville,NNP,"Mrs. Saville, England.
+",2027,person
+67,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,saville,NNP,"Mrs. Saville, England.
+",3540,PROPN,saville,NNP,"Mrs. Saville, England.
+",3539,person
+68,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,saville,NNP,"Mrs. Saville, England.
+",3898,PROPN,saville,NNP,"Mrs. Saville, England.
+",3897,person
+69,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,"no friend, Margaret",2140,NOUN,friend,NN,"no friend, Margaret",2138,person
+70,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,0.0,NOUN,friend,NN,"no friend, Margaret",3772,PROPN,adieu,NNP,"Adieu, my dear Margaret",3772,person
+71,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,2216,PRON,me,PRP,me,2205,person
+72,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,me,PRP,me,2223,PRON,mine,PRP,mine,2205,person
+73,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,2250,PRON,me,PRP,me,2245,person
+74,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,2316,PRON,me,PRP,me,2308,person
+75,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,it,2364,PRON,it,PRP,it,2348,environment
+76,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,it,2368,PRON,it,PRP,it,2348,environment
+77,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,it,2378,DET,its,PRP$,its,2348,environment
+78,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,country,NN,my native country,2401,NOUN,country,NN,my native country,2348,environment
+79,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,country,NN,my native country,3006,NOUN,country,NN,his country,2980,environment
+80,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,PROPN,archangel,NNP,Archangel,2507,PROPN,archangel,NNP,Archangel,2485,person
+81,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,PROPN,archangel,NNP,Archangel,3590,PROPN,archangel,NNP,Archangel,3576,person
+82,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,lieutenant,NN,My lieutenant,2533,NOUN,lieutenant,NN,My lieutenant,2533,person
+83,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2548,PRON,he,PRP,he,2533,environment
+84,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2568,DET,his,PRP$,his,2533,environment
+85,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2571,PRON,he,PRP,He,2571,environment
+86,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2604,PRON,him,PRP,him,2599,environment
+87,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2613,PRON,he,PRP,he,2599,environment
+88,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,My lieutenant,2623,PRON,him,PRP,him,2599,environment
+89,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,2607,NOUN,vessel,NN,a whale vessel,2599,environment
+90,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4317,NOUN,vessel,NN,the vessel,4289,environment
+91,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4382,NOUN,vessel,NN,the vessel,4360,environment
+92,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4516,NOUN,vessel,NN,my vessel,4486,environment
+93,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4524,PRON,he,PRP,he,4486,environment
+94,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4561,PRON,he,PRP,he,4558,environment
+95,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4587,DET,his,PRP$,his,4575,environment
+96,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4597,DET,his,PRP$,His,4597,environment
+97,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,vessel,NN,a whale vessel,4604,DET,his,PRP$,his,4597,environment
+98,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,master,NN,The master,2631,NOUN,master,NN,The master,2631,person
+99,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,master,NN,The master,2648,DET,his,PRP$,his,2631,environment
+100,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,master,NN,The master,2654,DET,his,PRP$,his,2631,environment
+101,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,master,NN,The master,2662,DET,his,PRP$,his,2657,environment
+102,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,master,NN,The master,2676,PRON,him,PRP,him,2657,environment
+103,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,master,NN,The master,4415,NOUN,master,NN,the master,4409,person
+104,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,master,NN,The master,4426,PRON,he,PRP,he,4409,environment
+105,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,master,NN,The master,4468,PRON,he,PRP,he,4458,environment
+106,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,character,NN,my character,2701,NOUN,character,NN,my character,2678,person
+107,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,character,NN,my character,2759,PRON,myself,PRP,myself,2678,environment
+108,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ship,NN,board ship,2718,NOUN,ship,NN,board ship,2678,environment
+109,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ship,NN,board ship,3960,NOUN,ship,NN,the ship,3945,environment
+110,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ship,NN,board ship,4245,NOUN,ship,NN,our ship,4225,environment
+111,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,mariner,NN,a mariner,2735,NOUN,mariner,NN,a mariner,2678,person
+112,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2740,DET,his,PRP$,his,2678,environment
+113,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2752,PRON,him,PRP,him,2678,environment
+114,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2754,DET,his,PRP$,his,2678,environment
+115,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2767,DET,his,PRP$,his,2678,environment
+116,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2773,PRON,him,PRP,him,2770,environment
+117,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2787,PRON,him,PRP,him,2770,environment
+118,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2799,DET,his,PRP$,his,2794,environment
+119,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2804,PRON,he,PRP,he,2802,environment
+120,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2836,PRON,he,PRP,He,2836,environment
+121,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2838,DET,his,PRP$,his,2836,environment
+122,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2858,DET,his,PRP$,his,2836,environment
+123,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2862,PRON,him,PRP,him,2836,environment
+124,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2879,PRON,he,PRP,he,2836,environment
+125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2914,DET,his,PRP$,his,2894,environment
+126,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2917,PRON,he,PRP,He,2917,environment
+127,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2924,DET,his,PRP$,his,2917,environment
+128,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2929,PRON,he,PRP,he,2917,environment
+129,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2937,DET,his,PRP$,his,2917,environment
+130,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2941,PRON,he,PRP,he,2917,environment
+131,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2946,DET,his,PRP$,his,2917,environment
+132,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2954,DET,his,PRP$,his,2917,environment
+133,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2964,PRON,himself,PRP,himself,2917,environment
+134,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,mariner,NN,a mariner,2981,NOUN,man,NN,the old man,2980,person
+135,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2988,PRON,himself,PRP,himself,2980,environment
+136,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,2999,PRON,he,PRP,he,2980,environment
+137,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3006,DET,his,PRP$,his,2980,environment
+138,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3012,PRON,he,PRP,he,2980,environment
+139,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3015,DET,his,PRP$,his,2980,environment
+140,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3036,PRON,he,PRP,He,3036,environment
+141,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3042,PRON,he,PRP,he,3036,environment
+142,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3047,PRON,he,PRP,he,3036,environment
+143,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3062,PRON,him,PRP,him,3036,environment
+144,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3069,DET,his,PRP$,his,3036,environment
+145,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mariner,NN,a mariner,3083,PRON,he,PRP,he,3036,environment
+146,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,girl,NN,the girl,2791,DET,her,PRP$,her,2770,environment
+147,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,girl,NN,the girl,2829,NOUN,girl,NN,the girl,2802,person
+148,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,the father of the girl,2826,NOUN,father,NN,the father of the girl,2802,person
+149,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,the father of the girl,2885,NOUN,father,NN,her father,2836,person
+150,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mistress,NN,his mistress,2838,NOUN,mistress,NN,his mistress,2836,person
+151,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2847,PRON,she,PRP,she,2836,environment
+152,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2856,PRON,herself,PRP,herself,2836,environment
+153,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2865,PRON,her,PRP,her,2836,environment
+154,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2873,PRON,she,PRP,she,2836,environment
+155,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2885,DET,her,PRP$,her,2836,environment
+156,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his mistress,2909,DET,her,PRP$,her,2894,environment
+157,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,My generous friend,2894,NOUN,friend,NN,My generous friend,2894,person
+158,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,My generous friend,2993,NOUN,friend,NN,my friend,2980,person
+159,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,NOUN,woman,NN,the young woman,2966,NOUN,woman,NN,the young woman,2917,person
+160,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,woman,NN,the young woman,2974,DET,her,PRP$,her,2917,environment
+161,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,woman,NN,the young woman,2977,DET,her,PRP$,her,2917,environment
+162,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,the young woman's father,2966,NOUN,father,NN,the young woman's father,2917,person
+163,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,the young woman's father,3001,NOUN,father,NN,the father,2980,person
+164,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mistress,NN,his former mistress,3015,NOUN,mistress,NN,his former mistress,2980,person
+165,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mistress,NN,his former mistress,3022,DET,her,PRP$,her,2980,environment
+166,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,voyage,NN,my voyage,3131,NOUN,voyage,NN,my voyage,3123,environment
+167,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,voyage,NN,my voyage,3573,NOUN,voyage,NN,my voyage,3546,environment
+168,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,voyage,NN,my voyage,3768,NOUN,voyage,NN,our voyage,3732,environment
+169,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,winter,NN,The winter,3145,NOUN,winter,NN,The winter,3145,
+170,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,winter,NN,The winter,3158,PRON,it,PRP,it,3145,environment
+171,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,you,PRP,you,3212,PRON,you,PRP,you,3207,person
+172,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,you,PRP,you,3229,PRON,you,PRP,you,3223,person
+173,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,you,PRP,you,3291,PRON,you,PRP,you,3251,person
+174,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,3485,PRON,me,PRP,me,3478,person
+175,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,3524,PRON,me,PRP,me,3514,person
+176,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,occasions,NNS,some occasions,3496,NOUN,occasions,NNS,some occasions,3478,environment
+177,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,occasions,NNS,some occasions,3501,PRON,them,PRP,them,3478,environment
+178,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,men,NNS,my men,3619,NOUN,men,NNS,my men,3610,person
+179,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,men,NNS,my men,3657,PRON,them,PRP,them,3610,environment
+180,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,3650,PRON,we,PRP,we,3610,person
+181,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,3659,PRON,we,PRP,We,3659,person
+182,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,we,PRP,we,3691,PRON,us,PRP,us,3659,person
+183,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,we,PRP,we,3722,PRON,us,PRP,us,3717,person
+184,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,we,PRP,we,3766,PRON,us,PRP,us,3732,person
+185,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,3768,DET,our,PRP$,our,3732,person
+186,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,heart,NN,My swelling heart,3871,NOUN,heart,NN,My swelling heart,3871,environment
+187,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,heart,NN,My swelling heart,3876,PRON,itself,PRP,itself,3871,environment
+188,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,accident,NN,an accident,3910,NOUN,accident,NN,an accident,3904,environment
+189,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,accident,NN,an accident,3923,PRON,it,PRP,it,3904,environment
+190,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,us,PRP,us,3915,PRON,us,PRP,us,3904,person
+191,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,3950,PRON,we,PRP,we,3945,person
+192,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,3978,DET,our,PRP$,Our,3978,person
+193,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,3986,PRON,we,PRP,we,3978,person
+194,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,3996,PRON,we,PRP,We,3996,person
+195,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4022,PRON,we,PRP,we,4015,person
+196,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4069,DET,our,PRP$,our,4045,person
+197,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4074,DET,our,PRP$,our,4045,person
+198,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4077,DET,our,PRP$,our,4045,person
+199,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4081,PRON,we,PRP,We,4081,person
+200,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4134,PRON,we,PRP,We,4134,person
+201,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4143,DET,our,PRP$,our,4134,person
+202,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4162,DET,our,PRP$,our,4159,person
+203,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4166,PRON,we,PRP,We,4166,person
+204,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4170,PRON,we,PRP,we,4166,person
+205,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4195,PRON,we,PRP,we,4166,person
+206,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4216,PRON,we,PRP,we,4199,person
+207,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4230,PRON,we,PRP,we,4225,person
+208,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4245,DET,our,PRP$,our,4225,person
+209,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4248,PRON,we,PRP,We,4248,person
+210,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,us,PRP,us,4339,PRON,we,PRP,we,4328,person
+211,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,us,PRP,us,4348,PRON,us,PRP,us,4328,person
+212,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,last monday,NNP,Last Monday (July 31st),3945,PROPN,last monday,NNP,Last Monday (July 31st),3945,
+213,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,last monday,NNP,Last Monday (July 31st),3968,PRON,her,PRP,her,3945,environment
+214,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,last monday,NNP,Last Monday (July 31st),3975,PRON,she,PRP,she,3945,environment
+215,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sledge,NN,a sledge,4089,NOUN,sledge,NN,a sledge,4081,environment
+216,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sledge,NN,a sledge,4126,NOUN,sledge,NN,the sledge,4081,environment
+217,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,4155,NOUN,ice,NN,the ice,4134,environment
+218,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,4239,NOUN,ice,NN,the ice,4225,environment
+219,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,4275,NOUN,ice,NN,the ice,4248,environment
+220,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,4942,NOUN,ice,NN,the ice,4927,environment
+221,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,5030,NOUN,ice,NN,the ice,4999,environment
+222,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,5164,NOUN,ice,NN,the ice,5151,environment
+223,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ice,NN,the ice,5187,NOUN,ice,NN,the ice,5172,environment
+224,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,apparition,NN,this apparition,4179,NOUN,apparition,NN,this apparition,4166,environment
+225,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,apparition,NN,this apparition,4185,PRON,it,PRP,it,4166,environment
+226,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sea,NN,the ground sea,4232,NOUN,sea,NN,the ground sea,4225,environment
+227,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sea,NN,the ground sea,4325,NOUN,sea,NN,the sea,4289,environment
+228,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,sea,NN,the ground sea,4434,NOUN,sea,NN,the open sea,4409,environment
+229,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,sailors,NNS,all the sailors,4309,NOUN,sailors,NNS,all the sailors,4289,person
+230,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,sailors,NNS,all the sailors,4376,NOUN,sailors,NNS,the sailors,4360,person
+231,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,sailors,NNS,all the sailors,5357,NOUN,sailors,NNS,the sailors,5347,person
+232,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,sailors,NNS,all the sailors,5366,PRON,they,PRP,they,5347,environment
+233,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,dog,NN,Only one dog,4360,NOUN,dog,NN,Only one dog,4360,person
+234,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,dog,NN,Only one dog,4373,PRON,it,PRP,it,4360,environment
+235,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,dog,NN,Only one dog,4385,PRON,he,PRP,He,4385,environment
+236,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,man,NN,a man,4616,NOUN,man,NN,a man,4613,person
+237,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4628,PRON,him,PRP,him,4624,environment
+238,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4637,PRON,he,PRP,he,4624,environment
+239,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4644,PRON,he,PRP,he,4624,environment
+240,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4650,PRON,him,PRP,him,4647,environment
+241,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4658,PRON,him,PRP,him,4647,environment
+242,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4663,PRON,him,PRP,him,4647,environment
+243,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4669,PRON,him,PRP,him,4647,environment
+244,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4679,PRON,he,PRP,he,4676,environment
+245,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4686,PRON,him,PRP,him,4676,environment
+246,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4693,PRON,him,PRP,him,4676,environment
+247,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4705,PRON,he,PRP,he,4702,environment
+248,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4716,PRON,him,PRP,him,4702,environment
+249,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4726,PRON,he,PRP,he,4720,environment
+250,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4737,DET,his,PRP$,his,4720,environment
+251,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4741,PRON,him,PRP,him,4720,environment
+252,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4746,PRON,he,PRP,he,4745,environment
+253,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4755,PRON,him,PRP,him,4745,environment
+254,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4764,PRON,him,PRP,him,4745,environment
+255,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4781,DET,his,PRP$,his,4773,environment
+256,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4809,PRON,him,PRP,him,4773,environment
+257,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4813,PRON,him,PRP,him,4773,environment
+258,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4820,DET,his,PRP$,his,4773,environment
+259,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4845,PRON,he,PRP,he,4844,environment
+260,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,a man,4854,PRON,he,PRP,he,4844,environment
+261,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4856,DET,his,PRP$,his,4844,environment
+262,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,a man,4869,PRON,him,PRP,him,4844,environment
+263,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,4624,PRON,we,PRP,We,4624,person
+264,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,4647,PRON,we,PRP,We,4647,person
+265,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,4684,PRON,we,PRP,we,4676,person
+266,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,cabin,NN,the cabin,4630,NOUN,cabin,NN,the cabin,4624,environment
+267,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,cabin,NN,the cabin,4757,NOUN,cabin,NN,my own cabin,4745,environment
+268,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,cabin,NN,the cabin,5264,NOUN,cabin,NN,the cabin,5236,environment
+269,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,cabin,NN,the cabin,5344,NOUN,cabin,NN,his cabin,5322,environment
+270,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,deck,NN,the deck,4653,NOUN,deck,NN,the deck,4647,environment
+271,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,deck,NN,the deck,5598,NOUN,deck,NN,the deck,5585,environment
+272,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,countenance,NN,his whole countenance,4820,NOUN,countenance,NN,his whole countenance,4773,environment
+273,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,countenance,NN,his whole countenance,4828,PRON,it,PRP,it,4773,environment
+274,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,guest,NN,my guest,4873,NOUN,guest,NN,my guest,4872,person
+275,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guest,NN,my guest,4894,PRON,him,PRP,him,4872,environment
+276,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guest,NN,my guest,4903,PRON,him,PRP,him,4872,environment
+277,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,lieutenant,NN,the lieutenant,4931,NOUN,lieutenant,NN,the lieutenant,4927,person
+278,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,4936,PRON,he,PRP,he,4927,environment
+279,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,4951,DET,his,PRP$,His,4951,environment
+280,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,4963,PRON,he,PRP,he,4951,environment
+281,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,4973,PRON,me,PRP,me,4951,environment
+282,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5005,PRON,him,PRP,him,4999,environment
+283,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5043,PRON,he,PRP,he,5035,environment
+284,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5057,PRON,he,PRP,he,5035,environment
+285,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5059,PRON,him,PRP,him,5035,environment
+286,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5068,PRON,he,PRP,he,5064,environment
+287,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5072,PRON,me,PRP,me,5064,environment
+288,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5074,PRON,he,PRP,he,5064,environment
+289,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5116,PRON,me,PRP,me,5105,environment
+290,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,lieutenant,NN,the lieutenant,5154,PRON,he,PRP,he,5151,environment
+291,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,countenance,NN,His countenance,4951,NOUN,countenance,NN,His countenance,4951,environment
+292,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,countenance,NN,His countenance,6162,NOUN,countenance,NN,his countenance,6157,environment
+293,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,5002,PRON,we,PRP,we,4999,person
+294,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,5010,PRON,we,PRP,we,4999,person
+295,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,5015,PRON,we,PRP,we,4999,person
+296,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,5037,NOUN,stranger,NN,the stranger,5035,person
+297,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,5233,NOUN,stranger,NN,the stranger,5220,person
+298,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,5322,NOUN,stranger,NN,The stranger,5322,person
+299,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5344,DET,his,PRP$,his,5322,environment
+300,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5348,DET,his,PRP$,his,5347,environment
+301,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5363,PRON,him,PRP,him,5347,environment
+302,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5373,PRON,him,PRP,him,5347,environment
+303,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5384,PRON,him,PRP,him,5375,environment
+304,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5390,DET,his,PRP$,his,5375,environment
+305,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5402,PRON,he,PRP,He,5402,environment
+306,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5455,DET,his,PRP$,his,5423,environment
+307,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,5485,NOUN,stranger,NN,the stranger,5479,person
+308,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5512,PRON,he,PRP,He,5512,environment
+309,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5545,PRON,he,PRP,He,5545,environment
+310,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5554,DET,his,PRP$,his,5545,environment
+311,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5562,PRON,he,PRP,he,5545,environment
+312,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5566,DET,his,PRP$,his,5545,environment
+313,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5585,PRON,he,PRP,He,5585,environment
+314,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5591,DET,his,PRP$,his,5585,environment
+315,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5608,DET,his,PRP$,his,5585,environment
+316,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5616,PRON,he,PRP,he,5611,environment
+317,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5623,DET,his,PRP$,his,5611,environment
+318,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5629,PRON,he,PRP,he,5611,environment
+319,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5631,PRON,himself,PRP,himself,5611,environment
+320,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5639,PRON,he,PRP,He,5639,environment
+321,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5653,PRON,him,PRP,him,5639,environment
+322,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5657,PRON,he,PRP,He,5657,environment
+323,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,5693,PRON,he,PRP,he,5685,environment
+324,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,5912,NOUN,stranger,NN,the stranger,5873,person
+325,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,6054,NOUN,stranger,NN,the stranger,6046,person
+326,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,stranger,NN,the stranger,6445,NOUN,stranger,NN,the stranger,6444,person
+327,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,6449,PRON,me,PRP,me,6444,environment
+328,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,stranger,NN,the stranger,6486,PRON,me,PRP,me,6469,environment
+329,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,spirit,NN,a new spirit of life,5223,NOUN,spirit,NN,a new spirit of life,5220,environment
+330,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,spirit,NN,a new spirit of life,5455,NOUN,spirit,NN,his spirit,5423,environment
+331,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,He,5236,PRON,he,PRP,He,5236,person
+332,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,He,5260,PRON,him,PRP,him,5236,person
+333,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,He,5268,PRON,he,PRP,he,5236,person
+334,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,He,5290,PRON,him,PRP,him,5281,person
+335,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,He,5294,PRON,him,PRP,him,5281,person
+336,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,culled,VBN,his words are culled with the choicest art,5566,VERB,culled,VBN,his words are culled with the choicest art,5545,
+337,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,culled,VBN,his words are culled with the choicest art,5576,PRON,they,PRP,they,5545,environment
+338,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,5807,PRON,he,PRP,he,5802,person
+339,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,5811,DET,his,PRP$,his,5802,person
+340,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,5814,PRON,he,PRP,he,5802,person
+341,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,5816,DET,his,PRP$,his,5802,person
+342,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,5819,DET,his,PRP$,his,5802,person
+343,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,5838,DET,his,PRP$,his,5834,person
+344,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,5843,DET,his,PRP$,his,5834,person
+345,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,5850,PRON,he,PRP,he,5848,person
+346,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,tale,NN,my tale,5877,NOUN,tale,NN,my tale,5873,environment
+347,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,tale,NN,my tale,5981,NOUN,tale,NN,The tale,5981,environment
+348,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,tale,NN,my tale,5988,PRON,it,PRP,it,5981,environment
+349,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5905,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5873,environment
+350,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5915,DET,his,PRP$,his,5873,environment
+351,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5930,DET,his,PRP$,his,5873,environment
+352,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5939,DET,his,PRP$,his,5934,environment
+353,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5942,PRON,he,PRP,he,5934,environment
+354,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5946,PRON,himself,PRP,himself,5934,environment
+355,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5962,PRON,he,PRP,he,5934,environment
+356,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5969,PRON,myself,PRP,myself,5934,environment
+357,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,paroxysm,NNS,the paroxysm of grief that had seized the stranger,5972,PRON,he,PRP,He,5972,environment
+358,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,6058,PRON,we,PRP,we,6046,person
+359,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,6076,PRON,ourselves,PRP,ourselves,6046,person
+360,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,we,6092,DET,our,PRP$,our,6078,person
+361,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,such a friend,6078,NOUN,friend,NN,such a friend,6078,person
+362,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,friend,NN,such a friend,6088,DET,his,PRP$,his,6078,environment
+363,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6158,PRON,he,PRP,he,6157,person
+364,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6162,DET,his,PRP$,his,6157,person
+365,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6180,PRON,he,PRP,he,6179,person
+366,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6188,DET,his,PRP$,his,6179,person
+367,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6197,PRON,he,PRP,he,6192,person
+368,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6207,PRON,he,PRP,he,6192,person
+369,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6238,DET,his,PRP$,his,6214,person
+370,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,man,NN,Such a man,6243,NOUN,man,NN,Such a man,6243,person
+371,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6251,PRON,he,PRP,he,6243,environment
+372,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6265,PRON,he,PRP,he,6243,environment
+373,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6269,PRON,himself,PRP,himself,6243,environment
+374,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6271,PRON,he,PRP,he,6243,environment
+375,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6284,PRON,him,PRP,him,6278,environment
+376,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6316,PRON,him,PRP,him,6309,environment
+377,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,NOUN,man,NN,Such a man,6355,NOUN,man,NN,this wonderful man,6318,person
+378,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6370,PRON,he,PRP,he,6359,environment
+379,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,man,NN,Such a man,6375,PRON,him,PRP,him,6359,environment
+380,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,world,NN,the world,6329,NOUN,world,NN,the world,6318,environment
+381,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,world,NN,the world,7356,NOUN,world,NN,the world,7337,environment
+382,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,quality,NN,what quality,6365,NOUN,quality,NN,what quality,6359,environment
+383,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,quality,NN,what quality,6367,PRON,it,PRP,it,6359,environment
+384,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,you,PRP,you,6548,PRON,you,PRP,you,6534,person
+385,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,you,PRP,you,6564,PRON,yourself,PRP,yourself,6534,person
+386,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,nature:—nor,NN,nature:—nor,6670,NOUN,nature:—nor,NN,nature:—nor,6621,environment
+387,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,nature:—nor,NN,nature:—nor,6680,DET,its,PRP$,its,6621,environment
+388,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6718,PRON,he,PRP,he,6698,person
+389,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6721,DET,his,PRP$,his,6698,person
+390,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6727,DET,his,PRP$,his,6698,person
+391,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6753,DET,his,PRP$,his,6730,person
+392,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,fate,NN,his fate,6753,NOUN,fate,NN,his fate,6730,environment
+393,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,fate,NN,his fate,6791,NOUN,fate,NN,my fate,6772,environment
+394,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6778,PRON,he,PRP,he,6772,person
+395,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6819,PRON,he,PRP,he,6812,person
+396,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6827,PRON,him,PRP,him,6812,person
+397,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6871,PRON,he,PRP,He,6871,person
+398,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6877,PRON,he,PRP,he,6871,person
+399,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6880,DET,his,PRP$,his,6871,person
+400,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6922,DET,his,PRP$,his,6904,person
+401,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,6927,PRON,he,PRP,he,6904,person
+402,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6962,PRON,him,PRP,him,6946,person
+403,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6969,DET,his,PRP$,his,6946,person
+404,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,6994,DET,his,PRP$,his,6985,person
+405,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7004,DET,his,PRP$,his,6985,person
+406,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7009,PRON,me,PRP,me,6985,person
+407,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7018,DET,his,PRP$,his,6985,person
+408,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7029,DET,his,PRP$,his,6985,person
+409,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7043,DET,his,PRP$,his,7038,person
+410,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,manuscript,NN,This manuscript,6946,NOUN,manuscript,NN,This manuscript,6946,environment
+411,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,manuscript,NN,This manuscript,6967,PRON,it,PRP,it,6946,environment
+412,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,manuscript,NN,This manuscript,6981,PRON,it,PRP,it,6946,environment
+413,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2.0,1.0,NOUN,swells,NNS,his full-toned voice swells in my ears,6994,NOUN,swells,NNS,his full-toned voice swells in my ears,6985,person
+414,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,swells,NNS,his full-toned voice swells in my ears,7012,DET,their,PRP$,their,6985,environment
+415,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,the gallant vessel,7051,NOUN,vessel,NN,the gallant vessel,7038,environment
+416,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,the gallant vessel,7055,DET,its,PRP$,its,7038,environment
+417,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,vessel,NN,the gallant vessel,7060,PRON,it,PRP,it,7038,environment
+418,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7099,NOUN,father,NN,my father,7087,person
+419,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7111,PRON,he,PRP,He,7111,environment
+420,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7118,PRON,him,PRP,him,7111,environment
+421,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7121,DET,his,PRP$,his,7111,environment
+422,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7130,PRON,he,PRP,He,7130,environment
+423,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7132,DET,his,PRP$,his,7130,environment
+424,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7141,DET,his,PRP$,his,7130,environment
+425,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7150,DET,his,PRP$,his,7130,environment
+426,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7163,PRON,he,PRP,he,7130,environment
+427,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7179,DET,his,PRP$,his,7175,environment
+428,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7182,DET,his,PRP$,his,7175,environment
+429,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7195,DET,his,PRP$,his,7193,environment
+430,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7293,NOUN,father,NN,My father,7293,person
+431,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7307,DET,his,PRP$,his,7293,environment
+432,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7314,PRON,he,PRP,He,7314,environment
+433,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7322,DET,his,PRP$,his,7314,environment
+434,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7337,PRON,he,PRP,He,7337,environment
+435,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7345,PRON,him,PRP,him,7337,environment
+436,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7353,PRON,him,PRP,him,7337,environment
+437,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7360,DET,his,PRP$,his,7337,environment
+438,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7373,PRON,himself,PRP,himself,7366,environment
+439,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7380,NOUN,father,NN,my father,7366,person
+440,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7383,DET,his,PRP$,his,7366,environment
+441,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7391,PRON,he,PRP,he,7386,environment
+442,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7411,PRON,he,PRP,he,7409,environment
+443,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7419,PRON,him,PRP,him,7409,environment
+444,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7435,DET,his,PRP$,his,7421,environment
+445,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7444,PRON,him,PRP,him,7421,environment
+446,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7455,PRON,he,PRP,he,7421,environment
+447,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7478,DET,his,PRP$,his,7468,environment
+448,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7488,PRON,he,PRP,he,7468,environment
+449,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7503,DET,his,PRP$,his,7468,environment
+450,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7509,PRON,he,PRP,he,7468,environment
+451,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7523,DET,his,PRP$,His,7523,environment
+452,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7526,PRON,him,PRP,him,7523,environment
+453,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7607,NOUN,father,NN,Her father,7607,person
+454,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7620,PRON,him,PRP,him,7607,environment
+455,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7631,NOUN,father,NN,her father,7607,person
+456,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7664,NOUN,father,NN,my father,7646,person
+457,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7670,PRON,he,PRP,He,7670,environment
+458,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7685,DET,his,PRP$,his,7670,environment
+459,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7693,DET,his,PRP$,his,7670,environment
+460,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7696,PRON,he,PRP,he,7670,environment
+461,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7756,NOUN,father,NN,my father,7749,person
+462,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7767,PRON,he,PRP,he,7749,environment
+463,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7779,PRON,he,PRP,he,7775,environment
+464,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7814,DET,his,PRP$,his,7805,environment
+465,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7867,DET,his,PRP$,his,7805,environment
+466,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,7885,PRON,he,PRP,He,7885,environment
+467,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,7958,NOUN,father,NN,my father,7949,person
+468,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,7964,DET,his,PRP$,his,7949,environment
+469,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,8080,NOUN,father,NN,my father,8073,person
+470,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,8385,NOUN,father,NN,my father,8382,person
+471,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,8390,PRON,himself,PRP,himself,8382,environment
+472,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,8399,PRON,me,PRP,me,8382,environment
+473,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,8410,DET,his,PRP$,his,8405,environment
+474,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,father,NN,my father,8753,NOUN,father,NN,my father,8752,person
+475,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,father,NN,my father,8759,PRON,he,PRP,he,8752,environment
+476,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,father,NN,my father,8810,DET,his,PRP$,his,8809,environment
+477,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,illustrate,VB,the circumstances of his marriage illustrate his character,7176,VERB,illustrate,VB,the circumstances of his marriage illustrate his character,7175,
+478,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,illustrate,VB,the circumstances of his marriage illustrate his character,7191,PRON,them,PRP,them,7175,environment
+479,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,7250,PRON,he,PRP,he,7219,person
+480,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7256,DET,his,PRP$,his,7219,person
+481,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7263,DET,his,PRP$,his,7261,person
+482,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,7274,PRON,he,PRP,he,7261,person
+483,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,he,PRP,he,7277,DET,his,PRP$,his,7261,person
+484,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,he,PRP,he,7286,PRON,he,PRP,he,7261,person
+485,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,NOUN,daughter,NN,his daughter,7277,NOUN,daughter,NN,his daughter,7261,person
+486,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,NOUN,daughter,NN,his daughter,7523,NOUN,daughter,NN,His daughter,7523,person
+487,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7533,PRON,she,PRP,she,7523,environment
+488,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7566,DET,her,PRP$,her,7555,environment
+489,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7571,PRON,her,PRP,her,7555,environment
+490,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7573,DET,her,PRP$,her,7555,environment
+491,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7576,PRON,she,PRP,She,7576,environment
+492,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,daughter,NN,his daughter,7581,PRON,she,PRP,she,7576,environment
+493,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,beaufort,NNP,Beaufort,7296,PROPN,beaufort,NNP,Beaufort,7293,person
+494,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,beaufort,NNP,Beaufort,7366,PROPN,beaufort,NNP,Beaufort,7366,person
+495,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,beaufort,NNP,Beaufort,7421,PROPN,beaufort,NNP,Beaufort,7421,person
+496,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,his friend,7322,NOUN,friend,NN,his friend,7314,person
+497,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,friend,NN,his friend,7693,NOUN,friend,NN,his friend,7670,person
+498,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,measures,NNS,effectual measures,7369,NOUN,measures,NNS,effectual measures,7366,environment
+499,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,measures,NNS,effectual measures,7376,PRON,it,PRP,it,7366,environment
+500,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,7383,NOUN,abode,NN,his abode,7366,environment
+501,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8402,NOUN,abode,NN,this abode,8382,environment
+502,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8405,PRON,she,PRP,She,8405,environment
+503,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8447,PRON,she,PRP,She,8447,environment
+504,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8475,DET,her,PRP$,Her,8475,environment
+505,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8489,DET,her,PRP$,her,8475,environment
+506,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8500,DET,her,PRP$,her,8475,environment
+507,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8503,DET,her,PRP$,Her,8503,environment
+508,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8510,DET,her,PRP$,her,8503,environment
+509,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8516,DET,her,PRP$,her,8503,environment
+510,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8522,DET,her,PRP$,her,8503,environment
+511,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8535,PRON,her,PRP,her,8503,environment
+512,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8539,PRON,her,PRP,her,8503,environment
+513,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,abode,NN,his abode,8559,DET,her,PRP$,her,8503,environment
+514,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7601,NOUN,several months,NNS,Several months,7601,
+515,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7607,DET,her,PRP$,Her,7607,environment
+516,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7612,DET,her,PRP$,her,7607,environment
+517,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7622,DET,her,PRP$,her,7607,environment
+518,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7631,DET,her,PRP$,her,7607,environment
+519,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7635,DET,her,PRP$,her,7607,environment
+520,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7639,PRON,her,PRP,her,7607,environment
+521,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7650,DET,her,PRP$,her,7646,environment
+522,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7653,PRON,she,PRP,she,7646,environment
+523,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7683,PRON,herself,PRP,herself,7670,environment
+524,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7698,PRON,her,PRP,her,7670,environment
+525,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,several months,NNS,Several months,7704,PRON,her,PRP,her,7670,environment
+526,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,ages,NNS,the ages of my parents,7728,NOUN,ages,NNS,the ages of my parents,7722,environment
+527,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,ages,NNS,the ages of my parents,7740,PRON,them,PRP,them,7722,environment
+528,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7836,DET,her,PRP$,her,7805,person
+529,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7853,PRON,her,PRP,her,7805,person
+530,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7857,PRON,she,PRP,she,7805,person
+531,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7870,PRON,her,PRP,her,7805,person
+532,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7879,DET,her,PRP$,her,7872,person
+533,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7882,DET,her,PRP$,her,7872,person
+534,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7889,PRON,her,PRP,her,7885,person
+535,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7909,PRON,her,PRP,her,7885,person
+536,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7920,DET,her,PRP$,her,7885,person
+537,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7926,DET,her,PRP$,Her,7926,person
+538,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7934,DET,her,PRP$,her,7926,person
+539,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,7944,PRON,she,PRP,she,7926,person
+540,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,her,PRP$,her,8002,DET,her,PRP$,her,7949,person
+541,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,7956,DET,their,PRP$,their,7949,person
+542,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,7971,DET,their,PRP$,their,7949,person
+543,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,7973,PRON,they,PRP,they,7949,person
+544,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8009,PRON,they,PRP,they,8007,person
+545,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8017,DET,their,PRP$,their,8015,person
+546,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8031,PRON,them,PRP,them,8015,person
+547,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8033,DET,their,PRP$,their,8015,person
+548,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8040,DET,their,PRP$,their,8036,person
+549,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8046,PRON,they,PRP,they,8044,person
+550,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8053,PRON,they,PRP,they,8044,person
+551,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8069,PRON,them,PRP,them,8044,person
+552,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,italy,NNP,Italy,7979,PROPN,italy,NNP,Italy,7949,person
+553,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,italy,NNP,Italy,8008,PROPN,italy,NNP,Italy,8007,person
+554,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,italy,NNP,Italy,8272,PROPN,italy,NNP,Italy,8259,person
+555,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8073,NOUN,mother,NN,My mother,8073,person
+556,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8242,NOUN,mother,NN,My mother,8242,person
+557,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8299,NOUN,mother,NN,my mother,8296,person
+558,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8316,PRON,she,PRP,she,8313,environment
+559,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8322,PRON,she,PRP,she,8313,environment
+560,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8326,PRON,her,PRP,her,8313,environment
+561,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8330,DET,her,PRP$,her,8313,environment
+562,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8439,NOUN,mother,NN,my mother,8432,person
+563,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8569,NOUN,mother,NN,my mother,8563,person
+564,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8584,DET,her,PRP$,her,8563,environment
+565,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8587,PRON,she,PRP,She,8587,environment
+566,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8590,DET,her,PRP$,her,8587,environment
+567,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8601,DET,her,PRP$,Her,8601,environment
+568,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8601,NOUN,mother,NN,Her mother,8601,person
+569,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8612,DET,her,PRP$,her,8601,environment
+570,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8812,NOUN,mother,NN,my mother,8809,person
+571,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8816,DET,her,PRP$,her,8809,environment
+572,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8824,PRON,her,PRP,her,8809,environment
+573,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8834,DET,her,PRP$,Her,8834,environment
+574,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8849,PRON,her,PRP,her,8834,environment
+575,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8852,PRON,her,PRP,her,8834,environment
+576,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8861,PRON,her,PRP,her,8834,environment
+577,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,mother,NN,My mother,8947,NOUN,mother,NN,my mother,8936,person
+578,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8951,PRON,"playfully,—""i",PRP,"playfully,—""I",8936,environment
+579,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8963,PRON,he,PRP,he,8936,environment
+580,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8966,PRON,it,PRP,it,8936,environment
+581,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8976,PRON,she,PRP,she,8969,environment
+582,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8982,DET,her,PRP$,her,8969,environment
+583,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,8993,DET,her,PRP$,her,8969,environment
+584,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,9017,PRON,her,PRP,her,9013,environment
+585,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,9055,PRON,she,PRP,she,9041,environment
+586,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,mother,NN,My mother,9068,PRON,she,PRP,she,9059,environment
+587,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8073,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8073,environment
+588,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8098,DET,their,PRP$,their,8096,environment
+589,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8101,DET,their,PRP$,their,8096,environment
+590,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8108,DET,their,PRP$,their,8096,environment
+591,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8118,PRON,them,PRP,them,8096,environment
+592,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8136,DET,their,PRP$,their,8096,environment
+593,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8147,PRON,they,PRP,they,8096,environment
+594,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8149,DET,their,PRP$,their,8096,environment
+595,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8160,PRON,they,PRP,they,8154,environment
+596,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,caresses,NNS,"My mother's tender caresses, and my father's smile of benevolent pleasure while regarding me",8167,PRON,they,PRP,they,8154,environment
+597,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8238,DET,their,PRP$,their,8232,person
+598,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8255,DET,their,PRP$,their,8242,person
+599,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8274,PRON,they,PRP,they,8259,person
+600,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8283,DET,their,PRP$,Their,8283,person
+601,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8288,PRON,them,PRP,them,8283,person
+602,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8342,DET,their,PRP$,their,8339,person
+603,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,their,PRP$,their,8354,DET,their,PRP$,their,8339,person
+604,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,it,8372,PRON,it,PRP,it,8339,environment
+605,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,it,PRP,it,8378,DET,its,PRP$,its,8339,environment
+606,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,milan,NNP,Milan,8392,PROPN,milan,NNP,Milan,8382,person
+607,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,milan,NNP,Milan,8757,PROPN,milan,NNP,Milan,8752,person
+608,1.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,1.0,NOUN,babes,NNS,five hungry babes,8428,NOUN,babes,NNS,five hungry babes,8405,
+609,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,babes,NNS,five hungry babes,8433,DET,these,DT,these,8432,environment
+610,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,child,NN,this child,8466,NOUN,child,NN,this child,8454,person
+611,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,child,NN,this child,8590,NOUN,child,NN,her child,8587,person
+612,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,child,NN,this child,8641,NOUN,child,NN,their eldest child,8633,person
+613,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,child,NN,this child,8717,NOUN,child,NN,his child,8712,person
+614,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,people,NNS,these good people,8621,NOUN,people,NNS,these good people,8615,environment
+615,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,people,NNS,these good people,8627,PRON,they,PRP,they,8615,environment
+616,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,people,NNS,these good people,8633,PRON,they,PRP,They,8633,environment
+617,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,people,NNS,these good people,8641,DET,their,PRP$,their,8633,environment
+618,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,people,NNS,these good people,8652,DET,their,PRP$,their,8649,environment
+619,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8677,PRON,himself,PRP,himself,8649,person
+620,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8683,DET,his,PRP$,his,8649,person
+621,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8686,PRON,he,PRP,He,8686,person
+622,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8695,PRON,he,PRP,he,8694,person
+623,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8712,DET,his,PRP$,His,8712,person
+624,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,himself,PRP,himself,8717,DET,his,PRP$,his,8712,person
+625,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,she,PRP,She,8726,PRON,she,PRP,She,8726,person
+626,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,she,PRP,She,8729,DET,her,PRP$,her,8726,person
+627,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,she,PRP,She,8786,DET,her,PRP$,her,8752,person
+628,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,parents,NNS,her foster parents,8729,NOUN,parents,NNS,her foster parents,8726,person
+629,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,8736,DET,their,PRP$,their,8726,environment
+630,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,parents,NNS,her foster parents,8883,NOUN,parents,NNS,my parents',8866,person
+631,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,parents,NNS,her foster parents,9319,NOUN,parents,NNS,my parents,9306,person
+632,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,9324,DET,their,PRP$,their,9306,environment
+633,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,9330,PRON,themselves,PRP,themselves,9306,environment
+634,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,9332,DET,their,PRP$,their,9306,environment
+635,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,parents,NNS,her foster parents,9380,NOUN,parents,NNS,my parents,9369,person
+636,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,parents,NNS,her foster parents,9565,NOUN,parents,NNS,My parents,9565,person
+637,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,9581,PRON,they,PRP,they,9578,environment
+638,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,parents,NNS,her foster parents,9592,DET,their,PRP$,their,9578,environment
+639,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,guardians,NNS,her rustic guardians,8816,NOUN,guardians,NNS,her rustic guardians,8809,person
+640,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guardians,NNS,her rustic guardians,8821,DET,their,PRP$,their,8809,environment
+641,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guardians,NNS,her rustic guardians,8826,PRON,they,PRP,They,8826,environment
+642,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guardians,NNS,her rustic guardians,8841,PRON,them,PRP,them,8834,environment
+643,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guardians,NNS,her rustic guardians,8866,PRON,they,PRP,They,8866,environment
+644,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,guardians,NNS,her rustic guardians,8868,DET,their,PRP$,their,8866,environment
+645,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,8910,PROPN,elizabeth,NNP,Elizabeth,8907,person
+646,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,8922,PRON,her,PRP,her,8912,environment
+647,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,8940,DET,her,PRP$,her,8936,environment
+648,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,8978,PROPN,elizabeth,NNP,Elizabeth,8969,person
+649,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9000,PROPN,elizabeth,NNP,Elizabeth,8969,person
+650,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9135,PROPN,elizabeth,NNP,Elizabeth,9135,person
+651,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9172,PRON,she,PRP,She,9172,environment
+652,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9174,PRON,herself,PRP,herself,9172,environment
+653,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9840,PROPN,elizabeth,NNP,Elizabeth,9836,person
+654,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9853,DET,her,PRP$,Her,9853,environment
+655,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9858,DET,her,PRP$,her,9853,environment
+656,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9861,DET,her,PRP$,her,9853,environment
+657,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9869,DET,her,PRP$,her,9853,environment
+658,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9882,PRON,she,PRP,She,9882,environment
+659,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9913,PRON,she,PRP,she,9882,environment
+660,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9923,DET,her,PRP$,her,9882,environment
+661,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,elizabeth,NNP,Elizabeth,9969,PRON,she,PRP,she,9954,environment
+662,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9030,PRON,we,PRP,We,9030,person
+663,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9079,PRON,we,PRP,We,9079,person
+664,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9093,DET,our,PRP$,our,9079,person
+665,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9101,PRON,we,PRP,we,9096,person
+666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,our,PRP$,our,9117,DET,our,PRP$,our,9112,person
+667,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,our,PRP$,our,9128,DET,our,PRP$,our,9112,person
+668,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,DET,our,PRP$,our,9131,PRON,us,PRP,us,9112,person
+669,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,contemplated,VBN,my companion contemplated with a serious and satisfied spirit the magnificent appearances of things,9237,VERB,contemplated,VBN,my companion contemplated with a serious and satisfied spirit the magnificent appearances of things,9236,
+670,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,VERB,contemplated,VBN,my companion contemplated with a serious and satisfied spirit the magnificent appearances of things,9256,DET,their,PRP$,their,9236,environment
+671,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,world,NN,The world,9259,NOUN,world,NN,The world,9259,environment
+672,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,world,NN,The world,9766,NOUN,world,NN,the world,9706,environment
+673,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,9263,PRON,me,PRP,me,9259,person
+674,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,me,PRP,me,9294,PRON,me,PRP,me,9272,person
+675,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,geneva,NNP,Geneva,9341,PROPN,geneva,NNP,Geneva,9336,person
+676,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,geneva,NNP,Geneva,9442,PROPN,geneva,NNP,Geneva,9434,person
+677,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,myself,PRP,myself,9400,PRON,myself,PRP,myself,9388,person
+678,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,myself,PRP,myself,9421,PRON,myself,PRP,myself,9406,person
+679,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,bonds,NNS,the bonds of the closest friendship,9423,NOUN,bonds,NNS,the bonds of the closest friendship,9406,environment
+680,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,bonds,NNS,the bonds of the closest friendship,9432,PRON,them,PRP,them,9406,environment
+681,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9434,PROPN,henry clerval,NNP,Henry Clerval,9434,person
+682,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9444,PRON,he,PRP,He,9444,environment
+683,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9454,PRON,he,PRP,He,9454,environment
+684,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9469,PRON,he,PRP,He,9469,environment
+685,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9480,PRON,he,PRP,He,9480,environment
+686,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,henry clerval,NNP,Henry Clerval,9498,PRON,he,PRP,He,9498,environment
+687,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,characters,NNS,the characters,9514,NOUN,characters,NNS,the characters,9498,person
+688,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NOUN,characters,NNS,the characters,9538,DET,their,PRP$,their,9498,environment
+689,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9578,PRON,we,PRP,We,9578,person
+690,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PRON,we,PRP,We,9588,DET,our,PRP$,our,9578,person
+691,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,ADJ,metaphysical,JJ,the metaphysical,9752,ADJ,metaphysical,JJ,the metaphysical,9706,
+692,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,ADJ,metaphysical,JJ,the metaphysical,9758,DET,its,PRP$,its,9706,environment
+693,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,clerval,NNP,Meanwhile Clerval,9770,PROPN,clerval,NNP,Meanwhile Clerval,9770,person
+694,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,clerval,NNP,Meanwhile Clerval,9773,PRON,himself,PRP,himself,9770,environment
+695,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,clerval,NNP,Meanwhile Clerval,9804,DET,his,PRP$,his,9786,environment
+696,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,clerval,NNP,Meanwhile Clerval,9808,DET,his,PRP$,his,9786,environment
+697,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,clerval,NNP,Meanwhile Clerval,9811,DET,his,PRP$,his,9786,environment
+698,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,our,PRP$,our,9833,DET,our,PRP$,our,9786,person
+699,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,our,PRP$,our,9849,DET,our,PRP$,our,9836,person
+700,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,our,PRP$,our,9856,DET,ours,PRP$,ours,9853,person
+701,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,DET,our,PRP$,our,9880,PRON,us,PRP,us,9853,person
+702,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9928,PROPN,—,NNP,Clerval—,9927,person
+703,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9940,PRON,he,PRP,he,9940,environment
+704,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9952,DET,his,PRP$,his,9940,environment
+705,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9962,DET,his,PRP$,his,9954,environment
+706,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9973,PRON,him,PRP,him,9954,environment
+707,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,PROPN,—,NNP,Clerval—,9990,DET,his,PRP$,his,9954,environment
+708,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,my,PRP$,my,10054,DET,my,PRP$,my,10030,person
+709,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,DET,my,PRP$,my,10066,PRON,myself,PRP,myself,10030,person
+710,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,NOUN,birth,NN,"the birth of that passion, which afterwards ruled my destiny",10068,NOUN,birth,NN,"the birth of that passion, which afterwards ruled my destiny",10030,person
+711,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,birth,NN,"the birth of that passion, which afterwards ruled my destiny",10082,PRON,it,PRP,it,10030,environment
+712,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,NOUN,birth,NN,"the birth of that passion, which afterwards ruled my destiny",10101,PRON,it,PRP,it,10030,environment

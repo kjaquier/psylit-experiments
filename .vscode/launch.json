@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python : process data",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\data_process.py",
+            "console": "integratedTerminal",
+            "args": ["greatex_100k", "data\\interim", "data\\processed"]
+        },
+        {
+            "name": "Python : prepare data",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\data_prepare.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-mfb", "-t1", "100_000",
+                "data\\raw\\EN_1861_Dickens,Charles_GreatExpectations_Novel.txt",
+                "greatex_100k", 
+                "data\\interim"
+            ]
+        }
+    ]
+}
