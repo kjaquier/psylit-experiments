@@ -1,5 +1,3 @@
-from collections import Counter
-
 from spacy.tokens import Span, Token
 
 from utils import spacy as spacy_utils
