@@ -43,7 +43,7 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
 
     pipeline = nlp_pipeline.BookParsePipeline()
     nlp = pipeline.nlp
-    logging.debug(f"Pipeline: " + ', '.join(pname for pname, _ in nlp.pipeline))
+    logging.debug(f"Pipeline: %s", ', '.join(pname for pname, _ in nlp.pipeline))
 
     if benchmark:
         t_init = time.clock() - t0
