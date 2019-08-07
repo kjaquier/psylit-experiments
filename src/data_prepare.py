@@ -11,7 +11,9 @@ from data import preprocess
 from models import nlp_pipeline
 
 
-logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, 
+                    format='[%(asctime)s %(name)s] %(message)s',
+                    datefmt='%H:%M:%S') #  %(levelname)s
 
 
 def main(input_filename: "Raw text of book to read (UTF-8)",
@@ -21,47 +23,41 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
          save_features: ("Save tokens and features as csv", 'flag', 'f')=False,
          no_save_entities: ("Don't save entities as csv", 'flag', 'e')=False,
          save_meta: ("Write metadata file about the run", 'flag', 'm')=False,
-         # sent: ("Only read the sentence at position t",'option','t')=0,
          start: ("Position to read from", 'option', 't0')=0,
          end: ("Position to stop reading after", 'option', 't1')=0,
          benchmark: ("Measure execution time", 'flag', 'b')=False):
 
     now = dt.datetime.now().isoformat()
 
-    #sent = int(sent)
     start = int(start)
     end = int(end)
-    print('start=', repr(start), ' end=', repr(end))
+    logging.debug(f'start={start}, end={end}')
 
-    # if sent and not end:
-    #    print("[WARNING] end not specified: will read and process entire file!")
 
     if benchmark:
         t0 = time.clock()
     txt = preprocess.read_pg(input_filename)
     n = len(txt)
     txt = txt[start:end] if end else txt[start:]
-    print('Processing', len(txt), '/', n, 'chars')
+    logging.info(f'Processing {len(txt)}/{n} chars')
 
     pipeline = nlp_pipeline.BookParsePipeline()
     nlp = pipeline.nlp
-    print("Pipeline: ", ', '.join(pname for pname, _ in nlp.pipeline))
+    logging.debug(f"Pipeline: " + ', '.join(pname for pname, _ in nlp.pipeline))
 
     if benchmark:
         t_init = time.clock() - t0
-        print(f"Read and pipeline init time: {t_init*1000:.5n}ms")
+        logging.info(f"Read and pipeline init time: {t_init*1000:.5n}ms")
         t1 = time.clock()
 
     pipeline.parse(txt)
 
-    # if sent:
-    #    doc = doc[sent].sent.as_doc() # not supported by NeuralCoref :(
     entities_df = pipeline.get_entities_df()
     df = pipeline.get_df()
 
     if benchmark:
         t_process = time.clock() - t1
-        print(f"Process time: {t_process*1000:.5n}ms")
+        logging.info(f"Process time: {t_process*1000:.5n}ms")
         t2 = time.clock()
 
     ent_file = os.path.join(output_dir, run_name) + '.ent.csv'
@@ -71,24 +67,24 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
     meta_file = os.path.join(output_dir, run_name) + '.meta.json'
 
     if not no_save_entities:
-        print(f"Saving entities to", ent_file)
+        logging.info(f"Saving entities to {ent_file}")
         entities_df.to_csv(ent_file)
 
     if save_features:
-        print(f"Saving features to", tok_file)
+        logging.info(f"Saving features to {tok_file}")
         feat_df = pipeline.get_features_df()
         feat_df.to_csv(tok_file)
 
     if save_doc:
-        print(f"Saving doc object to", doc_file)
+        logging.info(f"Saving doc object to {doc_file}")
         pipeline.doc.to_disk(save_doc)
 
-    print(f"Saving data to", data_file)
+    logging.info(f"Saving data to {data_file}")
     df.to_csv(data_file)
 
     if benchmark:
         t_write = time.clock() - t2
-        print(f"Write time: {t_write*1000:.5n}ms")
+        logging.info(f"Write time: {t_write*1000:.5n}ms")
 
     if save_meta:
         metadata = {
@@ -106,9 +102,9 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
         }
 
         for k in ['n_predicates', 'n_corefs']:
-            print(k, ':', metadata[k])
+            logging.info(f"{k}: {metadata[k]}")
 
-        print(f"Saving meta data to", meta_file)
+            logging.info(f"Saving meta data to {meta_file}")
         with open(meta_file, 'w') as f:
             json.dump(metadata, f)
 

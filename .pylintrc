@@ -140,7 +140,9 @@ disable=print-statement,
         exception-escape,
         comprehension-escape,
         missing-docstring,
-        invalid-name
+        invalid-name,
+        trailing-whitespace,
+        logging-fstring-interpolation
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

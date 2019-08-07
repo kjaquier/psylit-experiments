@@ -1,5 +1,7 @@
-from itertools import combinations, product
-from collections import Counter, namedtuple, defaultdict
+import logging
+
+from itertools import combinations
+from collections import Counter, defaultdict
 
 from nltk.corpus import wordnet as wn
 
@@ -32,7 +34,7 @@ def filter_spans(spans):
 def fix_names(doc):
     """Spacy pipeline component for merging particles like 'Mr/Mrs' etc."""
     matcher = spmatch.Matcher(doc.vocab)
-    matcher.add('name_parts', None, [{'DEP': {'IN': ('compound','prt','flat', 'poss')}, 'ENT_IOB': {'NOT': 'O'}, 'OP':'+'},
+    matcher.add('name_parts', None, [{'DEP': {'IN': ('compound', 'prt', 'flat', 'poss')}, 'ENT_IOB': {'NOT': 'O'}, 'OP':'+'},
                                      {'ENT_IOB': {'NOT': 'O'}}])
     matches = matcher(doc)
     spans = filter_spans(doc[s:e] for _, s, e in matches)
@@ -60,13 +62,13 @@ class RemoveExtensionsMixin:
             self.set_extension(cls, attr_name, **kwargs, **kw)
 
     def set_extension(self, cls, attr_name, **kwargs):
-        print(f"[{self.__class__.__name__}] set extension {cls.__name__}._.{attr_name} {kwargs!r}")
+        # logging.debug(f"[{self.__class__.__name__}] set extension {cls.__name__}._.{attr_name} {kwargs!r}")
         cls.set_extension(attr_name, **self.kwargs, **kwargs)
         self.exts.append((cls, attr_name, kwargs))
 
     def remove_extensions(self):
         for cls, attr_name, _ in self.exts:
-            print(f"[{self.__class__.__name__}] remove extension {cls.__name__}._.{attr_name}")
+            # logging.debug(f"[{self.__class__.__name__}] remove extension {cls.__name__}._.{attr_name}")
             cls.remove_extension(attr_name)
 
     def get_extensions_remover_component(self):
@@ -99,7 +101,7 @@ class FlagLookup(RemoveExtensionsMixin):
 class CorefLookup(FlagLookup):
 
     def __init__(self):
-        attr='coref_tokens'
+        attr = 'coref_tokens'
         super().__init__(Token, 'in_coref', doc_attr=attr)
     
     def __call__(self, doc):
@@ -130,7 +132,6 @@ def union(sets):
 
 
 class PredicateParser(RemoveExtensionsMixin):
-
     name = 'predicates'
 
     def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
@@ -142,7 +143,7 @@ class PredicateParser(RemoveExtensionsMixin):
     def __call__(self, doc):
         
         clusters = doc._.coref_clusters
-        print(f"[{self.__class__.__name__}] {len(clusters)} clusters")
+        logging.debug(f"[{self.__class__.__name__}] {len(clusters)} clusters")
         cnt = Counter()
         for clust in clusters:
             for mention in clust:
@@ -157,10 +158,10 @@ class PredicateParser(RemoveExtensionsMixin):
 
                     anc._.sem_deps.append((rel, clust))
                     cnt[rel] += 1
-        print(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k,v in cnt.items()))
+        logging.debug(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k, v in cnt.items()))
 
         matches = self.matcher(doc)
-        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+        logging.debug(f"[{self.__class__.__name__}] {len(matches)} matches")
         cnt = Counter()
         for _, start, end in matches:
             heir = doc[start:end].root
@@ -170,7 +171,7 @@ class PredicateParser(RemoveExtensionsMixin):
                     rels[rel, target.i] = target
                     cnt[rel] += 1
             heir._.sem_deps = [(rel, clust) for (rel, _), clust in rels.items()]
-        print(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k,v in cnt.items()))
+        logging.debug(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k, v in cnt.items()))
         return doc
             
 
@@ -193,7 +194,7 @@ class HypernymsExtractor(RemoveExtensionsMixin):
             print(f"[{self.__class__.__name__}] {len(matches)} matches")
             toks = (doc[start:end].root for _, start, end in matches)
         else:
-            toks= iter(doc)
+            toks = iter(doc)
         
         for t in toks:
             
@@ -262,7 +263,7 @@ class HypernymMatcher(RemoveExtensionsMixin):
             print(f"[{self.__class__.__name__}] {len(matches)} matches")
             toks = (doc[start:end].root for _, start, end in matches)
         else:
-            toks= iter(doc)
+            toks = iter(doc)
         
         attr_name = self.attr_name
         
@@ -333,6 +334,3 @@ class EntityTagger(RemoveExtensionsMixin):
                 tag = tagger(clust, mention)
                 mention._.set(attr_name, tag)
         return doc
-    
-
-
