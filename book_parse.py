@@ -149,7 +149,7 @@ def get_dataframe(doc):
     #    table[col] = table[col].fillna('').str.strip().str.lower().str.slice(stop=50)
 
     
-    rel_cols = table.columns[list(table.columns.str.startswith('R_'))]
+    #rel_cols = table.columns[list(table.columns.str.startswith('R_'))]
     lex_cols = table.columns[list(table.columns.str.startswith('L_'))]
     table[lex_cols] = table[lex_cols].fillna(0)
     return table
@@ -230,8 +230,6 @@ def get_entities_df(doc):
     
     # df.loc[narrator,'categ'] = 'person'
     # df.loc[reader,'categ'] = 'person'
-    
-    return df
 
 
 def main(input_filename:"Raw text of book to read (UTF-8)",
