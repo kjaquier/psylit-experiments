@@ -1,12 +1,15 @@
 import logging
 
 from itertools import combinations
-from collections import Counter, defaultdict
+from collections import defaultdict
 
 from nltk.corpus import wordnet as wn
 
 import spacy.matcher as spmatch
 from spacy.tokens import Doc, Span, Token
+
+
+logger = logging.getLogger(__name__)
 
 
 def filter_spans(spans):
@@ -62,13 +65,13 @@ class RemoveExtensionsMixin:
             self.set_extension(cls, attr_name, **kwargs, **kw)
 
     def set_extension(self, cls, attr_name, **kwargs):
-        # logging.debug(f"[{self.__class__.__name__}] set extension {cls.__name__}._.{attr_name} {kwargs!r}")
+        # logger.debug(f"set extension {cls.__name__}._.{attr_name} {kwargs!r}")
         cls.set_extension(attr_name, **self.kwargs, **kwargs)
         self.exts.append((cls, attr_name, kwargs))
 
     def remove_extensions(self):
         for cls, attr_name, _ in self.exts:
-            # logging.debug(f"[{self.__class__.__name__}] remove extension {cls.__name__}._.{attr_name}")
+            # logger.debug(f"remove extension {cls.__name__}._.{attr_name}")
             cls.remove_extension(attr_name)
 
     def get_extensions_remover_component(self):
@@ -79,101 +82,6 @@ class RemoveExtensionsMixin:
 
         return component
 
-
-class FlagLookup(RemoveExtensionsMixin):
-
-    def __init__(self, cls, attr, doc_attr=None):
-        super().__init__()
-        self.cls = cls
-        self.attr = attr
-        self.doc_attr = doc_attr or f"lookup_{cls.__name__}_{attr}"
-        assert cls.has_extension(attr), "Extension {attr!r} not registered in {cls.__name__!r}"
-        super().set_extension(Doc, self.doc_attr, default=set())
-
-    def _get_doc_attr(self):
-        """Doesn't work on Doc"""
-        return Doc._.get(self.doc_attr)
-
-    def __call__(self, doc):
-        raise NotImplementedError
-
-
-class CorefLookup(FlagLookup):
-
-    def __init__(self):
-        attr = 'coref_tokens'
-        super().__init__(Token, 'in_coref', doc_attr=attr)
-    
-    def __call__(self, doc):
-        #indices = {
-        #    t.i for c in doc._.coref_clusters for m in c.mentions for t in m
-        #}
-        #print(f"[{self.__class__.__name__}] {len(indices)} to be cached")
-        #self._get_doc_attr().update(indices)
-        #Doc._.get('coref_tokens').update(indices)
-        return doc
-
-
-AGENT_DEPS = {'nsubj', 'csubj', 'nsubjpass', 'poss'}
-PREDICATIVE_LEMMAS = ('be',)
-POSSESSIVE_LEMMAS = ('have', 'possess')
-
-def ilen(gen):
-    return sum(1 for _ in gen)
-
-
-def union(sets):
-    u = set()
-    for s in sets:
-        u |= s
-    return u
-
-
-
-
-class PredicateParser(RemoveExtensionsMixin):
-    name = 'predicates'
-
-    def __init__(self, vocab, pattern=[{'_': {'has_lex': True}}], force_ext=False):
-        super().__init__(force=force_ext)
-        super().set_extension(Token, 'sem_deps', default=list())
-        self.matcher = spmatch.Matcher(vocab)
-        self.matcher.add('predicate', None, pattern)
-
-    def __call__(self, doc):
-        
-        clusters = doc._.coref_clusters
-        logging.debug(f"[{self.__class__.__name__}] {len(clusters)} clusters")
-        cnt = Counter()
-        for clust in clusters:
-            for mention in clust:
-                root = mention.root
-                rel = 'agent' if root.dep_ in AGENT_DEPS else 'patient'
-                for anc in root.ancestors:
-                    anc_lemma = anc.lemma_
-                    if anc_lemma in PREDICATIVE_LEMMAS:
-                        rel = 'predicative'
-                    elif anc_lemma in POSSESSIVE_LEMMAS or doc.vocab.morphology.tag_map[anc.tag_].get('Poss', '') == 'yes':
-                        rel = 'possessive'
-
-                    anc._.sem_deps.append((rel, clust))
-                    cnt[rel] += 1
-        logging.debug(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k, v in cnt.items()))
-
-        matches = self.matcher(doc)
-        logging.debug(f"[{self.__class__.__name__}] {len(matches)} matches")
-        cnt = Counter()
-        for _, start, end in matches:
-            heir = doc[start:end].root
-            rels = {(rel, clust.i): clust for rel, clust in heir._.sem_deps}
-            for anc in heir.ancestors:
-                for rel, target in anc._.sem_deps:
-                    rels[rel, target.i] = target
-                    cnt[rel] += 1
-            heir._.sem_deps = [(rel, clust) for (rel, _), clust in rels.items()]
-        logging.debug(f"[{self.__class__.__name__}]", ', '.join(f"{k}:{v}" for k, v in cnt.items()))
-        return doc
-            
 
 class HypernymsExtractor(RemoveExtensionsMixin):
     name = 'hypernyms'
@@ -210,22 +118,27 @@ class HypernymsExtractor(RemoveExtensionsMixin):
         return doc
 
 
-def tok_hypernyms_matcher(targets, highest_level=0, highest_common_level=0):
-    print("[WARNING DEPRECATED] MOVED TO processing.entities")
-    targets = {wn.synset(k) for k in targets}
+class HypernymMatcher:
 
-    def matcher(token):
+    def __init__(self, targets, highest_level=0, highest_common_level=0):
+        self.targets = {wn.synset(k) for k in targets}
+        self.highest_level = highest_level
+        self.highest_common_level = highest_common_level
+
+    def match_token(self, token):
+        targets = self.targets
         matched = set()
         
         hypers_all = hypers_common = {h for s in token._.wordnet.synsets() for h in s.hypernyms()}
         matched |= targets & hypers_all
-        for _ in range(highest_level):
+
+        for _ in range(self.highest_level):
             hypers_all = {h for s in hypers_all for h in s.hypernyms()}
             if not hypers_all:
                 break
             matched |= targets & hypers_all
 
-        for _ in range(highest_common_level):
+        for _ in range(self.highest_common_level):
             hypers_pairs = combinations(hypers_common, 2)
             hypers_common = {h for h1, h2 in hypers_pairs for h in h1.lowest_common_hypernyms(h2)}
             if not hypers_common:
@@ -233,53 +146,6 @@ def tok_hypernyms_matcher(targets, highest_level=0, highest_common_level=0):
             matched |= targets & hypers_common
 
         return matched
-    
-    return matcher
-
-
-class HypernymMatcher(RemoveExtensionsMixin):
-    name = 'hypernym_match'
-    
-    def __init__(self, vocab, synset2tag, 
-                 pattern=None, highest_level=0, 
-                 attr_name='hypernym_match', 
-                 highest_common_level=0, force_ext=False):
-        super().__init__(force=force_ext)
-        super().set_extension(Token, attr_name, default=set())
-        self.synset2tag = {wn.synset(k):v for k, v in synset2tag.items()}
-        if pattern:
-            self.matcher = spmatch.Matcher(vocab)
-            self.matcher.add(attr_name, None, pattern)
-        else:
-            self.matcher = None
-        
-        self.attr_name = attr_name
-        self.highest_level = highest_level
-        self.highest_common_level = highest_common_level
-    
-    def __call__(self, doc):
-        if self.matcher:
-            matches = self.matcher(doc)
-            print(f"[{self.__class__.__name__}] {len(matches)} matches")
-            toks = (doc[start:end].root for _, start, end in matches)
-        else:
-            toks = iter(doc)
-        
-        attr_name = self.attr_name
-        
-        mention_matcher = tok_hypernyms_matcher(self.synset2tag.keys(),
-                                                self.highest_level,
-                                                self.highest_common_level)
-
-        for t in toks:
-            matched = mention_matcher(t)
-            
-            if matched:
-                print(f"[{self.__class__.__name__}] matched for {t.text!r}: {matched} ")
-            tags = {self.synset2tag[x] for x in matched}
-            t._.set(attr_name, tags)
-            
-        return doc
 
 
 class EntityMultiTagger(RemoveExtensionsMixin):
