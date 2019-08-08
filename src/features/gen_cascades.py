@@ -1,10 +1,5 @@
 import os
 
-from statistics import mean
-
-from os import linesep as EOL
-
-import re
 import json
 
 import pandas as pd
@@ -28,25 +23,27 @@ class BookData:
             self.meta = json.load(f)
 
         df = self._format_rel_cols(df.drop_duplicates())
-        self.data = df.groupby(['t','R_agent','R_patient','lemma']).mean().reset_index()
+        self.data = df.groupby(
+            ['t', 'R_agent', 'R_patient', 'lemma']).mean().reset_index()
 
         self.ent_counts = None
 
     def _format_rel_cols(self, df):
         dfr = df[self.rel_cols]
         dfr = dfr.fillna('NONE')
-        dfr = dfr.replace('NONE','')
+        dfr = dfr.replace('NONE', '')
         dfr = dfr.apply(lambda c: c.str.lower(), axis='columns')
-        dfr = dfr.replace('','NONE')
-        
+        dfr = dfr.replace('', 'NONE')
+
         dfc = df.copy()
         dfc.loc[:, self.rel_cols] = dfr
         return dfc
 
     def most_common_ents(self):
         if not self.ent_counts:
-            self.ent_counts = pd.concat([self.data[r] for r in self.rel_cols], axis='rows').replace('NONE',None).dropna().value_counts()
-            #self.most_common = ent_counts.idxmax() # most common
+            self.ent_counts = pd.concat([self.data[r] for r in self.rel_cols], axis='rows')
+            self.ent_counts = self.ent_counts.replace('NONE', None).dropna().value_counts()
+            
         return self.ent_counts
 
 
@@ -54,7 +51,8 @@ class BookData:
         return self.data[self.data[col].str.lower().str.match(pattern)]
 
     def _make_entity_lookup(self, subject=None):
-        ents_lookup = self.ents[['t0','entity_root', 'categ']].drop_duplicates()
+        ents_lookup = self.ents[[
+            't0', 'entity_root', 'categ']].drop_duplicates()
         #ents_lookup.rename(index=str, columns={'entity_root': 'root', 'entity_name': 'name'}, inplace=True)
         #ents_lookup.set_index('entity_root', inplace=True, verify_integrity=True)
         
@@ -71,8 +69,8 @@ class BookData:
         #ents_lookup.loc[narrator,'entity_root'] = 'NARRATOR'
         #ents_lookup.loc[reader,'entity_root'] = 'READER'
 
-        ents_lookup.loc[is_narrator,'categ'] = 'person'
-        ents_lookup.loc[is_reader,'categ'] = 'person'
+        ents_lookup.loc[is_narrator, 'categ'] = 'person'
+        ents_lookup.loc[is_reader, 'categ'] = 'person'
         
         ents_lookup.loc[is_subject, 'categ'] = 'subject'
         
@@ -89,7 +87,8 @@ class BookData:
         return ents_lookup
 
     def _per_entity_data(self, take_top=10):
-        ent_counts = pd.concat([self.data[r] for r in self.rel_cols], axis='rows').replace('NONE',None).dropna().value_counts()
+        ent_counts = pd.concat([self.data[r] for r in self.rel_cols], axis='rows')
+        ent_counts = ent_counts.replace('NONE', None).dropna().value_counts()
         selected_ents = ent_counts.sort_values(ascending=False)[:take_top].index
         mapped = []
         for subject in selected_ents:
@@ -103,7 +102,7 @@ class BookData:
     def _get_cascades_for_entity(self, casc, entity=None):
         ents_lookup = self._make_entity_lookup(entity)
         merged = df_map_columns(casc, self.rel_cols, ents_lookup)
-
+        
         def cascade_representation(data, symbolic_cols, numeric_cols, symbolic_na=False, casc_index=['t']):
             sym_cascades = pd.get_dummies(data[symbolic_cols], dummy_na=symbolic_na)
             num_cascades = (data[numeric_cols] > data[numeric_cols].mean()) * 1
@@ -114,7 +113,7 @@ class BookData:
             
         # Discard NaNs, negations and irrelevant columns
         keep = (~merged[self.rel_cols].isna()).any(axis='columns') & ~merged.neg.fillna(False)
-        casc = merged[keep][['t','neg']+self.rel_cols+self.lex_cols]
+        casc = merged[keep][['t', 'neg']+self.rel_cols+self.lex_cols]
 
         # Transform into cascades
         casc = cascade_representation(casc,
@@ -142,4 +141,3 @@ class BookData:
             casc = self._get_cascades_for_entity(df, ent)
             cascades.append((ent, casc))
         return dict(cascades)
-

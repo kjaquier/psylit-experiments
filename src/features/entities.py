@@ -4,7 +4,6 @@ import time
 import numpy as np
 
 from spacy.matcher import Matcher
-from spacy.tokens import Doc, Span
 
 from utils.spacy import HypernymMatcher
 
@@ -57,14 +56,14 @@ def entity_classifier(vocab):
 
         t = time.clock() - t
 
-        logger.debug("%s coref tokens [%s s]", {len(coref_tokens)}, t)
+        logger.debug("%s coref tokens [%s]", len(coref_tokens), f"{t*1000:.3} ms")
 
         t = time.clock()
         
         matches = exceptions_matcher(doc)
 
         t = time.clock() - t
-        logger.debug("%s matches (pronouns) [%s s]", {len(matches)}, t)
+        logger.debug("%s matches (pronouns) [%s]", len(matches), f"{t*1000:.3} ms")
 
         for _, start, end in exceptions_matcher(doc):
             mention = doc[start:end]

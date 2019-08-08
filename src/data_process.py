@@ -32,10 +32,10 @@ def bench(f):
     return bench_f
 
 
-def main(book_name:"Book name",
-         input_dir:"Folder containing book data",
-         output_dir:"Folder in which to generate output",
-         benchmark:("Measure execution time", 'flag', 'b')=False):
+def main(book_name: "Book name",
+         input_dir: "Folder containing book data",
+         output_dir: "Folder in which to generate output",
+         benchmark: ("Measure execution time", 'flag', 'b')=False):
 
     if benchmark:
         t0 = time.clock()
