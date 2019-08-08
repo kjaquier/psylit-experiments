@@ -7,6 +7,9 @@ from spacy.tokens import Doc, Token
 from utils import spacy as spacy_utils
 
 
+logger = logging.getLogger(__name__)
+
+
 class LexiconTagger(spacy_utils.RemoveExtensionsMixin):   
     name = 'lexicon'
 
@@ -37,7 +40,7 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
         doc_attr = self.doc_attr
         ances_flag_attr = self.ances_flag_attr
 
-        logging.info(f"[{self.__class__.__name__}] {len(matches)} matches")
+        logger.debug("%s matches", len(matches))
 
         tok_list = doc._.get(doc_attr)
 
@@ -63,8 +66,7 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
                 ances._.set(ances_flag_attr, True)
                 j += 1
 
-        logging.debug(f"[{self.__class__.__name__}] {i} tags assigned on {len(tagged)}"
-                      f" tokens, {j} ancestors flagged")
+        logging.debug("%d tags assigned on %d tokens, %d ancestors flagged", i, len(tagged), j)
         return doc
 
 
@@ -102,7 +104,7 @@ class FastLexiconTagger(spacy_utils.RemoveExtensionsMixin):
         doc_attr = self.doc_attr
         ances_flag_attr = self.ances_flag_attr
 
-        logging.info(f"[{self.__class__.__name__}] {len(matches)} matches")
+        logger.debug("%s matches", len(matches))
 
         i = 0
         for matched_tag, start, end in matches:
@@ -119,7 +121,7 @@ class FastLexiconTagger(spacy_utils.RemoveExtensionsMixin):
                 ances._.set(ances_flag_attr, True)
                 i += 1
         
-        logging.info(f"[{self.__class__.__name__}] {i} tags assigned")
+        logger.debug("%s tags assigned", i)
 
         return doc
 
@@ -159,7 +161,9 @@ class NegTagger(spacy_utils.RemoveExtensionsMixin):
         
     def __call__(self, doc):
         matches = self.matcher(doc)
-        print(f"[{self.__class__.__name__}] {len(matches)} matches")
+        
+        logger.debug("%s matches", len(matches))
+        
         for _, start, end in matches:
             head = doc[start:end].root.head
             if head:

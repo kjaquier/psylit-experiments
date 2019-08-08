@@ -1,12 +1,11 @@
 import logging
 
 from itertools import combinations
-from collections import defaultdict
 
 from nltk.corpus import wordnet as wn
 
 import spacy.matcher as spmatch
-from spacy.tokens import Doc, Span, Token
+from spacy.tokens import Token
 
 
 logger = logging.getLogger(__name__)
@@ -41,7 +40,7 @@ def fix_names(doc):
                                      {'ENT_IOB': {'NOT': 'O'}}])
     matches = matcher(doc)
     spans = filter_spans(doc[s:e] for _, s, e in matches)
-    print(f'[fix_names] {len(spans)} matches')
+    logger.debug('%s matches', len(spans))
     with doc.retokenize() as retokenizer:
         for span in spans:
             root = span.root
@@ -99,7 +98,7 @@ class HypernymsExtractor(RemoveExtensionsMixin):
     def __call__(self, doc):
         if self.matcher:
             matches = self.matcher(doc)
-            print(f"[{self.__class__.__name__}] {len(matches)} matches")
+            logger.debug("%s matches", len(matches))
             toks = (doc[start:end].root for _, start, end in matches)
         else:
             toks = iter(doc)
@@ -146,57 +145,3 @@ class HypernymMatcher:
             matched |= targets & hypers_common
 
         return matched
-
-
-class EntityMultiTagger(RemoveExtensionsMixin):
-    name = 'entity_tags'
-
-    def __init__(self, tagger, container=set, attr_name='ent_tags', force_ext=False):
-        """
-        tagger: Function[Cluster, Span] -> Iterable[Hashable]
-        """
-        print("[WARNING DEPRECATED] MOVED TO processing.entities")
-        super().__init__(force=force_ext)
-        super().set_extension(Doc, attr_name, default=None)
-        super().set_extension(Span, attr_name, default=None)
-        self.tagger = tagger
-        self.container = container
-        self.attr_name = attr_name
-    
-    def __call__(self, doc):
-        tagger = self.tagger
-        attr_name = self.attr_name
-        alltags = defaultdict(self.container)
-        for clust in doc._.coref_clusters:
-            clust_id = clust.i
-            collected = alltags[clust_id]
-            for mention in clust:
-                tags = tagger(clust, mention)
-                mention._.set(attr_name, tags)
-                collected.update(tags)
-        
-        doc._.set(attr_name, alltags)
-        return doc
-
-
-class EntityTagger(RemoveExtensionsMixin):
-    name = 'entity_tag'
-
-    def __init__(self, tagger, attr_name='ent_tag', force_ext=False):
-        """
-        tagger: Function[Cluster, Span] -> Hashable
-        """
-        print("[WARNING DEPRECATED] MOVED TO processing.entities")
-        super().__init__(force=force_ext)
-        super().set_extension(Span, attr_name, default=None)
-        self.tagger = tagger
-        self.attr_name = attr_name
-    
-    def __call__(self, doc):
-        tagger = self.tagger
-        attr_name = self.attr_name
-        for clust in doc._.coref_clusters:
-            for mention in clust:
-                tag = tagger(clust, mention)
-                mention._.set(attr_name, tag)
-        return doc
