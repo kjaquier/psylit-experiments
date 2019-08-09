@@ -20,7 +20,7 @@ def benchmark(f, log_level=logging.DEBUG):
         t = time.clock()
         res = f(*args, **kwargs)
         t = time.clock() - t
-        logger.log(log_level, f"Time:  {t*1000:.3f}ms")
+        logger.log(log_level, "Time:  %s", f"{t*1000:.3f} ms")
         return res
 
     if rename:
