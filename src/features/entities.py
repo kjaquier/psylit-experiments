@@ -76,10 +76,10 @@ def entity_classifier(vocab):
 
             sent = m_root.sent
             yield {
-                'i': mention.start,
+                'i': m_root.i,
                 't0': sent.start,
                 't1': sent.end,
-                #'entity_i': None,
+                'entity_i': None,
                 'entity_root': ent_class.upper(),
                 #'entity_pos': None,
                 #'entity_tag': None,
@@ -96,8 +96,8 @@ def entity_classifier(vocab):
         #print(f"[entities_classifier.iter_entities] {n_mentions} mentions, {n_clusters} clusters")
         for cluster in doc._.coref_clusters:
             e = cluster.main
-            e_i = cluster.i
             e_root = e.root
+            e_i = e_root.i # cluster.i
             e_root_text = e_root.text.strip().lower()
             e_pos = e.root.pos_
             e_tag = e.root.tag_
