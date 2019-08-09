@@ -5,7 +5,8 @@ from functools import partial
 import json
 
 import pandas as pd
-from joblib import Parallel, delayed
+import numpy as np
+#from joblib import Parallel, delayed
 
 from utils.pandas import df_map_columns
 
@@ -13,47 +14,40 @@ from utils.pandas import df_map_columns
 logger = logging.getLogger(__name__)
 
 
-def make_entity_lookup(ents, subject=None):
-    ents_lookup = ents[[
-        't0', 'entity_root', 'categ']].drop_duplicates()
+def make_entity_lookup(ents):
+    entity_not_found = ents.entity_i.isna()
+    ents_fixed = ents.copy()
+    entity_not_found_ids = -ents[entity_not_found].mention_root.factorize()[0]
+
+    ents_fixed.loc[entity_not_found, 'entity_i'] = entity_not_found_ids
+    ents_fixed.entity_i = ents_fixed.entity_i.astype(np.int32)
+
+    ents_lookup = ents_fixed[['entity_i', 'entity_root', 'categ']].drop_duplicates()
     #ents_lookup.rename(index=str, columns={'entity_root': 'root', 'entity_name': 'name'}, inplace=True)
     #ents_lookup.set_index('entity_root', inplace=True, verify_integrity=True)
     
-    is_narrator = ents_lookup.categ == 'narrator'
-    is_reader = ents_lookup.categ == 'reader'
-
-    if subject:
-        is_subject = ents_lookup.entity_root == subject
-    else:
-        is_subject = is_narrator
-    
-    #assert is_subject.any(), f"No occurence found for entity '{subject}'"
-
-    #ents_lookup.loc[narrator,'entity_root'] = 'NARRATOR'
-    #ents_lookup.loc[reader,'entity_root'] = 'READER'
-
-    ents_lookup.loc[is_narrator, 'categ'] = 'person'
-    ents_lookup.loc[is_reader, 'categ'] = 'person'
-    
-    ents_lookup.loc[is_subject, 'categ'] = 'subject'
-    
-    ents_lookup.loc[is_subject, 'categ'] = 'subject'
-    
+    ents_lookup.loc[ents_lookup.categ == 'narrator', 'categ'] = 'person'
+    ents_lookup.loc[ents_lookup.categ == 'reader', 'categ'] = 'person'
     
     most_likely_categ = lambda fr: fr.categ.value_counts(normalize=True, ascending=False, dropna=False).idxmax()
     ents_lookup = ents_lookup.groupby('entity_root').apply(most_likely_categ)
     ents_lookup.name = 'ent_class'
     
     ents_lookup.loc['NONE'] = 'none'
-    
-    #ents_lookup.at['NARRATOR']
+
+    return ents_lookup
+
+
+def update_lookup_with_subject(ents_lookup, subject):
+    ents_lookup = ents_lookup.copy()
+    ents_lookup.at[subject] = 'subject'
     return ents_lookup
 
 
 def cascade_representation(data, symbolic_cols, numeric_cols, symbolic_na=False, casc_index=('t',)):
     casc_index = list(casc_index)
-    sym_cascades = pd.get_dummies(data[symbolic_cols], dummy_na=symbolic_na) * 1
-    num_cascades = (data[numeric_cols] > data[numeric_cols].mean()) * 1
+    sym_cascades = pd.get_dummies(data[symbolic_cols], dummy_na=symbolic_na)
+    num_cascades = (data[numeric_cols] > data[numeric_cols].mean()) * 1  # NaN -> 0
     casc = pd.concat([data[casc_index], sym_cascades, num_cascades], axis='columns')
     casc = casc.groupby(casc_index).any()*1
 
@@ -111,8 +105,10 @@ class BookData:
         logger.debug("Selected entities: %s", selected_ents_count)
         selected_ents = selected_ents_count.index
 
-        def gen_cascades_for_subject(data, ents, rel_cols, lex_cols, subject):
-            ents_lookup = make_entity_lookup(ents, subject=subject)
+        ents_lookup = make_entity_lookup(self.ents)
+
+        def gen_cascades_for_subject(data, ents_lookup, rel_cols, lex_cols, subject):
+            ents_lookup = update_lookup_with_subject(ents_lookup, subject)
 
             subj_occs = data[rel_cols].apply(lambda c: c == subject).any(axis='columns')
             subj_occs = subj_occs.where(subj_occs)
@@ -129,7 +125,7 @@ class BookData:
             return subj_casc
         
         executor = list #Parallel(n_jobs=-1)
-        do = partial(gen_cascades_for_subject, self.data, self.ents, self.rel_cols, self.lex_cols) # delayed()
+        do = partial(gen_cascades_for_subject, self.data, ents_lookup, self.rel_cols, self.lex_cols) # delayed()
         tasks = (do(subject) for subject in selected_ents)
         logger.info("Generating cascades for %d entities (max len = %d)", len(selected_ents), len(self.data.index))
         subj_cascades = executor(tasks)
@@ -150,40 +146,3 @@ class BookData:
 
         return casc
     
-
-    # def _gen_cascades_for_entity(self, ent_data, entity=None):
-    #     ents_lookup = self._make_entity_lookup(entity)
-    #     merged = df_map_columns(ent_data, self.rel_cols, ents_lookup)
-            
-    #     # Discard NaNs, negations and irrelevant columns
-    #     #row_mask = (~merged[self.rel_cols].isna()).any(axis='columns')
-    #     #row_mask &= ~merged.neg.fillna(False)
-    #     relevant_columns = ['t', 'neg'] + self.rel_cols + self.lex_cols
-    #     merged = merged[relevant_columns]
-
-    #     # Transform into cascades
-    #     ent_casc = cascade_representation(merged,
-    #                                       symbolic_cols=self.rel_cols,
-    #                                       numeric_cols=self.lex_cols)
-
-
-    #     # Drop irrelevant columns
-    #     irrelevant_cols = [col for col in ent_casc.columns if col[1] in ('none',)]
-    #     ent_casc = ent_casc.drop(irrelevant_cols, axis='columns')
-
-
-    #     # Put all unknown into a single columns
-    #     unk_cols = [c for c in ent_casc.columns if c.endswith('unknown')]
-    #     ent_casc['R_unknown'] = ent_casc[unk_cols].any(axis='columns').astype(int)
-    #     ent_casc.drop(unk_cols, axis='columns', inplace=True)
-
-    #     return ent_casc
-
-    # def get_all_cascades(self):
-    #     grouped_data = self._per_entity_data()
-    #     cascades = []
-    #     for ent, df in grouped_data:
-    #         casc = self._gen_cascades_for_entity(df, ent)
-    #         casc['Subject'] = ent
-    #         cascades.append((ent, casc))
-    #     return dict(cascades)
