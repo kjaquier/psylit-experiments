@@ -235,7 +235,7 @@
 229,,aux,229,have,,False,,VERB,166,,had
 230,,advmod,230,all,,False,,DET,166,,all
 231,,auxpass,231,be,,False,,VERB,166,,been
-232,,ccomp,232,bear,"NRCw_Em_anger,NRCw_Em_fear",False,"them,they",VERB,166,232.0,born
+232,,ccomp,232,bear,"NRCw_Em_anger,NRCw_Em_fear",False,"they,them",VERB,166,232.0,born
 233,,prep,233,on,,False,,ADP,166,,on
 234,,pobj,234,-PRON-,,False,,NOUN,166,,their backs
 235,,prep,235,with,,False,,ADP,166,,with
@@ -461,7 +461,7 @@
 451,,prt,451,up,,False,,PART,437,,up from
 452,,prep,452,among,,False,,ADP,437,,among
 453,,det,453,the,,False,,DET,437,,the
-454,,pobj,454,grave,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,437,451.0,graves
+454,,pobj,454,graf,,False,,NOUN,437,,graves
 455,,prep,455,at,,False,,ADP,437,,at
 456,,det,456,the,,False,,DET,437,,the
 457,,pobj,457,side,,False,,NOUN,437,,side
@@ -538,7 +538,7 @@
 526,,pobj,526,mud,NRCw_Em_negative,False,,NOUN,514,519.0,mud
 527,,punct,527,",",,False,,PUNCT,514,,","
 528,,cc,528,and,,False,,CCONJ,514,,and
-529,,conj,529,lame,,False,,VERB,514,,lamed
+529,,conj,529,lam,,False,,VERB,514,,lamed
 530,,agent,530,by,,False,,ADP,514,,by
 531,,pobj,531,stone,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,514,530.0,stones
 532,,punct,532,",",,False,,PUNCT,514,,","
@@ -10062,7 +10062,7 @@
 9727,,cc,9727,and,,False,,CCONJ,9720,,and
 9728,,det,9728,a,,False,,DET,9720,,a
 9729,,amod,9729,large,,False,,ADJ,9720,,large
-9730,,amod,9730,shin,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,9720,9720.0,shining
+9730,,amod,9730,shine,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,9720,9720.0,shining
 9731,,conj,9731,bald,,False,,NOUN,9720,,bald forehead
 9732,,punct,9732,",",,False,,PUNCT,9720,,","
 9733,,ccomp,9733,have,,False,,VERB,9720,,had
@@ -10445,7 +10445,7 @@
 ",,False,,SPACE,10099,,"
 "
 10104,,nsubj,10104,-PRON-,,False,,PRON,10104,,We
-10105,,ROOT,10105,din,NRCw_Em_negative,False,,VERB,10104,10105.0,dined
+10105,,ROOT,10105,dine,,False,,VERB,10104,,dined
 10106,,prep,10106,on,,False,,ADP,10104,,on
 10107,,det,10107,these,,False,,DET,10104,,these
 10108,,pobj,10108,occasion,,False,,NOUN,10104,,occasions
@@ -14779,7 +14779,7 @@
 14292,,dobj,14292,-PRON-,,False,,PRON,14274,14277.0,themselves
 14293,,prep,14293,among,,False,,ADP,14274,,among
 14294,,det,14294,the,,False,,DET,14274,,the
-14295,,pobj,14295,grave,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,14274,14277.0,graves
+14295,,pobj,14295,graf,,False,,NOUN,14274,,graves
 14296,,punct,14296,",",,False,,PUNCT,14274,,","
 14297,,cc,14297,and,,False,,CCONJ,14274,,and
 14298,,advmod,14298,also,,False,,ADV,14274,,also
@@ -21051,7 +21051,7 @@
 20394,,nsubjpass,20394,that,,False,,DET,20386,,that
 20395,,aux,20395,could,,False,,VERB,20386,,could
 20396,,auxpass,20396,be,,False,,VERB,20386,,be
-20397,,relcl,20397,spar,,False,,VERB,20386,,spared
+20397,,relcl,20397,spare,,False,,VERB,20386,,spared
 20398,,auxpass,20398,be,,False,,VERB,20386,,were
 20399,,ROOT,20399,want,,False,,VERB,20386,,wanted
 20400,,prep,20400,for,,False,,ADP,20386,,for
@@ -22855,7 +22855,7 @@
 22126,,advmod,22126,only,,False,,ADV,22124,,only
 22127,,aux,22127,to,,False,,PART,22124,,to
 22128,,auxpass,22128,be,,False,,VERB,22124,,be
-22129,,xcomp,22129,hope,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,22124,22129.0,hoped
+22129,,xcomp,22129,hop,,False,,VERB,22124,,hoped
 22130,,punct,22130,",",,False,,PUNCT,22124,,","
 22131,,punct,22131,"""",,False,,PUNCT,22124,,""""
 22132,,ROOT,22132,say,,False,,VERB,22124,,said
