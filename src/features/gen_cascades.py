@@ -113,6 +113,13 @@ class BookData:
 
         def gen_cascades_for_subject(data, ents, rel_cols, lex_cols, subject):
             ents_lookup = make_entity_lookup(ents, subject=subject)
+
+            subj_occs = data[rel_cols].apply(lambda c: c == subject).any(axis='columns')
+            subj_occs = subj_occs.where(subj_occs)
+            first_occ = subj_occs.first_valid_index()
+            last_occ = subj_occs.last_valid_index()
+            data = data.loc[first_occ:last_occ, :]
+
             subj_data = df_map_columns(data, rel_cols, ents_lookup)
             subj_casc = cascade_representation(subj_data,
                                                symbolic_cols=rel_cols,
