@@ -54,7 +54,7 @@
 48,,punct,48,",",,False,,PUNCT,42,,","
 49,,prep,49,on,,False,,ADP,42,,on
 50,,det,50,the,,False,,DET,42,,the
-51,I,pobj,51,authority,NRCw_Em_positive,False,,NOUN,42,43.0,authority
+51,I,pobj,51,authority,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,42,43.0,authority
 52,,prep,52,of,,False,,ADP,42,,of
 53,,pobj,53,-PRON-,,False,,NOUN,42,,his tombstone
 54,,cc,54,and,,False,,CCONJ,42,,and
@@ -65,7 +65,7 @@
 59,,ROOT,59,Joe,,False,,PROPN,59,59.0,Joe Gargery
 60,,punct,60,",",,False,,PUNCT,59,,","
 61,,nsubj,61,who,,False,,PRON,59,,who
-62,,relcl,62,marry,NRCw_Em_anticipation,False,,VERB,59,62.0,married
+62,,relcl,62,marry,"NRCw_Em_fear,NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_trust,NRCw_Em_positive",False,,VERB,59,62.0,married
 63,,det,63,the,,False,,DET,59,,the
 64,,dobj,64,blacksmith,,False,,NOUN,59,,blacksmith
 65,,punct,65,.,,False,,PUNCT,59,,.
@@ -98,7 +98,7 @@
 92,,punct,92,),,False,,PUNCT,66,,)
 93,,punct,93,",",,False,,PUNCT,66,,","
 94,,poss,94,-PRON-,,False,,DET,66,,my first
-95,,nsubjpass,95,fancy,NRCw_Em_anticipation,False,,NOUN,66,103.0,fancies
+95,,nsubjpass,95,fancy,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,66,103.0,fancies
 96,,prep,96,regard,,False,,VERB,66,,regarding
 97,,pobj,97,what,,False,,PRON,66,,what
 98,,nsubj,98,-PRON-,,False,,PRON,66,99.0,they
@@ -137,7 +137,7 @@
 131,,punct,131,",",,False,,PUNCT,107,,","
 132,,prep,132,with,,False,,ADP,107,,with
 133,,advmod,133,curly,,False,,ADJ,107,,curly
-134,,amod,134,black,NRCw_Em_negative,False,,ADJ,107,116.0,black
+134,,amod,134,black,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,107,116.0,black
 135,,pobj,135,hair,,False,,NOUN,107,,hair
 136,,punct,136,.,,False,,PUNCT,107,,.
 137,,prep,137,From,,False,,ADP,137,,From
@@ -167,12 +167,12 @@
 161,,auxpass,161,be,,False,,VERB,137,,was
 162,,acl,162,freckle,,False,,VERB,137,,freckled
 163,,cc,163,and,,False,,CCONJ,137,,and
-164,I,conj,164,sickly,NRCw_Em_disgust,False,,ADJ,137,155.0,sickly
+164,I,conj,164,sickly,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_sadness",False,,ADJ,137,155.0,sickly
 165,,punct,165,.,,False,,PUNCT,137,,.
 166,,prep,166,to,,False,,PART,166,,To
 167,,nummod,167,five,,False,,NUM,166,,five
 168,,amod,168,little,,False,,ADJ,166,,little
-169,,pobj,169,stone,NRCw_Em_anger,False,,NOUN,166,220.0,stone lozenges
+169,,pobj,169,stone,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,166,220.0,stone lozenges
 170,,punct,170,",",,False,,PUNCT,166,,","
 171,,prep,171,each,,False,,DET,166,,each
 172,,prep,172,about,,False,,ADP,166,,about
@@ -189,7 +189,7 @@
 183,,prep,183,in,,False,,ADP,166,,in
 184,,det,184,a,,False,,DET,166,,a
 185,,amod,185,neat,,False,,ADJ,166,,neat
-186,,pobj,186,row,NRCw_Em_anger,False,,NOUN,166,182.0,row
+186,,pobj,186,row,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,166,182.0,row
 187,,prep,187,beside,,False,,ADP,166,,beside
 188,,pobj,188,-PRON-,,False,,NOUN,166,,their grave
 189,,punct,189,",",,False,,PUNCT,166,,","
@@ -202,7 +202,7 @@
 196,,prep,196,of,,False,,ADP,166,,of
 197,,nummod,197,five,,False,,NUM,166,,five
 198,,amod,198,little,,False,,ADJ,166,,little
-199,,pobj,199,brother,NRCw_Em_positive,False,,NOUN,166,192.0,brothers
+199,,pobj,199,brother,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,166,192.0,brothers
 200,,prep,200,of,,False,,ADP,166,,of
 201,,pobj,201,mine,,False,,NOUN,166,,mine
 202,,punct,202,",",,False,,PUNCT,166,,","
@@ -219,7 +219,7 @@
 213,,prep,213,in,,False,,ADP,166,,in
 214,,det,214,that,,False,,DET,166,,that
 215,,amod,215,universal,,False,,ADJ,166,,universal
-216,,pobj,216,struggle,NRCw_Em_anger,False,,NOUN,166,212.0,struggle
+216,,pobj,216,struggle,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,166,212.0,struggle
 217,,punct,217,",",,False,,PUNCT,166,,","
 218,,nsubjpass,218,-PRON-,,False,,PRON,166,220.0,I
 219,,auxpass,219,be,,False,,VERB,166,,am
@@ -229,13 +229,13 @@
 223,,pobj,223,belief,,False,,NOUN,166,,belief
 224,,nsubj,224,-PRON-,,False,,PRON,166,226.0,I
 225,,advmod,225,religiously,,False,,ADV,166,,religiously
-226,I,relcl,226,entertain,NRCw_Em_joy,False,,VERB,166,226.0,entertained
+226,I,relcl,226,entertain,"NRCw_Em_joy,NRCw_Em_positive",False,,VERB,166,226.0,entertained
 227,,mark,227,that,,False,,ADP,166,,that
 228,,nsubjpass,228,-PRON-,,False,,PRON,166,232.0,they
 229,,aux,229,have,,False,,VERB,166,,had
 230,,advmod,230,all,,False,,DET,166,,all
 231,,auxpass,231,be,,False,,VERB,166,,been
-232,,ccomp,232,bear,NRCw_Em_anger,False,"they,them",VERB,166,232.0,born
+232,,ccomp,232,bear,"NRCw_Em_anger,NRCw_Em_fear",False,"they,them",VERB,166,232.0,born
 233,,prep,233,on,,False,,ADP,166,,on
 234,,pobj,234,-PRON-,,False,,NOUN,166,,their backs
 235,,prep,235,with,,False,,ADP,166,,with
@@ -282,7 +282,7 @@
 274,,punct,274,.,,False,,PUNCT,253,,.
 275,,poss,275,-PRON-,,False,,DET,275,,My first
 276,,advmod,276,most,,False,,ADV,275,,most
-277,,amod,277,vivid,NRCw_Em_joy,False,,ADJ,275,280.0,vivid
+277,,amod,277,vivid,"NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,275,280.0,vivid
 278,,cc,278,and,,False,,CCONJ,275,,and
 279,,conj,279,broad,,False,,ADJ,275,,broad
 280,,nsubj,280,impression,NRCw_Em_positive,False,,NOUN,275,280.0,impression
@@ -297,7 +297,7 @@
 289,,aux,289,to,,False,,PART,275,,to
 290,,aux,290,have,,False,,VERB,275,,have
 291,,auxpass,291,be,,False,,VERB,275,,been
-292,,xcomp,292,gain,NRCw_Em_anticipation,False,,VERB,275,292.0,gained
+292,,xcomp,292,gain,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,275,292.0,gained
 293,,prep,293,on,,False,,ADP,275,,on
 294,,pobj,294,a,,False,,NOUN,275,,a memorable raw afternoon towards evening
 295,,punct,295,.,,False,,PUNCT,275,,.
@@ -306,16 +306,16 @@
 298,,det,298,a,,False,,DET,296,,a
 299,me,pobj,299,time,NRCw_Em_anticipation,False,,NOUN,296,301.0,time
 300,,nsubj,300,-PRON-,,False,,PRON,296,301.0,I
-301,me,ROOT,301,find,NRCw_Em_joy,False,,VERB,296,301.0,found
+301,me,ROOT,301,find,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,296,301.0,found
 302,,prt,302,out,,False,,PART,296,,out for
 303,,amod,303,certain,,False,,ADJ,296,,certain
 304,,mark,304,that,,False,,ADP,296,,that
 305,,det,305,this,,False,,DET,296,,this
-306,,amod,306,bleak,NRCw_Em_negative,False,,ADJ,296,307.0,bleak
+306,,amod,306,bleak,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,296,307.0,bleak
 307,,nsubj,307,place,,False,,NOUN,296,,place
 308,,csubj,308,overgrow,NRCw_Em_negative,False,,VERB,296,308.0,overgrown
 309,,prep,309,with,,False,,ADP,296,,with
-310,,pobj,310,nettle,NRCw_Em_anger,False,,NOUN,296,308.0,nettles
+310,,pobj,310,nettle,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger",False,,NOUN,296,308.0,nettles
 311,,ccomp,311,be,,False,,VERB,296,,was
 312,,det,312,the,,False,,DET,296,,the
 313,,attr,313,churchyard,,False,,NOUN,296,,churchyard
@@ -324,7 +324,7 @@
 316,,mark,316,that,,False,,ADP,296,,that
 317,,nsubj,317,Philip,,False,,PROPN,296,,Philip Pirrip
 318,,punct,318,",",,False,,PUNCT,296,,","
-319,,appos,319,late,NRCw_Em_negative,False,,ADV,296,317.0,late
+319,,appos,319,late,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADV,296,317.0,late
 320,,prep,320,of,,False,,ADP,296,,of
 321,,det,321,this,,False,,DET,296,,this
 322,,pobj,322,parish,NRCw_Em_trust,False,,NOUN,296,317.0,parish
@@ -339,7 +339,7 @@
 331,,conj,331,be,,False,,VERB,296,,were
 332,,acomp,332,dead,,False,,ADJ,296,,dead
 333,,cc,333,and,,False,,CCONJ,296,,and
-334,,conj,334,bury,NRCw_Em_fear,False,,VERB,296,332.0,buried
+334,,conj,334,bury,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,VERB,296,332.0,buried
 335,,punct,335,;,,False,,PUNCT,296,,;
 336,,cc,336,and,,False,,CCONJ,296,,and
 337,,mark,337,that,,False,,ADP,296,,that
@@ -354,8 +354,8 @@
 346,,cc,346,and,,False,,CCONJ,296,,and
 347,,conj,347,Roger,,False,,PROPN,296,,Roger
 348,,punct,348,",",,False,,PUNCT,296,,","
-349,,amod,349,infant,NRCw_Em_anticipation,False,,NOUN,296,338.0,infant
-350,,appos,350,child,NRCw_Em_anticipation,False,,NOUN,296,338.0,children
+349,,amod,349,infant,"NRCw_Em_fear,NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,296,338.0,infant
+350,,appos,350,child,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,296,338.0,children
 351,,prep,351,of,,False,,ADP,296,,of
 352,,det,352,the,,False,,DET,296,,the
 353,,pobj,353,aforesaid,,False,,NOUN,296,,aforesaid
@@ -364,14 +364,14 @@
 356,,advmod,356,also,,False,,ADV,296,,also
 357,,acomp,357,dead,,False,,ADJ,296,,dead
 358,,cc,358,and,,False,,CCONJ,296,,and
-359,,conj,359,bury,NRCw_Em_fear,False,,VERB,296,357.0,buried
+359,,conj,359,bury,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,VERB,296,357.0,buried
 360,,punct,360,;,,False,,PUNCT,296,,;
 361,,cc,361,and,,False,,CCONJ,296,,and
 362,,mark,362,that,,False,,ADP,296,,that
 363,,det,363,the,,False,,DET,296,,the
 364,,amod,364,dark,NRCw_Em_sadness,False,,ADJ,296,366.0,dark
 365,,amod,365,flat,,False,,ADJ,296,,flat
-366,,nsubj,366,wilderness,NRCw_Em_anticipation,False,,NOUN,296,366.0,wilderness
+366,,nsubj,366,wilderness,"NRCw_Em_anticipation,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,296,366.0,wilderness
 367,,prep,367,beyond,,False,,ADP,296,,beyond
 368,,det,368,the,,False,,DET,296,,the
 369,,pobj,369,churchyard,,False,,NOUN,296,,churchyard
@@ -410,7 +410,7 @@
 402,,mark,402,that,,False,,ADP,296,,that
 403,,det,403,the,,False,,DET,296,,the
 404,,amod,404,distant,,False,,ADJ,296,,distant
-405,,nsubj,405,savage,NRCw_Em_anger,False,,NOUN,296,405.0,savage lair
+405,,nsubj,405,savage,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear",False,,NOUN,296,405.0,savage lair
 406,,prep,406,from,,False,,ADP,296,,from
 407,,pobj,407,which,,False,,DET,296,,which
 408,,det,408,the,,False,,DET,296,,the
@@ -427,16 +427,16 @@
 419,,amod,419,small,NRCw_Em_negative,False,,ADJ,296,420.0,small
 420,,nsubj,420,bundle,,False,,NOUN,296,,bundle
 421,,prep,421,of,,False,,ADP,296,,of
-422,,pobj,422,shiver,NRCw_Em_anger,False,,NOUN,296,420.0,shivers
-423,,acl,423,grow,NRCw_Em_anticipation,False,,VERB,296,420.0,growing
-424,,acomp,424,afraid,NRCw_Em_fear,False,,ADJ,296,424.0,afraid
+422,,pobj,422,shiver,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_anticipation,NRCw_Em_negative",False,,NOUN,296,420.0,shivers
+423,,acl,423,grow,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,296,420.0,growing
+424,,acomp,424,afraid,"NRCw_Em_negative,NRCw_Em_fear",False,,ADJ,296,424.0,afraid
 425,,prep,425,of,,False,,ADP,296,,of
 426,,pobj,426,-PRON-,,False,,PRON,296,,it
 427,,appos,427,all,,False,,DET,296,,all
 428,,cc,428,and,,False,,CCONJ,296,,and
 429,,conj,429,begin,,False,,VERB,296,,beginning
 430,,aux,430,to,,False,,PART,296,,to
-431,,xcomp,431,cry,NRCw_Em_negative,False,,VERB,296,431.0,cry
+431,,xcomp,431,cry,"NRCw_Em_negative,NRCw_Em_sadness",False,,VERB,296,431.0,cry
 432,,punct,432,",",,False,,PUNCT,296,,","
 433,,conj,433,be,,False,,VERB,296,,was
 434,,attr,434,Pip,,False,,PROPN,296,,Pip
@@ -449,9 +449,9 @@
 439,,dobj,439,-PRON-,,False,,NOUN,437,,your noise
 440,,punct,440,!,,False,,PUNCT,437,,!
 441,,punct,441,"""",,False,,PUNCT,437,,""""
-442,,conj,442,cry,NRCw_Em_negative,False,,VERB,437,438.0,cried
+442,,conj,442,cry,"NRCw_Em_negative,NRCw_Em_sadness",False,,VERB,437,438.0,cried
 443,,det,443,a,,False,,DET,437,,a
-444,,amod,444,terrible,NRCw_Em_anger,False,,ADJ,437,438.0,terrible
+444,,amod,444,terrible,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_negative,NRCw_Em_disgust",False,,ADJ,437,438.0,terrible
 445,,dobj,445,voice,,False,,NOUN,437,,voice
 446,,punct,446,",",,False,,PUNCT,437,,","
 447,,mark,447,as,,False,,ADP,437,,as
@@ -461,13 +461,13 @@
 451,,prt,451,up,,False,,PART,437,,up from
 452,,prep,452,among,,False,,ADP,437,,among
 453,,det,453,the,,False,,DET,437,,the
-454,,pobj,454,graf,,False,,NOUN,437,,graves
+454,,pobj,454,grave,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,437,451.0,graves
 455,,prep,455,at,,False,,ADP,437,,at
 456,,det,456,the,,False,,DET,437,,the
 457,,pobj,457,side,,False,,NOUN,437,,side
 458,,prep,458,of,,False,,ADP,437,,of
 459,,det,459,the,,False,,DET,437,,the
-460,,pobj,460,church,NRCw_Em_anticipation,False,,NOUN,437,438.0,church porch
+460,,pobj,460,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,437,438.0,church porch
 461,,punct,461,.,,False,,PUNCT,437,,.
 462,,ROOT,462,"""",,False,,PUNCT,462,,""""
 463,,ROOT,463,keep,,False,,VERB,463,,Keep
@@ -475,7 +475,7 @@
 465,,punct,465,",",,False,,PUNCT,463,,","
 466,,dobj,466,-PRON-,,False,,PRON,463,463.0,you
 467,,amod,467,little,,False,,ADJ,463,,little
-468,,oprd,468,devil,NRCw_Em_anger,False,,NOUN,463,468.0,devil
+468,,oprd,468,devil,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_disgust",False,,NOUN,463,468.0,devil
 469,,punct,469,",",,False,,PUNCT,463,,","
 470,,cc,470,or,,False,,CCONJ,463,,or
 471,,nsubj,471,-PRON-,,False,,PRON,463,473.0,I
@@ -488,18 +488,18 @@
 ",,False,,SPACE,476,,"
 "
 478,,det,478,a,,False,,DET,476,,A
-479,,amod,479,fearful,NRCw_Em_fear,False,,ADJ,476,480.0,fearful
+479,,amod,479,fearful,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,ADJ,476,480.0,fearful
 480,,ROOT,480,man,,False,,NOUN,476,,man
 481,,punct,481,",",,False,,PUNCT,476,,","
 482,,advmod,482,all,,False,,DET,476,,all
 483,,prep,483,in,,False,,ADP,476,,in
 484,,amod,484,coarse,,False,,ADJ,476,,coarse
-485,,pobj,485,gray,NRCw_Em_disgust,False,,ADJ,476,480.0,gray
+485,,pobj,485,gray,"NRCw_Em_disgust,NRCw_Em_sadness",False,,ADJ,476,480.0,gray
 486,,punct,486,",",,False,,PUNCT,476,,","
 487,,prep,487,with,,False,,ADP,476,,with
 488,,det,488,a,,False,,DET,476,,a
 489,,amod,489,great,,False,,ADJ,476,,great
-490,,pobj,490,iron,NRCw_Em_positive,False,,NOUN,476,480.0,iron
+490,,pobj,490,iron,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,476,480.0,iron
 491,,prep,491,on,,False,,ADP,476,,on
 492,,pobj,492,-PRON-,,False,,NOUN,476,,his leg
 493,,punct,493,.,,False,,PUNCT,476,,.
@@ -511,7 +511,7 @@
 499,,punct,499,",",,False,,PUNCT,494,,","
 500,,cc,500,and,,False,,CCONJ,494,,and
 501,,conj,501,with,,False,,ADP,494,,with
-502,,amod,502,broken,NRCw_Em_anger,False,,ADJ,494,495.0,broken
+502,,amod,502,broken,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness",False,,ADJ,494,495.0,broken
 503,,pobj,503,shoe,,False,,NOUN,494,,shoes
 504,,punct,504,",",,False,,PUNCT,494,,","
 505,,cc,505,and,,False,,CCONJ,494,,and
@@ -533,14 +533,14 @@
 521,,pobj,521,water,,False,,NOUN,514,,water
 522,,punct,522,",",,False,,PUNCT,514,,","
 523,,cc,523,and,,False,,CCONJ,514,,and
-524,,conj,524,smother,NRCw_Em_anger,False,,VERB,514,519.0,smothered
+524,,conj,524,smother,"NRCw_Em_negative,NRCw_Em_anger",False,,VERB,514,519.0,smothered
 525,,prep,525,in,,False,,ADP,514,,in
 526,,pobj,526,mud,NRCw_Em_negative,False,,NOUN,514,519.0,mud
 527,,punct,527,",",,False,,PUNCT,514,,","
 528,,cc,528,and,,False,,CCONJ,514,,and
-529,,conj,529,lame,,False,,VERB,514,,lamed
+529,,conj,529,lam,,False,,VERB,514,,lamed
 530,,agent,530,by,,False,,ADP,514,,by
-531,,pobj,531,stone,NRCw_Em_anger,False,,NOUN,514,530.0,stones
+531,,pobj,531,stone,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,514,530.0,stones
 532,,punct,532,",",,False,,PUNCT,514,,","
 533,,cc,533,and,,False,,CCONJ,514,,and
 534,,conj,534,cut,,False,,VERB,514,,cut
@@ -548,9 +548,9 @@
 536,,pobj,536,flint,,False,,NOUN,514,,flints
 537,,punct,537,",",,False,,PUNCT,514,,","
 538,,cc,538,and,,False,,CCONJ,514,,and
-539,,conj,539,sting,NRCw_Em_anger,False,,VERB,514,519.0,stung
+539,,conj,539,sting,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear",False,,VERB,514,519.0,stung
 540,,agent,540,by,,False,,ADP,514,,by
-541,,pobj,541,nettle,NRCw_Em_anger,False,,NOUN,514,540.0,nettles
+541,,pobj,541,nettle,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger",False,,NOUN,514,540.0,nettles
 542,,punct,542,",",,False,,PUNCT,514,,","
 543,,cc,543,and,,False,,CCONJ,514,,and
 544,,conj,544,tear,NRCw_Em_negative,False,,VERB,514,519.0,torn
@@ -561,13 +561,13 @@
 549,,conj,549,limp,NRCw_Em_negative,False,,VERB,514,519.0,limped
 550,,punct,550,",",,False,,PUNCT,514,,","
 551,,cc,551,and,,False,,CCONJ,514,,and
-552,,conj,552,shiver,NRCw_Em_anger,False,,VERB,514,519.0,shivered
+552,,conj,552,shiver,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_anticipation,NRCw_Em_negative",False,,VERB,514,519.0,shivered
 553,,punct,553,",",,False,,PUNCT,514,,","
 554,,cc,554,and,,False,,CCONJ,514,,and
-555,,conj,555,glare,NRCw_Em_anger,False,,VERB,514,519.0,glared
+555,,conj,555,glare,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear",False,,VERB,514,519.0,glared
 556,,punct,556,",",,False,,PUNCT,514,,","
 557,,cc,557,and,,False,,CCONJ,514,,and
-558,,conj,558,growl,NRCw_Em_anger,False,,VERB,514,519.0,growled
+558,,conj,558,growl,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear",False,,VERB,514,519.0,growled
 559,,punct,559,;,,False,,PUNCT,514,,;
 560,,cc,560,and,,False,,CCONJ,514,,and
 561,,nsubj,561,whose,,False,,NOUN,514,,whose teeth
@@ -576,7 +576,7 @@
 564,,pobj,564,-PRON-,,False,,NOUN,514,,his head
 565,,mark,565,as,,False,,ADP,514,,as
 566,,nsubj,566,-PRON-,,False,,PRON,514,,he
-567,,advcl,567,seize,NRCw_Em_fear,False,me,VERB,514,519.0,seized
+567,,advcl,567,seize,"NRCw_Em_negative,NRCw_Em_fear",False,me,VERB,514,519.0,seized
 568,,dobj,568,-PRON-,,False,,PRON,514,567.0,me
 569,,prep,569,by,,False,,ADP,514,,by
 570,,det,570,the,,False,,DET,514,,the
@@ -593,22 +593,22 @@
 579,,advcl,579,cut,,True,,VERB,577,,cut
 580,,dobj,580,-PRON-,,False,,NOUN,577,,my throat
 581,,punct,581,",",,False,,PUNCT,577,,","
-582,,npadvmod,582,sir,NRCw_Em_positive,False,,NOUN,577,582.0,sir
+582,,npadvmod,582,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,577,582.0,sir
 583,,punct,583,",",,False,,PUNCT,577,,","
 584,,punct,584,"""",,False,,PUNCT,577,,""""
 585,,nsubj,585,-PRON-,,False,,PRON,577,586.0,I
 586,sir,ROOT,586,plead,,False,,VERB,577,,pleaded
 587,,prep,587,in,,False,,ADP,577,,in
-588,sir,pobj,588,terror,NRCw_Em_fear,False,,NOUN,577,586.0,terror
+588,sir,pobj,588,terror,"NRCw_Em_negative,NRCw_Em_fear",False,,NOUN,577,586.0,terror
 589,,punct,589,.,,False,,PUNCT,577,,.
 590,,ROOT,590,"""",,False,,PUNCT,590,,""""
-591,,intj,591,Pray,NRCw_Em_anticipation,False,,PROPN,591,591.0,Pray
+591,,intj,591,Pray,"NRCw_Em_fear,NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_trust,NRCw_Em_positive",False,,PROPN,591,591.0,Pray
 592,,aux,592,do,,False,,VERB,591,,do
 593,,neg,593,not,,False,,ADV,591,,n't
 594,,ROOT,594,do,,True,,VERB,591,,do
 595,,dobj,595,-PRON-,,False,,PRON,591,594.0,it
 596,,punct,596,",",,False,,PUNCT,591,,","
-597,,npadvmod,597,sir,NRCw_Em_positive,False,,NOUN,591,597.0,sir
+597,,npadvmod,597,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,591,597.0,sir
 598,,punct,598,.,,False,,PUNCT,591,,.
 599,,punct,599,"""",,False,,PUNCT,591,,""""
 600,,,600,"
@@ -634,7 +634,7 @@
 616,,punct,616,"""",,False,,PUNCT,614,,""""
 617,,ROOT,617,Pip,,False,,PROPN,614,,Pip
 618,,punct,618,",",,False,,PUNCT,614,,","
-619,,npadvmod,619,sir,NRCw_Em_positive,False,,NOUN,614,619.0,sir
+619,,npadvmod,619,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,614,619.0,sir
 620,,punct,620,.,,False,,PUNCT,614,,.
 621,,punct,621,"""",,False,,PUNCT,614,,""""
 622,,,622,"
@@ -649,7 +649,7 @@
 629,,det,629,the,,False,,DET,623,,the
 630,,nsubj,630,man,,False,,NOUN,623,,man
 631,,punct,631,",",,False,,PUNCT,623,,","
-632,,acl,632,stare,NRCw_Em_negative,False,me,VERB,623,630.0,staring
+632,,acl,632,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,me,VERB,623,630.0,staring
 633,,prep,633,at,,False,,ADP,623,,at
 634,,pobj,634,-PRON-,,False,,PRON,623,632.0,me
 635,,punct,635,.,,False,,PUNCT,623,,.
@@ -667,7 +667,7 @@
 645,,punct,645,.,,False,,PUNCT,641,,.
 646,,ROOT,646,pip,,False,,ADV,646,,Pip
 647,,punct,647,",",,False,,PUNCT,646,,","
-648,,npadvmod,648,sir,NRCw_Em_positive,False,,NOUN,646,648.0,sir
+648,,npadvmod,648,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,646,648.0,sir
 649,,punct,649,.,,False,,PUNCT,646,,.
 650,,ROOT,650,"""",,False,,PUNCT,650,,""""
 651,,,651,"
@@ -699,7 +699,7 @@
 673,,prep,673,to,,False,,ADP,669,,to
 674,,advmod,674,where,,False,,ADV,669,,where
 675,,nsubj,675,-PRON-,,False,,NOUN,669,,our village
-676,,pcomp,676,lie,NRCw_Em_anger,False,,VERB,669,676.0,lay
+676,,pcomp,676,lie,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger,NRCw_Em_sadness",False,,VERB,669,676.0,lay
 677,,punct,677,",",,False,,PUNCT,669,,","
 678,,prep,678,on,,False,,ADP,669,,on
 679,,det,679,the,,False,,DET,669,,the
@@ -709,7 +709,7 @@
 683,,prep,683,among,,False,,ADP,669,,among
 684,,det,684,the,,False,,DET,669,,the
 685,,compound,685,ald,,False,,ADJ,669,,alder-
-686,,pobj,686,tree,NRCw_Em_anger,False,,NOUN,669,676.0,trees
+686,,pobj,686,tree,"NRCw_Em_anger,NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_trust,NRCw_Em_disgust,NRCw_Em_positive",False,,NOUN,669,676.0,trees
 687,,cc,687,and,,False,,CCONJ,669,,and
 688,,conj,688,pollard,,False,,NOUN,669,,pollards
 689,,punct,689,",",,False,,PUNCT,669,,","
@@ -718,7 +718,7 @@
 692,,nummod,692,more,,False,,ADJ,669,,more
 693,,prep,693,from,,False,,ADP,669,,from
 694,,det,694,the,,False,,DET,669,,the
-695,,pobj,695,church,NRCw_Em_anticipation,False,,NOUN,669,690.0,church
+695,,pobj,695,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,669,690.0,church
 696,,punct,696,.,,False,,PUNCT,669,,.
 697,,,697,"
 ",,False,,SPACE,669,,"
@@ -756,7 +756,7 @@
 728,,punct,728,.,,False,,PUNCT,718,,.
 729,,advmod,729,when,,False,,ADV,729,,When
 730,,det,730,the,,False,,DET,729,,the
-731,,nsubj,731,church,NRCw_Em_anticipation,False,,NOUN,729,731.0,church
+731,,nsubj,731,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,729,731.0,church
 732,church,advcl,732,come,,False,,VERB,729,,came
 733,,prep,733,to,,False,,ADP,729,,to
 734,,pobj,734,-PRON-,,False,,PRON,729,732.0,itself
@@ -789,7 +789,7 @@
 761,,punct,761,",",,False,,PUNCT,729,,","
 762,,advmod,762,when,,False,,ADV,729,,when
 763,,det,763,the,,False,,DET,729,,the
-764,,nsubj,764,church,NRCw_Em_anticipation,False,,NOUN,729,764.0,church
+764,,nsubj,764,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,729,764.0,church
 765,church,advcl,765,come,,False,,VERB,729,,came
 766,,prep,766,to,,False,,ADP,729,,to
 767,,pobj,767,-PRON-,,False,,PRON,729,765.0,itself
@@ -805,7 +805,7 @@
 777,,amod,777,high,,False,,ADJ,729,,high
 778,,pobj,778,tombstone,,False,,NOUN,729,,tombstone
 779,,punct,779,",",,False,,PUNCT,729,,","
-780,,advcl,780,tremble,NRCw_Em_fear,False,,VERB,729,774.0,trembling
+780,,advcl,780,tremble,"NRCw_Em_negative,NRCw_Em_fear",False,,VERB,729,774.0,trembling
 781,,mark,781,while,,False,,ADP,729,,while
 782,,nsubj,782,-PRON-,,False,,PRON,729,783.0,he
 783,sir,advcl,783,eat,NRCw_Em_positive,False,,VERB,729,783.0,ate
@@ -818,7 +818,7 @@
 "
 789,,punct,789,"""",,False,,PUNCT,789,,""""
 790,,nmod,790,-PRON-,,False,,PRON,789,,You
-791,,amod,791,young,NRCw_Em_anticipation,False,,ADJ,789,792.0,young
+791,,amod,791,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,789,792.0,young
 792,,ccomp,792,dog,,False,,NOUN,789,,dog
 793,,punct,793,",",,False,,PUNCT,789,,","
 794,,punct,794,"""",,False,,PUNCT,789,,""""
@@ -826,12 +826,12 @@
 796,,det,796,the,,False,,DET,789,,the
 797,,nsubj,797,man,,False,,NOUN,789,795.0,man
 798,,punct,798,",",,False,,PUNCT,789,,","
-799,sir,advcl,799,lick,NRCw_Em_disgust,False,,VERB,789,795.0,licking
+799,sir,advcl,799,lick,"NRCw_Em_negative,NRCw_Em_disgust",False,,VERB,789,795.0,licking
 800,,dobj,800,-PRON-,,False,,NOUN,789,,his lips
 801,,punct,801,",",,False,,PUNCT,789,,","
 802,,punct,802,"""",,False,,PUNCT,789,,""""
 803,,det,803,what,,False,,PRON,789,,what
-804,,amod,804,fat,NRCw_Em_disgust,False,,NOUN,789,805.0,fat
+804,,amod,804,fat,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_sadness",False,,NOUN,789,805.0,fat
 805,,ccomp,805,cheek,,False,,VERB,789,,cheeks
 806,,nsubj,806,-PRON-,,False,,PRON,789,809.0,you
 807,,intj,807,ha,,False,,INTJ,789,,ha
@@ -846,7 +846,7 @@
 814,I,ROOT,814,believe,,False,,VERB,813,,believe
 815,,nsubj,815,-PRON-,,False,,PRON,813,,they
 816,,ccomp,816,be,,False,,VERB,813,,were
-817,,acomp,817,fat,NRCw_Em_disgust,False,,ADJ,813,817.0,fat
+817,,acomp,817,fat,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_sadness",False,,ADJ,813,817.0,fat
 818,,punct,818,",",,False,,PUNCT,813,,","
 819,,mark,819,though,,False,,ADP,813,,though
 820,,nsubj,820,-PRON-,,False,,PRON,813,821.0,I
@@ -882,7 +882,7 @@
 848,,punct,848,",",,False,,PUNCT,835,,","
 849,,prep,849,with,,False,,ADP,835,,with
 850,,det,850,a,,False,,DET,835,,a
-851,,amod,851,threatening,NRCw_Em_anger,False,,ADJ,835,847.0,threatening
+851,,amod,851,threatening,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger,NRCw_Em_fear",False,,ADJ,835,847.0,threatening
 852,,pobj,852,shake,,False,,NOUN,835,,shake
 853,,prep,853,of,,False,,ADP,835,,of
 854,,pobj,854,-PRON-,,False,,NOUN,835,,his head
@@ -937,7 +937,7 @@
 901,,ROOT,901,keep,,False,,VERB,868,,keep
 902,,dobj,902,-PRON-,,False,,PRON,868,901.0,myself
 903,,prep,903,from,,False,,ADP,868,,from
-904,,pcomp,904,cry,NRCw_Em_negative,False,,VERB,868,904.0,crying
+904,,pcomp,904,cry,"NRCw_Em_negative,NRCw_Em_sadness",False,,VERB,868,904.0,crying
 905,,punct,905,.,,False,,PUNCT,868,,.
 906,,,906,"
 ",,False,,SPACE,868,,"
@@ -964,7 +964,7 @@
 924,,ROOT,924,"""",,False,,PUNCT,924,,""""
 925,,advmod,925,there,,False,,ADV,925,,There
 926,,punct,926,",",,False,,PUNCT,925,,","
-927,,npadvmod,927,sir,NRCw_Em_positive,False,,NOUN,925,927.0,sir
+927,,npadvmod,927,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,925,927.0,sir
 928,,punct,928,!,,False,,PUNCT,925,,!
 929,,punct,929,"""",,False,,PUNCT,925,,""""
 930,,ROOT,930,say,,False,,VERB,925,,said
@@ -991,12 +991,12 @@
 948,,ROOT,948,"""",,False,,PUNCT,948,,""""
 949,,advmod,949,there,,False,,ADV,949,,There
 950,,punct,950,",",,False,,PUNCT,949,,","
-951,,npadvmod,951,sir,NRCw_Em_positive,False,,NOUN,949,951.0,sir
+951,,npadvmod,951,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,949,951.0,sir
 952,,punct,952,!,,False,,PUNCT,949,,!
 953,,punct,953,"""",,False,,PUNCT,949,,""""
 954,,nsubj,954,-PRON-,,False,,PRON,949,956.0,I
 955,,advmod,955,timidly,,False,,ADV,949,,timidly
-956,I,ROOT,956,explain,NRCw_Em_positive,False,,VERB,949,956.0,explained
+956,I,ROOT,956,explain,"NRCw_Em_trust,NRCw_Em_positive",False,,VERB,949,956.0,explained
 957,,punct,957,.,,False,,PUNCT,949,,.
 958,,ROOT,958,"""",,False,,PUNCT,958,,""""
 959,,advmod,959,also,,False,,ADV,959,,Also
@@ -1035,7 +1035,7 @@
 988,,ROOT,988,"""",,False,,PUNCT,988,,""""
 989,,intj,989,yes,,False,,INTJ,989,,Yes
 990,,punct,990,",",,False,,PUNCT,989,,","
-991,,npadvmod,991,sir,NRCw_Em_positive,False,,NOUN,989,991.0,sir
+991,,npadvmod,991,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,989,991.0,sir
 992,,punct,992,",",,False,,PUNCT,989,,","
 993,,punct,993,"""",,False,,PUNCT,989,,""""
 994,,ROOT,994,say,,False,,VERB,989,,said
@@ -1045,7 +1045,7 @@
 998,,ROOT,998,-PRON-,,False,,PRON,997,998.0,him
 999,,advmod,999,too,,False,,ADV,997,,too
 1000,,punct,1000,;,,False,,PUNCT,997,,;
-1001,,conj,1001,late,NRCw_Em_negative,False,,ADV,997,998.0,late
+1001,,conj,1001,late,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADV,997,998.0,late
 1002,,prep,1002,of,,False,,ADP,997,,of
 1003,,det,1003,this,,False,,DET,997,,this
 1004,,pobj,1004,parish,NRCw_Em_trust,False,,NOUN,997,998.0,parish
@@ -1059,7 +1059,7 @@
 1010,,punct,1010,!,,False,,PUNCT,1008,,!
 1011,,punct,1011,"""",,False,,PUNCT,1008,,""""
 1012,,nsubj,1012,-PRON-,,False,,PRON,1012,1013.0,he
-1013,sir,ROOT,1013,mutter,NRCw_Em_anger,False,,VERB,1012,1013.0,muttered
+1013,sir,ROOT,1013,mutter,"NRCw_Em_negative,NRCw_Em_anger",False,,VERB,1012,1013.0,muttered
 1014,,advmod,1014,then,,False,,ADV,1012,,then
 1015,,punct,1015,",",,False,,PUNCT,1012,,","
 1016,,advcl,1016,consider,,False,,VERB,1012,,considering
@@ -1093,7 +1093,7 @@
 1042,,punct,1042,"""",,False,,PUNCT,1040,,""""
 1043,,ROOT,1043,-PRON-,,False,,NOUN,1040,,My sister
 1044,,punct,1044,",",,False,,PUNCT,1040,,","
-1045,,appos,1045,sir,NRCw_Em_positive,False,,NOUN,1040,1043.0,sir
+1045,,appos,1045,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1040,1043.0,sir
 1046,,punct,1046,",",,False,,PUNCT,1040,,","
 1047,,appos,1047,Mrs,,False,,PROPN,1040,,Mrs
 1048,,punct,1048,.,,False,,PUNCT,1040,,.
@@ -1106,7 +1106,7 @@
 1055,,det,1055,the,,False,,DET,1049,,the
 1056,,appos,1056,blacksmith,,False,,NOUN,1049,,blacksmith
 1057,,punct,1057,",",,False,,PUNCT,1049,,","
-1058,,appos,1058,sir,NRCw_Em_positive,False,,NOUN,1049,1049.0,sir
+1058,,appos,1058,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1049,1049.0,sir
 1059,,punct,1059,.,,False,,PUNCT,1049,,.
 1060,,punct,1060,"""",,False,,PUNCT,1049,,""""
 1061,,,1061,"
@@ -1168,7 +1168,7 @@
 1113,,nsubj,1113,-PRON-,,False,,NOUN,1077,,his eyes
 1114,,conj,1114,look,,False,,VERB,1077,,looked
 1115,,advmod,1115,most,,False,,ADV,1077,,most
-1116,,advmod,1116,powerfully,NRCw_Em_fear,False,,ADV,1077,1116.0,powerfully
+1116,,advmod,1116,powerfully,"NRCw_Em_fear,NRCw_Em_positive",False,,ADV,1077,1116.0,powerfully
 1117,,advmod,1117,down,,False,,ADV,1077,,down
 1118,,prep,1118,into,,False,,ADP,1077,,into
 1119,,pobj,1119,mine,,False,,NOUN,1077,,mine
@@ -1221,7 +1221,7 @@
 1162,,ROOT,1162,"""",,False,,PUNCT,1162,,""""
 1163,,ROOT,1163,yes,,False,,INTJ,1163,,Yes
 1164,,punct,1164,",",,False,,PUNCT,1163,,","
-1165,,npadvmod,1165,sir,NRCw_Em_positive,False,,NOUN,1163,1165.0,sir
+1165,,npadvmod,1165,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1163,1165.0,sir
 1166,,punct,1166,.,,False,,PUNCT,1163,,.
 1167,,punct,1167,"""",,False,,PUNCT,1163,,""""
 1168,,,1168,"
@@ -1242,7 +1242,7 @@
 1179,,ROOT,1179,"""",,False,,PUNCT,1179,,""""
 1180,,ROOT,1180,yes,,False,,INTJ,1180,,Yes
 1181,,punct,1181,",",,False,,PUNCT,1180,,","
-1182,,npadvmod,1182,sir,NRCw_Em_positive,False,,NOUN,1180,1182.0,sir
+1182,,npadvmod,1182,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1180,1182.0,sir
 1183,,punct,1183,.,,False,,PUNCT,1180,,.
 1184,,punct,1184,"""",,False,,PUNCT,1180,,""""
 1185,,,1185,"
@@ -1268,9 +1268,9 @@
 1203,,amod,1203,great,NRCw_Em_positive,False,,ADJ,1186,1195.0,greater
 1204,,dobj,1204,sense,NRCw_Em_positive,False,,NOUN,1186,1195.0,sense
 1205,,prep,1205,of,,False,,ADP,1186,,of
-1206,,pobj,1206,helplessness,NRCw_Em_fear,False,,NOUN,1186,1195.0,helplessness
+1206,,pobj,1206,helplessness,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,1186,1195.0,helplessness
 1207,,cc,1207,and,,False,,CCONJ,1186,,and
-1208,,conj,1208,danger,NRCw_Em_fear,False,,NOUN,1186,1195.0,danger
+1208,,conj,1208,danger,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,1186,1195.0,danger
 1209,,punct,1209,.,,False,,PUNCT,1186,,.
 1210,,,1210,"
 ",,False,,SPACE,1186,,"
@@ -1335,8 +1335,8 @@
 "
 1267,,nsubj,1267,-PRON-,,False,,PRON,1267,1268.0,I
 1268,sir,ROOT,1268,be,,False,,VERB,1267,,was
-1269,,advmod,1269,dreadfully,NRCw_Em_disgust,False,,ADV,1267,1269.0,dreadfully
-1270,,acomp,1270,frightened,NRCw_Em_fear,False,,ADJ,1267,1270.0,frightened
+1269,,advmod,1269,dreadfully,"NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_surprise,NRCw_Em_negative,NRCw_Em_disgust",False,,ADV,1267,1269.0,dreadfully
+1270,,acomp,1270,frightened,"NRCw_Em_surprise,NRCw_Em_negative,NRCw_Em_fear",False,,ADJ,1267,1270.0,frightened
 1271,,punct,1271,",",,False,,PUNCT,1267,,","
 1272,,cc,1272,and,,False,,CCONJ,1267,,and
 1273,,advmod,1273,so,,False,,ADV,1267,,so
@@ -1363,16 +1363,16 @@
 1294,,xcomp,1294,let,,False,,VERB,1267,,let
 1295,,nsubj,1295,-PRON-,,False,,PRON,1267,1296.0,me
 1296,sir,ccomp,1296,keep,,False,,VERB,1267,,keep
-1297,,oprd,1297,upright,NRCw_Em_positive,False,,ADJ,1267,1297.0,upright
+1297,,oprd,1297,upright,"NRCw_Em_trust,NRCw_Em_positive",False,,ADJ,1267,1297.0,upright
 1298,,punct,1298,",",,False,,PUNCT,1267,,","
-1299,,npadvmod,1299,sir,NRCw_Em_positive,False,,NOUN,1267,1299.0,sir
+1299,,npadvmod,1299,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1267,1299.0,sir
 1300,,punct,1300,",",,False,,PUNCT,1267,,","
 1301,,advmod,1301,perhaps,,False,,ADV,1267,,perhaps
 1302,,nsubj,1302,-PRON-,,False,,PRON,1267,1305.0,I
 1303,,aux,1303,should,,False,,AUX,1267,,should
 1304,,neg,1304,not,,False,,ADV,1267,,n't
 1305,sir,ccomp,1305,be,,True,,VERB,1267,,be
-1306,,acomp,1306,sick,NRCw_Em_disgust,False,,ADJ,1267,1306.0,sick
+1306,,acomp,1306,sick,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_sadness",False,,ADJ,1267,1306.0,sick
 1307,,punct,1307,",",,False,,PUNCT,1267,,","
 1308,,cc,1308,and,,False,,CCONJ,1267,,and
 1309,,advmod,1309,perhaps,,False,,ADV,1267,,perhaps
@@ -1398,8 +1398,8 @@
 1327,,mark,1327,so,,False,,ADP,1317,,so
 1328,,mark,1328,that,,False,,ADP,1317,,that
 1329,,det,1329,the,,False,,DET,1317,,the
-1330,,nsubj,1330,church,NRCw_Em_anticipation,False,,NOUN,1317,1330.0,church
-1331,sir,advcl,1331,jump,NRCw_Em_joy,False,,VERB,1317,1318.0,jumped
+1330,,nsubj,1330,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,1317,1330.0,church
+1331,sir,advcl,1331,jump,"NRCw_Em_joy,NRCw_Em_positive",False,,VERB,1317,1318.0,jumped
 1332,,prep,1332,over,,False,,ADP,1317,,over
 1333,,poss,1333,-PRON-,,False,,DET,1317,,its own
 1334,,pobj,1334,weathercock,,False,,NOUN,1317,,weathercock
@@ -1415,20 +1415,20 @@
 1344,,punct,1344,",",,False,,PUNCT,1336,,","
 1345,,prep,1345,in,,False,,ADP,1336,,in
 1346,,det,1346,an,,False,,DET,1336,,an
-1347,sir,amod,1347,upright,NRCw_Em_positive,False,,ADJ,1336,1339.0,upright
+1347,sir,amod,1347,upright,"NRCw_Em_trust,NRCw_Em_positive",False,,ADJ,1336,1339.0,upright
 1348,,pobj,1348,position,,False,,NOUN,1336,,position
 1349,,prep,1349,on,,False,,ADP,1336,,on
 1350,,det,1350,the,,False,,DET,1336,,the
-1351,sir,pobj,1351,top,NRCw_Em_anticipation,False,,NOUN,1336,1339.0,top
+1351,sir,pobj,1351,top,"NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1336,1339.0,top
 1352,,prep,1352,of,,False,,ADP,1336,,of
 1353,,det,1353,the,,False,,DET,1336,,the
-1354,sir,pobj,1354,stone,NRCw_Em_anger,False,,NOUN,1336,1351.0,stone
+1354,sir,pobj,1354,stone,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,1336,1351.0,stone
 1355,,punct,1355,",",,False,,PUNCT,1336,,","
 1356,,cc,1356,and,,False,,CCONJ,1336,,and
 1357,,conj,1357,go,,False,,VERB,1336,,went
 1358,,prt,1358,on,,False,,PART,1336,,on in
 1359,,det,1359,these,,False,,DET,1336,,these
-1360,,amod,1360,fearful,NRCw_Em_fear,False,,ADJ,1336,1358.0,fearful
+1360,,amod,1360,fearful,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,ADJ,1336,1358.0,fearful
 1361,,pobj,1361,term,,False,,NOUN,1336,1358.0,terms
 1362,,punct,1362,:,,False,,PUNCT,1336,,:
 1363,,,1363,"
@@ -1460,7 +1460,7 @@
 1387,,prep,1387,at,,False,,ADP,1380,,at
 1388,,det,1388,that,,False,,DET,1380,,that
 1389,,amod,1389,old,,False,,ADJ,1380,,old
-1390,You,pobj,1390,Battery,NRCw_Em_anger,False,,PROPN,1380,1381.0,Battery
+1390,You,pobj,1390,Battery,"NRCw_Em_negative,NRCw_Em_anger",False,,PROPN,1380,1381.0,Battery
 1391,,prep,1391,over,,False,,ADP,1380,,over
 1392,,pobj,1392,yonder,,False,,NOUN,1380,,yonder
 1393,,punct,1393,.,,False,,PUNCT,1380,,.
@@ -1471,13 +1471,13 @@
 1398,,cc,1398,and,,False,,CCONJ,1394,,and
 1399,,nsubj,1399,-PRON-,,False,,PRON,1394,1401.0,you
 1400,,neg,1400,never,,False,,ADV,1394,,never
-1401,You,conj,1401,dare,NRCw_Em_anticipation,True,you,VERB,1394,1401.0,dare
+1401,You,conj,1401,dare,"NRCw_Em_anticipation,NRCw_Em_trust",True,you,VERB,1394,1401.0,dare
 1402,,aux,1402,to,,False,,PART,1394,,to
 1403,,xcomp,1403,say,,False,,VERB,1394,,say
 1404,,det,1404,a,,False,,DET,1394,,a
-1405,,dobj,1405,word,NRCw_Em_positive,False,,NOUN,1394,1403.0,word
+1405,,dobj,1405,word,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1394,1403.0,word
 1406,,cc,1406,or,,False,,CCONJ,1394,,or
-1407,,conj,1407,dare,NRCw_Em_anticipation,False,,VERB,1394,1403.0,dare
+1407,,conj,1407,dare,"NRCw_Em_anticipation,NRCw_Em_trust",False,,VERB,1394,1403.0,dare
 1408,,aux,1408,to,,False,,PART,1394,,to
 1409,,xcomp,1409,make,,False,,VERB,1394,,make
 1410,,det,1410,a,,False,,DET,1394,,a
@@ -1554,7 +1554,7 @@
 1481,,expl,1481,there,,False,,ADV,1481,,There
 1482,,ROOT,1482,be,,False,,VERB,1481,,'s
 1483,,det,1483,a,,False,,DET,1481,,a
-1484,,amod,1484,young,NRCw_Em_anticipation,False,,ADJ,1481,1482.0,young
+1484,,amod,1484,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1481,1482.0,young
 1485,,attr,1485,man,,False,,NOUN,1481,1482.0,man
 1486,,acl,1486,hide,NRCw_Em_fear,False,me,VERB,1481,1482.0,hid
 1487,,prep,1487,with,,False,,ADP,1481,,with
@@ -1564,24 +1564,24 @@
 1491,,pobj,1491,comparison,,False,,NOUN,1481,,comparison
 1492,,prep,1492,with,,False,,ADP,1481,,with
 1493,,det,1493,which,,False,,DET,1481,,which
-1494,,amod,1494,young,NRCw_Em_anticipation,False,,ADJ,1481,1495.0,young
+1494,,amod,1494,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1481,1495.0,young
 1495,,pcomp,1495,man,,False,,NOUN,1481,,man
 1496,,nsubj,1496,-PRON-,,False,,PRON,1481,1497.0,I
 1497,sir,relcl,1497,be,,False,,VERB,1481,,am
 1498,,det,1498,a,,False,,DET,1481,,a
-1499,sir,attr,1499,Angel,NRCw_Em_anticipation,False,,PROPN,1481,1497.0,Angel
+1499,sir,attr,1499,Angel,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,PROPN,1481,1497.0,Angel
 1500,,punct,1500,.,,False,,PUNCT,1481,,.
 1501,,det,1501,that,,False,,DET,1501,,That
-1502,,amod,1502,young,NRCw_Em_anticipation,False,,ADJ,1501,1503.0,young
+1502,,amod,1502,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1501,1503.0,young
 1503,,nsubj,1503,man,,False,,NOUN,1501,1504.0,man
 1504,man,ROOT,1504,hear,,False,,VERB,1501,,hears
 1505,,det,1505,the,,False,,DET,1501,,the
-1506,man,dobj,1506,word,NRCw_Em_anger,False,,NOUN,1501,1504.0,words
+1506,man,dobj,1506,word,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1501,1504.0,words
 1507,,nsubj,1507,-PRON-,,False,,PRON,1501,1508.0,I
 1508,sir,relcl,1508,speak,,False,,VERB,1501,,speak
 1509,,punct,1509,.,,False,,PUNCT,1501,,.
 1510,,det,1510,that,,False,,DET,1510,,That
-1511,,amod,1511,young,NRCw_Em_anticipation,False,,ADJ,1510,1512.0,young
+1511,,amod,1511,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1510,1512.0,young
 1512,,nsubj,1512,man,,False,,NOUN,1510,1513.0,man
 1513,man,ROOT,1513,have,,False,,VERB,1510,,has
 1514,,det,1514,a,,False,,DET,1510,,a
@@ -1595,7 +1595,7 @@
 1522,,pcomp,1522,get,,False,,VERB,1510,,getting
 1523,,prep,1523,at,,False,,ADP,1510,,at
 1524,,det,1524,a,,False,,DET,1510,,a
-1525,,pobj,1525,boy,NRCw_Em_disgust,False,,NOUN,1510,1522.0,boy
+1525,,pobj,1525,boy,"NRCw_Em_negative,NRCw_Em_disgust",False,,NOUN,1510,1522.0,boy
 1526,,punct,1526,",",,False,,PUNCT,1510,,","
 1527,,cc,1527,and,,False,,CCONJ,1510,,and
 1528,,conj,1528,at,,False,,ADP,1510,,at
@@ -1611,19 +1611,19 @@
 1538,,pobj,1538,wain,,False,,NOUN,1535,,wain
 1539,,mark,1539,for,,False,,ADP,1535,,for
 1540,,det,1540,a,,False,,DET,1535,,a
-1541,,nsubj,1541,boy,NRCw_Em_disgust,False,,NOUN,1535,1541.0,boy
+1541,,nsubj,1541,boy,"NRCw_Em_negative,NRCw_Em_disgust",False,,NOUN,1535,1541.0,boy
 1542,,aux,1542,to,,False,,PART,1535,,to
 1543,boy,advcl,1543,attempt,NRCw_Em_anticipation,False,,VERB,1535,1543.0,attempt
 1544,,aux,1544,to,,False,,PART,1535,,to
-1545,,xcomp,1545,hide,NRCw_Em_fear,False,"man,himself",VERB,1535,1545.0,hide
+1545,,xcomp,1545,hide,NRCw_Em_fear,False,"himself,man",VERB,1535,1545.0,hide
 1546,,dobj,1546,-PRON-,,False,,PRON,1535,1545.0,himself
 1547,,prep,1547,from,,False,,ADP,1535,,from
 1548,,det,1548,that,,False,,DET,1535,,that
-1549,,amod,1549,young,NRCw_Em_anticipation,False,,ADJ,1535,1545.0,young
+1549,,amod,1549,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1535,1545.0,young
 1550,,pobj,1550,man,,False,,NOUN,1535,1545.0,man
 1551,,punct,1551,.,,False,,PUNCT,1535,,.
 1552,,det,1552,a,,False,,DET,1552,,A
-1553,,nsubj,1553,boy,NRCw_Em_disgust,False,,NOUN,1552,1553.0,boy
+1553,,nsubj,1553,boy,"NRCw_Em_negative,NRCw_Em_disgust",False,,NOUN,1552,1553.0,boy
 1554,,aux,1554,may,,False,,VERB,1552,,may
 1555,boy,ccomp,1555,lock,,False,,VERB,1552,,lock
 1556,,dobj,1556,-PRON-,,False,,NOUN,1552,,his door
@@ -1650,11 +1650,11 @@
 1577,,nsubj,1577,-PRON-,,False,,PRON,1552,1578.0,himself
 1578,boy,ccomp,1578,comfortable,,False,,ADJ,1552,,comfortable
 1579,,cc,1579,and,,False,,CCONJ,1552,,and
-1580,boy,conj,1580,safe,NRCw_Em_joy,False,,ADJ,1552,1578.0,safe
+1580,boy,conj,1580,safe,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1552,1578.0,safe
 1581,,punct,1581,",",,False,,PUNCT,1552,,","
 1582,,cc,1582,but,,False,,CCONJ,1552,,but
 1583,,mark,1583,that,,False,,DET,1552,,that
-1584,,amod,1584,young,NRCw_Em_anticipation,False,,ADJ,1552,1585.0,young
+1584,,amod,1584,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1552,1585.0,young
 1585,,nsubj,1585,man,,False,,NOUN,1552,1588.0,man
 1586,,aux,1586,will,,False,,VERB,1552,,will
 1587,,advmod,1587,softly,,False,,ADV,1552,,softly
@@ -1674,20 +1674,20 @@
 1601,,det,1601,a,,False,,DET,1599,,a
 1602,,attr,1602,keeping,,False,,NOUN,1599,,keeping
 1603,,det,1603,that,,False,,DET,1599,,that
-1604,,amod,1604,young,NRCw_Em_anticipation,False,,ADJ,1599,1605.0,young
+1604,,amod,1604,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1599,1605.0,young
 1605,,ccomp,1605,man,,False,,NOUN,1599,1605.0,man
 1606,,prep,1606,from,,False,,ADP,1599,,from
-1607,I,pobj,1607,harm,NRCw_Em_fear,False,,VERB,1599,1600.0,harming
+1607,I,pobj,1607,harm,"NRCw_Em_negative,NRCw_Em_fear",False,,VERB,1599,1600.0,harming
 1608,,prep,1608,of,,False,,ADP,1599,,of
 1609,,pobj,1609,-PRON-,,False,,PRON,1599,,you
 1610,,prep,1610,at,,False,,ADP,1599,,at
 1611,,det,1611,the,,False,,DET,1599,,the
-1612,I,amod,1612,present,NRCw_Em_anticipation,False,,ADJ,1599,1600.0,present
+1612,I,amod,1612,present,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1599,1600.0,present
 1613,,pobj,1613,moment,,False,,NOUN,1599,,moment
 1614,,punct,1614,",",,False,,PUNCT,1599,,","
 1615,,prep,1615,with,,False,,ADP,1599,,with
 1616,,amod,1616,great,,False,,ADJ,1599,,great
-1617,I,pobj,1617,difficulty,NRCw_Em_anger,False,,NOUN,1599,1600.0,difficulty
+1617,I,pobj,1617,difficulty,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,1599,1600.0,difficulty
 1618,,punct,1618,.,,False,,PUNCT,1599,,.
 1619,,nsubj,1619,-PRON-,,False,,PRON,1619,1620.0,I
 1620,I,ROOT,1620,find,,False,,VERB,1619,,find
@@ -1697,7 +1697,7 @@
 1624,,aux,1624,to,,False,,PART,1619,,to
 1625,,xcomp,1625,hold,,False,,VERB,1619,,hold
 1626,,det,1626,that,,False,,DET,1619,,that
-1627,,amod,1627,young,NRCw_Em_anticipation,False,,ADJ,1619,1625.0,young
+1627,,amod,1627,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1619,1625.0,young
 1628,,dobj,1628,man,,False,,NOUN,1619,1625.0,man
 1629,,prep,1629,off,,False,,ADP,1619,,off
 1630,,prep,1630,of,,False,,ADP,1619,,of
@@ -1730,10 +1730,10 @@
 1655,I,conj,1655,get,,False,,VERB,1642,,get
 1656,,dobj,1656,-PRON-,,False,,PRON,1642,1655.0,him
 1657,,nsubj,1657,what,,False,,PRON,1642,,what
-1658,,ccomp,1658,broken,NRCw_Em_anger,False,,ADJ,1642,1658.0,broken
+1658,,ccomp,1658,broken,"NRCw_Em_negative,NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness",False,,ADJ,1642,1658.0,broken
 1659,,dobj,1659,bit,,False,,NOUN,1642,,bits
 1660,,prep,1660,of,,False,,ADP,1642,,of
-1661,,pobj,1661,food,NRCw_Em_joy,False,,NOUN,1642,1658.0,food
+1661,,pobj,1661,food,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,1642,1658.0,food
 1662,,nsubj,1662,-PRON-,,False,,PRON,1642,1663.0,I
 1663,I,relcl,1663,could,,False,,VERB,1642,,could
 1664,,punct,1664,",",,False,,PUNCT,1642,,","
@@ -1745,7 +1745,7 @@
 1670,,pobj,1670,-PRON-,,False,,PRON,1642,1668.0,him
 1671,,prep,1671,at,,False,,ADP,1642,,at
 1672,,det,1672,the,,False,,DET,1642,,the
-1673,I,pobj,1673,Battery,NRCw_Em_anger,False,,PROPN,1642,1668.0,Battery
+1673,I,pobj,1673,Battery,"NRCw_Em_negative,NRCw_Em_anger",False,,PROPN,1642,1668.0,Battery
 1674,,punct,1674,",",,False,,PUNCT,1642,,","
 1675,,advmod,1675,early,,False,,ADV,1642,,early in the morning
 1676,,punct,1676,.,,False,,PUNCT,1642,,.
@@ -1754,7 +1754,7 @@
 "
 1678,,punct,1678,"""",,False,,PUNCT,1678,,""""
 1679,,nsubj,1679,say,,False,,PROPN,1678,,Say Lord
-1680,,ccomp,1680,strike,NRCw_Em_anger,False,,VERB,1678,1680.0,strike
+1680,,ccomp,1680,strike,"NRCw_Em_negative,NRCw_Em_anger",False,,VERB,1678,1680.0,strike
 1681,,dobj,1681,-PRON-,,False,,PRON,1678,,you
 1682,,advmod,1682,dead,,False,,ADJ,1678,,dead
 1683,,mark,1683,if,,False,,ADP,1678,,if
@@ -1801,7 +1801,7 @@
 1720,,nsubj,1720,-PRON-,,False,,PRON,1705,1721.0,you
 1721,you,conj,1721,remember,,False,,VERB,1705,,remember
 1722,,det,1722,that,,False,,DET,1705,,that
-1723,you,amod,1723,young,NRCw_Em_anticipation,False,,ADJ,1705,1721.0,young
+1723,you,amod,1723,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1705,1721.0,young
 1724,,dobj,1724,man,,False,,NOUN,1705,1721.0,man
 1725,,punct,1725,",",,False,,PUNCT,1705,,","
 1726,,cc,1726,and,,False,,CCONJ,1705,,and
@@ -1814,16 +1814,16 @@
 ",,False,,SPACE,1705,,"
 "
 1733,,punct,1733,"""",,False,,PUNCT,1705,,""""
-1734,,npadvmod,1734,Goo,NRCw_Em_disgust,False,,PROPN,1705,1734.0,Goo
+1734,,npadvmod,1734,Goo,"NRCw_Em_negative,NRCw_Em_disgust",False,,PROPN,1705,1734.0,Goo
 1735,,punct,1735,-,,False,,PUNCT,1705,,-
-1736,,amod,1736,good,NRCw_Em_anticipation,False,,ADJ,1705,1737.0,good
+1736,,amod,1736,good,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1705,1737.0,good
 1737,,npadvmod,1737,night,,False,,NOUN,1705,,night
 1738,,punct,1738,",",,False,,PUNCT,1705,,","
-1739,,appos,1739,sir,NRCw_Em_positive,False,,NOUN,1705,1737.0,sir
+1739,,appos,1739,sir,"NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,1705,1737.0,sir
 1740,,punct,1740,",",,False,,PUNCT,1705,,","
 1741,,punct,1741,"""",,False,,PUNCT,1705,,""""
 1742,,nsubj,1742,-PRON-,,False,,PRON,1705,1743.0,I
-1743,I,ROOT,1743,falter,NRCw_Em_fear,False,,VERB,1705,1743.0,faltered
+1743,I,ROOT,1743,falter,"NRCw_Em_negative,NRCw_Em_fear",False,,VERB,1705,1743.0,faltered
 1744,,punct,1744,.,,False,,PUNCT,1705,,.
 1745,,,1745,"
 ",,False,,SPACE,1705,,"
@@ -1868,7 +1868,7 @@
 1781,man,pobj,1781,time,NRCw_Em_anticipation,False,,NOUN,1778,1784.0,time
 1782,,punct,1782,",",,False,,PUNCT,1778,,","
 1783,,nsubj,1783,-PRON-,,False,,PRON,1778,1784.0,he
-1784,man,ROOT,1784,hug,NRCw_Em_joy,False,"himself,himself",VERB,1778,1784.0,hugged
+1784,man,ROOT,1784,hug,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,"himself,himself",VERB,1778,1784.0,hugged
 1785,,poss,1785,-PRON-,,False,,DET,1778,,his shuddering
 1786,,dobj,1786,body,,False,,NOUN,1778,,body
 1787,,prep,1787,in,,False,,ADP,1778,,in
@@ -1890,7 +1890,7 @@
 1803,,prep,1803,towards,,False,,ADP,1778,,towards
 1804,,det,1804,the,,False,,DET,1778,,the
 1805,,amod,1805,low,,False,,ADJ,1778,,low
-1806,man,pobj,1806,church,NRCw_Em_anticipation,False,,NOUN,1778,1802.0,church wall
+1806,man,pobj,1806,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,1778,1802.0,church wall
 1807,,punct,1807,.,,False,,PUNCT,1778,,.
 1808,,mark,1808,As,,False,,ADP,1808,,As
 1809,,nsubj,1809,-PRON-,,False,,PRON,1808,1810.0,I
@@ -1902,7 +1902,7 @@
 1815,,dobj,1815,-PRON-,,False,,NOUN,1808,,his way
 1816,,prep,1816,among,,False,,ADP,1808,,among
 1817,,det,1817,the,,False,,DET,1808,,the
-1818,I,pobj,1818,nettle,NRCw_Em_anger,False,,NOUN,1808,1814.0,nettles
+1818,I,pobj,1818,nettle,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger",False,,NOUN,1808,1814.0,nettles
 1819,,punct,1819,",",,False,,PUNCT,1808,,","
 1820,,cc,1820,and,,False,,CCONJ,1808,,and
 1821,,prep,1821,among,,False,,ADP,1808,,among
@@ -1911,7 +1911,7 @@
 1824,,nsubj,1824,that,,False,,DET,1808,,that
 1825,,relcl,1825,bind,NRCw_Em_negative,False,,VERB,1808,1825.0,bound
 1826,,det,1826,the,,False,,DET,1808,,the
-1827,,amod,1827,green,NRCw_Em_joy,False,,ADJ,1808,1825.0,green
+1827,,amod,1827,green,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1808,1825.0,green
 1828,,dobj,1828,mound,,False,,NOUN,1808,,mounds
 1829,,punct,1829,",",,False,,PUNCT,1808,,","
 1830,,nsubj,1830,-PRON-,,False,,PRON,1808,1831.0,he
@@ -1956,7 +1956,7 @@
 1867,,prep,1867,to,,False,,ADP,1864,,to
 1868,,det,1868,the,,False,,DET,1864,,the
 1869,,amod,1869,low,,False,,ADJ,1864,,low
-1870,man,pobj,1870,church,NRCw_Em_anticipation,False,,NOUN,1864,1866.0,church wall
+1870,man,pobj,1870,church,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,NOUN,1864,1866.0,church wall
 1871,,punct,1871,",",,False,,PUNCT,1864,,","
 1872,,nsubj,1872,-PRON-,,False,,PRON,1864,1873.0,he
 1873,man,ROOT,1873,get,,False,,VERB,1864,,got
@@ -1996,7 +1996,7 @@
 1907,,cc,1907,and,,False,,CCONJ,1895,,and
 1908,,conj,1908,make,,False,,VERB,1895,,made
 1909,,det,1909,the,,False,,DET,1895,,the
-1910,man,amod,1910,good,NRCw_Em_anticipation,False,,ADJ,1895,1902.0,best
+1910,man,amod,1910,good,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,1895,1902.0,best
 1911,,dobj,1911,use,,False,,NOUN,1895,,use
 1912,,prep,1912,of,,False,,ADP,1895,,of
 1913,,pobj,1913,-PRON-,,False,,NOUN,1895,,my legs
@@ -2018,7 +2018,7 @@
 1929,,pobj,1929,river,,False,,NOUN,1915,1925.0,river
 1930,,punct,1930,",",,False,,PUNCT,1915,,","
 1931,,advmod,1931,still,,False,,ADV,1915,,still
-1932,man,advcl,1932,hug,NRCw_Em_joy,False,"arms,himself",VERB,1915,1925.0,hugging
+1932,man,advcl,1932,hug,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,"himself,arms",VERB,1915,1925.0,hugging
 1933,,dobj,1933,-PRON-,,False,,PRON,1915,1932.0,himself
 1934,,prep,1934,in,,False,,ADP,1915,,in
 1935,,det,1935,both,,False,,DET,1915,,both
@@ -2033,7 +2033,7 @@
 1944,,prep,1944,among,,False,,ADP,1915,,among
 1945,,det,1945,the,,False,,DET,1915,,the
 1946,,amod,1946,great,,False,,ADJ,1915,,great
-1947,man,pobj,1947,stone,NRCw_Em_anger,False,,NOUN,1915,1939.0,stones
+1947,man,pobj,1947,stone,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,1915,1939.0,stones
 1948,,conj,1948,drop,,False,,VERB,1915,,dropped
 1949,,prep,1949,into,,False,,ADP,1915,,into
 1950,,det,1950,the,,False,,DET,1915,,the
@@ -2065,7 +2065,7 @@
 1974,,advmod,1974,just,,False,,ADV,1971,,just
 1975,,det,1975,a,,False,,DET,1971,,a
 1976,marshes,amod,1976,long,NRCw_Em_anticipation,False,,ADJ,1971,1973.0,long
-1977,marshes,amod,1977,black,NRCw_Em_negative,False,,ADJ,1971,1973.0,black
+1977,marshes,amod,1977,black,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,1971,1973.0,black
 1978,,amod,1978,horizontal,,False,,ADJ,1971,,horizontal
 1979,,attr,1979,line,,False,,NOUN,1971,,line
 1980,,advmod,1980,then,,False,,ADV,1971,,then
@@ -2094,7 +2094,7 @@
 2003,,cc,2003,nor,,False,,CCONJ,1971,,nor
 2004,,conj,2004,yet,,False,,CCONJ,1971,,yet
 2005,,advmod,2005,so,,False,,ADV,1971,,so
-2006,river,conj,2006,black,NRCw_Em_negative,False,,ADJ,1971,1993.0,black
+2006,river,conj,2006,black,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,1971,1993.0,black
 2007,,punct,2007,;,,False,,PUNCT,1971,,;
 2008,,cc,2008,and,,False,,CCONJ,1971,,and
 2009,,det,2009,the,,False,,DET,1971,,the
@@ -2102,15 +2102,15 @@
 2011,,conj,2011,be,,False,,VERB,1971,,was
 2012,,advmod,2012,just,,False,,ADV,1971,,just
 2013,,det,2013,a,,False,,DET,1971,,a
-2014,river,attr,2014,row,NRCw_Em_anger,False,,NOUN,1971,1993.0,row
+2014,river,attr,2014,row,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,1971,1993.0,row
 2015,,prep,2015,of,,False,,ADP,1971,,of
 2016,river,amod,2016,long,NRCw_Em_anticipation,False,,ADV,1971,2014.0,long
-2017,river,amod,2017,angry,NRCw_Em_anger,False,,ADJ,1971,2014.0,angry
+2017,river,amod,2017,angry,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger",False,,ADJ,1971,2014.0,angry
 2018,,amod,2018,red,,False,,ADJ,1971,,red
 2019,river,pobj,2019,line,NRCw_Em_fear,False,,NOUN,1971,2014.0,lines
 2020,,cc,2020,and,,False,,CCONJ,1971,,and
 2021,,amod,2021,dense,,False,,ADJ,1971,,dense
-2022,river,amod,2022,black,NRCw_Em_negative,False,,ADJ,1971,2019.0,black
+2022,river,amod,2022,black,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,1971,2019.0,black
 2023,river,conj,2023,line,NRCw_Em_fear,False,,NOUN,1971,2019.0,lines
 2024,,acl,2024,intermix,,False,,VERB,1971,,intermixed
 2025,,punct,2025,.,,False,,PUNCT,1971,,.
@@ -2127,7 +2127,7 @@
 2036,,prt,2036,out,,False,,PART,2026,,out the
 2037,,amod,2037,only,,False,,ADJ,2026,,only
 2038,,nummod,2038,two,,False,,NUM,2026,,two
-2039,man,amod,2039,black,NRCw_Em_negative,False,,ADJ,2026,2035.0,black
+2039,man,amod,2039,black,"NRCw_Em_negative,NRCw_Em_sadness",False,,ADJ,2026,2035.0,black
 2040,,dobj,2040,thing,,False,,NOUN,2026,,things
 2041,,prep,2041,in,,False,,ADP,2026,,in
 2042,,predet,2042,all,,False,,DET,2026,,all
@@ -2138,7 +2138,7 @@
 2047,,aux,2047,to,,False,,PART,2026,,to
 2048,,aux,2048,be,,False,,VERB,2026,,be
 2049,,xcomp,2049,stand,NRCw_Em_positive,False,,VERB,2026,2049.0,standing
-2050,,advmod,2050,upright,NRCw_Em_positive,False,,ADV,2026,2050.0,upright
+2050,,advmod,2050,upright,"NRCw_Em_trust,NRCw_Em_positive",False,,ADV,2026,2050.0,upright
 2051,,punct,2051,;,,False,,PUNCT,2026,,;
 2052,,nsubj,2052,one,,False,,NUM,2026,,one
 2053,,prep,2053,of,,False,,ADP,2026,,of
@@ -2161,7 +2161,7 @@
 2070,,pobj,2070,pole,,False,,NOUN,2026,,pole
 2071,,punct,2071,",",,False,,PUNCT,2026,,","
 2072,,det,2072,an,,False,,DET,2026,,an
-2073,,amod,2073,ugly,NRCw_Em_disgust,False,,ADJ,2026,2062.0,ugly
+2073,,amod,2073,ugly,"NRCw_Em_negative,NRCw_Em_disgust",False,,ADJ,2026,2062.0,ugly
 2074,,appos,2074,thing,,False,,NOUN,2026,,thing
 2075,,advmod,2075,when,,False,,ADV,2026,,when
 2076,,nsubj,2076,-PRON-,,False,,PRON,2026,,you
@@ -2178,7 +2178,7 @@
 2087,,prep,2087,with,,False,,ADP,2026,,with
 2088,,det,2088,some,,False,,DET,2026,,some
 2089,,pobj,2089,chain,,False,,NOUN,2026,,chains
-2090,,acl,2090,hang,NRCw_Em_anger,False,it,VERB,2026,2055.0,hanging
+2090,,acl,2090,hang,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_negative,NRCw_Em_disgust",False,it,VERB,2026,2055.0,hanging
 2091,,prep,2091,to,,False,,ADP,2026,,to
 2092,,pobj,2092,-PRON-,,False,,PRON,2026,2090.0,it
 2093,,nsubj,2093,which,,False,,DET,2026,,which
@@ -2186,7 +2186,7 @@
 2095,,advmod,2095,once,,False,,ADV,2026,,once
 2096,,relcl,2096,hold,,False,,VERB,2026,,held
 2097,,det,2097,a,,False,,DET,2026,,a
-2098,,dobj,2098,pirate,NRCw_Em_anger,False,,NOUN,2026,2096.0,pirate
+2098,,dobj,2098,pirate,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,2026,2096.0,pirate
 2099,,punct,2099,.,,False,,PUNCT,2026,,.
 2100,,det,2100,the,,False,,DET,2100,,The
 2101,,nsubj,2101,man,,False,,NOUN,2100,2103.0,man
@@ -2202,7 +2202,7 @@
 2111,,nsubj,2111,-PRON-,,False,,PRON,2100,2112.0,he
 2112,man,advcl,2112,be,,False,,VERB,2100,,were
 2113,,det,2113,the,,False,,DET,2100,,the
-2114,,nsubj,2114,pirate,NRCw_Em_anger,False,,NOUN,2100,2114.0,pirate
+2114,,nsubj,2114,pirate,"NRCw_Em_negative,NRCw_Em_anger",False,,NOUN,2100,2114.0,pirate
 2115,pirate,conj,2115,come,,False,,VERB,2100,,come
 2116,,prep,2116,to,,False,,ADP,2100,,to
 2117,,pobj,2117,life,,False,,NOUN,2100,,life
@@ -2223,7 +2223,7 @@
 2132,,ROOT,2132,give,,False,,VERB,2131,,gave
 2133,,dative,2133,-PRON-,,False,,PRON,2131,2133.0,me
 2134,,det,2134,a,,False,,DET,2131,,a
-2135,,amod,2135,terrible,NRCw_Em_anger,False,,ADJ,2131,2132.0,terrible
+2135,,amod,2135,terrible,"NRCw_Em_anger,NRCw_Em_fear,NRCw_Em_sadness,NRCw_Em_negative,NRCw_Em_disgust",False,,ADJ,2131,2132.0,terrible
 2136,,dobj,2136,turn,,False,,NOUN,2131,,turn
 2137,,advmod,2137,when,,False,,ADV,2131,,when
 2138,,nsubj,2138,-PRON-,,False,,PRON,2131,2139.0,I
@@ -2257,8 +2257,8 @@
 2166,,acomp,2166,round,,False,,NOUN,2163,,round
 2167,,prep,2167,for,,False,,ADP,2163,,for
 2168,,det,2168,the,,False,,DET,2163,,the
-2169,,amod,2169,horrible,NRCw_Em_anger,False,,ADJ,2163,2166.0,horrible
-2170,,amod,2170,young,NRCw_Em_anticipation,False,,ADJ,2163,2166.0,young
+2169,,amod,2169,horrible,"NRCw_Em_negative,NRCw_Em_disgust,NRCw_Em_anger,NRCw_Em_fear",False,,ADJ,2163,2166.0,horrible
+2170,,amod,2170,young,"NRCw_Em_surprise,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,ADJ,2163,2166.0,young
 2171,,pobj,2171,man,,False,,NOUN,2163,2166.0,man
 2172,,punct,2172,",",,False,,PUNCT,2163,,","
 2173,,cc,2173,and,,False,,CCONJ,2163,,and
@@ -2273,7 +2273,7 @@
 2182,,advmod,2182,now,,False,,ADV,2181,,now
 2183,,nsubj,2183,-PRON-,,False,,PRON,2181,2184.0,I
 2184,man,ROOT,2184,be,,False,,VERB,2181,,was
-2185,,acomp,2185,frighten,NRCw_Em_fear,False,,VERB,2181,2185.0,frightened
+2185,,acomp,2185,frighten,"NRCw_Em_surprise,NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,VERB,2181,2185.0,frightened
 2186,,advmod,2186,again,,False,,ADV,2181,,again
 2187,,punct,2187,",",,False,,PUNCT,2181,,","
 2188,,cc,2188,and,,False,,CCONJ,2181,,and
@@ -2301,7 +2301,7 @@
 2206,,punct,2206,",",,False,,PUNCT,2197,,","
 2207,,cc,2207,and,,False,,CCONJ,2197,,and
 2208,,aux,2208,have,,False,,VERB,2197,,had
-2209,,conj,2209,establish,NRCw_Em_joy,False,herself,VERB,2197,2201.0,established
+2209,,conj,2209,establish,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,herself,VERB,2197,2201.0,established
 2210,,det,2210,a,,False,,DET,2197,,a
 2211,,amod,2211,great,,False,,ADJ,2197,,great
 2212,,dobj,2212,reputation,,False,,NOUN,2197,,reputation
@@ -2309,7 +2309,7 @@
 2214,,pobj,2214,-PRON-,,False,,PRON,2197,2209.0,herself
 2215,,cc,2215,and,,False,,CCONJ,2197,,and
 2216,,det,2216,the,,False,,DET,2197,,the
-2217,,conj,2217,neighbor,NRCw_Em_anticipation,False,,NOUN,2197,2201.0,neighbors
+2217,,conj,2217,neighbor,"NRCw_Em_anticipation,NRCw_Em_trust,NRCw_Em_positive",False,,NOUN,2197,2201.0,neighbors
 2218,,mark,2218,because,,False,,ADP,2197,,because
 2219,,nsubj,2219,-PRON-,,False,,PRON,2197,2221.0,she
 2220,,aux,2220,have,,False,,VERB,2197,,had
