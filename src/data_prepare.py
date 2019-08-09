@@ -11,7 +11,7 @@ from models import nlp_pipeline
 
 
 logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, 
-                    format='[%(asctime)s %(levelname)s %(funcName)s (%(funcName)s)] %(message)s',
+                    format='[%(asctime)s %(levelname)s %(name)s (%(funcName)s)] %(message)s',
                     datefmt='%H:%M:%S') #  
 
 

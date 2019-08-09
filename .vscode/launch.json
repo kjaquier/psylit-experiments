@@ -11,7 +11,12 @@
             "request": "launch",
             "program": "${workspaceFolder}\\src\\data_process.py",
             "console": "integratedTerminal",
-            "args": ["greatex_100k", "data\\interim", "data\\processed"]
+            "args": [
+                "-n", "20",
+                "greatex_100k", 
+                "data\\interim", 
+                "data\\processed"
+            ]
         },
         {
             "name": "Python : prepare data",
