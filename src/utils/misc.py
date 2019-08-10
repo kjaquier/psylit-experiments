@@ -28,11 +28,8 @@ def benchmark(f, log_level=logging.DEBUG):
 
     return bench_f
 
-def batch(seq, batch_size, log_level=logging.DEBUG):
-    logger = logging.getLogger()
+def batch(seq, batch_size):
     n = len(seq)
     n_batches = int(ceil(n / batch_size))
     for i in range(n_batches):
-        if log_level:
-            logger.debug("batch of %d: [%d:%d] / %d", batch_size, i*batch_size, (i+1)*batch_size, n)
         yield seq[i*batch_size:(i+1)*batch_size]

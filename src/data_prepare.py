@@ -22,15 +22,17 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
          save_features: ("Save tokens and features as csv", 'flag', 'f')=False,
          no_save_entities: ("Don't save entities as csv", 'flag', 'e')=False,
          save_meta: ("Write metadata file about the run", 'flag', 'm')=False,
+         batch_size: ("Size of batch", 'option', 'b')=50_000,
          start: ("Position to read from", 'option', 't0')=0,
          end: ("Position to stop reading after", 'option', 't1')=0,
-         benchmark: ("Measure execution time", 'flag', 'b')=False):
+         benchmark: ("Measure execution time", 'flag', 'x')=False):
 
     now = dt.datetime.now().isoformat()
 
+    batch_size = int(batch_size)
     start = int(start)
     end = int(end)
-    logging.debug(f'start={start}, end={end}')
+    logging.debug('Will read chars from %d to %d with batches of size %d', start, end, batch_size)
 
 
     if benchmark:
@@ -38,12 +40,12 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
     txt = preprocess.read_pg(input_filename)
     n = len(txt)
     txt = txt[start:end] if end else txt[start:]
-    logging.info(f'Processing {len(txt)}/{n} chars')
 
     nlp = nlp_pipeline.make_nlp()
     pipeline = nlp_pipeline.BookParsePipeline(nlp,
                                               output_dir=output_dir,
                                               run_name=run_name,
+                                              batch_size=batch_size,
                                               save_entities=(
                                                   not no_save_entities),
                                               save_data=True,
@@ -55,7 +57,10 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
         logging.info(f"Read and pipeline init time: {t_init*1000:.5n}ms")
         t1 = time.clock()
 
-    pipeline.parse(txt)
+    if batch_size:
+        pipeline.parse_batches(txt)
+    else:
+        pipeline.parse(txt)
 
     if benchmark:
         t_process = time.clock() - t1

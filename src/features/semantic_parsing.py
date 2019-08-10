@@ -13,7 +13,7 @@ DEP_WHITELIST = (
     # clearly excluded:
     # 'npadvmod', 'advmod', 'parataxis', 'xcomp'
 )
-
+DEP_INSIDE_SUBSENTENCE = DEP_WHITELIST + PATIENT_DEPS
 
 class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
     """Propagates agent to ancestors"""
@@ -33,8 +33,7 @@ class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
     def __call__(self, doc):
         predicate_flag = self.predicate_flag
         predicate_attr = self.predicate_attr
-        dep_inside_subsentence = DEP_WHITELIST + PATIENT_DEPS
-
+        
         clusters = doc._.coref_clusters
         patients = set()
 
@@ -64,14 +63,14 @@ class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
         # until resolved or hit a subsentence root
         for patient in patients:
             patient_root = patient.root
-            if patient_root.dep_ in dep_inside_subsentence:
+            if patient_root.dep_ in DEP_INSIDE_SUBSENTENCE:
                 for ances in patient_root.ancestors:
                     if ances._.get(predicate_flag):
                         ances._.patients.add(patient)
                         patient_root._.set('subsent_root', ances)
                         break
 
-                    if ances._.agents or ances.dep_ not in dep_inside_subsentence: # resolved or subsentence root
+                    if ances._.agents or ances.dep_ not in DEP_INSIDE_SUBSENTENCE: # resolved or subsentence root
                         patient_root._.set('subsent_root', ances)
                         break
                 else:
@@ -90,7 +89,7 @@ class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
                 continue
 
             # not resolved: iter ancestors
-            if predicate.dep_ in dep_inside_subsentence:
+            if predicate.dep_ in DEP_INSIDE_SUBSENTENCE:
                 for ances in predicate.ancestors:
                     agents = ances._.agents
                     if agents:
@@ -98,7 +97,7 @@ class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
                         predicate._.set('subsent_root', ances)
                         break
 
-                    if ances.dep_ not in dep_inside_subsentence:
+                    if ances.dep_ not in DEP_INSIDE_SUBSENTENCE:
                         predicate._.set('subsent_root', ances)
                         break
                 else:
