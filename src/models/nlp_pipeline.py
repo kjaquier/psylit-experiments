@@ -78,9 +78,11 @@ class BookParsePipeline:
         texts = batch(text, self.batch_size)
         logger.debug("%d batches to process", math.ceil(len(text) / self.batch_size))
         def parse_texts(nlp, texts):
+            last_i = 0
             for batch_id, doc in enumerate(nlp.pipe(texts)):
                 logger.debug("Batch %d: processing...", batch_id)
-                yield BookParser(doc)
+                yield BookParser(doc, first_i=last_i)
+                last_i += doc[-1].i
 
         logger.debug("Processing...")
         parsers = list(parse_texts(self.nlp, texts))
@@ -136,16 +138,22 @@ class BookParsePipeline:
 
 class BookParser:
 
-    def __init__(self, doc):
+    def __init__(self, doc, first_i=0, batch_id=None):
         self.doc = doc
+        self.first_i = first_i
+        self.batch_id = batch_id
 
     def get_features_df(self):
         doc = self.doc
+        i_0 = self.first_i
+        batch_id = self.batch_id
+        safe_add_i_0 = lambda i: i_0 + i if i is not None else None
 
         data = [
-            {'i': tok.i,
-             'sent_i': tok.sent.start,
-             't': getattr(tok._.subsent_root, 'i', None),
+            {'i': i_0 + tok.i,
+             'batch_id': batch_id,
+             'sent_i': i_0 + tok.sent.start,
+             't': safe_add_i_0(getattr(tok._.subsent_root, 'i', None)),
              'neg': tok._.negated,
              'lemma': tok.lemma_,
              'text': tok.text,
@@ -162,6 +170,7 @@ class BookParser:
 
     def get_data_df(self):
         doc = self.doc
+        i_0 = self.first_i
 
         predicates = doc._.lex_matches
         logger.debug(f"{len(predicates)} predicates")
@@ -170,9 +179,9 @@ class BookParser:
         logger.debug(f"# of patients per predicates (incl. None): {Counter(len(tok._.patients or [None]) for tok in predicates)}")
 
         data = [
-            {'i': tok.i,
-             'sent_i': tok.sent.start,
-             't': tok._.subsent_root.i,
+            {'i': i_0 + tok.i,
+             'sent_i': i_0 + tok.sent.start,
+             't': i_0 + tok._.subsent_root.i,
              'neg': tok._.negated,
              'lemma': tok.lemma_,
              'text': tok.text,
