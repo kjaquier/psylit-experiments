@@ -1,3 +1,4 @@
+import math
 import os
 import logging
 from collections import Counter
@@ -75,7 +76,7 @@ class BookParsePipeline:
     def parse_batches(self, text):
         output_prefix = self.get_output_prefix()
         texts = batch(text, self.batch_size)
-
+        logger.debug("%d batches to process", math.ceil(len(text) / self.batch_size))
         def parse_texts(nlp, texts):
             for batch_id, doc in enumerate(nlp.pipe(texts)):
                 logger.debug("Batch %d: processing...", batch_id)

@@ -64,7 +64,7 @@ def main(input_filename: "Raw text of book to read (UTF-8)",
 
     if benchmark:
         t_process = time.clock() - t1
-        logging.info(f"Process time: {t_process*1000:.5n}ms")
+        logging.info(f"Process time: {t_process*1000:.5f}ms")
         #t2 = time.clock()
 
     if save_meta:
