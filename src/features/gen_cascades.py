@@ -9,20 +9,34 @@ import numpy as np
 #from joblib import Parallel, delayed
 
 from utils.pandas import df_map_columns
-
+from features.entities import EXCEPTIONS as ENTITY_EXCEPTIONS
 
 logger = logging.getLogger(__name__)
+
+NONE_PLACEHOLDER = 'NONE'  # necessary because pandas .groupby() doesn't properly handle it
 
 
 def make_entity_lookup(ents):
     entity_not_found = ents.entity_i.isna()
     ents_fixed = ents.copy()
     entity_not_found_ids = -ents[entity_not_found].mention_root.factorize()[0]
+    logger.debug('%d entities without ids: %s', len(ents[entity_not_found].index), ents[entity_not_found].entity_root.value_counts())
 
     ents_fixed.loc[entity_not_found, 'entity_i'] = entity_not_found_ids
     ents_fixed.entity_i = ents_fixed.entity_i.astype(np.int32)
 
     ents_lookup = ents_fixed[['entity_i', 'entity_root', 'categ']].drop_duplicates()
+    logger.debug("Before adding exceptions: %d entities in lookup", len(ents_lookup.index))
+
+    exceptions_lookup = pd.Series(ENTITY_EXCEPTIONS)
+    ents_lookup = ents_lookup.append([exceptions_lookup], sort=True)
+
+    logger.debug("After adding exceptions: %d entities in lookup", len(ents_lookup.index))
+
+    #for ent_txt, ent_class in ENTITY_EXCEPTIONS.items():
+        #logger.debug("ents_lookup.at[%s]=[%s]", ent_txt, ent_class)
+    #    ents_lookup.at[ent_txt] = ent_class
+
     #ents_lookup.rename(index=str, columns={'entity_root': 'root', 'entity_name': 'name'}, inplace=True)
     #ents_lookup.set_index('entity_root', inplace=True, verify_integrity=True)
     
@@ -33,7 +47,7 @@ def make_entity_lookup(ents):
     ents_lookup = ents_lookup.groupby('entity_root').apply(most_likely_categ)
     ents_lookup.name = 'ent_class'
     
-    ents_lookup.loc['NONE'] = 'none'
+    ents_lookup.loc[NONE_PLACEHOLDER] = None
 
     return ents_lookup
 
@@ -44,13 +58,13 @@ def update_lookup_with_subject(ents_lookup, subject):
     return ents_lookup
 
 
-def cascade_representation(data, symbolic_cols, numeric_cols, symbolic_na=False, casc_index=('t',)):
+def cascade_representation(data, symbolic_cols, numeric_cols, casc_index=('t',), **kwargs):
     casc_index = list(casc_index)
-    sym_cascades = pd.get_dummies(data[symbolic_cols], dummy_na=symbolic_na)
-    num_cascades = (data[numeric_cols] > data[numeric_cols].mean()) * 1  # NaN -> 0
-    casc = pd.concat([data[casc_index], sym_cascades, num_cascades], axis='columns')
-    casc = casc.groupby(casc_index).any()*1
-
+    casc = pd.get_dummies(data, columns=symbolic_cols, dummy_na=True, dtype=np.uint8, **kwargs)
+    casc.loc[:, numeric_cols] = (data[numeric_cols] > data[numeric_cols].mean()) # NaN -> 0
+    #casc = pd.concat([data[casc_index], sym_cascades, num_cascades], axis='columns')
+    casc = casc.groupby(casc_index).any()
+    
     return casc
 
 
@@ -72,77 +86,83 @@ class BookData:
         self.data = df.groupby(
             ['t', 'R_agent', 'R_patient', 'lemma']).mean().reset_index()
 
-        self.ent_counts = None
-
     def _format_rel_cols(self, df):
         dfr = df[self.rel_cols]
-        dfr = dfr.fillna('NONE')
-        dfr = dfr.replace('NONE', '')
+        dfr = dfr.fillna(NONE_PLACEHOLDER)
+        dfr = dfr.replace(NONE_PLACEHOLDER, '')
         dfr = dfr.apply(lambda c: c.str.lower(), axis='columns')
-        dfr = dfr.replace('', 'NONE')
+        dfr = dfr.replace('', NONE_PLACEHOLDER)
 
         dfc = df.copy()
         dfc.loc[:, self.rel_cols] = dfr
         return dfc
 
-    def most_common_ents(self):
-        if not self.ent_counts:
-            self.ent_counts = pd.concat([self.data[r] for r in self.rel_cols], axis='rows')
-            self.ent_counts = self.ent_counts.replace('NONE', None).dropna().value_counts()
-            
-        return self.ent_counts
-
     def str_match(self, col, pattern):
         return self.data[self.data[col].str.lower().str.match(pattern)]
 
-    def get_all_cascades(self, n_entities=10, group=True):
+    def get_all_cascades(self, min_entities_occurrences=50):
         relevant_columns = ['t', 'neg'] + self.rel_cols + self.lex_cols
         data = self.data[relevant_columns]
 
         ent_counts = pd.concat([data[r] for r in self.rel_cols], axis='rows')
-        ent_counts = ent_counts.replace('NONE', None).dropna().value_counts()
-        selected_ents_count = ent_counts.sort_values(ascending=False)[:n_entities]
-        logger.debug("Selected entities: %s", selected_ents_count)
+        ent_counts = ent_counts.replace(NONE_PLACEHOLDER, None).dropna()
+        ent_counts = ent_counts.value_counts()
+        selected_ents_count = ent_counts[ent_counts > min_entities_occurrences]
+        logger.debug("%d entities selected (occurring >= %d times)", len(selected_ents_count.index), min_entities_occurrences)
         selected_ents = selected_ents_count.index
 
         ents_lookup = make_entity_lookup(self.ents)
 
         def gen_cascades_for_subject(data, ents_lookup, rel_cols, lex_cols, subject):
             ents_lookup = update_lookup_with_subject(ents_lookup, subject)
-
-            subj_occs = data[rel_cols].apply(lambda c: c == subject).any(axis='columns')
-            subj_occs = subj_occs.where(subj_occs)
-            first_occ = subj_occs.first_valid_index()
-            last_occ = subj_occs.last_valid_index()
-            data = data.loc[first_occ:last_occ, :]
+            
+            # Only consider rows between first and last occurrences
+            # Edit: as a second thought, it might actually screw up transfer entropy
+            # subj_occs = data[rel_cols].apply(lambda c: c == subject).any(axis='columns')
+            # subj_occs = subj_occs.where(subj_occs)
+            # first_occ = subj_occs.first_valid_index()
+            # last_occ = subj_occs.last_valid_index()
+            # data = data.loc[first_occ:last_occ, :]
 
             subj_data = df_map_columns(data, rel_cols, ents_lookup)
+            
             subj_casc = cascade_representation(subj_data,
                                                symbolic_cols=rel_cols,
                                                numeric_cols=lex_cols)
+            
+            #subj_casc['Subject'] = subject
+            
+            # reset index to avoid conflicts when doing concatenation
+            #subj_casc = subj_casc.reset_index()
 
-            subj_casc['Subject'] = subject
-            return subj_casc
+            return subject, subj_casc
         
         executor = list #Parallel(n_jobs=-1)
-        do = partial(gen_cascades_for_subject, self.data, ents_lookup, self.rel_cols, self.lex_cols) # delayed()
-        tasks = (do(subject) for subject in selected_ents)
+        do = partial(gen_cascades_for_subject, data, ents_lookup, self.rel_cols, self.lex_cols) # delayed()
+        tasks = (do(subject) for subject in selected_ents if ents_lookup.get(subject, '') == 'person')
         logger.info("Generating cascades for %d entities (max len = %d)", len(selected_ents), len(self.data.index))
         subj_cascades = executor(tasks)
         
-        casc = pd.concat(subj_cascades, axis='rows', sort=False)
+        subj_names = [x for x, _ in subj_cascades]
+        subj_cascades = [x for _, x in subj_cascades]
+        
+        casc = pd.concat(subj_cascades, keys=subj_names, names=['Subject'], sort=False)#, ignore_index=True)
+
+        # Because all relations don't necessarily occur for all subjects, they are set to NaN
+        # in concat
+        binary_cols = [c for c in casc.columns if c.startswith(('R_', 'L_', 'neg'))]
+        casc.loc[:, binary_cols] = casc[binary_cols].fillna(0).astype(np.int8)
+
+        casc.info()
 
         # Drop irrelevant columns
-        irrelevant_cols = [col for col in casc.columns if col[1] in ('none',)]
-        casc = casc.drop(irrelevant_cols, axis='columns')
+        #irrelevant_cols = [col for col in casc.columns if col[1] in ('none',)]
+        #casc = casc.drop(irrelevant_cols, axis='columns')
 
         # Put all unknowns into a single columns
         unk_cols = [c for c in casc.columns if c.endswith('unknown')]
-        casc['R_unknown'] = casc[unk_cols].any(axis='columns').astype(int)
+        casc['R_unknown'] = casc[unk_cols].any(axis='columns').astype(np.uint8)
         casc.drop(unk_cols, axis='columns', inplace=True)
-
-        if group:
-            casc = casc.groupby('Subject')
-
+        
         return casc
     
