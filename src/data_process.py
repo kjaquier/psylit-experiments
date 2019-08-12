@@ -15,14 +15,14 @@ logging.basicConfig(level=logging.DEBUG, stream=sys.stdout,
 def main(book_name: "Book name",
          input_dir: "Folder containing book data",
          output_dir: "Folder in which to generate output",
-         n_entities: ("Number of entities to extract", 'option', 'n')=10,
+         min_entities_occ: ("Minimum number of occurrences of entities to extract", 'option', 'n')=100,
          benchmark: ("Measure execution time", 'flag', 'b')=False):
 
     if benchmark:
         t0 = time.clock()
 
     book = BookData(book_name, input_dir)
-    cascades = bench(book.get_all_cascades)(n_entities=int(n_entities), group=False)
+    cascades = bench(book.get_all_cascades)(min_entities_occurrences=int(min_entities_occ))
     out_filename = os.path.join(output_dir, book_name) + '.csv'
     logging.info('Writing to %s', out_filename)
     cascades.to_csv(out_filename)
