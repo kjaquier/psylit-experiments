@@ -1,15 +1,14 @@
 from collections import Counter, defaultdict
-from os import linesep as EOL
-from itertools import islice
 
 from . import cleanup
+
 
 def read_pg(filename):
     with open(filename, encoding='utf8') as f:
         lines = cleanup.filter_headers(f.readlines())
         lines = (l.lstrip() for l in lines)
         whole_txt = '\n'.join(l for l in lines if l)
-        whole_txt = whole_txt.replace('—','')
+        whole_txt = whole_txt.replace('—', '')
     return whole_txt
 
 
@@ -18,6 +17,7 @@ POS_SPACY_TO_WN = {
     'ADV':   'r', # adverb (e.g: very, tomorrow, down, where, there)
     'VERB':  'v', # verb (e.g: run, runs, running, eat, ate, eating)
 }
+
 
 class PsychFeatsExtractor:
     """Extracts knowledge-based psychological features"""
@@ -64,14 +64,15 @@ class BasicPreprocessor:
 
         self._stats['n_chars'] = len(whole_txt)
 
-        tokens = self.nlp(whole_txt.replace('\t',' ')) # just tokenise: tokenizer() instead of nlp()
+        # just tokenise: tokenizer() instead of nlp()
+        tokens = self.nlp(whole_txt.replace('\t', ' '))
         
         self._stats['n_tokens_all'] = len(tokens)
 
-        tokens = [t for t in tokens 
-            if t.text not in stop_words 
-            and not t.is_space 
-            and t.text != '\n']
+        tokens = [t for t in tokens
+                  if t.text not in stop_words
+                  and not t.is_space
+                  and t.text != '\n']
 
         self._stats['n_tokens_filtered'] = len(tokens)
 
@@ -79,4 +80,3 @@ class BasicPreprocessor:
     
     def stats(self):
         return self._stats
-

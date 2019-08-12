@@ -2,7 +2,7 @@ import math
 import os
 import logging
 from collections import Counter
-from functools import partial
+#from functools import partial
 
 import pandas as pd
 import spacy
