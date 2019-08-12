@@ -6,20 +6,20 @@
     "configurations": [
 
         {
-            "name": "Python : process data",
+            "name": "Process data (dev)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\src\\data_process.py",
             "console": "integratedTerminal",
             "args": [
-                "-n", "20",
+                "-n", "50",
                 "greatex_100k", 
                 "data\\interim", 
                 "data\\processed"
             ]
         },
         {
-            "name": "Python : prepare data (real)",
+            "name": "Prepare data (real)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\src\\data_prepare.py",
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "name": "Python : prepare data (test)",
+            "name": "Prepare data (dev)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\src\\data_prepare.py",

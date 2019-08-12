@@ -61,8 +61,7 @@ def update_lookup_with_subject(ents_lookup, subject):
 def cascade_representation(data, symbolic_cols, numeric_cols, casc_index=('t',), **kwargs):
     casc_index = list(casc_index)
     casc = pd.get_dummies(data, columns=symbolic_cols, dummy_na=True, dtype=np.uint8, **kwargs)
-    casc.loc[:, numeric_cols] = (data[numeric_cols] > data[numeric_cols].mean()) # NaN -> 0
-    #casc = pd.concat([data[casc_index], sym_cascades, num_cascades], axis='columns')
+    casc.loc[:, numeric_cols] = (data[numeric_cols] > data[numeric_cols].mean())
     casc = casc.groupby(casc_index).any()
     
     return casc
@@ -129,11 +128,6 @@ class BookData:
             subj_casc = cascade_representation(subj_data,
                                                symbolic_cols=rel_cols,
                                                numeric_cols=lex_cols)
-            
-            #subj_casc['Subject'] = subject
-            
-            # reset index to avoid conflicts when doing concatenation
-            #subj_casc = subj_casc.reset_index()
 
             return subject, subj_casc
         
