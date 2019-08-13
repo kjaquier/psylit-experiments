@@ -1,0 +1,1824 @@
+,categ,entity_i,entity_pos,entity_root,entity_tag,entity_text,i,mention_pos,mention_root,mention_tag,mention_text,t0,t1
+0,unknown,,,UNKNOWN,,,8,DET,my christian,PRP$,my Christian,0,27
+1,unknown,,,UNKNOWN,,,12,DET,my infant,PRP$,my infant,0,27
+2,unknown,,,UNKNOWN,,,17,DET,both,DT,both,0,27
+3,unknown,,,UNKNOWN,,,50,DET,the,DT,the,42,59
+4,unknown,,,UNKNOWN,,,77,DET,any,DT,any,66,107
+5,unknown,,,UNKNOWN,,,80,DET,either,DT,either,66,107
+6,unknown,,,UNKNOWN,,,94,DET,my first,PRP$,my first,66,107
+7,unknown,,,UNKNOWN,,,97,PRON,what,WP,what,66,107
+8,unknown,,,UNKNOWN,,,107,DET,the,DT,The,107,137
+9,unknown,,,UNKNOWN,,,110,DET,the,DT,the,107,137
+10,unknown,,,UNKNOWN,,,118,DET,an,DT,an,107,137
+11,person,,,PERSON,,,122,PRON,he,PRP,he,107,137
+12,unknown,,,UNKNOWN,,,124,DET,a,DT,a,107,137
+13,unknown,,,UNKNOWN,,,138,DET,the,DT,the,137,166
+14,unknown,,,UNKNOWN,,,143,DET,the,DT,the,137,166
+15,unknown,,,UNKNOWN,,,150,DET,the,DT,the,137,166
+16,unknown,,,UNKNOWN,,,156,DET,a,DT,a,137,166
+17,unknown,,,UNKNOWN,,,171,DET,each,DT,each,166,253
+18,unknown,,,UNKNOWN,,,173,DET,a,DT,a,166,253
+19,unknown,,,UNKNOWN,,,176,DET,a,DT,a,166,253
+20,unknown,,,UNKNOWN,,,180,DET,which,WDT,which,166,253
+21,unknown,,,UNKNOWN,,,184,DET,a,DT,a,166,253
+22,unknown,,,UNKNOWN,,,194,DET,the,DT,the,166,253
+23,unknown,,,UNKNOWN,,,203,PRON,who,WP,who,166,253
+24,unknown,,,UNKNOWN,,,208,DET,a,DT,a,166,253
+25,environment,,,ENVIRONMENT,,,214,DET,that,DT,that,166,253
+26,unknown,,,UNKNOWN,,,222,DET,a,DT,a,166,253
+27,unknown,,,UNKNOWN,,,230,DET,all,DT,all,166,253
+28,unknown,,,UNKNOWN,,,238,DET,their trousers-,PRP$,their trousers-,166,253
+29,environment,,,ENVIRONMENT,,,247,DET,this,DT,this,166,253
+30,unknown,,,UNKNOWN,,,255,DET,the,DT,the,253,275
+31,unknown,,,UNKNOWN,,,261,DET,the,DT,the,253,275
+32,unknown,,,UNKNOWN,,,267,DET,the,DT,the,253,275
+33,unknown,,,UNKNOWN,,,272,DET,the,DT,the,253,275
+34,unknown,,,UNKNOWN,,,275,DET,my first,PRP$,My first,275,296
+35,unknown,,,UNKNOWN,,,282,DET,the,DT,the,275,296
+36,unknown,,,UNKNOWN,,,297,DET,such,PDT,such,296,437
+37,unknown,,,UNKNOWN,,,298,DET,a,DT,a,296,437
+38,environment,,,ENVIRONMENT,,,305,DET,this,DT,this,296,437
+39,unknown,,,UNKNOWN,,,312,DET,the,DT,the,296,437
+40,environment,,,ENVIRONMENT,,,321,DET,this,DT,this,296,437
+41,unknown,,,UNKNOWN,,,328,DET,the,DT,the,296,437
+42,unknown,,,UNKNOWN,,,352,DET,the,DT,the,296,437
+43,unknown,,,UNKNOWN,,,363,DET,the,DT,the,296,437
+44,unknown,,,UNKNOWN,,,368,DET,the,DT,the,296,437
+45,environment,,,ENVIRONMENT,,,384,PRON,it,PRP,it,296,437
+46,unknown,,,UNKNOWN,,,387,DET,the,DT,the,296,437
+47,unknown,,,UNKNOWN,,,392,DET,the,DT,the,296,437
+48,unknown,,,UNKNOWN,,,403,DET,the,DT,the,296,437
+49,unknown,,,UNKNOWN,,,407,DET,which,WDT,which,296,437
+50,unknown,,,UNKNOWN,,,408,DET,the,DT,the,296,437
+51,unknown,,,UNKNOWN,,,413,DET,the,DT,the,296,437
+52,unknown,,,UNKNOWN,,,418,DET,the,DT,the,296,437
+53,environment,,,ENVIRONMENT,,,426,PRON,it,PRP,it,296,437
+54,unknown,,,UNKNOWN,,,427,DET,all,DT,all,296,437
+55,unknown,,,UNKNOWN,,,443,DET,a,DT,a,437,462
+56,unknown,,,UNKNOWN,,,448,DET,a,DT,a,437,462
+57,unknown,,,UNKNOWN,,,453,DET,the,DT,the,437,462
+58,unknown,,,UNKNOWN,,,456,DET,the,DT,the,437,462
+59,unknown,,,UNKNOWN,,,459,DET,the,DT,the,437,462
+60,unknown,,,UNKNOWN,,,478,DET,a,DT,A,476,494
+61,unknown,,,UNKNOWN,,,482,DET,all,DT,all,476,494
+62,unknown,,,UNKNOWN,,,488,DET,a,DT,a,476,494
+63,unknown,,,UNKNOWN,,,494,DET,a,DT,A,494,514
+64,unknown,,,UNKNOWN,,,497,DET,no,DT,no,494,514
+65,unknown,,,UNKNOWN,,,507,DET,an,DT,an,494,514
+66,unknown,,,UNKNOWN,,,514,DET,a,DT,A,514,574
+67,unknown,,,UNKNOWN,,,516,PRON,who,WP,who,514,574
+68,unknown,,,UNKNOWN,,,548,PRON,who,WP,who,514,574
+69,person,,,PERSON,,,566,PRON,he,PRP,he,514,574
+70,unknown,,,UNKNOWN,,,570,DET,the,DT,the,514,574
+71,unknown,,,UNKNOWN,,,603,PRON,us,PRP,us,601,611
+72,unknown,,,UNKNOWN,,,629,DET,the,DT,the,623,636
+73,unknown,,,UNKNOWN,,,654,PRON,us,PRP,us,652,664
+74,reader,,,READER,,,656,PRON,you,PRP,you,652,664
+75,unknown,,,UNKNOWN,,,679,DET,the,DT,the,669,698
+76,unknown,,,UNKNOWN,,,684,DET,the,DT,the,669,698
+77,unknown,,,UNKNOWN,,,706,DET,a,DT,a,698,718
+78,unknown,,,UNKNOWN,,,722,PRON,them,PRP,them,718,729
+79,unknown,,,UNKNOWN,,,757,DET,the,DT,the,729,789
+80,unknown,,,UNKNOWN,,,776,DET,a,DT,a,729,789
+81,unknown,,,UNKNOWN,,,784,DET,the,DT,the,729,789
+82,reader,,,READER,,,790,PRON,you,PRP,You,789,811
+83,unknown,,,UNKNOWN,,,803,PRON,what,WP,what,789,811
+84,unknown,,,UNKNOWN,,,815,PRON,they,PRP,they,813,834
+85,environment,,,ENVIRONMENT,,,823,DET,that,DT,that,813,834
+86,unknown,,,UNKNOWN,,,846,DET,the,DT,the,835,858
+87,unknown,,,UNKNOWN,,,850,DET,a,DT,a,835,858
+88,unknown,,,UNKNOWN,,,861,DET,half,PDT,half,858,866
+89,unknown,,,UNKNOWN,,,862,DET,a,DT,a,858,866
+90,unknown,,,UNKNOWN,,,881,DET,the,DT,the,868,907
+91,unknown,,,UNKNOWN,,,884,DET,which,WDT,which,868,907
+92,environment,,,ENVIRONMENT,,,896,PRON,it,PRP,it,868,907
+93,unknown,,,UNKNOWN,,,936,DET,a,DT,a,925,948
+94,environment,,,ENVIRONMENT,,,962,DET,that,DT,That,962,966
+95,narrator,,,NARRATOR,,,995,PRON,i,PRP,I,989,997
+96,environment,,,ENVIRONMENT,,,1003,DET,this,DT,this,997,1006
+97,unknown,,,UNKNOWN,,,1019,PRON,who,WP,Who,1019,1040
+98,reader,,,READER,,,1026,PRON,you,PRP,you,1019,1040
+99,unknown,,,UNKNOWN,,,1033,DET,which,WDT,which,1019,1040
+100,unknown,,,UNKNOWN,,,1055,DET,the,DT,the,1049,1071
+101,narrator,,,NARRATOR,,,1122,PRON,mine,PRP,mine,1077,1131
+102,unknown,,,UNKNOWN,,,1141,DET,the,DT,the,1132,1153
+103,reader,,,READER,,,1145,PRON,you,PRP,you,1132,1153
+104,reader,,,READER,,,1153,PRON,you,PRP,You,1153,1162
+105,unknown,,,UNKNOWN,,,1155,PRON,what,WP,what,1153,1162
+106,unknown,,,UNKNOWN,,,1156,DET,a,DT,a,1153,1162
+107,reader,,,READER,,,1171,PRON,you,PRP,you,1170,1179
+108,unknown,,,UNKNOWN,,,1173,PRON,what,WP,what,1170,1179
+109,unknown,,,UNKNOWN,,,1187,DET,each,DT,each,1186,1211
+110,unknown,,,UNKNOWN,,,1193,DET,a,DT,a,1186,1211
+111,unknown,,,UNKNOWN,,,1202,DET,a,DT,a,1186,1211
+112,reader,,,READER,,,1212,PRON,you,PRP,You,1211,1218
+113,unknown,,,UNKNOWN,,,1215,DET,a,DT,a,1211,1218
+114,reader,,,READER,,,1226,PRON,you,PRP,you,1225,1231
+115,unknown,,,UNKNOWN,,,1241,DET,both,DT,both,1238,1245
+116,unknown,,,UNKNOWN,,,1281,DET,both,DT,both,1267,1315
+117,reader,,,READER,,,1289,PRON,you,PRP,you,1267,1315
+118,unknown,,,UNKNOWN,,,1320,DET,a,DT,a,1317,1336
+119,unknown,,,UNKNOWN,,,1329,DET,the,DT,the,1317,1336
+120,unknown,,,UNKNOWN,,,1333,DET,its own,PRP$,its own,1317,1336
+121,unknown,,,UNKNOWN,,,1342,DET,the,DT,the,1336,1364
+122,unknown,,,UNKNOWN,,,1346,DET,an,DT,an,1336,1364
+123,unknown,,,UNKNOWN,,,1350,DET,the,DT,the,1336,1364
+124,unknown,,,UNKNOWN,,,1353,DET,the,DT,the,1336,1364
+125,environment,,,ENVIRONMENT,,,1374,DET,that,DT,that,1364,1380
+126,unknown,,,UNKNOWN,,,1382,DET,the,DT,the,1380,1394
+127,environment,,,ENVIRONMENT,,,1388,DET,that,DT,that,1380,1394
+128,environment,,,ENVIRONMENT,,,1396,PRON,it,PRP,it,1394,1435
+129,unknown,,,UNKNOWN,,,1404,DET,a,DT,a,1394,1435
+130,unknown,,,UNKNOWN,,,1410,DET,a,DT,a,1394,1435
+131,unknown,,,UNKNOWN,,,1416,DET,such,PDT,such,1394,1435
+132,unknown,,,UNKNOWN,,,1417,DET,a,DT,a,1394,1435
+133,unknown,,,UNKNOWN,,,1423,DET,any,DT,any,1394,1435
+134,reader,,,READER,,,1439,PRON,you,PRP,you,1435,1467
+135,unknown,,,UNKNOWN,,,1444,DET,any,DT,any,1435,1467
+136,environment,,,ENVIRONMENT,,,1451,PRON,it,PRP,it,1435,1467
+137,unknown,,,UNKNOWN,,,1493,DET,which,WDT,which,1481,1501
+138,unknown,,,UNKNOWN,,,1498,DET,a,DT,a,1481,1501
+139,unknown,,,UNKNOWN,,,1505,DET,the,DT,the,1501,1510
+140,unknown,,,UNKNOWN,,,1514,DET,a,DT,a,1510,1535
+141,unknown,,,UNKNOWN,,,1524,DET,a,DT,a,1510,1535
+142,environment,,,ENVIRONMENT,,,1535,PRON,it,PRP,It,1535,1552
+143,unknown,,,UNKNOWN,,,1570,DET,the,DT,the,1552,1599
+144,environment,,,ENVIRONMENT,,,1583,DET,that,DT,that,1552,1599
+145,unknown,,,UNKNOWN,,,1601,DET,a,DT,a,1599,1619
+146,reader,,,READER,,,1609,PRON,you,PRP,you,1599,1619
+147,unknown,,,UNKNOWN,,,1611,DET,the,DT,the,1599,1619
+148,environment,,,ENVIRONMENT,,,1621,PRON,it,PRP,it,1619,1633
+149,unknown,,,UNKNOWN,,,1635,PRON,what,WP,what,1633,1640
+150,unknown,,,UNKNOWN,,,1649,DET,the,DT,the,1642,1678
+151,unknown,,,UNKNOWN,,,1657,PRON,what,WP,what,1642,1678
+152,unknown,,,UNKNOWN,,,1672,DET,the,DT,the,1642,1678
+153,reader,,,READER,,,1681,PRON,you,PRP,you,1678,1694
+154,reader,,,READER,,,1684,PRON,you,PRP,you,1678,1694
+155,unknown,,,UNKNOWN,,,1714,PRON,what,WP,what,1705,1746
+156,reader,,,READER,,,1727,PRON,you,PRP,you,1705,1746
+157,environment,,,ENVIRONMENT,,,1749,DET,that,DT,that,1746,1764
+158,unknown,,,UNKNOWN,,,1759,DET,the,DT,the,1746,1764
+159,unknown,,,UNKNOWN,,,1769,DET,a,DT,a,1765,1772
+160,unknown,,,UNKNOWN,,,1773,DET,a,DT,a,1772,1778
+161,unknown,,,UNKNOWN,,,1779,DET,the,DT,the,1778,1808
+162,unknown,,,UNKNOWN,,,1785,DET,his shuddering,PRP$,his shuddering,1778,1808
+163,unknown,,,UNKNOWN,,,1817,DET,the,DT,the,1808,1864
+164,unknown,,,UNKNOWN,,,1822,DET,the,DT,the,1808,1864
+165,environment,,,ENVIRONMENT,,,1824,DET,that,WDT,that,1808,1864
+166,unknown,,,UNKNOWN,,,1826,DET,the,DT,the,1808,1864
+167,unknown,,,UNKNOWN,,,1833,DET,my young,PRP$,my young,1808,1864
+168,unknown,,,UNKNOWN,,,1840,DET,the,DT,the,1808,1864
+169,unknown,,,UNKNOWN,,,1843,DET,the,DT,the,1808,1864
+170,unknown,,,UNKNOWN,,,1855,DET,a,DT,a,1808,1864
+171,unknown,,,UNKNOWN,,,1878,DET,a,DT,a,1864,1895
+172,unknown,,,UNKNOWN,,,1909,DET,the,DT,the,1895,1915
+173,unknown,,,UNKNOWN,,,1942,DET,his sore,PRP$,his sore,1915,1971
+174,unknown,,,UNKNOWN,,,1945,DET,the,DT,the,1915,1971
+175,unknown,,,UNKNOWN,,,1960,DET,the,DT,the,1915,1971
+176,unknown,,,UNKNOWN,,,1965,DET,the,DT,the,1915,1971
+177,unknown,,,UNKNOWN,,,1975,DET,a,DT,a,1971,2026
+178,unknown,,,UNKNOWN,,,1995,DET,another,DT,another,1971,2026
+179,unknown,,,UNKNOWN,,,2009,DET,the,DT,the,1971,2026
+180,unknown,,,UNKNOWN,,,2013,DET,a,DT,a,1971,2026
+181,unknown,,,UNKNOWN,,,2027,DET,the,DT,the,2026,2100
+182,unknown,,,UNKNOWN,,,2042,DET,all,PDT,all,2026,2100
+183,unknown,,,UNKNOWN,,,2043,DET,the,DT,the,2026,2100
+184,environment,,,ENVIRONMENT,,,2045,DET,that,WDT,that,2026,2100
+185,unknown,,,UNKNOWN,,,2054,DET,these,DT,these,2026,2100
+186,unknown,,,UNKNOWN,,,2056,DET,the,DT,the,2026,2100
+187,unknown,,,UNKNOWN,,,2059,DET,which,WDT,which,2026,2100
+188,unknown,,,UNKNOWN,,,2060,DET,the,DT,the,2026,2100
+189,unknown,,,UNKNOWN,,,2065,DET,an,DT,an,2026,2100
+190,unknown,,,UNKNOWN,,,2069,DET,a,DT,a,2026,2100
+191,unknown,,,UNKNOWN,,,2072,DET,an,DT,an,2026,2100
+192,reader,,,READER,,,2076,PRON,you,PRP,you,2026,2100
+193,unknown,,,UNKNOWN,,,2081,DET,the,DT,the,2026,2100
+194,unknown,,,UNKNOWN,,,2084,DET,a,DT,a,2026,2100
+195,unknown,,,UNKNOWN,,,2088,DET,some,DT,some,2026,2100
+196,unknown,,,UNKNOWN,,,2093,DET,which,WDT,which,2026,2100
+197,environment,,,ENVIRONMENT,,,2106,DET,this,DT,this,2100,2131
+198,environment,,,ENVIRONMENT,,,2131,PRON,it,PRP,It,2131,2163
+199,unknown,,,UNKNOWN,,,2134,DET,a,DT,a,2131,2163
+200,unknown,,,UNKNOWN,,,2165,DET,all,DT,all,2163,2181
+201,unknown,,,UNKNOWN,,,2176,DET,no,DT,no,2163,2181
+202,unknown,,,UNKNOWN,,,2210,DET,a,DT,a,2197,2227
+203,unknown,,,UNKNOWN,,,2216,DET,the,DT,the,2197,2227
+204,environment,,,ENVIRONMENT,,,2230,DET,that,DT,that,2228,2283
+205,unknown,,,UNKNOWN,,,2236,PRON,what,WP,what,2228,2283
+206,unknown,,,UNKNOWN,,,2246,DET,a,DT,a,2228,2283
+207,unknown,,,UNKNOWN,,,2257,DET,the,DT,the,2228,2283
+208,unknown,,,UNKNOWN,,,2277,DET,both,DT,both,2228,2283
+209,unknown,,,UNKNOWN,,,2286,DET,a,DT,a,2283,2311
+210,unknown,,,UNKNOWN,,,2297,DET,a,DT,a,2283,2311
+211,unknown,,,UNKNOWN,,,2313,DET,a,DT,a,2311,2349
+212,unknown,,,UNKNOWN,,,2322,DET,each,DT,each,2311,2349
+213,unknown,,,UNKNOWN,,,2325,DET,his smooth,PRP$,his smooth,2311,2349
+214,unknown,,,UNKNOWN,,,2332,DET,such,PDT,such,2311,2349
+215,unknown,,,UNKNOWN,,,2333,DET,a,DT,a,2311,2349
+216,unknown,,,UNKNOWN,,,2338,PRON,they,PRP,they,2311,2349
+217,unknown,,,UNKNOWN,,,2346,DET,their own,PRP$,their own,2311,2349
+218,unknown,,,UNKNOWN,,,2351,DET,a,DT,a,2349,2384
+219,unknown,,,UNKNOWN,,,2371,DET,a,DT,a,2349,2384
+220,unknown,,,UNKNOWN,,,2395,DET,such,PDT,such,2384,2423
+221,unknown,,,UNKNOWN,,,2396,DET,a,DT,a,2384,2423
+222,environment,,,ENVIRONMENT,,,2401,DET,that,WDT,that,2384,2423
+223,narrator,,,NARRATOR,,,2402,PRON,i,PRP,I,2384,2423
+224,environment,,,ENVIRONMENT,,,2408,PRON,it,PRP,it,2384,2423
+225,unknown,,,UNKNOWN,,,2415,DET,a,DT,a,2384,2423
+226,unknown,,,UNKNOWN,,,2447,DET,a,DT,a,2423,2463
+227,environment,,,ENVIRONMENT,,,2454,DET,that,WDT,that,2423,2463
+228,environment,,,ENVIRONMENT,,,2465,PRON,it,PRP,it,2463,2487
+229,unknown,,,UNKNOWN,,,2466,DET,a,DT,a,2463,2487
+230,unknown,,,UNKNOWN,,,2473,DET,a,DT,a,2463,2487
+231,narrator,,,NARRATOR,,,2488,PRON,i,PRP,I,2487,2526
+232,unknown,,,UNKNOWN,,,2491,DET,no,DT,no,2487,2526
+233,unknown,,,UNKNOWN,,,2520,DET,every,DT,every,2487,2526
+234,unknown,,,UNKNOWN,,,2531,DET,which,WDT,which,2526,2554
+235,unknown,,,UNKNOWN,,,2533,DET,a,DT,a,2526,2554
+236,unknown,,,UNKNOWN,,,2540,DET,the,DT,the,2526,2554
+237,unknown,,,UNKNOWN,,,2548,PRON,them,PRP,them,2526,2554
+238,environment,,,ENVIRONMENT,,,2551,DET,that,DT,that,2526,2554
+239,unknown,,,UNKNOWN,,,2573,DET,the,DT,the,2554,2576
+240,unknown,,,UNKNOWN,,,2591,DET,a,DT,a,2576,2619
+241,unknown,,,UNKNOWN,,,2596,DET,the,DT,the,2576,2619
+242,unknown,,,UNKNOWN,,,2600,DET,the,DT,the,2576,2619
+243,unknown,,,UNKNOWN,,,2603,DET,the,DT,the,2576,2619
+244,environment,,,ENVIRONMENT,,,2611,PRON,it,PRP,it,2576,2619
+245,unknown,,,UNKNOWN,,,2615,DET,the,DT,the,2576,2619
+246,unknown,,,UNKNOWN,,,2624,DET,a,DT,a,2620,2634
+247,reader,,,READER,,,2630,PRON,you,PRP,you,2620,2634
+248,environment,,,ENVIRONMENT,,,2641,PRON,it,PRP,it,2634,2648
+249,unknown,,,UNKNOWN,,,2642,DET,a,DT,a,2634,2648
+250,unknown,,,UNKNOWN,,,2665,PRON,what,WP,what,2663,2676
+251,environment,,,ENVIRONMENT,,,2679,DET,this,DT,this,2678,2703
+252,narrator,,,NARRATOR,,,2683,PRON,i,PRP,I,2678,2703
+253,unknown,,,UNKNOWN,,,2685,DET,the,DT,the,2678,2703
+254,unknown,,,UNKNOWN,,,2705,DET,a,DT,a,2703,2722
+255,unknown,,,UNKNOWN,,,2739,DET,a,DT,a,2723,2750
+256,environment,,,ENVIRONMENT,,,2750,DET,that,DT,That,2750,2787
+257,unknown,,,UNKNOWN,,,2752,PRON,what,WP,what,2750,2787
+258,unknown,,,UNKNOWN,,,2762,DET,the,DT,the,2750,2787
+259,unknown,,,UNKNOWN,,,2765,DET,the,DT,the,2750,2787
+260,unknown,,,UNKNOWN,,,2769,DET,the,DT,the,2750,2787
+261,environment,,,ENVIRONMENT,,,2775,PRON,it,PRP,it,2750,2787
+262,unknown,,,UNKNOWN,,,2802,DET,a,DT,a,2797,2816
+263,unknown,,,UNKNOWN,,,2810,DET,no,DT,no,2797,2816
+264,unknown,,,UNKNOWN,,,2825,DET,the,DT,the,2817,2845
+265,unknown,,,UNKNOWN,,,2834,DET,the,DT,the,2817,2845
+266,environment,,,ENVIRONMENT,,,2837,DET,this,DT,this,2817,2845
+267,unknown,,,UNKNOWN,,,2847,DET,a,DT,a,2845,2850
+268,unknown,,,UNKNOWN,,,2860,DET,the,DT,the,2850,2865
+269,reader,,,READER,,,2863,PRON,you,PRP,you,2850,2865
+270,unknown,,,UNKNOWN,,,2869,DET,the,DT,the,2867,2872
+271,unknown,,,UNKNOWN,,,2884,DET,an,DT,an,2872,2901
+272,environment,,,ENVIRONMENT,,,2887,PRON,it,PRP,it,2872,2901
+273,unknown,,,UNKNOWN,,,2891,DET,the,DT,the,2872,2901
+274,unknown,,,UNKNOWN,,,2898,DET,its further,PRP$,its further,2872,2901
+275,unknown,,,UNKNOWN,,,2909,DET,a,DT,a,2901,2942
+276,unknown,,,UNKNOWN,,,2914,PRON,who,WP,who,2901,2942
+277,unknown,,,UNKNOWN,,,2923,DET,any,DT,any,2901,2942
+278,unknown,,,UNKNOWN,,,2929,DET,the,DT,the,2901,2942
+279,unknown,,,UNKNOWN,,,2938,DET,his great,PRP$,his great,2901,2942
+280,reader,,,READER,,,2948,PRON,you,PRP,you,2943,2959
+281,unknown,,,UNKNOWN,,,2963,PRON,what,WP,what,2959,3000
+282,reader,,,READER,,,2983,PRON,you,PRP,you,2959,3000
+283,environment,,,ENVIRONMENT,,,2986,DET,that,DT,that,2959,3000
+284,reader,,,READER,,,2989,PRON,you,PRP,you,2959,3000
+285,environment,,,ENVIRONMENT,,,3033,PRON,it,PRP,it,3032,3051
+286,unknown,,,UNKNOWN,,,3051,PRON,who,WP,Who,3051,3059
+287,reader,,,READER,,,3060,PRON,you,PRP,You,3059,3066
+288,environment,,,ENVIRONMENT,,,3072,PRON,it,PRP,it,3067,3080
+289,environment,,,ENVIRONMENT,,,3115,DET,that,DT,that,3113,3117
+290,environment,,,ENVIRONMENT,,,3125,DET,this,DT,this,3117,3134
+291,environment,,,ENVIRONMENT,,,3134,PRON,it,PRP,It,3134,3153
+292,unknown,,,UNKNOWN,,,3140,DET,a,DT,a,3134,3153
+293,person,,,PERSON,,,3145,PRON,him,PRP,him,3134,3153
+294,unknown,,,UNKNOWN,,,3146,DET,a,DT,a,3134,3153
+295,environment,,,ENVIRONMENT,,,3158,DET,that,DT,that,3155,3168
+296,unknown,,,UNKNOWN,,,3169,DET,the,DT,the,3168,3195
+297,unknown,,,UNKNOWN,,,3173,DET,the,DT,the,3168,3195
+298,unknown,,,UNKNOWN,,,3176,DET,the,DT,the,3168,3195
+299,unknown,,,UNKNOWN,,,3180,DET,the,DT,the,3168,3195
+300,unknown,,,UNKNOWN,,,3185,DET,the,DT,the,3168,3195
+301,unknown,,,UNKNOWN,,,3188,DET,the,DT,the,3168,3195
+302,unknown,,,UNKNOWN,,,3192,DET,the,DT,the,3168,3195
+303,unknown,,,UNKNOWN,,,3200,DET,a,DT,a,3195,3216
+304,unknown,,,UNKNOWN,,,3203,DET,those,DT,those,3195,3216
+305,unknown,,,UNKNOWN,,,3211,DET,the,DT,the,3195,3216
+306,unknown,,,UNKNOWN,,,3245,PRON,us,PRP,us,3243,3258
+307,unknown,,,UNKNOWN,,,3248,DET,the,DT,the,3243,3258
+308,environment,,,ENVIRONMENT,,,3254,PRON,it,PRP,it,3243,3258
+309,reader,,,READER,,,3259,PRON,you,PRP,You,3259,3291
+310,unknown,,,UNKNOWN,,,3264,DET,the,DT,the,3259,3291
+311,reader,,,READER,,,3266,PRON,you,PRP,you,3259,3291
+312,unknown,,,UNKNOWN,,,3270,DET,these,DT,these,3259,3291
+313,unknown,,,UNKNOWN,,,3276,DET,a,DT,a,3259,3291
+314,unknown,,,UNKNOWN,,,3297,DET,the,DT,the,3291,3335
+315,unknown,,,UNKNOWN,,,3320,PRON,what,WP,what,3291,3335
+316,unknown,,,UNKNOWN,,,3324,PRON,we,PRP,we,3291,3335
+317,unknown,,,UNKNOWN,,,3330,DET,the,DT,the,3291,3335
+318,environment,,,ENVIRONMENT,,,3336,DET,that,DT,that,3335,3364
+319,unknown,,,UNKNOWN,,,3341,DET,his right,PRP$,his right,3335,3364
+320,unknown,,,UNKNOWN,,,3366,DET,a,DT,a,3364,3381
+321,unknown,,,UNKNOWN,,,3375,PRON,us,PRP,us,3364,3381
+322,unknown,,,UNKNOWN,,,3400,DET,a,DT,a,3381,3417
+323,unknown,,,UNKNOWN,,,3407,DET,a,DT,a,3381,3417
+324,unknown,,,UNKNOWN,,,3410,DET,which,WDT,which,3381,3417
+325,unknown,,,UNKNOWN,,,3411,PRON,we,PRP,we,3381,3417
+326,unknown,,,UNKNOWN,,,3420,DET,some,DT,some,3417,3473
+327,unknown,,,UNKNOWN,,,3438,DET,an,DT,an,3417,3473
+328,unknown,,,UNKNOWN,,,3449,DET,a,DT,a,3417,3473
+329,unknown,,,UNKNOWN,,,3453,DET,both,DT,both,3417,3473
+330,unknown,,,UNKNOWN,,,3459,DET,a,DT,a,3417,3473
+331,unknown,,,UNKNOWN,,,3467,DET,the,DT,the,3417,3473
+332,unknown,,,UNKNOWN,,,3470,DET,the,DT,the,3417,3473
+333,unknown,,,UNKNOWN,,,3479,DET,a,DT,a,3473,3528
+334,unknown,,,UNKNOWN,,,3484,DET,the,DT,the,3473,3528
+335,unknown,,,UNKNOWN,,,3487,DET,the,DT,the,3473,3528
+336,unknown,,,UNKNOWN,,,3493,DET,a,DT,a,3473,3528
+337,unknown,,,UNKNOWN,,,3498,DET,the,DT,the,3473,3528
+338,unknown,,,UNKNOWN,,,3501,DET,which,WDT,which,3473,3528
+339,unknown,,,UNKNOWN,,,3517,DET,which,WDT,which,3473,3528
+340,unknown,,,UNKNOWN,,,3524,DET,the,DT,the,3473,3528
+341,unknown,,,UNKNOWN,,,3529,DET,the,DT,the,3528,3544
+342,unknown,,,UNKNOWN,,,3554,DET,my dreadful,PRP$,my dreadful,3544,3566
+343,unknown,,,UNKNOWN,,,3559,DET,the,DT,the,3544,3566
+344,unknown,,,UNKNOWN,,,3573,DET,the,DT,the,3566,3589
+345,unknown,,,UNKNOWN,,,3586,DET,the,DT,the,3566,3589
+346,unknown,,,UNKNOWN,,,3605,DET,the,DT,The,3605,3623
+347,unknown,,,UNKNOWN,,,3611,DET,the,DT,the,3605,3623
+348,environment,,,ENVIRONMENT,,,3614,DET,this,DT,this,3605,3623
+349,environment,,,ENVIRONMENT,,,3623,PRON,it,PRP,It,3623,3651
+350,unknown,,,UNKNOWN,,,3635,DET,the,DT,the,3623,3651
+351,unknown,,,UNKNOWN,,,3638,DET,a,DT,a,3623,3651
+352,unknown,,,UNKNOWN,,,3645,DET,a,DT,a,3623,3651
+353,environment,,,ENVIRONMENT,,,3652,PRON,it,PRP,it,3651,3663
+354,unknown,,,UNKNOWN,,,3655,DET,the,DT,the,3651,3663
+355,unknown,,,UNKNOWN,,,3664,DET,our already,PRP$,our already,3663,3703
+356,unknown,,,UNKNOWN,,,3674,DET,his good,PRP$,his good,3663,3703
+357,environment,,,ENVIRONMENT,,,3681,PRON,it,PRP,it,3663,3703
+358,unknown,,,UNKNOWN,,,3686,DET,the,DT,the,3663,3703
+359,unknown,,,UNKNOWN,,,3696,PRON,them,PRP,them,3663,3703
+360,unknown,,,UNKNOWN,,,3698,DET,each,DT,each,3663,3703
+361,unknown,,,UNKNOWN,,,3705,DET,which,WDT,which,3703,3712
+362,unknown,,,UNKNOWN,,,3721,DET,the,DT,the,3712,3761
+363,unknown,,,UNKNOWN,,,3724,DET,his fast,PRP$,his fast,3712,3761
+364,unknown,,,UNKNOWN,,,3731,DET,our usual,PRP$,our usual,3712,3761
+365,unknown,,,UNKNOWN,,,3740,DET,each,DT,each,3712,3761
+366,unknown,,,UNKNOWN,,,3744,DET,my yellow,PRP$,my yellow,3712,3761
+367,unknown,,,UNKNOWN,,,3753,DET,my untouched,PRP$,my untouched,3712,3761
+368,unknown,,,UNKNOWN,,,3758,DET,the,DT,the,3712,3761
+369,unknown,,,UNKNOWN,,,3784,DET,the,DT,the,3761,3793
+370,unknown,,,UNKNOWN,,,3790,DET,the,DT,the,3761,3793
+371,unknown,,,UNKNOWN,,,3797,DET,a,DT,a,3793,3816
+372,unknown,,,UNKNOWN,,,3822,PRON,what,WP,what,3816,3848
+373,unknown,,,UNKNOWN,,,3833,DET,a,DT,a,3816,3848
+374,unknown,,,UNKNOWN,,,3840,DET,which,WDT,which,3816,3848
+375,unknown,,,UNKNOWN,,,3862,DET,a,DT,a,3848,3875
+376,unknown,,,UNKNOWN,,,3872,DET,a,DT,a,3848,3875
+377,unknown,,,UNKNOWN,,,3880,DET,another,DT,another,3875,3915
+378,unknown,,,UNKNOWN,,,3892,DET,a,DT,a,3875,3915
+379,unknown,,,UNKNOWN,,,3915,DET,the,DT,The,3915,3942
+380,unknown,,,UNKNOWN,,,3920,DET,which,WDT,which,3915,3942
+381,unknown,,,UNKNOWN,,,3924,DET,the,DT,the,3915,3942
+382,unknown,,,UNKNOWN,,,3943,PRON,what,WP,What,3943,3961
+383,unknown,,,UNKNOWN,,,3945,DET,the,DT,the,3943,3961
+384,reader,,,READER,,,3965,PRON,you,PRP,you,3961,3968
+385,unknown,,,UNKNOWN,,,3991,DET,a,DT,a,3987,3994
+386,reader,,,READER,,,3999,PRON,you,PRP,You,3999,4010
+387,unknown,,,UNKNOWN,,,4011,PRON,what,WP,What,4011,4017
+388,unknown,,,UNKNOWN,,,4013,DET,the,DT,the,4011,4017
+389,reader,,,READER,,,4029,PRON,you,PRP,you,4028,4054
+390,unknown,,,UNKNOWN,,,4032,DET,any,DT,any,4028,4054
+391,environment,,,ENVIRONMENT,,,4068,DET,this,DT,this,4067,4115
+392,unknown,,,UNKNOWN,,,4087,DET,the,DT,the,4067,4115
+393,unknown,,,UNKNOWN,,,4094,DET,a,DT,a,4067,4115
+394,unknown,,,UNKNOWN,,,4098,DET,the,DT,the,4067,4115
+395,unknown,,,UNKNOWN,,,4107,DET,the,DT,the,4067,4115
+396,unknown,,,UNKNOWN,,,4122,PRON,what,WP,what,4116,4142
+397,unknown,,,UNKNOWN,,,4124,DET,the,DT,the,4116,4142
+398,reader,,,READER,,,4136,PRON,you,PRP,you,4116,4142
+399,unknown,,,UNKNOWN,,,4149,DET,a,DT,a,4144,4166
+400,unknown,,,UNKNOWN,,,4155,DET,a,DT,a,4144,4166
+401,reader,,,READER,,,4167,PRON,you,PRP,You,4167,4221
+402,unknown,,,UNKNOWN,,,4179,DET,his last,PRP$,his last,4167,4221
+403,unknown,,,UNKNOWN,,,4187,DET,a,DT,a,4167,4221
+404,unknown,,,UNKNOWN,,,4211,DET,the,DT,the,4167,4221
+405,unknown,,,UNKNOWN,,,4218,DET,any,DT,any,4167,4221
+406,unknown,,,UNKNOWN,,,4222,DET,such,PDT,such,4221,4250
+407,unknown,,,UNKNOWN,,,4223,DET,a,DT,a,4221,4250
+408,unknown,,,UNKNOWN,,,4231,DET,the,DT,the,4221,4250
+409,unknown,,,UNKNOWN,,,4234,PRON,us,PRP,us,4221,4250
+410,unknown,,,UNKNOWN,,,4240,DET,"me""such",PDT,"me""such",4221,4250
+411,unknown,,,UNKNOWN,,,4241,DET,a,DT,a,4221,4250
+412,environment,,,ENVIRONMENT,,,4246,DET,that,DT,that,4221,4250
+413,reader,,,READER,,,4264,PRON,you,PRP,You,4264,4289
+414,unknown,,,UNKNOWN,,,4300,DET,a,DT,a,4289,4302
+415,unknown,,,UNKNOWN,,,4306,DET,a,DT,a,4302,4331
+416,environment,,,ENVIRONMENT,,,4321,PRON,it,PRP,it,4302,4331
+417,unknown,,,UNKNOWN,,,4323,DET,a,DT,a,4302,4331
+418,reader,,,READER,,,4325,PRON,you,PRP,you,4302,4331
+419,unknown,,,UNKNOWN,,,4335,DET,a,DT,a,4333,4362
+420,unknown,,,UNKNOWN,,,4344,DET,the,DT,the,4333,4362
+421,unknown,,,UNKNOWN,,,4351,DET,the,DT,the,4333,4362
+422,reader,,,READER,,,4356,PRON,you,PRP,You,4333,4362
+423,unknown,,,UNKNOWN,,,4374,DET,a,DT,a,4364,4398
+424,unknown,,,UNKNOWN,,,4382,DET,a,DT,a,4364,4398
+425,unknown,,,UNKNOWN,,,4387,DET,the,DT,the,4364,4398
+426,unknown,,,UNKNOWN,,,4391,DET,a,DT,a,4364,4398
+427,unknown,,,UNKNOWN,,,4399,DET,the,DT,the,4398,4431
+428,environment,,,ENVIRONMENT,,,4407,DET,this,DT,this,4398,4431
+429,unknown,,,UNKNOWN,,,4414,DET,a,DT,a,4398,4431
+430,unknown,,,UNKNOWN,,,4427,DET,a,DT,a,4398,4431
+431,unknown,,,UNKNOWN,,,4433,DET,the,DT,the,4431,4470
+432,unknown,,,UNKNOWN,,,4438,DET,a,DT,a,4431,4470
+433,environment,,,ENVIRONMENT,,,4441,DET,this,DT,this,4431,4470
+434,unknown,,,UNKNOWN,,,4444,DET,which,WDT,which,4431,4470
+435,unknown,,,UNKNOWN,,,4450,DET,my greater,PRP$,my greater,4431,4470
+436,unknown,,,UNKNOWN,,,4461,DET,a,DT,a,4431,4470
+437,unknown,,,UNKNOWN,,,4467,DET,a,DT,a,4431,4470
+438,unknown,,,UNKNOWN,,,4473,DET,half,PDT,half,4470,4502
+439,unknown,,,UNKNOWN,,,4474,DET,a,DT,a,4470,4502
+440,unknown,,,UNKNOWN,,,4496,DET,the,DT,the,4470,4502
+441,person,25.0,PROPN,pip,NNP,Pip,25,PROPN,pip,NNP,Pip,0,27
+442,person,25.0,PROPN,pip,NNP,Pip,39,PROPN,pip,NNP,Pip,27,42
+443,narrator,29.0,PRON,i,PRP,I,29,PRON,i,PRP,I,27,42
+444,narrator,29.0,PRON,i,PRP,I,31,PRON,myself,PRP,myself,27,42
+445,narrator,29.0,PRON,i,PRP,I,42,PRON,i,PRP,I,42,59
+446,narrator,29.0,PRON,i,PRP,I,67,PRON,i,PRP,I,66,107
+447,narrator,29.0,PRON,i,PRP,I,117,PRON,me,PRP,me,107,137
+448,narrator,29.0,PRON,i,PRP,I,154,PRON,i,PRP,I,137,166
+449,narrator,29.0,PRON,i,PRP,I,218,PRON,i,PRP,I,166,253
+450,narrator,29.0,PRON,i,PRP,I,224,PRON,i,PRP,I,166,253
+451,person,59.0,PROPN,joe gargery,NNP,"Joe Gargery, who married the blacksmith",59,PROPN,joe gargery,NNP,"Joe Gargery, who married the blacksmith",59,66
+452,person,59.0,PROPN,joe gargery,NNP,"Joe Gargery, who married the blacksmith",82,PRON,them,PRP,them,66,107
+453,person,59.0,PROPN,joe gargery,NNP,"Joe Gargery, who married the blacksmith",98,PRON,they,PRP,they,66,107
+454,unknown,228.0,PRON,they,PRP,they,228,PRON,they,PRP,they,166,253
+455,unknown,228.0,PRON,they,PRP,they,245,PRON,them,PRP,them,166,253
+456,narrator,288.0,PRON,me,PRP,me,288,PRON,me,PRP,me,275,296
+457,narrator,288.0,PRON,me,PRP,me,300,PRON,i,PRP,I,296,437
+458,environment,399.0,NOUN,river,NN,the river,398,NOUN,river,NN,the river,296,437
+459,environment,399.0,NOUN,river,NN,the river,1928,NOUN,river,NN,the river,1915,1971
+460,environment,399.0,NOUN,river,NN,the river,1991,NOUN,river,NN,the river,1971,2026
+461,environment,399.0,NOUN,river,NN,the river,2030,NOUN,river,NN,the river,2026,2100
+462,reader,466.0,PRON,you,PRP,you,466,PRON,you,PRP,you,463,476
+463,reader,466.0,PRON,you,PRP,you,471,PRON,i,PRP,I,463,476
+464,person,582.0,NOUN,sir,NN,sir,568,PRON,me,PRP,me,514,574
+465,person,582.0,NOUN,sir,NN,sir,582,NOUN,sir,NN,sir,577,590
+466,person,582.0,NOUN,sir,NN,sir,585,PRON,i,PRP,I,577,590
+467,person,582.0,NOUN,sir,NN,sir,597,NOUN,sir,NN,sir,591,601
+468,person,582.0,NOUN,sir,NN,sir,608,NOUN,man,NN,the man,601,611
+469,person,582.0,NOUN,sir,NN,sir,634,PRON,me,PRP,me,623,636
+470,person,582.0,NOUN,sir,NN,sir,648,NOUN,sir,NN,sir,646,650
+471,person,582.0,NOUN,sir,NN,sir,661,NOUN,man,NN,the man,652,664
+472,person,582.0,NOUN,sir,NN,sir,698,NOUN,man,NN,The man,698,718
+473,person,582.0,NOUN,sir,NN,sir,737,PRON,he,PRP,he,729,789
+474,person,582.0,NOUN,sir,NN,sir,744,PRON,he,PRP,he,729,789
+475,person,582.0,NOUN,sir,NN,sir,782,PRON,he,PRP,he,729,789
+476,person,582.0,NOUN,sir,NN,sir,796,NOUN,man,NN,the man,789,811
+477,person,582.0,NOUN,sir,NN,sir,806,PRON,you,PRP,you,789,811
+478,environment,595.0,PRON,it,PRP,it,595,PRON,it,PRP,it,591,601
+479,environment,595.0,PRON,it,PRP,it,638,PRON,it,PRP,it,637,641
+480,narrator,671.0,PRON,i,PRP,I,671,PRON,i,PRP,I,669,698
+481,narrator,671.0,PRON,i,PRP,I,704,PRON,me,PRP,me,698,718
+482,narrator,671.0,PRON,i,PRP,I,710,PRON,me,PRP,me,698,718
+483,narrator,671.0,PRON,i,PRP,I,752,PRON,me,PRP,me,729,789
+484,narrator,671.0,PRON,i,PRP,I,755,PRON,i,PRP,I,729,789
+485,narrator,671.0,PRON,i,PRP,I,769,PRON,i,PRP,I,729,789
+486,narrator,671.0,PRON,i,PRP,I,772,PRON,i,PRP,I,729,789
+487,narrator,671.0,PRON,i,PRP,I,813,PRON,i,PRP,I,813,834
+488,narrator,671.0,PRON,i,PRP,I,820,PRON,i,PRP,I,813,834
+489,narrator,671.0,PRON,i,PRP,I,836,PRON,me,PRP,me,835,858
+490,narrator,671.0,PRON,i,PRP,I,838,PRON,i,PRP,I,835,858
+491,narrator,671.0,PRON,i,PRP,I,842,PRON,em,PRP,em,835,858
+492,narrator,671.0,PRON,i,PRP,I,859,PRON,i,PRP,I,858,866
+493,narrator,671.0,PRON,i,PRP,I,868,PRON,i,PRP,I,868,907
+494,narrator,671.0,PRON,i,PRP,I,888,PRON,me,PRP,me,868,907
+495,narrator,671.0,PRON,i,PRP,I,894,PRON,myself,PRP,myself,868,907
+496,narrator,671.0,PRON,i,PRP,I,902,PRON,myself,PRP,myself,868,907
+497,narrator,671.0,PRON,i,PRP,I,914,NOUN,man,NN,the man,907,917
+498,narrator,671.0,PRON,i,PRP,I,954,PRON,i,PRP,I,949,958
+499,environment,695.0,NOUN,church,NN,the church,694,NOUN,church,NN,the church,669,698
+500,environment,695.0,NOUN,church,NN,the church,730,NOUN,church,NN,the church,729,789
+501,environment,695.0,NOUN,church,NN,the church,734,PRON,itself,PRP,itself,729,789
+502,environment,695.0,NOUN,church,NN,the church,763,NOUN,church,NN,the church,729,789
+503,environment,695.0,NOUN,church,NN,the church,767,PRON,itself,PRP,itself,729,789
+504,environment,725.0,NOUN,piece,NN,a piece of bread,724,NOUN,piece,NN,a piece of bread,718,729
+505,environment,725.0,NOUN,piece,NN,a piece of bread,746,PRON,it,PRP,it,729,789
+506,person,873.0,PRON,he,PRP,he,873,PRON,he,PRP,he,868,907
+507,person,873.0,PRON,he,PRP,he,885,PRON,he,PRP,he,868,907
+508,person,927.0,NOUN,sir,NN,sir,927,NOUN,sir,NN,sir,925,948
+509,person,927.0,NOUN,sir,NN,sir,932,PRON,he,PRP,He,925,948
+510,person,927.0,NOUN,sir,NN,sir,951,NOUN,sir,NN,sir,949,958
+511,person,927.0,NOUN,sir,NN,sir,973,PRON,he,PRP,he,968,978
+512,person,927.0,NOUN,sir,NN,sir,991,NOUN,sir,NN,sir,989,997
+513,person,927.0,NOUN,sir,NN,sir,998,PRON,him,PRP,him,997,1006
+514,person,927.0,NOUN,sir,NN,sir,1012,PRON,he,PRP,he,1012,1018
+515,person,927.0,NOUN,sir,NN,sir,1034,PRON,i,PRP,I,1019,1040
+516,person,927.0,NOUN,sir,NN,sir,1069,PRON,he,PRP,he,1049,1071
+517,person,927.0,NOUN,sir,NN,sir,1083,PRON,me,PRP,me,1077,1131
+518,person,927.0,NOUN,sir,NN,sir,1087,PRON,he,PRP,he,1077,1131
+519,person,927.0,NOUN,sir,NN,sir,1094,PRON,me,PRP,me,1077,1131
+520,person,927.0,NOUN,sir,NN,sir,1101,PRON,me,PRP,me,1077,1131
+521,person,927.0,NOUN,sir,NN,sir,1106,PRON,he,PRP,he,1077,1131
+522,person,927.0,NOUN,sir,NN,sir,1109,PRON,me,PRP,me,1077,1131
+523,person,927.0,NOUN,sir,NN,sir,1128,PRON,his,PRP,his,1077,1131
+524,person,927.0,NOUN,sir,NN,sir,1137,PRON,he,PRP,he,1132,1153
+525,person,927.0,NOUN,sir,NN,sir,1165,NOUN,sir,NN,sir,1163,1169
+526,person,927.0,NOUN,sir,NN,sir,1182,NOUN,sir,NN,sir,1180,1186
+527,person,927.0,NOUN,sir,NN,sir,1189,PRON,he,PRP,he,1186,1211
+528,person,927.0,NOUN,sir,NN,sir,1191,PRON,me,PRP,me,1186,1211
+529,person,927.0,NOUN,sir,NN,sir,1201,PRON,me,PRP,me,1186,1211
+530,person,927.0,NOUN,sir,NN,sir,1214,PRON,me,PRP,me,1211,1218
+531,person,927.0,NOUN,sir,NN,sir,1219,PRON,he,PRP,He,1219,1224
+532,person,927.0,NOUN,sir,NN,sir,1221,PRON,me,PRP,me,1219,1224
+533,person,927.0,NOUN,sir,NN,sir,1228,PRON,me,PRP,me,1225,1231
+534,person,927.0,NOUN,sir,NN,sir,1232,PRON,he,PRP,He,1232,1237
+535,person,927.0,NOUN,sir,NN,sir,1234,PRON,me,PRP,me,1232,1237
+536,person,927.0,NOUN,sir,NN,sir,1238,PRON,you,PRP,You,1238,1245
+537,person,927.0,NOUN,sir,NN,sir,1240,PRON,'em,PRP,'em,1238,1245
+538,person,927.0,NOUN,sir,NN,sir,1243,PRON,me,PRP,me,1238,1245
+539,person,927.0,NOUN,sir,NN,sir,1246,PRON,he,PRP,He,1246,1251
+540,person,927.0,NOUN,sir,NN,sir,1248,PRON,me,PRP,me,1246,1251
+541,person,927.0,NOUN,sir,NN,sir,1253,PRON,i,PRP,I,1252,1260
+542,person,927.0,NOUN,sir,NN,sir,1261,PRON,he,PRP,He,1261,1267
+543,person,927.0,NOUN,sir,NN,sir,1263,PRON,me,PRP,me,1261,1267
+544,person,927.0,NOUN,sir,NN,sir,1267,PRON,i,PRP,I,1267,1315
+545,person,927.0,NOUN,sir,NN,sir,1276,PRON,i,PRP,I,1267,1315
+546,person,927.0,NOUN,sir,NN,sir,1279,PRON,him,PRP,him,1267,1315
+547,person,927.0,NOUN,sir,NN,sir,1295,PRON,me,PRP,me,1267,1315
+548,person,927.0,NOUN,sir,NN,sir,1302,PRON,i,PRP,I,1267,1315
+549,person,927.0,NOUN,sir,NN,sir,1310,PRON,i,PRP,I,1267,1315
+550,person,927.0,NOUN,sir,NN,sir,1317,PRON,he,PRP,He,1317,1336
+551,person,927.0,NOUN,sir,NN,sir,1319,PRON,me,PRP,me,1317,1336
+552,person,927.0,NOUN,sir,NN,sir,1338,PRON,he,PRP,he,1336,1364
+553,person,927.0,NOUN,sir,NN,sir,1340,PRON,me,PRP,me,1336,1364
+554,person,927.0,NOUN,sir,NN,sir,1367,PRON,me,PRP,me,1364,1380
+555,person,927.0,NOUN,sir,NN,sir,1385,PRON,me,PRP,me,1380,1394
+556,person,927.0,NOUN,sir,NN,sir,1420,PRON,me,PRP,me,1394,1435
+557,person,927.0,NOUN,sir,NN,sir,1469,PRON,i,PRP,I,1467,1481
+558,person,927.0,NOUN,sir,NN,sir,1478,PRON,i,PRP,I,1467,1481
+559,person,927.0,NOUN,sir,NN,sir,1488,PRON,me,PRP,me,1481,1501
+560,person,927.0,NOUN,sir,NN,sir,1496,PRON,i,PRP,I,1481,1501
+561,person,927.0,NOUN,sir,NN,sir,1507,PRON,i,PRP,I,1501,1510
+562,environment,1097.0,NOUN,arms,NNS,both arms,1096,NOUN,arms,NNS,both arms,1077,1131
+563,environment,1097.0,NOUN,arms,NNS,both arms,1935,NOUN,arms,NNS,both arms,1915,1971
+564,environment,1361.0,NOUN,terms,NNS,these fearful terms,1359,NOUN,terms,NNS,these fearful terms,1336,1364
+565,environment,1361.0,NOUN,terms,NNS,these fearful terms,1377,PRON,them,PRP,them,1364,1380
+566,reader,1365.0,PRON,you,PRP,You,1365,PRON,you,PRP,You,1364,1380
+567,reader,1365.0,PRON,you,PRP,You,1380,PRON,you,PRP,You,1380,1394
+568,reader,1365.0,PRON,you,PRP,You,1394,PRON,you,PRP,You,1394,1435
+569,reader,1365.0,PRON,you,PRP,You,1399,PRON,you,PRP,you,1394,1435
+570,reader,1365.0,PRON,you,PRP,You,1413,DET,your,PRP$,your,1394,1435
+571,reader,1365.0,PRON,you,PRP,You,1428,PRON,you,PRP,you,1394,1435
+572,reader,1365.0,PRON,you,PRP,You,1435,PRON,you,PRP,You,1435,1467
+573,reader,1365.0,PRON,you,PRP,You,1475,PRON,you,PRP,you,1467,1481
+574,person,1485.0,NOUN,man,NN,a young man hid with me,1483,NOUN,man,NN,a young man hid with me,1481,1501
+575,person,1485.0,NOUN,man,NN,a young man hid with me,1501,NOUN,man,NN,That young man,1501,1510
+576,person,1485.0,NOUN,man,NN,a young man hid with me,1510,NOUN,man,NN,That young man,1510,1535
+577,person,1485.0,NOUN,man,NN,a young man hid with me,1519,PRON,himself,PRP,himself,1510,1535
+578,person,1485.0,NOUN,man,NN,a young man hid with me,1548,NOUN,man,NN,that young man,1535,1552
+579,person,1485.0,NOUN,man,NN,a young man hid with me,2100,NOUN,man,NN,The man,2100,2131
+580,person,1485.0,NOUN,man,NN,a young man hid with me,2111,PRON,he,PRP,he,2100,2131
+581,person,1485.0,NOUN,man,NN,a young man hid with me,2128,PRON,himself,PRP,himself,2100,2131
+582,person,1485.0,NOUN,man,NN,a young man hid with me,2133,PRON,me,PRP,me,2131,2163
+583,person,1485.0,NOUN,man,NN,a young man hid with me,2138,PRON,i,PRP,I,2131,2163
+584,person,1485.0,NOUN,man,NN,a young man hid with me,2144,PRON,i,PRP,I,2131,2163
+585,person,1485.0,NOUN,man,NN,a young man hid with me,2153,PRON,him,PRP,him,2131,2163
+586,person,1485.0,NOUN,man,NN,a young man hid with me,2155,PRON,i,PRP,I,2131,2163
+587,person,1485.0,NOUN,man,NN,a young man hid with me,2163,PRON,i,PRP,I,2163,2181
+588,person,1485.0,NOUN,man,NN,a young man hid with me,2168,NOUN,man,NN,the horrible young man,2163,2181
+589,person,1485.0,NOUN,man,NN,a young man hid with me,2179,PRON,him,PRP,him,2163,2181
+590,person,1485.0,NOUN,man,NN,a young man hid with me,2183,PRON,i,PRP,I,2181,2195
+591,person,1485.0,NOUN,man,NN,a young man hid with me,2205,PRON,i,PRP,I,2197,2227
+592,person,1485.0,NOUN,man,NN,a young man hid with me,2222,PRON,me,PRP,me,2197,2227
+593,person,1485.0,NOUN,man,NN,a young man hid with me,2235,PRON,myself,PRP,myself,2228,2283
+594,person,1485.0,NOUN,man,NN,a young man hid with me,2268,PRON,me,PRP,me,2228,2283
+595,person,1485.0,NOUN,man,NN,a young man hid with me,2270,PRON,i,PRP,I,2228,2283
+596,person,1485.0,NOUN,man,NN,a young man hid with me,2275,PRON,i,PRP,I,2228,2283
+597,person,1485.0,NOUN,man,NN,a young man hid with me,2295,PRON,i,PRP,I,2283,2311
+598,person,1541.0,NOUN,boy,NN,a boy,1540,NOUN,boy,NN,a boy,1535,1552
+599,person,1541.0,NOUN,boy,NN,a boy,1546,PRON,himself,PRP,himself,1535,1552
+600,person,1553.0,NOUN,boy,NN,A boy,1552,NOUN,boy,NN,A boy,1552,1599
+601,person,1553.0,NOUN,boy,NN,A boy,1566,PRON,himself,PRP,himself,1552,1599
+602,person,1553.0,NOUN,boy,NN,A boy,1577,PRON,himself,PRP,himself,1552,1599
+603,person,1553.0,NOUN,boy,NN,A boy,1584,NOUN,man,NN,young man,1552,1599
+604,person,1553.0,NOUN,boy,NN,A boy,1593,PRON,him,PRP,him,1552,1599
+605,person,1553.0,NOUN,boy,NN,A boy,1596,PRON,him,PRP,him,1552,1599
+606,person,1553.0,NOUN,boy,NN,A boy,1603,NOUN,man,NN,that young man,1599,1619
+607,person,1553.0,NOUN,boy,NN,A boy,1626,NOUN,man,NN,that young man,1619,1633
+608,person,1553.0,NOUN,boy,NN,A boy,1648,PRON,him,PRP,him,1642,1678
+609,person,1553.0,NOUN,boy,NN,A boy,1656,PRON,him,PRP,him,1642,1678
+610,person,1553.0,NOUN,boy,NN,A boy,1670,PRON,him,PRP,him,1642,1678
+611,person,1553.0,NOUN,boy,NN,A boy,1690,NOUN,man,NN,the man,1678,1694
+612,person,1553.0,NOUN,boy,NN,A boy,1699,PRON,he,PRP,he,1694,1704
+613,person,1553.0,NOUN,boy,NN,A boy,1708,PRON,he,PRP,he,1705,1746
+614,person,1553.0,NOUN,boy,NN,A boy,1722,NOUN,man,NN,that young man,1705,1746
+615,person,1553.0,NOUN,boy,NN,A boy,1753,PRON,he,PRP,he,1746,1764
+616,person,1553.0,NOUN,boy,NN,A boy,1757,PRON,him,PRP,him,1746,1764
+617,person,1553.0,NOUN,boy,NN,A boy,1783,PRON,he,PRP,he,1778,1808
+618,person,1553.0,NOUN,boy,NN,A boy,1792,PRON,himself,PRP,himself,1778,1808
+619,person,1553.0,NOUN,boy,NN,A boy,1798,PRON,himself,PRP,himself,1778,1808
+620,person,1553.0,NOUN,boy,NN,A boy,1811,PRON,him,PRP,him,1808,1864
+621,person,1553.0,NOUN,boy,NN,A boy,1830,PRON,he,PRP,he,1808,1864
+622,person,1553.0,NOUN,boy,NN,A boy,1837,PRON,he,PRP,he,1808,1864
+623,person,1553.0,NOUN,boy,NN,A boy,1861,PRON,him,PRP,him,1808,1864
+624,person,1553.0,NOUN,boy,NN,A boy,1865,PRON,he,PRP,he,1864,1895
+625,person,1553.0,NOUN,boy,NN,A boy,1872,PRON,he,PRP,he,1864,1895
+626,person,1553.0,NOUN,boy,NN,A boy,1893,PRON,me,PRP,me,1864,1895
+627,person,1553.0,NOUN,boy,NN,A boy,1896,PRON,i,PRP,I,1895,1915
+628,person,1553.0,NOUN,boy,NN,A boy,1898,PRON,him,PRP,him,1895,1915
+629,person,1553.0,NOUN,boy,NN,A boy,1901,PRON,i,PRP,I,1895,1915
+630,person,1553.0,NOUN,boy,NN,A boy,1917,PRON,i,PRP,I,1915,1971
+631,person,1553.0,NOUN,boy,NN,A boy,1924,PRON,him,PRP,him,1915,1971
+632,person,1553.0,NOUN,boy,NN,A boy,1933,PRON,himself,PRP,himself,1915,1971
+633,person,1553.0,NOUN,boy,NN,A boy,1983,PRON,i,PRP,I,1971,2026
+634,person,1553.0,NOUN,boy,NN,A boy,1988,PRON,him,PRP,him,1971,2026
+635,person,1553.0,NOUN,boy,NN,A boy,2032,PRON,i,PRP,I,2026,2100
+636,narrator,1599.0,PRON,i,PRP,I,1599,PRON,i,PRP,I,1599,1619
+637,narrator,1599.0,PRON,i,PRP,I,1619,PRON,i,PRP,I,1619,1633
+638,narrator,1599.0,PRON,i,PRP,I,1637,PRON,you,PRP,you,1633,1640
+639,narrator,1599.0,PRON,i,PRP,I,1642,PRON,i,PRP,I,1642,1678
+640,narrator,1599.0,PRON,i,PRP,I,1645,PRON,i,PRP,I,1642,1678
+641,narrator,1599.0,PRON,i,PRP,I,1653,PRON,i,PRP,I,1642,1678
+642,narrator,1599.0,PRON,i,PRP,I,1662,PRON,i,PRP,I,1642,1678
+643,narrator,1599.0,PRON,i,PRP,I,1666,PRON,i,PRP,I,1642,1678
+644,narrator,1599.0,PRON,i,PRP,I,1694,PRON,i,PRP,I,1694,1704
+645,narrator,1599.0,PRON,i,PRP,I,1701,PRON,me,PRP,me,1694,1704
+646,narrator,1599.0,PRON,i,PRP,I,1715,PRON,you,PRP,you,1705,1746
+647,narrator,1599.0,PRON,i,PRP,I,1742,PRON,i,PRP,I,1705,1746
+648,narrator,1599.0,PRON,i,PRP,I,1765,PRON,i,PRP,I,1765,1772
+649,narrator,1599.0,PRON,i,PRP,I,1767,PRON,i,PRP,I,1765,1772
+650,narrator,1599.0,PRON,i,PRP,I,1809,PRON,i,PRP,I,1808,1864
+651,reader,1712.0,PRON,you,PRP,you,1712,PRON,you,PRP,you,1705,1746
+652,reader,1712.0,PRON,you,PRP,you,1720,PRON,you,PRP,you,1705,1746
+653,environment,1806.0,NOUN,church wall,NN,the low church wall,1804,NOUN,church wall,NN,the low church wall,1778,1808
+654,environment,1806.0,NOUN,church wall,NN,the low church wall,1868,NOUN,church wall,NN,the low church wall,1864,1895
+655,environment,1806.0,NOUN,church wall,NN,the low church wall,1875,PRON,it,PRP,it,1864,1895
+656,environment,1951.0,NOUN,marshes,NNS,the marshes here,1950,NOUN,marshes,NNS,the marshes here,1915,1971
+657,environment,1951.0,NOUN,marshes,NNS,the marshes here,1971,NOUN,marshes,NNS,The marshes,1971,2026
+658,environment,2079.0,PRON,it,PRP,it,2079,PRON,it,PRP,it,2026,2100
+659,environment,2079.0,PRON,it,PRP,it,2092,PRON,it,PRP,it,2026,2100
+660,person,2098.0,NOUN,pirate,NN,a pirate,2097,NOUN,pirate,NN,a pirate,2026,2100
+661,person,2098.0,NOUN,pirate,NN,a pirate,2113,NOUN,pirate,NN,the pirate,2100,2131
+662,environment,2147.0,NOUN,cattle,NNS,the cattle,2146,NOUN,cattle,NNS,the cattle,2131,2163
+663,environment,2147.0,NOUN,cattle,NNS,the cattle,2158,PRON,they,PRP,they,2131,2163
+664,person,2214.0,PRON,herself,PRP,herself,2214,PRON,herself,PRP,herself,2197,2227
+665,person,2214.0,PRON,herself,PRP,herself,2219,PRON,she,PRP,she,2197,2227
+666,person,2214.0,PRON,herself,PRP,herself,2243,PRON,her,PRP,her,2228,2283
+667,person,2214.0,PRON,herself,PRP,herself,2283,PRON,she,PRP,She,2283,2311
+668,person,2214.0,PRON,herself,PRP,herself,2301,PRON,she,PRP,she,2283,2311
+669,person,2214.0,PRON,herself,PRP,herself,2307,PRON,her,PRP,her,2283,2311
+670,environment,2238.0,NOUN,expression,NN,the expression,2237,NOUN,expression,NN,the expression,2228,2283
+671,environment,2238.0,NOUN,expression,NN,the expression,2261,PRON,it,PRP,it,2228,2283
+672,person,2273.0,PROPN,joe gargery,NNP,Joe Gargery,2273,PROPN,joe gargery,NNP,Joe Gargery,2228,2283
+673,person,2273.0,PROPN,joe gargery,NNP,Joe Gargery,2305,PROPN,joe gargery,NNP,Joe Gargery,2283,2311
+674,person,2311.0,PROPN,joe,NNP,Joe,2311,PROPN,joe,NNP,Joe,2311,2349
+675,person,2311.0,PROPN,joe,NNP,Joe,2349,PRON,he,PRP,He,2349,2384
+676,person,2311.0,PROPN,joe,NNP,Joe,2477,PROPN,joe,NNP,Joe,2463,2487
+677,person,2311.0,PROPN,joe,NNP,Joe,2568,PROPN,joe,NNP,Joe,2554,2576
+678,person,2311.0,PROPN,joe,NNP,Joe,2576,PROPN,joe,NNP,Joe,2576,2619
+679,person,2311.0,PROPN,joe,NNP,Joe,2589,PROPN,joe,NNP,Joe,2576,2619
+680,person,2311.0,PROPN,joe,NNP,Joe,2608,PRON,him,PRP,him,2576,2619
+681,person,2311.0,PROPN,joe,NNP,Joe,2661,PROPN,joe,NNP,Joe,2654,2663
+682,person,2311.0,PROPN,joe,NNP,Joe,2729,PROPN,joe,NNP,Joe,2723,2750
+683,person,2311.0,PROPN,joe,NNP,Joe,2758,PROPN,joe,NNP,Joe,2750,2787
+684,person,2311.0,PROPN,joe,NNP,Joe,2794,PROPN,joe,NNP,Joe,2787,2796
+685,person,2311.0,PROPN,joe,NNP,Joe,2800,PRON,him,PRP,him,2797,2816
+686,person,2311.0,PROPN,joe,NNP,Joe,2821,PROPN,joe,NNP,Joe,2817,2845
+687,person,2311.0,PROPN,joe,NNP,Joe,3301,PROPN,joe,NNP,Joe,3291,3335
+688,person,2311.0,PROPN,joe,NNP,Joe,3310,PRON,he,PRP,he,3291,3335
+689,person,2311.0,PROPN,joe,NNP,Joe,3316,PRON,himself,PRP,himself,3291,3335
+690,person,2311.0,PROPN,joe,NNP,Joe,3338,PRON,he,PRP,he,3335,3364
+691,person,2311.0,PROPN,joe,NNP,Joe,3518,PROPN,joe,NNP,Joe,3473,3528
+692,person,2311.0,PROPN,joe,NNP,Joe,3659,PROPN,joe,NNP,the unconscious Joe,3651,3663
+693,person,2311.0,PROPN,joe,NNP,Joe,3661,PROPN,joe,NNP,Joe,3651,3663
+694,person,2311.0,PROPN,joe,NNP,Joe,3714,PROPN,joe,NNP,Joe,3712,3761
+695,person,2311.0,PROPN,joe,NNP,Joe,3736,PRON,he,PRP,he,3712,3761
+696,person,2311.0,PROPN,joe,NNP,Joe,3800,PROPN,joe,NNP,Joe,3793,3816
+697,person,2311.0,PROPN,joe,NNP,Joe,3816,PROPN,joe,NNP,Joe,3816,3848
+698,person,2311.0,PROPN,joe,NNP,Joe,3823,PRON,he,PRP,he,3816,3848
+699,person,2311.0,PROPN,joe,NNP,Joe,3841,PRON,he,PRP,he,3816,3848
+700,person,2311.0,PROPN,joe,NNP,Joe,3848,PRON,he,PRP,He,3848,3875
+701,person,2311.0,PROPN,joe,NNP,Joe,3875,PRON,he,PRP,He,3875,3915
+702,person,2311.0,PROPN,joe,NNP,Joe,3902,PRON,me,PRP,me,3875,3915
+703,person,2311.0,PROPN,joe,NNP,Joe,3905,PRON,he,PRP,he,3875,3915
+704,person,2311.0,PROPN,joe,NNP,Joe,3921,PROPN,joe,NNP,Joe,3915,3942
+705,person,2311.0,PROPN,joe,NNP,Joe,3931,PRON,me,PRP,me,3915,3942
+706,person,2311.0,PROPN,joe,NNP,Joe,3962,PRON,i,PRP,I,3961,3968
+707,person,2311.0,PROPN,joe,NNP,Joe,3970,PROPN,joe,NNP,Joe,3968,3981
+708,person,2311.0,PROPN,joe,NNP,Joe,3975,PRON,me,PRP,me,3968,3981
+709,person,2311.0,PROPN,joe,NNP,Joe,3987,PRON,you,PRP,You,3987,3994
+710,person,2311.0,PROPN,joe,NNP,Joe,3990,PRON,yourself,PRP,yourself,3987,3994
+711,person,2311.0,PROPN,joe,NNP,Joe,4039,PRON,i,PRP,I,4028,4054
+712,person,2311.0,PROPN,joe,NNP,Joe,4042,PRON,you,PRP,you,4028,4054
+713,person,2311.0,PROPN,joe,NNP,Joe,4049,PROPN,joe,NNP,Joe,4028,4054
+714,person,2311.0,PROPN,joe,NNP,Joe,4080,PROPN,joe,NNP,Joe,4067,4115
+715,person,2311.0,PROPN,joe,NNP,Joe,4085,PRON,him,PRP,him,4067,4115
+716,person,2311.0,PROPN,joe,NNP,Joe,4101,PRON,him,PRP,him,4067,4115
+717,person,2311.0,PROPN,joe,NNP,Joe,4144,PROPN,joe,NNP,Joe,4144,4166
+718,person,2311.0,PROPN,joe,NNP,Joe,4174,PROPN,joe,NNP,Joe,4167,4221
+719,person,2311.0,PROPN,joe,NNP,Joe,4272,PROPN,joe,NNP,Joe,4264,4289
+720,person,2311.0,PROPN,joe,NNP,Joe,4470,PROPN,joe,NNP,Joe,4470,4502
+721,person,2311.0,PROPN,joe,NNP,Joe,4489,PRON,he,PRP,he,4470,4502
+722,person,2411.0,PRON,she,PRP,she,2411,PRON,she,PRP,she,2384,2423
+723,person,2411.0,PRON,she,PRP,she,2413,PRON,herself,PRP,herself,2384,2423
+724,person,2411.0,PRON,she,PRP,she,2423,PRON,she,PRP,She,2423,2463
+725,person,2411.0,PRON,she,PRP,she,2463,PRON,she,PRP,She,2463,2487
+726,person,2411.0,PRON,she,PRP,she,2470,PRON,herself,PRP,herself,2463,2487
+727,person,2411.0,PRON,she,PRP,she,2480,PRON,she,PRP,she,2463,2487
+728,person,2411.0,PRON,she,PRP,she,2494,PRON,she,PRP,she,2487,2526
+729,person,2411.0,PRON,she,PRP,she,2506,PRON,she,PRP,she,2487,2526
+730,person,2411.0,PRON,she,PRP,she,2513,PRON,she,PRP,she,2487,2526
+731,environment,2435.0,NOUN,apron,NN,a coarse apron,2433,NOUN,apron,NN,a coarse apron,2423,2463
+732,environment,2435.0,NOUN,apron,NN,a coarse apron,2482,NOUN,apron,NN,this apron,2463,2487
+733,environment,2498.0,PRON,it,PRP,it,2498,PRON,it,PRP,it,2487,2526
+734,environment,2498.0,PRON,it,PRP,it,2509,PRON,it,PRP,it,2487,2526
+735,environment,2498.0,PRON,it,PRP,it,2518,PRON,it,PRP,it,2487,2526
+736,environment,2527.0,NOUN,forge,NN,Joe's forge,2526,NOUN,forge,NN,Joe's forge,2526,2554
+737,environment,2527.0,NOUN,forge,NN,Joe's forge,2562,NOUN,forge,NN,the forge,2554,2576
+738,narrator,2555.0,PRON,i,PRP,I,2555,PRON,i,PRP,I,2554,2576
+739,narrator,2555.0,PRON,i,PRP,I,2578,PRON,i,PRP,I,2576,2619
+740,narrator,2555.0,PRON,i,PRP,I,2594,PRON,me,PRP,me,2576,2619
+741,narrator,2555.0,PRON,i,PRP,I,2598,PRON,i,PRP,I,2576,2619
+742,environment,2560.0,NOUN,churchyard,NN,the churchyard,2559,NOUN,churchyard,NN,the churchyard,2554,2576
+743,environment,2560.0,NOUN,churchyard,NN,the churchyard,3008,NOUN,churchyard,NN,the churchyard,3002,3024
+744,environment,2560.0,NOUN,churchyard,NN,the churchyard,3024,PROPN,churchyard,NNP,"""Churchyard",3024,3031
+745,environment,2560.0,NOUN,churchyard,NN,the churchyard,3042,NOUN,churchyard,NN,the churchyard,3032,3051
+746,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2620,PROPN,mrs. joe,NNP,Mrs. Joe,2620,2634
+747,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2635,PRON,she,PRP,she,2634,2648
+748,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2650,PRON,she,PRP,she,2648,2654
+749,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2669,PRON,she,PRP,she,2663,2676
+750,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2674,PRON,her,PRP,her,2663,2676
+751,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2723,PRON,she,PRP,She,2723,2750
+752,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2733,PRON,she,PRP,she,2723,2750
+753,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2737,PRON,she,PRP,she,2723,2750
+754,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2745,PRON,she,PRP,she,2723,2750
+755,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2753,PRON,she,PRP,she,2750,2787
+756,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2778,PRON,she,PRP,she,2750,2787
+757,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2789,PRON,she,PRP,she,2787,2796
+758,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2830,PRON,she,PRP,she,2817,2845
+759,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2845,PRON,she,PRP,She,2845,2850
+760,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2901,PRON,she,PRP,She,2901,2942
+761,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,2954,PROPN,mrs. joe,NNP,Mrs. Joe,2943,2959
+762,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,3221,PROPN,mrs. joe,NNP,Mrs. Joe,3216,3228
+763,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,3349,PROPN,mrs. joe,NNP,Mrs. Joe,3335,3364
+764,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,3352,DET,his blue,PRP$,his blue,3335,3364
+765,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,4281,PROPN,mrs. joe,NNP,Mrs. Joe,4264,4289
+766,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,4379,PROPN,mrs. joe,NNP,Mrs. Joe,4364,4398
+767,person,2620.0,PROPN,mrs. joe,NNP,Mrs. Joe,4454,PROPN,mrs. joe,NNP,Mrs. Joe,4431,4470
+768,person,2632.0,PROPN,pip,NNP,Pip,2632,PROPN,pip,NNP,Pip,2620,2634
+769,person,2632.0,PROPN,pip,NNP,Pip,2783,PROPN,pip,NNP,Pip,2750,2787
+770,person,2632.0,PROPN,pip,NNP,Pip,4170,PROPN,pip,NNP,Pip,4167,4221
+771,person,2672.0,PROPN,tickler,NNP,Tickler,2672,PROPN,tickler,NNP,Tickler,2663,2676
+772,person,2672.0,PROPN,tickler,NNP,Tickler,2703,PROPN,tickler,NNP,Tickler,2703,2722
+773,person,2672.0,PROPN,tickler,NNP,Tickler,2718,DET,my tickled,PRP$,my tickled,2703,2722
+774,person,2672.0,PROPN,tickler,NNP,Tickler,2742,PROPN,tickler,NNP,Tickler,2723,2750
+775,person,2672.0,PROPN,tickler,NNP,Tickler,2896,PROPN,tickler,NNP,Tickler,2872,2901
+776,person,2672.0,PROPN,tickler,NNP,Tickler,3224,PROPN,tickler,NNP,Tickler,3216,3228
+777,environment,2701.0,NOUN,fire,NN,the fire,2700,NOUN,fire,NN,the fire,2678,2703
+778,environment,2701.0,NOUN,fire,NN,the fire,3165,NOUN,fire,NN,the fire,3155,3168
+779,narrator,2797.0,PRON,i,PRP,I,2797,PRON,i,PRP,I,2797,2816
+780,narrator,2797.0,PRON,i,PRP,I,2867,PRON,i,PRP,I,2867,2872
+781,narrator,2797.0,PRON,i,PRP,I,2921,PRON,me,PRP,me,2901,2942
+782,narrator,2797.0,PRON,i,PRP,I,2927,PRON,me,PRP,me,2901,2942
+783,narrator,2797.0,PRON,i,PRP,I,2934,PRON,me,PRP,me,2901,2942
+784,narrator,2797.0,PRON,i,PRP,I,2945,PRON,you,PRP,you,2943,2959
+785,narrator,2797.0,PRON,i,PRP,I,2961,PRON,me,PRP,me,2959,3000
+786,narrator,2797.0,PRON,i,PRP,I,2964,PRON,you,PRP,you,2959,3000
+787,narrator,2797.0,PRON,i,PRP,I,2970,PRON,me,PRP,me,2959,3000
+788,narrator,2797.0,PRON,i,PRP,I,2980,PRON,i,PRP,I,2959,3000
+789,narrator,2797.0,PRON,i,PRP,I,3021,PRON,myself,PRP,myself,3002,3024
+790,narrator,2797.0,PRON,i,PRP,I,3036,PRON,me,PRP,me,3032,3051
+791,narrator,2797.0,PRON,i,PRP,I,3070,PRON,i,PRP,I,3067,3080
+792,narrator,2797.0,PRON,i,PRP,I,3074,PRON,i,PRP,I,3067,3080
+793,narrator,2797.0,PRON,i,PRP,I,3085,PRON,i,PRP,I,3085,3094
+794,narrator,2797.0,PRON,i,PRP,I,3089,PRON,i,PRP,I,3085,3094
+795,narrator,2797.0,PRON,i,PRP,I,3097,PRON,i,PRP,I,3096,3105
+796,narrator,2797.0,PRON,i,PRP,I,3106,PRON,i,PRP,I,3106,3113
+797,narrator,2797.0,PRON,i,PRP,I,3113,PRON,i,PRP,I,3113,3117
+798,narrator,2797.0,PRON,i,PRP,I,3117,PRON,i,PRP,I,3117,3134
+799,narrator,2797.0,PRON,i,PRP,I,3121,PRON,i,PRP,I,3117,3134
+800,narrator,2797.0,PRON,i,PRP,I,3128,PRON,mine,PRP,mine,3117,3134
+801,narrator,2797.0,PRON,i,PRP,I,3131,PRON,you,PRP,you,3117,3134
+802,narrator,2797.0,PRON,i,PRP,I,3161,PRON,i,PRP,I,3155,3168
+803,narrator,2797.0,PRON,i,PRP,I,3195,PRON,i,PRP,I,3195,3216
+804,narrator,2797.0,PRON,i,PRP,I,3209,PRON,me,PRP,me,3195,3216
+805,narrator,2797.0,PRON,i,PRP,I,3233,PRON,you,PRP,You,3233,3242
+806,narrator,2797.0,PRON,i,PRP,I,3239,PRON,you,PRP,you,3233,3242
+807,narrator,2797.0,PRON,i,PRP,I,3262,PRON,me,PRP,me,3259,3291
+808,narrator,2797.0,PRON,i,PRP,I,3283,PRON,you,PRP,you,3259,3291
+809,narrator,2797.0,PRON,i,PRP,I,3287,PRON,me,PRP,me,3259,3291
+810,narrator,2797.0,PRON,i,PRP,I,3304,PRON,me,PRP,me,3291,3335
+811,narrator,2797.0,PRON,i,PRP,I,3314,PRON,me,PRP,me,3291,3335
+812,environment,2853.0,NOUN,door,NN,the door,2852,NOUN,door,NN,the door,2850,2865
+813,environment,2853.0,NOUN,door,NN,the door,2877,NOUN,door,NN,the door,2872,2901
+814,person,2995.0,PRON,he,PRP,he,2995,PRON,he,PRP,he,2959,3000
+815,person,2995.0,PRON,he,PRP,he,3003,PRON,i,PRP,I,3002,3024
+816,person,2995.0,PRON,he,PRP,he,3013,PRON,i,PRP,I,3002,3024
+817,person,2995.0,PRON,he,PRP,he,3037,PRON,you,PRP,you,3032,3051
+818,person,2995.0,PRON,he,PRP,he,3053,PRON,you,PRP,you,3051,3059
+819,environment,3103.0,NOUN,my sister,NN,my sister,3103,NOUN,my sister,NN,my sister,3096,3105
+820,environment,3103.0,NOUN,my sister,NN,my sister,3110,PRON,it,PRP,it,3106,3113
+821,person,3292.0,PRON,she,PRP,she,3292,PRON,she,PRP,she,3291,3335
+822,person,3292.0,PRON,she,PRP,she,3294,PRON,herself,PRP,herself,3291,3335
+823,person,3384.0,DET,her left,PRP$,her left,3384,DET,her left,PRP$,her left,3381,3417
+824,person,3384.0,DET,her left,PRP$,her left,3386,PRON,she,PRP,she,3381,3417
+825,person,3384.0,DET,her left,PRP$,her left,3418,PRON,she,PRP,she,3417,3473
+826,person,3384.0,DET,her left,PRP$,her left,3446,PRON,she,PRP,she,3417,3473
+827,person,3384.0,DET,her left,PRP$,her left,3475,PRON,she,PRP,she,3473,3528
+828,person,3384.0,DET,her left,PRP$,her left,3502,PRON,she,PRP,she,3473,3528
+829,environment,3389.0,NOUN,loaf,NN,the loaf,3388,NOUN,loaf,NN,the loaf,3381,3417
+830,environment,3389.0,NOUN,loaf,NN,the loaf,3397,PRON,it,PRP,it,3381,3417
+831,environment,3389.0,NOUN,loaf,NN,the loaf,3403,PRON,it,PRP,it,3381,3417
+832,environment,3389.0,NOUN,loaf,NN,the loaf,3434,NOUN,loaf,NN,the loaf,3417,3473
+833,environment,3389.0,NOUN,loaf,NN,the loaf,3508,NOUN,loaf,NN,the loaf,3473,3528
+834,environment,3429.0,NOUN,knife,NN,a knife,3428,NOUN,knife,NN,a knife,3417,3473
+835,environment,3429.0,NOUN,knife,NN,a knife,3432,PRON,it,PRP,it,3417,3473
+836,environment,3429.0,NOUN,knife,NN,a knife,3456,NOUN,knife,NN,the knife,3417,3473
+837,environment,3429.0,NOUN,knife,NN,a knife,3477,NOUN,knife,NN,the knife,3473,3528
+838,narrator,3523.0,PRON,i,PRP,I,3523,PRON,i,PRP,I,3473,3528
+839,narrator,3523.0,PRON,i,PRP,I,3534,PRON,i,PRP,I,3528,3544
+840,narrator,3523.0,PRON,i,PRP,I,3538,PRON,i,PRP,I,3528,3544
+841,narrator,3523.0,PRON,i,PRP,I,3544,PRON,i,PRP,I,3544,3566
+842,narrator,3523.0,PRON,i,PRP,I,3547,PRON,i,PRP,I,3544,3566
+843,narrator,3523.0,PRON,i,PRP,I,3566,PRON,i,PRP,I,3566,3589
+844,narrator,3523.0,PRON,i,PRP,I,3590,PRON,i,PRP,I,3589,3605
+845,narrator,3523.0,PRON,i,PRP,I,3616,PRON,i,PRP,I,3605,3623
+846,narrator,3523.0,PRON,i,PRP,I,3627,PRON,i,PRP,I,3623,3651
+847,narrator,3523.0,PRON,i,PRP,I,3679,PRON,me,PRP,me,3663,3703
+848,narrator,3523.0,PRON,i,PRP,I,3718,PRON,me,PRP,me,3712,3761
+849,narrator,3523.0,PRON,i,PRP,I,3738,PRON,me,PRP,me,3712,3761
+850,narrator,3523.0,PRON,i,PRP,I,3764,PRON,i,PRP,I,3761,3793
+851,narrator,3523.0,PRON,i,PRP,I,3770,PRON,i,PRP,I,3761,3793
+852,narrator,3523.0,PRON,i,PRP,I,3793,PRON,i,PRP,I,3793,3816
+853,narrator,3523.0,PRON,i,PRP,I,3805,PRON,me,PRP,me,3793,3816
+854,environment,3569.0,NOUN,housekeeping,NN,Mrs. Joe's housekeeping,3568,NOUN,housekeeping,NN,Mrs. Joe's housekeeping,3566,3589
+855,environment,3569.0,NOUN,housekeeping,NN,Mrs. Joe's housekeeping,3579,DET,my larcenous,PRP$,my larcenous,3566,3589
+856,person,3688.0,PRON,we,PRP,we,3688,PRON,we,PRP,we,3663,3703
+857,person,3688.0,PRON,we,PRP,we,3707,PRON,us,PRP,us,3703,3712
+858,environment,3769.0,NOUN,thing,NN,the thing I contemplated,3768,NOUN,thing,NN,the thing I contemplated,3761,3793
+859,environment,3769.0,NOUN,thing,NN,the thing I contemplated,3778,PRON,it,PRP,it,3761,3793
+860,environment,3850.0,PRON,it,PRP,it,3850,PRON,it,PRP,it,3848,3875
+861,environment,3850.0,PRON,it,PRP,it,3861,PRON,it,PRP,it,3848,3875
+862,environment,3850.0,PRON,it,PRP,it,3870,PRON,it,PRP,it,3848,3875
+863,environment,3887.0,NOUN,his head,NN,his head,3887,NOUN,his head,NN,his head,3875,3915
+864,environment,3887.0,NOUN,his head,NN,his head,3896,PRON,it,PRP,it,3875,3915
+865,person,3951.0,PRON,she,PRP,she,3951,PRON,she,PRP,she,3943,3961
+866,person,3951.0,PRON,she,PRP,she,3956,PRON,she,PRP,she,3943,3961
+867,environment,3994.0,PRON,it,PRP,It,3994,PRON,it,PRP,It,3994,3999
+868,environment,3994.0,PRON,it,PRP,It,4004,PRON,it,PRP,it,3999,4010
+869,person,4006.0,PROPN,pip,NNP,Pip,4006,PROPN,pip,NNP,Pip,3999,4010
+870,person,4006.0,PROPN,pip,NNP,Pip,4037,PROPN,pip,NNP,Pip,4028,4054
+871,environment,4035.0,PRON,it,PRP,it,4035,PRON,it,PRP,it,4028,4054
+872,environment,4035.0,PRON,it,PRP,it,4045,PRON,it,PRP,it,4028,4054
+873,person,4049.0,PROPN,joe,NNP,"Joe, all aghast",4049,PROPN,joe,NNP,"Joe, all aghast",4028,4054
+874,person,4049.0,PROPN,joe,NNP,"Joe, all aghast",4174,PROPN,joe,NNP,"Joe, solemnly",4167,4221
+875,person,4049.0,PROPN,joe,NNP,"Joe, all aghast",4193,PRON,we,PRP,we,4167,4221
+876,environment,4071.0,NOUN,my sister,NN,my sister,4071,NOUN,my sister,NN,my sister,4067,4115
+877,environment,4071.0,NOUN,my sister,NN,my sister,4077,PRON,she,PRP,she,4067,4115
+878,environment,4071.0,NOUN,my sister,NN,my sister,4147,PRON,her,PRP,her,4144,4166
+879,narrator,4104.0,PRON,i,PRP,I,4104,PRON,i,PRP,I,4067,4115
+880,narrator,4104.0,PRON,i,PRP,I,4119,PRON,you,PRP,you,4116,4142
+881,narrator,4104.0,PRON,i,PRP,I,4162,PRON,me,PRP,me,4144,4166
+882,reader,4200.0,PRON,you,PRP,you,4200,PRON,you,PRP,you,4167,4221
+883,reader,4200.0,PRON,you,PRP,you,4216,PRON,you,PRP,you,4167,4221
+884,narrator,4202.0,PRON,me,PRP,me,4202,PRON,me,PRP,me,4167,4221
+885,narrator,4202.0,PRON,me,PRP,me,4208,PRON,i,PRP,I,4167,4221
+886,narrator,4202.0,PRON,me,PRP,me,4276,PRON,me,PRP,me,4264,4289
+887,narrator,4202.0,PRON,me,PRP,me,4290,PRON,i,PRP,I,4289,4302
+888,narrator,4202.0,PRON,me,PRP,me,4293,PRON,myself,PRP,myself,4289,4302
+889,narrator,4202.0,PRON,me,PRP,me,4296,PRON,i,PRP,I,4289,4302
+890,narrator,4202.0,PRON,me,PRP,me,4302,PRON,i,PRP,I,4302,4331
+891,narrator,4202.0,PRON,me,PRP,me,4311,PRON,i,PRP,I,4302,4331
+892,narrator,4202.0,PRON,me,PRP,me,4338,PRON,me,PRP,me,4333,4362
+893,narrator,4202.0,PRON,me,PRP,me,4342,PRON,me,PRP,me,4333,4362
+894,narrator,4202.0,PRON,me,PRP,me,4412,PRON,me,PRP,me,4398,4431
+895,narrator,4202.0,PRON,me,PRP,me,4419,PRON,i,PRP,I,4398,4431
+896,person,4225.0,PRON,he,PRP,he,4225,PRON,he,PRP,he,4221,4250
+897,person,4225.0,PRON,he,PRP,he,4256,PRON,he,PRP,he,4250,4258
+898,person,4366.0,NOUN,beast,NN,Some medical beast,4364,NOUN,beast,NN,Some medical beast,4364,4398
+899,person,4366.0,NOUN,beast,NN,Some medical beast,4385,PRON,it,PRP,it,4364,4398
+0,unknown,,,UNKNOWN,,,3,DET,a,DT,a,0,6
+1,unknown,,,UNKNOWN,,,17,DET,a,DT,a,7,29
+2,unknown,,,UNKNOWN,,,31,DET,a,DT,a,29,79
+3,unknown,,,UNKNOWN,,,45,DET,the,DT,the,29,79
+4,unknown,,,UNKNOWN,,,48,DET,a,DT,a,29,79
+5,environment,,,ENVIRONMENT,,,51,DET,that,DT,that,29,79
+6,unknown,,,UNKNOWN,,,58,DET,another,DT,another,29,79
+7,unknown,,,UNKNOWN,,,62,DET,the,DT,the,29,79
+8,environment,,,ENVIRONMENT,,,67,PRON,it,PRP,it,29,79
+9,unknown,,,UNKNOWN,,,75,DET,a,DT,a,29,79
+10,unknown,,,UNKNOWN,,,79,DET,the,DT,The,79,98
+11,environment,,,ENVIRONMENT,,,82,DET,that,WDT,that,79,98
+12,unknown,,,UNKNOWN,,,103,DET,any,DT,any,98,145
+13,unknown,,,UNKNOWN,,,105,DET,the,DT,the,98,145
+14,unknown,,,UNKNOWN,,,110,DET,the,DT,the,98,145
+15,unknown,,,UNKNOWN,,,131,DET,the,DT,the,98,145
+16,unknown,,,UNKNOWN,,,134,DET,any,DT,any,98,145
+17,unknown,,,UNKNOWN,,,148,DET,the,DT,the,145,201
+18,unknown,,,UNKNOWN,,,152,DET,the,DT,the,145,201
+19,unknown,,,UNKNOWN,,,162,DET,the,DT,the,145,201
+20,unknown,,,UNKNOWN,,,208,PRON,what,WP,What,201,257
+21,unknown,,,UNKNOWN,,,210,DET,the,DT,the,201,257
+22,unknown,,,UNKNOWN,,,213,PRON,who,WP,who,201,257
+23,unknown,,,UNKNOWN,,,228,DET,a,DT,a,201,257
+24,unknown,,,UNKNOWN,,,235,DET,the,DT,the,201,257
+25,narrator,,,NARRATOR,,,267,PRON,mine,PRP,mine,257,274
+26,environment,,,ENVIRONMENT,,,284,PRON,it,PRP,It,284,310
+27,unknown,,,UNKNOWN,,,293,DET,the,DT,the,284,310
+28,unknown,,,UNKNOWN,,,299,DET,a,DT,a,284,310
+29,unknown,,,UNKNOWN,,,306,DET,the,DT,the,284,310
+30,environment,,,ENVIRONMENT,,,312,PRON,it,PRP,it,310,353
+31,unknown,,,UNKNOWN,,,314,DET,the,DT,the,310,353
+32,environment,,,ENVIRONMENT,,,320,DET,that,DT,that,310,353
+33,unknown,,,UNKNOWN,,,326,DET,the,DT,the,310,353
+34,unknown,,,UNKNOWN,,,329,DET,the,DT,the,310,353
+35,unknown,,,UNKNOWN,,,337,DET,the,DT,the,310,353
+36,unknown,,,UNKNOWN,,,343,DET,the,DT,the,310,353
+37,unknown,,,UNKNOWN,,,365,DET,my garret,PRP$,my garret,353,369
+38,unknown,,,UNKNOWN,,,385,DET,a,DT,a,372,407
+39,unknown,,,UNKNOWN,,,389,DET,the,DT,the,372,407
+40,unknown,,,UNKNOWN,,,417,DET,another,DT,another,415,420
+41,unknown,,,UNKNOWN,,,423,PRON,what,WP,What,423,449
+42,environment,,,ENVIRONMENT,,,425,DET,that,DT,that,423,449
+43,unknown,,,UNKNOWN,,,435,PRON,who,WP,who,423,449
+44,person,,,PERSON,,,440,PRON,herself,PRP,herself,423,449
+45,unknown,,,UNKNOWN,,,453,DET,the,DT,the,452,460
+46,unknown,,,UNKNOWN,,,473,DET,the,DT,the,460,480
+47,unknown,,,UNKNOWN,,,481,PRON,what,WP,What,480,486
+48,unknown,,,UNKNOWN,,,483,DET,a,DT,a,480,486
+49,unknown,,,UNKNOWN,,,491,DET,the,DT,the,487,508
+50,unknown,,,UNKNOWN,,,495,DET,such,PDT,such,487,508
+51,unknown,,,UNKNOWN,,,496,DET,a,DT,a,487,508
+52,environment,,,ENVIRONMENT,,,507,PRON,it,PRP,it,487,508
+53,unknown,,,UNKNOWN,,,509,DET,the,DT,the,508,512
+54,unknown,,,UNKNOWN,,,520,DET,a,DT,a,518,536
+55,environment,,,ENVIRONMENT,,,545,PRON,it,PRP,it,543,554
+56,unknown,,,UNKNOWN,,,552,DET,another,DT,another,543,554
+57,unknown,,,UNKNOWN,,,557,PRON,who,WP,Who,557,586
+58,environment,,,ENVIRONMENT,,,566,DET,that,DT,that,557,586
+59,unknown,,,UNKNOWN,,,580,PRON,what,WP,what,557,586
+60,unknown,,,UNKNOWN,,,581,DET,a,DT,a,557,586
+61,unknown,,,UNKNOWN,,,587,DET,no,DT,no,586,598
+62,unknown,,,UNKNOWN,,,595,DET,no,DT,no,586,598
+63,environment,,,ENVIRONMENT,,,600,PRON,it,PRP,It,598,628
+64,environment,,,ENVIRONMENT,,,640,DET,this,DT,this,639,675
+65,unknown,,,UNKNOWN,,,648,DET,the,DT,the,639,675
+66,environment,,,ENVIRONMENT,,,660,PRON,it,PRP,it,639,675
+67,unknown,,,UNKNOWN,,,662,DET,the,DT,the,639,675
+68,unknown,,,UNKNOWN,,,665,DET,a,DT,a,639,675
+69,environment,,,ENVIRONMENT,,,667,DET,that,WDT,that,639,675
+70,unknown,,,UNKNOWN,,,688,DET,the,DT,the,676,697
+71,environment,,,ENVIRONMENT,,,703,DET,that,DT,that,697,728
+72,unknown,,,UNKNOWN,,,717,DET,the,DT,the,697,728
+73,unknown,,,UNKNOWN,,,720,DET,a,DT,a,697,728
+74,environment,,,ENVIRONMENT,,,726,PRON,it,PRP,it,697,728
+75,unknown,,,UNKNOWN,,,734,DET,the,DT,the,728,738
+76,unknown,,,UNKNOWN,,,746,DET,a,DT,a,739,766
+77,reader,,,READER,,,756,PRON,you,PRP,you,739,766
+78,unknown,,,UNKNOWN,,,761,DET,the,DT,the,739,766
+79,unknown,,,UNKNOWN,,,771,DET,the,DT,the,768,791
+80,person,,,PERSON,,,780,PRON,she,PRP,she,768,791
+81,environment,,,ENVIRONMENT,,,785,DET,that,DT,that,768,791
+82,unknown,,,UNKNOWN,,,788,DET,the,DT,the,768,791
+83,unknown,,,UNKNOWN,,,817,DET,a,DT,a,815,835
+84,unknown,,,UNKNOWN,,,841,PRON,what,WP,what,838,848
+85,environment,,,ENVIRONMENT,,,849,DET,that,DT,That,849,857
+86,unknown,,,UNKNOWN,,,851,DET,the,DT,the,849,857
+87,environment,,,ENVIRONMENT,,,854,DET,this,DT,this,849,857
+88,unknown,,,UNKNOWN,,,900,PRON,we,PRP,We,900,912
+89,environment,,,ENVIRONMENT,,,903,DET,that,DT,that,900,912
+90,unknown,,,UNKNOWN,,,915,PRON,who,WP,who,912,944
+91,unknown,,,UNKNOWN,,,934,DET,a,DT,a,912,944
+92,environment,,,ENVIRONMENT,,,944,PRON,it,PRP,It,944,955
+93,unknown,,,UNKNOWN,,,951,PRON,who,WP,who,944,955
+94,unknown,,,UNKNOWN,,,959,PRON,what,WP,what,956,981
+95,environment,,,ENVIRONMENT,,,981,PRON,it,PRP,It,981,995
+96,unknown,,,UNKNOWN,,,1015,DET,all,DT,all,995,1028
+97,reader,,,READER,,,1030,PRON,you,PRP,you,1028,1035
+98,unknown,,,UNKNOWN,,,1041,DET,a,DT,a,1035,1094
+99,unknown,,,UNKNOWN,,,1056,DET,the,DT,the,1035,1094
+100,unknown,,,UNKNOWN,,,1068,DET,the,DT,the,1035,1094
+101,environment,,,ENVIRONMENT,,,1071,PRON,it,PRP,it,1035,1094
+102,unknown,,,UNKNOWN,,,1075,DET,her last,PRP$,her last,1035,1094
+103,unknown,,,UNKNOWN,,,1083,DET,the,DT,the,1035,1094
+104,unknown,,,UNKNOWN,,,1087,DET,the,DT,the,1035,1094
+105,environment,,,ENVIRONMENT,,,1118,DET,that,DT,that,1117,1146
+106,unknown,,,UNKNOWN,,,1121,DET,which,WDT,which,1117,1146
+107,unknown,,,UNKNOWN,,,1136,PRON,what,WP,what,1117,1146
+108,unknown,,,UNKNOWN,,,1141,DET,the,DT,the,1117,1146
+109,unknown,,,UNKNOWN,,,1165,DET,the,DT,the,1159,1242
+110,unknown,,,UNKNOWN,,,1168,PRON,who,WP,who,1159,1242
+111,unknown,,,UNKNOWN,,,1182,DET,the,DT,the,1159,1242
+112,unknown,,,UNKNOWN,,,1194,PRON,whom,WP,whom,1159,1242
+113,unknown,,,UNKNOWN,,,1195,DET,an,DT,an,1159,1242
+114,unknown,,,UNKNOWN,,,1204,DET,no,DT,no,1159,1242
+115,unknown,,,UNKNOWN,,,1209,DET,my all,PRP$,my all,1159,1242
+116,unknown,,,UNKNOWN,,,1214,PRON,who,WP,who,1159,1242
+117,unknown,,,UNKNOWN,,,1218,DET,every,DT,every,1159,1242
+118,unknown,,,UNKNOWN,,,1227,PRON,what,WP,what,1159,1242
+119,unknown,,,UNKNOWN,,,1236,DET,the,DT,the,1159,1242
+120,environment,,,ENVIRONMENT,,,1248,PRON,it,PRP,it,1242,1305
+121,unknown,,,UNKNOWN,,,1259,DET,a,DT,a,1242,1305
+122,unknown,,,UNKNOWN,,,1265,DET,the,DT,the,1242,1305
+123,unknown,,,UNKNOWN,,,1268,DET,a,DT,a,1242,1305
+124,unknown,,,UNKNOWN,,,1275,DET,a,DT,a,1242,1305
+125,unknown,,,UNKNOWN,,,1283,DET,the,DT,the,1242,1305
+126,environment,,,ENVIRONMENT,,,1303,PRON,it,PRP,it,1242,1305
+127,unknown,,,UNKNOWN,,,1323,DET,the,DT,the,1305,1335
+128,unknown,,,UNKNOWN,,,1332,DET,the,DT,the,1305,1335
+129,unknown,,,UNKNOWN,,,1337,DET,no,DT,no,1335,1344
+130,environment,,,ENVIRONMENT,,,1339,PRON,it,PRP,it,1335,1344
+131,unknown,,,UNKNOWN,,,1341,DET,the,DT,the,1335,1344
+132,unknown,,,UNKNOWN,,,1347,DET,no,DT,no,1344,1356
+133,unknown,,,UNKNOWN,,,1349,DET,a,DT,a,1344,1356
+134,environment,,,ENVIRONMENT,,,1364,PRON,it,PRP,it,1356,1385
+135,unknown,,,UNKNOWN,,,1374,DET,a,DT,a,1356,1385
+136,unknown,,,UNKNOWN,,,1377,DET,the,DT,the,1356,1385
+137,person,,,PERSON,,,1380,PRON,himself,PRP,himself,1356,1385
+138,unknown,,,UNKNOWN,,,1388,DET,the,DT,the,1385,1406
+139,unknown,,,UNKNOWN,,,1393,DET,my little,PRP$,my little,1385,1406
+140,unknown,,,UNKNOWN,,,1406,DET,every,DT,every,1406,1434
+141,unknown,,,UNKNOWN,,,1409,DET,the,DT,the,1406,1434
+142,unknown,,,UNKNOWN,,,1413,DET,every,DT,every,1406,1434
+143,unknown,,,UNKNOWN,,,1416,DET,every,DT,every,1406,1434
+144,unknown,,,UNKNOWN,,,1435,DET,the,DT,the,1434,1479
+145,unknown,,,UNKNOWN,,,1438,DET,which,WDT,which,1434,1479
+146,unknown,,,UNKNOWN,,,1449,DET,the,DT,the,1434,1479
+147,unknown,,,UNKNOWN,,,1458,DET,a,DT,a,1434,1479
+148,unknown,,,UNKNOWN,,,1462,DET,the,DT,the,1434,1479
+149,unknown,,,UNKNOWN,,,1465,PRON,whom,WP,whom,1434,1479
+150,unknown,,,UNKNOWN,,,1481,DET,no,DT,no,1479,1504
+151,unknown,,,UNKNOWN,,,1486,DET,no,DT,no,1479,1504
+152,unknown,,,UNKNOWN,,,1491,DET,no,DT,no,1479,1504
+153,unknown,,,UNKNOWN,,,1499,DET,no,DT,no,1479,1504
+154,unknown,,,UNKNOWN,,,1506,DET,some,DT,some,1504,1586
+155,unknown,,,UNKNOWN,,,1509,DET,some,DT,some,1504,1586
+156,unknown,,,UNKNOWN,,,1515,DET,a,DT,a,1504,1586
+157,unknown,,,UNKNOWN,,,1520,DET,which,WDT,which,1504,1586
+158,unknown,,,UNKNOWN,,,1524,DET,my pocket-,PRP$,my pocket-,1504,1586
+159,unknown,,,UNKNOWN,,,1530,DET,some,DT,some,1504,1586
+160,unknown,,,UNKNOWN,,,1533,DET,a,DT,a,1504,1586
+161,unknown,,,UNKNOWN,,,1536,DET,which,WDT,which,1504,1586
+162,unknown,,,UNKNOWN,,,1540,DET,a,DT,a,1504,1586
+163,environment,,,ENVIRONMENT,,,1548,DET,that,DT,that,1504,1586
+164,unknown,,,UNKNOWN,,,1564,DET,a,DT,a,1504,1586
+165,unknown,,,UNKNOWN,,,1567,DET,the,DT,the,1504,1586
+166,unknown,,,UNKNOWN,,,1571,DET,a,DT,a,1504,1586
+167,unknown,,,UNKNOWN,,,1580,DET,a,DT,a,1504,1586
+168,unknown,,,UNKNOWN,,,1602,DET,a,DT,a,1586,1659
+169,unknown,,,UNKNOWN,,,1607,PRON,what,WP,what,1586,1659
+170,environment,,,ENVIRONMENT,,,1608,PRON,it,PRP,it,1586,1659
+171,environment,,,ENVIRONMENT,,,1610,DET,that,DT,that,1586,1659
+172,unknown,,,UNKNOWN,,,1617,DET,a,DT,a,1586,1659
+173,unknown,,,UNKNOWN,,,1622,DET,a,DT,a,1586,1659
+174,environment,,,ENVIRONMENT,,,1628,PRON,it,PRP,it,1586,1659
+175,unknown,,,UNKNOWN,,,1638,DET,the,DT,the,1586,1659
+176,unknown,,,UNKNOWN,,,1655,DET,some,DT,some,1586,1659
+177,unknown,,,UNKNOWN,,,1669,DET,the,DT,the,1659,1688
+178,unknown,,,UNKNOWN,,,1681,DET,a,DT,a,1659,1688
+179,unknown,,,UNKNOWN,,,1700,DET,the,DT,the,1688,1724
+180,unknown,,,UNKNOWN,,,1703,DET,which,WDT,which,1688,1724
+181,environment,,,ENVIRONMENT,,,1726,PRON,it,PRP,It,1726,1734
+182,unknown,,,UNKNOWN,,,1741,DET,the,DT,the,1734,1767
+183,unknown,,,UNKNOWN,,,1744,DET,my little,PRP$,my little,1734,1767
+184,unknown,,,UNKNOWN,,,1749,DET,some,DT,some,1734,1767
+185,unknown,,,UNKNOWN,,,1755,DET,all,DT,all,1734,1767
+186,unknown,,,UNKNOWN,,,1760,DET,the,DT,the,1734,1767
+187,unknown,,,UNKNOWN,,,1763,DET,a,DT,a,1734,1767
+188,unknown,,,UNKNOWN,,,1775,DET,the,DT,the,1767,1801
+189,unknown,,,UNKNOWN,,,1783,DET,a,DT,a,1767,1801
+190,unknown,,,UNKNOWN,,,1802,DET,every,DT,every,1801,1851
+191,unknown,,,UNKNOWN,,,1820,DET,the,DT,the,1801,1851
+192,unknown,,,UNKNOWN,,,1824,DET,the,DT,the,1801,1851
+193,unknown,,,UNKNOWN,,,1830,DET,which,WDT,which,1801,1851
+194,environment,,,ENVIRONMENT,,,1849,PRON,it,PRP,it,1801,1851
+195,unknown,,,UNKNOWN,,,1866,DET,my oppressed,PRP$,my oppressed,1851,1878
+196,unknown,,,UNKNOWN,,,1869,DET,a,DT,a,1851,1878
+197,environment,,,ENVIRONMENT,,,1905,DET,this,DT,This,1905,1914
+198,unknown,,,UNKNOWN,,,1910,DET,a,DT,a,1905,1914
+199,unknown,,,UNKNOWN,,,1939,DET,a,DT,A,1914,1947
+200,unknown,,,UNKNOWN,,,1951,DET,the,DT,The,1951,1978
+201,unknown,,,UNKNOWN,,,1983,DET,a,DT,a,1978,2028
+202,unknown,,,UNKNOWN,,,1988,PRON,who,WP,who,1978,2028
+203,unknown,,,UNKNOWN,,,1992,DET,my awakened,PRP$,my awakened,1978,2028
+204,unknown,,,UNKNOWN,,,1996,DET,a,DT,a,1978,2028
+205,unknown,,,UNKNOWN,,,2009,DET,his blunt,PRP$,his blunt,1978,2028
+206,unknown,,,UNKNOWN,,,2013,DET,such,PDT,such,1978,2028
+207,unknown,,,UNKNOWN,,,2014,DET,an,DT,an,1978,2028
+208,person,,,PERSON,,,2026,PRON,him,PRP,him,1978,2028
+209,unknown,,,UNKNOWN,,,2048,DET,which,WDT,which,2047,2078
+210,person,,,PERSON,,,2049,PRON,he,PRP,he,2047,2078
+211,unknown,,,UNKNOWN,,,2054,DET,a,DT,a,2047,2078
+212,unknown,,,UNKNOWN,,,2065,DET,a,DT,a,2047,2078
+213,unknown,,,UNKNOWN,,,2069,DET,his hind-,PRP$,his hind-,2047,2078
+214,unknown,,,UNKNOWN,,,2072,DET,a,DT,a,2047,2078
+215,unknown,,,UNKNOWN,,,2078,DET,all,PDT,All,2078,2126
+216,environment,,,ENVIRONMENT,,,2079,DET,this,DT,this,2078,2126
+217,unknown,,,UNKNOWN,,,2102,DET,which,WDT,which,2078,2126
+218,unknown,,,UNKNOWN,,,2103,DET,the,DT,the,2078,2126
+219,unknown,,,UNKNOWN,,,2110,DET,the,DT,the,2078,2126
+220,unknown,,,UNKNOWN,,,2115,DET,the,DT,the,2078,2126
+221,unknown,,,UNKNOWN,,,2130,DET,the,DT,the,2126,2149
+222,unknown,,,UNKNOWN,,,2143,DET,a,DT,a,2126,2149
+223,unknown,,,UNKNOWN,,,2153,DET,an,DT,an,2149,2179
+224,unknown,,,UNKNOWN,,,2172,PRON,we,PRP,we,2149,2179
+225,unknown,,,UNKNOWN,,,2182,DET,the,DT,the,2179,2227
+226,unknown,,,UNKNOWN,,,2196,DET,the,DT,the,2179,2227
+227,unknown,,,UNKNOWN,,,2206,DET,the,DT,the,2179,2227
+228,unknown,,,UNKNOWN,,,2211,DET,the,DT,the,2179,2227
+229,unknown,,,UNKNOWN,,,2217,DET,the,DT,the,2179,2227
+230,unknown,,,UNKNOWN,,,2220,DET,the,DT,the,2179,2227
+231,environment,,,ENVIRONMENT,,,2222,DET,that,WDT,that,2179,2227
+232,unknown,,,UNKNOWN,,,2224,DET,the,DT,the,2179,2227
+233,unknown,,,UNKNOWN,,,2232,DET,all,DT,all,2227,2270
+234,unknown,,,UNKNOWN,,,2239,DET,a,DT,a,2227,2270
+235,unknown,,,UNKNOWN,,,2241,DET,which,WDT,which,2227,2270
+236,unknown,,,UNKNOWN,,,2248,DET,the,DT,the,2227,2270
+237,unknown,,,UNKNOWN,,,2258,DET,the,DT,the,2227,2270
+238,environment,,,ENVIRONMENT,,,2307,DET,that,DT,that,2291,2323
+239,unknown,,,UNKNOWN,,,2320,DET,the,DT,the,2291,2323
+240,environment,,,ENVIRONMENT,,,2328,PRON,it,PRP,it,2323,2340
+241,unknown,,,UNKNOWN,,,2336,DET,another,DT,another,2323,2340
+242,unknown,,,UNKNOWN,,,2354,DET,a,DT,a,2340,2400
+243,environment,,,ENVIRONMENT,,,2373,DET,that,WDT,that,2340,2400
+244,unknown,,,UNKNOWN,,,2384,DET,the,DT,the,2340,2400
+245,unknown,,,UNKNOWN,,,2390,DET,a,DT,a,2340,2400
+246,unknown,,,UNKNOWN,,,2400,DET,all,PDT,All,2400,2471
+247,environment,,,ENVIRONMENT,,,2401,DET,this,DT,this,2400,2471
+248,unknown,,,UNKNOWN,,,2405,DET,a,DT,a,2400,2471
+249,unknown,,,UNKNOWN,,,2412,DET,a,DT,a,2400,2471
+250,environment,,,ENVIRONMENT,,,2416,PRON,it,PRP,it,2400,2471
+251,unknown,,,UNKNOWN,,,2420,DET,an,DT,an,2400,2471
+252,unknown,,,UNKNOWN,,,2426,DET,a,DT,a,2400,2471
+253,unknown,,,UNKNOWN,,,2433,DET,a,DT,a,2400,2471
+254,environment,,,ENVIRONMENT,,,2437,DET,that,WDT,that,2400,2471
+255,environment,,,ENVIRONMENT,,,2472,PRON,it,PRP,It,2472,2478
+256,unknown,,,UNKNOWN,,,2496,DET,a,DT,a,2489,2512
+257,environment,,,ENVIRONMENT,,,2508,PRON,it,PRP,it,2489,2512
+258,unknown,,,UNKNOWN,,,2516,DET,the,DT,the,2512,2552
+259,environment,,,ENVIRONMENT,,,2519,DET,that,DT,that,2512,2552
+260,unknown,,,UNKNOWN,,,2541,DET,all,DT,all,2512,2552
+261,unknown,,,UNKNOWN,,,2595,DET,the,DT,the,2576,2617
+262,environment,,,ENVIRONMENT,,,2598,PRON,it,PRP,it,2576,2617
+263,environment,,,ENVIRONMENT,,,2624,DET,this,DT,this,2617,2649
+264,unknown,,,UNKNOWN,,,2629,PRON,what,WP,what,2617,2649
+265,unknown,,,UNKNOWN,,,2642,DET,the,DT,the,2617,2649
+266,unknown,,,UNKNOWN,,,2677,DET,the,DT,the,2669,2715
+267,unknown,,,UNKNOWN,,,2684,DET,a,DT,a,2669,2715
+268,unknown,,,UNKNOWN,,,2686,PRON,who,WP,who,2669,2715
+269,unknown,,,UNKNOWN,,,2693,DET,a,DT,a,2669,2715
+270,unknown,,,UNKNOWN,,,2698,DET,a,DT,a,2669,2715
+271,unknown,,,UNKNOWN,,,2700,PRON,who,WP,who,2669,2715
+272,unknown,,,UNKNOWN,,,2710,DET,some,DT,some,2669,2715
+273,unknown,,,UNKNOWN,,,2712,DET,the,DT,the,2669,2715
+274,unknown,,,UNKNOWN,,,2717,DET,all,PDT,all,2715,2748
+275,unknown,,,UNKNOWN,,,2718,DET,the,DT,the,2715,2748
+276,environment,,,ENVIRONMENT,,,2724,PRON,it,PRP,it,2715,2748
+277,unknown,,,UNKNOWN,,,2735,DET,the,DT,the,2715,2748
+278,unknown,,,UNKNOWN,,,2738,DET,the,DT,the,2715,2748
+279,environment,,,ENVIRONMENT,,,2745,PRON,it,PRP,it,2715,2748
+280,reader,,,READER,,,2751,PRON,you,PRP,you,2748,2760
+281,unknown,,,UNKNOWN,,,2754,DET,the,DT,the,2748,2760
+282,environment,,,ENVIRONMENT,,,2775,PRON,it,PRP,It,2775,2786
+283,unknown,,,UNKNOWN,,,2792,DET,the,DT,the,2787,2801
+284,unknown,,,UNKNOWN,,,2814,DET,the,DT,the,2812,2823
+285,environment,,,ENVIRONMENT,,,2827,DET,that,DT,that,2824,2829
+286,environment,,,ENVIRONMENT,,,2837,DET,that,DT,that,2829,2849
+287,unknown,,,UNKNOWN,,,2852,DET,the,DT,the,2849,2862
+288,unknown,,,UNKNOWN,,,2889,DET,the,DT,the,2878,2902
+289,unknown,,,UNKNOWN,,,2891,DET,all,DT,all,2878,2902
+290,unknown,,,UNKNOWN,,,2893,PRON,us,PRP,us,2878,2902
+291,unknown,,,UNKNOWN,,,2902,DET,some,DT,Some,2902,2942
+292,unknown,,,UNKNOWN,,,2908,DET,some,DT,some,2902,2942
+293,unknown,,,UNKNOWN,,,2911,DET,the,DT,the,2902,2942
+294,unknown,,,UNKNOWN,,,2918,DET,the,DT,the,2902,2942
+295,unknown,,,UNKNOWN,,,2924,DET,a,DT,a,2902,2942
+296,reader,,,READER,,,2935,PRON,you,PRP,You,2902,2942
+297,unknown,,,UNKNOWN,,,2938,DET,a,DT,a,2902,2942
+298,unknown,,,UNKNOWN,,,2944,DET,no,DT,no,2942,2951
+299,unknown,,,UNKNOWN,,,2963,DET,no,DT,no,2961,2973
+300,unknown,,,UNKNOWN,,,2965,DET,the,DT,the,2961,2973
+301,unknown,,,UNKNOWN,,,2994,DET,a,DT,a,2990,3049
+302,unknown,,,UNKNOWN,,,3010,DET,a,DT,a,2990,3049
+303,environment,,,ENVIRONMENT,,,3020,DET,this,DT,this,2990,3049
+304,unknown,,,UNKNOWN,,,3040,DET,a,DT,a,2990,3049
+305,unknown,,,UNKNOWN,,,3052,DET,his ragged,PRP$,his ragged,3049,3059
+306,environment,,,ENVIRONMENT,,,3085,PRON,it,PRP,it,3059,3087
+307,environment,,,ENVIRONMENT,,,3104,PRON,it,PRP,it,3096,3106
+308,unknown,,,UNKNOWN,,,3134,DET,a,DT,a,3118,3149
+309,unknown,,,UNKNOWN,,,3138,DET,the,DT,the,3118,3149
+310,unknown,,,UNKNOWN,,,3169,DET,every,DT,every,3162,3209
+311,unknown,,,UNKNOWN,,,3197,DET,every,DT,every,3162,3209
+312,narrator,,,NARRATOR,,,3223,PRON,i,PRP,I,3209,3245
+313,unknown,,,UNKNOWN,,,3237,DET,a,DT,a,3209,3245
+314,unknown,,,UNKNOWN,,,3242,DET,the,DT,the,3209,3245
+315,unknown,,,UNKNOWN,,,3246,DET,all,DT,all,3245,3258
+316,unknown,,,UNKNOWN,,,3248,DET,which,WDT,which,3245,3258
+317,reader,,,READER,,,3262,PRON,you,PRP,you,3258,3295
+318,unknown,,,UNKNOWN,,,3266,DET,any,DT,any,3258,3295
+319,environment,,,ENVIRONMENT,,,3268,PRON,it,PRP,it,3258,3295
+320,unknown,,,UNKNOWN,,,3279,DET,a,DT,a,3258,3295
+321,unknown,,,UNKNOWN,,,3282,DET,which,WDT,which,3258,3295
+322,unknown,,,UNKNOWN,,,3288,DET,the,DT,the,3258,3295
+323,unknown,,,UNKNOWN,,,3292,DET,the,DT,the,3258,3295
+324,unknown,,,UNKNOWN,,,3298,DET,no,DT,no,3296,3308
+325,environment,,,ENVIRONMENT,,,3304,DET,that,DT,that,3296,3308
+326,environment,,,ENVIRONMENT,,,3309,PRON,it,PRP,It,3309,3325
+327,unknown,,,UNKNOWN,,,3311,DET,the,DT,the,3309,3325
+328,environment,,,ENVIRONMENT,,,3314,DET,this,DT,this,3309,3325
+329,environment,,,ENVIRONMENT,,,3316,DET,that,WDT,that,3309,3325
+330,unknown,,,UNKNOWN,,,3321,DET,the,DT,the,3309,3325
+331,unknown,,,UNKNOWN,,,3327,DET,any,DT,any,3325,3331
+332,unknown,,,UNKNOWN,,,3331,PRON,who,WP,Who,3331,3347
+333,environment,,,ENVIRONMENT,,,3357,DET,that,DT,That,3357,3365
+334,unknown,,,UNKNOWN,,,3376,DET,a,DT,a,3369,3380
+335,unknown,,,UNKNOWN,,,3391,DET,no,DT,no,3387,3394
+336,unknown,,,UNKNOWN,,,3418,DET,the,DT,the,3409,3427
+337,unknown,,,UNKNOWN,,,3422,DET,the,DT,the,3409,3427
+338,environment,,,ENVIRONMENT,,,3467,PRON,it,PRP,it,3445,3471
+339,reader,,,READER,,,3504,PRON,you,PRP,you,3499,3526
+340,unknown,,,UNKNOWN,,,3509,DET,a,DT,a,3499,3526
+341,environment,,,ENVIRONMENT,,,3525,DET,this,DT,this,3499,3526
+342,unknown,,,UNKNOWN,,,3527,DET,withthe,DT,withthe,3526,3537
+343,unknown,,,UNKNOWN,,,3534,DET,a,DT,a,3526,3537
+344,environment,,,ENVIRONMENT,,,3570,DET,that,DT,that,3560,3596
+345,environment,,,ENVIRONMENT,,,3580,PRON,it,PRP,it,3560,3596
+346,environment,,,ENVIRONMENT,,,3585,DET,that,DT,that,3560,3596
+347,unknown,,,UNKNOWN,,,3615,DET,these,DT,these,3609,3645
+348,unknown,,,UNKNOWN,,,3619,DET,a,DT,a,3609,3645
+349,unknown,,,UNKNOWN,,,3623,DET,a,DT,a,3609,3645
+350,unknown,,,UNKNOWN,,,3649,DET,the,DT,the,3647,3666
+351,unknown,,,UNKNOWN,,,3653,DET,their red,PRP$,their red,3647,3666
+352,unknown,,,UNKNOWN,,,3657,DET,the,DT,the,3647,3666
+353,unknown,,,UNKNOWN,,,3675,DET,the,DT,the,3666,3688
+354,unknown,,,UNKNOWN,,,3678,DET,the,DT,the,3666,3688
+355,unknown,,,UNKNOWN,,,3682,DET,the,DT,the,3666,3688
+356,unknown,,,UNKNOWN,,,3720,PRON,'em,PRP,'em,3706,3730
+357,unknown,,,UNKNOWN,,,3727,DET,a,DT,a,3706,3730
+358,environment,,,ENVIRONMENT,,,3747,PRON,it,PRP,it,3745,3783
+359,unknown,,,UNKNOWN,,,3760,DET,all,PDT,all,3745,3783
+360,unknown,,,UNKNOWN,,,3761,DET,the,DT,the,3745,3783
+361,unknown,,,UNKNOWN,,,3786,DET,a,DT,a,3784,3804
+362,unknown,,,UNKNOWN,,,3796,PRON,what,WP,what,3784,3804
+363,unknown,,,UNKNOWN,,,3814,DET,his left,PRP$,his left,3804,3825
+364,unknown,,,UNKNOWN,,,3819,DET,the,DT,the,3804,3825
+365,unknown,,,UNKNOWN,,,3840,PRON,what,WP,what,3838,3853
+366,unknown,,,UNKNOWN,,,3847,DET,the,DT,the,3838,3853
+367,unknown,,,UNKNOWN,,,3856,DET,the,DT,the,3853,3861
+368,unknown,,,UNKNOWN,,,3867,DET,a,DT,a,3861,3870
+369,environment,,,ENVIRONMENT,,,3871,DET,this,DT,this,3870,3877
+370,unknown,,,UNKNOWN,,,3874,DET,my sore,PRP$,my sore,3870,3877
+371,unknown,,,UNKNOWN,,,3878,PRON,us,PRP,us,3877,3886
+372,unknown,,,UNKNOWN,,,3881,DET,the,DT,the,3877,3886
+373,unknown,,,UNKNOWN,,,3891,PRON,what,WP,what,3888,3910
+374,unknown,,,UNKNOWN,,,3907,DET,an,DT,an,3888,3910
+375,unknown,,,UNKNOWN,,,3915,DET,the,DT,the,3910,3966
+376,unknown,,,UNKNOWN,,,3924,DET,a,DT,a,3910,3966
+377,unknown,,,UNKNOWN,,,3933,DET,his own,PRP$,his own,3910,3966
+378,unknown,,,UNKNOWN,,,3936,DET,which,WDT,which,3910,3966
+379,unknown,,,UNKNOWN,,,3938,DET,an,DT,an,3910,3966
+380,unknown,,,UNKNOWN,,,3948,DET,which,WDT,which,3910,3966
+381,unknown,,,UNKNOWN,,,3957,DET,no,DT,no,3910,3966
+382,environment,,,ENVIRONMENT,,,3982,DET,this,DT,this,3966,4001
+383,unknown,,,UNKNOWN,,,4011,DET,no,DT,no,4001,4027
+384,unknown,,,UNKNOWN,,,4017,DET,the,DT,the,4001,4027
+385,unknown,,,UNKNOWN,,,4027,DET,the,DT,The,4027,4055
+386,unknown,,,UNKNOWN,,,4055,DET,the,DT,The,4055,4078
+387,unknown,,,UNKNOWN,,,4106,DET,no,DT,no,4096,4116
+388,unknown,,,UNKNOWN,,,4113,DET,the,DT,the,4096,4116
+389,unknown,,,UNKNOWN,,,4122,DET,the,DT,the,4116,4172
+390,unknown,,,UNKNOWN,,,4126,DET,the,DT,the,4116,4172
+391,unknown,,,UNKNOWN,,,4137,DET,the,DT,the,4116,4172
+392,unknown,,,UNKNOWN,,,4144,DET,the,DT,the,4116,4172
+393,unknown,,,UNKNOWN,,,4148,DET,an,DT,an,4116,4172
+394,unknown,,,UNKNOWN,,,4151,DET,which,WDT,which,4116,4172
+395,unknown,,,UNKNOWN,,,4166,DET,the,DT,the,4116,4172
+396,unknown,,,UNKNOWN,,,4175,DET,the,DT,the,4173,4182
+397,unknown,,,UNKNOWN,,,4192,PRON,ourselves,PRP,ourselves,4182,4195
+398,unknown,,,UNKNOWN,,,4225,DET,a,DT,a,4224,4233
+399,environment,,,ENVIRONMENT,,,4228,DET,that,DT,that,4224,4233
+400,unknown,,,UNKNOWN,,,4238,DET,a,DT,a,4234,4270
+401,unknown,,,UNKNOWN,,,4244,PRON,what,WP,what,4234,4270
+402,unknown,,,UNKNOWN,,,4246,DET,the,DT,the,4234,4270
+403,unknown,,,UNKNOWN,,,4250,DET,a,DT,a,4234,4270
+404,narrator,,,NARRATOR,,,4278,PRON,myself,PRP,myself,4271,4292
+405,environment,,,ENVIRONMENT,,,4281,DET,that,DT,that,4271,4292
+406,unknown,,,UNKNOWN,,,4283,DET,the,DT,the,4271,4292
+407,unknown,,,UNKNOWN,,,4288,DET,my never,PRP$,my never,4271,4292
+408,unknown,,,UNKNOWN,,,4290,DET,any,DT,any,4271,4292
+409,unknown,,,UNKNOWN,,,4296,PRON,who,WP,who,4294,4359
+410,unknown,,,UNKNOWN,,,4300,DET,the,DT,the,4294,4359
+411,unknown,,,UNKNOWN,,,4305,DET,the,DT,the,4294,4359
+412,unknown,,,UNKNOWN,,,4310,PRON,us,PRP,us,4294,4359
+413,unknown,,,UNKNOWN,,,4313,DET,the,DT,the,4294,4359
+414,unknown,,,UNKNOWN,,,4320,DET,a,DT,a,4294,4359
+415,unknown,,,UNKNOWN,,,4327,DET,a,DT,a,4294,4359
+416,unknown,,,UNKNOWN,,,4356,DET,a,DT,a,4294,4359
+417,environment,,,ENVIRONMENT,,,4359,DET,this,DT,This,4359,4391
+418,unknown,,,UNKNOWN,,,4363,DET,her normal,PRP$,her normal,4359,4391
+419,unknown,,,UNKNOWN,,,4395,DET,a,DT,a,4391,4417
+420,unknown,,,UNKNOWN,,,4401,DET,a,DT,a,4391,4417
+421,unknown,,,UNKNOWN,,,4410,DET,a,DT,a,4391,4417
+422,unknown,,,UNKNOWN,,,4417,DET,a,DT,A,4417,4445
+423,unknown,,,UNKNOWN,,,4426,DET,which,WDT,which,4417,4445
+424,unknown,,,UNKNOWN,,,4429,DET,the,DT,the,4417,4445
+425,unknown,,,UNKNOWN,,,4437,DET,the,DT,the,4417,4445
+426,unknown,,,UNKNOWN,,,4442,DET,the,DT,the,4417,4445
+427,unknown,,,UNKNOWN,,,4445,DET,these,DT,These,4445,4495
+428,unknown,,,UNKNOWN,,,4470,DET,a,DT,a,4445,4495
+429,unknown,,,UNKNOWN,,,4474,DET,no,DT,no,4445,4495
+430,unknown,,,UNKNOWN,,,4484,PRON,what,WP,what,4445,4495
+431,unknown,,,UNKNOWN,,,4511,DET,a,DT,a,4497,4543
+432,unknown,,,UNKNOWN,,,4516,DET,a,DT,a,4497,4543
+433,unknown,,,UNKNOWN,,,4537,DET,a,DT,a,4497,4543
+434,unknown,,,UNKNOWN,,,4540,DET,the,DT,the,4497,4543
+435,person,0.0,PRON,he,PRP,he,0,PRON,he,PRP,he,0,6
+436,person,0.0,PRON,he,PRP,he,14,PRON,he,PRP,he,7,29
+437,person,0.0,PRON,he,PRP,he,22,PRON,he,PRP,he,7,29
+438,narrator,9.0,PRON,myself,PRP,myself,9,PRON,myself,PRP,myself,7,29
+439,narrator,9.0,PRON,myself,PRP,myself,11,PRON,i,PRP,I,7,29
+440,environment,29.0,NOUN,conscience,NN,Conscience,29,NOUN,conscience,NN,Conscience,29,79
+441,environment,29.0,NOUN,conscience,NN,Conscience,35,PRON,it,PRP,it,29,79
+442,narrator,71.0,PRON,i,PRP,I,71,PRON,i,PRP,I,29,79
+443,narrator,71.0,PRON,i,PRP,I,83,PRON,i,PRP,I,79,98
+444,narrator,71.0,PRON,i,PRP,I,91,PRON,i,PRP,I,79,98
+445,narrator,71.0,PRON,i,PRP,I,99,PRON,i,PRP,I,98,145
+446,narrator,71.0,PRON,i,PRP,I,122,PRON,i,PRP,I,98,145
+447,narrator,71.0,PRON,i,PRP,I,127,PRON,i,PRP,I,98,145
+448,narrator,71.0,PRON,i,PRP,I,140,PRON,me,PRP,me,98,145
+449,narrator,71.0,PRON,i,PRP,I,158,PRON,i,PRP,I,145,201
+450,narrator,71.0,PRON,i,PRP,I,160,PRON,i,PRP,I,145,201
+451,narrator,71.0,PRON,i,PRP,I,177,PRON,me,PRP,me,145,201
+452,narrator,71.0,PRON,i,PRP,I,205,PRON,i,PRP,I,201,257
+453,narrator,71.0,PRON,i,PRP,I,224,PRON,me,PRP,me,201,257
+454,narrator,71.0,PRON,i,PRP,I,289,PRON,i,PRP,I,284,310
+455,narrator,71.0,PRON,i,PRP,I,310,PRON,i,PRP,I,310,353
+456,narrator,71.0,PRON,i,PRP,I,322,PRON,me,PRP,me,310,353
+457,narrator,71.0,PRON,i,PRP,I,354,PRON,i,PRP,I,353,369
+458,narrator,71.0,PRON,i,PRP,I,374,PRON,i,PRP,I,372,407
+459,narrator,71.0,PRON,i,PRP,I,377,PRON,i,PRP,I,372,407
+460,person,168.0,NOUN,man,NN,the man with the iron on his leg who had sworn me to secrecy,167,NOUN,man,NN,the man with the iron on his leg who had sworn me to secrecy,145,201
+461,person,168.0,NOUN,man,NN,the man with the iron on his leg who had sworn me to secrecy,183,PRON,he,PRP,he,145,201
+462,person,168.0,NOUN,man,NN,the man with the iron on his leg who had sworn me to secrecy,241,PRON,himself,PRP,himself,201,257
+463,person,403.0,PROPN,joe,NNP,Joe,403,PROPN,joe,NNP,Joe,372,407
+464,person,403.0,PROPN,joe,NNP,Joe,412,PROPN,joe,NNP,Joe,407,414
+465,person,403.0,PROPN,joe,NNP,Joe,428,PROPN,joe,NNP,Joe,423,449
+466,person,403.0,PROPN,joe,NNP,Joe,478,PROPN,joe,NNP,Joe,460,480
+467,person,403.0,PROPN,joe,NNP,Joe,487,PROPN,joe,NNP,Joe,487,508
+468,person,403.0,PROPN,joe,NNP,Joe,527,PROPN,joe,NNP,Joe,518,536
+469,narrator,469.0,PRON,i,PRP,I,469,PRON,i,PRP,I,460,480
+470,narrator,469.0,PRON,i,PRP,I,502,PRON,i,PRP,I,487,508
+471,narrator,469.0,PRON,i,PRP,I,575,PRON,me,PRP,me,557,586
+472,narrator,469.0,PRON,i,PRP,I,591,PRON,you,PRP,you,586,598
+473,narrator,469.0,PRON,i,PRP,I,608,PRON,i,PRP,I,598,628
+474,narrator,469.0,PRON,i,PRP,I,614,PRON,i,PRP,I,598,628
+475,narrator,469.0,PRON,i,PRP,I,623,PRON,i,PRP,I,598,628
+476,narrator,469.0,PRON,i,PRP,I,670,PRON,me,PRP,me,639,675
+477,narrator,469.0,PRON,i,PRP,I,678,PRON,i,PRP,I,676,697
+478,narrator,469.0,PRON,i,PRP,I,729,PRON,i,PRP,I,728,738
+479,narrator,469.0,PRON,i,PRP,I,743,PRON,i,PRP,I,739,766
+480,narrator,469.0,PRON,i,PRP,I,751,PRON,i,PRP,I,739,766
+481,narrator,469.0,PRON,i,PRP,I,804,PRON,i,PRP,I,802,810
+482,narrator,469.0,PRON,i,PRP,I,830,PRON,i,PRP,I,815,835
+483,narrator,469.0,PRON,i,PRP,I,862,PRON,me,PRP,me,857,874
+484,narrator,469.0,PRON,i,PRP,I,872,PRON,me,PRP,me,857,874
+485,unknown,537.0,PRON,they,PRP,they,537,PRON,they,PRP,they,536,543
+486,unknown,537.0,PRON,they,PRP,they,547,PRON,they,PRP,they,543,554
+487,person,541.0,PRON,him,PRP,him,541,PRON,him,PRP,him,536,543
+488,person,541.0,PRON,him,PRP,him,583,PRON,he,PRP,he,557,586
+489,person,606.0,PRON,herself,PRP,herself,606,PRON,herself,PRP,herself,598,628
+490,person,606.0,PRON,herself,PRP,herself,620,PRON,her,PRP,her,598,628
+491,person,606.0,PRON,herself,PRP,herself,629,PRON,she,PRP,she,628,639
+492,person,606.0,PRON,herself,PRP,herself,694,PRON,her,PRP,her,676,697
+493,person,642.0,PROPN,joe,NNP,Joe,642,PROPN,joe,NNP,Joe,639,675
+494,person,642.0,PROPN,joe,NNP,Joe,698,PROPN,joe,NNP,Joe,697,728
+495,person,642.0,PROPN,joe,NNP,Joe,2146,PROPN,joe,NNP,Joe,2126,2149
+496,person,642.0,PROPN,joe,NNP,Joe,2149,PROPN,joe,NNP,Joe,2149,2179
+497,person,642.0,PROPN,joe,NNP,Joe,2167,PRON,him,PRP,him,2149,2179
+498,person,682.0,PROPN,mrs. joe,NNP,Mrs. Joe,682,PROPN,mrs. joe,NNP,Mrs. Joe,676,697
+499,person,682.0,PROPN,mrs. joe,NNP,Mrs. Joe,739,PROPN,mrs. joe,NNP,Mrs. Joe,739,766
+500,environment,794.0,PROPN,hulks,NNPS,the Hulks,793,PROPN,hulks,NNPS,the Hulks,792,796
+501,environment,794.0,PROPN,hulks,NNPS,the Hulks,810,NOUN,hulks,NNS,"""Hulks",810,813
+502,person,808.0,PROPN,joe,NNP,Joe,808,PROPN,joe,NNP,Joe,802,810
+503,person,808.0,PROPN,joe,NNP,Joe,815,PROPN,joe,NNP,Joe,815,835
+504,person,808.0,PROPN,joe,NNP,Joe,832,PRON,you,PRP,you,815,835
+505,person,808.0,PROPN,joe,NNP,Joe,876,PRON,him,PRP,him,875,888
+506,person,808.0,PROPN,joe,NNP,Joe,881,PRON,he,PRP,he,875,888
+507,person,808.0,PROPN,joe,NNP,Joe,884,PRON,you,PRP,you,875,888
+508,narrator,913.0,PRON,i,PRP,I,913,PRON,i,PRP,I,912,944
+509,narrator,913.0,PRON,i,PRP,I,931,PRON,i,PRP,I,912,944
+510,narrator,913.0,PRON,i,PRP,I,956,PRON,i,PRP,I,956,981
+511,narrator,913.0,PRON,i,PRP,I,986,PRON,me,PRP,me,981,995
+512,narrator,913.0,PRON,i,PRP,I,992,PRON,i,PRP,I,981,995
+513,narrator,913.0,PRON,i,PRP,I,1037,PRON,i,PRP,I,1035,1094
+514,narrator,913.0,PRON,i,PRP,I,1045,PRON,me,PRP,me,1035,1094
+515,narrator,913.0,PRON,i,PRP,I,1052,PRON,i,PRP,I,1035,1094
+516,narrator,913.0,PRON,i,PRP,I,1078,PRON,i,PRP,I,1035,1094
+517,narrator,913.0,PRON,i,PRP,I,1092,PRON,me,PRP,me,1035,1094
+518,narrator,913.0,PRON,i,PRP,I,1094,PRON,i,PRP,I,1094,1101
+519,narrator,913.0,PRON,i,PRP,I,1101,PRON,i,PRP,I,1101,1117
+520,narrator,913.0,PRON,i,PRP,I,1109,PRON,i,PRP,I,1101,1117
+521,narrator,913.0,PRON,i,PRP,I,1128,PRON,i,PRP,I,1117,1146
+522,narrator,913.0,PRON,i,PRP,I,1159,PRON,i,PRP,I,1159,1242
+523,narrator,913.0,PRON,i,PRP,I,1174,PRON,i,PRP,I,1159,1242
+524,narrator,913.0,PRON,i,PRP,I,1185,PRON,i,PRP,I,1159,1242
+525,narrator,913.0,PRON,i,PRP,I,1191,PRON,myself,PRP,myself,1159,1242
+526,narrator,913.0,PRON,i,PRP,I,1202,PRON,i,PRP,I,1159,1242
+527,narrator,913.0,PRON,i,PRP,I,1216,PRON,me,PRP,me,1159,1242
+528,narrator,913.0,PRON,i,PRP,I,1221,PRON,i,PRP,I,1159,1242
+529,narrator,913.0,PRON,i,PRP,I,1228,PRON,i,PRP,I,1159,1242
+530,narrator,913.0,PRON,i,PRP,I,1243,PRON,i,PRP,I,1242,1305
+531,narrator,913.0,PRON,i,PRP,I,1253,PRON,myself,PRP,myself,1242,1305
+532,narrator,913.0,PRON,i,PRP,I,1273,PRON,me,PRP,me,1242,1305
+533,narrator,913.0,PRON,i,PRP,I,1281,PRON,i,PRP,I,1242,1305
+534,narrator,913.0,PRON,i,PRP,I,1288,PRON,i,PRP,I,1242,1305
+535,narrator,913.0,PRON,i,PRP,I,1305,PRON,i,PRP,I,1305,1335
+536,narrator,913.0,PRON,i,PRP,I,1313,PRON,i,PRP,I,1305,1335
+537,narrator,913.0,PRON,i,PRP,I,1319,PRON,i,PRP,I,1305,1335
+538,narrator,913.0,PRON,i,PRP,I,1329,PRON,i,PRP,I,1305,1335
+539,narrator,913.0,PRON,i,PRP,I,1360,PRON,i,PRP,I,1356,1385
+540,narrator,913.0,PRON,i,PRP,I,1400,PRON,i,PRP,I,1385,1406
+541,narrator,913.0,PRON,i,PRP,I,1420,PRON,me,PRP,me,1406,1434
+542,narrator,913.0,PRON,i,PRP,I,1452,PRON,i,PRP,I,1434,1479
+543,narrator,913.0,PRON,i,PRP,I,1466,PRON,i,PRP,I,1434,1479
+544,narrator,913.0,PRON,i,PRP,I,1469,PRON,i,PRP,I,1434,1479
+545,narrator,913.0,PRON,i,PRP,I,1479,PRON,i,PRP,I,1479,1504
+546,narrator,913.0,PRON,i,PRP,I,1497,PRON,i,PRP,I,1479,1504
+547,narrator,913.0,PRON,i,PRP,I,1504,PRON,i,PRP,I,1504,1586
+548,narrator,913.0,PRON,i,PRP,I,1521,PRON,i,PRP,I,1504,1586
+549,narrator,913.0,PRON,i,PRP,I,1537,PRON,i,PRP,I,1504,1586
+550,narrator,913.0,PRON,i,PRP,I,1542,PRON,i,PRP,I,1504,1586
+551,narrator,913.0,PRON,i,PRP,I,1586,PRON,i,PRP,I,1586,1659
+552,narrator,913.0,PRON,i,PRP,I,1596,PRON,i,PRP,I,1586,1659
+553,narrator,913.0,PRON,i,PRP,I,1626,PRON,i,PRP,I,1586,1659
+554,narrator,913.0,PRON,i,PRP,I,1634,PRON,i,PRP,I,1586,1659
+555,narrator,913.0,PRON,i,PRP,I,1672,PRON,i,PRP,I,1659,1688
+556,narrator,913.0,PRON,i,PRP,I,1689,PRON,i,PRP,I,1688,1724
+557,narrator,913.0,PRON,i,PRP,I,1694,PRON,i,PRP,I,1688,1724
+558,narrator,913.0,PRON,i,PRP,I,1704,PRON,i,PRP,I,1688,1724
+559,narrator,913.0,PRON,i,PRP,I,1708,PRON,i,PRP,I,1688,1724
+560,narrator,913.0,PRON,i,PRP,I,1734,PRON,i,PRP,I,1734,1767
+561,narrator,913.0,PRON,i,PRP,I,1769,PRON,i,PRP,I,1767,1801
+562,environment,920.0,NOUN,ships,NNS,prison-ships,919,NOUN,ships,NNS,prison-ships,912,944
+563,environment,920.0,NOUN,ships,NNS,prison-ships,924,PRON,they,PRP,they,912,944
+564,reader,958.0,PRON,you,PRP,you,958,PRON,you,PRP,you,956,981
+565,reader,958.0,PRON,you,PRP,you,973,PRON,you,PRP,you,956,981
+566,person,966.0,PRON,she,PRP,she,966,PRON,she,PRP,she,956,981
+567,person,966.0,PRON,she,PRP,she,969,PRON,i,PRP,I,956,981
+568,environment,995.0,NOUN,people,NNS,People,995,NOUN,people,NNS,People,995,1028
+569,environment,995.0,NOUN,people,NNS,People,1002,PRON,they,PRP,they,995,1028
+570,environment,995.0,NOUN,people,NNS,People,1007,PRON,they,PRP,they,995,1028
+571,environment,995.0,NOUN,people,NNS,People,1021,PRON,they,PRP,they,995,1028
+572,environment,1000.0,PROPN,hulks,NNPS,the Hulks,999,PROPN,hulks,NNPS,the Hulks,995,1028
+573,environment,1000.0,PROPN,hulks,NNPS,the Hulks,1874,PROPN,hulks,NNPS,the Hulks,1851,1878
+574,person,1144.0,NOUN,terror,NN,terror,1144,NOUN,terror,NN,terror,1117,1146
+575,person,1144.0,NOUN,terror,NN,terror,1150,NOUN,terror,NN,the terror,1146,1159
+576,person,1144.0,NOUN,terror,NN,terror,1155,PRON,it,PRP,it,1146,1159
+577,environment,1257.0,NOUN,river,NN,the river,1256,NOUN,river,NN,the river,1242,1305
+578,environment,1257.0,NOUN,river,NN,the river,2086,NOUN,river,NN,the river,2078,2126
+579,environment,1562.0,NOUN,stone bottle,NN,the stone bottle,1561,NOUN,stone bottle,NN,the stone bottle,1504,1586
+580,environment,1562.0,NOUN,stone bottle,NN,the stone bottle,1577,PRON,it,PRP,it,1504,1586
+581,environment,1593.0,NOUN,pie,NN,the pie,1592,NOUN,pie,NN,the pie,1586,1659
+582,environment,1593.0,NOUN,pie,NN,the pie,1630,NOUN,pie,NN,the pie,1586,1659
+583,environment,1593.0,NOUN,pie,NN,the pie,1636,PRON,it,PRP,it,1586,1659
+584,environment,1593.0,NOUN,pie,NN,the pie,1641,PRON,it,PRP,it,1586,1659
+585,environment,1593.0,NOUN,pie,NN,the pie,3070,NOUN,pie,NN,the pie,3059,3087
+586,environment,1593.0,NOUN,pie,NN,the pie,3205,NOUN,pie,NN,the pie,3162,3209
+587,environment,1662.0,NOUN,door,NN,a door in the kitchen,1661,NOUN,door,NN,a door in the kitchen,1659,1688
+588,environment,1662.0,NOUN,door,NN,a door in the kitchen,1676,NOUN,door,NN,that door,1659,1688
+589,environment,1692.0,NOUN,fastenings,NNS,the fastenings,1691,NOUN,fastenings,NNS,the fastenings,1688,1724
+590,environment,1692.0,NOUN,fastenings,NNS,the fastenings,1697,PRON,them,PRP,them,1688,1724
+591,environment,1692.0,NOUN,fastenings,NNS,the fastenings,1714,PRON,it,PRP,it,1688,1724
+592,environment,1721.0,NOUN,marshes,NNS,the misty marshes,1719,NOUN,marshes,NNS,the misty marshes,1688,1724
+593,environment,1721.0,NOUN,marshes,NNS,the misty marshes,1887,NOUN,marshes,NNS,the marshes,1878,1905
+594,environment,1738.0,NOUN,damp,NN,the damp,1737,NOUN,damp,NN,the damp,1734,1767
+595,environment,1738.0,NOUN,damp,NN,the damp,1771,NOUN,damp,NN,the damp,1767,1801
+596,environment,1738.0,NOUN,damp,NN,the damp,1791,PRON,itself,PRP,itself,1767,1801
+597,environment,1814.0,NOUN,mist,NN,the marsh mist,1812,NOUN,mist,NN,the marsh mist,1801,1851
+598,environment,1814.0,NOUN,mist,NN,the marsh mist,1878,NOUN,mist,NN,The mist,1878,1905
+599,environment,1814.0,NOUN,mist,NN,the marsh mist,1925,NOUN,mist,NN,the mist,1914,1947
+600,environment,1814.0,NOUN,mist,NN,the marsh mist,2185,NOUN,mist,NN,the mist,2179,2227
+601,environment,1814.0,NOUN,mist,NN,the marsh mist,2456,NOUN,mist,NN,the mist,2400,2471
+602,environment,1827.0,NOUN,people,NNS,people,1827,NOUN,people,NNS,people,1801,1851
+603,environment,1827.0,NOUN,people,NNS,people,1831,PRON,they,PRP,they,1801,1851
+604,environment,1827.0,NOUN,people,NNS,people,1836,PRON,they,PRP,they,1801,1851
+605,narrator,1842.0,PRON,me,PRP,me,1842,PRON,me,PRP,me,1801,1851
+606,narrator,1842.0,PRON,me,PRP,me,1844,PRON,i,PRP,I,1801,1851
+607,narrator,1842.0,PRON,me,PRP,me,1854,PRON,i,PRP,I,1851,1878
+608,narrator,1842.0,PRON,me,PRP,me,1872,PRON,me,PRP,me,1851,1878
+609,narrator,1842.0,PRON,me,PRP,me,1884,PRON,i,PRP,I,1878,1905
+610,narrator,1842.0,PRON,me,PRP,me,1903,PRON,me,PRP,me,1878,1905
+611,narrator,1842.0,PRON,me,PRP,me,1923,PRON,me,PRP,me,1914,1947
+612,narrator,1842.0,PRON,me,PRP,me,1948,PRON,him,PRP,him,1947,1950
+613,narrator,1842.0,PRON,me,PRP,me,1955,PRON,me,PRP,me,1951,1978
+614,narrator,1842.0,PRON,me,PRP,me,2001,PRON,me,PRP,me,1978,2028
+615,narrator,1842.0,PRON,me,PRP,me,2018,PRON,i,PRP,I,1978,2028
+616,narrator,1842.0,PRON,me,PRP,me,2023,PRON,i,PRP,I,1978,2028
+617,narrator,1842.0,PRON,me,PRP,me,2029,PRON,i,PRP,I,2028,2037
+618,narrator,1842.0,PRON,me,PRP,me,2041,PRON,myself,PRP,myself,2037,2042
+619,narrator,1842.0,PRON,me,PRP,me,2042,PRON,i,PRP,I,2042,2047
+620,narrator,1842.0,PRON,me,PRP,me,2082,PRON,i,PRP,I,2078,2126
+621,narrator,1842.0,PRON,me,PRP,me,2092,PRON,i,PRP,I,2078,2126
+622,narrator,1842.0,PRON,me,PRP,me,2095,PRON,i,PRP,I,2078,2126
+623,narrator,1842.0,PRON,me,PRP,me,2120,PRON,i,PRP,I,2078,2126
+624,narrator,1842.0,PRON,me,PRP,me,2126,PRON,i,PRP,I,2126,2149
+625,narrator,1842.0,PRON,me,PRP,me,2137,PRON,i,PRP,I,2126,2149
+626,narrator,1842.0,PRON,me,PRP,me,2159,PRON,me,PRP,me,2149,2179
+627,narrator,1842.0,PRON,me,PRP,me,2162,PRON,i,PRP,I,2149,2179
+628,narrator,1842.0,PRON,me,PRP,me,2188,PRON,i,PRP,I,2179,2227
+629,narrator,1842.0,PRON,me,PRP,me,2190,PRON,myself,PRP,myself,2179,2227
+630,narrator,1842.0,PRON,me,PRP,me,2235,PRON,i,PRP,I,2227,2270
+631,narrator,1842.0,PRON,me,PRP,me,2242,PRON,i,PRP,I,2227,2270
+632,narrator,1842.0,PRON,me,PRP,me,2262,PRON,i,PRP,I,2227,2270
+633,narrator,1842.0,PRON,me,PRP,me,2268,PRON,me,PRP,me,2227,2270
+634,narrator,1842.0,PRON,me,PRP,me,2273,PRON,me,PRP,me,2270,2291
+635,narrator,1842.0,PRON,me,PRP,me,2291,PRON,i,PRP,I,2291,2323
+636,narrator,1842.0,PRON,me,PRP,me,2299,PRON,i,PRP,I,2291,2323
+637,narrator,1842.0,PRON,me,PRP,me,2312,PRON,i,PRP,I,2291,2323
+638,narrator,1842.0,PRON,me,PRP,me,2402,PRON,i,PRP,I,2400,2471
+639,narrator,1842.0,PRON,me,PRP,me,2409,PRON,i,PRP,I,2400,2471
+640,narrator,1842.0,PRON,me,PRP,me,2423,PRON,me,PRP,me,2400,2471
+641,narrator,1842.0,PRON,me,PRP,me,2429,PRON,me,PRP,me,2400,2471
+642,narrator,1842.0,PRON,me,PRP,me,2439,PRON,me,PRP,me,2400,2471
+643,narrator,1842.0,PRON,me,PRP,me,2466,PRON,i,PRP,I,2400,2471
+644,narrator,1842.0,PRON,me,PRP,me,2479,PRON,i,PRP,I,2479,2489
+645,narrator,1842.0,PRON,me,PRP,me,2485,PRON,i,PRP,I,2479,2489
+646,narrator,1842.0,PRON,me,PRP,me,2489,PRON,i,PRP,I,2489,2512
+647,narrator,1842.0,PRON,me,PRP,me,2492,PRON,i,PRP,I,2489,2512
+648,narrator,1842.0,PRON,me,PRP,me,2504,PRON,i,PRP,I,2489,2512
+649,narrator,1842.0,PRON,me,PRP,me,2512,PRON,i,PRP,I,2512,2552
+650,narrator,1842.0,PRON,me,PRP,me,2550,PRON,me,PRP,me,2512,2552
+651,narrator,1842.0,PRON,me,PRP,me,2561,PRON,i,PRP,I,2561,2576
+652,narrator,1842.0,PRON,me,PRP,me,2585,PRON,i,PRP,I,2576,2617
+653,narrator,1842.0,PRON,me,PRP,me,2601,PRON,me,PRP,me,2576,2617
+654,narrator,1842.0,PRON,me,PRP,me,2621,PRON,me,PRP,me,2617,2649
+655,narrator,1842.0,PRON,me,PRP,me,2630,PRON,i,PRP,I,2617,2649
+656,narrator,1842.0,PRON,me,PRP,me,2635,PRON,me,PRP,me,2617,2649
+657,narrator,1842.0,PRON,me,PRP,me,2640,PRON,i,PRP,I,2617,2649
+658,environment,1857.0,PRON,it,PRP,it,1857,PRON,it,PRP,it,1851,1878
+659,environment,1857.0,PRON,it,PRP,it,1860,PRON,it,PRP,it,1851,1878
+660,environment,1857.0,PRON,it,PRP,it,1863,PRON,it,PRP,it,1851,1878
+661,environment,1915.0,NOUN,gates,NNS,The gates and dikes and banks,1914,NOUN,gates,NNS,The gates and dikes and banks,1914,1947
+662,environment,1915.0,NOUN,gates,NNS,The gates and dikes and banks,1930,PRON,they,PRP,they,1914,1947
+663,environment,2033.0,PRON,it,PRP,it,2033,PRON,it,PRP,it,2028,2037
+664,environment,2033.0,PRON,it,PRP,it,2037,PRON,it,PRP,It,2037,2042
+665,environment,2033.0,PRON,it,PRP,it,2044,PRON,it,PRP,it,2042,2047
+666,person,2035.0,NOUN,sir,NN,sir,2035,NOUN,sir,NN,sir,2028,2037
+667,person,2035.0,NOUN,sir,NN,sir,2954,NOUN,sir,NN,sir,2952,2956
+668,person,2035.0,NOUN,sir,NN,sir,2983,PRON,he,PRP,he,2979,2990
+669,person,2035.0,NOUN,sir,NN,sir,2986,PRON,i,PRP,I,2979,2990
+670,person,2035.0,NOUN,sir,NN,sir,2988,PRON,you,PRP,you,2979,2990
+671,person,2119.0,NOUN,man,NN,the man I was running to meet,2118,NOUN,man,NN,the man I was running to meet,2078,2126
+672,person,2119.0,NOUN,man,NN,the man I was running to meet,2264,NOUN,man,NN,the man,2227,2270
+673,person,2119.0,NOUN,man,NN,the man I was running to meet,2276,PRON,he,PRP,he,2270,2291
+674,person,2119.0,NOUN,man,NN,the man I was running to meet,2293,PRON,he,PRP,he,2291,2323
+675,person,2119.0,NOUN,man,NN,the man I was running to meet,2302,PRON,him,PRP,him,2291,2323
+676,person,2119.0,NOUN,man,NN,the man I was running to meet,2318,PRON,him,PRP,him,2291,2323
+677,person,2119.0,NOUN,man,NN,the man I was running to meet,2323,PRON,he,PRP,He,2323,2340
+678,person,2119.0,NOUN,man,NN,the man I was running to meet,2331,NOUN,man,NN,the same man,2323,2340
+679,person,2119.0,NOUN,man,NN,the man I was running to meet,2342,NOUN,man,NN,this man,2340,2400
+680,person,2119.0,NOUN,man,NN,the man I was running to meet,2374,NOUN,man,NN,the other man,2340,2400
+681,person,2119.0,NOUN,man,NN,the man I was running to meet,2381,PRON,he,PRP,he,2340,2400
+682,person,2119.0,NOUN,man,NN,the man I was running to meet,2418,PRON,he,PRP,he,2400,2471
+683,person,2119.0,NOUN,man,NN,the man I was running to meet,2443,PRON,himself,PRP,himself,2400,2471
+684,person,2119.0,NOUN,man,NN,the man I was running to meet,2448,PRON,him,PRP,him,2400,2471
+685,person,2119.0,NOUN,man,NN,the man I was running to meet,2453,PRON,he,PRP,he,2400,2471
+686,person,2119.0,NOUN,man,NN,the man I was running to meet,2462,PRON,he,PRP,he,2400,2471
+687,person,2119.0,NOUN,man,NN,the man I was running to meet,2468,PRON,him,PRP,him,2400,2471
+688,person,2119.0,NOUN,man,NN,the man I was running to meet,2474,NOUN,man,NN,the young man,2472,2478
+689,person,2119.0,NOUN,man,NN,the man I was running to meet,2524,NOUN,man,NN,the right Man,2512,2552
+690,person,2119.0,NOUN,man,NN,the man I was running to meet,2529,PRON,himself,PRP,himself,2512,2552
+691,person,2119.0,NOUN,man,NN,the man I was running to meet,2538,PRON,he,PRP,he,2512,2552
+692,person,2119.0,NOUN,man,NN,the man I was running to meet,2552,PRON,he,PRP,He,2552,2561
+693,person,2119.0,NOUN,man,NN,the man I was running to meet,2566,PRON,him,PRP,him,2561,2576
+694,person,2119.0,NOUN,man,NN,the man I was running to meet,2587,PRON,him,PRP,him,2576,2617
+695,person,2119.0,NOUN,man,NN,the man I was running to meet,2591,PRON,he,PRP,he,2576,2617
+696,person,2119.0,NOUN,man,NN,the man I was running to meet,2602,PRON,he,PRP,he,2576,2617
+697,person,2119.0,NOUN,man,NN,the man I was running to meet,2611,PRON,he,PRP,he,2576,2617
+698,person,2119.0,NOUN,man,NN,the man I was running to meet,2617,PRON,he,PRP,He,2617,2649
+699,person,2119.0,NOUN,man,NN,the man I was running to meet,3810,NOUN,man,NN,the man,3804,3825
+700,environment,2431.0,PRON,it,PRP,it,2431,PRON,it,PRP,it,2400,2471
+701,environment,2431.0,PRON,it,PRP,it,2446,PRON,it,PRP,it,2400,2471
+702,environment,2483.0,NOUN,my heart shoot,NN,my heart shoot,2483,NOUN,my heart shoot,NN,my heart shoot,2479,2489
+703,environment,2483.0,NOUN,my heart shoot,NN,my heart shoot,2487,PRON,him,PRP,him,2479,2489
+704,environment,2589.0,NOUN,file,NN,the file,2588,NOUN,file,NN,the file,2576,2617
+705,environment,2589.0,NOUN,file,NN,the file,2593,PRON,it,PRP,it,2576,2617
+706,environment,2589.0,NOUN,file,NN,the file,2608,PRON,it,PRP,it,2576,2617
+707,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2650,NOUN,boy,NN,"What's in the bottle, boy",2650,2658
+708,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2660,PRON,he,PRP,he,2658,2663
+709,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2669,PRON,he,PRP,He,2669,2715
+710,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2706,PRON,he,PRP,he,2669,2715
+711,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2715,PRON,he,PRP,He,2715,2748
+712,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2730,PRON,he,PRP,he,2715,2748
+713,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2749,PRON,i,PRP,I,2748,2760
+714,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2761,PRON,i,PRP,I,2761,2774
+715,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2771,PRON,he,PRP,he,2761,2774
+716,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2782,PRON,i,PRP,I,2775,2786
+717,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2784,PRON,him,PRP,him,2775,2786
+718,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2787,PRON,you,PRP,You,2787,2801
+719,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2807,PRON,i,PRP,I,2806,2811
+720,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2817,PRON,me,PRP,me,2812,2823
+721,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2821,PRON,he,PRP,he,2812,2823
+722,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2824,PRON,i,PRP,I,2824,2829
+723,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2830,PRON,i,PRP,I,2829,2849
+724,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2849,PRON,i,PRP,I,2849,2862
+725,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2857,PRON,i,PRP,I,2849,2862
+726,person,2656.0,NOUN,boy,NN,"What's in the bottle, boy",2860,PRON,you,PRP,you,2849,2862
+727,environment,2668.0,NOUN,i.,NN,"I.
+",2668,NOUN,"i.
+",NN,"I.
+",2663,2669
+728,environment,2668.0,NOUN,i.,NN,"I.
+",2759,NOUN,"i.
+",NN,"I.
+",2748,2760
+729,environment,2668.0,NOUN,i.,NN,"I.
+",3408,NOUN,"i.
+",NN,"I.
+",3396,3409
+730,environment,2689.0,PRON,it,PRP,it,2689,PRON,it,PRP,it,2669,2715
+731,environment,2689.0,PRON,it,PRP,it,2703,PRON,it,PRP,it,2669,2715
+732,unknown,2796.0,PRON,they,PRP,they,2796,PRON,they,PRP,they,2787,2801
+733,unknown,2796.0,PRON,they,PRP,they,2812,PRON,they,PRP,they,2812,2823
+734,person,2864.0,PRON,he,PRP,He,2864,PRON,he,PRP,He,2864,2878
+735,person,2864.0,PRON,he,PRP,He,2885,PRON,he,PRP,he,2878,2902
+736,person,2864.0,PRON,he,PRP,He,2923,PRON,him,PRP,him,2902,2942
+737,person,2864.0,PRON,he,PRP,He,2928,PRON,he,PRP,he,2902,2942
+738,reader,2942.0,PRON,you,PRP,You,2942,PRON,you,PRP,You,2942,2951
+739,reader,2942.0,PRON,you,PRP,You,2947,PRON,you,PRP,you,2942,2951
+740,reader,2942.0,PRON,you,PRP,You,2969,PRON,you,PRP,you,2961,2973
+741,reader,2942.0,PRON,you,PRP,You,2990,PRON,you,PRP,You,2990,3049
+742,reader,2942.0,PRON,you,PRP,You,3005,PRON,you,PRP,you,2990,3049
+743,person,3034.0,PRON,he,PRP,he,3034,PRON,he,PRP,he,2990,3049
+744,person,3034.0,PRON,he,PRP,he,3038,PRON,him,PRP,him,2990,3049
+745,person,3034.0,PRON,he,PRP,he,3050,PRON,he,PRP,he,3049,3059
+746,person,3034.0,PRON,he,PRP,he,3064,PRON,him,PRP,him,3059,3087
+747,person,3034.0,PRON,he,PRP,he,3066,PRON,he,PRP,he,3059,3087
+748,person,3034.0,PRON,he,PRP,he,3073,PRON,i,PRP,I,3059,3087
+749,person,3034.0,PRON,he,PRP,he,3080,PRON,i,PRP,I,3059,3087
+750,person,3034.0,PRON,he,PRP,he,3083,PRON,you,PRP,you,3059,3087
+751,person,3034.0,PRON,he,PRP,he,3091,PRON,you,PRP,you,3090,3096
+752,person,3034.0,PRON,he,PRP,he,3097,PRON,i,PRP,I,3096,3106
+753,person,3034.0,PRON,he,PRP,he,3099,PRON,i,PRP,I,3096,3106
+754,person,3034.0,PRON,he,PRP,he,3102,PRON,you,PRP,you,3096,3106
+755,person,3034.0,PRON,he,PRP,he,3113,PRON,i,PRP,I,3113,3116
+756,person,3034.0,PRON,he,PRP,he,3118,PRON,i,PRP,I,3118,3149
+757,person,3034.0,PRON,he,PRP,he,3131,PRON,i,PRP,I,3118,3149
+758,person,3124.0,NOUN,dog,NN,a large dog of ours eating his food,3122,NOUN,dog,NN,a large dog of ours eating his food,3118,3149
+759,person,3124.0,NOUN,dog,NN,a large dog of ours eating his food,3159,NOUN,dog,NN,the dog,3149,3162
+760,person,3124.0,NOUN,dog,NN,a large dog of ours eating his food,3254,NOUN,dog,NN,the dog,3245,3258
+761,person,3146.0,NOUN,man,NN,the man,3145,NOUN,man,NN,the man,3118,3149
+762,person,3146.0,NOUN,man,NN,the man,3149,NOUN,man,NN,The man,3149,3162
+763,person,3146.0,NOUN,man,NN,the man,3162,PRON,he,PRP,He,3162,3209
+764,person,3146.0,NOUN,man,NN,the man,3179,PRON,he,PRP,he,3162,3209
+765,person,3146.0,NOUN,man,NN,the man,3186,PRON,he,PRP,he,3162,3209
+766,person,3146.0,NOUN,man,NN,the man,3191,PRON,he,PRP,he,3162,3209
+767,person,3146.0,NOUN,man,NN,the man,3209,PRON,he,PRP,He,3209,3245
+768,person,3146.0,NOUN,man,NN,the man,3233,PRON,him,PRP,him,3209,3245
+769,person,3146.0,NOUN,man,NN,the man,3250,PRON,he,PRP,he,3245,3258
+770,person,3146.0,NOUN,man,NN,the man,3259,PRON,i,PRP,I,3258,3295
+771,person,3146.0,NOUN,man,NN,the man,3270,PRON,him,PRP,him,3258,3295
+772,person,3146.0,NOUN,man,NN,the man,3274,PRON,i,PRP,I,3258,3295
+773,person,3146.0,NOUN,man,NN,the man,3283,PRON,i,PRP,I,3258,3295
+774,person,3146.0,NOUN,man,NN,the man,3318,PRON,me,PRP,me,3309,3325
+775,environment,3217.0,PRON,it,PRP,it,3217,PRON,it,PRP,it,3209,3245
+776,environment,3217.0,PRON,it,PRP,it,3221,PRON,it,PRP,it,3209,3245
+777,person,3329.0,PRON,him,PRP,him,3329,PRON,him,PRP,him,3325,3331
+778,person,3329.0,PRON,him,PRP,him,3333,PRON,him,PRP,him,3331,3347
+779,person,3350.0,NOUN,man,NN,"""The young man",3347,NOUN,man,NN,"""The young man",3347,3352
+780,person,3350.0,NOUN,man,NN,"""The young man",3370,PRON,he,PRP,he,3369,3380
+781,person,3350.0,NOUN,man,NN,"""The young man",3381,PRON,him,PRP,Him,3381,3383
+782,person,3350.0,NOUN,man,NN,"""The young man",3387,PRON,he,PRP,He,3387,3394
+783,person,3350.0,NOUN,man,NN,"""The young man",3399,PRON,he,PRP,he,3396,3409
+784,person,3350.0,NOUN,man,NN,"""The young man",3403,PRON,he,PRP,he,3396,3409
+785,person,3350.0,NOUN,man,NN,"""The young man",3409,NOUN,man,NN,The man,3409,3427
+786,person,3350.0,NOUN,man,NN,"""The young man",3461,PRON,him,PRP,him,3445,3471
+787,person,3350.0,NOUN,man,NN,"""The young man",3473,PRON,he,PRP,He,3473,3499
+788,reader,3353.0,PRON,you,PRP,you,3353,PRON,you,PRP,you,3352,3357
+789,reader,3353.0,PRON,you,PRP,you,3361,PRON,you,PRP,you,3357,3365
+790,reader,3353.0,PRON,you,PRP,you,3397,PRON,i,PRP,I,3396,3409
+791,reader,3353.0,PRON,you,PRP,you,3416,PRON,me,PRP,me,3409,3427
+792,reader,3353.0,PRON,you,PRP,you,3450,PRON,i,PRP,I,3445,3471
+793,reader,3353.0,PRON,you,PRP,you,3459,PRON,i,PRP,I,3445,3471
+794,reader,3353.0,PRON,you,PRP,you,3469,PRON,you,PRP,you,3445,3471
+795,reader,3353.0,PRON,you,PRP,you,3475,PRON,me,PRP,me,3473,3499
+796,reader,3353.0,PRON,you,PRP,you,3482,PRON,me,PRP,me,3473,3499
+797,reader,3353.0,PRON,you,PRP,you,3486,PRON,i,PRP,I,3473,3499
+798,reader,3353.0,PRON,you,PRP,you,3502,PRON,you,PRP,you,3499,3526
+799,reader,3353.0,PRON,you,PRP,you,3513,PRON,i,PRP,I,3499,3526
+800,reader,3353.0,PRON,you,PRP,you,3539,PRON,you,PRP,you,3537,3547
+801,environment,3478.0,NOUN,collar,NN,the collar,3477,NOUN,collar,NN,the collar,3473,3499
+802,environment,3478.0,NOUN,collar,NN,the collar,3490,DET,his first,PRP$,his first,3473,3499
+803,environment,3542.0,NOUN,cannon,NN,the cannon,3541,NOUN,cannon,NN,the cannon,3537,3547
+804,environment,3542.0,NOUN,cannon,NN,the cannon,3743,NOUN,cannon,NN,the cannon,3735,3745
+805,person,3554.0,PRON,he,PRP,he,3554,PRON,he,PRP,he,3554,3560
+806,person,3554.0,PRON,he,PRP,he,3557,PRON,himself,PRP,himself,3554,3560
+807,person,3554.0,PRON,he,PRP,he,3561,PRON,i,PRP,I,3560,3596
+808,person,3554.0,PRON,he,PRP,he,3563,PRON,you,PRP,you,3560,3596
+809,person,3554.0,PRON,he,PRP,he,3573,PRON,i,PRP,I,3560,3596
+810,person,3554.0,PRON,he,PRP,he,3606,PRON,he,PRP,he,3598,3608
+811,person,3578.0,PRON,we,PRP,we,3578,PRON,we,PRP,we,3560,3596
+812,person,3578.0,PRON,we,PRP,we,3591,PRON,we,PRP,we,3560,3596
+813,person,3611.0,NOUN,man,NN,a man,3610,NOUN,man,NN,a man,3609,3645
+814,person,3611.0,NOUN,man,NN,a man,3633,PRON,he,PRP,he,3609,3645
+815,person,3611.0,NOUN,man,NN,a man,3647,PRON,he,PRP,He,3647,3666
+816,person,3611.0,NOUN,man,NN,a man,3664,PRON,him,PRP,him,3647,3666
+817,person,3611.0,NOUN,man,NN,a man,3671,PRON,himself,PRP,himself,3666,3688
+818,person,3611.0,NOUN,man,NN,a man,3691,PRON,him,PRP,him,3690,3697
+819,narrator,3709.0,PRON,i,PRP,I,3709,PRON,i,PRP,I,3706,3730
+820,narrator,3709.0,PRON,i,PRP,I,3737,PRON,i,PRP,I,3735,3745
+821,narrator,3709.0,PRON,i,PRP,I,3793,PRON,i,PRP,I,3784,3804
+822,narrator,3709.0,PRON,i,PRP,I,3797,PRON,i,PRP,I,3784,3804
+823,narrator,3709.0,PRON,i,PRP,I,3800,PRON,i,PRP,I,3784,3804
+824,narrator,3709.0,PRON,i,PRP,I,3855,PRON,me,PRP,me,3853,3861
+825,narrator,3709.0,PRON,i,PRP,I,3861,PRON,i,PRP,I,3861,3870
+826,narrator,3709.0,PRON,i,PRP,I,3888,PRON,i,PRP,I,3888,3910
+827,narrator,3709.0,PRON,i,PRP,I,3930,PRON,me,PRP,me,3910,3966
+828,narrator,3709.0,PRON,i,PRP,I,3966,PRON,i,PRP,I,3966,4001
+829,narrator,3709.0,PRON,i,PRP,I,3987,PRON,i,PRP,I,3966,4001
+830,narrator,3709.0,PRON,i,PRP,I,4001,PRON,i,PRP,I,4001,4027
+831,narrator,3709.0,PRON,i,PRP,I,4004,PRON,i,PRP,I,4001,4027
+832,narrator,3709.0,PRON,i,PRP,I,4015,PRON,i,PRP,I,4001,4027
+833,narrator,3709.0,PRON,i,PRP,I,4020,PRON,i,PRP,I,4001,4027
+834,narrator,3709.0,PRON,i,PRP,I,4029,PRON,i,PRP,I,4027,4055
+835,narrator,3709.0,PRON,i,PRP,I,4057,PRON,i,PRP,I,4055,4078
+836,narrator,3709.0,PRON,i,PRP,I,4062,PRON,i,PRP,I,4055,4078
+837,narrator,3709.0,PRON,i,PRP,I,4080,PRON,i,PRP,I,4078,4096
+838,narrator,3709.0,PRON,i,PRP,I,4094,PRON,me,PRP,me,4078,4096
+839,environment,3740.0,NOUN,mist,NN,the mist,3739,NOUN,mist,NN,the mist,3735,3745
+840,environment,3740.0,NOUN,mist,NN,the mist,3893,NOUN,mist,NN,the mist,3888,3910
+841,environment,3740.0,NOUN,mist,NN,the mist,3905,PRON,it,PRP,it,3888,3910
+842,environment,3740.0,NOUN,mist,NN,the mist,3942,PRON,it,PRP,it,3910,3966
+843,environment,3740.0,NOUN,mist,NN,the mist,3955,PRON,it,PRP,it,3910,3966
+844,environment,3740.0,NOUN,mist,NN,the mist,3961,PRON,it,PRP,it,3910,3966
+845,environment,3740.0,NOUN,mist,NN,the mist,4065,NOUN,mist,NN,the mist,4055,4078
+846,person,3754.0,NOUN,man,NN,"this man""",3753,NOUN,man,NN,"this man""",3745,3783
+847,person,3754.0,NOUN,man,NN,"this man""",3757,PRON,he,PRP,he,3745,3783
+848,person,3754.0,NOUN,man,NN,"this man""",3766,PRON,he,PRP,he,3745,3783
+849,person,3754.0,NOUN,man,NN,"this man""",3769,DET,my,PRP$,my,3745,3783
+850,person,3754.0,NOUN,man,NN,"this man""",3775,PRON,you,PRP,you,3745,3783
+851,person,3754.0,NOUN,man,NN,"this man""",3779,PRON,him,PRP,him,3745,3783
+852,person,3754.0,NOUN,man,NN,"this man""",3784,PRON,he,PRP,He,3784,3804
+853,person,3754.0,NOUN,man,NN,"this man""",3835,PRON,he,PRP,he,3832,3838
+854,person,3754.0,NOUN,man,NN,"this man""",3838,PRON,he,PRP,He,3838,3853
+855,person,3754.0,NOUN,man,NN,"this man""",3850,DET,his gray,PRP$,his gray,3838,3853
+856,person,3754.0,NOUN,man,NN,"this man""",3858,PRON,he,PRP,he,3853,3861
+857,person,3754.0,NOUN,man,NN,"this man""",3864,PRON,him,PRP,him,3861,3870
+858,person,3899.0,NOUN,man,NN,the other man,3897,NOUN,man,NN,the other man,3888,3910
+859,person,3899.0,NOUN,man,NN,the other man,3902,PRON,he,PRP,he,3888,3910
+860,person,3899.0,NOUN,man,NN,the other man,3911,PRON,he,PRP,he,3910,3966
+861,person,3899.0,NOUN,man,NN,the other man,3949,PRON,he,PRP,he,3910,3966
+862,person,3899.0,NOUN,man,NN,the other man,3972,PRON,him,PRP,him,3966,4001
+863,person,3899.0,NOUN,man,NN,the other man,3977,PRON,he,PRP,he,3966,4001
+864,person,3899.0,NOUN,man,NN,the other man,3980,PRON,himself,PRP,himself,3966,4001
+865,person,3899.0,NOUN,man,NN,the other man,4003,PRON,him,PRP,him,4001,4027
+866,person,3899.0,NOUN,man,NN,the other man,4009,PRON,he,PRP,he,4001,4027
+867,person,3899.0,NOUN,man,NN,the other man,4032,PRON,him,PRP,him,4027,4055
+868,person,3899.0,NOUN,man,NN,the other man,4040,PRON,he,PRP,he,4027,4055
+869,person,3899.0,NOUN,man,NN,the other man,4060,PRON,him,PRP,him,4055,4078
+870,person,3899.0,NOUN,man,NN,the other man,4132,PROPN,joe,NNP,Joe,4116,4172
+871,person,3899.0,NOUN,man,NN,the other man,4141,PRON,him,PRP,him,4116,4172
+872,person,3899.0,NOUN,man,NN,the other man,4155,PRON,him,PRP,him,4116,4172
+873,person,3899.0,NOUN,man,NN,the other man,4179,PRON,you,PRP,you,4173,4182
+874,person,3899.0,NOUN,man,NN,the other man,4188,PRON,i,PRP,I,4182,4195
+875,person,3899.0,NOUN,man,NN,the other man,4195,PRON,i,PRP,I,4195,4206
+876,person,3899.0,NOUN,man,NN,the other man,4197,PRON,i,PRP,I,4195,4206
+877,person,3899.0,NOUN,man,NN,the other man,4216,PRON,you,PRP,You,4216,4223
+878,person,3899.0,NOUN,man,NN,the other man,4229,PRON,i,PRP,I,4224,4233
+879,person,3899.0,NOUN,man,NN,the other man,4236,PRON,i,PRP,I,4234,4270
+880,person,3899.0,NOUN,man,NN,the other man,4257,PRON,i,PRP,I,4234,4270
+881,person,3899.0,NOUN,man,NN,the other man,4271,PRON,i,PRP,I,4271,4292
+882,person,3899.0,NOUN,man,NN,the other man,4303,PRON,me,PRP,me,4294,4359
+883,person,3899.0,NOUN,man,NN,the other man,4348,PRON,me,PRP,me,4294,4359
+884,person,3899.0,NOUN,man,NN,the other man,4367,PROPN,joe,NNP,Joe,4359,4391
+885,person,3899.0,NOUN,man,NN,the other man,4369,PRON,i,PRP,I,4359,4391
+886,environment,3964.0,NOUN,file,NN,the file,3963,NOUN,file,NN,the file,3910,3966
+887,environment,3964.0,NOUN,file,NN,the file,4071,NOUN,file,NN,the file,4055,4078
+888,environment,4034.0,NOUN,his head,NN,his head,4034,NOUN,his head,NN,his head,4027,4055
+889,environment,4034.0,NOUN,his head,NN,his head,4050,PRON,it,PRP,it,4027,4055
+890,,4086.0,PROPN,constable,NNP,a Constable in the kitchen,4085,PROPN,constable,NNP,a Constable in the kitchen,4078,4096
+891,,4086.0,PROPN,constable,NNP,a Constable in the kitchen,4101,PROPN,constable,NNP,no Constable there,4096,4116
+892,,4086.0,PROPN,constable,NNP,a Constable in the kitchen,4102,PROPN,constable,NNP,Constable,4096,4116
+893,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4116,PROPN,mrs. joe,NNP,Mrs. Joe,4116,4172
+894,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4213,PROPN,mrs. joe,NNP,Mrs. Joe,4211,4215
+895,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4268,PROPN,mrs. joe,NNP,Mrs. Joe,4234,4270
+896,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4325,PROPN,mrs. joe,NNP,Mrs. Joe,4294,4359
+897,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4330,PRON,him,PRP,him,4294,4359
+898,person,4116.0,PROPN,mrs. joe,NNP,Mrs. Joe,4353,PROPN,mrs. joe,NNP,Mrs. Joe,4294,4359
+899,person,4204.0,PROPN,carols,NNPS,the Carols,4203,PROPN,carols,NNPS,the Carols,4195,4206
+900,person,4204.0,PROPN,carols,NNPS,the Carols,4263,PROPN,carols,NNPS,the Carols,4234,4270
+901,environment,4335.0,NOUN,her eyes,NNS,her eyes,4335,NOUN,her eyes,NNS,her eyes,4294,4359
+902,environment,4335.0,NOUN,her eyes,NNS,her eyes,4341,DET,his two,PRP$,his two,4294,4359
+903,environment,4335.0,NOUN,her eyes,NNS,her eyes,4346,PRON,them,PRP,them,4294,4359
+904,person,4391.0,PRON,we,PRP,We,4391,PRON,we,PRP,We,4391,4417
+905,person,4391.0,PRON,we,PRP,We,4449,PRON,us,PRP,us,4445,4495
+906,person,4391.0,PRON,we,PRP,We,4499,PRON,we,PRP,we,4497,4543
+907,person,4391.0,PRON,we,PRP,We,4506,PRON,we,PRP,we,4497,4543
+908,person,4391.0,PRON,we,PRP,We,4524,PRON,we,PRP,we,4497,4543
+909,narrator,4461.0,PRON,i,PRP,I,4461,PRON,i,PRP,I,4445,4495
+910,narrator,4461.0,PRON,i,PRP,I,4485,PRON,i,PRP,I,4445,4495
+911,narrator,4461.0,PRON,i,PRP,I,4489,PRON,me,PRP,me,4445,4495
+912,narrator,4461.0,PRON,i,PRP,I,4491,PRON,i,PRP,I,4445,4495
+913,narrator,4461.0,PRON,i,PRP,I,4493,PRON,you,PRP,you,4445,4495

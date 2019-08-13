@@ -13,9 +13,24 @@
             "console": "integratedTerminal",
             "args": [
                 "-n", "50",
-                "greatex_100k", 
+                "-r", "greatex_100k", 
                 "data\\interim", 
                 "data\\processed"
+            ]
+        },
+        {
+            "name": "Prepare data (dev, all)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\data_prepare.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-mfx", 
+                "-b", "20_000",
+                "-t1", "40_000",
+                "-r", "dev_all", 
+                "data\\raw\\EN_1861_Dickens,Charles_GreatExpectations_Novel.txt",
+                "data\\interim"
             ]
         },
         {
@@ -25,9 +40,10 @@
             "program": "${workspaceFolder}\\src\\data_prepare.py",
             "console": "integratedTerminal",
             "args": [
-                "-mfx", "-b", "20_000",
+                "-mfx", 
+                "-b", "20_000",
+                "-r", "greatex_full", 
                 "data\\raw\\EN_1861_Dickens,Charles_GreatExpectations_Novel.txt",
-                "greatex_full", 
                 "data\\interim"
             ]
         },
@@ -38,9 +54,11 @@
             "program": "${workspaceFolder}\\src\\data_prepare.py",
             "console": "integratedTerminal",
             "args": [
-                "-mfx", "-b", "20_000", "-t1", "100_000",
+                "-mfx", 
+                "-b", "20_000", 
+                "-t1", "100_000",
+                "-r", "greatex_100k", 
                 "data\\raw\\EN_1861_Dickens,Charles_GreatExpectations_Novel.txt",
-                "greatex_100k", 
                 "data\\interim"
             ]
         }

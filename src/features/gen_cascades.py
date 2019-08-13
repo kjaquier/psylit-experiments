@@ -1,4 +1,4 @@
-import os
+import pathlib
 import logging
 from functools import partial
 
@@ -69,12 +69,14 @@ def cascade_representation(data, symbolic_cols, numeric_cols, casc_index=('t',),
 
 class BookData:
 
-    def __init__(self, book_name, data_folder):
-        filename = lambda folder, name, ext: os.path.join(folder, f"{name}.{ext}")
+    def __init__(self, book_name, book_folder):
+        book_folder = pathlib.PurePath(book_folder)
 
-        self.ents = pd.read_csv(filename(data_folder, book_name, "ent.csv"), index_col=0)
-        df = pd.read_csv(filename(data_folder, book_name, "data.csv"), index_col=0)
-        meta_file = filename(data_folder, book_name, "meta.json")
+        get_filename = lambda ext: book_folder / f"{book_name}.{ext}"
+
+        self.ents = pd.read_csv(get_filename("ent.csv"), index_col=0)
+        df = pd.read_csv(get_filename("data.csv"), index_col=0)
+        meta_file = get_filename("meta.json")
 
         self.rel_cols = list(df.columns[list(df.columns.str.startswith('R_'))])
         self.lex_cols = list(df.columns[list(df.columns.str.startswith('L_'))])

@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "C:\\Users\\kevin\\AppData\\Local\\conda\\conda\\envs\\tic-psy2\\python.exe"
+    "python.pythonPath": "C:\\Users\\kevin\\AppData\\Local\\conda\\conda\\envs\\tic-psy2\\python.exe",
+    "python.testing.pytestArgs": [
+        "src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": false
 }

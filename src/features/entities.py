@@ -1,3 +1,4 @@
+from functools import partial
 import logging
 import time
 
@@ -35,18 +36,16 @@ HYPERNYM_MAP = {'person.n.01': 'person',
                 'male.n.02': 'male', 
                 'entity.n.01': 'entity'}
 
+EntityTypeHypernymMatcher = partial(HypernymMatcher, HYPERNYM_MAP.keys(),
+                                    highest_level=10,
+                                    highest_common_level=0)
+
 
 def entity_classifier(vocab):
-    hypernym_matcher = HypernymMatcher(HYPERNYM_MAP.keys(),
-                                       highest_level=10,
-                                       highest_common_level=0)
-
     exceptions_matcher = Matcher(vocab)
     exceptions_matcher.add('detpron', None, [{'POS': {'IN': ('DET', 'PRON')}}])#, '_': {'in_coref': False}}])
 
     def iter_entities(doc):
-        t = time.clock()
-
         coref_tokens = {
             t.i 
             for c in (doc._.coref_clusters or []) 
@@ -54,23 +53,13 @@ def entity_classifier(vocab):
             for t in m
         }
 
-        t = time.clock() - t
-
-        logger.debug("%s coref tokens [%s]", len(coref_tokens), f"{t*1000:.3} ms")
-
-        t = time.clock()
-        
         matches = exceptions_matcher(doc)
-
-        t = time.clock() - t
-        logger.debug("%s matches (pronouns) [%s]", len(matches), f"{t*1000:.3} ms")
 
         for _, start, end in exceptions_matcher(doc):
             mention = doc[start:end]
             m_root = mention.root
             if m_root.i in coref_tokens:
                 continue
-            # assert not m_root._.in_coref, f"{m_root.text!r} in {m_root.coref_clusters[0].main.text!r}"
             m_root_text = m_root.text.lower()
             ent_class = EXCEPTIONS.get(m_root_text, UNK)
 
@@ -91,9 +80,6 @@ def entity_classifier(vocab):
                 'categ': ent_class,
             }
 
-        #n_mentions = sum(len(c.mentions) for c in doc._.coref_clusters)
-        #n_clusters = len(doc._.coref_clusters)
-        #print(f"[entities_classifier.iter_entities] {n_mentions} mentions, {n_clusters} clusters")
         for cluster in doc._.coref_clusters:
             e = cluster.main
             e_root = e.root
@@ -116,7 +102,7 @@ def entity_classifier(vocab):
                     else: # dates, quantities etc.: ignore those
                         ent_class = EXCEPTIONS.get(m_root_text, NAN)
                 elif c_root.pos_ == 'NOUN':  # resolved to a noun
-                    hypernyms = {HYPERNYM_MAP[m.name()] for m in hypernym_matcher.match_token(c_root)}
+                    hypernyms = {HYPERNYM_MAP[m.name()] for m in c_root._.hypernyms}
                     if 'person' in hypernyms:
                         ent_class = PERSON
                     else:

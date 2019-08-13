@@ -2,17 +2,13 @@ import math
 import os
 import logging
 from collections import Counter
-#from functools import partial
 
 import pandas as pd
 import spacy
-#from spacy.util import minibatch
-from spacy_wordnet.wordnet_annotator import WordnetAnnotator
 import neuralcoref
-#from joblib import Parallel, delayed
 
-from utils import spacy as myspacy
-from utils.misc import benchmark, batch
+from utils import spacy as spacy_utils
+from utils.misc import benchmark, batch, Timer
 
 from features import entities as proc_ent
 from features import tagging
@@ -28,37 +24,36 @@ def make_nlp(model='en_core_web_sm'):
     nlp = spacy.load(model)
 
     merge_ents = nlp.create_pipe("merge_entities")
-    nlp.add_pipe(benchmark(merge_ents), after="ner")
+    nlp.add_pipe(merge_ents, after="ner")
 
-    nlp.add_pipe(benchmark(myspacy.fix_names), after='merge_entities')
+    nlp.add_pipe(spacy_utils.fix_names, after='merge_entities')
 
-    nlp.add_pipe(benchmark(WordnetAnnotator(nlp.lang)), after='tagger')
+    nlp.add_pipe(spacy_utils.LazyWordnetAnnotator(nlp.lang))
+    nlp.add_pipe(proc_ent.EntityTypeHypernymMatcher())
 
     coref = neuralcoref.NeuralCoref(nlp.vocab, blacklist=False, store_scores=False, max_dist=20)
     nlp.add_pipe(benchmark(coref), name='neuralcoref')
 
     nrc_lex = lexicons.load_nrc_wordlevel()
     lextag = tagging.LexiconTagger(nlp, nrc_lex)
-    nlp.add_pipe(benchmark(lextag))
+    nlp.add_pipe(lextag)
 
     negtag = tagging.NegTagger(nlp.vocab)
-    nlp.add_pipe(benchmark(negtag))
+    nlp.add_pipe(negtag)
 
     semdep = sem.SemanticDepParser()
-    nlp.add_pipe(benchmark(semdep))
+    nlp.add_pipe(semdep)
 
     return nlp
 
 
 class BookParsePipeline:
 
-    def __init__(self, nlp, output_dir, run_name, 
+    def __init__(self, nlp, 
                  batch_size=30_000, minibatch_size=30_000,
                  save_entities=True,
                  save_data=True, save_doc=False, save_features=False):
         self.nlp = nlp
-        self.output_dir = output_dir
-        self.run_name = run_name
         self.batch_size = batch_size
         self.minibatch_size = minibatch_size
         self.save_entities = save_entities
@@ -68,72 +63,62 @@ class BookParsePipeline:
 
         logger.info(f"Pipeline: %s", ', '.join(pname for pname, _ in nlp.pipeline))
 
-        self.doc = None
-
-    def get_output_prefix(self):
-        return os.path.join(self.output_dir, self.run_name)
+        self.data = {}
 
     def parse_batches(self, text):
-        output_prefix = self.get_output_prefix()
         texts = batch(text, self.batch_size)
         logger.debug("%d batches to process", math.ceil(len(text) / self.batch_size))
+        
         def parse_texts(nlp, texts):
             last_i = 0
             for batch_id, doc in enumerate(nlp.pipe(texts)):
-                logger.debug("Batch %d: processing...", batch_id)
+                logger.debug("Processing batch %d...", batch_id)
                 yield BookParser(doc, first_i=last_i)
                 last_i += doc[-1].i
 
-        logger.debug("Processing...")
         parsers = list(parse_texts(self.nlp, texts))
 
         if self.save_data:
+            data_df = pd.concat([p.get_data_df() for p in parsers], axis='rows', sort=False)
+            self.data['data_df'] = data_df
+
+        if self.save_entities:
+            ent_df = pd.concat([p.get_entities_df() for p in parsers], axis='rows', sort=False)
+            self.data['ent_df'] = ent_df
+
+        if self.save_features:
+            feat_df = pd.concat([p.get_features_df() for p in parsers], axis='rows', sort=False)
+            self.data['feat_df'] = feat_df
+
+    def save(self, output_dir, run_name):
+        output_prefix = os.path.join(output_dir, run_name)
+        assert self.data, "Nothing to save!"
+        if self.save_data:
             filename = f"{output_prefix}.data.csv"
             logger.info("Writing data to %s", filename)
-            data_df = pd.concat([p.get_data_df() for p in parsers], axis='rows', sort=False)
-            data_df.to_csv(filename)
-
+            self.data['data_df'].to_csv(f"{output_prefix}.data.csv")
         if self.save_entities:
             filename = f"{output_prefix}.ent.csv"
             logger.info("Writing entities to %s", filename)
-            ent_df = pd.concat([p.get_entities_df() for p in parsers], axis='rows', sort=False)
-            # ent_df['batch_id'] = 0
-            ent_df.to_csv(filename)
-
+            self.data['ent_df'].to_csv(f"{output_prefix}.ent.csv")
         if self.save_features:
             filename = f"{output_prefix}.feat.csv"
             logger.info("Writing features to %s", filename)
-            feat_df = pd.concat([p.get_features_df() for p in parsers], axis='rows', sort=False)
-            # feat_df['batch_id'] = 0
-            feat_df.to_csv(filename)
-
-
+            self.data['feat_df'].to_csv(f"{output_prefix}.feat.csv")
+        
     def parse(self, text):
-        output_prefix = self.get_output_prefix()
         logger.debug("Processing...")
         doc = self.nlp(text)
 
         parser = BookParser(doc)
         if self.save_data:
-            filename = f"{output_prefix}.data.csv"
-            logger.info("Writing data to %s", filename)
-            data_df = parser.get_data_df()
-            # data_df['batch_id'] = 0
-            data_df.to_csv(filename)
+            self.data['data_df'] = parser.get_data_df()
 
         if self.save_entities:
-            filename = f"{output_prefix}.ent.csv"
-            logger.info("Writing entities to %s", filename)
-            ent_df = parser.get_entities_df()
-            # ent_df['batch_id'] = 0
-            ent_df.to_csv(filename)
+            self.data['ent_df'] = parser.get_entities_df()
 
         if self.save_features:
-            filename = f"{output_prefix}.feat.csv"
-            logger.info("Writing features to %s", filename)
-            feat_df = parser.get_features_df()
-            # feat_df['batch_id'] = 0
-            feat_df.to_csv(filename)
+            self.data['feat_df'] = parser.get_features_df()
 
 
 class BookParser:
@@ -173,10 +158,10 @@ class BookParser:
         i_0 = self.first_i
 
         predicates = doc._.lex_matches
-        logger.debug(f"{len(predicates)} predicates")
-        logger.debug(f"# of duplicates (i): {Counter(Counter(tok.i for tok in predicates).values())}")
-        logger.debug(f"# of agents per predicates (incl. None): {Counter(len(tok._.agents or [None]) for tok in predicates)}")
-        logger.debug(f"# of patients per predicates (incl. None): {Counter(len(tok._.patients or [None]) for tok in predicates)}")
+        n = len(predicates)
+
+        t = Timer()
+        t.start()
 
         data = [
             {'i': i_0 + tok.i,
@@ -198,9 +183,17 @@ class BookParser:
 
         predicate_cols = [c for c in list(table.columns) if c.startswith('L_')]
         table[predicate_cols] = table[predicate_cols].fillna(0)
+
+        t.stop()
+        logger.debug('%d predicates (%d distinct) [%s]', len(table.index), n, t)
+
         return table
 
     def get_entities_df(self):
+        t = Timer()
+        t.start()
         ent_cls = proc_ent.entity_classifier(self.doc.vocab)
         df = pd.DataFrame(ent_cls(self.doc))
+        t.stop()
+        logger.debug('%d entities [%s]', len(df.index), t)
         return df
