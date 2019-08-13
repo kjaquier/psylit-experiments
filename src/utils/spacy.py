@@ -3,6 +3,7 @@ import logging
 from itertools import combinations
 
 from nltk.corpus import wordnet as wn
+from spacy_wordnet.wordnet_domains import Wordnet, load_wordnet_domains
 
 import spacy.matcher as spmatch
 from spacy.tokens import Token
@@ -62,15 +63,17 @@ class RemoveExtensionsMixin:
         self.kwargs = kwargs
         for cls, attr_name, kw in (extensions or []):
             self.set_extension(cls, attr_name, **kwargs, **kw)
-
+            
     def set_extension(self, cls, attr_name, **kwargs):
-        # logger.debug(f"set extension {cls.__name__}._.{attr_name} {kwargs!r}")
+        # logger.debug('Set extension %s.%s', cls.__name__, attr_name)
+        if cls.has_extension(attr_name):
+            logger.warning('%s already has extension %s: ignoring', cls.__name__, attr_name)
+            return
         cls.set_extension(attr_name, **self.kwargs, **kwargs)
         self.exts.append((cls, attr_name, kwargs))
 
     def remove_extensions(self):
         for cls, attr_name, _ in self.exts:
-            # logger.debug(f"remove extension {cls.__name__}._.{attr_name}")
             cls.remove_extension(attr_name)
 
     def get_extensions_remover_component(self):
@@ -82,66 +85,55 @@ class RemoveExtensionsMixin:
         return component
 
 
-class HypernymsExtractor(RemoveExtensionsMixin):
-    name = 'hypernyms'
-    
-    def __init__(self, vocab, pattern=None, highest_level=1, force_ext=False):
-        super().__init__()
-        super().set_extension(Token, 'hypernyms', default=set(), force=force_ext)
-        if pattern:
-            self.matcher = spmatch.Matcher(vocab)
-            self.matcher.add('hypernyms', None, pattern)
-        else:
-            self.matcher = None
-        self.highest_level = highest_level
-    
-    def __call__(self, doc):
-        if self.matcher:
-            matches = self.matcher(doc)
-            logger.debug("%s matches", len(matches))
-            toks = (doc[start:end].root for _, start, end in matches)
-        else:
-            toks = iter(doc)
-        
-        for t in toks:
-            
-            hypers = {h for s in t._.wordnet.synsets() for h in s.hypernyms()}
-            i = 0
-            while len(hypers) > 1 and i < self.highest_level:
-                hypers_pairs = combinations(hypers, 2)
-                hypers = {h for h1, h2 in hypers_pairs for h in h1.lowest_common_hypernyms(h2)}
-                i += 1
+class LazyWordnetAnnotator(RemoveExtensionsMixin):
 
-            t._.set('hypernyms', hypers)
-            
+    __FIELD = 'wordnet'
+
+    def __init__(self, lang, force_ext=False):
+        super().__init__()
+        get_wordnet = lambda token: Wordnet(token=token, lang=lang)
+        super().set_extension(Token, LazyWordnetAnnotator.__FIELD, getter=get_wordnet, force=force_ext)
+        load_wordnet_domains()
+
+    def __call__(self, doc):
         return doc
 
 
-class HypernymMatcher:
+class HypernymMatcher(RemoveExtensionsMixin):
 
-    def __init__(self, targets, highest_level=0, highest_common_level=0):
+    __FIELD = 'hypernyms'
+
+    def __init__(self, targets, highest_level=0, highest_common_level=0, force_ext=False):
+        super().__init__()
+
         self.targets = {wn.synset(k) for k in targets}
         self.highest_level = highest_level
         self.highest_common_level = highest_common_level
 
-    def match_token(self, token):
-        targets = self.targets
-        matched = set()
-        
-        hypers_all = hypers_common = {h for s in token._.wordnet.synsets() for h in s.hypernyms()}
-        matched |= targets & hypers_all
-
-        for _ in range(self.highest_level):
-            hypers_all = {h for s in hypers_all for h in s.hypernyms()}
-            if not hypers_all:
-                break
+        def get_hypernyms(token):
+            targets = self.targets
+            matched = set()
+            
+            hypers_all = hypers_common = {h for s in token._.wordnet.synsets() for h in s.hypernyms()}
             matched |= targets & hypers_all
 
-        for _ in range(self.highest_common_level):
-            hypers_pairs = combinations(hypers_common, 2)
-            hypers_common = {h for h1, h2 in hypers_pairs for h in h1.lowest_common_hypernyms(h2)}
-            if not hypers_common:
-                break
-            matched |= targets & hypers_common
+            for _ in range(highest_level):
+                hypers_all = {h for s in hypers_all for h in s.hypernyms()}
+                if not hypers_all:
+                    break
+                matched |= targets & hypers_all
 
-        return matched
+            for _ in range(highest_common_level):
+                hypers_pairs = combinations(hypers_common, 2)
+                hypers_common = {h for h1, h2 in hypers_pairs for h in h1.lowest_common_hypernyms(h2)}
+                if not hypers_common:
+                    break
+                matched |= targets & hypers_common
+
+            return matched
+
+        super().set_extension(Token, HypernymMatcher.__FIELD, getter=get_hypernyms, force=force_ext)
+
+    def __call__(self, doc):
+        return doc
+        

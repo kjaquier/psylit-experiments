@@ -461,7 +461,7 @@
 451,,,prt,451,up,,False,,PART,437,,up from
 452,,,prep,452,among,,False,,ADP,437,,among
 453,,,det,453,the,,False,,DET,437,,the
-454,,,pobj,454,graf,,False,,NOUN,437,,graves
+454,,,pobj,454,grave,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,437,451.0,graves
 455,,,prep,455,at,,False,,ADP,437,,at
 456,,,det,456,the,,False,,DET,437,,the
 457,,,pobj,457,side,,False,,NOUN,437,,side
@@ -649,7 +649,7 @@
 629,,,det,629,the,,False,,DET,623,,the
 630,,,nsubj,630,man,,False,,NOUN,623,,man
 631,,,punct,631,",",,False,,PUNCT,623,,","
-632,,,acl,632,stare,NRCw_Em_negative,False,me,VERB,623,630.0,staring
+632,,,acl,632,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,me,VERB,623,630.0,staring
 633,,,prep,633,at,,False,,ADP,623,,at
 634,,,pobj,634,-PRON-,,False,,PRON,623,632.0,me
 635,,,punct,635,.,,False,,PUNCT,623,,.
@@ -1615,7 +1615,7 @@
 1542,,,aux,1542,to,,False,,PART,1535,,to
 1543,boy,,advcl,1543,attempt,NRCw_Em_anticipation,False,,VERB,1535,1543.0,attempt
 1544,,,aux,1544,to,,False,,PART,1535,,to
-1545,,,xcomp,1545,hide,NRCw_Em_fear,False,"man,himself",VERB,1535,1545.0,hide
+1545,,,xcomp,1545,hide,NRCw_Em_fear,False,"himself,man",VERB,1535,1545.0,hide
 1546,,,dobj,1546,-PRON-,,False,,PRON,1535,1545.0,himself
 1547,,,prep,1547,from,,False,,ADP,1535,,from
 1548,,,det,1548,that,,False,,DET,1535,,that
@@ -2018,7 +2018,7 @@
 1929,,,pobj,1929,river,,False,,NOUN,1915,1925.0,river
 1930,,,punct,1930,",",,False,,PUNCT,1915,,","
 1931,,,advmod,1931,still,,False,,ADV,1915,,still
-1932,boy,,advcl,1932,hug,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,"arms,himself",VERB,1915,1925.0,hugging
+1932,boy,,advcl,1932,hug,"NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,"himself,arms",VERB,1915,1925.0,hugging
 1933,,,dobj,1933,-PRON-,,False,,PRON,1915,1932.0,himself
 1934,,,prep,1934,in,,False,,ADP,1915,,in
 1935,,,det,1935,both,,False,,DET,1915,,both
@@ -4072,9 +4072,9 @@
 3926,,,prep,3926,of,,False,,ADP,3915,,of
 3927,,,pobj,3927,-PRON-,,False,,NOUN,3915,,his bite
 3928,,,cc,3928,and,,False,,CCONJ,3915,,and
-3929,,,conj,3929,stare,,False,,VERB,3915,,stared
+3929,Joe,,conj,3929,star,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,me,VERB,3915,3922.0,stared
 3930,,,prep,3930,at,,False,,ADP,3915,,at
-3931,,,pobj,3931,-PRON-,,False,,PRON,3915,3922.0,me
+3931,,,pobj,3931,-PRON-,,False,,PRON,3915,3929.0,me
 3932,,,punct,3932,",",,False,,PUNCT,3915,,","
 3933,,,ROOT,3933,be,,False,,VERB,3915,,were
 3934,,,advmod,3934,too,,False,,ADV,3915,,too
@@ -4292,7 +4292,7 @@
 4134,,,punct,4134,",",,False,,PUNCT,4116,,","
 4135,,,punct,4135,"""",,False,,PUNCT,4116,,""""
 4136,,,nsubj,4136,-PRON-,,False,,PRON,4116,,you
-4137,,,ccomp,4137,stare,NRCw_Em_negative,False,,VERB,4116,4137.0,staring
+4137,,,ccomp,4137,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,4116,4137.0,staring
 4138,,,amod,4138,great,,False,,ADJ,4116,,great
 4139,,,amod,4139,stuck,,False,,ADJ,4116,,stuck
 4140,,,dobj,4140,pig,"NRCw_Em_negative,NRCw_Em_disgust",False,,NOUN,4116,4137.0,pig
@@ -6682,7 +6682,7 @@
 1957,,,intj,6458,like,,False,,ADP,6452,,like
 1958,,,pobj,6459,suddenness,,False,,NOUN,6452,,suddenness
 1959,,,punct,6460,",",,False,,PUNCT,6452,,","
-1960,,,advcl,6461,stare,NRCw_Em_negative,False,,VERB,6452,6454.0,staring
+1960,,,advcl,6461,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,6452,6454.0,staring
 1961,,,prep,6462,out,,False,,ADP,6452,,out
 1962,,,prep,6463,of,,False,,ADP,6452,,of
 1963,,,pobj,6464,-PRON-,,False,,NOUN,6452,,their eyes
@@ -7630,7 +7630,7 @@
 2879,,,prep,7380,at,,False,,ADP,7379,,at
 2880,,,pcomp,7381,once,,False,,ADV,7379,,once
 2881,,,punct,7382,:,,False,,PUNCT,7379,,:
-2882,,,pcomp,7383,stare,NRCw_Em_negative,False,,VERB,7379,7383.0,staring
+2882,,,pcomp,7383,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,7379,7383.0,staring
 2883,,,advmod,7384,distrustfully,,False,,ADV,7379,,distrustfully
 2884,,,mark,7385,while,,False,,ADP,7379,,while
 2885,,,nsubj,7386,-PRON-,,False,,PRON,7379,7387.0,he
@@ -8272,9 +8272,9 @@
 3477,,,det,7978,the,,False,,DET,7974,,the
 3478,,,pobj,7979,collar,,False,,NOUN,7974,7975.0,collar
 3479,,,cc,7980,and,,False,,CCONJ,7974,,and
-3480,,,conj,7981,stare,,False,,VERB,7974,,stared
+3480,man,,conj,7981,star,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,me,VERB,7974,7975.0,stared
 3481,,,prep,7982,at,,False,,ADP,7974,,at
-3482,,,pobj,7983,-PRON-,,False,,PRON,7974,7975.0,me
+3482,,,pobj,7983,-PRON-,,False,,PRON,7974,7981.0,me
 3483,,,advmod,7984,so,,False,,ADV,7974,,so
 3484,,,punct,7985,",",,False,,PUNCT,7974,,","
 3485,,,mark,7986,that,,False,,ADP,7974,,that
@@ -10062,7 +10062,7 @@
 682,,,cc,9725,and,,False,,CCONJ,9718,,and
 683,,,det,9726,a,,False,,DET,9718,,a
 684,,,amod,9727,large,,False,,ADJ,9718,,large
-685,,,amod,9728,shin,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,9718,9718.0,shining
+685,,,amod,9728,shine,"NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,9718,9718.0,shining
 686,,,conj,9729,bald,,False,,NOUN,9718,,bald forehead
 687,,,punct,9730,",",,False,,PUNCT,9718,,","
 688,,,ccomp,9731,have,,False,,VERB,9718,,had
@@ -12991,7 +12991,7 @@
 3517,,,advmod,12560,when,,False,,ADV,12554,,when
 3518,,,nsubj,12561,Mrs.,,False,,PROPN,12554,12562.0,Mrs. Joe
 3519,Mrs. Joe,,advcl,12562,stand,,False,,VERB,12554,,stood
-3520,,,xcomp,12563,stare,NRCw_Em_negative,False,,VERB,12554,12563.0,staring
+3520,,,xcomp,12563,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,12554,12563.0,staring
 3521,,,punct,12564,;,,False,,PUNCT,12554,,;
 3522,,,prep,12565,at,,False,,ADP,12554,,at
 3523,,,pobj,12566,which,,False,,DET,12554,,which
@@ -14780,7 +14780,7 @@
 975,,,dobj,14290,-PRON-,,False,,PRON,14272,14275.0,themselves
 976,,,prep,14291,among,,False,,ADP,14272,,among
 977,,,det,14292,the,,False,,DET,14272,,the
-978,,,pobj,14293,graf,,False,,NOUN,14272,,graves
+978,,,pobj,14293,grave,"NRCw_Em_negative,NRCw_Em_fear,NRCw_Em_sadness",False,,NOUN,14272,14275.0,graves
 979,,,punct,14294,",",,False,,PUNCT,14272,,","
 980,,,cc,14295,and,,False,,CCONJ,14272,,and
 981,,,advmod,14296,also,,False,,ADV,14272,,also
@@ -15210,7 +15210,7 @@
 1399,,,cc,14714,and,,False,,CCONJ,14694,,and
 1400,,,conj,14715,sleet,NRCw_Em_negative,False,,NOUN,14694,14710.0,sleet
 1401,,,punct,14716,",",,False,,PUNCT,14694,,","
-1402,,,conj,14717,stare,,False,,VERB,14694,,stared
+1402,,,conj,14717,star,"NRCw_Em_trust,NRCw_Em_anticipation,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,14694,14710.0,stared
 1403,,,advmod,14718,angrily,,False,,ADV,14694,,angrily
 1404,,,mark,14719,as,,False,,ADP,14694,,as
 1405,,,mark,14720,if,,False,,ADP,14694,,if
@@ -16510,7 +16510,7 @@
 2661,,,advmod,15976,always,,False,,ADV,15973,,always
 2662,,,advcl,15977,work,NRCw_Em_positive,False,,VERB,15973,16010.0,working
 2663,,,cc,15978,and,,False,,CCONJ,15973,,and
-2664,,,conj,15979,work,NRCw_Em_positive,False,"speaker,him",VERB,15973,16010.0,working
+2664,,,conj,15979,work,NRCw_Em_positive,False,"him,speaker",VERB,15973,16010.0,working
 2665,,,poss,15980,-PRON-,,False,,DET,15973,,his dry
 2666,,,dobj,15981,lip,,False,,NOUN,15973,,lips
 2667,,,cc,15982,and,,False,,CCONJ,15973,,and
@@ -17601,7 +17601,7 @@
 3726,,,det,17041,the,,False,,DET,17036,,the
 3727,,,nsubj,17042,sergeant,,False,,NOUN,17036,,sergeant
 3728,,,punct,17043,",",,False,,PUNCT,17036,,","
-3729,,,acl,17044,stare,NRCw_Em_negative,False,Joe,VERB,17036,17042.0,staring
+3729,,,acl,17044,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,Joe,VERB,17036,17042.0,staring
 3730,,,prep,17045,at,,False,,ADP,17036,,at
 3731,,,pobj,17046,Joe,,False,,PROPN,17036,17044.0,Joe
 3732,,,punct,17047,.,,False,,PUNCT,17036,,.
@@ -17617,7 +17617,7 @@
 3740,Joe,,ROOT,17055,say,,False,,VERB,17049,,said
 3741,,,nsubj,17056,Joe,,False,,PROPN,17049,17055.0,Joe
 3742,,,punct,17057,",",,False,,PUNCT,17049,,","
-3743,Joe,,advcl,17058,stare,NRCw_Em_negative,False,me,VERB,17049,17055.0,staring
+3743,Joe,,advcl,17058,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,me,VERB,17049,17055.0,staring
 3744,,,prep,17059,at,,False,,ADP,17049,,at
 3745,,,pobj,17060,-PRON-,,False,,PRON,17049,17058.0,me
 3746,,,punct,17061,.,,False,,PUNCT,17049,,.
@@ -18205,7 +18205,7 @@
 4310,,,pobj,17625,chimney,,False,,NOUN,17612,,chimney corner
 4311,,,prep,17626,at,,False,,ADP,17612,,at
 4312,,,pobj,17627,night,,False,,NOUN,17612,,night
-4313,,,advcl,17628,stare,NRCw_Em_negative,False,,VERB,17612,17613.0,staring
+4313,,,advcl,17628,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,17612,17613.0,staring
 4314,,,advmod,17629,drearily,,False,,ADV,17612,,drearily
 4315,,,prep,17630,at,,False,,ADP,17612,,at
 4316,,,poss,17631,-PRON-,,False,,DET,17612,,my forever
@@ -18321,7 +18321,7 @@
 4426,,,appos,17741,conviction,NRCw_Em_negative,False,,NOUN,17716,17734.0,conviction
 4427,,,dobj,17742,that,,False,,ADP,17716,,that
 0,,,nsubj,17742,-PRON-,,False,,PRON,17742,,he
-1,,,ROOT,17743,suspect,"NRCw_Em_negative,NRCw_Em_fear",False,"Tar,it",VERB,17742,17743.0,suspected
+1,,,ROOT,17743,suspect,"NRCw_Em_negative,NRCw_Em_fear",False,"it,Tar",VERB,17742,17743.0,suspected
 2,,,dobj,17744,Tar,,False,,PROPN,17742,17743.0,Tar
 3,,,prep,17745,in,,False,,ADP,17742,,in
 4,,,pobj,17746,-PRON-,,False,,PRON,17742,17743.0,it
@@ -22984,7 +22984,7 @@
 4503,,,pobj,22245,what,,False,,PRON,22245,,What
 4504,,,aux,22246,be,,False,,VERB,22245,,are
 4505,,,nsubj,22247,-PRON-,,False,,PRON,22245,22248.0,you
-4506,I,,ROOT,22248,stare,NRCw_Em_negative,False,,VERB,22245,22248.0,staring
+4506,I,,ROOT,22248,star,"NRCw_Em_anticipation,NRCw_Em_negative,NRCw_Em_trust,NRCw_Em_joy,NRCw_Em_positive",False,,VERB,22245,22248.0,staring
 4507,,,prep,22249,at,,False,,ADP,22245,,at
 4508,,,punct,22250,?,,False,,PUNCT,22245,,?
 4509,,,ROOT,22251,be,,False,,VERB,22251,,Is
