@@ -39,8 +39,9 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
         t_tot = Timer()
         t_tot.start()
 
-
-    for i, filename in enumerate(glob(input_filename)):
+    files = list(glob(input_filename))
+    n_files = len(files)
+    for i, filename in enumerate(files):
         if benchmark:
             t_init = Timer()
             t_init.start()
@@ -75,8 +76,9 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             t_process.stop()
             logging.info("Process time: %s", t_process)
 
-        run_name = run_name or f"{path.stem}.{i}"
-        pipeline.save(output_path, run_name)
+        run_name = run_name or path.stem
+        suffix = f".{i}" if n_files > 1 else ""
+        pipeline.save(output_path, f"{run_name}{suffix}")
 
         if save_meta:
             meta_file = output_path / f"{run_name}.meta.json"
