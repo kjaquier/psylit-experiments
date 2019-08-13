@@ -67,7 +67,7 @@ class RemoveExtensionsMixin:
     def set_extension(self, cls, attr_name, **kwargs):
         # logger.debug('Set extension %s.%s', cls.__name__, attr_name)
         if cls.has_extension(attr_name):
-            logger.warning('%s already has extension %s: ignoring', cls.__name__, attr_name)
+            # logger.warning('%s already has extension %s: ignoring', cls.__name__, attr_name)
             return
         cls.set_extension(attr_name, **self.kwargs, **kwargs)
         self.exts.append((cls, attr_name, kwargs))
