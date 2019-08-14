@@ -10,7 +10,7 @@ from src.models import nlp_pipeline
 from src.features.gen_cascades import BookData
 
 
-DATA_ROOT = pathlib.PurePath('testdata')
+DATA_ROOT = pathlib.Path('testdata')
 TEST_BOOK_NAME = 'testbook'
 
 

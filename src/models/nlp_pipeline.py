@@ -1,7 +1,6 @@
 import math
 import os
 import logging
-from collections import Counter
 
 import pandas as pd
 import spacy
@@ -20,7 +19,7 @@ from data import lexicons
 logger = logging.getLogger(__name__)
 
 
-def make_nlp(model='en_core_web_sm'):
+def make_nlp(model='en_core_web_sm', coref_kwargs={}):  # pylint: disable=dangerous-default-value
     nlp = spacy.load(model)
 
     merge_ents = nlp.create_pipe("merge_entities")
@@ -31,7 +30,7 @@ def make_nlp(model='en_core_web_sm'):
     nlp.add_pipe(spacy_utils.LazyWordnetAnnotator(nlp.lang))
     nlp.add_pipe(proc_ent.EntityTypeHypernymMatcher())
 
-    coref = neuralcoref.NeuralCoref(nlp.vocab, blacklist=False, store_scores=False, max_dist=20)
+    coref = neuralcoref.NeuralCoref(nlp.vocab, blacklist=False, store_scores=False, **coref_kwargs)
     nlp.add_pipe(benchmark(coref), name='neuralcoref')
 
     nrc_lex = lexicons.load_nrc_wordlevel()
@@ -50,12 +49,11 @@ def make_nlp(model='en_core_web_sm'):
 class BookParsePipeline:
 
     def __init__(self, nlp, 
-                 batch_size=30_000, minibatch_size=30_000,
+                 batch_size=30_000,
                  save_entities=True,
                  save_data=True, save_doc=False, save_features=False):
         self.nlp = nlp
         self.batch_size = batch_size
-        self.minibatch_size = minibatch_size
         self.save_entities = save_entities
         self.save_data = save_data
         self.save_doc = save_doc
@@ -91,20 +89,22 @@ class BookParsePipeline:
             self.data['feat_df'] = feat_df
 
     def save(self, output_dir, run_name):
-        output_prefix = os.path.join(output_dir, run_name)
         assert self.data, "Nothing to save!"
         if self.save_data:
-            filename = f"{output_prefix}.data.csv"
-            logger.info("Writing data to %s", filename)
-            self.data['data_df'].to_csv(f"{output_prefix}.data.csv")
-        if self.save_entities:
-            filename = f"{output_prefix}.ent.csv"
-            logger.info("Writing entities to %s", filename)
-            self.data['ent_df'].to_csv(f"{output_prefix}.ent.csv")
-        if self.save_features:
-            filename = f"{output_prefix}.feat.csv"
-            logger.info("Writing features to %s", filename)
-            self.data['feat_df'].to_csv(f"{output_prefix}.feat.csv")
+            out_path = output_dir / f"{run_name}.data.csv"
+            logger.info("Writing data to %s", out_path)
+            out_path.unlink()
+            self.data['data_df'].to_csv(out_path)
+            if self.save_entities:
+                out_path = output_dir / f"{run_name}.ent.csv"
+            logger.info("Writing entities to %s", out_path)
+            out_path.unlink()
+            self.data['ent_df'].to_csv(out_path)
+            if self.save_features:
+                out_path = output_dir / f"{run_name}.feat.csv"
+            logger.info("Writing features to %s", out_path)
+            out_path.unlink()
+            self.data['feat_df'].to_csv(out_path)
         
     def parse(self, text):
         logger.debug("Processing...")
