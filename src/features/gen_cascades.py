@@ -1,4 +1,3 @@
-import pathlib
 import logging
 from functools import partial
 
@@ -25,22 +24,8 @@ def make_entity_lookup(ents):
     ents_fixed.entity_i = ents_fixed.entity_i.astype(np.int32)
 
     ents_lookup = ents_fixed[['entity_i', 'entity_root', 'categ']].drop_duplicates()
-    n = len(ents_lookup.index)
-
-    exceptions_lookup = pd.Series(ENTITY_EXCEPTIONS)
-    ents_lookup = ents_lookup.append([exceptions_lookup], sort=True)
-
-    logger.debug("Added %d entities from exception list", len(ents_lookup.index) - n)
-
-    #for ent_txt, ent_class in ENTITY_EXCEPTIONS.items():
-        #logger.debug("ents_lookup.at[%s]=[%s]", ent_txt, ent_class)
-    #    ents_lookup.at[ent_txt] = ent_class
-
-    #ents_lookup.rename(index=str, columns={'entity_root': 'root', 'entity_name': 'name'}, inplace=True)
-    #ents_lookup.set_index('entity_root', inplace=True, verify_integrity=True)
     
-    ents_lookup.loc[ents_lookup.categ == 'narrator', 'categ'] = 'person'
-    ents_lookup.loc[ents_lookup.categ == 'reader', 'categ'] = 'person'
+    ents_lookup.loc[ents_lookup.categ.isin({'narrator', 'reader'}), 'categ'] = 'person'
     
     most_likely_categ = lambda fr: fr.categ.value_counts(normalize=True, ascending=False, dropna=False).idxmax()
     ents_lookup = ents_lookup.groupby('entity_root').apply(most_likely_categ)
@@ -96,15 +81,19 @@ class BookData:
         return self.data[self.data[col].str.lower().str.match(pattern)]
 
     def get_all_cascades(self, min_entities_occurrences=50):
-        relevant_columns = ['t', 'neg'] + self.rel_cols + self.lex_cols
-        data = self.data[relevant_columns]
+        relevant_data_columns = ['t', 'neg'] + self.rel_cols + self.lex_cols
+        data = self.data[relevant_data_columns]
 
-        ent_counts = pd.concat([data[r] for r in self.rel_cols], axis='rows')
-        ent_counts = ent_counts.replace(NONE_PLACEHOLDER, None).dropna()
-        ent_counts = ent_counts.value_counts()
-        selected_ents_count = ent_counts[ent_counts > min_entities_occurrences]
-        logger.debug("%d entities selected (occurring >= %d times)", len(selected_ents_count.index), min_entities_occurrences)
-        selected_ents = selected_ents_count.index
+        ent_counts = (
+            self.ents[~self.ents.entity_root.isin({'ENVIRONMENT', 'UNKNOWN', 'PERSON'})]
+            .groupby('entity_root')
+            .size()
+        )
+        selected_ents_counts = ent_counts[ent_counts > min_entities_occurrences]
+        selected_ents = selected_ents_counts.index.values
+        n = len(selected_ents)
+        logger.debug("selected entities (occurrences): \n%s", selected_ents_counts)
+        logger.info("%d entities selected (occurring >= %d times)", n, min_entities_occurrences)
 
         ents_lookup = make_entity_lookup(self.ents)
 
@@ -120,7 +109,6 @@ class BookData:
             # data = data.loc[first_occ:last_occ, :]
 
             subj_data = df_map_columns(data, rel_cols, ents_lookup)
-            
             subj_casc = cascade_representation(subj_data,
                                                symbolic_cols=rel_cols,
                                                numeric_cols=lex_cols)
@@ -130,7 +118,6 @@ class BookData:
         executor = list #Parallel(n_jobs=-1)
         do = partial(gen_cascades_for_subject, data, ents_lookup, self.rel_cols, self.lex_cols) # delayed()
         tasks = (do(subject) for subject in selected_ents if ents_lookup.get(subject, '') == 'person')
-        logger.info("Generating cascades for %d entities (max len = %d)", len(selected_ents), len(self.data.index))
         subj_cascades = executor(tasks)
         
         subj_names = [x for x, _ in subj_cascades]
