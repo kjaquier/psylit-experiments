@@ -1,0 +1,1 @@
+{"cmd": ["C:\\Users\\kevin\\Documents\\Workspace\\psylit-experiments\\src\\data_prepare.py", "-mfx", "-t1", "40_000", "-r", "dev_all", "data\\raw\\small_subset\\*.txt", "data\\interim"], "time": "2019-08-13T17:48:09.496244", "input_filename": "data\\raw\\small_subset\\*.txt", "time_init": "2184.42 ms", "time_process": "15595.2 ms", "run_name": "dev_all"}

@@ -20,18 +20,17 @@ def make_entity_lookup(ents):
     entity_not_found = ents.entity_i.isna()
     ents_fixed = ents.copy()
     entity_not_found_ids = -ents[entity_not_found].mention_root.factorize()[0]
-    logger.debug('%d entities without ids: %s', len(ents[entity_not_found].index), ents[entity_not_found].entity_root.value_counts())
 
     ents_fixed.loc[entity_not_found, 'entity_i'] = entity_not_found_ids
     ents_fixed.entity_i = ents_fixed.entity_i.astype(np.int32)
 
     ents_lookup = ents_fixed[['entity_i', 'entity_root', 'categ']].drop_duplicates()
-    logger.debug("Before adding exceptions: %d entities in lookup", len(ents_lookup.index))
+    n = len(ents_lookup.index)
 
     exceptions_lookup = pd.Series(ENTITY_EXCEPTIONS)
     ents_lookup = ents_lookup.append([exceptions_lookup], sort=True)
 
-    logger.debug("After adding exceptions: %d entities in lookup", len(ents_lookup.index))
+    logger.debug("Added %d entities from exception list", len(ents_lookup.index) - n)
 
     #for ent_txt, ent_class in ENTITY_EXCEPTIONS.items():
         #logger.debug("ents_lookup.at[%s]=[%s]", ent_txt, ent_class)
@@ -69,14 +68,9 @@ def cascade_representation(data, symbolic_cols, numeric_cols, casc_index=('t',),
 
 class BookData:
 
-    def __init__(self, book_name, book_folder):
-        book_folder = pathlib.PurePath(book_folder)
-
-        get_filename = lambda ext: book_folder / f"{book_name}.{ext}"
-
-        self.ents = pd.read_csv(get_filename("ent.csv"), index_col=0)
-        df = pd.read_csv(get_filename("data.csv"), index_col=0)
-        meta_file = get_filename("meta.json")
+    def __init__(self, data_file, ent_file, meta_file):
+        self.ents = pd.read_csv(ent_file, index_col=0)
+        df = pd.read_csv(data_file, index_col=0)
 
         self.rel_cols = list(df.columns[list(df.columns.str.startswith('R_'))])
         self.lex_cols = list(df.columns[list(df.columns.str.startswith('L_'))])
@@ -148,8 +142,6 @@ class BookData:
         # in concat
         binary_cols = [c for c in casc.columns if c.startswith(('R_', 'L_', 'neg'))]
         casc.loc[:, binary_cols] = casc[binary_cols].fillna(0).astype(np.int8)
-
-        casc.info()
 
         # Drop irrelevant columns
         #irrelevant_cols = [col for col in casc.columns if col[1] in ('none',)]

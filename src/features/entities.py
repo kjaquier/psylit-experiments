@@ -1,6 +1,5 @@
 from functools import partial
 import logging
-import time
 
 import numpy as np
 
@@ -55,7 +54,7 @@ def entity_classifier(vocab):
 
         matches = exceptions_matcher(doc)
 
-        for _, start, end in exceptions_matcher(doc):
+        for _, start, end in matches:
             mention = doc[start:end]
             m_root = mention.root
             if m_root.i in coref_tokens:

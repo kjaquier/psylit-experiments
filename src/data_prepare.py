@@ -11,10 +11,9 @@ from data import preprocess
 from models import nlp_pipeline
 from utils.misc import Timer
 
+from parameters import LOGGING_PARAMETERS, PREPARE_PARAMETERS
 
-logging.basicConfig(level=logging.DEBUG, stream=sys.stdout, 
-                    format='[%(asctime)s %(levelname)s %(name)s (%(funcName)s)] %(message)s',
-                    datefmt='%H:%M:%S') #  
+logging.basicConfig(**LOGGING_PARAMETERS)
 
 
 def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
@@ -24,15 +23,14 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
          save_features: ("Save tokens and features as csv", 'flag', 'f')=False,
          no_save_entities: ("Don't save entities as csv", 'flag', 'e')=False,
          save_meta: ("Write metadata file about the run", 'flag', 'm')=False,
-         batch_size: ("Size of batch", 'option', 'b')=50_000,
          start: ("Position to read from", 'option', 't0')=0,
          end: ("Position to stop reading after", 'option', 't1')=0,
          benchmark: ("Measure execution time", 'flag', 'x')=False):
 
     now = dt.datetime.now().isoformat()
 
-    output_path = pathlib.PurePath(output_dir)
-    batch_size = int(batch_size)
+    output_path = pathlib.Path(output_dir)
+    batch_size = PREPARE_PARAMETERS['batch_size']
     txt_slice = slice(int(start), int(end) or None)    
     
     if benchmark:
@@ -46,13 +44,13 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             t_init = Timer()
             t_init.start()
             
-        path = pathlib.PurePath(filename)
+        path = pathlib.Path(filename)
         logging.debug("Reading '%s'[%s:%s], with batch size %s", path, txt_slice.start, txt_slice.stop, batch_size)
         txt = preprocess.read_pg(path)
         
         txt = txt[txt_slice]
 
-        nlp = nlp_pipeline.make_nlp()
+        nlp = nlp_pipeline.make_nlp(coref_kwargs=PREPARE_PARAMETERS['coref'])
         pipeline = nlp_pipeline.BookParsePipeline(nlp,
                                                   batch_size=batch_size,
                                                   save_entities=(
@@ -77,8 +75,10 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             logging.info("Process time: %s", t_process)
 
         run_name = run_name or path.stem
-        suffix = f".{i}" if n_files > 1 else ""
+        suffix = f"__{i}" if n_files > 1 else ""
+        
         pipeline.save(output_path, f"{run_name}{suffix}")
+            
 
         if save_meta:
             meta_file = output_path / f"{run_name}.meta.json"
