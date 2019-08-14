@@ -1,5 +1,4 @@
 import math
-import os
 import logging
 
 import pandas as pd
@@ -33,9 +32,13 @@ def make_nlp(model='en_core_web_sm', coref_kwargs={}):  # pylint: disable=danger
     coref = neuralcoref.NeuralCoref(nlp.vocab, blacklist=False, store_scores=False, **coref_kwargs)
     nlp.add_pipe(benchmark(coref), name='neuralcoref')
 
-    nrc_lex = lexicons.load_nrc_wordlevel()
-    lextag = tagging.LexiconTagger(nlp, nrc_lex)
-    nlp.add_pipe(lextag)
+    em_lex = lexicons.load_nrc_emotions()
+    lextag = tagging.LexiconTagger(nlp, em_lex)
+    nlp.add_pipe(benchmark(lextag), name='tag_emotions')
+
+    vad_lex = lexicons.load_nrc_vad()
+    lextag = tagging.LexiconTagger(nlp, vad_lex)
+    nlp.add_pipe(benchmark(lextag), name='tag_vad')
 
     negtag = tagging.NegTagger(nlp.vocab)
     nlp.add_pipe(negtag)
