@@ -48,9 +48,10 @@ def test_data_prepare(nlp, data_text, data_interim):
 
 @pytest.mark.parametrize('min_occ', [2])
 def test_data_process(data_processed, min_occ):
-    book = BookData(TEST_BOOK_NAME, DATA_ROOT)
-    cascades = book.get_all_cascades(min_entities_occurrences=min_occ)
+    assert False
+    # book = BookData(TEST_BOOK_NAME, DATA_ROOT)
+    # cascades = book.get_all_cascades(min_entities_occurrences=min_occ)
 
-    assert (cascades.groupby('Subject').count() > min_occ).all()
+    # assert (cascades.groupby('Subject').count() > min_occ).all()
 
-    pd.testing.assert_frame_equal(cascades, data_processed)
+    # pd.testing.assert_frame_equal(cascades, data_processed)

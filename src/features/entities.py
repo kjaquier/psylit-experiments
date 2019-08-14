@@ -1,17 +1,15 @@
 from functools import partial
 import logging
 
-import numpy as np
-
 from spacy.matcher import Matcher
 
-from utils.spacy import HypernymMatcher
+from utils import spacy as spacy_utils
 
 
 logger = logging.getLogger(__name__)
 
 
-PERSON, ENV, UNK, NARR, READ, NAN = ['person', 'environment', 'unknown', 'narrator', 'reader', np.nan]
+PERSON, ENV, UNK, NARR, READ, NAN = ['PERSON', 'ENVIRONMENT', 'UNKNOWN', 'NARRATOR', 'READER', None]
     
 
 PERSON_ENT_TYPE = 'PERSON'
@@ -21,11 +19,15 @@ ENV_ENT_TYPES = {'NORP', 'FAC', 'ORG', 'GPE', 'LOC', 'PRODUCT', 'EVENT'}
 EXCEPTIONS = {
     ENV: {'it', 'this', 'that', 'its', 'itself', 'something'},
     UNK: {'they', 'them', 'themselves', 'their', 'these', 'those'},
-    NARR: {'i', 'me', 'myself', 'my', 'mine'},
+    NARR: {'i', 'me', 'myself', 'my', 'mine',
+           'we', 'us', 'ourselves', 'our', 'ours'},
     READ: {'you', 'yourself', 'your', 'yours'},
-    PERSON: {'he', 'him', 'himself', 'his', 'she', 'her', 'herself', 'hers'},
+    PERSON: {'he', 'him', 'himself', 'his',
+             'she', 'her', 'herself', 'hers',
+             'man', 'boy', 'sir',
+             'woman', 'girl', 'madam', 'miss', 'lord', 'lady'},
 }
-EXCEPTIONS = {w:k for k, v in EXCEPTIONS.items() for w in v}
+EXCEPTIONS = {w: k for k, v in EXCEPTIONS.items() for w in v}
 
 
 HYPERNYM_MAP = {'person.n.01': 'person', 
@@ -35,7 +37,7 @@ HYPERNYM_MAP = {'person.n.01': 'person',
                 'male.n.02': 'male', 
                 'entity.n.01': 'entity'}
 
-EntityTypeHypernymMatcher = partial(HypernymMatcher, HYPERNYM_MAP.keys(),
+EntityTypeHypernymMatcher = partial(spacy_utils.HypernymMatcher, HYPERNYM_MAP.keys(),
                                     highest_level=10,
                                     highest_common_level=0)
 
@@ -68,7 +70,7 @@ def entity_classifier(vocab):
                 't0': sent.start,
                 't1': sent.end,
                 'entity_i': None,
-                'entity_root': ent_class.upper(),
+                'entity_root': ent_class,
                 #'entity_pos': None,
                 #'entity_tag': None,
                 #'entity_text': None,
@@ -76,7 +78,7 @@ def entity_classifier(vocab):
                 'mention_root': m_root_text,
                 'mention_pos': m_root.pos_,
                 'mention_tag': m_root.tag_,
-                'categ': ent_class,
+                'categ': ent_class.lower() if ent_class else None,
             }
 
         for cluster in doc._.coref_clusters:
@@ -84,6 +86,7 @@ def entity_classifier(vocab):
             e_root = e.root
             e_i = e_root.i # cluster.i
             e_root_text = e_root.text.strip().lower()
+            e_root_text = EXCEPTIONS.get(e_root_text, '') or e_root_text
             e_pos = e.root.pos_
             e_tag = e.root.tag_
             e_txt = e.text
@@ -132,7 +135,7 @@ def entity_classifier(vocab):
                     'mention_root': m_root_text,
                     'mention_pos': m_root.pos_,
                     'mention_tag': m_root.tag_,
-                    'categ': ent_class,
+                    'categ': ent_class.lower() if ent_class else None,
                 }
     return iter_entities
     #Doc.set_extension(Doc, doc_attr, method=iter_entities)

@@ -20,10 +20,4 @@ PREPARE_PARAMETERS = dict(
 
 PROCESS_PARAMETERS = dict(
     min_entities_occurrences=100,
-    input_file_patterns=dict(
-        data='*.data.csv',
-        entities='*.ent.csv',
-        features='*.feat.csv',
-        meta='*.meta.json',
-    )
 )
