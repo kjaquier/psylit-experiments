@@ -1,8 +1,9 @@
+from collections import defaultdict
 import pathlib
 import logging
 
 from features.gen_cascades import BookData
-from utils.misc import benchmark, Timer
+from utils.misc import benchmark, Timer, path_remove_if_exists
 
 from parameters import LOGGING_PARAMETERS, PROCESS_PARAMETERS
 
@@ -14,21 +15,21 @@ def main(input_dir: "Folder containing book data",
          book_name: ("Name of the book for output files", 'option', 'r')='*',
          bench_mode: ("Measure execution time", 'flag', 'x')=False):
 
+    timers = defaultdict(Timer)
+
     if bench_mode:
-        t_tot = Timer()
-        t_tot.start()
+        timers['tot'].start()
 
     input_dir = pathlib.Path(input_dir)
     book_names = {p.with_suffix('').stem for p in input_dir.glob(f"{book_name}.*")}
+    n_books = len(book_names)
+    logging.info("Found %d book(s)", n_books)
 
-    logging.info("Found %d book(s)", len(book_names))
-
-    for current_book_name in book_names:
+    for i, current_book_name in enumerate(book_names):
         if bench_mode:
-            t = Timer()
-            t.start()
-        
-        logging.info("Processing: '%s'", current_book_name)
+            timers['process'].start()
+            
+        logging.info("Processing book %d / %d: '%s'", i+1, n_books, current_book_name)
 
         filename_no_ext = input_dir / current_book_name
 
@@ -41,16 +42,16 @@ def main(input_dir: "Folder containing book data",
         
         out_filename = pathlib.Path(output_dir) / f"{book_name}.csv"
         logging.info('Writing to %s', out_filename)
-        out_filename.unlink()
+        path_remove_if_exists(out_filename)
         cascades.to_csv(out_filename)
         
         if bench_mode:
-            t.stop()
-            logging.info("Process time: %s", t)
+            timers['process'].stop()
+            logging.info("Process time: %s", timers['process'])
 
     if bench_mode:
-        t_tot.stop()
-        logging.info("Total execution time: %s", t_tot)
+        timers['tot'].stop()
+        logging.info("Total execution time: %s", timers['tot'])
 
 if __name__ == '__main__':
     import plac

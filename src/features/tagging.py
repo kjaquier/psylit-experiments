@@ -17,7 +17,6 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
                  flag_attr=None,
                  doc_attr='lex_matches',
                  threshold=lambda series: series.mean(),
-                 min_threshold=0.3,
                  force_ext=True):
         super().__init__(force=force_ext)
         self.tag_attr = tag_attr
@@ -41,12 +40,9 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
 
         self.matcher = spmatch.Matcher(nlp.vocab)
         for tag in self.tags:
-            logging.debug('tag: %s', tag)
             thres = threshold(lexicon[tag])
-            logging.debug('thres: %d >? %d ', thres, min_threshold)
-            thres = thres if thres > min_threshold else min_threshold
-            terms = lexicon.loc[lexicon[tag] > thres, tag].index # TODO deal with loadings
-            terms = list(terms.unique())
+            terms = lexicon.loc[lexicon[tag] > thres, tag]
+            terms = terms.index.unique().to_list()
             self.matcher.add(tag, None, [{'LOWER': {'IN': terms}}], [{'LEMMA': {'IN': terms}}])
 
     def __call__(self, doc):
