@@ -1,7 +1,7 @@
-.benchmarks/
-!.benchmarks/.gitkeep
-.cache/
-!.cache/.gitkeep
+benchmarks/
+!benchmarks/.gitkeep
+cache/
+!cache/.gitkeep
 
 ### Code ###
 .vscode/*
