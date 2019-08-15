@@ -5,10 +5,8 @@ import json
 
 import pandas as pd
 import numpy as np
-#from joblib import Parallel, delayed
 
 from utils.pandas import df_map_columns
-from features.entities import EXCEPTIONS as ENTITY_EXCEPTIONS
 
 logger = logging.getLogger(__name__)
 

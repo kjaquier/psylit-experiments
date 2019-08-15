@@ -59,11 +59,27 @@ class Timer:
         return f"{self.elapsed*1000.0:.6n} ms"
 
 
-def batch(seq, batch_size):
-    n = len(seq)
-    n_batches = int(ceil(n / batch_size))
-    for i in range(n_batches):
-        yield seq[i*batch_size:(i+1)*batch_size]
+class BatchSequence:
+
+    def __init__(self, seq, batch_size):
+        self.seq = seq
+        self.batch_size = batch_size
+        self.__n = len(seq)
+        self.__n_batches = int(ceil(self.__n / batch_size))
+
+    def __len__(self):
+        return self.__n_batches
+
+    def __iter__(self):
+        w = self.batch_size
+        seq = self.seq
+        for i in range(self.__n_batches):
+            yield seq[i*w:(i+1)*w]
+
+
+def path_remove_if_exists(p):
+    if p.exists():
+        p.unlink()
 
 
 def into(wrapper_func):
