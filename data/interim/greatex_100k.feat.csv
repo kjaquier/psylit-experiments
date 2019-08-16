@@ -461,7 +461,7 @@
 451,,,prt,451,up,,False,,PART,437,,up from
 452,,,prep,452,among,,False,,ADP,437,,among
 453,,,det,453,the,,False,,DET,437,,the
-454,,,pobj,454,grave,"negative,sadness,fear",False,,NOUN,437,451.0,graves
+454,,,pobj,454,graf,,False,,NOUN,437,,graves
 455,,,prep,455,at,,False,,ADP,437,,at
 456,,,det,456,the,,False,,DET,437,,the
 457,,,pobj,457,side,,False,,NOUN,437,,side
@@ -981,7 +981,7 @@
 940,,,cc,940,and,,False,,CCONJ,925,,and
 941,sir,,conj,941,stop,arousal,False,,VERB,925,933.0,stopped
 942,,,cc,942,and,,False,,CCONJ,925,,and
-943,sir,,conj,943,look,"valence,dominance",False,,VERB,925,941.0,looked
+943,sir,,conj,943,look,"valence,dominance",False,,VERB,925,933.0,looked
 944,,,prep,944,over,,False,,ADP,925,,over
 945,,,pobj,945,-PRON-,,False,,NOUN,925,,his shoulder
 946,,,punct,946,.,,False,,PUNCT,925,,.
@@ -1175,7 +1175,7 @@
 1120,,,punct,1120,",",,False,,PUNCT,1077,,","
 1121,,,cc,1121,and,,False,,CCONJ,1077,,and
 1122,,,nsubj,1122,-PRON-,"valence,dominance",False,,PRON,1077,1122.0,mine
-1123,sir,,conj,1123,look,"valence,dominance",False,his,VERB,1077,1114.0,looked
+1123,sir,,conj,1123,look,"valence,dominance",False,his,VERB,1077,1088.0,looked
 1124,,,advmod,1124,most,,False,,ADV,1077,,most
 1125,,,advmod,1125,helplessly,,False,,ADV,1077,,helplessly
 1126,,,advmod,1126,up,,False,,PART,1077,,up
@@ -1351,7 +1351,7 @@
 1282,sir,,pobj,1282,hand,valence,False,,NOUN,1267,1277.0,hands
 1283,,,punct,1283,",",,False,,PUNCT,1267,,","
 1284,,,cc,1284,and,,False,,CCONJ,1267,,and
-1285,sir,,conj,1285,say,valence,False,,VERB,1267,1274.0,said
+1285,sir,,conj,1285,say,valence,False,,VERB,1267,1268.0,said
 1286,,,punct,1286,",",,False,,PUNCT,1267,,","
 1287,,,punct,1287,"""",,False,,PUNCT,1267,,""""
 1288,,,mark,1288,If,,False,,ADP,1267,,If
@@ -1415,14 +1415,14 @@
 1344,,,punct,1344,",",,False,,PUNCT,1336,,","
 1345,,,prep,1345,in,,False,,ADP,1336,,in
 1346,,,det,1346,an,,False,,DET,1336,,an
-1347,sir,,amod,1347,upright,"valence,positive,dominance,trust",False,,ADJ,1336,1339.0,upright
+1347,sir,,amod,1347,upright,"valence,positive,dominance,trust",False,,ADJ,1336,1348.0,upright
 1348,sir,,pobj,1348,position,"valence,dominance",False,,NOUN,1336,1339.0,position
 1349,,,prep,1349,on,,False,,ADP,1336,,on
 1350,,,det,1350,the,,False,,DET,1336,,the
 1351,sir,,pobj,1351,top,"valence,trust,positive,dominance,anticipation",False,,NOUN,1336,1339.0,top
 1352,,,prep,1352,of,,False,,ADP,1336,,of
 1353,,,det,1353,the,,False,,DET,1336,,the
-1354,sir,,pobj,1354,stone,"negative,dominance,anger",False,,NOUN,1336,1339.0,stone
+1354,sir,,pobj,1354,stone,"negative,dominance,anger",False,,NOUN,1336,1351.0,stone
 1355,,,punct,1355,",",,False,,PUNCT,1336,,","
 1356,,,cc,1356,and,,False,,CCONJ,1336,,and
 1357,sir,,conj,1357,go,valence,False,,VERB,1336,1339.0,went
@@ -1528,11 +1528,11 @@
 1455,,,nsubj,1455,-PRON-,,False,,NOUN,1435,,your heart
 1456,,,cc,1456,and,,False,,CCONJ,1435,,and
 1457,,,conj,1457,-PRON-,,False,,NOUN,1435,,your liver
-1458,You,,aux,1458,shall,valence,False,,VERB,1435,1436.0,shall
-1459,You,,auxpass,1459,be,"valence,dominance",False,,VERB,1435,1440.0,be
-1460,You,,conj,1460,tear,arousal,False,,VERB,1435,1440.0,tore
+1458,You,,aux,1458,shall,valence,False,,VERB,1435,1460.0,shall
+1459,You,,auxpass,1459,be,"valence,dominance",False,,VERB,1435,1460.0,be
+1460,You,,conj,1460,tear,arousal,False,,VERB,1435,1436.0,tore
 1461,,,prt,1461,out,,False,,PART,1435,,"out,"
-1462,You,,conj,1462,roasted,"arousal,valence",False,,ADJ,1435,1436.0,roasted
+1462,You,,conj,1462,roasted,"arousal,valence",False,,ADJ,1435,1460.0,roasted
 1463,,,punct,1463,",",,False,,PUNCT,1435,,","
 1464,,,cc,1464,and,,False,,CCONJ,1435,,and
 1465,You,,conj,1465,eat,"arousal,valence,positive",False,,VERB,1435,1462.0,ate
@@ -1929,7 +1929,7 @@
 1842,,,prep,1842,of,,False,,ADP,1808,,of
 1843,,,det,1843,the,,False,,DET,1808,,the
 1844,,,amod,1844,dead,,False,,ADJ,1808,,dead
-1845,man,,pobj,1845,people,valence,False,,NOUN,1808,1841.0,people
+1845,man,,pobj,1845,people,valence,False,,NOUN,1808,1839.0,people
 1846,,,punct,1846,",",,False,,PUNCT,1808,,","
 1847,man,,advcl,1847,stretch,"arousal,valence",False,,VERB,1808,1839.0,stretching
 1848,,,prt,1848,up,,False,,PART,1808,,up cautiously
@@ -2025,14 +2025,14 @@
 1936,man,,pobj,1936,arm,valence,False,,NOUN,1915,1925.0,arms
 1937,,,punct,1937,",",,False,,PUNCT,1915,,","
 1938,,,cc,1938,and,,False,,CCONJ,1915,,and
-1939,man,,conj,1939,pick,"positive,dominance",False,,VERB,1915,1932.0,picking
+1939,man,,conj,1939,pick,"positive,dominance",False,,VERB,1915,1925.0,picking
 1940,,,dobj,1940,-PRON-,,False,,NOUN,1915,,his way
 1941,,,prep,1941,with,,False,,ADP,1915,,with
 1942,,,poss,1942,-PRON-,,False,,DET,1915,,his sore
-1943,man,,pobj,1943,foot,valence,False,,NOUN,1915,1925.0,feet
+1943,man,,pobj,1943,foot,valence,False,,NOUN,1915,1939.0,feet
 1944,,,prep,1944,among,,False,,ADP,1915,,among
 1945,,,det,1945,the,,False,,DET,1915,,the
-1946,man,,amod,1946,great,"arousal,valence,dominance",False,,ADJ,1915,1947.0,great
+1946,man,,amod,1946,great,"arousal,valence,dominance",False,,ADJ,1915,1939.0,great
 1947,man,,pobj,1947,stone,"negative,dominance,anger",False,,NOUN,1915,1943.0,stones
 1948,,,conj,1948,drop,,False,,VERB,1915,,dropped
 1949,,,prep,1949,into,,False,,ADP,1915,,into
@@ -2212,7 +2212,7 @@
 2121,,,advmod,2121,down,,False,,PART,2100,,down
 2122,,,punct,2122,",",,False,,PUNCT,2100,,","
 2123,,,cc,2123,and,,False,,CCONJ,2100,,and
-2124,pirate,,conj,2124,go,valence,False,himself,VERB,2100,2120.0,going
+2124,pirate,,conj,2124,go,valence,False,himself,VERB,2100,2115.0,going
 2125,,,advmod,2125,back,,False,,ADV,2100,,back
 2126,,,aux,2126,to,,False,,PART,2100,,to
 2127,,,advcl,2127,hook,,False,,VERB,2100,,hook
@@ -2392,7 +2392,7 @@
 2295,,,nsubj,2295,-PRON-,,False,,PRON,2283,2296.0,I
 2296,man,,conj,2296,have,"valence,dominance",False,,VERB,2283,2296.0,had
 2297,,,det,2297,a,,False,,DET,2283,,a
-2298,man,,amod,2298,general,"valence,positive,dominance,trust",False,,ADJ,2283,2296.0,general
+2298,man,,amod,2298,general,"valence,positive,dominance,trust",False,,ADJ,2283,2299.0,general
 2299,man,,dobj,2299,impression,"arousal,valence,positive,dominance",False,,NOUN,2283,2296.0,impression
 2300,,,mark,2300,that,,False,,ADP,2283,,that
 2301,,,nsubj,2301,-PRON-,,False,,PRON,2283,2304.0,she
@@ -2408,7 +2408,7 @@
 2311,,,nsubj,2311,Joe,,False,,PROPN,2311,2312.0,Joe
 2312,Joe,,ROOT,2312,be,"valence,dominance",False,,VERB,2311,2312.0,was
 2313,,,det,2313,a,,False,,DET,2311,,a
-2314,Joe,,amod,2314,fair,"arousal,valence,positive,dominance",False,,ADJ,2311,2315.0,fair
+2314,Joe,,amod,2314,fair,"arousal,valence,positive,dominance",False,,ADJ,2311,2312.0,fair
 2315,Joe,,attr,2315,man,"valence,dominance",False,,NOUN,2311,2312.0,man
 2316,,,punct,2316,",",,False,,PUNCT,2311,,","
 2317,,,prep,2317,with,,False,,ADP,2311,,with
@@ -2448,7 +2448,7 @@
 2351,,,det,2351,a,,False,,DET,2349,,a
 2352,Joe,,amod,2352,mild,valence,False,,ADJ,2349,2350.0,mild
 2353,,,punct,2353,",",,False,,PUNCT,2349,,","
-2354,Joe,,amod,2354,good,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,2349,2350.0,good
+2354,Joe,,amod,2354,good,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,2349,2369.0,good
 2355,,,punct,2355,-,,False,,PUNCT,2349,,-
 2356,,,amod,2356,natured,,False,,ADJ,2349,,natured
 2357,,,punct,2357,",",,False,,PUNCT,2349,,","
@@ -2458,9 +2458,9 @@
 2361,,,punct,2361,",",,False,,PUNCT,2349,,","
 2362,,,advmod,2362,easy,valence,False,,ADV,2349,2362.0,easy
 2363,,,punct,2363,-,,False,,PUNCT,2349,,-
-2364,Joe,,conj,2364,go,valence,False,,VERB,2349,2350.0,going
+2364,Joe,,conj,2364,go,valence,False,,VERB,2349,2360.0,going
 2365,,,punct,2365,",",,False,,PUNCT,2349,,","
-2366,Joe,,conj,2366,foolish,negative,False,,ADJ,2349,2364.0,foolish
+2366,Joe,,conj,2366,foolish,negative,False,,ADJ,2349,2350.0,foolish
 2367,,,punct,2367,",",,False,,PUNCT,2349,,","
 2368,Joe,,amod,2368,dear,"valence,positive,dominance",False,,ADJ,2349,2350.0,dear
 2369,Joe,,attr,2369,fellow,"valence,positive,dominance,trust",False,,NOUN,2349,2350.0,fellow
@@ -2650,7 +2650,7 @@
 2549,,,punct,2549,",",,False,,PUNCT,2526,,","
 2550,,,prep,2550,at,,False,,ADP,2526,,at
 2551,,,det,2551,that,,False,,DET,2526,,that
-2552,forge,,pobj,2552,time,"valence,dominance,anticipation",False,,NOUN,2526,2544.0,time
+2552,forge,,pobj,2552,time,"valence,dominance,anticipation",False,,NOUN,2526,2528.0,time
 2553,,,punct,2553,.,,False,,PUNCT,2526,,.
 2554,,,advmod,2554,when,,False,,ADV,2554,,When
 2555,,,nsubj,2555,-PRON-,,False,,PRON,2554,2556.0,I
@@ -2678,7 +2678,7 @@
 2577,,,cc,2577,and,,False,,CCONJ,2576,,and
 2578,,,conj,2578,-PRON-,,False,,PRON,2576,2576.0,I
 2579,Joe,,ROOT,2579,be,"valence,dominance",False,,VERB,2576,2579.0,being
-2580,Joe,,compound,2580,fellow,"valence,positive,dominance,trust",False,,NOUN,2576,2579.0,fellow-
+2580,Joe,,compound,2580,fellow,"valence,positive,dominance,trust",False,,NOUN,2576,2581.0,fellow-
 2581,Joe,,attr,2581,sufferer,"arousal,negative,sadness,fear",False,,NOUN,2576,2579.0,sufferers
 2582,,,punct,2582,",",,False,,PUNCT,2576,,","
 2583,,,cc,2583,and,,False,,CCONJ,2576,,and
@@ -2786,7 +2786,7 @@
 "
 2678,,,prep,2678,At,,False,,ADP,2678,,At
 2679,,,det,2679,this,,False,,DET,2678,,this
-2680,man,,amod,2680,dismal,"negative,disgust,sadness,fear",False,,ADJ,2678,2684.0,dismal
+2680,man,,amod,2680,dismal,"negative,disgust,sadness,fear",False,,ADJ,2678,2681.0,dismal
 2681,man,,pobj,2681,intelligence,"valence,trust,joy,positive,fear,arousal,dominance",False,,NOUN,2678,2684.0,intelligence
 2682,,,punct,2682,",",,False,,PUNCT,2678,,","
 2683,,,nsubj,2683,-PRON-,,False,,PRON,2678,2684.0,I
@@ -2798,12 +2798,12 @@
 2689,,,pobj,2689,-PRON-,,False,,NOUN,2678,,my waistcoat
 2690,man,,amod,2690,round,valence,False,,ADV,2678,2684.0,round
 2691,,,cc,2691,and,,False,,CCONJ,2678,,and
-2692,man,,conj,2692,round,valence,False,,ADJ,2678,2690.0,round
+2692,man,,conj,2692,round,valence,False,,ADJ,2678,2684.0,round
 2693,,,punct,2693,",",,False,,PUNCT,2678,,","
 2694,,,cc,2694,and,,False,,CCONJ,2678,,and
 2695,man,,conj,2695,look,"valence,dominance",False,,VERB,2678,2684.0,looked
 2696,,,prep,2696,in,,False,,ADP,2678,,in
-2697,man,,amod,2697,great,"arousal,valence,dominance",False,,ADJ,2678,2684.0,great
+2697,man,,amod,2697,great,"arousal,valence,dominance",False,,ADJ,2678,2698.0,great
 2698,man,,pobj,2698,depression,"arousal,negative,sadness",False,fire,NOUN,2678,2684.0,depression
 2699,,,prep,2699,at,,False,,ADP,2678,,at
 2700,,,det,2700,the,,False,,DET,2678,,the
@@ -2814,7 +2814,7 @@
 2705,,,det,2705,a,,False,,DET,2703,,a
 2706,,,npadvmod,2706,wax,,False,,NOUN,2703,,wax
 2707,,,punct,2707,-,,False,,PUNCT,2703,,-
-2708,Tickler,,amod,2708,end,arousal,False,,VERB,2703,2704.0,ended
+2708,Tickler,,amod,2708,end,arousal,False,,VERB,2703,2709.0,ended
 2709,Tickler,,attr,2709,piece,valence,False,,NOUN,2703,2704.0,piece
 2710,,,prep,2710,of,,False,,ADP,2703,,of
 2711,Tickler,,pobj,2711,cane,"anger,fear",False,,NOUN,2703,2709.0,cane
@@ -2871,17 +2871,17 @@
 2760,,,advmod,2760,slowly,,False,,ADV,2750,,slowly
 2761,Joe,,advcl,2761,clear,"valence,dominance",False,,VERB,2750,2757.0,clearing
 2762,,,det,2762,the,,False,,DET,2750,,the
-2763,Joe,,dobj,2763,fire,"arousal,dominance,fear",False,,NOUN,2750,2757.0,fire
+2763,Joe,,dobj,2763,fire,"arousal,dominance,fear",False,,NOUN,2750,2761.0,fire
 2764,,,prep,2764,between,,False,,ADP,2750,,between
 2765,,,det,2765,the,,False,,DET,2750,,the
-2766,Joe,,amod,2766,low,"negative,sadness",False,,ADJ,2750,2757.0,lower
-2767,Joe,,pobj,2767,bar,arousal,False,,NOUN,2750,2763.0,bars
+2766,Joe,,amod,2766,low,"negative,sadness",False,,ADJ,2750,2767.0,lower
+2767,Joe,,pobj,2767,bar,arousal,False,,NOUN,2750,2757.0,bars
 2768,,,prep,2768,with,,False,,ADP,2750,,with
 2769,,,det,2769,the,,False,,DET,2750,,the
-2770,Joe,,pobj,2770,poker,arousal,False,,NOUN,2750,2757.0,poker
+2770,Joe,,pobj,2770,poker,arousal,False,,NOUN,2750,2767.0,poker
 2771,,,punct,2771,",",,False,,PUNCT,2750,,","
 2772,,,cc,2772,and,,False,,CCONJ,2750,,and
-2773,Joe,,conj,2773,look,"valence,dominance",False,,VERB,2750,2757.0,looking
+2773,Joe,,conj,2773,look,"valence,dominance",False,,VERB,2750,2761.0,looking
 2774,,,prep,2774,at,,False,,ADP,2750,,at
 2775,,,pobj,2775,-PRON-,,False,,PRON,2750,,it
 2776,,,punct,2776,;,,False,,PUNCT,2750,,;
@@ -2913,10 +2913,10 @@
 2800,,,dobj,2800,-PRON-,,False,,PRON,2797,2799.0,him
 2801,,,prep,2801,as,,False,,ADP,2797,,as
 2802,,,det,2802,a,,False,,DET,2797,,a
-2803,man,,amod,2803,large,"valence,trust,surprise,arousal,disgust,dominance",False,,ADJ,2797,2804.0,larger
+2803,man,,amod,2803,large,"valence,trust,surprise,arousal,disgust,dominance",False,,ADJ,2797,2799.0,larger
 2804,man,,pobj,2804,species,"valence,dominance",False,,NOUN,2797,2799.0,species
 2805,,,prep,2805,of,,False,,ADP,2797,,of
-2806,man,,pobj,2806,child,"joy,valence,positive,anticipation",False,,NOUN,2797,2804.0,child
+2806,man,,pobj,2806,child,"joy,valence,positive,anticipation",False,,NOUN,2797,2799.0,child
 2807,,,punct,2807,",",,False,,PUNCT,2797,,","
 2808,,,cc,2808,and,,False,,CCONJ,2797,,and
 2809,,,advmod,2809,as,,False,,ADP,2797,,as
@@ -3053,7 +3053,7 @@
 2936,,,advmod,2936,there,,False,,ADV,2901,,there
 2937,,,prep,2937,with,,False,,ADP,2901,,with
 2938,,,poss,2938,-PRON-,,False,,DET,2901,,his great
-2939,Mrs. Joe,,pobj,2939,leg,valence,False,,NOUN,2901,2933.0,leg
+2939,Mrs. Joe,,pobj,2939,leg,valence,False,,NOUN,2901,2902.0,leg
 2940,,,punct,2940,.,,False,,PUNCT,2901,,.
 2941,,,,2941,"
 ",,False,,SPACE,2901,,"
@@ -3065,7 +3065,7 @@
 2946,man,,ccomp,2946,be,"valence,dominance",False,,VERB,2943,2946.0,been
 2947,,,punct,2947,",",,False,,PUNCT,2943,,","
 2948,,,nmod,2948,-PRON-,,False,,PRON,2943,,you
-2949,man,,amod,2949,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,2943,2950.0,young
+2949,man,,amod,2949,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,2943,2946.0,young
 2950,man,,attr,2950,monkey,valence,False,,NOUN,2943,2946.0,monkey
 2951,,,punct,2951,?,,False,,PUNCT,2943,,?
 2952,,,punct,2952,"""",,False,,PUNCT,2943,,""""
@@ -3091,7 +3091,7 @@
 2972,,,prep,2972,with,,False,,ADP,2959,,with
 2973,man,,pobj,2973,fret,"negative,fear",False,,NOUN,2959,2969.0,fret
 2974,,,cc,2974,and,,False,,CCONJ,2959,,and
-2975,man,,conj,2975,fright,"arousal,negative,surprise,fear",False,,NOUN,2959,2967.0,fright
+2975,man,,conj,2975,fright,"arousal,negative,surprise,fear",False,,NOUN,2959,2973.0,fright
 2976,,,cc,2976,and,,False,,CCONJ,2959,,and
 2977,,,conj,2977,worrit,,False,,NOUN,2959,,worrit
 2978,,,punct,2978,",",,False,,PUNCT,2959,,","
@@ -3255,7 +3255,7 @@
 3125,,,det,3125,this,,False,,DET,3117,,this
 3126,man,,dobj,3126,apron,valence,False,mine,NOUN,3117,3124.0,apron
 3127,,,prep,3127,of,,False,,ADP,3117,,of
-3128,man,,pobj,3128,-PRON-,"valence,dominance",False,,PRON,3117,3126.0,mine
+3128,man,,pobj,3128,-PRON-,"valence,dominance",False,,PRON,3117,3124.0,mine
 3129,,,prt,3129,off,,False,,PART,3117,,off since
 3130,,,pcomp,3130,bear,"valence,fear,arousal,anger,dominance",False,,VERB,3117,3130.0,born
 3131,,,nsubj,3131,-PRON-,,False,,PRON,3117,3132.0,you
@@ -3341,7 +3341,7 @@
 3209,,,pobj,3209,-PRON-,,False,,PRON,3195,3207.0,me
 3210,,,prep,3210,in,,False,,ADP,3195,,in
 3211,,,det,3211,the,,False,,DET,3195,,the
-3212,man,,amod,3212,avenging,"arousal,dominance",False,,NOUN,3195,3196.0,avenging
+3212,man,,amod,3212,avenging,"arousal,dominance",False,,NOUN,3195,3207.0,avenging
 3213,,,pobj,3213,coal,,False,,NOUN,3195,,coals
 3214,,,punct,3214,.,,False,,PUNCT,3195,,.
 3215,,,,3215,"
@@ -3431,8 +3431,8 @@
 3295,,,aux,3295,to,,False,,PART,3291,,to
 3296,she,,advcl,3296,set,"valence,dominance",False,,VERB,3291,3293.0,set
 3297,,,det,3297,the,,False,,DET,3291,,the
-3298,she,,compound,3298,tea,valence,False,,NOUN,3291,3293.0,tea-
-3299,she,,dobj,3299,thing,valence,False,,NOUN,3291,3293.0,things
+3298,she,,compound,3298,tea,valence,False,,NOUN,3291,3296.0,tea-
+3299,she,,dobj,3299,thing,valence,False,,NOUN,3291,3296.0,things
 3300,,,punct,3300,",",,False,,PUNCT,3291,,","
 3301,,,nsubj,3301,Joe,,False,,PROPN,3291,3302.0,Joe
 3302,Joe,,ROOT,3302,peep,valence,False,,VERB,3291,3302.0,peeped
@@ -3574,8 +3574,8 @@
 3436,,,punct,3436,",",,False,,PUNCT,3417,,","
 3437,,,prep,3437,in,,False,,ADP,3417,,in
 3438,,,det,3438,an,,False,,DET,3417,,an
-3439,her left,,amod,3439,apothecary,"valence,dominance",False,,ADJ,3417,3431.0,apothecary
-3440,her left,,pobj,3440,kind,"valence,trust,joy,positive,dominance",False,,NOUN,3417,3431.0,kind
+3439,her left,,amod,3439,apothecary,"valence,dominance",False,,ADJ,3417,3419.0,apothecary
+3440,her left,,pobj,3440,kind,"valence,trust,joy,positive,dominance",False,,NOUN,3417,3419.0,kind
 3441,,,prep,3441,of,,False,,ADP,3417,,of
 3442,,,pobj,3442,way,,False,,NOUN,3417,,way
 3443,,,punct,3443,",",,False,,PUNCT,3417,,","
@@ -3615,7 +3615,7 @@
 3477,,,det,3477,the,,False,,DET,3473,,the
 3478,,,dative,3478,knife,"arousal,dominance",False,,NOUN,3473,3478.0,knife
 3479,,,det,3479,a,,False,,DET,3473,,a
-3480,her left,,amod,3480,final,"arousal,dominance",False,,ADJ,3473,3476.0,final
+3480,her left,,amod,3480,final,"arousal,dominance",False,,ADJ,3473,3482.0,final
 3481,her left,,amod,3481,smart,"arousal,valence,dominance",False,,ADJ,3473,3476.0,smart
 3482,her left,,dobj,3482,wipe,"valence,dominance",False,,NOUN,3473,3476.0,wipe
 3483,,,prep,3483,on,,False,,ADP,3473,,on
@@ -3630,11 +3630,11 @@
 3492,her left,,conj,3492,saw,"arousal,dominance",False,,VERB,3473,3476.0,sawed
 3493,,,det,3493,a,,False,,DET,3473,,a
 3494,,,advmod,3494,very,,False,,ADV,3473,,very
-3495,her left,,amod,3495,thick,dominance,False,,ADJ,3473,3496.0,thick
+3495,her left,,amod,3495,thick,dominance,False,,ADJ,3473,3476.0,thick
 3496,her left,,dobj,3496,round,valence,False,,NOUN,3473,3492.0,round
 3497,,,prep,3497,off,,False,,ADP,3473,,off
 3498,,,det,3498,the,,False,,DET,3473,,the
-3499,her left,,pobj,3499,loaf,"valence,negative",False,,NOUN,3473,3496.0,loaf
+3499,her left,,pobj,3499,loaf,"valence,negative",False,,NOUN,3473,3476.0,loaf
 3500,,,punct,3500,:,,False,,PUNCT,3473,,:
 3501,,,dobj,3501,which,,False,,DET,3473,,which
 3502,,,nsubj,3502,-PRON-,,False,,PRON,3473,3511.0,she
@@ -3667,7 +3667,7 @@
 "
 3528,,,prep,3528,On,,False,,ADP,3528,,On
 3529,,,det,3529,the,,False,,DET,3528,,the
-3530,I,,amod,3530,present,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,3528,3531.0,present
+3530,I,,amod,3530,present,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,3528,3541.0,present
 3531,I,,pobj,3531,occasion,valence,False,,NOUN,3528,3541.0,occasion
 3532,,,punct,3532,",",,False,,PUNCT,3528,,","
 3533,,,mark,3533,though,,False,,ADP,3528,,though
@@ -3699,8 +3699,8 @@
 3559,,,det,3559,the,,False,,DET,3544,,the
 3560,,,advmod,3560,still,,False,,ADV,3544,,still
 3561,,,advmod,3561,more,,False,,ADV,3544,,more
-3562,I,,amod,3562,dreadful,"negative,sadness,fear,arousal,disgust,anger,anticipation",False,,ADJ,3544,3549.0,dreadful
-3563,I,,amod,3563,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,3544,3549.0,young
+3562,I,,amod,3562,dreadful,"negative,sadness,fear,arousal,disgust,anger,anticipation",False,,ADJ,3544,3564.0,dreadful
+3563,I,,amod,3563,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,3544,3564.0,young
 3564,I,,appos,3564,man,"valence,dominance",False,,NOUN,3544,3549.0,man
 3565,,,punct,3565,.,,False,,PUNCT,3544,,.
 3566,,,nsubj,3566,-PRON-,,False,,PRON,3566,3567.0,I
@@ -3711,20 +3711,20 @@
 3571,housekeeping,,ccomp,3571,be,"valence,dominance",False,,VERB,3566,3571.0,be
 3572,,,prep,3572,of,,False,,ADP,3566,,of
 3573,,,det,3573,the,,False,,DET,3566,,the
-3574,housekeeping,,amod,3574,strict,"arousal,dominance",False,,ADJ,3566,3571.0,strictest
+3574,housekeeping,,amod,3574,strict,"arousal,dominance",False,,ADJ,3566,3575.0,strictest
 3575,housekeeping,,pobj,3575,kind,"valence,trust,joy,positive,dominance",False,,NOUN,3566,3571.0,kind
 3576,,,punct,3576,",",,False,,PUNCT,3566,,","
 3577,,,cc,3577,and,,False,,CCONJ,3566,,and
 3578,,,mark,3578,that,,False,,ADP,3566,,that
 3579,,,poss,3579,-PRON-,,False,,DET,3566,3580.0,my larcenous
 3580,housekeeping,,nsubj,3580,research,"arousal,valence,dominance",False,,NOUN,3566,3580.0,researches
-3581,housekeeping,,aux,3581,may,valence,False,,VERB,3566,3571.0,might
+3581,housekeeping,,aux,3581,may,valence,False,,VERB,3566,3582.0,might
 3582,housekeeping,,conj,3582,find,"arousal,valence,dominance",False,,VERB,3566,3571.0,find
 3583,,,dobj,3583,nothing,,False,,NOUN,3566,,nothing
-3584,housekeeping,,amod,3584,available,"valence,dominance",False,,ADJ,3566,3571.0,available
+3584,housekeeping,,amod,3584,available,"valence,dominance",False,,ADJ,3566,3582.0,available
 3585,,,prep,3585,in,,False,,ADP,3566,,in
 3586,,,det,3586,the,,False,,DET,3566,,the
-3587,housekeeping,,pobj,3587,safe,"valence,trust,joy,positive,dominance",False,,NOUN,3566,3571.0,safe
+3587,housekeeping,,pobj,3587,safe,"valence,trust,joy,positive,dominance",False,,NOUN,3566,3582.0,safe
 3588,,,punct,3588,.,,False,,PUNCT,3566,,.
 3589,,,advmod,3589,therefore,,False,,ADV,3589,,Therefore
 3590,,,nsubj,3590,-PRON-,,False,,PRON,3589,3591.0,I
@@ -3950,7 +3950,7 @@
 3808,Joe,,conj,3808,get,"arousal,valence,dominance",False,,VERB,3793,3803.0,got
 3809,,,dobj,3809,-PRON-,,False,,NOUN,3793,,my bread
 3810,,,cc,3810,and,,False,,CCONJ,3793,,and
-3811,Joe,,conj,3811,butter,valence,False,,NOUN,3793,3808.0,butter
+3811,Joe,,conj,3811,butter,valence,False,,NOUN,3793,3803.0,butter
 3812,,,prep,3812,down,,False,,ADP,3793,,down
 3813,,,pobj,3813,-PRON-,,False,,NOUN,3793,,my leg
 3814,,,punct,3814,.,,False,,PUNCT,3793,,.
@@ -4347,7 +4347,7 @@
 4185,"Joe,Joe",,conj,4185,speak,"arousal,valence,dominance",False,,VERB,4167,4173.0,speaking
 4186,,,prep,4186,in,,False,,ADP,4167,,in
 4187,,,det,4187,a,,False,,DET,4167,,a
-4188,"Joe,Joe",,amod,4188,confidential,"valence,dominance,trust",False,,ADJ,4167,4173.0,confidential
+4188,"Joe,Joe",,amod,4188,confidential,"valence,dominance,trust",False,,ADJ,4167,4189.0,confidential
 4189,"Joe,Joe",,pobj,4189,voice,"valence,dominance",False,,NOUN,4167,4185.0,voice
 4190,,,punct,4190,",",,False,,PUNCT,4167,,","
 4191,,,mark,4191,as,,False,,ADP,4167,,as
@@ -4559,7 +4559,7 @@
 4389,,,punct,4389,;,,False,,PUNCT,4364,,;
 4390,Mrs. Joe,,advcl,4390,have,"valence,dominance",False,,VERB,4364,4381.0,having
 4391,,,det,4391,a,,False,,DET,4364,,a
-4392,Mrs. Joe,,dobj,4392,belief,"valence,dominance",False,,NOUN,4364,4381.0,belief
+4392,Mrs. Joe,,dobj,4392,belief,"valence,dominance",False,,NOUN,4364,4390.0,belief
 4393,,,prep,4393,in,,False,,ADP,4364,,in
 4394,,,pobj,4394,-PRON-,,False,,NOUN,4364,,its virtues correspondent
 4395,,,prep,4395,to,,False,,ADP,4364,,to
@@ -4730,7 +4730,7 @@
 56,Conscience,,advcl,4557,operate,"arousal,valence,dominance",False,,VERB,4530,4531.0,operates
 57,,,prep,4558,with,,False,,ADP,4530,,with
 58,,,det,4559,another,,False,,DET,4530,,another
-59,Conscience,,amod,4560,secret,"arousal,dominance,trust",False,,ADJ,4530,4531.0,secret
+59,Conscience,,amod,4560,secret,"arousal,dominance,trust",False,,ADJ,4530,4561.0,secret
 60,Conscience,,pobj,4561,burden,"arousal,dominance",False,,NOUN,4530,4557.0,burden
 61,,,prep,4562,down,,False,,ADP,4530,,down
 62,,,det,4563,the,,False,,DET,4530,,the
@@ -5011,11 +5011,11 @@
 335,,,cc,4836,and,,False,,CCONJ,4811,,and
 336,myself,,conj,4837,find,"valence,trust,joy,positive,arousal,dominance",False,,VERB,4811,4822.0,found
 337,,,det,4838,the,,False,,DET,4811,,the
-338,myself,,dobj,4839,tendency,"arousal,valence,dominance",False,,NOUN,4811,4812.0,tendency
+338,myself,,dobj,4839,tendency,"arousal,valence,dominance",False,,NOUN,4811,4837.0,tendency
 339,,,prep,4840,of,,False,,ADP,4811,,of
-340,myself,,pobj,4841,exercise,"arousal,valence,dominance",False,,NOUN,4811,4839.0,exercise
+340,myself,,pobj,4841,exercise,"arousal,valence,dominance",False,,NOUN,4811,4837.0,exercise
 341,,,aux,4842,to,,False,,PART,4811,,to
-342,myself,,acl,4843,bring,valence,False,,VERB,4811,4839.0,bring
+342,myself,,acl,4843,bring,valence,False,,VERB,4811,4812.0,bring
 343,,,det,4844,the,,False,,DET,4811,,the
 344,myself,,dobj,4845,bread,valence,False,,NOUN,4811,4843.0,bread
 345,,,cc,4846,and,,False,,CCONJ,4811,,and
@@ -5061,8 +5061,8 @@
 383,myself,,aux,4884,be,"valence,dominance",False,,VERB,4873,4885.0,was
 384,myself,,conj,4885,take,"arousal,valence",False,,VERB,4873,4880.0,taking
 385,,,det,4886,a,,False,,DET,4873,,a
-386,myself,,amod,4887,final,"arousal,dominance",False,,ADJ,4873,4888.0,final
-387,myself,,dobj,4888,warm,"valence,dominance",False,,NOUN,4873,4880.0,warm
+386,myself,,amod,4887,final,"arousal,dominance",False,,ADJ,4873,4885.0,final
+387,myself,,dobj,4888,warm,"valence,dominance",False,,NOUN,4873,4885.0,warm
 388,,,prep,4889,in,,False,,ADP,4873,,in
 389,,,det,4890,the,,False,,DET,4873,,the
 390,myself,,pobj,4891,chimney,valence,False,,NOUN,4873,4885.0,chimney corner
@@ -5407,9 +5407,9 @@
 713,,,advmod,5214,wide,valence,False,,ADV,5198,5214.0,wide
 714,,,punct,5215,",",,False,,PUNCT,5198,,","
 715,,,cc,5216,and,,False,,CCONJ,5198,,and
-716,Joe,,conj,5217,shake,"arousal,dominance",False,,VERB,5198,5211.0,shook
+716,Joe,,conj,5217,shake,"arousal,dominance",False,,VERB,5198,5202.0,shook
 717,,,det,5218,the,,False,,DET,5198,,the
-718,Joe,,dobj,5219,form,valence,False,,NOUN,5198,5211.0,form
+718,Joe,,dobj,5219,form,valence,False,,NOUN,5198,5217.0,form
 719,,,prep,5220,of,,False,,ADP,5198,,of
 720,,,det,5221,a,,False,,DET,5198,,a
 721,,,advmod,5222,most,,False,,ADV,5198,,most
@@ -5876,8 +5876,8 @@
 1163,myself,,pobj,5664,terror,"arousal,negative,fear",False,,NOUN,5660,5661.0,terror
 1164,,,prep,5665,of,,False,,ADP,5660,,of
 1165,,,det,5666,the,,False,,DET,5660,,the
-1166,myself,,amod,5667,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,5660,5668.0,young
-1167,myself,,pobj,5668,man,"valence,dominance",False,,NOUN,5660,5661.0,man
+1166,myself,,amod,5667,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,5660,5661.0,young
+1167,myself,,pobj,5668,man,"valence,dominance",False,,NOUN,5660,5664.0,man
 1168,,,nsubj,5669,who,,False,,PRON,5660,,who
 1169,,,relcl,5670,want,"arousal,valence,dominance",False,,VERB,5660,5670.0,wanted
 1170,,,dobj,5671,-PRON-,,False,,NOUN,5660,,my heart
@@ -5887,7 +5887,7 @@
 1174,,,nsubj,5675,-PRON-,,False,,PRON,5660,5676.0,I
 1175,myself,,ccomp,5676,be,"valence,dominance",False,,VERB,5660,5676.0,was
 1176,,,prep,5677,in,,False,,ADP,5660,,in
-1177,myself,,amod,5678,mortal,"arousal,negative,dominance",False,,ADJ,5660,5676.0,mortal
+1177,myself,,amod,5678,mortal,"arousal,negative,dominance",False,,ADJ,5660,5679.0,mortal
 1178,myself,,pobj,5679,terror,"arousal,negative,fear",False,,NOUN,5660,5676.0,terror
 1179,,,prep,5680,of,,False,,ADP,5660,,of
 1180,,,pobj,5681,-PRON-,,False,,NOUN,5660,,my interlocutor
@@ -5898,7 +5898,7 @@
 1185,,,nsubj,5686,-PRON-,,False,,PRON,5660,5687.0,I
 1186,myself,,ccomp,5687,be,"valence,dominance",False,,VERB,5660,5687.0,was
 1187,,,prep,5688,in,,False,,ADP,5660,,in
-1188,myself,,amod,5689,mortal,"arousal,negative,dominance",False,,ADJ,5660,5690.0,mortal
+1188,myself,,amod,5689,mortal,"arousal,negative,dominance",False,,ADJ,5660,5687.0,mortal
 1189,myself,,pobj,5690,terror,"arousal,negative,fear",False,myself,NOUN,5660,5687.0,terror
 1190,,,prep,5691,of,,False,,ADP,5660,,of
 1191,,,pobj,5692,-PRON-,,False,,PRON,5660,5690.0,myself
@@ -5917,7 +5917,7 @@
 1204,,,det,5705,no,,False,,DET,5660,,no
 1205,myself,,dobj,5706,hope,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,NOUN,5660,5704.0,hope
 1206,,,prep,5707,of,,False,,ADP,5660,,of
-1207,myself,,pobj,5708,deliverance,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,NOUN,5660,5704.0,deliverance
+1207,myself,,pobj,5708,deliverance,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,NOUN,5660,5706.0,deliverance
 1208,,,prep,5709,through,,False,,ADP,5660,,through
 1209,,,poss,5710,-PRON-,,False,,DET,5660,,my all
 1210,,,punct,5711,-,,False,,PUNCT,5660,,-
@@ -5972,8 +5972,8 @@
 1257,myself,,pobj,5758,river,"valence,dominance",False,,NOUN,5743,5755.0,river
 1258,,,prep,5759,on,,False,,ADP,5743,,on
 1259,,,det,5760,a,,False,,DET,5743,,a
-1260,myself,,amod,5761,strong,"arousal,valence,dominance",False,,ADJ,5743,5763.0,strong
-1261,myself,,compound,5762,spring,valence,False,,NOUN,5743,5763.0,spring-
+1260,myself,,amod,5761,strong,"arousal,valence,dominance",False,,ADJ,5743,5755.0,strong
+1261,myself,,compound,5762,spring,valence,False,,NOUN,5743,5755.0,spring-
 1262,myself,,pobj,5763,tide,"arousal,valence",False,,NOUN,5743,5755.0,tide
 1263,,,punct,5764,",",,False,,PUNCT,5743,,","
 1264,,,prep,5765,to,,False,,ADP,5743,,to
@@ -6087,11 +6087,11 @@
 1372,myself,,aux,5873,have,"valence,dominance",False,,VERB,5857,5864.0,have
 1373,myself,,conj,5874,make,valence,False,,VERB,5857,5864.0,made
 1374,,,det,5875,a,,False,,DET,5857,,a
-1375,myself,,dobj,5876,noise,"arousal,negative",False,,NOUN,5857,5864.0,noise
-1376,myself,,prep,5877,like,valence,False,,ADP,5857,5864.0,like
+1375,myself,,dobj,5876,noise,"arousal,negative",False,,NOUN,5857,5874.0,noise
+1376,myself,,prep,5877,like,valence,False,,ADP,5857,5874.0,like
 1377,,,det,5878,the,,False,,DET,5857,,the
 1378,,,amod,5879,very,,False,,ADJ,5857,,very
-1379,myself,,pobj,5880,pirate,"arousal,negative,dominance,anger",False,,NOUN,5857,5877.0,pirate
+1379,myself,,pobj,5880,pirate,"arousal,negative,dominance,anger",False,,NOUN,5857,5874.0,pirate
 1380,,,nsubj,5881,-PRON-,,False,,PRON,5857,,himself
 1381,,,relcl,5882,rattle,,False,,VERB,5857,,rattling
 1382,,,dobj,5883,-PRON-,,False,,NOUN,5857,,his chains
@@ -6203,7 +6203,7 @@
 1486,,,det,5987,no,,False,,DET,5980,,no
 1487,myself,,appos,5988,time,"valence,dominance,anticipation",False,,NOUN,5980,5981.0,time
 1488,,,prep,5989,for,,False,,ADP,5980,,for
-1489,myself,,pobj,5990,selection,"valence,dominance",False,,NOUN,5980,5981.0,selection
+1489,myself,,pobj,5990,selection,"valence,dominance",False,,NOUN,5980,5988.0,selection
 1490,,,punct,5991,",",,False,,PUNCT,5980,,","
 1491,,,det,5992,no,,False,,DET,5980,,no
 1492,,,npadvmod,5993,time,"valence,dominance,anticipation",False,,NOUN,5980,5993.0,time
@@ -6471,8 +6471,8 @@
 1748,,,mark,6249,if,,False,,ADP,6235,,if
 1749,,,det,6250,some,,False,,DET,6235,,some
 1750,,,nsubj,6251,goblin,"arousal,negative,disgust,fear",False,,NOUN,6235,6251.0,goblin
-1751,myself,,aux,6252,have,"valence,dominance",False,,VERB,6235,6237.0,had
-1752,myself,,aux,6253,be,"valence,dominance",False,,VERB,6235,6237.0,been
+1751,myself,,aux,6252,have,"valence,dominance",False,,VERB,6235,6254.0,had
+1752,myself,,aux,6253,be,"valence,dominance",False,,VERB,6235,6254.0,been
 1753,myself,,advcl,6254,cry,"arousal,negative,sadness",False,,VERB,6235,6237.0,crying
 1754,,,advmod,6255,there,,False,,ADV,6235,,there
 1755,,,det,6256,all,,False,,DET,6235,,all
@@ -6481,7 +6481,7 @@
 1758,,,cc,6259,and,,False,,CCONJ,6235,,and
 1759,,,conj,6260,use,,False,,VERB,6235,,using
 1760,,,det,6261,the,,False,,DET,6235,,the
-1761,myself,,dobj,6262,window,valence,False,,NOUN,6235,6237.0,window
+1761,myself,,dobj,6262,window,valence,False,,NOUN,6235,6254.0,window
 1762,,,prep,6263,for,,False,,ADP,6235,,for
 1763,,,det,6264,a,,False,,DET,6235,,a
 1764,,,compound,6265,pocket,,False,,NOUN,6235,,pocket-
@@ -6519,7 +6519,7 @@
 1796,,,cc,6297,and,,False,,CCONJ,6268,,and
 1797,myself,,conj,6298,blade,"arousal,dominance",False,,VERB,6268,6291.0,blade
 1798,,,aux,6299,to,,False,,PART,6268,,to
-1799,myself,,advcl,6300,blade,"arousal,dominance",False,,VERB,6268,6291.0,blade
+1799,myself,,advcl,6300,blade,"arousal,dominance",False,,VERB,6268,6271.0,blade
 1800,,,punct,6301,.,,False,,PUNCT,6268,,.
 1801,,,prep,6302,On,,False,,ADP,6302,,On
 1802,,,det,6303,every,,False,,DET,6302,,every
@@ -6976,7 +6976,7 @@
 2249,,,pobj,6750,Battery,"negative,anger",False,,PROPN,6728,6746.0,Battery
 2250,,,punct,6751,",",,False,,PUNCT,6728,,","
 2251,,,cc,6752,and,,False,,CCONJ,6728,,and
-2252,myself,,aux,6753,have,"valence,dominance",False,,VERB,6728,6744.0,had
+2252,myself,,aux,6753,have,"valence,dominance",False,,VERB,6728,6755.0,had
 2253,,,advmod,6754,just,,False,,ADV,6728,,just
 2254,myself,,conj,6755,scramble,"arousal,dominance",False,,VERB,6728,6744.0,scrambled
 2255,,,prt,6756,up,,False,,PART,6728,,up the
@@ -7012,7 +7012,7 @@
 2285,,,punct,6786,",",,False,,PUNCT,6771,,","
 2286,man,,advcl,6787,heavy,dominance,False,,ADJ,6771,6778.0,heavy
 2287,,,prep,6788,with,,False,,ADP,6771,,with
-2288,man,,pobj,6789,sleep,valence,False,,NOUN,6771,6778.0,sleep
+2288,man,,pobj,6789,sleep,valence,False,,NOUN,6771,6787.0,sleep
 2289,,,punct,6790,.,,False,,PUNCT,6771,,.
 2290,,,,6791,"
 ",,False,,SPACE,6771,,"
@@ -7063,7 +7063,7 @@
 2334,,,punct,6835,",",,False,,PUNCT,6824,,","
 2335,,,cc,6836,but,,False,,CCONJ,6824,,but
 2336,,,det,6837,another,,False,,DET,6824,,another
-2337,man,,conj,6838,man,"valence,dominance",False,,NOUN,6824,6826.0,man
+2337,man,,conj,6838,man,"valence,dominance",False,,NOUN,6824,6830.0,man
 2338,,,punct,6839,!,,False,,PUNCT,6824,,!
 2339,,,,6840,"
 ",,False,,SPACE,6824,,"
@@ -7162,7 +7162,7 @@
 2431,,,nsubj,6932,-PRON-,,False,,PRON,6901,6933.0,it
 2432,it,,conj,6933,be,"valence,dominance",False,,VERB,6901,6933.0,was
 2433,,,det,6934,a,,False,,DET,6901,,a
-2434,it,,amod,6935,round,valence,False,,ADJ,6901,6937.0,round
+2434,it,,amod,6935,round,valence,False,,ADJ,6901,6933.0,round
 2435,,,amod,6936,weak,,False,,ADJ,6901,,weak
 2436,it,,attr,6937,blow,"arousal,dominance",False,,NOUN,6901,6933.0,blow
 2437,,,nsubj,6938,that,,False,,DET,6901,,that
@@ -7257,10 +7257,10 @@
 2522,,,expl,7023,there,,False,,ADV,7013,,there
 2523,myself,,conj,7024,be,"valence,dominance",False,Man,VERB,7013,7014.0,was
 2524,,,det,7025,the,,False,,DET,7013,,the
-2525,myself,,amod,7026,right,"valence,dominance",False,,ADJ,7013,7024.0,right
-2526,myself,,attr,7027,man,"valence,dominance",False,,NOUN,7013,7024.0,Man
+2525,myself,,amod,7026,right,"valence,dominance",False,,ADJ,7013,7014.0,right
+2526,myself,,attr,7027,man,"valence,dominance",False,,NOUN,7013,7014.0,Man
 2527,,,punct,7028,",",,False,,PUNCT,7013,,","
-2528,myself,,advcl,7029,hug,"valence,trust,joy,positive,dominance",False,himself,VERB,7013,7024.0,hugging
+2528,myself,,advcl,7029,hug,"valence,trust,joy,positive,dominance",False,himself,VERB,7013,7014.0,hugging
 2529,,,dobj,7030,-PRON-,,False,,PRON,7013,7029.0,himself
 2530,,,cc,7031,and,,False,,CCONJ,7013,,and
 2531,myself,,conj,7032,limp,negative,False,,VERB,7013,7029.0,limping
@@ -7275,7 +7275,7 @@
 2540,,,neg,7041,never,,False,,ADV,7013,,never
 2541,,,det,7042,all,,False,,DET,7013,,all
 2542,man,,npadvmod,7043,night,valence,True,,NOUN,7013,7043.0,night
-2543,myself,,advcl,7044,leave,"negative,surprise,sadness",False,,VERB,7013,7024.0,left
+2543,myself,,advcl,7044,leave,"negative,surprise,sadness",False,,VERB,7013,7014.0,left
 2544,,,prt,7045,off,,False,,PART,7013,,off hugging
 2545,,,cc,7046,and,,False,,CCONJ,7013,,and
 2546,,,conj,7047,limping,,False,,NOUN,7013,,limping
@@ -7825,7 +7825,7 @@
 3060,,,dobj,7561,-PRON-,,False,,NOUN,7560,,his desolation
 3061,,,punct,7562,",",,False,,PUNCT,7560,,","
 3062,,,cc,7563,and,,False,,CCONJ,7560,,and
-3063,he,,conj,7564,watch,"valence,anticipation,fear",False,him,VERB,7560,7575.0,watching
+3063,he,,conj,7564,watch,"valence,anticipation,fear",False,him,VERB,7560,7560.0,watching
 3064,,,dobj,7565,-PRON-,,False,,PRON,7560,7564.0,him
 3065,,,mark,7566,as,,False,,ADP,7560,,as
 3066,,,nsubj,7567,-PRON-,,False,,PRON,7560,7569.0,he
@@ -7924,7 +7924,7 @@
 3151,man,,ROOT,7652,take,"arousal,valence",False,,VERB,7650,7652.0,took
 3152,man,,amod,7653,strong,"arousal,valence,dominance",False,,ADV,7650,7656.0,strong
 3153,man,,amod,7654,sharp,"arousal,dominance",False,,ADJ,7650,7656.0,sharp
-3154,man,,amod,7655,sudden,"arousal,surprise",False,,ADJ,7650,7652.0,sudden
+3154,man,,amod,7655,sudden,"arousal,surprise",False,,ADJ,7650,7656.0,sudden
 3155,man,,dobj,7656,bite,"arousal,negative,dominance",False,,NOUN,7650,7652.0,bites
 3156,,,punct,7657,",",,False,,PUNCT,7650,,","
 3157,,,advmod,7658,just,,False,,ADV,7650,,just
@@ -8155,8 +8155,8 @@
 3374,,,pobj,7875,something,,False,,NOUN,7870,,something
 3375,man,,prep,7876,like,valence,False,,ADP,7870,7872.0,like
 3376,,,det,7877,a,,False,,DET,7870,,a
-3377,man,,amod,7878,gruff,"arousal,negative,disgust,anger",False,,ADJ,7870,7879.0,gruff
-3378,man,,pobj,7879,laugh,"valence,joy,positive,surprise,arousal,dominance",False,,NOUN,7870,7872.0,laugh
+3377,man,,amod,7878,gruff,"arousal,negative,disgust,anger",False,,ADJ,7870,7876.0,gruff
+3378,man,,pobj,7879,laugh,"valence,joy,positive,surprise,arousal,dominance",False,,NOUN,7870,7876.0,laugh
 3379,,,punct,7880,.,,False,,PUNCT,7870,,.
 3380,,,ROOT,7881,"""",,False,,PUNCT,7881,,""""
 3381,,,ROOT,7882,-PRON-,,False,,PRON,7882,7882.0,Him
@@ -8304,7 +8304,7 @@
 3507,,,advmod,8008,only,,False,,ADV,8000,,only
 3508,,,prep,8009,with,,False,,ADP,8000,,with
 3509,,,det,8010,a,,False,,DET,8000,,a
-3510,man,,pobj,8011,hat,valence,False,,NOUN,8000,8015.0,hat
+3510,man,,pobj,8011,hat,valence,False,,NOUN,8000,8001.0,hat
 3511,,,punct,8012,",",,False,,PUNCT,8000,,","
 3512,,,punct,8013,"""",,False,,PUNCT,8000,,""""
 3513,,,nsubj,8014,-PRON-,,False,,PRON,8000,8015.0,I
@@ -8424,7 +8424,7 @@
 3621,man,,pobj,8122,head,"valence,dominance",False,,NOUN,8110,8113.0,head
 3622,,,cc,8123,and,,False,,CCONJ,8110,,and
 3623,,,det,8124,a,,False,,DET,8110,,a
-3624,man,,amod,8125,light,"valence,dominance",False,,ADJ,8110,8126.0,light
+3624,man,,amod,8125,light,"valence,dominance",False,,ADJ,8110,8113.0,light
 3625,man,,conj,8126,stomach,disgust,False,,NOUN,8110,8122.0,stomach
 3626,,,punct,8127,",",,False,,PUNCT,8110,,","
 3627,man,,advcl,8128,perishing,"negative,sadness,fear",False,,NOUN,8110,8113.0,perishing
@@ -8442,8 +8442,8 @@
 3639,man,,conj,8140,gun,"negative,fear,arousal,anger,dominance",False,,NOUN,8110,8135.0,guns firing
 3640,,,punct,8141,",",,False,,PUNCT,8110,,","
 3641,,,cc,8142,and,,False,,CCONJ,8110,,and
-3642,man,,conj,8143,voice,"valence,dominance",False,,NOUN,8110,8140.0,voices
-3643,man,,acl,8144,call,"arousal,valence,dominance",False,,VERB,8110,8140.0,calling
+3642,man,,conj,8143,voice,"valence,dominance",False,,NOUN,8110,8135.0,voices
+3643,man,,acl,8144,call,"arousal,valence,dominance",False,,VERB,8110,8143.0,calling
 3644,,,punct,8145,.,,False,,PUNCT,8110,,.
 3645,,,ROOT,8146,Hears,,False,,PROPN,8146,,Hears
 3646,,,punct,8147,?,,False,,PUNCT,8146,,?
@@ -8455,7 +8455,7 @@
 3652,,,prep,8153,with,,False,,ADP,8148,,with
 3653,,,poss,8154,-PRON-,,False,,DET,8148,,their red
 3654,man,,pobj,8155,coat,valence,False,,NOUN,8148,8149.0,coats
-3655,man,,acl,8156,light,"valence,dominance",False,,VERB,8148,8149.0,lighted
+3655,man,,acl,8156,light,"valence,dominance",False,,VERB,8148,8155.0,lighted
 3656,,,prt,8157,up,,False,,PART,8148,,up by
 3657,,,det,8158,the,,False,,DET,8148,,the
 3658,,,pobj,8159,torch,"arousal,valence,dominance",False,,NOUN,8148,8157.0,torches
@@ -8676,7 +8676,7 @@
 3865,,,prt,8366,down,,False,,PART,8362,,"down,"
 3866,man,,prep,8367,like,valence,False,,ADP,8362,8364.0,like
 3867,,,det,8368,a,,False,,DET,8362,,a
-3868,man,,pobj,8369,bloodhound,dominance,False,,NOUN,8362,8364.0,bloodhound
+3868,man,,pobj,8369,bloodhound,dominance,False,,NOUN,8362,8367.0,bloodhound
 3869,,,punct,8370,.,,False,,PUNCT,8362,,.
 3870,,,ROOT,8371,curse,"negative,sadness,fear,arousal,disgust,anger",False,,VERB,8371,8371.0,Curse
 3871,,,det,8372,this,,False,,DET,8371,,this
@@ -8948,7 +8948,7 @@
 4131,,,cc,8632,and,,False,,CCONJ,8617,,and
 4132,,,nsubjpass,8633,Joe,,False,,PROPN,8617,8636.0,Joe
 4133,Mrs. Joe,,aux,8634,have,"valence,dominance",False,,VERB,8617,8636.0,had
-4134,Mrs. Joe,,auxpass,8635,be,"valence,dominance",False,,VERB,8617,8618.0,been
+4134,Mrs. Joe,,auxpass,8635,be,"valence,dominance",False,,VERB,8617,8636.0,been
 4135,Mrs. Joe,,conj,8636,put,"valence,dominance",False,Joe,VERB,8617,8618.0,put
 4136,,,prep,8637,upon,,False,,ADP,8617,,upon
 4137,,,det,8638,the,,False,,DET,8617,,the
@@ -9345,7 +9345,7 @@
 4516,,,det,9017,a,,False,,DET,8998,,a
 4517,us,,conj,9018,man,"valence,dominance",False,,NOUN,8998,9014.0,man
 4518,,,cc,9019,and,,False,,CCONJ,8998,,and
-4519,us,,conj,9020,boy,"valence,negative,disgust",False,,NOUN,8998,9008.0,boy
+4519,us,,conj,9020,boy,"valence,negative,disgust",False,,NOUN,8998,9018.0,boy
 4520,,,prep,9021,at,,False,,ADP,8998,,at
 4521,us,,pobj,9022,home,"valence,dominance",False,,NOUN,8998,9018.0,home
 4522,,,punct,9023,;,,False,,PUNCT,8998,,;
@@ -9354,9 +9354,9 @@
 4525,us,,conj,9026,take,"arousal,valence",False,,VERB,8998,9026.0,took
 4526,us,,dobj,9027,gulp,"arousal,valence,surprise,fear",False,,NOUN,8998,9026.0,gulps
 4527,,,prep,9028,of,,False,,ADP,8998,,of
-4528,us,,pobj,9029,milk,valence,False,,NOUN,8998,9027.0,milk
+4528,us,,pobj,9029,milk,valence,False,,NOUN,8998,9026.0,milk
 4529,,,cc,9030,and,,False,,CCONJ,8998,,and
-4530,us,,conj,9031,water,valence,False,,NOUN,8998,9027.0,water
+4530,us,,conj,9031,water,valence,False,,NOUN,8998,9026.0,water
 4531,,,punct,9032,",",,False,,PUNCT,8998,,","
 4532,,,prep,9033,with,,False,,ADP,8998,,with
 4533,us,,amod,9034,apologetic,"positive,dominance,trust",False,,ADJ,8998,9026.0,apologetic
@@ -9375,8 +9375,8 @@
 3,,,punct,9046,",",,False,,PUNCT,9043,,","
 4,,,nsubj,9047,Mrs.,,False,,PROPN,9043,9048.0,Mrs. Joe
 5,Mrs. Joe,,ROOT,9048,put,"valence,dominance",False,,VERB,9043,9048.0,put
-6,Mrs. Joe,,amod,9049,clean,"joy,valence,positive,trust",False,,ADJ,9043,9051.0,clean
-7,Mrs. Joe,,amod,9050,white,"valence,trust,joy,positive,anticipation",False,,ADJ,9043,9051.0,white
+6,Mrs. Joe,,amod,9049,clean,"joy,valence,positive,trust",False,,ADJ,9043,9050.0,clean
+7,Mrs. Joe,,amod,9050,white,"valence,trust,joy,positive,anticipation",False,,ADJ,9043,9048.0,white
 8,Mrs. Joe,,dobj,9051,curtain,valence,False,,NOUN,9043,9048.0,curtains
 9,,,prt,9052,up,,False,,PART,9043,,"up,"
 10,,,cc,9053,and,,False,,CCONJ,9043,,and
@@ -9465,14 +9465,14 @@
 93,Mrs. Joe,,ROOT,9136,be,"valence,dominance",False,,VERB,9135,9136.0,was
 94,,,det,9137,a,,False,,DET,9135,,a
 95,,,advmod,9138,very,,False,,ADV,9135,,very
-96,Mrs. Joe,,amod,9139,clean,"joy,valence,positive,trust",False,,ADJ,9135,9136.0,clean
+96,Mrs. Joe,,amod,9139,clean,"joy,valence,positive,trust",False,,ADJ,9135,9140.0,clean
 97,Mrs. Joe,,attr,9140,housekeeper,"valence,dominance",False,,NOUN,9135,9136.0,housekeeper
 98,,,punct,9141,",",,False,,PUNCT,9135,,","
 99,,,cc,9142,but,,False,,CCONJ,9135,,but
 100,Mrs. Joe,,conj,9143,have,"valence,dominance",False,,VERB,9135,9136.0,had
 101,,,det,9144,an,,False,,DET,9135,,an
-102,Mrs. Joe,,amod,9145,exquisite,"valence,joy,positive,arousal,dominance",False,,ADJ,9135,9146.0,exquisite
-103,Mrs. Joe,,dobj,9146,art,"valence,sadness,joy,positive,surprise,dominance,anticipation",False,,NOUN,9135,9136.0,art
+102,Mrs. Joe,,amod,9145,exquisite,"valence,joy,positive,arousal,dominance",False,,ADJ,9135,9143.0,exquisite
+103,Mrs. Joe,,dobj,9146,art,"valence,sadness,joy,positive,surprise,dominance,anticipation",False,,NOUN,9135,9143.0,art
 104,,,prep,9147,of,,False,,ADP,9135,,of
 105,,,pcomp,9148,make,valence,False,,VERB,9135,9148.0,making
 106,,,nsubj,9149,-PRON-,,False,,NOUN,9135,,her cleanliness
@@ -9585,7 +9585,7 @@
 211,,,prep,9254,On,,False,,ADP,9254,,On
 212,,,det,9255,the,,False,,DET,9254,,the
 213,Joe,,amod,9256,present,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,9254,9258.0,present
-214,Joe,,amod,9257,festive,"valence,joy,positive,arousal,dominance",False,,ADJ,9254,9260.0,festive
+214,Joe,,amod,9257,festive,"valence,joy,positive,arousal,dominance",False,,ADJ,9254,9258.0,festive
 215,Joe,,pobj,9258,occasion,valence,False,,NOUN,9254,9260.0,occasion
 216,,,nsubj,9259,-PRON-,,False,,PRON,9254,9260.0,he
 217,Joe,,ROOT,9260,emerge,"arousal,valence,dominance",False,,VERB,9254,9260.0,emerged
@@ -9602,7 +9602,7 @@
 228,,,det,9271,the,,False,,DET,9254,,the
 229,Joe,,dobj,9272,picture,valence,False,,NOUN,9254,9260.0,picture
 230,,,prep,9273,of,,False,,ADP,9254,,of
-231,Joe,,pobj,9274,misery,"negative,sadness,fear,disgust,anger",False,,NOUN,9254,9260.0,misery
+231,Joe,,pobj,9274,misery,"negative,sadness,fear,disgust,anger",False,,NOUN,9254,9272.0,misery
 232,,,punct,9275,",",,False,,PUNCT,9254,,","
 233,,,prep,9276,in,,False,,ADP,9254,,in
 234,,,det,9277,a,,False,,DET,9254,,a
@@ -10019,7 +10019,7 @@
 641,,,cc,9684,and,,False,,CCONJ,9642,,and
 642,,,conj,9685,everything,,False,,NOUN,9642,,everything
 643,,,advmod,9686,most,,False,,ADV,9642,,most
-644,Mrs. Joe,,amod,9687,splendid,"valence,joy,positive,surprise,arousal,dominance",False,,ADJ,9642,9657.0,splendid
+644,Mrs. Joe,,amod,9687,splendid,"valence,joy,positive,surprise,arousal,dominance",False,,ADJ,9642,9661.0,splendid
 645,,,punct,9688,.,,False,,PUNCT,9642,,.
 646,,,cc,9689,and,,False,,CCONJ,9689,,And
 647,,,advmod,9690,still,,False,,ADV,9689,,still
@@ -10062,7 +10062,7 @@
 682,,,cc,9725,and,,False,,CCONJ,9718,,and
 683,,,det,9726,a,,False,,DET,9718,,a
 684,,,amod,9727,large,"arousal,valence,dominance",False,,ADJ,9718,9718.0,large
-685,,,amod,9728,shine,"valence,joy,positive,arousal,dominance,anticipation",False,,VERB,9718,9718.0,shining
+685,,,amod,9728,shin,"valence,joy,positive,arousal,dominance,anticipation",False,,VERB,9718,9718.0,shining
 686,,,conj,9729,bald,,False,,NOUN,9718,,bald forehead
 687,,,punct,9730,",",,False,,PUNCT,9718,,","
 688,,,ccomp,9731,have,"valence,dominance",False,,VERB,9718,9731.0,had
@@ -10364,7 +10364,7 @@
 978,,,punct,10021,",",,False,,PUNCT,10016,,","
 979,,,prep,10022,as,,False,,ADP,10016,,as
 980,,,det,10023,a,,False,,DET,10016,,a
-981,he,,amod,10024,profound,"arousal,valence,dominance",False,,ADJ,10016,10019.0,profound
+981,he,,amod,10024,profound,"arousal,valence,dominance",False,,ADJ,10016,10025.0,profound
 982,he,,pobj,10025,novelty,"arousal,valence,dominance",False,,NOUN,10016,10019.0,novelty
 983,,,punct,10026,",",,False,,PUNCT,10016,,","
 984,,,prep,10027,with,,False,,ADP,10016,,with
@@ -10378,10 +10378,10 @@
 992,,,det,10035,the,,False,,DET,10016,,the
 993,,,nummod,10036,two,valence,False,,NUM,10016,10036.0,two
 994,,,dobj,10037,bottle,,False,,NOUN,10016,,bottles
-995,he,,prep,10038,like,valence,False,,ADP,10016,10019.0,like
-996,he,,amod,10039,dumb,negative,False,,ADJ,10016,10041.0,dumb
+995,he,,prep,10038,like,valence,False,,ADP,10016,10034.0,like
+996,he,,amod,10039,dumb,negative,False,,ADJ,10016,10034.0,dumb
 997,,,punct,10040,-,,False,,PUNCT,10016,,-
-998,he,,pobj,10041,bell,"arousal,valence,dominance",False,,NOUN,10016,10019.0,bells
+998,he,,pobj,10041,bell,"arousal,valence,dominance",False,,NOUN,10016,10034.0,bells
 999,,,punct,10042,.,,False,,PUNCT,10016,,.
 1000,,,npadvmod,10043,every,,False,,PROPN,10043,,Every Christmas Day
 1001,,,punct,10044,",",,False,,PUNCT,10043,,","
@@ -10445,7 +10445,7 @@
 ",,False,,SPACE,10097,,"
 "
 1059,,,nsubj,10102,-PRON-,,False,,PRON,10102,,We
-1060,,,ROOT,10103,dine,"arousal,valence",False,,VERB,10102,10103.0,dined
+1060,,,ROOT,10103,din,negative,False,,VERB,10102,10103.0,dined
 1061,,,prep,10104,on,,False,,ADP,10102,,on
 1062,,,det,10105,these,,False,,DET,10102,,these
 1063,,,pobj,10106,occasion,valence,False,,NOUN,10102,10103.0,occasions
@@ -10518,7 +10518,7 @@
 1130,,,amod,10173,edge,,False,,VERB,10164,,edged
 1131,Uncle Pumblechook,,pobj,10174,person,"valence,dominance",False,,NOUN,10164,10165.0,person
 1132,,,prep,10175,in,,False,,ADP,10164,,in
-1133,Uncle Pumblechook,,compound,10176,sky,"valence,positive",False,,NOUN,10164,10177.0,sky-
+1133,Uncle Pumblechook,,compound,10176,sky,"valence,positive",False,,NOUN,10164,10165.0,sky-
 1134,Uncle Pumblechook,,pobj,10177,blue,"valence,sadness",False,,ADJ,10164,10165.0,blue
 1135,,,punct,10178,",",,False,,PUNCT,10164,,","
 1136,,,nsubj,10179,who,,False,,PRON,10164,,who
@@ -10587,7 +10587,7 @@
 1199,Uncle Pumblechook,,advcl,10242,see,"arousal,valence,dominance",False,,VERB,10209,10242.0,saw
 1200,,,dobj,10243,some,,False,,NOUN,10209,,some miles
 1201,,,prep,10244,of,,False,,ADP,10209,,of
-1202,Uncle Pumblechook,,amod,10245,open,"valence,dominance",False,,ADJ,10209,10242.0,open
+1202,Uncle Pumblechook,,amod,10245,open,"valence,dominance",False,,ADJ,10209,10246.0,open
 1203,Uncle Pumblechook,,pobj,10246,country,"valence,dominance",False,,NOUN,10209,10242.0,country
 1204,,,prep,10247,between,,False,,ADP,10209,,between
 1205,,,pobj,10248,-PRON-,,False,,PRON,10209,,them
@@ -10635,22 +10635,22 @@
 1245,,,prep,10288,in,,False,,ADP,10283,,in
 1246,,,prep,10289,at,,False,,ADP,10283,,at
 1247,,,det,10290,an,,False,,DET,10283,,an
-1248,Uncle Pumblechook,,amod,10291,acute,"arousal,dominance",False,,ADJ,10283,10292.0,acute
-1249,Uncle Pumblechook,,pobj,10292,angle,valence,False,,NOUN,10283,10322.0,angle
+1248,Uncle Pumblechook,,amod,10291,acute,"arousal,dominance",False,,ADJ,10283,10322.0,acute
+1249,Uncle Pumblechook,,pobj,10292,angle,valence,False,,NOUN,10283,10287.0,angle
 1250,,,prep,10293,of,,False,,ADP,10283,,of
 1251,,,det,10294,the,,False,,DET,10283,,the
 1252,,,pobj,10295,tablecloth,,False,,NOUN,10283,,tablecloth
 1253,,,punct,10296,",",,False,,PUNCT,10283,,","
 1254,,,prep,10297,with,,False,,ADP,10283,,with
 1255,,,det,10298,the,,False,,DET,10283,,the
-1256,Uncle Pumblechook,,pobj,10299,table,valence,False,,NOUN,10283,10322.0,table
+1256,Uncle Pumblechook,,pobj,10299,table,valence,False,,NOUN,10283,10287.0,table
 1257,,,prep,10300,in,,False,,ADP,10283,,in
 1258,,,pobj,10301,-PRON-,,False,,NOUN,10283,,my chest
 1259,,,punct,10302,",",,False,,PUNCT,10283,,","
 1260,,,cc,10303,and,,False,,CCONJ,10283,,and
 1261,,,det,10304,the,,False,,DET,10283,,the
 1262,,,amod,10305,pumblechookian,,False,,ADJ,10283,,Pumblechookian
-1263,Uncle Pumblechook,,conj,10306,elbow,anger,False,,NOUN,10283,10322.0,elbow
+1263,Uncle Pumblechook,,conj,10306,elbow,anger,False,,NOUN,10283,10287.0,elbow
 1264,,,prep,10307,in,,False,,ADP,10283,,in
 1265,,,pobj,10308,-PRON-,,False,,NOUN,10283,,my eye
 1266,,,punct,10309,",",,False,,PUNCT,10283,,","
@@ -10659,7 +10659,7 @@
 1269,,,nsubjpass,10312,-PRON-,,False,,PRON,10283,10315.0,I
 1270,Uncle Pumblechook,,auxpass,10313,be,"valence,dominance",False,,VERB,10283,10315.0,was
 1271,,,neg,10314,not,,False,,ADV,10283,,not
-1272,Uncle Pumblechook,,conj,10315,allow,"valence,dominance",True,I,VERB,10283,10322.0,allowed
+1272,Uncle Pumblechook,,conj,10315,allow,"valence,dominance",True,I,VERB,10283,10287.0,allowed
 1273,,,aux,10316,to,,False,,PART,10283,,to
 1274,,,xcomp,10317,speak,valence,False,,VERB,10283,10317.0,speak
 1275,,,punct,10318,(,,False,,PUNCT,10283,,(
@@ -10684,7 +10684,7 @@
 1294,,,pobj,10337,drumstick,,False,,NOUN,10283,,drumsticks
 1295,,,prep,10338,of,,False,,ADP,10283,,of
 1296,,,det,10339,the,,False,,DET,10283,,the
-1297,Uncle Pumblechook,,pobj,10340,fowl,valence,False,,NOUN,10283,10334.0,fowls
+1297,Uncle Pumblechook,,pobj,10340,fowl,valence,False,,NOUN,10283,10322.0,fowls
 1298,,,punct,10341,",",,False,,PUNCT,10283,,","
 1299,,,cc,10342,and,,False,,CCONJ,10283,,and
 1300,,,conj,10343,with,,False,,ADP,10283,,with
@@ -10771,13 +10771,13 @@
 1381,Uncle Pumblechook,,aux,10424,have,"valence,dominance",False,,VERB,10422,10425.0,have
 1382,Uncle Pumblechook,,ROOT,10425,be,"valence,dominance",False,,VERB,10422,10425.0,been
 1383,,,det,10426,an,,False,,DET,10422,,an
-1384,Uncle Pumblechook,,amod,10427,unfortunate,"negative,sadness",False,,ADJ,10422,10425.0,unfortunate
+1384,Uncle Pumblechook,,amod,10427,unfortunate,"negative,sadness",False,,ADJ,10422,10429.0,unfortunate
 1385,,,amod,10428,little,,False,,ADJ,10422,,little
 1386,Uncle Pumblechook,,attr,10429,bull,"arousal,valence,dominance",False,,NOUN,10422,10425.0,bull
 1387,,,prep,10430,in,,False,,ADP,10422,,in
 1388,,,det,10431,a,,False,,DET,10422,,a
 1389,,,amod,10432,spanish,,False,,ADJ,10422,,Spanish
-1390,Uncle Pumblechook,,pobj,10433,arena,valence,False,,NOUN,10422,10425.0,arena
+1390,Uncle Pumblechook,,pobj,10433,arena,valence,False,,NOUN,10422,10429.0,arena
 1391,,,punct,10434,",",,False,,PUNCT,10422,,","
 1392,,,nsubj,10435,-PRON-,,False,,PRON,10422,10436.0,I
 1393,Uncle Pumblechook,,auxpass,10436,get,"arousal,valence,dominance",False,,VERB,10422,10436.0,got
@@ -11109,11 +11109,11 @@
 1709,he,,dobj,10752,subject,"valence,negative,dominance",False,,NOUN,10736,10750.0,subject
 1710,,,prep,10753,of,,False,,ADP,10736,,of
 1711,,,det,10754,the,,False,,DET,10736,,the
-1712,he,,pobj,10755,day,valence,False,,NOUN,10736,10750.0,day
+1712,he,,pobj,10755,day,valence,False,,NOUN,10736,10752.0,day
 1713,,,case,10756,'s,,False,,PART,10736,,'s
 1714,,,advmod,10757,homily,valence,False,,NOUN,10736,10757.0,homily
 1715,,,punct,10758,",",,False,,PUNCT,10736,,","
-1716,he,,amod,10759,ill,"negative,sadness,fear,disgust,anger",False,,ADJ,10736,10750.0,ill
+1716,he,,amod,10759,ill,"negative,sadness,fear,disgust,anger",False,,ADJ,10736,10760.0,ill
 1717,he,,appos,10760,choose,"arousal,valence,positive,dominance",False,,VERB,10736,10750.0,chosen
 1718,,,punct,10761,;,,False,,PUNCT,10736,,;
 1719,,,nsubj,10762,which,,False,,DET,10736,,which
@@ -11518,8 +11518,8 @@
 2096,,,ROOT,11139,"""",,False,,PUNCT,11139,,""""
 2097,,,mark,11140,If,,False,,ADP,11140,,If
 2098,,,nsubjpass,11141,-PRON-,,False,,PRON,11140,11144.0,you
-2099,I,,aux,11142,have,"valence,dominance",False,,VERB,11140,11144.0,had
-2100,I,,auxpass,11143,be,"valence,dominance",False,,VERB,11140,11144.0,been
+2099,I,,aux,11142,have,"valence,dominance",False,,VERB,11140,11150.0,had
+2100,I,,auxpass,11143,be,"valence,dominance",False,,VERB,11140,11150.0,been
 2101,I,,advcl,11144,bear,"valence,fear,arousal,anger,dominance",False,you,VERB,11140,11150.0,born
 2102,,,advcl,11145,such,,False,,ADJ,11140,,such
 2103,,,punct,11146,",",,False,,PUNCT,11140,,","
@@ -11865,7 +11865,7 @@
 2431,,,nsubj,11474,-PRON-,,False,,PRON,11472,11475.0,they
 2432,Romans,,ROOT,11475,become,"arousal,valence,dominance",False,,VERB,11472,11475.0,became
 2433,,,det,11476,the,,False,,DET,11472,,the
-2434,Romans,,amod,11477,restless,arousal,False,,ADJ,11472,11475.0,restless
+2434,Romans,,amod,11477,restless,arousal,False,,ADJ,11472,11478.0,restless
 2435,Romans,,attr,11478,people,valence,False,,NOUN,11472,11475.0,people
 2436,,,nsubj,11479,-PRON-,,False,,PRON,11472,11480.0,they
 2437,Romans,,relcl,11480,be,"valence,dominance",False,,VERB,11472,11480.0,were
@@ -12034,7 +12034,7 @@
 2594,,,punct,11637,",",,False,,PUNCT,11624,,","
 2595,,,cc,11638,and,,False,,CCONJ,11624,,and
 2596,,,nsubjpass,11639,-PRON-,,False,,PRON,11624,11641.0,I
-2597,Mr. Wopsle's,,auxpass,11640,be,"valence,dominance",False,,VERB,11624,11633.0,was
+2597,Mr. Wopsle's,,auxpass,11640,be,"valence,dominance",False,,VERB,11624,11641.0,was
 2598,Mr. Wopsle's,,conj,11641,lose,"negative,sadness,surprise,fear,arousal,disgust,anger",False,I,VERB,11624,11633.0,lost
 2599,,,punct,11642,!,,False,,PUNCT,11624,,!
 2600,,,nsubj,11643,-PRON-,,False,,PRON,11643,11644.0,I
@@ -12045,10 +12045,10 @@
 2605,I,,pobj,11648,leg,valence,False,,NOUN,11643,11644.0,leg
 2606,,,prep,11649,of,,False,,ADP,11643,,of
 2607,,,det,11650,the,,False,,DET,11643,,the
-2608,I,,pobj,11651,table,valence,False,,NOUN,11643,11644.0,table
+2608,I,,pobj,11651,table,valence,False,,NOUN,11643,11648.0,table
 2609,,,prep,11652,under,,False,,ADP,11643,,under
 2610,,,det,11653,the,,False,,DET,11643,,the
-2611,I,,pobj,11654,cloth,valence,False,,NOUN,11643,11644.0,cloth
+2611,I,,pobj,11654,cloth,valence,False,,NOUN,11643,11648.0,cloth
 2612,,,punct,11655,",",,False,,PUNCT,11643,,","
 2613,,,prep,11656,with,,False,,ADP,11643,,with
 2614,,,det,11657,both,,False,,DET,11643,,both
@@ -12100,7 +12100,7 @@
 2658,,,det,11701,the,,False,,DET,11687,,the
 2659,man,,pobj,11702,light,"valence,dominance",False,,NOUN,11687,11697.0,light
 2660,,,punct,11703,",",,False,,PUNCT,11687,,","
-2661,man,,conj,11704,put,"valence,dominance",False,it,VERB,11687,11697.0,put
+2661,man,,conj,11704,put,"valence,dominance",False,it,VERB,11687,11690.0,put
 2662,,,dobj,11705,-PRON-,,False,,PRON,11687,11704.0,it
 2663,,,prt,11706,down,,False,,PART,11687,,"down,"
 2664,,,ROOT,11707,prolong,"valence,negative,arousal,disgust,dominance",False,,VERB,11687,11707.0,prolonged
@@ -12119,9 +12119,9 @@
 2677,"Mrs. Joe,Mrs. Joe",,dobj,11720,table,valence,False,,NOUN,11710,11718.0,table
 2678,,,prep,11721,for,,False,,ADP,11710,,for
 2679,,,det,11722,the,,False,,DET,11710,,the
-2680,"Mrs. Joe,Mrs. Joe",,pobj,11723,pie,valence,False,,NOUN,11710,11720.0,pie
+2680,"Mrs. Joe,Mrs. Joe",,pobj,11723,pie,valence,False,,NOUN,11710,11718.0,pie
 2681,,,cc,11724,and,,False,,CCONJ,11710,,and
-2682,"Mrs. Joe,Mrs. Joe",,conj,11725,pudding,valence,False,,NOUN,11710,11718.0,pudding
+2682,"Mrs. Joe,Mrs. Joe",,conj,11725,pudding,valence,False,,NOUN,11710,11723.0,pudding
 2683,,,punct,11726,.,,False,,PUNCT,11710,,.
 2684,,,,11727,"
 ",,False,,SPACE,11710,,"
@@ -12139,10 +12139,10 @@
 2695,,,advmod,11738,tight,,False,,ADV,11736,,tight
 2696,,,prep,11739,by,,False,,ADP,11736,,by
 2697,,,det,11740,the,,False,,DET,11736,,the
-2698,I,,pobj,11741,leg,valence,False,,NOUN,11736,11737.0,leg
+2698,I,,pobj,11741,leg,valence,False,,NOUN,11736,11751.0,leg
 2699,,,prep,11742,of,,False,,ADP,11736,,of
 2700,,,det,11743,the,,False,,DET,11736,,the
-2701,I,,pobj,11744,table,valence,False,,NOUN,11736,11737.0,table
+2701,I,,pobj,11744,table,valence,False,,NOUN,11736,11751.0,table
 2702,,,prep,11745,with,,False,,ADP,11736,,with
 2703,,,pobj,11746,-PRON-,,False,,NOUN,11736,,my hands
 2704,,,cc,11747,and,,False,,CCONJ,11736,,and
@@ -12219,10 +12219,10 @@
 2775,,,cc,11818,and,,False,,CCONJ,11773,,and
 2776,,,conj,11819,expectorate,,False,,VERB,11773,,expectorating
 2777,,,punct,11820,",",,False,,PUNCT,11773,,","
-2778,man,,advcl,11821,make,valence,False,,VERB,11773,11817.0,making
+2778,man,,advcl,11821,make,valence,False,,VERB,11773,11810.0,making
 2779,,,det,11822,the,,False,,DET,11773,,the
 2780,,,advmod,11823,most,,False,,ADV,11773,,most
-2781,man,,amod,11824,hideous,"negative,sadness,fear,arousal,disgust",False,,ADJ,11773,11817.0,hideous
+2781,man,,amod,11824,hideous,"negative,sadness,fear,arousal,disgust",False,,ADJ,11773,11810.0,hideous
 2782,man,,dobj,11825,face,valence,False,,NOUN,11773,11821.0,faces
 2783,,,punct,11826,",",,False,,PUNCT,11773,,","
 2784,,,cc,11827,and,,False,,CCONJ,11773,,and
@@ -12319,7 +12319,7 @@
 2871,,,dobj,11914,bottle,,False,,NOUN,11908,,bottle
 2872,,,prep,11915,from,,False,,ADP,11908,,from
 2873,,,det,11916,the,,False,,DET,11908,,the
-2874,man,,compound,11917,tar,dominance,False,,NOUN,11908,11912.0,tar-
+2874,man,,compound,11917,tar,dominance,False,,NOUN,11908,11918.0,tar-
 2875,man,,pobj,11918,water,valence,False,,NOUN,11908,11912.0,water jug
 2876,,,punct,11919,.,,False,,PUNCT,11908,,.
 2877,,,nsubj,11920,-PRON-,,False,,PRON,11920,11921.0,I
@@ -12339,15 +12339,15 @@
 2891,,,punct,11934,",",,False,,PUNCT,11930,,","
 2892,man,,prep,11935,like,valence,False,,ADP,11930,11931.0,like
 2893,,,det,11936,a,,False,,DET,11930,,a
-2894,man,,pobj,11937,Medium,valence,False,,PROPN,11930,11931.0,Medium
+2894,man,,pobj,11937,Medium,valence,False,,PROPN,11930,11935.0,Medium
 2895,,,prep,11938,of,,False,,ADP,11930,,of
 2896,,,det,11939,the,,False,,DET,11930,,the
-2897,man,,amod,11940,present,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,11930,11937.0,present
-2898,man,,pobj,11941,day,valence,False,,NOUN,11930,11937.0,day
+2897,man,,amod,11940,present,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,ADJ,11930,11935.0,present
+2898,man,,pobj,11941,day,valence,False,,NOUN,11930,11935.0,day
 2899,,,punct,11942,",",,False,,PUNCT,11930,,","
 2900,,,conj,11943,by,,False,,ADP,11930,,by
 2901,,,det,11944,the,,False,,DET,11930,,the
-2902,man,,pobj,11945,vigor,"arousal,valence,positive,dominance",False,,NOUN,11930,11931.0,vigor
+2902,man,,pobj,11945,vigor,"arousal,valence,positive,dominance",False,,NOUN,11930,11935.0,vigor
 2903,,,prep,11946,of,,False,,ADP,11930,,of
 2904,,,poss,11947,-PRON-,,False,,DET,11930,11948.0,my unseen
 2905,my unseen,,pobj,11948,hold,,False,,NOUN,11930,,hold
@@ -12484,9 +12484,9 @@
 3032,,,advmod,12075,now,,False,,ADV,12061,,now
 3033,,,prep,12076,with,,False,,ADP,12061,,with
 3034,,,det,12077,the,,False,,DET,12061,,the
-3035,herself,,pobj,12078,fervor,"valence,joy,positive,arousal,anger,dominance",False,,NOUN,12061,12073.0,fervor
+3035,herself,,pobj,12078,fervor,"valence,joy,positive,arousal,anger,dominance",False,,NOUN,12061,12063.0,fervor
 3036,,,prep,12079,of,,False,,ADP,12061,,of
-3037,herself,,pobj,12080,gratitude,"joy,valence,positive,dominance",False,,NOUN,12061,12073.0,gratitude
+3037,herself,,pobj,12080,gratitude,"joy,valence,positive,dominance",False,,NOUN,12061,12063.0,gratitude
 3038,,,punct,12081,.,,False,,PUNCT,12061,,.
 3039,,,,12082,"
 ",,False,,SPACE,12061,,"
@@ -12566,7 +12566,7 @@
 3110,herself,,dobj,12153,leg,valence,False,table,NOUN,12150,12151.0,leg
 3111,,,prep,12154,of,,False,,ADP,12150,,of
 3112,,,det,12155,the,,False,,DET,12150,,the
-3113,herself,,pobj,12156,table,valence,False,,NOUN,12150,12153.0,table
+3113,herself,,pobj,12156,table,valence,False,,NOUN,12150,12151.0,table
 3114,,,advmod,12157,again,,False,,ADV,12150,,again
 3115,,,advmod,12158,immediately,"valence,negative,positive,arousal,dominance,anticipation",False,,ADV,12150,12158.0,immediately
 3116,,,punct,12159,",",,False,,PUNCT,12150,,","
@@ -12810,10 +12810,10 @@
 3344,,,nsubj,12387,-PRON-,,False,,PRON,12380,12388.0,I
 3345,herself,,ccomp,12388,utter,"valence,dominance",False,,VERB,12380,12388.0,uttered
 3346,,,det,12389,a,,False,,DET,12380,,a
-3347,herself,,amod,12390,shrill,"negative,surprise,fear,arousal,anger,dominance",False,,ADJ,12380,12391.0,shrill
+3347,herself,,amod,12390,shrill,"negative,surprise,fear,arousal,anger,dominance",False,,ADJ,12380,12388.0,shrill
 3348,herself,,dobj,12391,yell,"negative,surprise,fear,arousal,anger,dominance",False,,NOUN,12380,12388.0,yell
 3349,,,prep,12392,of,,False,,ADP,12380,,of
-3350,herself,,pobj,12393,terror,"arousal,negative,fear",False,,NOUN,12380,12391.0,terror
+3350,herself,,pobj,12393,terror,"arousal,negative,fear",False,,NOUN,12380,12388.0,terror
 3351,,,punct,12394,",",,False,,PUNCT,12380,,","
 3352,,,advmod,12395,merely,,False,,ADV,12380,,merely
 3353,,,prep,12396,in,,False,,ADP,12380,,in
@@ -12822,7 +12822,7 @@
 3356,,,cc,12399,or,,False,,CCONJ,12380,,or
 3357,,,conj,12400,in,,False,,ADP,12380,,in
 3358,,,det,12401,the,,False,,DET,12380,,the
-3359,herself,,amod,12402,bodily,"valence,dominance",False,,ADJ,12380,12403.0,bodily
+3359,herself,,amod,12402,bodily,"valence,dominance",False,,ADJ,12380,12388.0,bodily
 3360,herself,,pobj,12403,hearing,"valence,negative,dominance,fear",False,company,NOUN,12380,12388.0,hearing
 3361,,,prep,12404,of,,False,,ADP,12380,,of
 3362,,,det,12405,the,,False,,DET,12380,,the
@@ -12879,7 +12879,7 @@
 3411,,,det,12454,a,,False,,DET,12438,,a
 3412,herself,,pobj,12455,party,"arousal,valence,dominance",False,,NOUN,12438,12450.0,party
 3413,,,prep,12456,of,,False,,ADP,12438,,of
-3414,herself,,pobj,12457,soldier,"sadness,positive,arousal,anger,dominance",False,,NOUN,12438,12450.0,soldiers
+3414,herself,,pobj,12457,soldier,"sadness,positive,arousal,anger,dominance",False,,NOUN,12438,12455.0,soldiers
 3415,,,prep,12458,with,,False,,ADP,12438,,with
 3416,,,pobj,12459,-PRON-,,False,,NOUN,12438,,their muskets
 3417,,,punct,12460,",",,False,,PUNCT,12438,,","
@@ -12966,8 +12966,8 @@
 3494,Mrs. Joe,,pobj,12537,lament,"negative,disgust,sadness,fear",False,,NOUN,12488,12522.0,lament
 3495,,,prep,12538,of,,False,,ADP,12488,,of
 3496,,,punct,12539,"""",,False,,PUNCT,12488,,""""
-3497,Mrs. Joe,,amod,12540,gracious,"arousal,valence,positive,dominance",False,,ADJ,12488,12537.0,Gracious
-3498,Mrs. Joe,,pobj,12541,goodness,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,NOUN,12488,12537.0,goodness
+3497,Mrs. Joe,,amod,12540,gracious,"arousal,valence,positive,dominance",False,,ADJ,12488,12541.0,Gracious
+3498,Mrs. Joe,,pobj,12541,goodness,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,NOUN,12488,12522.0,goodness
 3499,Mrs. Joe,,conj,12542,graciou,"arousal,valence,positive,dominance",False,me,VERB,12488,12522.0,gracious
 3500,,,dobj,12543,-PRON-,,False,,PRON,12488,12542.0,me
 3501,,,punct,12544,",",,False,,PUNCT,12488,,","
@@ -13152,7 +13152,7 @@
 3672,herself,,conj,12715,pleasure,"arousal,valence,dominance",False,,NOUN,12694,12710.0,pleasure
 3673,,,prep,12716,of,,False,,ADP,12694,,of
 3674,,,poss,12717,-PRON-,,False,,DET,12694,,his fine
-3675,herself,,poss,12718,wife,"arousal,valence,dominance",False,,NOUN,12694,12719.0,wife's
+3675,herself,,poss,12718,wife,"arousal,valence,dominance",False,,NOUN,12694,12710.0,wife's
 3676,herself,,pobj,12719,acquaintance,"valence,dominance",False,,NOUN,12694,12713.0,acquaintance
 3677,,,punct,12720,;,,False,,PUNCT,12694,,;
 3678,herself,,advcl,12721,speak,"arousal,valence,dominance",False,king,VERB,12694,12710.0,speaking
@@ -13166,7 +13166,7 @@
 3686,,,det,12729,a,,False,,DET,12694,,a
 3687,,,amod,12730,little,,False,,ADJ,12694,,little
 3688,,,nsubj,12731,job,"arousal,valence,positive,dominance",False,,NOUN,12694,12731.0,job
-3689,herself,,advcl,12732,do,"arousal,valence,dominance",False,,VERB,12694,12721.0,done
+3689,herself,,advcl,12732,do,"arousal,valence,dominance",False,,VERB,12694,12710.0,done
 3690,,,punct,12733,.,,False,,PUNCT,12694,,.
 3691,,,punct,12734,"""",,False,,PUNCT,12694,,""""
 3692,,,,12735,"
@@ -13241,7 +13241,7 @@
 3757,,,cc,12800,and,,False,,CCONJ,12758,,and
 3758,,,det,12801,the,,False,,DET,12758,,the
 3759,,,nsubj,12802,coupling,"valence,dominance",False,,NOUN,12758,12802.0,coupling
-3760,herself,,aux,12803,do,"arousal,valence,dominance",False,,VERB,12758,12805.0,do
+3760,herself,,aux,12803,do,"arousal,valence,dominance",False,,VERB,12758,12790.0,do
 3761,,,neg,12804,not,,False,,ADV,12758,,n't
 3762,herself,,conj,12805,act,"arousal,valence,dominance",True,,VERB,12758,12790.0,act
 3763,,,advmod,12806,pretty,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,ADV,12758,12806.0,pretty
@@ -13772,10 +13772,10 @@
 4264,Joe,,conj,13307,apron,valence,False,,NOUN,13296,13298.0,apron
 4265,,,prt,13308,on,,False,,PART,13296,,"on,"
 4266,,,cc,13309,and,,False,,CCONJ,13296,,and
-4267,Joe,,conj,13310,pass,valence,False,,VERB,13296,13298.0,passed
+4267,Joe,,conj,13310,pass,valence,False,,VERB,13296,13307.0,passed
 4268,,,prep,13311,into,,False,,ADP,13296,,into
 4269,,,det,13312,the,,False,,DET,13296,,the
-4270,Joe,,pobj,13313,forge,"valence,positive,dominance",False,,NOUN,13296,13310.0,forge
+4270,Joe,,pobj,13313,forge,"valence,positive,dominance",False,,NOUN,13296,13307.0,forge
 4271,,,punct,13314,.,,False,,PUNCT,13296,,.
 4272,,,ROOT,13315,o,,False,,INTJ,13315,,O
 0,,,nsubj,13315,ne,,False,,INTJ,13315,,ne
@@ -13937,7 +13937,7 @@
 154,Mr. Pumblechook,,conj,13469,compliment,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,NOUN,13458,13467.0,compliments
 155,,,prep,13470,of,,False,,ADP,13458,,of
 156,,,det,13471,the,,False,,DET,13458,,the
-157,Mr. Pumblechook,,pobj,13472,season,"valence,dominance",False,,NOUN,13458,13465.0,season
+157,Mr. Pumblechook,,pobj,13472,season,"valence,dominance",False,,NOUN,13458,13467.0,season
 158,,,punct,13473,",",,False,,PUNCT,13458,,","
 159,,,cc,13474,and,,False,,CCONJ,13458,,and
 160,Mr. Pumblechook,,conj,13475,take,"arousal,valence",False,,VERB,13458,13465.0,took
@@ -14000,7 +14000,7 @@
 211,Mr. Pumblechook,,amod,13526,fat,"negative,disgust,sadness",False,,ADJ,13522,13527.0,fat
 212,Mr. Pumblechook,,pobj,13527,sort,"valence,dominance",False,,NOUN,13522,13531.0,sort
 213,,,prep,13528,of,,False,,ADV,13522,,of
-214,Mr. Pumblechook,,pobj,13529,laugh,"valence,joy,positive,surprise,arousal,dominance",False,,NOUN,13522,13531.0,laugh
+214,Mr. Pumblechook,,pobj,13529,laugh,"valence,joy,positive,surprise,arousal,dominance",False,,NOUN,13522,13527.0,laugh
 215,,,punct,13530,",",,False,,PUNCT,13522,,","
 216,Mr. Pumblechook,,ROOT,13531,say,valence,False,,VERB,13522,13531.0,said
 217,,,punct,13532,",",,False,,PUNCT,13522,,","
@@ -14233,7 +14233,7 @@
 436,,,det,13751,the,,False,,DET,13723,,the
 437,sergeant,,nsubjpass,13752,first,"arousal,valence,dominance",False,,ADJ,13723,13754.0,first
 438,sergeant,,auxpass,13753,be,"valence,dominance",False,,VERB,13723,13754.0,was
-439,sergeant,,advcl,13754,go,valence,False,,VERB,13723,13742.0,gone
+439,sergeant,,advcl,13754,go,valence,False,,VERB,13723,13735.0,gone
 440,,,punct,13755,.,,False,,PUNCT,13723,,.
 441,,,,13756,"
 ",,False,,SPACE,13723,,"
@@ -14386,7 +14386,7 @@
 587,,,conj,13902,seem,,False,,VERB,13811,,seemed
 588,,,prep,13903,in,,False,,ADP,13811,,in
 589,,,poss,13904,-PRON-,,False,,DET,13811,,my pitying
-590,them,,amod,13905,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,13811,13906.0,young
+590,them,,amod,13905,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,13811,13816.0,young
 591,them,,pobj,13906,fancy,"valence,joy,positive,arousal,dominance,anticipation",False,,NOUN,13811,13816.0,fancy
 592,,,aux,13907,to,,False,,PART,13811,,to
 593,,,aux,13908,have,"valence,dominance",False,,VERB,13811,13909.0,have
@@ -14426,7 +14426,7 @@
 625,Joe,,ROOT,13940,muster,"valence,dominance",False,,VERB,13933,13940.0,mustered
 626,Joe,,dobj,13941,courage,"arousal,valence,positive,dominance",False,,NOUN,13933,13940.0,courage
 627,,,aux,13942,to,,False,,PART,13933,,to
-628,Joe,,acl,13943,propose,"arousal,valence,dominance",False,,VERB,13933,13941.0,propose
+628,Joe,,acl,13943,propose,"arousal,valence,dominance",False,,VERB,13933,13940.0,propose
 629,,,mark,13944,that,,False,,ADP,13933,,that
 630,,,nsubj,13945,some,,False,,DET,13933,,some
 631,,,prep,13946,of,,False,,ADP,13933,,of
@@ -14454,9 +14454,9 @@
 653,Mr. Pumblechook,,pobj,13968,plea,"valence,negative,sadness,fear,dominance,anticipation",False,,NOUN,13961,13964.0,plea
 654,,,prep,13969,of,,False,,ADP,13961,,of
 655,,,det,13970,a,,False,,DET,13961,,a
-656,Mr. Pumblechook,,pobj,13971,pipe,valence,False,,NOUN,13961,13968.0,pipe
+656,Mr. Pumblechook,,pobj,13971,pipe,valence,False,,NOUN,13961,13964.0,pipe
 657,,,cc,13972,and,,False,,CCONJ,13961,,and
-658,Mr. Pumblechook,,poss,13973,lady,"valence,dominance",False,,NOUN,13961,13964.0,ladies'
+658,Mr. Pumblechook,,poss,13973,lady,"valence,dominance",False,,NOUN,13961,13974.0,ladies'
 659,Mr. Pumblechook,,conj,13974,society,"valence,dominance",False,,NOUN,13961,13971.0,society
 660,,,punct,13975,;,,False,,PUNCT,13961,,;
 661,,,cc,13976,but,,False,,CCONJ,13961,,but
@@ -14555,11 +14555,11 @@
 752,,,nsubj,14067,sergeant,"arousal,dominance",False,,NOUN,14066,14067.0,sergeant
 753,sergeant,,ROOT,14068,take,"arousal,valence",False,,VERB,14066,14068.0,took
 754,,,det,14069,a,,False,,DET,14066,,a
-755,sergeant,,amod,14070,polite,"valence,positive,dominance",False,,ADJ,14066,14068.0,polite
+755,sergeant,,amod,14070,polite,"valence,positive,dominance",False,,ADJ,14066,14071.0,polite
 756,sergeant,,dobj,14071,leave,"negative,surprise,sadness",False,,NOUN,14066,14068.0,leave
 757,,,prep,14072,of,,False,,ADP,14066,,of
 758,,,det,14073,the,,False,,DET,14066,,the
-759,sergeant,,pobj,14074,lady,"valence,dominance",False,,NOUN,14066,14068.0,ladies
+759,sergeant,,pobj,14074,lady,"valence,dominance",False,,NOUN,14066,14071.0,ladies
 760,,,punct,14075,",",,False,,PUNCT,14066,,","
 761,,,cc,14076,and,,False,,CCONJ,14066,,and
 762,sergeant,,conj,14077,part,valence,False,Mr. Pumblechook,VERB,14066,14068.0,parted
@@ -14568,7 +14568,7 @@
 765,,,prep,14080,as,,False,,ADP,14066,,as
 766,,,prep,14081,from,,False,,ADP,14066,,from
 767,,,det,14082,a,,False,,DET,14066,,a
-768,sergeant,,pobj,14083,comrade,"valence,positive,dominance,trust",False,,NOUN,14066,14068.0,comrade
+768,sergeant,,pobj,14083,comrade,"valence,positive,dominance,trust",False,,NOUN,14066,14077.0,comrade
 769,,,punct,14084,;,,False,,PUNCT,14066,,;
 770,,,mark,14085,though,,False,,ADP,14066,,though
 771,,,nsubj,14086,-PRON-,,False,,PRON,14066,14087.0,I
@@ -14591,7 +14591,7 @@
 788,,,advmod,14103,when,,False,,ADV,14066,,when
 789,,,nsubj,14104,something,,False,,NOUN,14066,,something
 790,,,amod,14105,moist,,False,,NOUN,14066,,moist
-791,sergeant,,aux,14106,be,"valence,dominance",False,,VERB,14066,14090.0,was
+791,sergeant,,aux,14106,be,"valence,dominance",False,,VERB,14066,14107.0,was
 792,sergeant,,advcl,14107,go,valence,False,,VERB,14066,14090.0,going
 793,,,punct,14108,.,,False,,PUNCT,14066,,.
 794,,,nsubj,14109,-PRON-,,False,,NOUN,14109,,His men
@@ -14780,7 +14780,7 @@
 975,,,dobj,14290,-PRON-,,False,,PRON,14272,14289.0,themselves
 976,,,prep,14291,among,,False,,ADP,14272,,among
 977,,,det,14292,the,,False,,DET,14272,,the
-978,,,pobj,14293,grave,"negative,sadness,fear",False,,NOUN,14272,14275.0,graves
+978,,,pobj,14293,graf,,False,,NOUN,14272,,graves
 979,,,punct,14294,",",,False,,PUNCT,14272,,","
 980,,,cc,14295,and,,False,,CCONJ,14272,,and
 981,,,advmod,14296,also,,False,,ADV,14272,,also
@@ -14843,7 +14843,7 @@
 1036,,,advmod,14351,out,,False,,PART,14347,,out
 1037,,,prep,14352,upon,,False,,ADP,14347,,upon
 1038,,,det,14353,the,,False,,DET,14347,,the
-1039,we,,amod,14354,dismal,"negative,disgust,sadness,fear",False,,ADJ,14347,14355.0,dismal
+1039,we,,amod,14354,dismal,"negative,disgust,sadness,fear",False,,ADJ,14347,14350.0,dismal
 1040,we,,pobj,14355,wilderness,"anticipation,sadness,fear",False,,NOUN,14347,14350.0,wilderness
 1041,,,advmod,14356,where,,False,,ADV,14347,,where
 1042,,,nsubj,14357,-PRON-,,False,,PRON,14347,,they
@@ -14912,7 +14912,7 @@
 1105,,,aux,14420,should,,False,,VERB,14405,,should
 1106,me,,ccomp,14421,be,"valence,dominance",False,,VERB,14405,14421.0,be
 1107,,,det,14422,a,,False,,DET,14405,,a
-1108,me,,amod,14423,fierce,"negative,fear,arousal,disgust,anger,dominance",False,,ADJ,14405,14421.0,fierce
+1108,me,,amod,14423,fierce,"negative,fear,arousal,disgust,anger,dominance",False,,ADJ,14405,14425.0,fierce
 1109,me,,amod,14424,young,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,ADJ,14405,14425.0,young
 1110,me,,attr,14425,hound,"arousal,dominance",False,,NOUN,14405,14421.0,hound
 1111,,,mark,14426,if,,False,,ADP,14405,,if
@@ -14977,7 +14977,7 @@
 1168,,,pobj,14483,ditch,,False,,NOUN,14465,,ditches
 1169,me,,prep,14484,like,valence,False,,ADP,14465,14467.0,like
 1170,,,det,14485,a,,False,,DET,14465,,a
-1171,me,,pobj,14486,hunter,"negative,sadness,fear,arousal,dominance,anticipation",False,,NOUN,14465,14484.0,hunter
+1171,me,,pobj,14486,hunter,"negative,sadness,fear,arousal,dominance,anticipation",False,,NOUN,14465,14467.0,hunter
 1172,,,punct,14487,",",,False,,PUNCT,14465,,","
 1173,,,cc,14488,and,,False,,CCONJ,14465,,and
 1174,me,,conj,14489,stimulate,"arousal,valence,dominance",False,Mr. Wopsle,VERB,14465,14467.0,stimulating
@@ -15007,15 +15007,15 @@
 1198,,,prep,14513,into,,False,,ADP,14504,,into
 1199,,,det,14514,a,,False,,DET,14504,,a
 1200,,,advmod,14515,pretty,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,ADV,14504,14515.0,pretty
-1201,soldiers,,amod,14516,wide,valence,False,,ADJ,14504,14506.0,wide
-1202,soldiers,,pobj,14517,line,valence,False,,NOUN,14504,14512.0,line
+1201,soldiers,,amod,14516,wide,valence,False,,ADJ,14504,14517.0,wide
+1202,soldiers,,pobj,14517,line,valence,False,,NOUN,14504,14506.0,line
 1203,,,prep,14518,with,,False,,ADP,14504,,with
 1204,,,det,14519,an,,False,,DET,14504,,an
-1205,soldiers,,pobj,14520,interval,valence,False,,NOUN,14504,14512.0,interval
+1205,soldiers,,pobj,14520,interval,valence,False,,NOUN,14504,14517.0,interval
 1206,,,prep,14521,between,,False,,ADP,14504,,between
-1207,soldiers,,pobj,14522,man,"valence,dominance",False,,NOUN,14504,14520.0,man
+1207,soldiers,,pobj,14522,man,"valence,dominance",False,,NOUN,14504,14506.0,man
 1208,,,cc,14523,and,,False,,CCONJ,14504,,and
-1209,soldiers,,conj,14524,man,"valence,dominance",False,,NOUN,14504,14520.0,man
+1209,soldiers,,conj,14524,man,"valence,dominance",False,,NOUN,14504,14522.0,man
 1210,,,punct,14525,.,,False,,PUNCT,14504,,.
 1211,,,nsubj,14526,-PRON-,,False,,PRON,14526,14528.0,We
 1212,us,,aux,14527,be,"valence,dominance",False,,VERB,14526,14528.0,were
@@ -15049,7 +15049,7 @@
 1240,,,cc,14555,or,,False,,CCONJ,14546,,or
 1241,,,det,14556,the,,False,,DET,14546,,the
 1242,,,nsubj,14557,wind,"valence,dominance",False,,NOUN,14546,14557.0,wind
-1243,mist,,aux,14558,have,"valence,dominance",False,,VERB,14546,14559.0,had
+1243,mist,,aux,14558,have,"valence,dominance",False,,VERB,14546,14549.0,had
 1244,mist,,conj,14559,dispel,"negative,sadness",False,it,VERB,14546,14549.0,dispelled
 1245,,,dobj,14560,-PRON-,,False,,PRON,14546,14559.0,it
 1246,,,punct,14561,.,,False,,PUNCT,14546,,.
@@ -15117,7 +15117,7 @@
 1306,me,,pobj,14621,sign,valence,False,convicts,NOUN,14604,14616.0,sign
 1307,,,prep,14622,of,,False,,ADP,14604,,of
 1308,,,det,14623,the,,False,,DET,14604,,the
-1309,me,,pobj,14624,convict,"negative,sadness,fear,arousal,disgust,anger",False,,NOUN,14604,14621.0,convicts
+1309,me,,pobj,14624,convict,"negative,sadness,fear,arousal,disgust,anger",False,,NOUN,14604,14616.0,convicts
 1310,,,punct,14625,.,,False,,PUNCT,14604,,.
 1311,,,nsubj,14626,-PRON-,,False,,PRON,14626,14628.0,I
 1312,,,aux,14627,could,,False,,VERB,14626,,could
@@ -15161,12 +15161,12 @@
 1350,,,det,14665,the,,False,,DET,14636,,the
 1351,me,,pobj,14666,object,valence,False,,NOUN,14636,14653.0,object
 1352,,,prep,14667,of,,False,,ADP,14636,,of
-1353,me,,pobj,14668,pursuit,"valence,dominance",False,,NOUN,14636,14666.0,pursuit
+1353,me,,pobj,14668,pursuit,"valence,dominance",False,,NOUN,14636,14653.0,pursuit
 1354,,,punct,14669,.,,False,,PUNCT,14636,,.
 1355,,,nsubj,14670,-PRON-,,False,,PRON,14670,14671.0,I
 1356,me,,ROOT,14671,get,"arousal,valence,dominance",False,,VERB,14670,14671.0,got
 1357,,,det,14672,a,,False,,DET,14670,,a
-1358,me,,amod,14673,dreadful,"negative,sadness,fear,arousal,disgust,anger,anticipation",False,,ADJ,14670,14674.0,dreadful
+1358,me,,amod,14673,dreadful,"negative,sadness,fear,arousal,disgust,anger,anticipation",False,,ADJ,14670,14671.0,dreadful
 1359,me,,dobj,14674,start,"valence,dominance,anticipation",False,,NOUN,14670,14671.0,start
 1360,,,punct,14675,",",,False,,PUNCT,14670,,","
 1361,,,advmod,14676,when,,False,,ADV,14670,,when
@@ -15200,7 +15200,7 @@
 1389,,,punct,14704,;,,False,,PUNCT,14694,,;
 1390,,,cc,14705,and,,False,,CCONJ,14694,,and
 1391,,,det,14706,the,,False,,DET,14694,,the
-1392,sheep,,conj,14707,cattle,valence,False,,NOUN,14694,14700.0,cattle
+1392,sheep,,conj,14707,cattle,valence,False,,NOUN,14694,14696.0,cattle
 1393,,,punct,14708,",",,False,,PUNCT,14694,,","
 1394,,,nsubj,14709,-PRON-,,False,,NOUN,14694,,their heads
 1395,,,relcl,14710,turn,"arousal,valence,dominance",False,,VERB,14694,14710.0,turned
@@ -15237,12 +15237,12 @@
 1426,,,det,14741,every,,False,,DET,14694,,every
 1427,sheep,,pobj,14742,blade,"arousal,dominance",False,,NOUN,14694,14696.0,blade
 1428,,,prep,14743,of,,False,,ADP,14694,,of
-1429,sheep,,pobj,14744,grass,valence,False,,NOUN,14694,14742.0,grass
+1429,sheep,,pobj,14744,grass,valence,False,,NOUN,14694,14696.0,grass
 1430,,,punct,14745,",",,False,,PUNCT,14694,,","
 1431,,,expl,14746,there,,False,,ADV,14694,,there
 1432,sheep,,conj,14747,be,"valence,dominance",False,,VERB,14694,14696.0,was
 1433,,,det,14748,no,,False,,DET,14694,,no
-1434,sheep,,attr,14749,break,"valence,surprise",False,,NOUN,14694,14747.0,break
+1434,sheep,,attr,14749,break,"valence,surprise",False,,NOUN,14694,14696.0,break
 1435,,,prep,14750,in,,False,,ADP,14694,,in
 1436,,,det,14751,the,,False,,DET,14694,,the
 1437,sheep,,amod,14752,bleak,"negative,sadness",False,,ADJ,14694,14753.0,bleak
@@ -15500,7 +15500,7 @@
 1683,man,,pobj,14998,bank,"valence,dominance,trust",False,,NOUN,14997,15020.0,banks
 1684,,,cc,14999,and,,False,,CCONJ,14997,,and
 1685,,,conj,15000,up,,False,,ADP,14997,,up
-1686,man,,pobj,15001,bank,"valence,dominance,trust",False,,NOUN,14997,14998.0,banks
+1686,man,,pobj,15001,bank,"valence,dominance,trust",False,,NOUN,14997,15020.0,banks
 1687,,,punct,15002,",",,False,,PUNCT,14997,,","
 1688,,,cc,15003,and,,False,,CCONJ,14997,,and
 1689,,,conj,15004,over,,False,,ADP,14997,,over
@@ -15598,7 +15598,7 @@
 1781,us,,advcl,15096,hear,valence,False,,VERB,15083,15096.0,hear
 1782,,,nummod,15097,one,valence,False,,NUM,15083,15097.0,one
 1783,us,,dobj,15098,voice,"valence,dominance",False,,NOUN,15083,15096.0,voice
-1784,us,,acl,15099,call,"arousal,valence,dominance",False,,VERB,15083,15096.0,calling
+1784,us,,acl,15099,call,"arousal,valence,dominance",False,,VERB,15083,15098.0,calling
 1785,,,punct,15100,"""",,False,,PUNCT,15083,,""""
 1786,,,oprd,15101,murder,"negative,sadness,surprise,fear,arousal,disgust,anger,dominance",False,,NOUN,15083,15101.0,Murder
 1787,,,punct,15102,!,,False,,PUNCT,15083,,!
@@ -15652,7 +15652,7 @@
 1835,,,nsubj,15150,soldier,"sadness,positive,arousal,anger,dominance",False,,NOUN,15141,15150.0,soldiers
 1836,soldiers,,ROOT,15151,run,"arousal,valence,dominance",False,Joe,VERB,15141,15151.0,ran
 1837,soldiers,,prep,15152,like,valence,False,,ADP,15141,15151.0,like
-1838,soldiers,,pobj,15153,deer,valence,False,,NOUN,15141,15151.0,deer
+1838,soldiers,,pobj,15153,deer,valence,False,,NOUN,15141,15152.0,deer
 1839,,,punct,15154,",",,False,,PUNCT,15141,,","
 1840,,,cc,15155,and,,False,,CCONJ,15141,,and
 1841,,,conj,15156,Joe,,False,,PROPN,15141,15151.0,Joe
@@ -15876,7 +15876,7 @@
 2049,,,prep,15364,in,,False,,ADP,15339,,in
 2050,,,det,15365,the,,False,,DET,15339,,the
 2051,,,amod,15366,same,,False,,ADJ,15339,,same
-2052,It,,pobj,15367,plight,"negative,sadness,fear,arousal,disgust,dominance,anticipation",False,,NOUN,15339,15356.0,plight
+2052,It,,pobj,15367,plight,"negative,sadness,fear,arousal,disgust,dominance,anticipation",False,,NOUN,15339,15363.0,plight
 2053,,,npadvmod,15368,-PRON-,,False,,PRON,15339,15368.0,yourself
 2054,,,punct,15369,.,,False,,PUNCT,15339,,.
 2055,,,ROOT,15370,handcuff,"arousal,dominance",False,,NOUN,15370,15370.0,Handcuffs
@@ -16006,7 +16006,7 @@
 "
 2174,,,punct,15489,"""",,False,,PUNCT,15489,,""""
 2175,convict,,advcl,15490,take,"arousal,valence",False,,VERB,15489,15496.0,Take
-2176,convict,,dobj,15491,notice,valence,False,,NOUN,15489,15496.0,notice
+2176,convict,,dobj,15491,notice,valence,False,,NOUN,15489,15490.0,notice
 2177,,,punct,15492,",",,False,,PUNCT,15489,,","
 2178,convict,,dobj,15493,guard,"valence,trust,positive,fear,arousal,dominance",False,,NOUN,15489,15490.0,guard
 2179,,,punct,15494,",",,False,,PUNCT,15489,,","
@@ -16333,7 +16333,7 @@
 2492,I,,attr,15807,man,"valence,dominance",False,,NOUN,15801,15804.0,man
 2493,,,mark,15808,if,,False,,ADP,15801,,if
 2494,,,nsubj,15809,-PRON-,,False,,PRON,15801,,you
-2495,I,,aux,15810,have,"valence,dominance",False,,VERB,15801,15804.0,had
+2495,I,,aux,15810,have,"valence,dominance",False,,VERB,15801,15812.0,had
 2496,,,neg,15811,not,,False,,ADV,15801,,not
 2497,I,,advcl,15812,come,"valence,dominance",True,,VERB,15801,15804.0,come
 2498,,,prt,15813,up,,False,,PART,15801,,up.
@@ -16490,7 +16490,7 @@
 2643,he,,ccomp,15958,look,"valence,dominance",False,,VERB,15954,15958.0,looked
 2644,,,advmod,15959,when,,False,,ADV,15954,,when
 2645,,,nsubjpass,15960,-PRON-,,False,,PRON,15954,,we
-2646,he,,auxpass,15961,be,"valence,dominance",False,,VERB,15954,15958.0,were
+2646,he,,auxpass,15961,be,"valence,dominance",False,,VERB,15954,15962.0,were
 2647,he,,advcl,15962,try,"arousal,valence,dominance",False,,VERB,15954,15958.0,tried
 2648,,,advmod,15963,together,"valence,dominance",False,,ADV,15954,15963.0,together
 2649,,,punct,15964,.,,False,,PUNCT,15954,,.
@@ -16629,13 +16629,13 @@
 2780,he,,conj,16095,break,"valence,negative,sadness,surprise,fear,arousal",False,,VERB,16081,16088.0,broke
 2781,,,prt,16096,out,,False,,PART,16081,,out upon
 2782,,,pobj,16097,-PRON-,,False,,NOUN,16081,,his lips
-2783,he,,amod,16098,curious,"arousal,valence",False,,ADJ,16081,16088.0,curious
+2783,he,,amod,16098,curious,"arousal,valence",False,,ADJ,16081,16100.0,curious
 2784,he,,amod,16099,white,"valence,trust,joy,positive,anticipation",False,,ADJ,16081,16100.0,white
 2785,he,,dobj,16100,flake,negative,False,,NOUN,16081,16088.0,flakes
 2786,,,punct,16101,",",,False,,PUNCT,16081,,","
-2787,he,,prep,16102,like,valence,False,,ADP,16081,16088.0,like
+2787,he,,prep,16102,like,valence,False,,ADP,16081,16100.0,like
 2788,,,amod,16103,thin,,False,,ADJ,16081,,thin
-2789,he,,pobj,16104,snow,valence,False,,NOUN,16081,16102.0,snow
+2789,he,,pobj,16104,snow,valence,False,,NOUN,16081,16100.0,snow
 2790,,,punct,16105,.,,False,,PUNCT,16081,,.
 2791,,,,16106,"
 ",,False,,SPACE,16081,,"
@@ -16664,7 +16664,7 @@
 2811,my convict,,pobj,16126,one,valence,False,,NUM,16125,16141.0,one
 2812,,,prep,16127,of,,False,,ADP,16125,,of
 2813,,,det,16128,the,,False,,DET,16125,,the
-2814,my convict,,pobj,16129,soldier,"sadness,positive,arousal,anger,dominance",False,,NOUN,16125,16149.0,soldiers
+2814,my convict,,pobj,16129,soldier,"sadness,positive,arousal,anger,dominance",False,,NOUN,16125,16126.0,soldiers
 2815,,,punct,16130,",",,False,,PUNCT,16125,,","
 2816,,,nsubj,16131,who,,False,,PRON,16125,,who
 2817,,,relcl,16132,carry,"valence,dominance",False,basket,VERB,16125,16132.0,carried
@@ -16735,7 +16735,7 @@
 2882,I,,conj,16197,move,"arousal,valence,dominance",False,,VERB,16184,16185.0,moved
 2883,,,dobj,16198,-PRON-,,False,,NOUN,16184,,my hands
 2884,,,cc,16199,and,,False,,CCONJ,16184,,and
-2885,I,,conj,16200,shake,"arousal,dominance",False,,VERB,16184,16185.0,shook
+2885,I,,conj,16200,shake,"arousal,dominance",False,,VERB,16184,16197.0,shook
 2886,,,dobj,16201,-PRON-,,False,,NOUN,16184,,my head
 2887,,,punct,16202,.,,False,,PUNCT,16184,,.
 2888,,,nsubj,16203,-PRON-,,False,,PRON,16203,16206.0,I
@@ -16836,7 +16836,7 @@
 2981,,,cc,16296,and,,False,,CCONJ,16286,,and
 2982,soldier,,conj,16297,light,"valence,dominance",False,,VERB,16286,16292.0,lighted
 2983,,,nummod,16298,three,valence,False,,NUM,16286,16298.0,three or four
-2984,soldier,,dobj,16299,torch,"arousal,valence,dominance",False,,NOUN,16286,16297.0,torches
+2984,soldier,,dobj,16299,torch,"arousal,valence,dominance",False,,NOUN,16286,16292.0,torches
 2985,,,punct,16300,",",,False,,PUNCT,16286,,","
 2986,,,cc,16301,and,,False,,CCONJ,16286,,and
 2987,soldier,,conj,16302,take,"arousal,valence",False,himself,VERB,16286,16292.0,took
@@ -16906,11 +16906,11 @@
 3051,,,pobj,16366,marsh,,False,,NOUN,16350,,marshes
 3052,,,prep,16367,on,,False,,ADP,16350,,on
 3053,,,det,16368,the,,False,,DET,16350,,the
-3054,we,,amod,16369,opposite,arousal,False,,ADJ,16350,16352.0,opposite
+3054,we,,amod,16369,opposite,arousal,False,,ADJ,16350,16370.0,opposite
 3055,we,,pobj,16370,bank,"valence,dominance,trust",False,river,NOUN,16350,16352.0,bank
 3056,,,prep,16371,of,,False,,ADP,16350,,of
 3057,,,det,16372,the,,False,,DET,16350,,the
-3058,we,,pobj,16373,river,"valence,dominance",False,,NOUN,16350,16352.0,river
+3058,we,,pobj,16373,river,"valence,dominance",False,,NOUN,16350,16370.0,river
 3059,,,punct,16374,.,,False,,PUNCT,16350,,.
 3060,,,ROOT,16375,"""",,False,,PUNCT,16375,,""""
 3061,,,advmod,16376,all,,False,,ADV,16376,,All
@@ -16935,7 +16935,7 @@
 3078,,,advmod,16393,far,,False,,ADV,16389,,far
 3079,,,advmod,16394,when,,False,,ADV,16389,,when
 3080,,,nummod,16395,three,valence,False,,NUM,16389,16395.0,three
-3081,we,,nsubjpass,16396,cannon,"valence,negative,fear,arousal,anger,dominance",False,,NOUN,16389,16398.0,cannon
+3081,we,,nsubjpass,16396,cannon,"valence,negative,fear,arousal,anger,dominance",False,,NOUN,16389,16392.0,cannon
 3082,we,,auxpass,16397,be,"valence,dominance",False,,VERB,16389,16398.0,were
 3083,we,,advcl,16398,fire,"arousal,dominance,fear",False,,VERB,16389,16392.0,fired
 3084,,,advmod,16399,ahead,"arousal,valence,positive,dominance",False,us,ADV,16389,16399.0,ahead
@@ -16943,7 +16943,7 @@
 3086,,,pobj,16401,-PRON-,,False,,PRON,16389,16399.0,us
 3087,,,prep,16402,with,,False,,ADP,16389,,with
 3088,,,det,16403,a,,False,,DET,16389,,a
-3089,we,,pobj,16404,sound,"arousal,valence",False,,NOUN,16389,16398.0,sound
+3089,we,,pobj,16404,sound,"arousal,valence",False,,NOUN,16389,16392.0,sound
 3090,,,nsubj,16405,that,,False,,DET,16389,,that
 3091,,,relcl,16406,seem,,False,,VERB,16389,,seemed
 3092,,,aux,16407,to,,False,,PART,16389,,to
@@ -17016,7 +17016,7 @@
 3157,Joe,,dobj,16472,one,valence,False,torches,NUM,16461,16471.0,one
 3158,,,prep,16473,of,,False,,ADP,16461,,of
 3159,,,det,16474,the,,False,,DET,16461,,the
-3160,Joe,,pobj,16475,torch,"arousal,valence,dominance",False,,NOUN,16461,16472.0,torches
+3160,Joe,,pobj,16475,torch,"arousal,valence,dominance",False,,NOUN,16461,16471.0,torches
 3161,,,punct,16476,.,,False,,PUNCT,16461,,.
 3162,,,nsubj,16477,Mr.,,False,,PROPN,16477,16479.0,Mr. Wopsle
 3163,Mr. Wopsle,,aux,16478,have,"valence,dominance",False,,VERB,16477,16479.0,had
@@ -17077,7 +17077,7 @@
 3218,,,det,16533,a,,False,,DET,16499,,a
 3219,dike,,amod,16534,muddy,"negative,disgust",False,,ADJ,16499,16536.0,muddy
 3220,dike,,compound,16535,sluice,arousal,False,,NOUN,16499,16536.0,sluice-
-3221,dike,,conj,16536,gate,"valence,trust",False,,NOUN,16499,16524.0,gate
+3221,dike,,conj,16536,gate,"valence,trust",False,,NOUN,16499,16529.0,gate
 3222,,,punct,16537,.,,False,,PUNCT,16499,,.
 3223,,,advmod,16538,when,,False,,ADV,16538,,When
 3224,,,nsubj,16539,-PRON-,,False,,PRON,16538,16540.0,I
@@ -17119,7 +17119,7 @@
 3260,I,,advcl,16575,lie,"negative,sadness,arousal,disgust,anger",False,,VERB,16554,16570.0,lying
 3261,I,,dobj,16576,smoking,arousal,False,,NOUN,16554,16570.0,smoking
 3262,,,cc,16577,and,,False,,CCONJ,16554,,and
-3263,I,,conj,16578,flaring,"arousal,valence,dominance",False,,NOUN,16554,16576.0,flaring
+3263,I,,conj,16578,flaring,"arousal,valence,dominance",False,,NOUN,16554,16570.0,flaring
 3264,,,punct,16579,.,,False,,PUNCT,16554,,.
 3265,,,nsubj,16580,-PRON-,,False,,PRON,16580,16582.0,I
 3266,,,aux,16581,could,,False,,VERB,16580,,could
@@ -17127,7 +17127,7 @@
 3268,,,dobj,16583,nothing,,False,,NOUN,16580,,nothing
 3269,,,advmod,16584,else,,False,,ADV,16580,,else
 3270,,,cc,16585,but,,False,,CCONJ,16580,,but
-3271,I,,amod,16586,black,"negative,sadness",False,,ADJ,16580,16587.0,black
+3271,I,,amod,16586,black,"negative,sadness",False,,ADJ,16580,16582.0,black
 3272,I,,conj,16587,darkness,"negative,sadness,fear,arousal,anger",False,,NOUN,16580,16582.0,darkness
 3273,,,punct,16588,.,,False,,PUNCT,16580,,.
 3274,,,nsubj,16589,-PRON-,,False,,NOUN,16589,,Our lights
@@ -17204,12 +17204,12 @@
 3343,we,,ROOT,16658,come,"valence,dominance",False,,VERB,16648,16658.0,came
 3344,,,prep,16659,to,,False,,ADP,16648,,to
 3345,,,det,16660,a,,False,,DET,16648,,a
-3346,we,,amod,16661,rough,"arousal,dominance",False,,ADJ,16648,16663.0,rough
+3346,we,,amod,16661,rough,"arousal,dominance",False,,ADJ,16648,16658.0,rough
 3347,,,amod,16662,wooden,,False,,ADJ,16648,,wooden
 3348,we,,pobj,16663,hut,"valence,positive,sadness",False,,NOUN,16648,16658.0,hut
 3349,,,cc,16664,and,,False,,CCONJ,16648,,and
 3350,,,det,16665,a,,False,,DET,16648,,a
-3351,we,,compound,16666,landing,"arousal,valence,dominance",False,,NOUN,16648,16667.0,landing-
+3351,we,,compound,16666,landing,"arousal,valence,dominance",False,,NOUN,16648,16658.0,landing-
 3352,we,,conj,16667,place,valence,False,,NOUN,16648,16663.0,place
 3353,,,punct,16668,.,,False,,PUNCT,16648,,.
 3354,,,expl,16669,there,,False,,ADV,16669,,There
@@ -17328,19 +17328,19 @@
 3467,,,det,16782,some,,False,,DET,16779,,some
 3468,sergeant,,dobj,16783,kind,"valence,trust,joy,positive,dominance",False,,NOUN,16779,16781.0,kind
 3469,,,prep,16784,of,,False,,ADP,16779,,of
-3470,sergeant,,pobj,16785,report,"valence,dominance",False,,NOUN,16779,16783.0,report
+3470,sergeant,,pobj,16785,report,"valence,dominance",False,,NOUN,16779,16781.0,report
 3471,,,punct,16786,",",,False,,PUNCT,16779,,","
 3472,,,cc,16787,and,,False,,CCONJ,16779,,and
 3473,,,det,16788,some,,False,,DET,16779,,some
-3474,sergeant,,nsubjpass,16789,entry,"valence,dominance",False,,NOUN,16779,16805.0,entry
+3474,sergeant,,nsubjpass,16789,entry,"valence,dominance",False,,NOUN,16779,16781.0,entry
 3475,,,prep,16790,in,,False,,ADP,16779,,in
 3476,,,det,16791,a,,False,,DET,16779,,a
-3477,sergeant,,pobj,16792,book,"valence,dominance",False,,NOUN,16779,16781.0,book
+3477,sergeant,,pobj,16792,book,"valence,dominance",False,,NOUN,16779,16789.0,book
 3478,,,punct,16793,",",,False,,PUNCT,16779,,","
 3479,,,cc,16794,and,,False,,CCONJ,16779,,and
 3480,,,advmod,16795,then,,False,,ADV,16779,,then
 3481,,,det,16796,the,,False,,DET,16779,,the
-3482,sergeant,,conj,16797,convict,"negative,sadness,fear,arousal,disgust,anger",False,,NOUN,16779,16781.0,convict
+3482,sergeant,,conj,16797,convict,"negative,sadness,fear,arousal,disgust,anger",False,,NOUN,16779,16789.0,convict
 3483,,,dobj,16798,whom,,False,,PRON,16779,,whom
 3484,,,nsubj,16799,-PRON-,,False,,PRON,16779,16800.0,I
 3485,sergeant,,relcl,16800,call,"arousal,valence,dominance",False,,VERB,16779,16800.0,call
@@ -17355,7 +17355,7 @@
 3494,,,aux,16809,to,,False,,PART,16779,,to
 3495,sergeant,,advcl,16810,go,valence,False,,VERB,16779,16781.0,go
 3496,,,prep,16811,on,,False,,ADP,16779,,on
-3497,sergeant,,pobj,16812,board,"valence,anticipation",False,,NOUN,16779,16810.0,board
+3497,sergeant,,pobj,16812,board,"valence,anticipation",False,,NOUN,16779,16781.0,board
 3498,,,advmod,16813,first,"arousal,valence,dominance",False,,ADV,16779,16813.0,first
 3499,,,punct,16814,.,,False,,PUNCT,16779,,.
 3500,,,,16815,"
@@ -17389,16 +17389,16 @@
 3526,,,pobj,16841,-PRON-,,False,,PRON,16826,,it
 3527,,,punct,16842,",",,False,,PUNCT,16826,,","
 3528,,,cc,16843,or,,False,,CCONJ,16826,,or
-3529,sergeant,,conj,16844,put,"valence,dominance",False,,VERB,16826,16834.0,putting
+3529,sergeant,,conj,16844,put,"valence,dominance",False,,VERB,16826,16838.0,putting
 3530,,,prt,16845,up,,False,,PART,16826,,up his feet
 3531,,,prep,16846,by,,False,,ADP,16826,,by
-3532,sergeant,,pobj,16847,turn,valence,False,,NOUN,16826,16844.0,turns
+3532,sergeant,,pobj,16847,turn,valence,False,,NOUN,16826,16838.0,turns
 3533,,,prep,16848,upon,,False,,ADP,16826,,upon
 3534,,,det,16849,the,,False,,DET,16826,,the
-3535,sergeant,,pobj,16850,hob,valence,False,,NOUN,16826,16834.0,hob
+3535,sergeant,,pobj,16850,hob,valence,False,,NOUN,16826,16847.0,hob
 3536,,,punct,16851,",",,False,,PUNCT,16826,,","
 3537,,,cc,16852,and,,False,,CCONJ,16826,,and
-3538,sergeant,,conj,16853,look,"valence,dominance",False,them,VERB,16826,16834.0,looking
+3538,sergeant,,conj,16853,look,"valence,dominance",False,them,VERB,16826,16838.0,looking
 3539,,,advmod,16854,thoughtfully,,False,,ADV,16826,,thoughtfully
 3540,,,prep,16855,at,,False,,ADP,16826,,at
 3541,,,pobj,16856,-PRON-,,False,,PRON,16826,16853.0,them
@@ -17843,12 +17843,12 @@
 3954,,,det,17269,the,,False,,DET,17254,,the
 3955,We,,compound,17270,landing,"arousal,valence,dominance",False,,NOUN,17254,17271.0,landing-
 3956,We,,pobj,17271,place,valence,False,,NOUN,17254,17266.0,place
-3957,We,,acl,17272,make,valence,False,,VERB,17254,17271.0,made
+3957,We,,acl,17272,make,valence,False,,VERB,17254,17266.0,made
 3958,,,prep,17273,of,,False,,ADP,17254,,of
 3959,We,,amod,17274,rough,"arousal,dominance",False,,ADJ,17254,17275.0,rough
-3960,We,,pobj,17275,stake,arousal,False,,NOUN,17254,17271.0,stakes
+3960,We,,pobj,17275,stake,arousal,False,,NOUN,17254,17272.0,stakes
 3961,,,cc,17276,and,,False,,CCONJ,17254,,and
-3962,We,,conj,17277,stone,"negative,dominance,anger",False,,NOUN,17254,17275.0,stones
+3962,We,,conj,17277,stone,"negative,dominance,anger",False,,NOUN,17254,17272.0,stones
 3963,,,punct,17278,",",,False,,PUNCT,17254,,","
 3964,,,cc,17279,and,,False,,CCONJ,17254,,and
 3965,We,,conj,17280,see,"arousal,valence,dominance",False,,VERB,17254,17266.0,saw
@@ -17963,7 +17963,7 @@
 4074,,,cc,17389,and,,False,,CCONJ,17388,,and
 4075,ship,,conj,17390,bar,"arousal,negative,dominance",False,,VERB,17388,17401.0,barred
 4076,,,cc,17391,and,,False,,CCONJ,17388,,and
-4077,ship,,conj,17392,moor,arousal,False,,VERB,17388,17390.0,moored
+4077,ship,,conj,17392,moor,arousal,False,,VERB,17388,17401.0,moored
 4078,,,agent,17393,by,,False,,ADP,17388,,by
 4079,,,amod,17394,massive,"arousal,valence,dominance",False,,ADJ,17388,17393.0,massive
 4080,,,amod,17395,rusty,negative,False,,ADJ,17388,17393.0,rusty
@@ -18307,8 +18307,8 @@
 4412,Joe,,pobj,17727,period,dominance,False,,NOUN,17716,17720.0,period
 4413,,,prep,17728,of,,False,,ADP,17716,,of
 4414,,,poss,17729,-PRON-,,False,,DET,17716,,our joint
-4415,Joe,,amod,17730,domestic,valence,False,,ADJ,17716,17731.0,domestic
-4416,Joe,,pobj,17731,life,"arousal,valence,dominance",False,,NOUN,17716,17720.0,life
+4415,Joe,,amod,17730,domestic,valence,False,,ADJ,17716,17727.0,domestic
+4416,Joe,,pobj,17731,life,"arousal,valence,dominance",False,,NOUN,17716,17727.0,life
 4417,Joe,,conj,17732,remark,"valence,dominance",False,,VERB,17716,17720.0,remarked
 4418,,,mark,17733,that,,False,,ADP,17716,,that
 4419,,,nsubj,17734,-PRON-,,False,,NOUN,17716,,his beer
@@ -18443,7 +18443,7 @@
 118,Joe,,aux,17860,have,"valence,dominance",False,,VERB,17858,17861.0,have
 119,Joe,,ccomp,17861,have,"valence,dominance",False,,VERB,17858,17861.0,had
 120,,,det,17862,a,,False,,DET,17858,,a
-121,Joe,,amod,17863,tiresome,"arousal,negative",False,,ADJ,17858,17861.0,tiresome
+121,Joe,,amod,17863,tiresome,"arousal,negative",False,,ADJ,17858,17864.0,tiresome
 122,Joe,,dobj,17864,journey,"valence,joy,positive,fear,arousal,dominance,anticipation",False,,NOUN,17858,17861.0,journey
 123,,,prep,17865,of,,False,,ADP,17858,,of
 124,,,pobj,17866,-PRON-,,False,,PRON,17858,,it
@@ -18464,9 +18464,9 @@
 139,,,mark,17881,that,,False,,ADP,17858,,that
 140,,,mark,17882,if,,False,,ADP,17858,,if
 141,,,det,17883,the,,False,,DET,17858,,the
-142,Joe,,nsubjpass,17884,Church,"valence,trust,joy,positive,dominance,anticipation",False,,PROPN,17858,17887.0,Church
-143,Joe,,aux,17885,have,"valence,dominance",False,,VERB,17858,17887.0,had
-144,Joe,,auxpass,17886,be,"valence,dominance",False,,VERB,17858,17887.0,been
+142,Joe,,nsubjpass,17884,Church,"valence,trust,joy,positive,dominance,anticipation",False,,PROPN,17858,17894.0,Church
+143,Joe,,aux,17885,have,"valence,dominance",False,,VERB,17858,17894.0,had
+144,Joe,,auxpass,17886,be,"valence,dominance",False,,VERB,17858,17894.0,been
 145,Joe,,advcl,17887,throw,"arousal,dominance",False,,VERB,17858,17894.0,thrown
 146,,,oprd,17888,open,"valence,dominance",False,,ADJ,17858,17888.0,open
 147,,,punct,17889,",",,False,,PUNCT,17858,,","
@@ -18476,7 +18476,7 @@
 151,Joe,,aux,17893,have,"valence,dominance",False,,VERB,17858,17894.0,have
 152,Joe,,acl,17894,excommunicate,,False,,VERB,17858,,excommunicated
 153,,,det,17895,the,,False,,DET,17858,,the
-154,Joe,,amod,17896,whole,"valence,dominance",False,,ADJ,17858,17894.0,whole
+154,Joe,,amod,17896,whole,"valence,dominance",False,,ADJ,17858,17897.0,whole
 155,Joe,,dobj,17897,expedition,"valence,positive,arousal,dominance,anticipation",False,,NOUN,17858,17894.0,expedition
 156,,,punct,17898,",",,False,,PUNCT,17858,,","
 157,Joe,,advcl,17899,begin,"arousal,valence,dominance",False,"myself,Joe",VERB,17858,17894.0,beginning
@@ -18587,15 +18587,15 @@
 260,I,,pobj,18002,aid,"valence,positive,dominance",False,,NOUN,17994,17996.0,aid
 261,,,prep,18003,of,,False,,ADP,17994,,of
 262,,,det,18004,a,,False,,DET,17994,,a
-263,I,,amod,18005,heavy,dominance,False,,ADJ,17994,18006.0,heavy
-264,I,,pobj,18006,thump,"arousal,negative,dominance,anger",False,,NOUN,17994,17996.0,thump
+263,I,,amod,18005,heavy,dominance,False,,ADJ,17994,18002.0,heavy
+264,I,,pobj,18006,thump,"arousal,negative,dominance,anger",False,,NOUN,17994,18002.0,thump
 265,,,prep,18007,between,,False,,ADP,17994,,between
 266,,,det,18008,the,,False,,DET,17994,,the
-267,I,,pobj,18009,shoulder,"valence,positive,trust",False,,NOUN,17994,18006.0,shoulders
+267,I,,pobj,18009,shoulder,"valence,positive,trust",False,,NOUN,17994,17996.0,shoulders
 268,,,punct,18010,",",,False,,PUNCT,17994,,","
 269,,,cc,18011,and,,False,,CCONJ,17994,,and
 270,,,det,18012,the,,False,,DET,17994,,the
-271,I,,amod,18013,restorative,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,ADJ,17994,18014.0,restorative
+271,I,,amod,18013,restorative,"valence,trust,joy,positive,arousal,dominance,anticipation",False,,ADJ,17994,17996.0,restorative
 272,I,,conj,18014,exclamation,"arousal,valence,dominance",False,,NOUN,17994,17996.0,exclamation
 273,,,punct,18015,"""",,False,,PUNCT,17994,,""""
 274,,,appos,18016,Yah,,False,,PROPN,17994,,Yah
@@ -18629,7 +18629,7 @@
 302,,,det,18044,the,,False,,DET,18018,,the
 303,Joe,,conj,18045,visitor,"joy,valence,positive,anticipation",False,,NOUN,18018,18035.0,visitors
 304,Joe,,acl,18046,suggest,"valence,dominance,trust",False,,VERB,18018,18035.0,suggesting
-305,Joe,,amod,18047,different,valence,False,,ADJ,18018,18035.0,different
+305,Joe,,amod,18047,different,valence,False,,ADJ,18018,18048.0,different
 306,Joe,,dobj,18048,way,"arousal,valence",False,,NOUN,18018,18046.0,ways
 307,,,prep,18049,by,,False,,ADP,18018,,by
 308,,,pobj,18050,which,,False,,DET,18018,,which
@@ -18662,7 +18662,7 @@
 335,Mr. Pumblechook,,pobj,18077,forge,"valence,positive,dominance",False,,NOUN,18058,18074.0,forge
 336,,,punct,18078,",",,False,,PUNCT,18058,,","
 337,,,cc,18079,and,,False,,CCONJ,18058,,and
-338,Mr. Pumblechook,,aux,18080,have,"valence,dominance",False,,VERB,18058,18071.0,had
+338,Mr. Pumblechook,,aux,18080,have,"valence,dominance",False,,VERB,18058,18082.0,had
 339,,,advmod,18081,then,,False,,ADV,18058,,then
 340,Mr. Pumblechook,,conj,18082,get,"arousal,valence,dominance",False,himself,VERB,18058,18071.0,got
 341,,,prep,18083,upon,,False,,ADP,18058,,upon
@@ -18889,7 +18889,7 @@
 556,,,pobj,18298,churchyard,,False,,NOUN,18290,,churchyard
 557,I,,advcl,18299,read,"valence,positive,dominance",False,,VERB,18290,18295.0,reading
 558,,,det,18300,the,,False,,DET,18290,,the
-559,I,,dobj,18301,family,"valence,dominance",False,,NOUN,18290,18295.0,family tombstones
+559,I,,dobj,18301,family,"valence,dominance",False,,NOUN,18290,18299.0,family tombstones
 560,,,punct,18302,",",,False,,PUNCT,18290,,","
 561,,,nsubj,18303,-PRON-,,False,,PRON,18290,18304.0,I
 562,I,,aux,18304,have,"valence,dominance",False,,VERB,18290,18304.0,had
@@ -18928,7 +18928,7 @@
 595,I,,pobj,18337,reference,"valence,dominance",False,,NOUN,18315,18327.0,reference
 596,,,prep,18338,to,,False,,ADP,18315,,to
 597,,,poss,18339,-PRON-,,False,,NOUN,18315,,my father's
-598,I,,pobj,18340,exaltation,"valence,trust,joy,positive,arousal,dominance",False,,NOUN,18315,18327.0,exaltation
+598,I,,pobj,18340,exaltation,"valence,trust,joy,positive,arousal,dominance",False,,NOUN,18315,18337.0,exaltation
 599,,,prep,18341,to,,False,,ADP,18315,,to
 600,,,det,18342,a,,False,,DET,18315,,a
 601,,,amod,18343,well,,False,,ADJ,18315,,better
@@ -18940,9 +18940,9 @@
 607,I,,nsubjpass,18349,one,valence,False,,NUM,18315,18363.0,one
 608,,,prep,18350,of,,False,,ADP,18315,,of
 609,,,poss,18351,-PRON-,,False,,DET,18315,,my deceased
-610,I,,pobj,18352,relation,"arousal,valence,dominance",False,,NOUN,18315,18349.0,relations
-611,I,,aux,18353,have,"valence,dominance",False,,VERB,18315,18355.0,had
-612,I,,auxpass,18354,be,"valence,dominance",False,,VERB,18315,18355.0,been
+610,I,,pobj,18352,relation,"arousal,valence,dominance",False,,NOUN,18315,18363.0,relations
+611,I,,aux,18353,have,"valence,dominance",False,,VERB,18315,18363.0,had
+612,I,,auxpass,18354,be,"valence,dominance",False,,VERB,18315,18363.0,been
 613,I,,advcl,18355,refer,"valence,dominance",False,,VERB,18315,18363.0,referred
 614,,,prep,18356,to,,False,,ADP,18315,,to
 615,,,prep,18357,as,,False,,ADP,18315,,as
@@ -18959,14 +18959,14 @@
 626,I,,aux,18368,have,"valence,dominance",False,,VERB,18315,18369.0,have
 627,I,,ccomp,18369,form,"valence,dominance",False,,VERB,18315,18369.0,formed
 628,,,det,18370,the,,False,,DET,18315,,the
-629,I,,amod,18371,bad,"negative,sadness,fear,arousal,disgust,anger",False,,ADJ,18315,18372.0,worst
+629,I,,amod,18371,bad,"negative,sadness,fear,arousal,disgust,anger",False,,ADJ,18315,18369.0,worst
 630,I,,dobj,18372,opinion,"valence,dominance",False,,NOUN,18315,18369.0,opinions
 631,,,prep,18373,of,,False,,ADP,18315,,of
 632,,,det,18374,that,,False,,DET,18315,,that
-633,I,,pobj,18375,member,"valence,dominance",False,,NOUN,18315,18372.0,member
+633,I,,pobj,18375,member,"valence,dominance",False,,NOUN,18315,18369.0,member
 634,,,prep,18376,of,,False,,ADP,18315,,of
 635,,,det,18377,the,,False,,DET,18315,,the
-636,I,,pobj,18378,family,"valence,dominance",False,,NOUN,18315,18369.0,family
+636,I,,pobj,18378,family,"valence,dominance",False,,NOUN,18315,18375.0,family
 637,,,punct,18379,.,,False,,PUNCT,18315,,.
 638,,,nsubj,18380,neither,,False,,DET,18380,,Neither
 639,,,ccomp,18381,be,"valence,dominance",False,,VERB,18380,18381.0,were
@@ -18990,7 +18990,7 @@
 657,,,nsubj,18399,-PRON-,,False,,PRON,18380,18400.0,I
 658,I,,ccomp,18400,have,"valence,dominance",False,,VERB,18380,18400.0,have
 659,,,det,18401,a,,False,,DET,18380,,a
-660,I,,amod,18402,lively,"arousal,valence,dominance",False,,ADJ,18380,18400.0,lively
+660,I,,amod,18402,lively,"arousal,valence,dominance",False,,ADJ,18380,18403.0,lively
 661,I,,dobj,18403,remembrance,"valence,dominance",False,,NOUN,18380,18400.0,remembrance
 662,,,mark,18404,that,,False,,DET,18380,,that
 663,,,nsubj,18405,-PRON-,,False,,PRON,18380,18406.0,I
@@ -19103,7 +19103,7 @@
 768,I,,attr,18510,boy,"valence,negative,disgust",False,,NOUN,18502,18505.0,boy
 769,,,prep,18511,about,,False,,ADP,18502,,about
 770,,,det,18512,the,,False,,DET,18502,,the
-771,I,,pobj,18513,forge,"valence,positive,dominance",False,,NOUN,18502,18510.0,forge
+771,I,,pobj,18513,forge,"valence,positive,dominance",False,,NOUN,18502,18505.0,forge
 772,,,punct,18514,",",,False,,PUNCT,18502,,","
 773,,,cc,18515,but,,False,,CCONJ,18502,,but
 774,,,mark,18516,if,,False,,ADP,18502,,if
@@ -19130,11 +19130,11 @@
 795,,,dobj,18537,job,"arousal,valence,positive,dominance",False,,NOUN,18502,18521.0,job
 796,,,punct,18538,",",,False,,PUNCT,18502,,","
 797,,,nsubjpass,18539,-PRON-,,False,,PRON,18502,18541.0,I
-798,I,,auxpass,18540,be,"valence,dominance",False,,VERB,18502,18541.0,was
+798,I,,auxpass,18540,be,"valence,dominance",False,,VERB,18502,18505.0,was
 799,I,,conj,18541,favor,"valence,dominance",False,I,VERB,18502,18505.0,favored
 800,,,prep,18542,with,,False,,ADP,18502,,with
 801,,,det,18543,the,,False,,DET,18502,,the
-802,I,,pobj,18544,employment,"arousal,valence,dominance",False,,NOUN,18502,18541.0,employment
+802,I,,pobj,18544,employment,"arousal,valence,dominance",False,,NOUN,18502,18505.0,employment
 803,,,punct,18545,.,,False,,PUNCT,18502,,.
 804,,,prep,18546,In,,False,,ADP,18546,,In
 805,,,pobj,18547,order,"valence,dominance",False,,NOUN,18546,18564.0,order
@@ -19200,7 +19200,7 @@
 865,I,,dobj,18607,hope,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,NOUN,18584,18605.0,hope
 866,,,prep,18608,of,,False,,ADP,18584,,of
 867,,,det,18609,any,,False,,DET,18584,,any
-868,I,,amod,18610,personal,"valence,trust",False,,ADJ,18584,18605.0,personal
+868,I,,amod,18610,personal,"valence,trust",False,,ADJ,18584,18611.0,personal
 869,I,,pobj,18611,participation,"arousal,valence,positive,dominance",False,,NOUN,18584,18607.0,participation
 870,,,prep,18612,in,,False,,ADP,18584,,in
 871,,,det,18613,the,,False,,DET,18584,,the
@@ -19236,7 +19236,7 @@
 899,aunt,,pobj,18641,mean,"valence,dominance",False,,NOUN,18617,18638.0,means
 900,,,cc,18642,and,,False,,CCONJ,18617,,and
 901,aunt,,amod,18643,unlimited,"arousal,valence,positive,dominance",False,,ADJ,18617,18644.0,unlimited
-902,aunt,,conj,18644,infirmity,"negative,fear",False,,NOUN,18617,18634.0,infirmity
+902,aunt,,conj,18644,infirmity,"negative,fear",False,,NOUN,18617,18641.0,infirmity
 903,,,punct,18645,",",,False,,PUNCT,18617,,","
 904,,,nsubj,18646,who,,False,,PRON,18617,,who
 905,,,relcl,18647,use,,False,,VERB,18617,,used
@@ -19274,7 +19274,7 @@
 937,,,nsubj,18679,-PRON-,,False,,PRON,18679,18680.0,She
 938,aunt,,ROOT,18680,rent,,False,,VERB,18679,,rented
 939,,,det,18681,a,,False,,DET,18679,,a
-940,aunt,,amod,18682,small,"valence,negative",False,,ADJ,18679,18680.0,small
+940,aunt,,amod,18682,small,"valence,negative",False,,ADJ,18679,18683.0,small
 941,aunt,,dobj,18683,cottage,valence,False,,NOUN,18679,18680.0,cottage
 942,,,punct,18684,",",,False,,PUNCT,18679,,","
 943,,,cc,18685,and,,False,,CCONJ,18679,,and
@@ -19457,17 +19457,17 @@
 1118,,,pobj,18860,anything,,False,,NOUN,18846,,anything
 1119,,,prep,18861,in,,False,,ADP,18846,,in
 1120,,,pobj,18862,-PRON-,,False,,PRON,18846,,it
-1121,aunt,,conj,18863,be,"valence,dominance",False,,VERB,18846,18847.0,was
+1121,aunt,,conj,18863,be,"valence,dominance",False,,VERB,18846,18849.0,was
 1122,,,punct,18864,;,,False,,PUNCT,18846,,;
 1123,,,cc,18865,but,,False,,CCONJ,18846,,but
 1124,,,expl,18866,there,,False,,ADV,18846,,there
 1125,aunt,,conj,18867,be,"valence,dominance",False,,VERB,18846,18847.0,was
 1126,,,det,18868,a,,False,,DET,18846,,a
 1127,,,amod,18869,little,,False,,ADJ,18846,,little
-1128,aunt,,amod,18870,greasy,disgust,False,,ADJ,18846,18872.0,greasy
+1128,aunt,,amod,18870,greasy,disgust,False,,ADJ,18846,18847.0,greasy
 1129,aunt,,compound,18871,memorandum,"arousal,valence,dominance",False,,NOUN,18846,18872.0,memorandum-
 1130,aunt,,attr,18872,book,"valence,dominance",False,,NOUN,18846,18847.0,book
-1131,aunt,,acl,18873,keep,"valence,dominance",False,,VERB,18846,18872.0,kept
+1131,aunt,,acl,18873,keep,"valence,dominance",False,,VERB,18846,18847.0,kept
 1132,,,prep,18874,in,,False,,ADP,18846,,in
 1133,,,det,18875,a,,False,,DET,18846,,a
 1134,,,pobj,18876,drawer,,False,,NOUN,18846,,drawer
@@ -19490,9 +19490,9 @@
 1151,,,nsubj,18893,Biddy,,False,,PROPN,18893,18894.0,Biddy
 1152,Biddy,,ccomp,18894,be,"valence,dominance",False,,VERB,18893,18894.0,was
 1153,,,poss,18895,Mr.,,False,,PROPN,18893,,Mr. Wopsle's
-1154,Biddy,,amod,18896,great,"arousal,valence,dominance",False,,ADJ,18893,18894.0,great
+1154,Biddy,,amod,18896,great,"arousal,valence,dominance",False,,ADJ,18893,18898.0,great
 1155,,,punct,18897,-,,False,,PUNCT,18893,,-
-1156,Biddy,,poss,18898,aunt,"valence,positive,trust",False,,NOUN,18893,18899.0,aunt's
+1156,Biddy,,poss,18898,aunt,"valence,positive,trust",False,,NOUN,18893,18894.0,aunt's
 1157,Biddy,,attr,18899,granddaughter,valence,False,,NOUN,18893,18894.0,granddaughter
 1158,,,punct,18900,;,,False,,PUNCT,18893,,;
 1159,,,nsubj,18901,-PRON-,,False,,PRON,18893,18902.0,I
@@ -19519,7 +19519,7 @@
 1180,aunt,,ccomp,18922,be,"valence,dominance",False,,VERB,18921,18922.0,was
 1181,,,det,18923,an,,False,,DET,18921,,an
 1182,aunt,,attr,18924,orphan,"negative,sadness,fear",False,,NOUN,18921,18922.0,orphan
-1183,aunt,,prep,18925,like,valence,False,myself,ADP,18921,18924.0,like
+1183,aunt,,prep,18925,like,valence,False,myself,ADP,18921,18922.0,like
 1184,,,pobj,18926,-PRON-,,False,,PRON,18921,18925.0,myself
 1185,,,punct,18927,;,,False,,PUNCT,18921,,;
 1186,,,prep,18928,like,valence,False,me,ADP,18921,18935.0,like
@@ -19616,7 +19616,7 @@
 1275,,,mark,19017,as,,False,,ADP,18993,,as
 1276,,,mark,19018,if,,False,,ADP,18993,,if
 1277,,,nsubj,19019,-PRON-,,False,,PRON,18993,,it
-1278,aunt,,aux,19020,have,"valence,dominance",False,,VERB,18993,19021.0,had
+1278,aunt,,aux,19020,have,"valence,dominance",False,,VERB,18993,19013.0,had
 1279,aunt,,advcl,19021,be,"valence,dominance",False,,VERB,18993,19013.0,been
 1280,,,det,19022,a,,False,,DET,18993,,a
 1281,,,amod,19023,bramble,,False,,ADJ,18993,,bramble
@@ -19673,7 +19673,7 @@
 1332,,,aux,19074,to,,False,,PART,19061,,to
 1333,aunt,,pobj,19075,read,"valence,dominance",False,,VERB,19061,19066.0,read
 1334,,,punct,19076,",",,False,,PUNCT,19061,,","
-1335,aunt,,conj,19077,write,"valence,dominance",False,,VERB,19061,19066.0,write
+1335,aunt,,conj,19077,write,"valence,dominance",False,,VERB,19061,19075.0,write
 1336,,,punct,19078,",",,False,,PUNCT,19061,,","
 1337,,,cc,19079,and,,False,,CCONJ,19061,,and
 1338,,,conj,19080,cipher,,False,,NOUN,19061,,cipher
@@ -19681,7 +19681,7 @@
 1340,,,conj,19082,on,,False,,ADP,19061,,on
 1341,,,det,19083,the,,False,,DET,19061,,the
 1342,,,advmod,19084,very,,False,,ADV,19061,,very
-1343,aunt,,amod,19085,small,"valence,negative",False,,ADJ,19061,19086.0,smallest
+1343,aunt,,amod,19085,small,"valence,negative",False,,ADJ,19061,19066.0,smallest
 1344,aunt,,pobj,19086,scale,dominance,False,,NOUN,19061,19066.0,scale
 1345,,,punct,19087,.,,False,,PUNCT,19061,,.
 1346,,,,19088,"
@@ -19698,14 +19698,14 @@
 1355,,,pobj,19097,-PRON-,,False,,NOUN,19089,,my slate
 1356,,,punct,19098,",",,False,,PUNCT,19089,,","
 1357,,,advcl,19099,expend,,False,,VERB,19089,,expending
-1358,aunt,,amod,19100,great,"arousal,valence,dominance",False,,ADJ,19089,19101.0,great
+1358,aunt,,amod,19100,great,"arousal,valence,dominance",False,,ADJ,19089,19092.0,great
 1359,aunt,,dobj,19101,effort,"arousal,valence,positive,dominance",False,,NOUN,19089,19092.0,efforts
 1360,,,prep,19102,on,,False,,ADP,19089,,on
 1361,,,det,19103,the,,False,,DET,19089,,the
-1362,aunt,,pobj,19104,production,"valence,positive,arousal,dominance,anticipation",False,,NOUN,19089,19101.0,production
+1362,aunt,,pobj,19104,production,"valence,positive,arousal,dominance,anticipation",False,,NOUN,19089,19092.0,production
 1363,,,prep,19105,of,,False,,ADP,19089,,of
 1364,,,det,19106,a,,False,,DET,19089,,a
-1365,aunt,,pobj,19107,letter,"valence,anticipation",False,Joe,NOUN,19089,19092.0,letter
+1365,aunt,,pobj,19107,letter,"valence,anticipation",False,Joe,NOUN,19089,19104.0,letter
 1366,,,prep,19108,to,,False,,ADP,19089,,to
 1367,,,pobj,19109,Joe,,False,,PROPN,19089,19107.0,Joe
 1368,,,punct,19110,.,,False,,PUNCT,19089,,.
@@ -19736,7 +19736,7 @@
 1393,it,,attr,19135,winter,valence,False,,NOUN,19111,19134.0,winter
 1394,,,cc,19136,and,,False,,CCONJ,19111,,and
 1395,,,det,19137,a,,False,,DET,19111,,a
-1396,it,,amod,19138,hard,"arousal,dominance",False,,ADJ,19111,19135.0,hard
+1396,it,,amod,19138,hard,"arousal,dominance",False,,ADJ,19111,19134.0,hard
 1397,,,conj,19139,frost,,False,,NOUN,19111,,frost
 1398,,,punct,19140,.,,False,,PUNCT,19111,,.
 1399,,,prep,19141,With,,False,,ADP,19141,,With
@@ -19744,11 +19744,11 @@
 1401,aunt,,pobj,19143,alphabet,"valence,dominance",False,,NOUN,19141,19153.0,alphabet
 1402,,,prep,19144,on,,False,,ADP,19141,,on
 1403,,,det,19145,the,,False,,DET,19141,,the
-1404,aunt,,pobj,19146,hearth,"valence,positive,dominance",False,,NOUN,19141,19153.0,hearth
+1404,aunt,,pobj,19146,hearth,"valence,positive,dominance",False,,NOUN,19141,19143.0,hearth
 1405,,,prep,19147,at,,False,,ADP,19141,,at
 1406,,,pobj,19148,-PRON-,,False,,NOUN,19141,,my feet
 1407,,,prep,19149,for,,False,,ADP,19141,,for
-1408,aunt,,pobj,19150,reference,"valence,dominance",False,,NOUN,19141,19153.0,reference
+1408,aunt,,pobj,19150,reference,"valence,dominance",False,,NOUN,19141,19143.0,reference
 1409,,,punct,19151,",",,False,,PUNCT,19141,,","
 1410,,,nsubj,19152,-PRON-,,False,,PRON,19141,19153.0,I
 1411,aunt,,ROOT,19153,contrive,arousal,False,,VERB,19141,19153.0,contrived
@@ -19826,7 +19826,7 @@
 1479,aunt,,amod,19221,write,"valence,dominance",False,,VERB,19217,19219.0,written
 1480,aunt,,dobj,19222,communication,"valence,dominance,trust",False,,NOUN,19217,19219.0,communication
 1481,,,punct,19223,(,,False,,PUNCT,19217,,(
-1482,aunt,,appos,19224,slate,"valence,positive",False,,NOUN,19217,19222.0,slate
+1482,aunt,,appos,19224,slate,"valence,positive",False,,NOUN,19217,19219.0,slate
 1483,,,cc,19225,and,,False,,CCONJ,19217,,and
 1484,,,conj,19226,all,,False,,DET,19217,,all
 1485,,,punct,19227,),,False,,PUNCT,19217,,)
@@ -20156,7 +20156,7 @@
 1793,,,punct,19535,",",,False,,PUNCT,19532,,","
 1794,,,prep,19536,with,,False,,ADP,19532,,with
 1795,,,det,19537,a,,False,,DET,19532,,a
-1796,aunt,,amod,19538,modest,"valence,positive,trust",False,,ADJ,19532,19533.0,modest
+1796,aunt,,amod,19538,modest,"valence,positive,trust",False,,ADJ,19532,19539.0,modest
 1797,aunt,,pobj,19539,patronage,"valence,positive,dominance,trust",False,,NOUN,19532,19533.0,patronage
 1798,,,punct,19540,.,,False,,PUNCT,19532,,.
 1799,,,,19541,"
@@ -20207,7 +20207,7 @@
 1838,,,amod,19580,uncommon,,False,,ADJ,19576,,uncommon
 1839,Tho,,attr,19581,fond,"arousal,valence,dominance",False,,ADJ,19576,19579.0,fond
 1840,,,prep,19582,of,,False,,ADP,19576,,of
-1841,Tho,,pobj,19583,reading,"valence,positive",False,,NOUN,19576,19579.0,reading
+1841,Tho,,pobj,19583,reading,"valence,positive",False,,NOUN,19576,19581.0,reading
 1842,,,punct,19584,",",,False,,PUNCT,19576,,","
 1843,,,advmod,19585,too,,False,,ADV,19576,,too
 1844,,,punct,19586,.,,False,,PUNCT,19576,,.
@@ -20451,7 +20451,7 @@
 2068,Joe,,auxpass,19810,be,"valence,dominance",False,,VERB,19797,19811.0,were
 2069,Joe,,advcl,19811,overtake,"arousal,valence,dominance",False,he,VERB,19797,19816.0,overtook
 2070,,,prep,19812,with,,False,,ADP,19797,,with
-2071,Joe,,pobj,19813,drink,"arousal,valence",False,,NOUN,19797,19816.0,drink
+2071,Joe,,pobj,19813,drink,"arousal,valence",False,,NOUN,19797,19811.0,drink
 2072,,,punct,19814,",",,False,,PUNCT,19797,,","
 2073,,,nsubj,19815,-PRON-,,False,,PRON,19797,19816.0,he
 2074,Joe,,conj,19816,hammer,"arousal,dominance",False,,VERB,19797,19816.0,hammered
@@ -20617,10 +20617,10 @@
 2230,my father,,dobj,19972,row,"negative,anger",False,,NOUN,19958,19969.0,row
 2231,,,prep,19973,at,,False,,ADP,19958,,at
 2232,,,det,19974,the,,False,,DET,19958,,the
-2233,my father,,pobj,19975,door,valence,False,,NOUN,19958,19962.0,doors
+2233,my father,,pobj,19975,door,valence,False,,NOUN,19958,19969.0,doors
 2234,,,prep,19976,of,,False,,ADP,19958,,of
 2235,,,det,19977,the,,False,,DET,19958,,the
-2236,my father,,pobj,19978,house,"valence,dominance",False,,NOUN,19958,19975.0,houses
+2236,my father,,pobj,19978,house,"valence,dominance",False,,NOUN,19958,19969.0,houses
 2237,,,advmod,19979,where,,False,,ADV,19958,,where
 2238,,,nsubj,19980,-PRON-,,False,,PRON,19958,19981.0,we
 2239,we,,relcl,19981,be,"valence,dominance",False,,VERB,19958,19981.0,was
@@ -20720,11 +20720,11 @@
 2329,Joe,,conj,20071,two,valence,False,,NUM,20056,20063.0,two
 2330,,,prep,20072,of,,False,,ADP,20056,,of
 2331,,,det,20073,the,,False,,DET,20056,,the
-2332,Joe,,pobj,20074,poker,arousal,False,,NOUN,20056,20063.0,poker
+2332,Joe,,pobj,20074,poker,arousal,False,,NOUN,20056,20071.0,poker
 2333,,,prep,20075,on,,False,,ADP,20056,,on
 2334,,,det,20076,the,,False,,DET,20056,,the
-2335,Joe,,amod,20077,top,"valence,trust,positive,dominance,anticipation",False,,ADJ,20056,20074.0,top
-2336,Joe,,pobj,20078,bar,arousal,False,,NOUN,20056,20074.0,bar
+2335,Joe,,amod,20077,top,"valence,trust,positive,dominance,anticipation",False,,ADJ,20056,20063.0,top
+2336,Joe,,pobj,20078,bar,arousal,False,,NOUN,20056,20063.0,bar
 2337,,,punct,20079,",",,False,,PUNCT,20056,,","
 2338,,,punct,20080,"""",,False,,PUNCT,20056,,""""
 2339,,,advcl,20081,render,"valence,positive,dominance",False,,VERB,20056,20094.0,rendering
@@ -20924,7 +20924,7 @@
 2523,Joe,,amod,20265,manifest,"arousal,valence,dominance",False,,NOUN,20259,20260.0,manifest
 2524,Joe,,pobj,20266,pride,"valence,joy,positive,arousal,dominance",False,,NOUN,20259,20260.0,pride
 2525,,,cc,20267,and,,False,,CCONJ,20259,,and
-2526,Joe,,amod,20268,careful,"arousal,valence,positive,dominance",False,,ADJ,20259,20260.0,careful
+2526,Joe,,amod,20268,careful,"arousal,valence,positive,dominance",False,,ADJ,20259,20266.0,careful
 2527,,,conj,20269,perspicuity,,False,,NOUN,20259,,perspicuity
 2528,,,punct,20270,",",,False,,PUNCT,20259,,","
 2529,,,mark,20271,that,,False,,ADP,20259,,that
@@ -21037,7 +21037,7 @@
 2634,,,punct,20376,",",,False,,PUNCT,20344,,","
 2635,,,cc,20377,and,,False,,CCONJ,20344,,and
 2636,,,nsubjpass,20378,-PRON-,,False,,PRON,20344,20381.0,it
-2637,truth,,auxpass,20379,be,"valence,dominance",False,,VERB,20344,20381.0,were
+2637,truth,,auxpass,20379,be,"valence,dominance",False,,VERB,20344,20352.0,were
 2638,,,neg,20380,not,,False,,ADV,20344,,not
 2639,truth,,conj,20381,do,"arousal,valence,dominance",True,it,VERB,20344,20352.0,done
 2640,,,punct,20382,.,,False,,PUNCT,20344,,.
@@ -21151,8 +21151,8 @@
 2744,,,punct,20486,",",,False,,PUNCT,20472,,","
 2745,,,cc,20487,and,,False,,CCONJ,20472,,and
 2746,,,nsubjpass,20488,-PRON-,,False,,PRON,20472,20490.0,I
-2747,Joe,,auxpass,20489,get,"arousal,valence,dominance",False,,VERB,20472,20479.0,got
-2748,Joe,,conj,20490,acquaint,"valence,dominance",False,I,VERB,20472,20479.0,acquainted
+2747,Joe,,auxpass,20489,get,"arousal,valence,dominance",False,,VERB,20472,20483.0,got
+2748,Joe,,conj,20490,acquaint,"valence,dominance",False,I,VERB,20472,20483.0,acquainted
 2749,,,prep,20491,with,,False,,ADP,20472,,with
 2750,,,pobj,20492,-PRON-,,False,,NOUN,20472,,your sister
 2751,,,punct,20493,.,,False,,PUNCT,20472,,.
@@ -21202,7 +21202,7 @@
 2793,Joe,,amod,20535,obvious,"valence,positive,dominance,trust",False,,ADJ,20524,20536.0,obvious
 2794,Joe,,pobj,20536,state,"valence,dominance",False,,NOUN,20524,20527.0,state
 2795,,,prep,20537,of,,False,,ADP,20524,,of
-2796,Joe,,pobj,20538,doubt,"negative,sadness,fear,trust",False,,NOUN,20524,20527.0,doubt
+2796,Joe,,pobj,20538,doubt,"negative,sadness,fear,trust",False,,NOUN,20524,20536.0,doubt
 2797,,,punct,20539,.,,False,,PUNCT,20524,,.
 2798,,,,20540,"
 ",,False,,SPACE,20524,,"
@@ -21357,7 +21357,7 @@
 2938,,,punct,20680,.,,False,,PUNCT,20677,,.
 2939,,,nsubj,20681,-PRON-,,False,,PRON,20681,20682.0,You
 2940,Joe,,ROOT,20682,be,"valence,dominance",False,,VERB,20681,20682.0,'re
-2941,Joe,,amod,20683,right,"valence,dominance",False,,ADJ,20681,20682.0,right
+2941,Joe,,amod,20683,right,"valence,dominance",False,,ADJ,20681,20686.0,right
 2942,,,punct,20684,",",,False,,PUNCT,20681,,","
 2943,,,amod,20685,old,,False,,ADJ,20681,,old
 2944,Joe,,attr,20686,chap,valence,False,,NOUN,20681,20682.0,chap
@@ -21423,7 +21423,7 @@
 3004,,,mark,20746,if,,False,,ADP,20728,,if
 3005,,,nsubj,20747,-PRON-,,False,,PRON,20728,,you
 3006,,,aux,20748,could,,False,,VERB,20728,,could
-3007,Joe,,aux,20749,have,"valence,dominance",False,,VERB,20728,20734.0,have
+3007,Joe,,aux,20749,have,"valence,dominance",False,,VERB,20728,20750.0,have
 3008,Joe,,advcl,20750,be,"valence,dominance",False,,VERB,20728,20734.0,been
 3009,,,acomp,20751,aware,"valence,dominance",False,,ADJ,20728,20751.0,aware
 3010,,,advmod,20752,how,,False,,ADV,20728,,how
@@ -21444,7 +21444,7 @@
 3025,Joe,,ROOT,20767,form,"valence,dominance",False,,VERB,20757,20767.0,formed
 3026,,,det,20768,the,,False,,DET,20757,,the
 3027,,,advmod,20769,most,,False,,ADV,20757,,most
-3028,Joe,,amod,20770,contemptible,"arousal,negative,disgust,anger",False,,ADJ,20757,20767.0,contemptible
+3028,Joe,,amod,20770,contemptible,"arousal,negative,disgust,anger",False,,ADJ,20757,20771.0,contemptible
 3029,Joe,,dobj,20771,opinion,"valence,dominance",False,yourself,NOUN,20757,20767.0,opinion
 3030,,,prep,20772,of,,False,,ADP,20757,,of
 3031,,,pobj,20773,-PRON-,,False,,PRON,20757,20771.0,yourself
@@ -21502,7 +21502,7 @@
 3079,Joe,,auxpass,20821,be,"valence,dominance",False,,VERB,20810,20812.0,be
 3080,Joe,,conj,20822,ask,valence,False,,VERB,20810,20812.0,asked
 3081,,,prep,20823,in,,False,,ADP,20810,,in
-3082,Joe,,pobj,20824,church,"valence,trust,joy,positive,dominance,anticipation",False,,NOUN,20810,20822.0,church
+3082,Joe,,pobj,20824,church,"valence,trust,joy,positive,dominance,anticipation",False,,NOUN,20810,20812.0,church
 3083,,,prep,20825,at,,False,,ADP,20810,,at
 3084,,,amod,20826,such,,False,,ADJ,20810,,such
 3085,Joe,,pobj,20827,time,"valence,dominance,anticipation",False,,NOUN,20810,20812.0,times
@@ -21571,7 +21571,7 @@
 3146,,,dobj,20888,Joe,,False,,PROPN,20879,20887.0,Joe
 3147,Joe,,conj,20889,round,valence,False,,ADP,20879,20880.0,round
 3148,,,det,20890,the,,False,,DET,20879,,the
-3149,Joe,,dobj,20891,neck,valence,False,,NOUN,20879,20889.0,neck
+3149,Joe,,dobj,20891,neck,valence,False,,NOUN,20879,20880.0,neck
 3150,,,punct,20892,:,,False,,PUNCT,20879,,:
 3151,,,nsubj,20893,who,,False,,PRON,20879,,who
 3152,,,relcl,20894,drop,,False,,VERB,20879,,dropped
@@ -21652,7 +21652,7 @@
 3223,Joe,,advcl,20965,take,"arousal,valence",False,me,VERB,20961,20976.0,take
 3224,,,dobj,20966,-PRON-,,False,,PRON,20961,20965.0,me
 3225,,,prep,20967,in,,False,,ADP,20961,,in
-3226,Joe,,pobj,20968,hand,valence,False,,NOUN,20961,20976.0,hand
+3226,Joe,,pobj,20968,hand,valence,False,,NOUN,20961,20965.0,hand
 3227,,,prep,20969,in,,False,,ADP,20961,,in
 3228,,,pobj,20970,-PRON-,,False,,NOUN,20961,,my learning
 3229,,,punct,20971,",",,False,,PUNCT,20961,,","
@@ -21794,10 +21794,10 @@
 3359,Joe,,pobj,21101,Lords,"valence,dominance",False,,PROPN,21080,21098.0,Lords
 3360,,,prep,21102,of,,False,,ADP,21080,,of
 3361,,,det,21103,the,,False,,DET,21080,,the
-3362,Joe,,pobj,21104,Admiralty,"arousal,valence,dominance",False,,PROPN,21080,21094.0,Admiralty
+3362,Joe,,pobj,21104,Admiralty,"arousal,valence,dominance",False,,PROPN,21080,21101.0,Admiralty
 3363,,,punct,21105,",",,False,,PUNCT,21080,,","
 3364,,,cc,21106,or,,False,,CCONJ,21080,,or
-3365,Joe,,conj,21107,Treasury,"arousal,valence,dominance",False,,PROPN,21080,21094.0,Treasury
+3365,Joe,,conj,21107,Treasury,"arousal,valence,dominance",False,,PROPN,21080,21101.0,Treasury
 3366,,,punct,21108,.,,False,,PUNCT,21080,,.
 3367,,,,21109,"
 ",,False,,SPACE,21080,,"
@@ -21805,7 +21805,7 @@
 3368,,,ROOT,21110,"""",,False,,PUNCT,21110,,""""
 3369,Joe,,advcl,21111,give,valence,False,,VERB,21111,21116.0,Given
 3370,,,prep,21112,to,,False,,ADP,21111,,to
-3371,Joe,,pobj,21113,government,"arousal,negative,dominance,fear",False,,NOUN,21111,21111.0,government
+3371,Joe,,pobj,21113,government,"arousal,negative,dominance,fear",False,,NOUN,21111,21116.0,government
 3372,,,punct,21114,",",,False,,PUNCT,21111,,","
 3373,,,punct,21115,"""",,False,,PUNCT,21111,,""""
 3374,Joe,,ROOT,21116,say,valence,False,,VERB,21111,21116.0,said
@@ -21897,7 +21897,7 @@
 3454,,,pobj,21196,inquiry,"valence,positive,dominance,anticipation",False,,NOUN,21189,21193.0,inquiry
 3455,,,punct,21197,",",,False,,PUNCT,21189,,","
 3456,,,cc,21198,and,,False,,CCONJ,21189,,and
-3457,Joe,,aux,21199,have,"valence,dominance",False,,VERB,21189,21200.0,had
+3457,Joe,,aux,21199,have,"valence,dominance",False,,VERB,21189,21191.0,had
 3458,Joe,,conj,21200,get,"arousal,valence,dominance",False,,VERB,21189,21191.0,got
 3459,,,advmod,21201,as,,False,,ADV,21189,,as
 3460,,,advmod,21202,far,,False,,ADV,21189,,far
@@ -21998,7 +21998,7 @@
 3553,Joe,,conj,21295,glance,valence,False,,VERB,21273,21289.0,glanced
 3554,,,prep,21296,at,,False,,ADP,21273,,at
 3555,,,det,21297,the,,False,,DET,21273,,the
-3556,Joe,,pobj,21298,door,valence,False,,NOUN,21273,21295.0,door
+3556,Joe,,pobj,21298,door,valence,False,,NOUN,21273,21289.0,door
 3557,,,punct,21299,",",,False,,PUNCT,21273,,","
 3558,,,punct,21300,"""",,False,,PUNCT,21273,,""""
 3559,,,nsubj,21301,candor,"valence,dominance",False,,NOUN,21273,21301.0,candor
@@ -22226,17 +22226,17 @@
 3769,,,cc,21511,and,,False,,CCONJ,21498,,and
 3770,,,conj,21512,slaving,,False,,NOUN,21498,,slaving
 3771,,,cc,21513,and,,False,,CCONJ,21498,,and
-3772,Joe,,conj,21514,break,"valence,surprise",False,,VERB,21498,21509.0,breaking
+3772,Joe,,conj,21514,break,"valence,surprise",False,,VERB,21498,21500.0,breaking
 3773,,,poss,21515,-PRON-,,False,,DET,21498,,her honest
-3774,Joe,,dobj,21516,hart,valence,False,,NOUN,21498,21500.0,hart
+3774,Joe,,dobj,21516,hart,valence,False,,NOUN,21498,21514.0,hart
 3775,,,cc,21517,and,,False,,CCONJ,21498,,and
 3776,,,neg,21518,never,,False,,ADV,21498,,never
-3777,Joe,,conj,21519,get,"arousal,valence,dominance",True,,VERB,21498,21500.0,getting
+3777,Joe,,conj,21519,get,"arousal,valence,dominance",True,,VERB,21498,21514.0,getting
 3778,,,det,21520,no,,False,,DET,21498,,no
 3779,Joe,,dobj,21521,peace,"valence,trust,joy,positive,dominance,anticipation",False,,NOUN,21498,21519.0,peace
 3780,,,prep,21522,in,,False,,ADP,21498,,in
 3781,,,poss,21523,-PRON-,,False,,DET,21498,,her mortal
-3782,Joe,,pobj,21524,day,valence,False,,NOUN,21498,21519.0,days
+3782,Joe,,pobj,21524,day,valence,False,,NOUN,21498,21514.0,days
 3783,,,punct,21525,",",,False,,PUNCT,21498,,","
 3784,,,mark,21526,that,,False,,ADP,21498,,that
 3785,,,nsubj,21527,-PRON-,,False,,PRON,21498,21528.0,I
@@ -22378,7 +22378,7 @@
 3919,,,punct,21661,",",,False,,PUNCT,21649,,","
 3920,,,advmod,21662,afterwards,,False,,ADV,21649,,afterwards
 3921,,,prep,21663,at,,False,,ADP,21649,,at
-3922,Joe,,amod,21664,quiet,"valence,positive,sadness",False,,ADJ,21649,21665.0,quiet
+3922,Joe,,amod,21664,quiet,"valence,positive,sadness",False,,ADJ,21649,21678.0,quiet
 3923,Joe,,pobj,21665,time,"valence,dominance,anticipation",False,,NOUN,21649,21678.0,times
 3924,,,advmod,21666,when,,False,,ADV,21649,,when
 3925,,,nsubj,21667,-PRON-,,False,,PRON,21649,21668.0,I
@@ -22504,10 +22504,10 @@
 4041,,,cc,21783,and,,False,,CCONJ,21755,,and
 4042,Uncle Pumblechook,,conj,21784,repose,positive,False,,VERB,21755,21780.0,reposing
 4043,,,det,21785,no,,False,,DET,21755,,no
-4044,Uncle Pumblechook,,dobj,21786,confidence,"valence,trust,joy,positive,fear,dominance",False,,NOUN,21755,21780.0,confidences
+4044,Uncle Pumblechook,,dobj,21786,confidence,"valence,trust,joy,positive,fear,dominance",False,,NOUN,21755,21784.0,confidences
 4045,,,prep,21787,in,,False,,ADP,21755,,in
 4046,,,poss,21788,-PRON-,,False,,DET,21755,,his domestic
-4047,Uncle Pumblechook,,pobj,21789,servant,"negative,trust",False,,NOUN,21755,21780.0,servant
+4047,Uncle Pumblechook,,pobj,21789,servant,"negative,trust",False,,NOUN,21755,21784.0,servant
 4048,,,punct,21790,.,,False,,PUNCT,21755,,.
 4049,,,nsubj,21791,This,,False,,DET,21791,,This
 4050,,,ROOT,21792,be,"valence,dominance",False,,VERB,21791,21792.0,was
@@ -22647,7 +22647,7 @@
 4180,,,det,21922,a,,False,,DET,21910,,a
 4181,,,pobj,21923,peal,,False,,NOUN,21910,,peal
 4182,,,prep,21924,of,,False,,ADP,21910,,of
-4183,Joe,,pobj,21925,bell,"arousal,valence,dominance",False,,NOUN,21910,21916.0,bells
+4183,Joe,,pobj,21925,bell,"arousal,valence,dominance",False,,NOUN,21910,21921.0,bells
 4184,,,punct,21926,!,,False,,PUNCT,21910,,!
 4185,,,ROOT,21927,"""",,False,,PUNCT,21927,,""""
 4186,,,,21928,"
@@ -22701,8 +22701,8 @@
 4232,,,cc,21974,and,,False,,CCONJ,21952,,and
 4233,they,,conj,21975,take,"arousal,valence",False,,VERB,21952,21969.0,took
 4234,,,det,21976,a,,False,,DET,21952,,a
-4235,they,,amod,21977,final,"arousal,dominance",False,,ADJ,21952,21975.0,final
-4236,they,,dobj,21978,survey,valence,False,kitchen,NOUN,21952,21975.0,survey
+4235,they,,amod,21977,final,"arousal,dominance",False,,ADJ,21952,21969.0,final
+4236,they,,dobj,21978,survey,valence,False,kitchen,NOUN,21952,21969.0,survey
 4237,,,prep,21979,of,,False,,ADP,21952,,of
 4238,,,det,21980,the,,False,,DET,21952,,the
 4239,they,,pobj,21981,kitchen,valence,False,,NOUN,21952,21978.0,kitchen
@@ -22727,7 +22727,7 @@
 4258,they,,conj,22000,wrap,valence,False,,VERB,21990,21998.0,wrapped
 4259,,,prep,22001,to,,False,,ADP,21990,,to
 4260,,,det,22002,the,,False,,DET,21990,,the
-4261,they,,pobj,22003,eye,valence,False,,NOUN,21990,21998.0,eyes
+4261,they,,pobj,22003,eye,valence,False,,NOUN,21990,22000.0,eyes
 4262,,,punct,22004,.,,False,,PUNCT,21990,,.
 4263,,,nsubjpass,22005,Mrs.,,False,,PROPN,22005,22008.0,Mrs. Joe
 4264,,,auxpass,22006,be,"valence,dominance",False,,VERB,22005,22008.0,was
@@ -22760,7 +22760,7 @@
 4291,We,,advcl,22033,carry,"arousal,valence",False,,VERB,22005,22026.0,carrying
 4292,,,advmod,22034,so,,False,,ADV,22005,,so
 4293,,,amod,22035,much,,False,,ADJ,22005,,much
-4294,We,,amod,22036,cold,"arousal,negative",False,,ADJ,22005,22026.0,cold
+4294,We,,amod,22036,cold,"arousal,negative",False,,ADJ,22005,22037.0,cold
 4295,We,,dobj,22037,air,valence,False,,NOUN,22005,22033.0,air
 4296,,,prt,22038,in,,False,,ADP,22005,,in with
 4297,,,pobj,22039,-PRON-,,False,,PRON,22005,22038.0,us
@@ -22795,7 +22795,7 @@
 4324,Mrs. Joe,,conj,22066,excitement,"valence,joy,positive,surprise,arousal,dominance,anticipation",False,,NOUN,22055,22064.0,excitement
 4325,,,punct,22067,",",,False,,PUNCT,22055,,","
 4326,,,cc,22068,and,,False,,CCONJ,22055,,and
-4327,Mrs. Joe,,conj,22069,throw,"arousal,dominance",False,,VERB,22055,22058.0,throwing
+4327,Mrs. Joe,,conj,22069,throw,"arousal,dominance",False,,VERB,22055,22061.0,throwing
 4328,,,dobj,22070,-PRON-,,False,,NOUN,22055,,her bonnet
 4329,,,advmod,22071,back,,False,,ADV,22055,,back
 4330,,,prep,22072,on,,False,,ADP,22055,,on
@@ -22856,7 +22856,7 @@
 4381,,,advmod,22123,only,,False,,ADV,22121,,only
 4382,,,aux,22124,to,,False,,PART,22121,,to
 4383,,,auxpass,22125,be,"valence,dominance",False,,VERB,22121,22126.0,be
-4384,,,xcomp,22126,hope,"valence,trust,joy,positive,surprise,dominance,anticipation",False,,VERB,22121,22126.0,hoped
+4384,,,xcomp,22126,hop,arousal,False,,VERB,22121,22126.0,hoped
 4385,,,punct,22127,",",,False,,PUNCT,22121,,","
 4386,,,punct,22128,"""",,False,,PUNCT,22121,,""""
 4387,,,ROOT,22129,say,valence,False,,VERB,22121,22129.0,said

@@ -1,6 +1,9 @@
 from collections import defaultdict
 import pathlib
 import logging
+import json
+
+import pandas as pd
 
 from features.gen_cascades import BookData
 from utils.misc import benchmark, Timer, path_remove_if_exists
@@ -31,22 +34,33 @@ def main(input_dir: "Folder containing book data",
             
         logging.info("Processing book %d / %d: '%s'", i+1, n_books, current_book_name)
 
+        # Read data files
         filename_no_ext = input_dir / current_book_name
+        data_df = pd.read_csv(filename_no_ext.with_suffix('.data.csv'), index_col=False)
+        ents_df = pd.read_csv(filename_no_ext.with_suffix('.ent.csv'), index_col=0)
+        with open(filename_no_ext.with_suffix('.meta.json')) as f:
+            metadata = json.load(f)
 
-        book = BookData(data_file=filename_no_ext.with_suffix('.data.csv'),
-                        ent_file=filename_no_ext.with_suffix('.ent.csv'),
-                        meta_file=filename_no_ext.with_suffix('.meta.json'))
-
+        # Generate cascades
+        book = BookData(data_df=data_df,
+                        ents_df=ents_df,
+                        **metadata)
         book2cascades = benchmark(book.get_all_cascades) if bench_mode else book.get_all_cascades
         cascades = book2cascades(min_entities_occurrences=PROCESS_PARAMETERS['min_entities_occurrences'])
         
         out_filename = pathlib.Path(output_dir) / f"{book_name}.csv"
         logging.info('Writing to %s', out_filename)
+        
+        if bench_mode:
+            timers['write'].start()
+
         path_remove_if_exists(out_filename)
         cascades.to_csv(out_filename)
         
         if bench_mode:
+            timers['write'].stop()
             timers['process'].stop()
+            logging.info("Writing time: %s", timers['write'])
             logging.info("Process time: %s", timers['process'])
 
     if bench_mode:

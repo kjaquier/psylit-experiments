@@ -4,7 +4,7 @@ import logging
 
 
 LOGGING_PARAMETERS = dict(
-    level=logging.INFO, 
+    level=logging.DEBUG, 
     stream=sys.stdout, 
     format='[%(asctime)s %(levelname)s %(name)s (%(funcName)s)] %(message)s',
     datefmt='%H:%M:%S',
