@@ -101,7 +101,7 @@ class BookParsePipeline:
             out_path = output_dir / f"{run_name}.data.csv"
             logger.info("Writing data to %s", out_path)
             path_remove_if_exists(out_path)
-            self.data['data_df'].to_csv(out_path)
+            self.data['data_df'].to_csv(out_path, index=False)
         if self.save_entities:
             out_path = output_dir / f"{run_name}.ent.csv"
             logger.info("Writing entities to %s", out_path)

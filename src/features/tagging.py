@@ -31,11 +31,12 @@ class LexiconTagger(spacy_utils.RemoveExtensionsMixin):
         super().set_extension(Token, self.ances_flag_attr, default=False)
         super().set_extension(Doc, self.doc_attr, default=set())
 
+        # The following would be faster (need to also add match on LEMMA)
         # self.matcher = spmatch.PhraseMatcher(nlp.vocab,
         #                                      attr='LOWER',
         #                                      validate=True)
-        # FIXME add match on LEMMA, for now doesn't match anything
-        # because of https://github.com/explosion/spaCy/commit/d59b2e8a0c595498d7585b23ebb461ce82719809
+        # But it would work because of
+        # https://github.com/explosion/spaCy/commit/d59b2e8a0c595498d7585b23ebb461ce82719809
         # fixed on spacy 2.1.4+, need to update dependencies
 
         self.matcher = spmatch.Matcher(nlp.vocab)

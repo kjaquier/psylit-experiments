@@ -86,7 +86,7 @@ def entity_classifier(vocab):
             e_root = e.root
             e_i = e_root.i # cluster.i
             e_root_text = e_root.text.strip().lower()
-            e_root_text = EXCEPTIONS.get(e_root_text, '') or e_root_text
+            # e_root_text = EXCEPTIONS.get(e_root_text, '') or e_root_text
             e_pos = e.root.pos_
             e_tag = e.root.tag_
             e_txt = e.text
