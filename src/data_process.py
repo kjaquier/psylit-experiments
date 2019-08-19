@@ -48,7 +48,9 @@ def main(input_dir: "Folder containing book data",
         book2cascades = benchmark(book.get_all_cascades) if bench_mode else book.get_all_cascades
         cascades = book2cascades(min_entities_occurrences=PROCESS_PARAMETERS['min_entities_occurrences'])
         
-        out_filename = pathlib.Path(output_dir) / f"{book_name}.csv"
+        output_path = pathlib.Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        out_filename = output_path / f"{book_name}.csv"
         logging.info('Writing to %s', out_filename)
         
         if bench_mode:
