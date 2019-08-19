@@ -97,6 +97,7 @@ class BookParsePipeline:
 
     def save(self, output_dir, run_name, metadata=None):
         assert self.data, "Nothing to save!"
+        output_dir.mkdir(parents=True, exist_ok=True)
         if self.save_data:
             out_path = output_dir / f"{run_name}.data.csv"
             logger.info("Writing data to %s", out_path)
