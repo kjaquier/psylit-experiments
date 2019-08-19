@@ -37,7 +37,7 @@ class SemanticDepParser(spacy_utils.RemoveExtensionsMixin):
         clusters = doc._.coref_clusters
         patients = set()
 
-        # find agents and patients
+        # find agents and patients, attach agent to its head
         for clust in clusters:
             ent = clust.main
             for mention in clust:
