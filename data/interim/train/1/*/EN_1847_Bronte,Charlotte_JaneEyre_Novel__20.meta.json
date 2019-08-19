@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/1/*", "data/interim/train/1/*"], "time": "2019-08-19T19:18:39.357559", "input_filename": "data/raw/train/1/*", "run_name": "EN_1847_Bronte,Charlotte_JaneEyre_Novel", "time_read": "1407.09 ms", "time_init": "13180.4 ms", "time_process": "2.12172e+07 ms"}

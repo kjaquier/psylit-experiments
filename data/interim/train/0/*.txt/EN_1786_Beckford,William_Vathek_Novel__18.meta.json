@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/0/*.txt", "data/interim/train/0/*.txt"], "time": "2019-08-19T19:17:08.075436", "input_filename": "data/raw/train/0/*.txt", "run_name": "EN_1786_Beckford,William_Vathek_Novel", "time_read": "160.747 ms", "time_init": "9261.8 ms", "time_process": "1.45493e+07 ms"}

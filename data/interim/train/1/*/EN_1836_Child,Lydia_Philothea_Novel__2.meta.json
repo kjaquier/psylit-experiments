@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/1/*", "data/interim/train/1/*"], "time": "2019-08-19T19:18:39.357559", "input_filename": "data/raw/train/1/*", "run_name": "EN_1836_Child,Lydia_Philothea_Novel", "time_read": "13.7229 ms", "time_init": "13180.4 ms", "time_process": "1.30326e+06 ms"}

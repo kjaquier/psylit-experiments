@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/0/*.txt", "data/interim/train/0/*.txt"], "time": "2019-08-19T19:17:08.075436", "input_filename": "data/raw/train/0/*.txt", "run_name": "EN_1788_Wollstonecraft,Mary_Mary_Novel", "time_read": "22.6762 ms", "time_init": "9261.8 ms", "time_process": "1.81146e+06 ms"}

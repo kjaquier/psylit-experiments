@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/1/*", "data/interim/train/1/*"], "time": "2019-08-19T19:18:39.357559", "input_filename": "data/raw/train/1/*", "run_name": "EN_1820_Scott,Walter_Ivanhoe_Novel", "time_read": "1333.4 ms", "time_init": "13180.4 ms", "time_process": "1.51208e+07 ms"}
