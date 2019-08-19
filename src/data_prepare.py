@@ -85,6 +85,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             'input_filename': input_filename,
             'run_name': run_name or path.stem,
         }
+        # TODO add run parameters
         if bench_mode:
             metadata.update({
                 'time_read': str(timers['read']),
