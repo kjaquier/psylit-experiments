@@ -10,7 +10,6 @@ LexiconRow = namedtuple('LexiconRow', ['term', 'category', 'weight'])
 LEXICONS_ROOT = pathlib.Path('data', 'raw', 'lexicons')
 
 
-@MEMORY.cache
 def load_nrc_emotions(prefix=''):
     emlex = pd.read_csv(LEXICONS_ROOT / 'NRC-Emotion-Lexicon-Wordlevel-v0.92.txt',
                         sep='\t',
@@ -25,7 +24,6 @@ def load_nrc_emotions(prefix=''):
     return emlex
 
 
-@MEMORY.cache
 def load_nrc_vad(prefix=''):
     lex = pd.read_csv(LEXICONS_ROOT / 'NRC-VAD-Lexicon.txt', sep='\t')
     lex.rename(index=str, columns={c: prefix + c.lower() for c in lex.columns}, inplace=True)
