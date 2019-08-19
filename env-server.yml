@@ -1,0 +1,18 @@
+name: psylit
+channels:
+- defaults
+dependencies:
+- python=3.6
+- numpy=1.15.*
+- pandas
+- matplotlib
+- seaborn
+- jupyter
+- plotly
+- plac=0.9.6
+- spacy=2.0.16
+- cython=0.29.7
+- pip:
+   - joblib
+   - neuralcoref==4.0.0
+   - spacy-wordnet
