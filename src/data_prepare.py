@@ -93,7 +93,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
                 'time_process': str(timers['process']),
             })
 
-        run_name_suffix = f"__{i}" if n_files > 1 else ""
+        run_name_suffix = f"__{i}" if run_name and n_files > 1 else ""
     
         pipeline.save(output_path,
                       run_name=f"{metadata['run_name']}{run_name_suffix}",
