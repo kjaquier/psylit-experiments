@@ -50,7 +50,7 @@ def main(input_dir: "Folder containing book data",
         
         output_path = pathlib.Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
-        out_filename = output_path / f"{book_name}.csv"
+        out_filename = output_path / f"{current_book_name}.csv"
         logging.info('Writing to %s', out_filename)
         
         if bench_mode:

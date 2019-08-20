@@ -78,7 +78,7 @@ class BookParsePipeline:
             last_i = 0
             for batch_id, doc in enumerate(nlp.pipe(texts)):
                 logger.info("Processing batch %d / %d", batch_id+1, n_batches)
-                yield BookParser(doc, first_i=last_i)
+                yield BookParser(doc, batch_id=batch_id, first_i=last_i)
                 last_i += doc[-1].i
 
         parsers = list(parse_texts(self.nlp, texts))
