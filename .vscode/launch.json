@@ -13,7 +13,7 @@
             "console": "integratedTerminal",
             "args": [
                 "-x",
-                "-r", "greatex_100k", 
+                "-r", "greatex_10k", 
                 "data\\interim", 
                 "data\\processed"
             ]
@@ -52,8 +52,8 @@
             "console": "integratedTerminal",
             "args": [
                 "-fx",  
-                "-t1", "100_000",
-                "-r", "greatex_100k", 
+                "-t1", "10_000",
+                "-r", "greatex_10k", 
                 "data\\raw\\EN_1861_Dickens,Charles_GreatExpectations_Novel.txt",
                 "data\\interim"
             ]

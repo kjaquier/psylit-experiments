@@ -4,7 +4,7 @@ from functools import partial
 import pandas as pd
 import numpy as np
 
-from utils.pandas import df_map_columns, series_freq
+from utils.pandas import df_map_columns
 from features.entities import EXCEPTIONS as ENTITY_MANUAL_RESOLUTION
 
 logger = logging.getLogger(__name__)

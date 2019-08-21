@@ -20,10 +20,20 @@ PREPARE_PARAMETERS = dict(
     lexicon=dict(
         threshold=lambda series: series.mean(),
     ),
+    extensions=dict(
+        data='.data.csv.zip',
+        entities='.ent.csv.zip',
+        features='.feat.csv.zip',
+        metadata='.meta.json',
+    ),
 )
 
 PROCESS_PARAMETERS = dict(
-    min_entities_occurrences=100,
+    min_entities_occurrences=10,
+    extensions=dict(
+        cascades='.csv.zip',
+        **PREPARE_PARAMETERS['extensions'],
+    ),
 )
 
 CACHE_PARAMETERS = dict(

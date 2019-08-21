@@ -24,7 +24,7 @@ def main(input_dir: "Folder containing book data",
         timers['tot'].start()
 
     input_dir = pathlib.Path(input_dir)
-    book_names = {p.with_suffix('').stem for p in input_dir.glob(f"{book_name}.*")}
+    book_names = {p.stem.split('.')[0] for p in input_dir.glob(f"{book_name}.*")}
     n_books = len(book_names)
     logging.info("Found %d book(s)", n_books)
 
@@ -36,9 +36,9 @@ def main(input_dir: "Folder containing book data",
 
         # Read data files
         filename_no_ext = input_dir / current_book_name
-        data_df = pd.read_csv(filename_no_ext.with_suffix('.data.csv'), index_col=False)
-        ents_df = pd.read_csv(filename_no_ext.with_suffix('.ent.csv'), index_col=0)
-        with open(filename_no_ext.with_suffix('.meta.json')) as f:
+        data_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['data']), index_col=False)
+        ents_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities']), index_col=0)
+        with open(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['metadata'])) as f:
             metadata = json.load(f)
 
         # Generate cascades
@@ -50,7 +50,7 @@ def main(input_dir: "Folder containing book data",
         
         output_path = pathlib.Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
-        out_filename = output_path / f"{current_book_name}.csv"
+        out_filename = output_path / f"{current_book_name}{PROCESS_PARAMETERS['extensions']['cascades']}"
         logging.info('Writing to %s', out_filename)
         
         if bench_mode:
