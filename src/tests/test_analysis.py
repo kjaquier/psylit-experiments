@@ -6,14 +6,13 @@ def test_complete_te_multiple_initial_conditions():
     k = 1
     xs = [0, 1, 1, 1, 1, 0, 0, 0, 0]
     ys = [0, 0, 1, 1, 1, 1, 0, 0, 0]
-    back = xs
     
-    cte = te.transfer_entropy(xs, ys, k=k)# , back) # TODO update pyinform and condition on back
+    cte = te.transfer_entropy(xs, ys, condition=xs, k=k)
     assert abs(cte) < 1e-6
 
     xs = [[1, 0, 0, 0, 0, 1, 1, 1, 1], [1, 1, 1, 1, 0, 0, 0, 1, 1]]
     ys = [[0, 0, 1, 1, 1, 1, 0, 0, 0], [1, 0, 0, 0, 0, 1, 1, 1, 0]]
-    back = xs
     
-    cte = te.transfer_entropy(xs, ys, k=k)# , back) # TODO update pyinform and condition on back
+    cte = te.transfer_entropy(xs, ys, condition=xs, k=k)
     assert abs(cte) < 1e-6
+    

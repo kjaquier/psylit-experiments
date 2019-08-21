@@ -13,7 +13,7 @@ from features import tagging
 from features import semantic_parsing as sem
 
 from data import lexicons
-
+from parameters import PREPARE_PARAMETERS
 
 logger = logging.getLogger(__name__)
 
@@ -99,22 +99,22 @@ class BookParsePipeline:
         assert self.data, "Nothing to save!"
         output_dir.mkdir(parents=True, exist_ok=True)
         if self.save_data:
-            out_path = output_dir / f"{run_name}.data.csv"
+            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['data']}"
             logger.info("Writing data to %s", out_path)
             path_remove_if_exists(out_path)
             self.data['data_df'].to_csv(out_path, index=False)
         if self.save_entities:
-            out_path = output_dir / f"{run_name}.ent.csv"
+            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['entities']}"
             logger.info("Writing entities to %s", out_path)
             path_remove_if_exists(out_path)
             self.data['ent_df'].to_csv(out_path)
         if self.save_features:
-            out_path = output_dir / f"{run_name}.feat.csv"
+            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['features']}"
             logger.info("Writing features to %s", out_path)
             path_remove_if_exists(out_path)
             self.data['feat_df'].to_csv(out_path)
         if self.save_meta:
-            out_path = output_dir / f"{run_name}.meta.json"
+            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['metadata']}"
             logger.info("Writing metadata to %s", out_path)
             path_remove_if_exists(out_path)
             with open(out_path, 'w') as f:

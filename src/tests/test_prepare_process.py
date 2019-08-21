@@ -5,9 +5,9 @@ import pathlib
 import pytest
 import pandas as pd
 
-from src.data.preprocess import read_pg
-from src.models import nlp_pipeline
-from src.features.gen_cascades import BookData
+from data.preprocess import read_pg
+from models import nlp_pipeline
+from features.gen_cascades import BookData
 
 
 DATA_ROOT = pathlib.Path('testdata')
