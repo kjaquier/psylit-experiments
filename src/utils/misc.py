@@ -1,4 +1,5 @@
 from functools import wraps
+from collections import Mapping
 import logging
 import time
 from math import ceil
@@ -77,6 +78,13 @@ class BatchSequence:
             yield seq[i*w:(i+1)*w]
 
 
+def progress(seq, fmt=(lambda i, x, n: f"{i} / {n}"), n=None):
+    n = n or len(seq)
+    for i, x in enumerate(seq):
+        print(fmt(i, x, n))
+        yield x
+
+
 def path_remove_if_exists(p):
     if p.exists():
         p.unlink()
@@ -95,3 +103,15 @@ def into(wrapper_func):
         return wrapper
 
     return decorator
+
+
+def dynamic_dict(mapping_func):
+    """Disguise a callable as a dict-like.
+    /!\\ doesn't implement __iter__ and __len__"""
+
+    class WrapperMapping:  # pylint: disable=too-few-public-methods
+
+        def __getitem__(self, key):
+            return mapping_func(key)
+
+    return WrapperMapping()
