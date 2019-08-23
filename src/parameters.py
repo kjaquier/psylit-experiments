@@ -12,6 +12,7 @@ LOGGING_PARAMETERS = dict(
 
 PREPARE_PARAMETERS = dict(
     batch_size=20000,
+    spacy_model='en_core_web_sm', 
     coref=dict(
         max_dist=50,
         max_dist_match=500,
@@ -29,7 +30,7 @@ PREPARE_PARAMETERS = dict(
 )
 
 PROCESS_PARAMETERS = dict(
-    min_entities_occurrences=10,
+    min_entities_occurrences=100,
     extensions=dict(
         cascades='.csv.zip',
         **PREPARE_PARAMETERS['extensions'],

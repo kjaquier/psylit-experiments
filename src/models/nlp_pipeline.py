@@ -18,8 +18,8 @@ from parameters import PREPARE_PARAMETERS
 logger = logging.getLogger(__name__)
 
 
-def make_nlp(model='en_core_web_sm', coref_kwargs={}, lexicon_kwargs={}):  # pylint: disable=dangerous-default-value
-    nlp = spacy.load(model)
+def make_nlp(coref_kwargs={}, lexicon_kwargs={}):  # pylint: disable=dangerous-default-value
+    nlp = spacy.load(PREPARE_PARAMETERS['spacy_model'])
 
     merge_ents = nlp.create_pipe("merge_entities")
     nlp.add_pipe(merge_ents, after="ner")
