@@ -71,6 +71,13 @@ class Cascades:
         for c in cols:
             self.casc[c] = self.stashed.pop(c)
 
+    def remove_cols(self, cols):
+        all_cols = set(self.casc.columns)
+        cols = set(cols)
+        kept_cols = [c for c in all_cols if c not in cols]
+        print(kept_cols)
+        self.casc = self.casc[kept_cols]
+
     def match_cols(self, *match_funcs):
         return [c for c in self.casc.columns if all(f(c) for f in match_funcs)]
         
@@ -103,12 +110,15 @@ class Cascades:
         col_tuples = [pad_col(split_col(c), n) for c in self.casc.columns]
         self.casc.columns = pd.MultiIndex.from_tuples(col_tuples)
     
-    def group_rows(self, columns, sort_by=None):
-        c = self.casc.groupby(columns).sum()
+    def group_rows(self, columns, sort_by=None, agg_func='sum'):
+        c = self.casc.groupby(columns).agg(agg_func)
         if sort_by:
             return c.sort_index(level=sort_by)
         return c
-    
+
+    def remap_columns(self, mapper):
+        self.casc.columns = pd.MultiIndex.from_tuples(map(mapper, self.casc.columns))
+
     def rename_cols(self, columns_mapper):
         '''columns_mapper: dict-like or function'''
         self.casc.rename(index=str, columns=columns_mapper, inplace=True)
@@ -157,7 +167,7 @@ class Cascades:
         
         df.columns = pd.MultiIndex.from_tuples(list(df.columns))
         return Cascades(df)
-    
+
     def memory_size(self):
         return sys.getsizeof(self.casc)
     
