@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/4/*.txt", "data/interim/train/4"], "time": "2019-08-20T20:19:00.555288", "input_filename": "data/raw/train/4/*.txt", "run_name": "EN_1891_Hardy,Thomas_TessoftheD'Urbervilles_Novel", "time_read": "11.0062 ms", "time_init": "12245.7 ms", "time_process": "2.01178e+06 ms"}

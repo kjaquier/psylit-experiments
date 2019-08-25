@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/4/*.txt", "data/interim/train/4"], "time": "2019-08-20T20:19:00.555288", "input_filename": "data/raw/train/4/*.txt", "run_name": "EN_1900_Dreiser,Theodore_SisterCarrie_Novel", "time_read": "101.726 ms", "time_init": "12245.7 ms", "time_process": "1.0929e+07 ms"}

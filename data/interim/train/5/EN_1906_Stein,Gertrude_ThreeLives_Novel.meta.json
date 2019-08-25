@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/5/*.txt", "data/interim/train/5"], "time": "2019-08-20T20:19:58.825552", "input_filename": "data/raw/train/5/*.txt", "run_name": "EN_1906_Stein,Gertrude_ThreeLives_Novel", "time_read": "883.528 ms", "time_init": "20463.2 ms", "time_process": "7.24341e+06 ms"}
