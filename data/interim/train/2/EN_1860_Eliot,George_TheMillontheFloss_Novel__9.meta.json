@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/2/*.txt", "data/interim/train/2/*.txt"], "time": "2019-08-20T09:43:21.359350", "input_filename": "data/raw/train/2/*.txt", "run_name": "EN_1860_Eliot,George_TheMillontheFloss_Novel", "time_read": "225.522 ms", "time_init": "3245.09 ms", "time_process": "1.397e+07 ms"}
