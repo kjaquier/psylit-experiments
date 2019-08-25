@@ -6,17 +6,21 @@ when convenient. It has to do mostly with index levels.
 import itertools as it
 import pathlib
 import sys
+import logging
+from functools import partial
 
 from IPython.display import display
 import pandas as pd
 import numpy as np
-from pyinform import block_entropy as be
+
+from utils.misc import progress
 
 ROOT = pathlib.Path()
 DATA_ROOT = ROOT  / 'data' / 'processed' / 'train'
 
 ROLE_LEVEL, ENT_LEVEL, FEAT_LEVEL = 0, 1, 2
 
+logger = logging.getLogger()
 
 class Cascades:
     """Wraps a pandas.DataFrame with index levels [Subject, t] and binary columns."""
@@ -72,11 +76,9 @@ class Cascades:
             self.casc[c] = self.stashed.pop(c)
 
     def remove_cols(self, cols):
-        all_cols = set(self.casc.columns)
-        cols = set(cols)
-        kept_cols = [c for c in all_cols if c not in cols]
-        print(kept_cols)
-        self.casc = self.casc[kept_cols]
+        for c in cols:
+            if c in cols:
+                self.casc.pop(c)
 
     def match_cols(self, *match_funcs):
         return [c for c in self.casc.columns if all(f(c) for f in match_funcs)]
@@ -116,8 +118,20 @@ class Cascades:
             return c.sort_index(level=sort_by)
         return c
 
-    def remap_columns(self, mapper):
-        self.casc.columns = pd.MultiIndex.from_tuples(map(mapper, self.casc.columns))
+    #def remap_columns(self, mapper, merge='any'):
+    #    self.casc.groupby(mapper, )
+    #    self.casc.columns = pd.MultiIndex.from_tuples(map(mapper, self.casc.columns))
+
+
+    def group_columns(self, by, func):
+        new_casc = Cascades(self.casc
+                            .groupby(by, axis='columns')
+                            .apply(lambda c: c.agg(func, axis=1).astype(np.int8)))
+
+        return new_casc
+
+    def set_column_levels(self, index_level_names):
+        self.casc.columns.set_names(index_level_names, inplace=True)
 
     def rename_cols(self, columns_mapper):
         '''columns_mapper: dict-like or function'''
@@ -188,6 +202,21 @@ class Cascades:
             cs.append(c)
         return pd.concat(cs, sort=False)
 
+    def batch_single_measure(self, trajectory_group, measure, measure_name, ks=(1,), local=False):
+        casc = self.casc
+        B = []
+        trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
+        cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
+        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.info):
+            lbl = [lbl] if isinstance(lbl, str) else list(lbl)
+            for c in df.columns:
+                for k in ks:
+                    series = df[c].to_numpy()
+                    m = measure(series, k=k, local=local)
+                    row = (*lbl, *c, k, m)
+                    B.append(row)
+        return pd.DataFrame(B, columns=cols)
+
 
 class MultiCascades:
     """Cascades from multiple documents, distinguished by an additional index level"""
@@ -215,3 +244,42 @@ class MultiCascades:
     def memory_size(self):
         return sys.getsizeof(self.casc)
 
+
+def map_col_to_stimulus_response(col):
+    role, ent, feat = col
+    if not ent and not feat:
+        return ('Other', role)
+    if (role, ent) == ('Agent', 'Subject'):
+        return ('Response', feat)
+    return ('Stimulus', feat)
+
+
+def features_transform(casc, column_grouper):
+    keep_single = ['neg', 'R_unknown']
+    #name_fmt=lambda src, dst: f"{src[2:]} {dst[2:]}".replace('_',' ').title())
+    casc = casc.pair(casc.match_cols(lambda c: c.startswith('R_') and c not in keep_single),
+                     casc.match_cols(lambda c: c.startswith(
+                         'L_') and c not in keep_single),
+                     keep_single=keep_single)
+    casc.rename_cols(lambda c: c.replace('R_', '').replace('L_', '').title())
+    casc.split_cols()
+
+    def str_join_grouper_decorator(col_tuple):
+        return '_'.join(column_grouper(col_tuple))
+
+    casc = casc.group_columns(str_join_grouper_decorator, 'any')
+    casc.split_cols()
+    casc.set_column_levels(['Category', 'Feature'])
+    casc.remove_cols([
+        ('Response', 'Positive'),
+        ('Response', 'Negative'),
+        ('Stimulus', 'Positive'),
+        ('Stimulus', 'Negative'),
+        ('Other', 'Neg'),
+    ])
+    return casc
+
+
+FEATURE_TRANSFORMERS = {
+    'StimulusResponse': partial(features_transform, column_grouper=map_col_to_stimulus_response),
+}
