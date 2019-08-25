@@ -37,6 +37,16 @@ PROCESS_PARAMETERS = dict(
     ),
 )
 
+ANALYSIS_PARAMETERS = dict(
+    block_entropy=dict(
+        name='$H(k)$',
+        extension='.be.csv',
+        k_values=range(1, 20, 3),
+        transformer='StimulusResponse',
+        local=False,
+    ),
+)
+
 CACHE_PARAMETERS = dict(
     dir=pathlib.Path() / 'cache',
 )
