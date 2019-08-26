@@ -1,1 +1,0 @@
-{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/2/*.txt", "data/interim/train/2/*.txt"], "time": "2019-08-20T09:43:21.359350", "input_filename": "data/raw/train/2/*.txt", "run_name": "EN_1853_Kingsley,Charles_Hypatia_Novel", "time_read": "348.539 ms", "time_init": "3245.09 ms", "time_process": "2.43419e+07 ms"}

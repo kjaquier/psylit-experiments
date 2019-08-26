@@ -1,1 +1,0 @@
-{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/2/*.txt", "data/interim/train/2/*.txt"], "time": "2019-08-20T09:43:21.359350", "input_filename": "data/raw/train/2/*.txt", "run_name": "EN_1854_Gaskell,Elizabeth_NorthandSouth_Novel", "time_read": "363.259 ms", "time_init": "3245.09 ms", "time_process": "2.56615e+07 ms"}

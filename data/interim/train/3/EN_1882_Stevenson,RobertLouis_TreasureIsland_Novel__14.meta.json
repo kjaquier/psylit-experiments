@@ -1,1 +1,0 @@
-{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/3/*", "data/interim/train/3/*"], "time": "2019-08-20T09:44:21.126207", "input_filename": "data/raw/train/3/*", "run_name": "EN_1882_Stevenson,RobertLouis_TreasureIsland_Novel", "time_read": "260.305 ms", "time_init": "13479.1 ms", "time_process": "1.35394e+07 ms"}

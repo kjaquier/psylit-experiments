@@ -1,1 +1,0 @@
-{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/2/*.txt", "data/interim/train/2/*.txt"], "time": "2019-08-20T09:43:21.359350", "input_filename": "data/raw/train/2/*.txt", "run_name": "EN_1861_Dickens,Charles_GreatExpectations_Novel", "time_read": "434.178 ms", "time_init": "3245.09 ms", "time_process": "3.01423e+07 ms"}
