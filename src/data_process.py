@@ -37,12 +37,16 @@ def main(input_dir: "Folder containing book data",
             
         logging.info("Processing book %d / %d: '%s'", i+1, n_books, current_book_name)
 
-        if current_book_path.exists():
-            logging.info("Skipped: %s", current_book_path)
+
+        filename_no_ext = input_dir / current_book_name
+        output_path = pathlib.Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        out_filename = output_path / f"{current_book_name}{PROCESS_PARAMETERS['extensions']['cascades']}"
+        if out_filename.exists():
+            logging.info("Skipped: %s (already exists)", out_filename)
             continue
 
         # Read data files
-        filename_no_ext = input_dir / current_book_name
         data_df = pd.read_csv(current_book_path, index_col=False)
         ents_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities_input']), index_col=0)
         with open(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['metadata'])) as f:
@@ -55,9 +59,7 @@ def main(input_dir: "Folder containing book data",
         book2cascades = benchmark(book.get_all_cascades) if bench_mode else book.get_all_cascades
         cascades = book2cascades(min_entities_occurrences=PROCESS_PARAMETERS['min_entities_occurrences'])
         
-        output_path = pathlib.Path(output_dir)
-        output_path.mkdir(parents=True, exist_ok=True)
-        out_filename = output_path / f"{current_book_name}{PROCESS_PARAMETERS['extensions']['cascades']}"
+        
         logging.info('Writing to %s', out_filename)
         
         if bench_mode:
