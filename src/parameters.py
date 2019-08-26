@@ -33,6 +33,8 @@ PROCESS_PARAMETERS = dict(
     min_entities_occurrences=100,
     extensions=dict(
         cascades='.csv.zip',
+        data_input='.data.csv*',
+        entities_input='.ent.csv*',
         **PREPARE_PARAMETERS['extensions'],
     ),
 )

@@ -24,11 +24,13 @@ def main(input_dir: "Folder containing book data",
         timers['tot'].start()
 
     input_dir = pathlib.Path(input_dir)
-    book_names = {p.stem.split('.')[0] for p in input_dir.glob(f"{book_name}.*")}
-    n_books = len(book_names)
+    books = set(input_dir.glob(f"{book_name}.{PROCESS_PARAMETERS['extensions']['data_input']}"))
+    n_books = len(books)
     logging.info("Found %d book(s)", n_books)
 
-    for i, current_book_name in enumerate(book_names):
+    for i, current_book_path in enumerate(books):
+        current_book_name = current_book_path.stem.split('.')[0]
+
         if bench_mode:
             timers['process'].start()
             
@@ -36,8 +38,8 @@ def main(input_dir: "Folder containing book data",
 
         # Read data files
         filename_no_ext = input_dir / current_book_name
-        data_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['data']), index_col=False)
-        ents_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities']), index_col=0)
+        data_df = pd.read_csv(current_book_path, index_col=False)
+        ents_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities_input']), index_col=0)
         with open(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['metadata'])) as f:
             metadata = json.load(f)
 
