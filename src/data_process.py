@@ -25,7 +25,7 @@ def main(input_dir: "Folder containing book data",
         timers['tot'].start()
 
     input_dir = pathlib.Path(input_dir)
-    books = set(input_dir.glob(f"{book_name}.{PROCESS_PARAMETERS['extensions']['data_input']}"))
+    books = set(input_dir.glob(f"{book_name}{PROCESS_PARAMETERS['extensions']['data_input']}"))
     n_books = len(books)
     logging.info("Found %d book(s)", n_books)
 
