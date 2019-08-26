@@ -1,4 +1,5 @@
 from functools import wraps
+from collections import Mapping
 import logging
 import time
 from math import ceil
@@ -34,10 +35,9 @@ def benchmark(f, log_level=logging.DEBUG):
 
 class Timer:
 
-    def __init__(self):
-        self.t0 = 0
-        self.elapsed = 0
-        self.reset()
+    def __init__(self, initial_value=0):
+        self.t0 = initial_value
+        self.elapsed = initial_value
 
     def start(self):
         self.t0 = time.perf_counter()
@@ -58,6 +58,35 @@ class Timer:
     def __str__(self):
         return f"{self.elapsed*1000.0:.6n} ms"
 
+    def __format__(self, format_spec):
+        if format_spec:
+            return time.strftime(format_spec, time.gmtime(self.elapsed))
+        else:
+            return str(self)
+
+    def __mul__(self, other):
+        if isinstance(other, Timer):
+            other = other.elapsed
+        return Timer(self.elapsed * other)
+
+    def __truediv__(self, other):
+        if isinstance(other, Timer):
+            other = other.elapsed
+        return Timer(self.elapsed / other)
+
+    def __add__(self, other):
+        if isinstance(other, Timer):
+            other = other.elapsed
+        return Timer(self.elapsed + other)
+
+    def __sub__(self, other):
+        if isinstance(other, Timer):
+            other = other.elapsed
+        return Timer(self.elapsed - other)
+
+    def __neg__(self):
+        return Timer(-self.elapsed)
+
 
 class BatchSequence:
 
@@ -75,6 +104,25 @@ class BatchSequence:
         seq = self.seq
         for i in range(self.__n_batches):
             yield seq[i*w:(i+1)*w]
+
+DEFAULT_PROGRESS_MSG = lambda i, x, n, t_remaining: f"{i} / {n} [estimated time remaining: {t_remaining:%H:%M:%S}]"
+
+def progress(seq, fmt=DEFAULT_PROGRESS_MSG, n=None, print_func=print):
+    n = n or len(seq)
+    t_total = Timer()
+    t = Timer()
+    tasks = enumerate(seq)
+    for i, x in tasks:
+        t_remaining = (t_total / i) * (n-i) if i > 0 else -t_total
+        print_func(fmt(i+1, x, n, t_remaining))
+        t.reset()
+        t.start()
+        yield x
+        t.stop()
+        t_total += t
+    
+    print_func(f"Done [total elapsed: {t_total:%H:%M:%S}]")
+
 
 
 def path_remove_if_exists(p):
@@ -95,3 +143,15 @@ def into(wrapper_func):
         return wrapper
 
     return decorator
+
+
+def dynamic_dict(mapping_func):
+    """Disguise a callable as a dict-like.
+    /!\\ doesn't implement __iter__ and __len__"""
+
+    class WrapperMapping:  # pylint: disable=too-few-public-methods
+
+        def __getitem__(self, key):
+            return mapping_func(key)
+
+    return WrapperMapping()

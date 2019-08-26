@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/5/*.txt", "data/interim/train/5"], "time": "2019-08-20T20:19:58.825552", "input_filename": "data/raw/train/5/*.txt", "run_name": "EN_1917_Webb,Mary_GonetoEart_Novel", "time_read": "942.738 ms", "time_init": "20463.2 ms", "time_process": "1.27137e+07 ms"}

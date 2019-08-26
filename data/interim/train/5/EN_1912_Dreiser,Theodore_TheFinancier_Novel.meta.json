@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/5/*.txt", "data/interim/train/5"], "time": "2019-08-20T20:19:58.825552", "input_filename": "data/raw/train/5/*.txt", "run_name": "EN_1912_Dreiser,Theodore_TheFinancier_Novel", "time_read": "1040.39 ms", "time_init": "20463.2 ms", "time_process": "2.02198e+07 ms"}

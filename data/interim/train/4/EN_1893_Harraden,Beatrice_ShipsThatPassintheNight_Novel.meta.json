@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-x", "data/raw/train/4/*.txt", "data/interim/train/4"], "time": "2019-08-20T20:19:00.555288", "input_filename": "data/raw/train/4/*.txt", "run_name": "EN_1893_Harraden,Beatrice_ShipsThatPassintheNight_Novel", "time_read": "62.0029 ms", "time_init": "12245.7 ms", "time_process": "7.50793e+06 ms"}
