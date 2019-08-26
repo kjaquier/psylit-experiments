@@ -16,6 +16,7 @@ logging.basicConfig(**LOGGING_PARAMETERS)
 def main(input_dir: "Folder containing book data",
          output_dir: "Folder in which to generate output",
          book_name: ("Name of the book for output files", 'option', 'r')='*',
+         skip_if_exists: ("Skip books where output already exists", 'option', 'k')=False,
          bench_mode: ("Measure execution time", 'flag', 'x')=False):
 
     timers = defaultdict(Timer)
@@ -35,6 +36,10 @@ def main(input_dir: "Folder containing book data",
             timers['process'].start()
             
         logging.info("Processing book %d / %d: '%s'", i+1, n_books, current_book_name)
+
+        if current_book_path.exists():
+            logging.info("Skipped: %s", current_book_path)
+            continue
 
         # Read data files
         filename_no_ext = input_dir / current_book_name
