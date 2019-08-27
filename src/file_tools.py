@@ -1,6 +1,7 @@
 import re
 import pathlib
 from utils.misc import FuncRegister
+from utils.io import file_parts
 
 COMMANDS = FuncRegister()
 
@@ -11,35 +12,6 @@ def _log(*args, **kwargs):
     if VERBOSE_MODE:
         return print(*args, **kwargs)
     return None
-
-
-# def file_parts_old(filename):
-#     known_extensions = {'data', 'ent', 'be', 'txt', 'csv', 'zip', 'meta', 'json'}
-#     exts = []
-#     base = None
-#     sf = filename.split('.')
-#     for i, x in enumerate(reversed(sf)):
-#         if x not in known_extensions:
-#             cut = -1 - i
-#             ext = '.'.join(sf[cut:])
-#             base = '.'.join(sf[:cut])
-#             return base, ext
-#     raise Exception(f'Cannot get parts for: {filename}')
-
-def file_parts(filepath):
-    inf = 1000
-    exts = []
-    for _ in range(inf):
-        suffix = filepath.suffix[1:]
-        if suffix not in {'data', 'ent', 'be', 'txt', 'csv', 'zip', 'meta', 'json'}:
-            break
-        exts.append(suffix)
-        new_filepath = filepath.with_suffix('')
-        if new_filepath == filepath:
-            break
-        filepath = new_filepath
-    
-    return filepath.name, '.' + '.'.join(exts[::-1])
            
 
 @COMMANDS.register
