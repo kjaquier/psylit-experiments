@@ -1,8 +1,8 @@
 from functools import wraps
-from collections import Mapping
 import logging
 import time
 from math import ceil
+from collections import UserDict
 
 
 def benchmark(f, log_level=logging.DEBUG):
@@ -155,3 +155,16 @@ def dynamic_dict(mapping_func):
             return mapping_func(key)
 
     return WrapperMapping()
+
+
+class FuncRegister(UserDict):
+
+    def register(self, func):
+        
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            # print(f"{func.__name__}({args}, **{kwargs})")
+            return func(*args, **kwargs)
+
+        self.data[func.__name__] = wrapper
+        return wrapper
