@@ -1,3 +1,4 @@
+from glob import glob
 from collections import defaultdict
 import pathlib
 import logging
@@ -48,7 +49,11 @@ def main(input_dir: "Folder containing book data",
 
         # Read data files
         data_df = pd.read_csv(current_book_path, index_col=False)
-        ents_df = pd.read_csv(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities_input']), index_col=0)
+        ent_input_pattern = filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['entities_input'])
+        # logging.info('Looking for %s',ent_input_pattern)
+        ent_input_file = next(iter(glob(str(ent_input_pattern))))
+        # logging.info('Found entities file: %s',ent_input_file)
+        ents_df = pd.read_csv(ent_input_file, index_col=0)
         with open(filename_no_ext.with_suffix(PROCESS_PARAMETERS['extensions']['metadata'])) as f:
             metadata = json.load(f)
 
