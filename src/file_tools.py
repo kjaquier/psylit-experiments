@@ -39,7 +39,7 @@ def file_parts(filepath):
             break
         filepath = new_filepath
     
-    return filepath.name, '.' + '.'.join(exts)
+    return filepath.name, '.' + '.'.join(exts[::-1])
            
 
 @COMMANDS.register
