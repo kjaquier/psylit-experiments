@@ -8,6 +8,7 @@ import pandas as pd
 
 from features.gen_cascades import BookData
 from utils.misc import benchmark, Timer, path_remove_if_exists
+from utils.io import file_parts
 
 from parameters import LOGGING_PARAMETERS, PROCESS_PARAMETERS
 
@@ -31,7 +32,7 @@ def main(input_dir: "Folder containing book data",
     logging.info("Found %d book(s)", n_books)
 
     for i, current_book_path in enumerate(books):
-        current_book_name = current_book_path.stem.split('.')[0]
+        current_book_name = file_parts(current_book_path)[0]
 
         if bench_mode:
             timers['process'].start()
@@ -43,7 +44,7 @@ def main(input_dir: "Folder containing book data",
         output_path = pathlib.Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
         out_filename = output_path / f"{current_book_name}{PROCESS_PARAMETERS['extensions']['cascades']}"
-        if out_filename.exists():
+        if skip_if_exists and out_filename.exists():
             logging.info("Skipped: %s (already exists)", out_filename)
             continue
 

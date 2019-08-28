@@ -95,11 +95,14 @@ class BookParsePipeline:
             feat_df = pd.concat([p.get_features_df() for p in parsers], axis='rows', sort=False)
             self.data['feat_df'] = feat_df
 
+    def check_if_output_exists(self, output_dir, run_name):
+        out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['data']}"
+        return out_path.exists()
+
     def save(self, output_dir, run_name, metadata=None):
         assert self.data, "Nothing to save!"
         output_dir.mkdir(parents=True, exist_ok=True)
         if self.save_data:
-            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['data']}"
             logger.info("Writing data to %s", out_path)
             path_remove_if_exists(out_path)
             self.data['data_df'].to_csv(out_path, index=False)

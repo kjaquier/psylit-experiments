@@ -10,6 +10,7 @@ import plac
 from data import preprocess
 from models import nlp_pipeline
 from utils.misc import Timer, BatchSequence
+from utils.io import file_parts
 
 from parameters import LOGGING_PARAMETERS, PREPARE_PARAMETERS
 
@@ -23,6 +24,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
          save_features: ("Save tokens and features as csv", 'flag', 'f')=False,
          no_save_entities: ("Don't save entities as csv", 'flag', 'e')=False,
          no_save_meta: ("Write metadata file about the run", 'flag', 'm')=False,
+         skip_if_exists: ("Skip books where output already exists", 'option', 'k')=False,
          start: ("Position to read from", 'option', 't0')=0,
          end: ("Position to stop reading after", 'option', 't1')=0,
          bench_mode: ("Measure execution time", 'flag', 'x')=False):
@@ -58,6 +60,12 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             timers['read'].start()
             
         path = pathlib.Path(filename)
+        run_name_suffix = f"__{i}" if run_name and n_files > 1 else ""
+        run_name = run_name or file_parts(path)[0]
+        if skip_if_exists and pipeline.check_if_output_exists(output_path, run_name):
+            logger.info("Skipped: %s (already exists)", run_name)
+            continue
+
         logging.info("Reading file %d / %d: '%s'[%s:%s:%s]", i+1,
                      n_files, path, txt_slice.start, txt_slice.stop, batch_size)
 
@@ -83,7 +91,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             'cmd': sys.argv,
             'time': now,
             'input_filename': input_filename,
-            'run_name': run_name or path.stem,
+            'run_name': run_name,
         }
         # TODO add run parameters
         if bench_mode:
@@ -93,11 +101,10 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
                 'time_process': str(timers['process']),
             })
 
-        run_name_suffix = f"__{i}" if run_name and n_files > 1 else ""
-    
         pipeline.save(output_path,
                       run_name=f"{metadata['run_name']}{run_name_suffix}",
-                      metadata=metadata)
+                      metadata=metadata,
+                      skip_if_exists=skip_if_exists)
 
         if bench_mode:
             timers['write'].stop()

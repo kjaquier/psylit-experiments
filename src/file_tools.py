@@ -28,10 +28,10 @@ def add_ext(files, *args, dry_run=False):
                     f.rename(new_f)
 
 @COMMANDS.register
-def substitute_base(files, *args, dry_run=False):
+def substitute_base(files, *args, dry_run=False, regex_mode=False):
     """Usage: <char> [<char>...] <replacing>"""
     *pats, replacing = args
-    regex = re.compile('|'.join(re.escape(p) for p in pats))
+    regex = re.compile('|'.join((p if regex_mode else re.escape(p)) for p in pats))
     _log(f"{args} => {regex} -> {replacing!r}")
     for f in files:
         base, ext = file_parts(f)
@@ -51,6 +51,7 @@ def main(command: f"Command to run ; available: {'|'.join(COMMANDS.keys())}",
          directory: "Directory to run command on",
          file_pattern: ("Pattern for matching files", 'option', 'p')='**/*',
          dry_run: ("Don't actually rename the files", 'flag', 'n')=False,
+         regex_mode: ("Enable using regex in patterns", 'flag', 'r')=False,
          verbose: ("Print previous and new names", 'flag', 'v')=False,
          *args: "Command arguments"):
     
@@ -62,7 +63,7 @@ def main(command: f"Command to run ; available: {'|'.join(COMMANDS.keys())}",
     d = pathlib.Path(directory)
     files = [f for f in d.glob(file_pattern) if f.is_file()]
     _log(f"{len(files)} matches")
-    cmd_res = cmd(files, *args_list, dry_run=dry_run)
+    cmd_res = cmd(files, *args_list, dry_run=dry_run, regex_mode=regex_mode)
     print(cmd_res if cmd_res is not None else 'Done')
 
 
