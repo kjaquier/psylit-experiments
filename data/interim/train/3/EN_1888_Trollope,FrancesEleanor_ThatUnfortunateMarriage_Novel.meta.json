@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-kx", "data/raw/train/3/*.txt", "data/interim/train/3"], "time": "2019-08-28T16:50:02.029407", "input_filename": "data/raw/train/3/*.txt", "run_name": "EN_1888_Trollope,FrancesEleanor_ThatUnfortunateMarriage_Novel"}

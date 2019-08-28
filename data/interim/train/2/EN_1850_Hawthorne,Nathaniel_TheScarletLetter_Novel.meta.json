@@ -1,0 +1,1 @@
+{"cmd": ["src/data_prepare.py", "-kx", "data/raw/train/2/*.txt", "data/interim/train/2"], "time": "2019-08-28T16:50:10.046053", "input_filename": "data/raw/train/2/*.txt", "run_name": "EN_1850_Hawthorne,Nathaniel_TheScarletLetter_Novel"}
