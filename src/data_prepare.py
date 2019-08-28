@@ -9,7 +9,7 @@ import plac
 
 from data import preprocess
 from models import nlp_pipeline
-from utils.misc import Timer, BatchSequence
+from utils.misc import Timer, BatchSequence, progress
 from utils.io import file_parts
 
 from parameters import LOGGING_PARAMETERS, PREPARE_PARAMETERS
@@ -55,15 +55,15 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
 
     files = list(glob(input_filename))
     n_files = len(files)
-    for i, filename in enumerate(files):
+    for i, filename in enumerate(progress(files, print_func=logging.info)):
         if bench_mode:
             timers['read'].start()
             
         path = pathlib.Path(filename)
         run_name_suffix = f"__{i}" if run_name and n_files > 1 else ""
-        run_name = run_name or file_parts(path)[0]
-        if skip_if_exists and pipeline.check_if_output_exists(output_path, run_name):
-            logger.info("Skipped: %s (already exists)", run_name)
+        current_run_name = run_name or file_parts(path)[0]
+        if skip_if_exists and pipeline.check_if_output_exists(output_path, current_run_name):
+            logging.info("Skipped: %s (already exists)", current_run_name)
             continue
 
         logging.info("Reading file %d / %d: '%s'[%s:%s:%s]", i+1,
@@ -91,7 +91,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
             'cmd': sys.argv,
             'time': now,
             'input_filename': input_filename,
-            'run_name': run_name,
+            'run_name': current_run_name,
         }
         # TODO add run parameters
         if bench_mode:
@@ -103,8 +103,7 @@ def main(input_filename: "Text document to read (UTF-8) - filename or pattern",
 
         pipeline.save(output_path,
                       run_name=f"{metadata['run_name']}{run_name_suffix}",
-                      metadata=metadata,
-                      skip_if_exists=skip_if_exists)
+                      metadata=metadata)
 
         if bench_mode:
             timers['write'].stop()

@@ -5,6 +5,7 @@ from glob import glob
 import pyinform
 
 from utils.misc import path_remove_if_exists, progress
+from utils.io import file_parts
 from models.cascades import Cascades, FEATURE_TRANSFORMERS
 
 from parameters import LOGGING_PARAMETERS, ANALYSIS_PARAMETERS
@@ -25,7 +26,7 @@ def main(measure: "Information-theoretic measure to compute",
     files = list(glob(input_filename))
     for filename in progress(files, print_func=logging.info):
         path = pathlib.Path(filename)
-        doc_name = path.stem.split('.')[0]
+        doc_name = file_parts(path)[0]
 
         raw_casc = Cascades.from_csv(path)
         

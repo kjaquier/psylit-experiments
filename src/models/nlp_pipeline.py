@@ -103,6 +103,7 @@ class BookParsePipeline:
         assert self.data, "Nothing to save!"
         output_dir.mkdir(parents=True, exist_ok=True)
         if self.save_data:
+            out_path = output_dir / f"{run_name}{PREPARE_PARAMETERS['extensions']['data']}"
             logger.info("Writing data to %s", out_path)
             path_remove_if_exists(out_path)
             self.data['data_df'].to_csv(out_path, index=False)
