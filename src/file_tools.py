@@ -31,8 +31,8 @@ def add_ext(files, *args, dry_run=False):
 def substitute_base(files, *args, dry_run=False):
     """Usage: <char> [<char>...] <replacing>"""
     *pats, replacing = args
-    #raise Exception(f"{args} => {pats!r}, {replacing!r}")
     regex = re.compile('|'.join(re.escape(p) for p in pats))
+    _log(f"{args} => {regex} -> {replacing!r}")
     for f in files:
         base, ext = file_parts(f)
         newbase = regex.sub(replacing, base)
