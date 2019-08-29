@@ -201,14 +201,18 @@ class Cascades:
             cs.append(c)
         return pd.concat(cs, sort=False)
 
-    def batch_single_measure(self, trajectory_group, measure, measure_name, k_values=(1,), local=False):
+    def batch_single_measure(self, trajectory_group, measure, measure_name, k_values=(1,), local=False, window_size=1):
         casc = self.casc
         B = []
         trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
         cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
         for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
-            for c in df.columns:
+            if win_size > 1:
+                df = ((df.rolling(window=win_size).sum() > 0)
+                    .astype(np.int8)
+                    .fillna(0))
+            for c in progress(df.columns, print_func=logger.debug):
                 for k in k_values:
                     series = df[c].to_numpy()
                     m = measure(series, k=k, local=local)
