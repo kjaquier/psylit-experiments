@@ -4,7 +4,7 @@ import logging
 
 
 LOGGING_PARAMETERS = dict(
-    level=logging.INFO, 
+    level=logging.DEBUG, 
     stream=sys.stdout, 
     format='[%(asctime)s %(levelname)s %(name)s (%(funcName)s)] %(message)s',
     datefmt='%H:%M:%S',
@@ -42,7 +42,7 @@ PROCESS_PARAMETERS = dict(
 EXPERIMENTS_PARAMETERS=dict(
     BlockEntropy_StimulusResponse=dict(
         measure_name='$H(k)$',
-        k_values=range(1, 50, 3),
+        k_values=range(1, 33, 2),
     )
 )
 

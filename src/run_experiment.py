@@ -28,6 +28,7 @@ def main(experiment: f"Name of experiment to run. Available: {'|'.join(EXPERIMEN
     output_path = pathlib.Path(output_dir)
 
     files = list(glob(input_filename))
+    logging.info("%s files matching '%s'", len(files), input_filename)
     for filename in progress(files, print_func=logging.info):
         path = pathlib.Path(filename)
 

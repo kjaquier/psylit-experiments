@@ -54,10 +54,9 @@ class Cascades:
             dtype = fixed.get(col_name, np.int8)
             return dtype
 
-        col_names = pd.read_csv(csv_path, nrows=0).columns
+        col_names = pd.read_csv(csv_path, nrows=0, engine='python').columns
         
         dtype_map = {k: get_dtype(k) for k in col_names}
-
         raw_df = pd.read_csv(csv_path, 
                              index_col=['Subject', 't'],
                              dtype=dtype_map,
