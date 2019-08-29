@@ -39,14 +39,11 @@ PROCESS_PARAMETERS = dict(
     ),
 )
 
-ANALYSIS_PARAMETERS = dict(
-    block_entropy=dict(
-        name='$H(k)$',
-        extension='.be.csv',
-        k_values=range(1, 20, 3),
-        transformer='StimulusResponse',
-        local=False,
-    ),
+EXPERIMENTS_PARAMETERS=dict(
+    BlockEntropy_StimulusResponse=dict(
+        measure_name='$H(k)$',
+        k_values=range(1, 50, 3),
+    )
 )
 
 CACHE_PARAMETERS = dict(

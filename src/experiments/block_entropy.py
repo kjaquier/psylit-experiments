@@ -1,31 +1,39 @@
-import dataclasses as dc
-from typing import Dict, Tuple
+from dataclasses import dataclass
+from typing import Iterable
 
-import pandas as pd
 import pyinform
 
-from .common import BaseCascadeExperiment, ExperimentSetup
+from .common import BaseCascadeExperiment, Setup
 from models.cascades import Cascades, FEATURE_TRANSFORMERS
-from models.cascades import Cascades
 from utils.misc import path_remove_if_exists
-from parameters import ANALYSIS_PARAMETERS
+
+
+@dataclass
+class BlockEntropy_StimulusResponse_Setup(Setup):
+    k_values: Iterable[int]
+    measure_name: str
 
 
 class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
 
     exp_name = 'blockent_stimres'
+    setup_class = BlockEntropy_StimulusResponse_Setup
+    result_keys = {'persubj'}
 
     def _execute(self, data):
-        measure = 'block_entropy'
-        raw_casc = data['cascades']
+        raw_casc: Cascades = data['cascades']
         
         transform_function = FEATURE_TRANSFORMERS['StimulusResponse']
         casc = transform_function(raw_casc)
         
-        B = casc.batch_single_measure(
+        be = casc.batch_single_measure(
             trajectory_group='Subject',
             measure=pyinform.blockentropy.block_entropy, 
-            measure_name=ANALYSIS_PARAMETERS[measure]['name'],
-            k=ANALYSIS_PARAMETERS[measure]['k_values'], 
+            measure_name=self.setup.measure_name,
+            k_values=self.setup.k_values, 
             local=False,
         )
+
+        return {
+            'persubj': be,
+        }
