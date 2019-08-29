@@ -4,7 +4,7 @@ import logging
 
 
 LOGGING_PARAMETERS = dict(
-    level=logging.INFO, 
+    level=logging.DEBUG, 
     stream=sys.stdout, 
     format='[%(asctime)s %(levelname)s %(name)s (%(funcName)s)] %(message)s',
     datefmt='%H:%M:%S',
@@ -39,13 +39,15 @@ PROCESS_PARAMETERS = dict(
     ),
 )
 
-ANALYSIS_PARAMETERS = dict(
-    block_entropy=dict(
-        name='$H(k)$',
-        extension='.be.csv',
-        k_values=range(1, 20, 3),
-        transformer='StimulusResponse',
-        local=False,
+EXPERIMENTS_PARAMETERS=dict(
+    experiments=dict(
+        BlockEntropy_StimulusResponse=dict(
+            measure_name='$H(k)$',
+            k_values=[1, 3, 5, 7, 9, 16, 21, 26, 31],
+        ),
+    ),
+    extensions=dict(
+        dataframe='.csv',
     ),
 )
 

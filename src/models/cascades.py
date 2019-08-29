@@ -54,10 +54,9 @@ class Cascades:
             dtype = fixed.get(col_name, np.int8)
             return dtype
 
-        col_names = pd.read_csv(csv_path, nrows=0).columns
+        col_names = pd.read_csv(csv_path, nrows=0, engine='python').columns
         
         dtype_map = {k: get_dtype(k) for k in col_names}
-
         raw_df = pd.read_csv(csv_path, 
                              index_col=['Subject', 't'],
                              dtype=dtype_map,
@@ -202,15 +201,19 @@ class Cascades:
             cs.append(c)
         return pd.concat(cs, sort=False)
 
-    def batch_single_measure(self, trajectory_group, measure, measure_name, ks=(1,), local=False):
+    def batch_single_measure(self, trajectory_group, measure, measure_name, k_values=(1,), local=False, window_size=1):
         casc = self.casc
         B = []
         trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
         cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
-        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.info):
+        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
-            for c in df.columns:
-                for k in ks:
+            if window_size > 1:
+                df = ((df.rolling(window=window_size).sum() > 0)
+                    .astype(np.int8)
+                    .fillna(0))
+            for c in progress(df.columns, print_func=logger.debug):
+                for k in k_values:
                     series = df[c].to_numpy()
                     m = measure(series, k=k, local=local)
                     row = (*lbl, *c, k, m)
