@@ -9,7 +9,7 @@ import pandas as pd
 from models.cascades import Cascades
 from utils.misc import path_remove_if_exists
 from utils.io import file_parts
-
+from parameters import EXPERIMENTS_PARAMETERS
 
 @dataclass
 class Setup:
@@ -27,14 +27,15 @@ class BaseExperiment:
     result_keys: Set[str] = set()
     setup_class = Setup
 
-    def __init__(self, setup: Setup, logger=logging.getLogger(), no_rerun=False):
+    def __init__(self, setup: Setup, run_name:str, logger=logging.getLogger(), no_rerun=False):
         self.setup = setup
+        self.run_name = run_name
         self.results: Optional[ResultType] = None
         self._logger = logger
         self.no_rerun = no_rerun
 
     def run(self, **kwargs):
-        if self.no_rerun and self._has_already_run(self.setup.output_path):
+        if self.no_rerun and self._has_already_run(self.setup.output_path, self.run_name):
             self._logger.info("Skipped: %s (already exists)", self.setup.output_dest)
             return
         
@@ -57,18 +58,23 @@ class BaseExperiment:
         raise NotImplementedError()
 
     @classmethod
-    def _get_filename_for_result(cls, res_name, res_type):
+    def _get_path_for_result(cls, output_path, run_name, res_name, res_type):
         res_format = cls._get_format_for_type(res_type)
-        return f"{cls.exp_name}-{res_name}.{res_format}"
+        run_output_dir = cls._get_run_output_dir(output_path, run_name)
+        return run_output_dir / f"{res_name}{res_format}"
 
-    @staticmethod
-    def _has_already_run(output_path=None):
-        return output_path.exists()
+    @classmethod
+    def _has_already_run(cls, output_path, run_name):
+        return cls._get_run_output_dir(output_path, run_name).exists()
+
+    @classmethod
+    def _get_run_output_dir(cls, output_path, run_name):
+        return output_path / cls.exp_name / run_name
 
     @staticmethod
     def _get_format_for_type(data_type):
         if issubclass(data_type, pd.DataFrame):
-            return 'csv.zip'
+            return EXPERIMENTS_PARAMETERS['extensions']['dataframe']
         else:
             raise KeyError(f'No format implemented for type {data_type}')
 
@@ -77,21 +83,21 @@ class BaseExperiment:
             if self.no_rerun:
                 return
             raise Exception('Must call run() first!')
-        output_dir = self.setup.output_dest
-        output_dir.mkdir(parents=True, exist_ok=True)
+        run_output_dir = self._get_run_output_dir(self.setup.output_dest, self.run_name)
+        run_output_dir.mkdir(parents=True, exist_ok=True)
         for res_name, res_value in self.results.items():
-            output_filename = output_dir / self._get_filename_for_result(res_name, type(res_value))
+            output_filename = self._get_path_for_result(self.setup.output_dest, self.run_name, res_name, type(res_value))
             logging.info("Writing to %s", output_filename)
             path_remove_if_exists(output_filename)
             res_value.to_csv(output_filename)  # TODO separate class for reading/writing data in different formats
 
     @classmethod
-    def load_results(cls, output_path):
-        if not cls._has_already_run(output_path):
-            raise Exception(f"No results found in '{output_path}'")
+    def load_results(cls, output_path, run_name):
+        if not cls._has_already_run(output_path, run_name):
+            raise Exception(f"No results found in '{output_path}' for run '{run_name}'")
         results = {}
         for res_name in cls.result_keys:
-            filename = output_path / cls._get_filename_for_result(res_name, pd.DataFrame)
+            filename = cls._get_path_for_result(output_path, run_name, res_name, pd.DataFrame)
             logging.info("Loading %s", filename)
             results[res_name] = pd.read_csv(filename)
         return results

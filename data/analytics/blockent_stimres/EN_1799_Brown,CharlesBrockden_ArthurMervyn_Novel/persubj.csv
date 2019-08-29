@@ -1,0 +1,369 @@
+,Subject,Category,Feature,k,$H(k)$
+0,NARRATOR,Other,Unknown,1,0.11874974808921548
+1,NARRATOR,Other,Unknown,2,0.22875834896700994
+2,NARRATOR,Response,Anger,1,0.09254595565764007
+3,NARRATOR,Response,Anger,2,0.18427102892699276
+4,NARRATOR,Response,Anticipation,1,0.14689573673029235
+5,NARRATOR,Response,Anticipation,2,0.2931312158045944
+6,NARRATOR,Response,Arousal,1,0.3617706888480305
+7,NARRATOR,Response,Arousal,2,0.7119014467082004
+8,NARRATOR,Response,Disgust,1,0.06123558317661254
+9,NARRATOR,Response,Disgust,2,0.12208442419459091
+10,NARRATOR,Response,Dominance,1,0.49328508503306245
+11,NARRATOR,Response,Dominance,2,0.9665519797704574
+12,NARRATOR,Response,Fear,1,0.12364862031005729
+13,NARRATOR,Response,Fear,2,0.246082453904319
+14,NARRATOR,Response,Joy,1,0.11139163333607804
+15,NARRATOR,Response,Joy,2,0.22204231512804434
+16,NARRATOR,Response,Sadness,1,0.10809880668345402
+17,NARRATOR,Response,Sadness,2,0.21496778709714537
+18,NARRATOR,Response,Surprise,1,0.08999932998040107
+19,NARRATOR,Response,Surprise,2,0.17974076269302236
+20,NARRATOR,Response,Trust,1,0.16011010712684576
+21,NARRATOR,Response,Trust,2,0.3188331749953735
+22,NARRATOR,Response,Valence,1,0.5334445205794887
+23,NARRATOR,Response,Valence,2,1.0402612107965032
+24,NARRATOR,Stimulus,Anger,1,0.2383315568242855
+25,NARRATOR,Stimulus,Anger,2,0.476330530306686
+26,NARRATOR,Stimulus,Anticipation,1,0.30707871445830803
+27,NARRATOR,Stimulus,Anticipation,2,0.6139670190508392
+28,NARRATOR,Stimulus,Arousal,1,0.7060382660523518
+29,NARRATOR,Stimulus,Arousal,2,1.4096769380243308
+30,NARRATOR,Stimulus,Disgust,1,0.1581622299706402
+31,NARRATOR,Stimulus,Disgust,2,0.3161693218419616
+32,NARRATOR,Stimulus,Dominance,1,0.8693342497430103
+33,NARRATOR,Stimulus,Dominance,2,1.7324285168882718
+34,NARRATOR,Stimulus,Fear,1,0.3064856899292068
+35,NARRATOR,Stimulus,Fear,2,0.6127045902102145
+36,NARRATOR,Stimulus,Joy,1,0.25621668546688636
+37,NARRATOR,Stimulus,Joy,2,0.5118565690080661
+38,NARRATOR,Stimulus,Sadness,1,0.2774647386644432
+39,NARRATOR,Stimulus,Sadness,2,0.5541932660690697
+40,NARRATOR,Stimulus,Surprise,1,0.21098260460900728
+41,NARRATOR,Stimulus,Surprise,2,0.4217712082909229
+42,NARRATOR,Stimulus,Trust,1,0.363801933962491
+43,NARRATOR,Stimulus,Trust,2,0.7270400003292833
+44,NARRATOR,Stimulus,Valence,1,0.8984056461058219
+45,NARRATOR,Stimulus,Valence,2,1.7874499055031068
+46,READER,Other,Unknown,1,0.11874974808921548
+47,READER,Other,Unknown,2,0.22875834896700994
+48,READER,Response,Anger,1,0.009325598147227776
+49,READER,Response,Anger,2,0.01865087586003751
+50,READER,Response,Anticipation,1,0.01905496428495366
+51,READER,Response,Anticipation,2,0.03788396415657536
+52,READER,Response,Arousal,1,0.05630328864613063
+53,READER,Response,Arousal,2,0.1100194525994923
+54,READER,Response,Disgust,1,0.007434541051173288
+55,READER,Response,Disgust,2,0.014869011097611401
+56,READER,Response,Dominance,1,0.08555267203139306
+57,READER,Response,Dominance,2,0.1653060153456016
+58,READER,Response,Fear,1,0.01187532878201516
+59,READER,Response,Fear,2,0.023618173715048492
+60,READER,Response,Joy,1,0.01905496428495366
+61,READER,Response,Joy,2,0.03770614200480887
+62,READER,Response,Sadness,1,0.010430727844077194
+63,READER,Response,Sadness,2,0.020860938216875763
+64,READER,Response,Surprise,1,0.013291068249509506
+65,READER,Response,Surprise,2,0.02658092133034532
+66,READER,Response,Trust,1,0.02482444318961159
+67,READER,Response,Trust,2,0.04880784608231613
+68,READER,Response,Valence,1,0.09507307237136184
+69,READER,Response,Valence,2,0.18021830092852598
+70,READER,Stimulus,Anger,1,0.27793168959200626
+71,READER,Stimulus,Anger,2,0.5554460338611668
+72,READER,Stimulus,Anticipation,1,0.3677104773985871
+73,READER,Stimulus,Anticipation,2,0.7353435044062572
+74,READER,Stimulus,Arousal,1,0.7990377293186847
+75,READER,Stimulus,Arousal,2,1.5964077432598598
+76,READER,Stimulus,Disgust,1,0.18766935011287827
+77,READER,Stimulus,Disgust,2,0.37523688609547456
+78,READER,Stimulus,Dominance,1,0.9509345477516644
+79,READER,Stimulus,Dominance,2,1.8998369480354291
+80,READER,Stimulus,Fear,1,0.355774130189287
+81,READER,Stimulus,Fear,2,0.7112712644712248
+82,READER,Stimulus,Joy,1,0.299623788718887
+83,READER,Stimulus,Joy,2,0.5987955102148724
+84,READER,Stimulus,Sadness,1,0.3205611705613037
+85,READER,Stimulus,Sadness,2,0.6402660921089194
+86,READER,Stimulus,Surprise,1,0.24922859931890437
+87,READER,Stimulus,Surprise,2,0.49825348775390327
+88,READER,Stimulus,Trust,1,0.4225005828581778
+89,READER,Stimulus,Trust,2,0.8446798179746626
+90,READER,Stimulus,Valence,1,0.9738228069134703
+91,READER,Stimulus,Valence,2,1.9440918648574044
+92,driver,Other,Unknown,1,0.11874974808921548
+93,driver,Other,Unknown,2,0.22875834896700994
+94,driver,Response,Anger,1,0.008199075272091657
+95,driver,Response,Anger,2,0.016397991662979748
+96,driver,Response,Anticipation,1,0.007047757508365652
+97,driver,Response,Anticipation,2,0.014095481970481636
+98,driver,Response,Arousal,1,0.028222318640815383
+99,driver,Response,Arousal,2,0.054018881764216514
+100,driver,Response,Disgust,1,0.00586694782610885
+101,driver,Response,Disgust,2,0.011516354584784338
+102,driver,Response,Dominance,1,0.039968134455029225
+103,driver,Response,Dominance,2,0.07540447864372996
+104,driver,Response,Fear,1,0.01079481392894261
+105,driver,Response,Fear,2,0.02097491618845541
+106,driver,Response,Joy,1,0.0042341612706007425
+107,driver,Response,Joy,2,0.0078675172175842
+108,driver,Response,Sadness,1,0.010064555705713879
+109,driver,Response,Sadness,2,0.019748379878855592
+110,driver,Response,Surprise,1,0.0042341612706007425
+111,driver,Response,Surprise,2,0.008468442045876953
+112,driver,Response,Trust,1,0.008952615227654073
+113,driver,Response,Trust,2,0.016919656545028666
+114,driver,Response,Valence,1,0.04361989705531721
+115,driver,Response,Valence,2,0.07969779219070364
+116,driver,Stimulus,Anger,1,0.27808725757925723
+117,driver,Stimulus,Anger,2,0.5557352515962006
+118,driver,Stimulus,Anticipation,1,0.3705257102649495
+119,driver,Stimulus,Anticipation,2,0.7409379747312386
+120,driver,Stimulus,Arousal,1,0.8025219099030347
+121,driver,Stimulus,Arousal,2,1.6031996627415066
+122,driver,Stimulus,Disgust,1,0.18803623063808486
+123,driver,Stimulus,Disgust,2,0.3759931209027636
+124,driver,Stimulus,Dominance,1,0.9542475426119452
+125,driver,Stimulus,Dominance,2,1.9060735116877097
+126,driver,Stimulus,Fear,1,0.3556371753740283
+127,driver,Stimulus,Fear,2,0.7110255499768839
+128,driver,Stimulus,Joy,1,0.3032136328367828
+129,driver,Stimulus,Joy,2,0.6058302084786095
+130,driver,Stimulus,Sadness,1,0.3198360266303498
+131,driver,Stimulus,Sadness,2,0.638851964524607
+132,driver,Stimulus,Surprise,1,0.25118742147360984
+133,driver,Stimulus,Surprise,2,0.5021332854307151
+134,driver,Stimulus,Trust,1,0.42643098957604475
+135,driver,Stimulus,Trust,2,0.8525006193908107
+136,driver,Stimulus,Valence,1,0.9766261857467647
+137,driver,Stimulus,Valence,2,1.9489049547327781
+138,fellow,Other,Unknown,1,0.11874974808921548
+139,fellow,Other,Unknown,2,0.22875834896700994
+140,fellow,Response,Anger,1,0.0033848871525005405
+141,fellow,Response,Anger,2,0.006769900220790482
+142,fellow,Response,Anticipation,1,0.008577148993487577
+143,fellow,Response,Anticipation,2,0.016982863517527227
+144,fellow,Response,Arousal,1,0.021975677004126965
+145,fellow,Response,Arousal,2,0.04233900659716003
+146,fellow,Response,Disgust,1,0.002050834902439102
+147,fellow,Response,Disgust,2,0.004101772758937881
+148,fellow,Response,Dominance,1,0.03183790115930916
+149,fellow,Response,Dominance,2,0.059586688360184256
+150,fellow,Response,Fear,1,0.003812789332376938
+151,fellow,Response,Fear,2,0.007625703493403174
+152,fellow,Response,Joy,1,0.004649731539622489
+153,fellow,Response,Joy,2,0.009299573075318975
+154,fellow,Response,Sadness,1,0.0042341612706007425
+155,fellow,Response,Sadness,2,0.008468442045876953
+156,fellow,Response,Surprise,1,0.004649731539622489
+157,fellow,Response,Surprise,2,0.009299573075318975
+158,fellow,Response,Trust,1,0.008199075272091657
+159,fellow,Response,Trust,2,0.0162212762733212
+160,fellow,Response,Valence,1,0.03566150550692808
+161,fellow,Response,Valence,2,0.0647942705471467
+162,fellow,Stimulus,Anger,1,0.27933032390099566
+163,fellow,Stimulus,Anger,2,0.5582201975184955
+164,fellow,Stimulus,Anticipation,1,0.37039193680443117
+165,fellow,Stimulus,Anticipation,2,0.7406885819505044
+166,fellow,Stimulus,Arousal,1,0.8037534794662375
+167,fellow,Stimulus,Arousal,2,1.6057159784499615
+168,fellow,Stimulus,Disgust,1,0.189135257791872
+169,fellow,Stimulus,Disgust,2,0.3781594417870871
+170,fellow,Stimulus,Dominance,1,0.9548851982833569
+171,fellow,Stimulus,Dominance,2,1.90748008168909
+172,fellow,Stimulus,Fear,1,0.3576883583546492
+173,fellow,Stimulus,Fear,2,0.7151018727154114
+174,fellow,Stimulus,Joy,1,0.30291529339476203
+175,fellow,Stimulus,Joy,2,0.6051729631907712
+176,fellow,Stimulus,Sadness,1,0.32171961977569574
+177,fellow,Stimulus,Sadness,2,0.642588077439034
+178,fellow,Stimulus,Surprise,1,0.2513503515868116
+179,fellow,Stimulus,Surprise,2,0.5024613425813822
+180,fellow,Stimulus,Trust,1,0.42667583202718584
+181,fellow,Stimulus,Trust,2,0.852937337369429
+182,fellow,Stimulus,Valence,1,0.9770027807115804
+183,fellow,Stimulus,Valence,2,1.9498348360283189
+184,his own,Other,Unknown,1,0.11874974808921548
+185,his own,Other,Unknown,2,0.22875834896700994
+186,his own,Response,Anger,1,0.006264193965829098
+187,his own,Response,Anger,2,0.012029035718361265
+188,his own,Response,Anticipation,1,0.01079481392894261
+189,his own,Response,Anticipation,2,0.02144578746398082
+190,his own,Response,Arousal,1,0.028222318640815383
+191,his own,Response,Arousal,2,0.05353823129682453
+192,his own,Response,Disgust,1,0.0042341612706007425
+193,his own,Response,Disgust,2,0.008468442045876953
+194,his own,Response,Dominance,1,0.042503737116155876
+195,his own,Response,Dominance,2,0.07858063069350316
+196,his own,Response,Fear,1,0.008952615227654073
+197,his own,Response,Fear,2,0.017738957297621705
+198,his own,Response,Joy,1,0.007818256802754239
+199,his own,Response,Joy,2,0.015453890485793398
+200,his own,Response,Sadness,1,0.00586694782610885
+201,his own,Response,Sadness,2,0.011516354584784338
+202,his own,Response,Surprise,1,0.007047757508365652
+203,his own,Response,Surprise,2,0.013900316453703909
+204,his own,Response,Trust,1,0.01187532878201516
+205,his own,Response,Trust,2,0.023618173715048492
+206,his own,Response,Valence,1,0.048022890548070706
+207,his own,Response,Valence,2,0.08709445583281306
+208,his own,Stimulus,Anger,1,0.2782427844544946
+209,his own,Stimulus,Anger,2,0.5560740167502081
+210,his own,Stimulus,Anticipation,1,0.3695886983351508
+211,his own,Stimulus,Anticipation,2,0.7390731823728997
+212,his own,Stimulus,Arousal,1,0.802756840431572
+213,his own,Stimulus,Arousal,2,1.6038620632959082
+214,his own,Stimulus,Disgust,1,0.18840284165655405
+215,his own,Stimulus,Disgust,2,0.3766885148060259
+216,his own,Stimulus,Dominance,1,0.9540874064424806
+217,his own,Stimulus,Dominance,2,1.9060215086988659
+218,his own,Stimulus,Fear,1,0.35618481492274673
+219,his own,Stimulus,Fear,2,0.7120841155602473
+220,his own,Stimulus,Joy,1,0.30216879942953345
+221,his own,Stimulus,Joy,2,0.6036888633086683
+222,his own,Stimulus,Sadness,1,0.320850988095126
+223,his own,Stimulus,Sadness,2,0.6408825521477984
+224,his own,Stimulus,Surprise,1,0.2502088568245275
+225,his own,Stimulus,Surprise,2,0.5001846731976761
+226,his own,Stimulus,Trust,1,0.4255732947888934
+227,his own,Stimulus,Trust,2,0.8507054086433086
+228,his own,Stimulus,Valence,1,0.9763416990200389
+229,his own,Stimulus,Valence,2,1.9487202399298411
+230,justice,Other,Unknown,1,0.11874974808921548
+231,justice,Other,Unknown,2,0.22875834896700994
+232,justice,Response,Anger,1,0.0033848871525005405
+233,justice,Response,Anger,2,0.006769900220790482
+234,justice,Response,Anticipation,1,0.006264193965829098
+235,justice,Response,Anticipation,2,0.012318846846681953
+236,justice,Response,Arousal,1,0.018725477097542343
+237,justice,Response,Arousal,2,0.03564949731017454
+238,justice,Response,Disgust,1,0.002050834902439102
+239,justice,Response,Disgust,2,0.004101772758937881
+240,justice,Response,Dominance,1,0.03183790115930916
+241,justice,Response,Dominance,2,0.059837175098797504
+242,justice,Response,Fear,1,0.004649731539622489
+243,justice,Response,Fear,2,0.009299573075318975
+244,justice,Response,Joy,1,0.006264193965829098
+245,justice,Response,Joy,2,0.012029035718361265
+246,justice,Response,Sadness,1,0.004649731539622489
+247,justice,Response,Sadness,2,0.00905335155770574
+248,justice,Response,Surprise,1,0.007434541051173288
+249,justice,Response,Surprise,2,0.014680365125072283
+250,justice,Response,Trust,1,0.010064555705713879
+251,justice,Response,Trust,2,0.019487867553493847
+252,justice,Response,Valence,1,0.0359519655965586
+253,justice,Response,Valence,2,0.0669733575165075
+254,justice,Stimulus,Anger,1,0.2791750839917282
+255,justice,Stimulus,Anger,2,0.5579067233159486
+256,justice,Stimulus,Anticipation,1,0.37092686013970744
+257,justice,Stimulus,Anticipation,2,0.7417547572944658
+258,justice,Stimulus,Arousal,1,0.8042799229498339
+259,justice,Stimulus,Arousal,2,1.606805210875966
+260,justice,Stimulus,Disgust,1,0.189135257791872
+261,justice,Stimulus,Disgust,2,0.3781594417870871
+262,justice,Stimulus,Dominance,1,0.9550438902827718
+263,justice,Stimulus,Dominance,2,1.90777975673547
+264,justice,Stimulus,Fear,1,0.35727865893737026
+265,justice,Stimulus,Fear,2,0.7142753228183523
+266,justice,Stimulus,Joy,1,0.3027660684037512
+267,justice,Stimulus,Joy,2,0.6049245385431616
+268,justice,Stimulus,Sadness,1,0.3212854577093753
+269,justice,Stimulus,Sadness,2,0.6417356556874266
+270,justice,Stimulus,Surprise,1,0.25053523272141764
+271,justice,Stimulus,Surprise,2,0.5008417302403412
+272,justice,Stimulus,Trust,1,0.4265534226343299
+273,justice,Stimulus,Trust,2,0.8527193972850131
+274,justice,Stimulus,Valence,1,0.9770964437916689
+275,justice,Stimulus,Valence,2,1.9498764622090166
+276,wallace,Other,Unknown,1,0.11874974808921548
+277,wallace,Other,Unknown,2,0.22875834896700994
+278,wallace,Response,Anger,1,0.01079481392894261
+279,wallace,Response,Anger,2,0.02158903685396521
+280,wallace,Response,Anticipation,1,0.014681459437484402
+281,wallace,Response,Anticipation,2,0.02907446909434647
+282,wallace,Response,Arousal,1,0.041943216496674554
+283,wallace,Response,Arousal,2,0.07812984903636333
+284,wallace,Response,Disgust,1,0.007434541051173288
+285,wallace,Response,Disgust,2,0.014680365125072283
+286,wallace,Response,Dominance,1,0.05865217555767058
+287,wallace,Response,Dominance,2,0.1084252182398981
+288,wallace,Response,Fear,1,0.017730535823910123
+289,wallace,Response,Fear,2,0.03503097108513125
+290,wallace,Response,Joy,1,0.015025431828980758
+291,wallace,Response,Joy,2,0.028556292101103935
+292,wallace,Response,Sadness,1,0.014336077143247753
+293,wallace,Response,Sadness,2,0.028163685360485344
+294,wallace,Response,Surprise,1,0.008577148993487577
+295,wallace,Response,Surprise,2,0.01715408921030002
+296,wallace,Response,Trust,1,0.020037244220349873
+297,wallace,Response,Trust,2,0.039291253590125544
+298,wallace,Response,Valence,1,0.0630281179703857
+299,wallace,Response,Valence,2,0.11452940896813842
+300,wallace,Stimulus,Anger,1,0.2774647386644432
+301,wallace,Stimulus,Anger,2,0.5544781884004737
+302,wallace,Stimulus,Anticipation,1,0.36878443314032744
+303,wallace,Stimulus,Anticipation,2,0.7374751015637867
+304,wallace,Stimulus,Arousal,1,0.8004001973481143
+305,wallace,Stimulus,Arousal,2,1.5992349808144446
+306,wallace,Stimulus,Disgust,1,0.1874858085795118
+307,wallace,Stimulus,Disgust,2,0.37486835586427225
+308,wallace,Stimulus,Dominance,1,0.9527688029814867
+309,wallace,Stimulus,Dominance,2,1.9033321194540307
+310,wallace,Stimulus,Fear,1,0.35357924752102937
+311,wallace,Stimulus,Fear,2,0.7069206437274234
+312,wallace,Stimulus,Joy,1,0.29977379307838314
+313,wallace,Stimulus,Joy,2,0.5990260536663563
+314,wallace,Stimulus,Sadness,1,0.3182376817744627
+315,wallace,Stimulus,Sadness,2,0.6357494612082648
+316,wallace,Stimulus,Surprise,1,0.24988229283318544
+317,wallace,Stimulus,Surprise,2,0.4995484687286055
+318,wallace,Stimulus,Trust,1,0.42336244573910875
+319,wallace,Stimulus,Trust,2,0.8463222971733739
+320,wallace,Stimulus,Valence,1,0.9754195794268397
+321,wallace,Stimulus,Valence,2,1.946518869413521
+322,watson,Other,Unknown,1,0.11874974808921548
+323,watson,Other,Unknown,2,0.22875834896700994
+324,watson,Response,Anger,1,0.0042341612706007425
+325,watson,Response,Anger,2,0.008468442045876953
+326,watson,Response,Anticipation,1,0.005060082172977204
+327,watson,Response,Anticipation,2,0.009566043986017137
+328,watson,Response,Arousal,1,0.01604925084092172
+329,watson,Response,Arousal,2,0.029214375364115062
+330,watson,Response,Disgust,1,0.001097633806948713
+331,watson,Response,Disgust,2,0.002195331831653405
+332,watson,Response,Dominance,1,0.02229556025494511
+333,watson,Response,Dominance,2,0.04088034269709915
+334,watson,Response,Fear,1,0.006264193965829098
+335,watson,Response,Fear,2,0.012318846846681953
+336,watson,Response,Joy,1,0.004649731539622489
+337,watson,Response,Joy,2,0.009299573075318975
+338,watson,Response,Sadness,1,0.00586694782610885
+339,watson,Response,Sadness,2,0.011516354584784338
+340,watson,Response,Surprise,1,0.003812789332376938
+341,watson,Response,Surprise,2,0.007354817260810118
+342,watson,Response,Trust,1,0.007434541051173288
+343,watson,Response,Trust,2,0.014111397607286833
+344,watson,Response,Valence,1,0.022614573407766052
+345,watson,Response,Valence,2,0.04067067045777137
+346,watson,Stimulus,Anger,1,0.2790198031746715
+347,watson,Stimulus,Anger,2,0.557593156730206
+348,watson,Stimulus,Anticipation,1,0.3711941514333389
+349,watson,Stimulus,Anticipation,2,0.7423015933894676
+350,watson,Stimulus,Arousal,1,0.8046304284692766
+351,watson,Stimulus,Arousal,2,1.6076020385386829
+352,watson,Stimulus,Disgust,1,0.18931819440419315
+353,watson,Stimulus,Disgust,2,0.37852681400912347
+354,watson,Stimulus,Dominance,1,0.9556495363127779
+355,watson,Stimulus,Dominance,2,1.9092308221564231
+356,watson,Stimulus,Fear,1,0.35686869132989935
+357,watson,Stimulus,Fear,2,0.7134939797749671
+358,watson,Stimulus,Joy,1,0.3032136328367828
+359,watson,Stimulus,Joy,2,0.6058038399622825
+360,watson,Stimulus,Sadness,1,0.32114066870302105
+361,watson,Stimulus,Sadness,2,0.6414701473979056
+362,watson,Stimulus,Surprise,1,0.2515132349471173
+363,watson,Stimulus,Surprise,2,0.5028104094622986
+364,watson,Stimulus,Trust,1,0.427042918301902
+365,watson,Stimulus,Trust,2,0.8537380796849289
+366,watson,Stimulus,Valence,1,0.9777466488286596
+367,watson,Stimulus,Valence,2,1.951539397982113

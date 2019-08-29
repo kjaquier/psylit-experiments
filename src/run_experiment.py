@@ -3,6 +3,7 @@ import logging
 from glob import glob
 
 from utils.misc import progress
+from utils.io import file_parts
 from experiments import block_entropy as blockent_exp
 from parameters import LOGGING_PARAMETERS, EXPERIMENTS_PARAMETERS
 
@@ -32,14 +33,16 @@ def main(experiment: f"Name of experiment to run. Available: {'|'.join(EXPERIMEN
     for filename in progress(files, print_func=logging.info):
         path = pathlib.Path(filename)
 
+        run_name = file_parts(path)[0]
+
         setup = Setup(
             data_source = {'doc_path': path},
             output_dest=output_path,
-            **EXPERIMENTS_PARAMETERS[Experiment.__name__],
+            **EXPERIMENTS_PARAMETERS['experiments'][Experiment.__name__],
             **kwargs,
         )
 
-        experiment = Experiment(setup)
+        experiment = Experiment(setup, run_name)
         experiment.run()
         experiment.save_results()
 

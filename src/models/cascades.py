@@ -208,8 +208,8 @@ class Cascades:
         cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
         for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
-            if win_size > 1:
-                df = ((df.rolling(window=win_size).sum() > 0)
+            if window_size > 1:
+                df = ((df.rolling(window=window_size).sum() > 0)
                     .astype(np.int8)
                     .fillna(0))
             for c in progress(df.columns, print_func=logger.debug):
