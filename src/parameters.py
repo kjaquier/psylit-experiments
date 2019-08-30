@@ -39,12 +39,21 @@ PROCESS_PARAMETERS = dict(
     ),
 )
 
-EXPERIMENTS_PARAMETERS=dict(
+EXPERIMENTS_PARAMETERS = dict(
     experiments=dict(
         BlockEntropy_StimulusResponse=dict(
             measure_name='$H(k)$',
             k_values=[1, 3, 5, 7, 9, 16, 21, 26, 31],
+            window_size=1,
         ),
+        TransferEntropy_StimulusResponse=dict(
+            k=1,
+            conditional=False,
+            measure_name='$T^{(k)}$',
+            window_size=1,
+            src_cols=['Valence', 'Arousal', 'Dominance', 'Unknown', 'Joy', 'Fear', 'Anger'],
+            dest_cols=['Valence', 'Arousal', 'Dominance', 'Unknown', 'Joy', 'Fear', 'Anger'],
+        )
     ),
     extensions=dict(
         dataframe='.csv',

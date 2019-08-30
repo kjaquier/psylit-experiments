@@ -3,15 +3,15 @@ from typing import Iterable
 
 import pyinform
 
-from .common import BaseCascadeExperiment, Setup
 from models.cascades import Cascades, FEATURE_TRANSFORMERS
-from utils.misc import path_remove_if_exists
+from .common import BaseCascadeExperiment, Setup
 
 
 @dataclass
 class BlockEntropy_StimulusResponse_Setup(Setup):
     k_values: Iterable[int]
     measure_name: str
+    window_size: int = 1
 
 
 class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
@@ -20,7 +20,7 @@ class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
     setup_class = BlockEntropy_StimulusResponse_Setup
     result_keys = {'persubj'}
 
-    def _execute(self, data):
+    def _execute(self, data, **kwargs):
         raw_casc: Cascades = data['cascades']
         
         transform_function = FEATURE_TRANSFORMERS['StimulusResponse']
@@ -32,6 +32,7 @@ class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
             measure_name=self.setup.measure_name,
             k_values=self.setup.k_values, 
             local=False,
+            window_size=self.setup.window_size,
         )
 
         return {

@@ -1,14 +1,14 @@
+from abc import ABC
 from dataclasses import dataclass
+from collections import defaultdict
 import logging
 import pathlib
-import datetime as dt
-from typing import Dict, Tuple, Set, Optional
+from typing import Dict, Set, Optional, Iterable, Tuple
 
 import pandas as pd
 
 from models.cascades import Cascades
 from utils.misc import path_remove_if_exists
-from utils.io import file_parts
 from parameters import EXPERIMENTS_PARAMETERS
 
 @dataclass
@@ -21,13 +21,13 @@ ResultType = Dict[str, pd.DataFrame]
 DataType = Dict[str, pd.DataFrame]
 
 
-class BaseExperiment:
+class BaseExperiment(ABC):
 
     exp_name = 'experiment'
     result_keys: Set[str] = set()
     setup_class = Setup
 
-    def __init__(self, setup: Setup, run_name:str, logger=logging.getLogger(), no_rerun=False):
+    def __init__(self, setup: Setup, run_name: str, logger=logging.getLogger(), no_rerun=False):
         self.setup = setup
         self.run_name = run_name
         self.results: Optional[ResultType] = None
@@ -40,22 +40,26 @@ class BaseExperiment:
             return
         
         data: DataType = self._load_data()
-        results = self._execute(data)
+        results = self._execute(data, **kwargs)
 
         obtained_result_keys = set(results.keys())
         assert self.result_keys == obtained_result_keys, f"Missing result keys: {self.result_keys - obtained_result_keys!r}"
 
         self.results = results
 
+    @classmethod
+    def make_setup(cls, *args, **kwargs):
+        return cls.setup_class(*args, **kwargs)
+
     def _load_data(self):
         raise NotImplementedError()
     
-    def _execute(self, data):
+    def _execute(self, data, **kwargs):
         raise NotImplementedError() 
 
-    def __call__(self):
-        # TODO chain experiments
-        raise NotImplementedError()
+    # def __call__(self):
+    #     # for chaining experiments
+    #     raise NotImplementedError()
 
     @classmethod
     def _get_path_for_result(cls, output_path, run_name, res_name, res_type):
@@ -69,14 +73,29 @@ class BaseExperiment:
 
     @classmethod
     def _get_run_output_dir(cls, output_path, run_name):
-        return output_path / cls.exp_name / run_name
+        return output_path / cls.get_exp_name() / run_name
+
+    @classmethod
+    def find_run_names(cls, output_path):
+        return list(p.name for p in (output_path / cls.get_exp_name()).iterdir())
+
+    @classmethod
+    def clear_missing_results(cls, output_path):
+        for run_name in cls.find_run_names(output_path):
+            d = cls._get_run_output_dir(output_path, run_name)
+            if not list(d.iterdir()):
+                logging.info("Remove %d", d)
+                d.rmdir()
+
+    @classmethod
+    def get_exp_name(cls):
+        return cls.exp_name
 
     @staticmethod
     def _get_format_for_type(data_type):
         if issubclass(data_type, pd.DataFrame):
             return EXPERIMENTS_PARAMETERS['extensions']['dataframe']
-        else:
-            raise KeyError(f'No format implemented for type {data_type}')
+        raise KeyError(f'No format implemented for type {data_type}')
 
     def save_results(self):
         if not self.results:
@@ -92,15 +111,39 @@ class BaseExperiment:
             res_value.to_csv(output_filename)  # TODO separate class for reading/writing data in different formats
 
     @classmethod
-    def load_results(cls, output_path, run_name):
+    def load_results_for_run(cls, output_path, run_name):
         if not cls._has_already_run(output_path, run_name):
             raise Exception(f"No results found in '{output_path}' for run '{run_name}'")
         results = {}
         for res_name in cls.result_keys:
             filename = cls._get_path_for_result(output_path, run_name, res_name, pd.DataFrame)
             logging.info("Loading %s", filename)
-            results[res_name] = pd.read_csv(filename)
+            results[res_name] = pd.read_csv(filename, index_col=False)
         return results
+
+    @classmethod
+    def load_all_results(cls, output_path, run_col_name='Run', **kwargs):
+        run_names = cls.find_run_names(output_path)
+        results_collection = (
+            (rname, cls.load_results_for_run(output_path, rname))
+            for rname in run_names
+        )
+        return cls.concat_results(results_collection, run_col_name, **kwargs)
+
+    @classmethod
+    def concat_results(cls, results_collection: Iterable[Tuple[str, ResultType]], run_col_name='Run', **kwargs):
+        """Put together results from several runs,
+        adding run name to the index"""
+        concat = defaultdict(list)
+        for run_name, results in results_collection:
+            for res_name, res_df in results.items():
+                concat[res_name].append(res_df
+                                        .assign(**{run_col_name: run_name})
+                                        .set_index(run_col_name, append=True))
+        return {
+            k: pd.concat(v, sort=True, **kwargs)
+            for k, v in concat.items()
+        }
 
 
 class BaseCascadeExperiment(BaseExperiment):
@@ -109,6 +152,5 @@ class BaseCascadeExperiment(BaseExperiment):
 
     def _load_data(self):
         data_source = self.setup.data_source
-        doc_name = file_parts(data_source['doc_path'])[0]
         raw_casc = Cascades.from_csv(data_source['doc_path'])
         return {'cascades': raw_casc}

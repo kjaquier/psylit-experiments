@@ -62,12 +62,24 @@
             "name": "Block entropy (dev)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}\\src\\single_measure.py",
+            "program": "${workspaceFolder}\\src\\run_experiment.py",
             "console": "integratedTerminal",
             "args": [
-                "block_entropy",
+                "BlockEntropy_StimulusResponse",
                 "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
                 "data\\block_entropy"
+            ]
+        },
+        {
+            "name": "Transfer entropy (dev)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\run_experiment.py",
+            "console": "integratedTerminal",
+            "args": [
+                "TransferEntropy_StimulusResponse",
+                "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
+                "data\\analytics"
             ]
         }
     ]
