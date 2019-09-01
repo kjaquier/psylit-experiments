@@ -1,0 +1,1864 @@
+,Subject,Category,Feature,k,$H(k)$
+0,clarissa,Other,Unknown,1,0.1953448384711223
+1,clarissa,Other,Unknown,3,0.5556701704616143
+2,clarissa,Other,Unknown,5,0.9026620140340997
+3,clarissa,Other,Unknown,7,1.2426278184890787
+4,clarissa,Other,Unknown,9,1.5684554991076005
+5,clarissa,Other,Unknown,16,2.622614170795755
+6,clarissa,Other,Unknown,21,3.3172130628733396
+7,clarissa,Other,Unknown,26,3.9662615065963913
+8,clarissa,Other,Unknown,31,4.566644861435486
+9,clarissa,Response,Anger,1,0.02388498432520531
+10,clarissa,Response,Anger,3,0.07064836918947853
+11,clarissa,Response,Anger,5,0.11675199177121481
+12,clarissa,Response,Anger,7,0.1618734274499703
+13,clarissa,Response,Anger,9,0.2059903201516188
+14,clarissa,Response,Anger,16,0.34986173596578785
+15,clarissa,Response,Anger,21,0.44550856525640264
+16,clarissa,Response,Anger,26,0.5360993381130189
+17,clarissa,Response,Anger,31,0.62245152392785
+18,clarissa,Response,Anticipation,1,0.05462114424178787
+19,clarissa,Response,Anticipation,3,0.15916426679966145
+20,clarissa,Response,Anticipation,5,0.26103214659621726
+21,clarissa,Response,Anticipation,7,0.36000965350079955
+22,clarissa,Response,Anticipation,9,0.4526005273592964
+23,clarissa,Response,Anticipation,16,0.75664730642875
+24,clarissa,Response,Anticipation,21,0.9559946520469174
+25,clarissa,Response,Anticipation,26,1.1385439389022967
+26,clarissa,Response,Anticipation,31,1.3109599506931928
+27,clarissa,Response,Arousal,1,0.13081000778201346
+28,clarissa,Response,Arousal,3,0.3764293564576787
+29,clarissa,Response,Arousal,5,0.6097742919068202
+30,clarissa,Response,Arousal,7,0.8338090324651402
+31,clarissa,Response,Arousal,9,1.0486382228038102
+32,clarissa,Response,Arousal,16,1.7205046389161593
+33,clarissa,Response,Arousal,21,2.114621945988178
+34,clarissa,Response,Arousal,26,2.4368747106705513
+35,clarissa,Response,Arousal,31,2.7077388445591613
+36,clarissa,Response,Disgust,1,0.01658784586104427
+37,clarissa,Response,Disgust,3,0.049760255901169836
+38,clarissa,Response,Disgust,5,0.08292824749482494
+39,clarissa,Response,Disgust,7,0.11609176888641334
+40,clarissa,Response,Disgust,9,0.14925076796183495
+41,clarissa,Response,Disgust,16,0.2625374739325926
+42,clarissa,Response,Disgust,21,0.34069606061311813
+43,clarissa,Response,Disgust,26,0.41608748932942613
+44,clarissa,Response,Disgust,31,0.4869150773970222
+45,clarissa,Response,Dominance,1,0.2005847303947924
+46,clarissa,Response,Dominance,3,0.5579767249823955
+47,clarissa,Response,Dominance,5,0.8905464221278909
+48,clarissa,Response,Dominance,7,1.2043733228514926
+49,clarissa,Response,Dominance,9,1.492261228871164
+50,clarissa,Response,Dominance,16,2.2809297651964617
+51,clarissa,Response,Dominance,21,2.6677813716693923
+52,clarissa,Response,Dominance,26,2.9778664619220936
+53,clarissa,Response,Dominance,31,3.237363558921126
+54,clarissa,Response,Fear,1,0.02388498432520531
+55,clarissa,Response,Fear,3,0.06935177413956468
+56,clarissa,Response,Fear,5,0.11312969510240516
+57,clarissa,Response,Fear,7,0.15597810373645102
+58,clarissa,Response,Fear,9,0.19766048492210245
+59,clarissa,Response,Fear,16,0.33768910802432855
+60,clarissa,Response,Fear,21,0.4346566744454339
+61,clarissa,Response,Fear,26,0.5291742010292263
+62,clarissa,Response,Fear,31,0.6222152546993373
+63,clarissa,Response,Joy,1,0.0418124554975132
+64,clarissa,Response,Joy,3,0.12173564969515234
+65,clarissa,Response,Joy,5,0.1991044588861966
+66,clarissa,Response,Joy,7,0.2747792220149432
+67,clarissa,Response,Joy,9,0.3479761981849288
+68,clarissa,Response,Joy,16,0.5928531518195782
+69,clarissa,Response,Joy,21,0.7549068470041362
+70,clarissa,Response,Joy,26,0.9096942026452454
+71,clarissa,Response,Joy,31,1.055283966863293
+72,clarissa,Response,Sadness,1,0.02941997623272033
+73,clarissa,Response,Sadness,3,0.08683417649617672
+74,clarissa,Response,Sadness,5,0.14312808285635947
+75,clarissa,Response,Sadness,7,0.19764698485821813
+76,clarissa,Response,Sadness,9,0.2513470269927656
+77,clarissa,Response,Sadness,16,0.4361867734537124
+78,clarissa,Response,Sadness,21,0.5667869912271519
+79,clarissa,Response,Sadness,26,0.6958228282749953
+80,clarissa,Response,Sadness,31,0.8213055354208402
+81,clarissa,Response,Surprise,1,0.025290516770986288
+82,clarissa,Response,Surprise,3,0.0752898650833378
+83,clarissa,Response,Surprise,5,0.1246463859621317
+84,clarissa,Response,Surprise,7,0.17374484887982783
+85,clarissa,Response,Surprise,9,0.22136694156471312
+86,clarissa,Response,Surprise,16,0.38669161221782933
+87,clarissa,Response,Surprise,21,0.5037009054852551
+88,clarissa,Response,Surprise,26,0.6205207366492396
+89,clarissa,Response,Surprise,31,0.7372462883681369
+90,clarissa,Response,Trust,1,0.0480095806667615
+91,clarissa,Response,Trust,3,0.14077749147388463
+92,clarissa,Response,Trust,5,0.2307241253240303
+93,clarissa,Response,Trust,7,0.3177048611182936
+94,clarissa,Response,Trust,9,0.4034715288940443
+95,clarissa,Response,Trust,16,0.6917629319458158
+96,clarissa,Response,Trust,21,0.8823834250230421
+97,clarissa,Response,Trust,26,1.065010780655296
+98,clarissa,Response,Trust,31,1.238217111200253
+99,clarissa,Response,Valence,1,0.2414751686905796
+100,clarissa,Response,Valence,3,0.6523465954257125
+101,clarissa,Response,Valence,5,1.030034541596698
+102,clarissa,Response,Valence,7,1.3864474045882833
+103,clarissa,Response,Valence,9,1.7060065001536957
+104,clarissa,Response,Valence,16,2.5206323786424827
+105,clarissa,Response,Valence,21,2.8837879318551694
+106,clarissa,Response,Valence,26,3.1695967307875828
+107,clarissa,Response,Valence,31,3.405892710998526
+108,clarissa,Stimulus,Anger,1,0.2187130983937624
+109,clarissa,Stimulus,Anger,3,0.6543891314929272
+110,clarissa,Stimulus,Anger,5,1.0890407660603547
+111,clarissa,Stimulus,Anger,7,1.521458747385778
+112,clarissa,Stimulus,Anger,9,1.9509266153993865
+113,clarissa,Stimulus,Anger,16,3.4277968162532484
+114,clarissa,Stimulus,Anger,21,4.431958411427201
+115,clarissa,Stimulus,Anger,26,5.379582800674229
+116,clarissa,Stimulus,Anger,31,6.263150985888549
+117,clarissa,Stimulus,Anticipation,1,0.3543857025003123
+118,clarissa,Stimulus,Anticipation,3,1.0614667900345027
+119,clarissa,Stimulus,Anticipation,5,1.7666603083849215
+120,clarissa,Stimulus,Anticipation,7,2.4668422940954864
+121,clarissa,Stimulus,Anticipation,9,3.1575043111117207
+122,clarissa,Stimulus,Anticipation,16,5.4736364447406345
+123,clarissa,Stimulus,Anticipation,21,6.96739218616526
+124,clarissa,Stimulus,Anticipation,26,8.304397076092108
+125,clarissa,Stimulus,Anticipation,31,9.433799849017113
+126,clarissa,Stimulus,Arousal,1,0.7346907961780729
+127,clarissa,Stimulus,Arousal,3,2.196204912245875
+128,clarissa,Stimulus,Arousal,5,3.6550461809802295
+129,clarissa,Stimulus,Arousal,7,5.109496732814699
+130,clarissa,Stimulus,Arousal,9,6.545995497507263
+131,clarissa,Stimulus,Arousal,16,10.752690209455018
+132,clarissa,Stimulus,Arousal,21,12.362719341936337
+133,clarissa,Stimulus,Arousal,26,13.079376224573506
+134,clarissa,Stimulus,Arousal,31,13.39331162027691
+135,clarissa,Stimulus,Disgust,1,0.16871440279217406
+136,clarissa,Stimulus,Disgust,3,0.5035910379519277
+137,clarissa,Stimulus,Disgust,5,0.8369989778221888
+138,clarissa,Stimulus,Disgust,7,1.1687358424352496
+139,clarissa,Stimulus,Disgust,9,1.498291103810644
+140,clarissa,Stimulus,Disgust,16,2.6301170056767456
+141,clarissa,Stimulus,Disgust,21,3.4015069103904017
+142,clarissa,Stimulus,Disgust,26,4.134049205395846
+143,clarissa,Stimulus,Disgust,31,4.825604649976603
+144,clarissa,Stimulus,Dominance,1,0.9186730858561596
+145,clarissa,Stimulus,Dominance,3,2.748330426116491
+146,clarissa,Stimulus,Dominance,5,4.570555061155693
+147,clarissa,Stimulus,Dominance,7,6.385502392893872
+148,clarissa,Stimulus,Dominance,9,8.18150830596299
+149,clarissa,Stimulus,Dominance,16,12.664838764094156
+150,clarissa,Stimulus,Dominance,21,13.373418820412784
+151,clarissa,Stimulus,Dominance,26,13.530109941472709
+152,clarissa,Stimulus,Dominance,31,13.572071167125559
+153,clarissa,Stimulus,Fear,1,0.2503245297761252
+154,clarissa,Stimulus,Fear,3,0.7477279184852027
+155,clarissa,Stimulus,Fear,5,1.2432238041760586
+156,clarissa,Stimulus,Fear,7,1.7350050445444776
+157,clarissa,Stimulus,Fear,9,2.2212532394813036
+158,clarissa,Stimulus,Fear,16,3.8575913024786987
+159,clarissa,Stimulus,Fear,21,4.951597975981233
+160,clarissa,Stimulus,Fear,26,5.972068832355574
+161,clarissa,Stimulus,Fear,31,6.9093113282185445
+162,clarissa,Stimulus,Joy,1,0.2963698926350214
+163,clarissa,Stimulus,Joy,3,0.8857114070340635
+164,clarissa,Stimulus,Joy,5,1.4728330152760296
+165,clarissa,Stimulus,Joy,7,2.056899361713578
+166,clarissa,Stimulus,Joy,9,2.637054632115397
+167,clarissa,Stimulus,Joy,16,4.599610209713795
+168,clarissa,Stimulus,Joy,21,5.889660215287979
+169,clarissa,Stimulus,Joy,26,7.057617141128149
+170,clarissa,Stimulus,Joy,31,8.090138122132904
+171,clarissa,Stimulus,Sadness,1,0.25723347564258064
+172,clarissa,Stimulus,Sadness,3,0.7701934200384457
+173,clarissa,Stimulus,Sadness,5,1.2814290384855687
+174,clarissa,Stimulus,Sadness,7,1.7907029487263726
+175,clarissa,Stimulus,Sadness,9,2.2964028583746097
+176,clarissa,Stimulus,Sadness,16,4.017751171923157
+177,clarissa,Stimulus,Sadness,21,5.17718869282629
+178,clarissa,Stimulus,Sadness,26,6.257663284026978
+179,clarissa,Stimulus,Sadness,31,7.234012194100065
+180,clarissa,Stimulus,Surprise,1,0.20696154639772546
+181,clarissa,Stimulus,Surprise,3,0.6198684132968705
+182,clarissa,Stimulus,Surprise,5,1.0313690321920368
+183,clarissa,Stimulus,Surprise,7,1.4407926852813457
+184,clarissa,Stimulus,Surprise,9,1.8477675673734961
+185,clarissa,Stimulus,Surprise,16,3.2490730094487708
+186,clarissa,Stimulus,Surprise,21,4.2139444746899475
+187,clarissa,Stimulus,Surprise,26,5.13756150466524
+188,clarissa,Stimulus,Surprise,31,6.0128289014769525
+189,clarissa,Stimulus,Trust,1,0.30175576791950454
+190,clarissa,Stimulus,Trust,3,0.9013496126202435
+191,clarissa,Stimulus,Trust,5,1.4980151131529489
+192,clarissa,Stimulus,Trust,7,2.090466181248108
+193,clarissa,Stimulus,Trust,9,2.6786977605671805
+194,clarissa,Stimulus,Trust,16,4.66316162979533
+195,clarissa,Stimulus,Trust,21,5.9648650974312565
+196,clarissa,Stimulus,Trust,26,7.137218154214978
+197,clarissa,Stimulus,Trust,31,8.172645266108105
+198,clarissa,Stimulus,Valence,1,0.9776109415129701
+199,clarissa,Stimulus,Valence,3,2.913533156931542
+200,clarissa,Stimulus,Valence,5,4.835591355651604
+201,clarissa,Stimulus,Valence,7,6.7493879163499795
+202,clarissa,Stimulus,Valence,9,8.643169407272868
+203,clarissa,Stimulus,Valence,16,13.05335452520411
+204,clarissa,Stimulus,Valence,21,13.483038830704954
+205,clarissa,Stimulus,Valence,26,13.55796945711238
+206,clarissa,Stimulus,Valence,31,13.58198312477633
+207,dr. holmes,Other,Unknown,1,0.1953448384711223
+208,dr. holmes,Other,Unknown,3,0.5556701704616143
+209,dr. holmes,Other,Unknown,5,0.9026620140340997
+210,dr. holmes,Other,Unknown,7,1.2426278184890787
+211,dr. holmes,Other,Unknown,9,1.5684554991076005
+212,dr. holmes,Other,Unknown,16,2.622614170795755
+213,dr. holmes,Other,Unknown,21,3.3172130628733396
+214,dr. holmes,Other,Unknown,26,3.9662615065963913
+215,dr. holmes,Other,Unknown,31,4.566644861435486
+216,dr. holmes,Response,Anger,1,0.005144994889310926
+217,dr. holmes,Response,Anger,3,0.013450186385607915
+218,dr. holmes,Response,Anger,5,0.02043130437652394
+219,dr. holmes,Response,Anger,7,0.027414115223817422
+220,dr. holmes,Response,Anger,9,0.03439861936268235
+221,dr. holmes,Response,Anger,16,0.05885772479759986
+222,dr. holmes,Response,Anger,21,0.07634122766093837
+223,dr. holmes,Response,Anger,26,0.09383533259548903
+224,dr. holmes,Response,Anger,31,0.11134004636943289
+225,dr. holmes,Response,Anticipation,1,0.00948036449044838
+226,dr. holmes,Response,Anticipation,3,0.02798475819989951
+227,dr. holmes,Response,Anticipation,5,0.046020579671586195
+228,dr. holmes,Response,Anticipation,7,0.06404547539339928
+229,dr. holmes,Response,Anticipation,9,0.08207244359015375
+230,dr. holmes,Response,Anticipation,16,0.14518307783930026
+231,dr. holmes,Response,Anticipation,21,0.18979494801395005
+232,dr. holmes,Response,Anticipation,26,0.23096295665318803
+233,dr. holmes,Response,Anticipation,31,0.2691553931646575
+234,dr. holmes,Response,Arousal,1,0.02941997623272033
+235,dr. holmes,Response,Arousal,3,0.07830655468818713
+236,dr. holmes,Response,Arousal,5,0.12168730250027246
+237,dr. holmes,Response,Arousal,7,0.16358983337799285
+238,dr. holmes,Response,Arousal,9,0.2019098769702065
+239,dr. holmes,Response,Arousal,16,0.30809012854649087
+240,dr. holmes,Response,Arousal,21,0.3668139845563727
+241,dr. holmes,Response,Arousal,26,0.42092234495897385
+242,dr. holmes,Response,Arousal,31,0.4725424160153919
+243,dr. holmes,Response,Disgust,1,0.0012169521687139194
+244,dr. holmes,Response,Disgust,3,0.0036513625048603653
+245,dr. holmes,Response,Disgust,5,0.00608644774335382
+246,dr. holmes,Response,Disgust,7,0.008522208169196577
+247,dr. holmes,Response,Disgust,9,0.010958644067546295
+248,dr. holmes,Response,Disgust,16,0.01949149317835512
+249,dr. holmes,Response,Disgust,21,0.02559146036862939
+250,dr. holmes,Response,Disgust,26,0.03169566176527744
+251,dr. holmes,Response,Disgust,31,0.03780410184511812
+252,dr. holmes,Response,Dominance,1,0.04493509198211226
+253,dr. holmes,Response,Dominance,3,0.11695012049232142
+254,dr. holmes,Response,Dominance,5,0.17770195156712548
+255,dr. holmes,Response,Dominance,7,0.23310834679871986
+256,dr. holmes,Response,Dominance,9,0.28159869030632545
+257,dr. holmes,Response,Dominance,16,0.3982125158965445
+258,dr. holmes,Response,Dominance,21,0.4557922083992741
+259,dr. holmes,Response,Dominance,26,0.5095238817925376
+260,dr. holmes,Response,Dominance,31,0.5601628059960085
+261,dr. holmes,Response,Fear,1,0.005144994889310926
+262,dr. holmes,Response,Fear,3,0.01543649053404376
+263,dr. holmes,Response,Fear,5,0.025729993714025692
+264,dr. holmes,Response,Fear,7,0.03602550408332711
+265,dr. holmes,Response,Fear,9,0.04632302129320899
+266,dr. holmes,Response,Fear,16,0.08238013029617786
+267,dr. holmes,Response,Fear,21,0.10815024831877411
+268,dr. holmes,Response,Fear,26,0.13393289333284455
+269,dr. holmes,Response,Fear,31,0.1597280594984523
+270,dr. holmes,Response,Joy,1,0.013509998832253902
+271,dr. holmes,Response,Joy,3,0.03830845744445122
+272,dr. holmes,Response,Joy,5,0.0616794006315843
+273,dr. holmes,Response,Joy,7,0.08431519433132041
+274,dr. holmes,Response,Joy,9,0.10649760035089449
+275,dr. holmes,Response,Joy,16,0.1799660963012912
+276,dr. holmes,Response,Joy,21,0.22593920643839646
+277,dr. holmes,Response,Joy,26,0.26212592406059254
+278,dr. holmes,Response,Joy,31,0.2960642972153913
+279,dr. holmes,Response,Sadness,1,0.006046227226184793
+280,dr. holmes,Response,Sadness,3,0.018140256266538098
+281,dr. holmes,Response,Sadness,5,0.030236383858558057
+282,dr. holmes,Response,Sadness,7,0.04233460891867434
+283,dr. holmes,Response,Sadness,9,0.05443493035781689
+284,dr. holmes,Response,Sadness,16,0.09680254852643054
+285,dr. holmes,Response,Sadness,21,0.1270808212660405
+286,dr. holmes,Response,Sadness,26,0.1573721477387478
+287,dr. holmes,Response,Sadness,31,0.1876765101616125
+288,dr. holmes,Response,Surprise,1,0.007792819263269474
+289,dr. holmes,Response,Surprise,3,0.02233748008805931
+290,dr. holmes,Response,Surprise,5,0.035420199321592134
+291,dr. holmes,Response,Surprise,7,0.048150384437113135
+292,dr. holmes,Response,Surprise,9,0.06088287005979686
+293,dr. holmes,Response,Surprise,16,0.10487943671582178
+294,dr. holmes,Response,Surprise,21,0.13299437139080908
+295,dr. holmes,Response,Surprise,26,0.158311461525802
+296,dr. holmes,Response,Surprise,31,0.1835545982892504
+297,dr. holmes,Response,Trust,1,0.013509998832253902
+298,dr. holmes,Response,Trust,3,0.039803837964106824
+299,dr. holmes,Response,Trust,5,0.06492817790864294
+300,dr. holmes,Response,Trust,7,0.08918177993114808
+301,dr. holmes,Response,Trust,9,0.11171365790059046
+302,dr. holmes,Response,Trust,16,0.17923793887177938
+303,dr. holmes,Response,Trust,21,0.22158401267247296
+304,dr. holmes,Response,Trust,26,0.2553514930333463
+305,dr. holmes,Response,Trust,31,0.2881794392371335
+306,dr. holmes,Response,Valence,1,0.055212614480948205
+307,dr. holmes,Response,Valence,3,0.13763765336531528
+308,dr. holmes,Response,Valence,5,0.20779992020038618
+309,dr. holmes,Response,Valence,7,0.2712071185984967
+310,dr. holmes,Response,Valence,9,0.3261707110777509
+311,dr. holmes,Response,Valence,16,0.46857141395328095
+312,dr. holmes,Response,Valence,21,0.5422367855196077
+313,dr. holmes,Response,Valence,26,0.6110687854641587
+314,dr. holmes,Response,Valence,31,0.677312726660327
+315,dr. holmes,Stimulus,Anger,1,0.22564187520804946
+316,dr. holmes,Stimulus,Anger,3,0.6753345589544721
+317,dr. holmes,Stimulus,Anger,5,1.1240668943318533
+318,dr. holmes,Stimulus,Anger,7,1.5703885863507347
+319,dr. holmes,Stimulus,Anger,9,2.013154916274856
+320,dr. holmes,Stimulus,Anger,16,3.5311072167324453
+321,dr. holmes,Stimulus,Anger,21,4.561703077681422
+322,dr. holmes,Stimulus,Anger,26,5.535614453331165
+323,dr. holmes,Stimulus,Anger,31,6.441232422196509
+324,dr. holmes,Stimulus,Anticipation,1,0.3713820635757707
+325,dr. holmes,Stimulus,Anticipation,3,1.112290685354621
+326,dr. holmes,Stimulus,Anticipation,5,1.851061857408811
+327,dr. holmes,Stimulus,Anticipation,7,2.583941339919949
+328,dr. holmes,Stimulus,Anticipation,9,3.3072062581342965
+329,dr. holmes,Stimulus,Anticipation,16,5.724183530936967
+330,dr. holmes,Stimulus,Anticipation,21,7.27554276406272
+331,dr. holmes,Stimulus,Anticipation,26,8.645106267034501
+332,dr. holmes,Stimulus,Anticipation,31,9.779697959267391
+333,dr. holmes,Stimulus,Arousal,1,0.7567387820409195
+334,dr. holmes,Stimulus,Arousal,3,2.2636906008607562
+335,dr. holmes,Stimulus,Arousal,5,3.7684391176531924
+336,dr. holmes,Stimulus,Arousal,7,5.268228977445092
+337,dr. holmes,Stimulus,Arousal,9,6.750565800783104
+338,dr. holmes,Stimulus,Arousal,16,11.06327867385151
+339,dr. holmes,Stimulus,Arousal,21,12.619334475474195
+340,dr. holmes,Stimulus,Arousal,26,13.262824845538264
+341,dr. holmes,Stimulus,Arousal,31,13.494039011487569
+342,dr. holmes,Stimulus,Disgust,1,0.17339642745176534
+343,dr. holmes,Stimulus,Disgust,3,0.517938764179618
+344,dr. holmes,Stimulus,Disgust,5,0.8610383738603834
+345,dr. holmes,Stimulus,Disgust,7,1.2024702563386676
+346,dr. holmes,Stimulus,Disgust,9,1.54175990877204
+347,dr. holmes,Stimulus,Disgust,16,2.706229169463006
+348,dr. holmes,Stimulus,Disgust,21,3.4972575232984893
+349,dr. holmes,Stimulus,Disgust,26,4.246224717154974
+350,dr. holmes,Stimulus,Disgust,31,4.949122995440644
+351,dr. holmes,Stimulus,Dominance,1,0.9380335266072395
+352,dr. holmes,Stimulus,Dominance,3,2.807615090747888
+353,dr. holmes,Stimulus,Dominance,5,4.671236529932544
+354,dr. holmes,Stimulus,Dominance,7,6.52894075745326
+355,dr. holmes,Stimulus,Dominance,9,8.36876691449975
+356,dr. holmes,Stimulus,Dominance,16,12.875013267726919
+357,dr. holmes,Stimulus,Dominance,21,13.462473922419228
+358,dr. holmes,Stimulus,Dominance,26,13.56394417057135
+359,dr. holmes,Stimulus,Dominance,31,13.583190251799339
+360,dr. holmes,Stimulus,Fear,1,0.2557859003577012
+361,dr. holmes,Stimulus,Fear,3,0.7635821056375992
+362,dr. holmes,Stimulus,Fear,5,1.269049366610629
+363,dr. holmes,Stimulus,Fear,7,1.7702210795694158
+364,dr. holmes,Stimulus,Fear,9,2.2657169209392394
+365,dr. holmes,Stimulus,Fear,16,3.9303321134997895
+366,dr. holmes,Stimulus,Fear,21,5.042424088717328
+367,dr. holmes,Stimulus,Fear,26,6.078060145436038
+368,dr. holmes,Stimulus,Fear,31,7.026527200211737
+369,dr. holmes,Stimulus,Joy,1,0.30543085213669185
+370,dr. holmes,Stimulus,Joy,3,0.9127254761205315
+371,dr. holmes,Stimulus,Joy,5,1.5174096995779096
+372,dr. holmes,Stimulus,Joy,7,2.119069374008788
+373,dr. holmes,Stimulus,Joy,9,2.7163279300345327
+374,dr. holmes,Stimulus,Joy,16,4.734876399376383
+375,dr. holmes,Stimulus,Joy,21,6.05643357120882
+376,dr. holmes,Stimulus,Joy,26,7.251372548025579
+377,dr. holmes,Stimulus,Joy,31,8.295692164051037
+378,dr. holmes,Stimulus,Sadness,1,0.2658431633266614
+379,dr. holmes,Stimulus,Sadness,3,0.7961472946267439
+380,dr. holmes,Stimulus,Sadness,5,1.3247397557029048
+381,dr. holmes,Stimulus,Sadness,7,1.8507220900888004
+382,dr. holmes,Stimulus,Sadness,9,2.3725128338069843
+383,dr. holmes,Stimulus,Sadness,16,4.141629273953416
+384,dr. holmes,Stimulus,Sadness,21,5.323611093673865
+385,dr. holmes,Stimulus,Sadness,26,6.417032744074906
+386,dr. holmes,Stimulus,Sadness,31,7.401366460243758
+387,dr. holmes,Stimulus,Surprise,1,0.21365274009178037
+388,dr. holmes,Stimulus,Surprise,3,0.6399712273216283
+389,dr. holmes,Stimulus,Surprise,5,1.0652798846451124
+390,dr. holmes,Stimulus,Surprise,7,1.488758354255927
+391,dr. holmes,Stimulus,Surprise,9,1.9093488604307398
+392,dr. holmes,Stimulus,Surprise,16,3.354696449755247
+393,dr. holmes,Stimulus,Surprise,21,4.345119006371553
+394,dr. holmes,Stimulus,Surprise,26,5.284751706400508
+395,dr. holmes,Stimulus,Surprise,31,6.172650312472458
+396,dr. holmes,Stimulus,Trust,1,0.3133727092767822
+397,dr. holmes,Stimulus,Trust,3,0.9361132411582587
+398,dr. holmes,Stimulus,Trust,5,1.5558405723930988
+399,dr. holmes,Stimulus,Trust,7,2.1701694654792085
+400,dr. holmes,Stimulus,Trust,9,2.779318747374743
+401,dr. holmes,Stimulus,Trust,16,4.827243625975936
+402,dr. holmes,Stimulus,Trust,21,6.171743540435029
+403,dr. holmes,Stimulus,Trust,26,7.376402481684818
+404,dr. holmes,Stimulus,Trust,31,8.442376235666314
+405,dr. holmes,Stimulus,Valence,1,0.9890108508352637
+406,dr. holmes,Stimulus,Valence,3,2.949431508787018
+407,dr. holmes,Stimulus,Valence,5,4.899257151545492
+408,dr. holmes,Stimulus,Valence,7,6.843149952867681
+409,dr. holmes,Stimulus,Valence,9,8.768088014832328
+410,dr. holmes,Stimulus,Valence,16,13.195561099345595
+411,dr. holmes,Stimulus,Valence,21,13.532680858112023
+412,dr. holmes,Stimulus,Valence,26,13.576738629704966
+413,dr. holmes,Stimulus,Valence,31,13.586541405463342
+414,elizabeth,Other,Unknown,1,0.1953448384711223
+415,elizabeth,Other,Unknown,3,0.5556701704616143
+416,elizabeth,Other,Unknown,5,0.9026620140340997
+417,elizabeth,Other,Unknown,7,1.2426278184890787
+418,elizabeth,Other,Unknown,9,1.5684554991076005
+419,elizabeth,Other,Unknown,16,2.622614170795755
+420,elizabeth,Other,Unknown,21,3.3172130628733396
+421,elizabeth,Other,Unknown,26,3.9662615065963913
+422,elizabeth,Other,Unknown,31,4.566644861435486
+423,elizabeth,Response,Anger,1,0.006927897301054599
+424,elizabeth,Response,Anger,3,0.02078526887057917
+425,elizabeth,Response,Anger,5,0.03464474130046245
+426,elizabeth,Response,Anger,7,0.048506312466925834
+427,elizabeth,Response,Anger,9,0.06236998023661848
+428,elizabeth,Response,Anger,16,0.10763335021707177
+429,elizabeth,Response,Anger,21,0.13957192375334973
+430,elizabeth,Response,Anger,26,0.17144651814893747
+431,elizabeth,Response,Anger,31,0.2033354234102725
+432,elizabeth,Response,Anticipation,1,0.018088314266229744
+433,elizabeth,Response,Anticipation,3,0.05247670030632452
+434,elizabeth,Response,Anticipation,5,0.0861610214872905
+435,elizabeth,Response,Anticipation,7,0.11890741187107447
+436,elizabeth,Response,Anticipation,9,0.150812929048907
+437,elizabeth,Response,Anticipation,16,0.2578372831521353
+438,elizabeth,Response,Anticipation,21,0.3320905125010204
+439,elizabeth,Response,Anticipation,26,0.4020274311811782
+440,elizabeth,Response,Anticipation,31,0.4704027670042887
+441,elizabeth,Response,Arousal,1,0.0575636165405964
+442,elizabeth,Response,Arousal,3,0.16303585917004673
+443,elizabeth,Response,Arousal,5,0.25827286564591073
+444,elizabeth,Response,Arousal,7,0.3423541284175635
+445,elizabeth,Response,Arousal,9,0.4202676508611696
+446,elizabeth,Response,Arousal,16,0.6354112507920743
+447,elizabeth,Response,Arousal,21,0.7534556043241941
+448,elizabeth,Response,Arousal,26,0.8489776184738324
+449,elizabeth,Response,Arousal,31,0.9310155091658372
+450,elizabeth,Response,Disgust,1,0.006046227226184793
+451,elizabeth,Response,Disgust,3,0.018140256266538098
+452,elizabeth,Response,Disgust,5,0.030236383858558057
+453,elizabeth,Response,Disgust,7,0.04233460891867434
+454,elizabeth,Response,Disgust,9,0.05443493035781689
+455,elizabeth,Response,Disgust,16,0.09680254852643054
+456,elizabeth,Response,Disgust,21,0.1270808212660405
+457,elizabeth,Response,Disgust,26,0.1573721477387478
+458,elizabeth,Response,Disgust,31,0.1876765101616125
+459,elizabeth,Response,Dominance,1,0.0868761438939853
+460,elizabeth,Response,Dominance,3,0.23474150291144455
+461,elizabeth,Response,Dominance,5,0.36632933491644565
+462,elizabeth,Response,Dominance,7,0.4829671473072372
+463,elizabeth,Response,Dominance,9,0.5870650769062644
+464,elizabeth,Response,Dominance,16,0.8460187409255056
+465,elizabeth,Response,Dominance,21,0.96981424599488
+466,elizabeth,Response,Dominance,26,1.0678567360007523
+467,elizabeth,Response,Dominance,31,1.1560009349849865
+468,elizabeth,Response,Fear,1,0.010305925718035654
+469,elizabeth,Response,Fear,3,0.030918722660296313
+470,elizabeth,Response,Fear,5,0.05153277194034668
+471,elizabeth,Response,Fear,7,0.07128046910732247
+472,elizabeth,Response,Fear,9,0.09102999411487565
+473,elizabeth,Response,Fear,16,0.1522766051865794
+474,elizabeth,Response,Fear,21,0.19563431270641857
+475,elizabeth,Response,Fear,26,0.238872307280738
+476,elizabeth,Response,Fear,31,0.28161463400112974
+477,elizabeth,Response,Joy,1,0.015062710805215014
+478,elizabeth,Response,Joy,3,0.040934809911714526
+479,elizabeth,Response,Joy,5,0.06568148935802125
+480,elizabeth,Response,Joy,7,0.08918180682434995
+481,elizabeth,Response,Joy,9,0.11245522596688386
+482,elizabeth,Response,Joy,16,0.19349552917976692
+483,elizabeth,Response,Joy,21,0.24418216833285605
+484,elizabeth,Response,Joy,26,0.29124687630145735
+485,elizabeth,Response,Joy,31,0.33780773212071596
+486,elizabeth,Response,Sadness,1,0.008643097250317859
+487,elizabeth,Response,Sadness,3,0.025930679498772237
+488,elizabeth,Response,Sadness,5,0.04322010771253223
+489,elizabeth,Response,Sadness,7,0.06051137663301104
+490,elizabeth,Response,Sadness,9,0.07780448097815289
+491,elizabeth,Response,Sadness,16,0.13339869066295876
+492,elizabeth,Response,Sadness,21,0.17166994593329274
+493,elizabeth,Response,Sadness,26,0.2097250669820378
+494,elizabeth,Response,Sadness,31,0.24770349663388105
+495,elizabeth,Response,Surprise,1,0.006927897301054599
+496,elizabeth,Response,Surprise,3,0.01967293992108787
+497,elizabeth,Response,Surprise,5,0.03240073264128767
+498,elizabeth,Response,Surprise,7,0.04362059458747785
+499,elizabeth,Response,Surprise,9,0.05450335756689512
+500,elizabeth,Response,Surprise,16,0.09261031543768707
+501,elizabeth,Response,Surprise,21,0.11984603059440777
+502,elizabeth,Response,Surprise,26,0.14709545715949587
+503,elizabeth,Response,Surprise,31,0.17435859071367116
+504,elizabeth,Response,Trust,1,0.011926017379960706
+505,elizabeth,Response,Trust,3,0.03251531308507438
+506,elizabeth,Response,Trust,5,0.05200170527256621
+507,elizabeth,Response,Trust,7,0.07021580800761355
+508,elizabeth,Response,Trust,9,0.08783623970673046
+509,elizabeth,Response,Trust,16,0.1494601570243071
+510,elizabeth,Response,Trust,21,0.19298509775779293
+511,elizabeth,Response,Trust,26,0.23271246460991205
+512,elizabeth,Response,Trust,31,0.2721610947876315
+513,elizabeth,Response,Valence,1,0.097740894852197
+514,elizabeth,Response,Valence,3,0.2653833520367925
+515,elizabeth,Response,Valence,5,0.41081838595940545
+516,elizabeth,Response,Valence,7,0.5379794543528474
+517,elizabeth,Response,Valence,9,0.6474262134781719
+518,elizabeth,Response,Valence,16,0.9065686622394847
+519,elizabeth,Response,Valence,21,1.0196564044005856
+520,elizabeth,Response,Valence,26,1.1124839116452223
+521,elizabeth,Response,Valence,31,1.202243573285763
+522,elizabeth,Stimulus,Anger,1,0.2252592638294627
+523,elizabeth,Stimulus,Anger,3,0.6740248750119668
+524,elizabeth,Stimulus,Anger,5,1.1220160098663585
+525,elizabeth,Stimulus,Anger,7,1.5675373251516205
+526,elizabeth,Stimulus,Anger,9,2.009468761906957
+527,elizabeth,Stimulus,Anger,16,3.524278231164319
+528,elizabeth,Stimulus,Anger,21,4.552136491187281
+529,elizabeth,Stimulus,Anger,26,5.519085601398899
+530,elizabeth,Stimulus,Anger,31,6.41760354966553
+531,elizabeth,Stimulus,Anticipation,1,0.36838053497671125
+532,elizabeth,Stimulus,Anticipation,3,1.1033847539755186
+533,elizabeth,Stimulus,Anticipation,5,1.8361237669252723
+534,elizabeth,Stimulus,Anticipation,7,2.562835104781672
+535,elizabeth,Stimulus,Anticipation,9,3.2802602427995877
+536,elizabeth,Stimulus,Anticipation,16,5.678641689257843
+537,elizabeth,Stimulus,Anticipation,21,7.217313108640423
+538,elizabeth,Stimulus,Anticipation,26,8.579684125332529
+539,elizabeth,Stimulus,Anticipation,31,9.712537138030097
+540,elizabeth,Stimulus,Arousal,1,0.7502774176633642
+541,elizabeth,Stimulus,Arousal,3,2.2430971908053357
+542,elizabeth,Stimulus,Arousal,5,3.7333883239403716
+543,elizabeth,Stimulus,Arousal,7,5.218826550217602
+544,elizabeth,Stimulus,Arousal,9,6.6863450088937215
+545,elizabeth,Stimulus,Arousal,16,10.967217560502775
+546,elizabeth,Stimulus,Arousal,21,12.53406479046463
+547,elizabeth,Stimulus,Arousal,26,13.19721999451525
+548,elizabeth,Stimulus,Arousal,31,13.449731866307902
+549,elizabeth,Stimulus,Disgust,1,0.17127394655587577
+550,elizabeth,Stimulus,Disgust,3,0.511437402444829
+551,elizabeth,Stimulus,Disgust,5,0.8500514295282422
+552,elizabeth,Stimulus,Disgust,7,1.1869870058939147
+553,elizabeth,Stimulus,Disgust,9,1.5217744925370704
+554,elizabeth,Stimulus,Disgust,16,2.670608325953453
+555,elizabeth,Stimulus,Disgust,21,3.4502148697041632
+556,elizabeth,Stimulus,Disgust,26,4.188184675566266
+557,elizabeth,Stimulus,Disgust,31,4.880128054978367
+558,elizabeth,Stimulus,Dominance,1,0.9332522158216181
+559,elizabeth,Stimulus,Dominance,3,2.7919167248563457
+560,elizabeth,Stimulus,Dominance,5,4.643753782575168
+561,elizabeth,Stimulus,Dominance,7,6.488729125712613
+562,elizabeth,Stimulus,Dominance,9,8.316362905407347
+563,elizabeth,Stimulus,Dominance,16,12.817268240092746
+564,elizabeth,Stimulus,Dominance,21,13.437271513182742
+565,elizabeth,Stimulus,Dominance,26,13.553639600559174
+566,elizabeth,Stimulus,Dominance,31,13.579822318736108
+567,elizabeth,Stimulus,Fear,1,0.2539712580001477
+568,elizabeth,Stimulus,Fear,3,0.7579688547377625
+569,elizabeth,Stimulus,Fear,5,1.2596879830968857
+570,elizabeth,Stimulus,Fear,7,1.7571949226424237
+571,elizabeth,Stimulus,Fear,9,2.248784226731297
+572,elizabeth,Stimulus,Fear,16,3.899793772151999
+573,elizabeth,Stimulus,Fear,21,5.000758753447328
+574,elizabeth,Stimulus,Fear,26,6.025275613158373
+575,elizabeth,Stimulus,Fear,31,6.964951908508711
+576,elizabeth,Stimulus,Joy,1,0.3050976749682493
+577,elizabeth,Stimulus,Joy,3,0.9119669795217574
+578,elizabeth,Stimulus,Joy,5,1.516275015863301
+579,elizabeth,Stimulus,Joy,7,2.117353192326327
+580,elizabeth,Stimulus,Joy,9,2.7142617052135294
+581,elizabeth,Stimulus,Joy,16,4.732197096471633
+582,elizabeth,Stimulus,Joy,21,6.053964251800036
+583,elizabeth,Stimulus,Joy,26,7.24712787560444
+584,elizabeth,Stimulus,Joy,31,8.281922391192543
+585,elizabeth,Stimulus,Sadness,1,0.2647739523287655
+586,elizabeth,Stimulus,Sadness,3,0.7927734835332149
+587,elizabeth,Stimulus,Sadness,5,1.3189989089509877
+588,elizabeth,Stimulus,Sadness,7,1.8425793413191973
+589,elizabeth,Stimulus,Sadness,9,2.36194742595432
+590,elizabeth,Stimulus,Sadness,16,4.12213545127404
+591,elizabeth,Stimulus,Sadness,21,5.297706957265856
+592,elizabeth,Stimulus,Sadness,26,6.384905912279506
+593,elizabeth,Stimulus,Sadness,31,7.363829807640942
+594,elizabeth,Stimulus,Surprise,1,0.2140437109315297
+595,elizabeth,Stimulus,Surprise,3,0.6411574298209506
+596,elizabeth,Stimulus,Surprise,5,1.067162890317832
+597,elizabeth,Stimulus,Surprise,7,1.4913859354685504
+598,elizabeth,Stimulus,Surprise,9,1.9133260938620935
+599,elizabeth,Stimulus,Surprise,16,3.364262218074123
+600,elizabeth,Stimulus,Surprise,21,4.359090933982646
+601,elizabeth,Stimulus,Surprise,26,5.303760573187966
+602,elizabeth,Stimulus,Surprise,31,6.198095383761028
+603,elizabeth,Stimulus,Trust,1,0.31402987431232043
+604,elizabeth,Stimulus,Trust,3,0.938516189727703
+605,elizabeth,Stimulus,Trust,5,1.5598739728982858
+606,elizabeth,Stimulus,Trust,7,2.175732888493096
+607,elizabeth,Stimulus,Trust,9,2.7863674946333057
+608,elizabeth,Stimulus,Trust,16,4.837836815296938
+609,elizabeth,Stimulus,Trust,21,6.178414149982988
+610,elizabeth,Stimulus,Trust,26,7.3753119580950495
+611,elizabeth,Stimulus,Trust,31,8.433815167603482
+612,elizabeth,Stimulus,Valence,1,0.9870488650773748
+613,elizabeth,Stimulus,Valence,3,2.940258976713418
+614,elizabeth,Stimulus,Valence,5,4.881200664120338
+615,elizabeth,Stimulus,Valence,7,6.816717278989863
+616,elizabeth,Stimulus,Valence,9,8.73432422996283
+617,elizabeth,Stimulus,Valence,16,13.167905660043802
+618,elizabeth,Stimulus,Valence,21,13.522839667924993
+619,elizabeth,Stimulus,Valence,26,13.57108180845907
+620,elizabeth,Stimulus,Valence,31,13.584532895321177
+621,hugh,Other,Unknown,1,0.1953448384711223
+622,hugh,Other,Unknown,3,0.5556701704616143
+623,hugh,Other,Unknown,5,0.9026620140340997
+624,hugh,Other,Unknown,7,1.2426278184890787
+625,hugh,Other,Unknown,9,1.5684554991076005
+626,hugh,Other,Unknown,16,2.622614170795755
+627,hugh,Other,Unknown,21,3.3172130628733396
+628,hugh,Other,Unknown,26,3.9662615065963913
+629,hugh,Other,Unknown,31,4.566644861435486
+630,hugh,Response,Anger,1,0.008643097250317859
+631,hugh,Response,Anger,3,0.024948896310409068
+632,hugh,Response,Anger,5,0.04124230483423904
+633,hugh,Response,Anger,7,0.05753795394638798
+634,hugh,Response,Anger,9,0.07383584023829055
+635,hugh,Response,Anger,16,0.13089601047680424
+636,hugh,Response,Anger,21,0.17166994593329274
+637,hugh,Response,Anger,26,0.2124577118719201
+638,hugh,Response,Anger,31,0.2516572797499401
+639,hugh,Response,Anticipation,1,0.017341005267916813
+640,hugh,Response,Anticipation,3,0.05065646139648307
+641,hugh,Response,Anticipation,5,0.08208959298432769
+642,hugh,Response,Anticipation,7,0.11201433920386775
+643,hugh,Response,Anticipation,9,0.13995347496433422
+644,hugh,Response,Anticipation,16,0.23321768983211358
+645,hugh,Response,Anticipation,21,0.29756865573722896
+646,hugh,Response,Anticipation,26,0.3569452314877486
+647,hugh,Response,Anticipation,31,0.4100994690208376
+648,hugh,Response,Arousal,1,0.040548984760934756
+649,hugh,Response,Arousal,3,0.11531151878237327
+650,hugh,Response,Arousal,5,0.18536704360336353
+651,hugh,Response,Arousal,7,0.250202794597499
+652,hugh,Response,Arousal,9,0.30877451861884014
+653,hugh,Response,Arousal,16,0.4724042339303953
+654,hugh,Response,Arousal,21,0.5595143077011074
+655,hugh,Response,Arousal,26,0.6330601627371201
+656,hugh,Response,Arousal,31,0.701808761251771
+657,hugh,Response,Disgust,1,0.007792819263269474
+658,hugh,Response,Disgust,3,0.023379972142647434
+659,hugh,Response,Disgust,5,0.037943565756849616
+660,hugh,Response,Disgust,7,0.05249273880103461
+661,hugh,Response,Disgust,9,0.06702748111278689
+662,hugh,Response,Disgust,16,0.11393888387831405
+663,hugh,Response,Disgust,21,0.14370640692313535
+664,hugh,Response,Disgust,26,0.17213018900205032
+665,hugh,Response,Disgust,31,0.19939712952650257
+666,hugh,Response,Dominance,1,0.054028147954193875
+667,hugh,Response,Dominance,3,0.14853382160528214
+668,hugh,Response,Dominance,5,0.23222292131433137
+669,hugh,Response,Dominance,7,0.30531927133201675
+670,hugh,Response,Dominance,9,0.367927511657051
+671,hugh,Response,Dominance,16,0.5277625131505352
+672,hugh,Response,Dominance,21,0.608378158376495
+673,hugh,Response,Dominance,26,0.6773845471098333
+674,hugh,Response,Dominance,31,0.7391232582135839
+675,hugh,Response,Fear,1,0.008643097250317859
+676,hugh,Response,Fear,3,0.025930679498772237
+677,hugh,Response,Fear,5,0.04322010771253223
+678,hugh,Response,Fear,7,0.05903202888362691
+679,hugh,Response,Fear,9,0.07378769723525946
+680,hugh,Response,Fear,16,0.12056317697061193
+681,hugh,Response,Fear,21,0.1506706272091081
+682,hugh,Response,Fear,26,0.1795758723569775
+683,hugh,Response,Fear,31,0.2083075899586507
+684,hugh,Response,Joy,1,0.014290010996676122
+685,hugh,Response,Joy,3,0.041816546568078296
+686,hugh,Response,Joy,5,0.06855936913458754
+687,hugh,Response,Joy,7,0.09248643558983093
+688,hugh,Response,Joy,9,0.1159086624215945
+689,hugh,Response,Joy,16,0.19224828889802267
+690,hugh,Response,Joy,21,0.24264417832303242
+691,hugh,Response,Joy,26,0.29148622073776365
+692,hugh,Response,Joy,31,0.3366187560731624
+693,hugh,Response,Sadness,1,0.006927897301054599
+694,hugh,Response,Sadness,3,0.02078526887057917
+695,hugh,Response,Sadness,5,0.03464474130046245
+696,hugh,Response,Sadness,7,0.048506312466925834
+697,hugh,Response,Sadness,9,0.06236998023661848
+698,hugh,Response,Sadness,16,0.10708732560909838
+699,hugh,Response,Sadness,21,0.13723154669592583
+700,hugh,Response,Sadness,26,0.16618134320946845
+701,hugh,Response,Sadness,31,0.1949576554392654
+702,hugh,Response,Surprise,1,0.00948036449044838
+703,hugh,Response,Surprise,3,0.028442291398525717
+704,hugh,Response,Surprise,5,0.047405809378294125
+705,hugh,Response,Surprise,7,0.06545637442337764
+706,hugh,Response,Surprise,9,0.08350901932993338
+707,hugh,Response,Surprise,16,0.14566588737641756
+708,hugh,Response,Surprise,21,0.18624103941430692
+709,hugh,Response,Surprise,26,0.224755624398672
+710,hugh,Response,Surprise,31,0.2628662945888467
+711,hugh,Response,Trust,1,0.01956646912517181
+712,hugh,Response,Trust,3,0.056271028006507476
+713,hugh,Response,Trust,5,0.09262917035020692
+714,hugh,Response,Trust,7,0.12548769085819317
+715,hugh,Response,Trust,9,0.1569950969616239
+716,hugh,Response,Trust,16,0.25621435057220826
+717,hugh,Response,Trust,21,0.313463288505016
+718,hugh,Response,Trust,26,0.3608332631247239
+719,hugh,Response,Trust,31,0.40078772373123495
+720,hugh,Response,Valence,1,0.06674831686337764
+721,hugh,Response,Valence,3,0.17509598210138988
+722,hugh,Response,Valence,5,0.2695135295569644
+723,hugh,Response,Valence,7,0.35375849960705763
+724,hugh,Response,Valence,9,0.4238904419993928
+725,hugh,Response,Valence,16,0.5917108295254587
+726,hugh,Response,Valence,21,0.6779346115008612
+727,hugh,Response,Valence,26,0.747904347259298
+728,hugh,Response,Valence,31,0.8083330978006991
+729,hugh,Stimulus,Anger,1,0.22410980812232756
+730,hugh,Stimulus,Anger,3,0.6706728659361637
+731,hugh,Stimulus,Anger,5,1.1163714821436155
+732,hugh,Stimulus,Anger,7,1.5593204644898657
+733,hugh,Stimulus,Anger,9,1.9991410057878147
+734,hugh,Stimulus,Anger,16,3.5077914731024897
+735,hugh,Stimulus,Anger,21,4.530514336575569
+736,hugh,Stimulus,Anger,26,5.494623312002428
+737,hugh,Stimulus,Anger,31,6.393538429446062
+738,hugh,Stimulus,Anticipation,1,0.36898198726806536
+739,hugh,Stimulus,Anticipation,3,1.1052886882878217
+740,hugh,Stimulus,Anticipation,5,1.8395512469472934
+741,hugh,Stimulus,Anticipation,7,2.5680754377005
+742,hugh,Stimulus,Anticipation,9,3.2876930634886627
+743,hugh,Stimulus,Anticipation,16,5.693523980902245
+744,hugh,Stimulus,Anticipation,21,7.240303097898325
+745,hugh,Stimulus,Anticipation,26,8.609611420937293
+746,hugh,Stimulus,Anticipation,31,9.74916592940986
+747,hugh,Stimulus,Arousal,1,0.7543465869865646
+748,hugh,Stimulus,Arousal,3,2.2556067932290933
+749,hugh,Stimulus,Arousal,5,3.7545247141262155
+750,hugh,Stimulus,Arousal,7,5.248591210584248
+751,hugh,Stimulus,Arousal,9,6.724670203428491
+752,hugh,Stimulus,Arousal,16,11.011316658242743
+753,hugh,Stimulus,Arousal,21,12.567683515693279
+754,hugh,Stimulus,Arousal,26,13.225138144278032
+755,hugh,Stimulus,Arousal,31,13.473342586769226
+756,hugh,Stimulus,Disgust,1,0.1708483138498101
+757,hugh,Stimulus,Disgust,3,0.5101330864038055
+758,hugh,Stimulus,Disgust,5,0.8480786909442198
+759,hugh,Stimulus,Disgust,7,1.1843407035239089
+760,hugh,Stimulus,Disgust,9,1.5184086679440425
+761,hugh,Stimulus,Disgust,16,2.6638742722145294
+762,hugh,Stimulus,Disgust,21,3.4421425807344446
+763,hugh,Stimulus,Disgust,26,4.179331241758087
+764,hugh,Stimulus,Disgust,31,4.872417369092223
+765,hugh,Stimulus,Dominance,1,0.9370498128830258
+766,hugh,Stimulus,Dominance,3,2.80379938234753
+767,hugh,Stimulus,Dominance,5,4.6645346330239645
+768,hugh,Stimulus,Dominance,7,6.518965346628895
+769,hugh,Stimulus,Dominance,9,8.3558883109459
+770,hugh,Stimulus,Dominance,16,12.857115811515742
+771,hugh,Stimulus,Dominance,21,13.453638686683698
+772,hugh,Stimulus,Dominance,26,13.560556138332025
+773,hugh,Stimulus,Dominance,31,13.58237889277297
+774,hugh,Stimulus,Fear,1,0.25433464853099846
+775,hugh,Stimulus,Fear,3,0.7593572034403812
+776,hugh,Stimulus,Fear,5,1.262161446170317
+777,hugh,Stimulus,Fear,7,1.7608666892123075
+778,hugh,Stimulus,Fear,9,2.253847198108269
+779,hugh,Stimulus,Fear,16,3.9128430367767
+780,hugh,Stimulus,Fear,21,5.019416399724739
+781,hugh,Stimulus,Fear,26,6.0483915377751405
+782,hugh,Stimulus,Fear,31,6.990602952179393
+783,hugh,Stimulus,Joy,1,0.3057638460590222
+784,hugh,Stimulus,Joy,3,0.9139990487485409
+785,hugh,Stimulus,Joy,5,1.520138087401559
+786,hugh,Stimulus,Joy,7,2.1232364341906846
+787,hugh,Stimulus,Joy,9,2.721993977713037
+788,hugh,Stimulus,Joy,16,4.74533859372366
+789,hugh,Stimulus,Joy,21,6.071065451838619
+790,hugh,Stimulus,Joy,26,7.271382007797816
+791,hugh,Stimulus,Joy,31,8.321905585630878
+792,hugh,Stimulus,Sadness,1,0.2651305754085203
+793,hugh,Stimulus,Sadness,3,0.7938611994197691
+794,hugh,Stimulus,Sadness,5,1.3208981126285462
+795,hugh,Stimulus,Sadness,7,1.845373912323504
+796,hugh,Stimulus,Sadness,9,2.3656466521223463
+797,hugh,Stimulus,Sadness,16,4.129691049530127
+798,hugh,Stimulus,Sadness,21,5.307292069234745
+799,hugh,Stimulus,Sadness,26,6.395564126559333
+800,hugh,Stimulus,Sadness,31,7.373886950206695
+801,hugh,Stimulus,Surprise,1,0.2140437109315297
+802,hugh,Stimulus,Surprise,3,0.6410127925209772
+803,hugh,Stimulus,Surprise,5,1.0668876265409766
+804,hugh,Stimulus,Surprise,7,1.4908372293886618
+805,hugh,Stimulus,Surprise,9,1.9121275524922
+806,hugh,Stimulus,Surprise,16,3.360339500894714
+807,hugh,Stimulus,Surprise,21,4.3533611532360235
+808,hugh,Stimulus,Surprise,26,5.2976468628607805
+809,hugh,Stimulus,Surprise,31,6.193482165471789
+810,hugh,Stimulus,Trust,1,0.3117266895710732
+811,hugh,Stimulus,Trust,3,0.9318029223564122
+812,hugh,Stimulus,Trust,5,1.5490723724198472
+813,hugh,Stimulus,Trust,7,2.1615331785691603
+814,hugh,Stimulus,Trust,9,2.7692955265461916
+815,hugh,Stimulus,Trust,16,4.8133298035842085
+816,hugh,Stimulus,Trust,21,6.152588648754576
+817,hugh,Stimulus,Trust,26,7.360574203710282
+818,hugh,Stimulus,Trust,31,8.42980725446551
+819,hugh,Stimulus,Valence,1,0.9885133962939163
+820,hugh,Stimulus,Valence,3,2.9476149176485875
+821,hugh,Stimulus,Valence,5,4.8957814282528025
+822,hugh,Stimulus,Valence,7,6.8379488180896075
+823,hugh,Stimulus,Valence,9,8.761172076975607
+824,hugh,Stimulus,Valence,16,13.188736352631135
+825,hugh,Stimulus,Valence,21,13.532098571197594
+826,hugh,Stimulus,Valence,26,13.574651416607358
+827,hugh,Stimulus,Valence,31,13.586541405463342
+828,peter,Other,Unknown,1,0.1953448384711223
+829,peter,Other,Unknown,3,0.5556701704616143
+830,peter,Other,Unknown,5,0.9026620140340997
+831,peter,Other,Unknown,7,1.2426278184890787
+832,peter,Other,Unknown,9,1.5684554991076005
+833,peter,Other,Unknown,16,2.622614170795755
+834,peter,Other,Unknown,21,3.3172130628733396
+835,peter,Other,Unknown,26,3.9662615065963913
+836,peter,Other,Unknown,31,4.566644861435486
+837,peter,Response,Anger,1,0.011926017379960706
+838,peter,Response,Anger,3,0.03577830691435829
+839,peter,Response,Anger,5,0.05963092222282343
+840,peter,Response,Anger,7,0.08309095177200714
+841,peter,Response,Anger,9,0.10615896068965767
+842,peter,Response,Anger,16,0.18604302668226358
+843,peter,Response,Anger,21,0.2416015524796312
+844,peter,Response,Anger,26,0.2953569560162647
+845,peter,Response,Anger,31,0.34858842728473266
+846,peter,Response,Anticipation,1,0.030770134439570662
+847,peter,Response,Anticipation,3,0.09058071960146195
+848,peter,Response,Anticipation,5,0.1483235766598443
+849,peter,Response,Anticipation,7,0.20337962789203887
+850,peter,Response,Anticipation,9,0.25544689501165596
+851,peter,Response,Anticipation,16,0.42333475928692593
+852,peter,Response,Anticipation,21,0.5299870425551506
+853,peter,Response,Anticipation,26,0.6317812921217623
+854,peter,Response,Anticipation,31,0.7267016259553349
+855,peter,Response,Arousal,1,0.07122183655989306
+856,peter,Response,Arousal,3,0.20276498790325018
+857,peter,Response,Arousal,5,0.32270918940802334
+858,peter,Response,Arousal,7,0.4336227340769156
+859,peter,Response,Arousal,9,0.5382149582020626
+860,peter,Response,Arousal,16,0.8651723980115547
+861,peter,Response,Arousal,21,1.059149654633303
+862,peter,Response,Arousal,26,1.2331567852121652
+863,peter,Response,Arousal,31,1.3962693145278666
+864,peter,Response,Disgust,1,0.013509998832253902
+865,peter,Response,Disgust,3,0.04052931512017383
+866,peter,Response,Disgust,5,0.06718938830061351
+867,peter,Response,Disgust,7,0.09311610589992948
+868,peter,Response,Disgust,9,0.11866029231764022
+869,peter,Response,Disgust,16,0.20711120944959927
+870,peter,Response,Disgust,21,0.2687863020001398
+871,peter,Response,Disgust,26,0.3303463961328302
+872,peter,Response,Disgust,31,0.3918802661588246
+873,peter,Response,Dominance,1,0.11024133319639921
+874,peter,Response,Dominance,3,0.30837111074123214
+875,peter,Response,Dominance,5,0.48812013614172145
+876,peter,Response,Dominance,7,0.6554068618294886
+877,peter,Response,Dominance,9,0.8056175539650536
+878,peter,Response,Dominance,16,1.2315366462699162
+879,peter,Response,Dominance,21,1.4655039161802998
+880,peter,Response,Dominance,26,1.668355727579014
+881,peter,Response,Dominance,31,1.8474152365562886
+882,peter,Response,Fear,1,0.015062710805215014
+883,peter,Response,Fear,3,0.044522336662731116
+884,peter,Response,Fear,5,0.072914050417448
+885,peter,Response,Fear,7,0.09967396643545108
+886,peter,Response,Fear,9,0.1260156687404775
+887,peter,Response,Fear,16,0.21759573856984424
+888,peter,Response,Fear,21,0.280396271209369
+889,peter,Response,Fear,26,0.34148888161463115
+890,peter,Response,Fear,31,0.40083091693694967
+891,peter,Response,Joy,1,0.021024252588259143
+892,peter,Response,Joy,3,0.06175719595850508
+893,peter,Response,Joy,5,0.10192887010427841
+894,peter,Response,Joy,7,0.14206579237451322
+895,peter,Response,Joy,9,0.18136037863520338
+896,peter,Response,Joy,16,0.3167441916330672
+897,peter,Response,Joy,21,0.4090574975072516
+898,peter,Response,Joy,26,0.4965872967094192
+899,peter,Response,Joy,31,0.5826145163532691
+900,peter,Response,Sadness,1,0.015828528351149482
+901,peter,Response,Sadness,3,0.04584427191939029
+902,peter,Response,Sadness,5,0.07475363682810383
+903,peter,Response,Sadness,7,0.10231996429616275
+904,peter,Response,Sadness,9,0.12942871062375164
+905,peter,Response,Sadness,16,0.22325231606978962
+906,peter,Response,Sadness,21,0.2885699211336846
+907,peter,Response,Sadness,26,0.3537496923570516
+908,peter,Response,Sadness,31,0.4188973237885976
+909,peter,Response,Surprise,1,0.012722186752604897
+910,peter,Response,Surprise,3,0.037406803201918706
+911,peter,Response,Surprise,5,0.06208302026960781
+912,peter,Response,Surprise,7,0.08636692727704613
+913,peter,Response,Surprise,9,0.11022009574261976
+914,peter,Response,Surprise,16,0.1910978456218641
+915,peter,Response,Surprise,21,0.24706003977144375
+916,peter,Response,Surprise,26,0.30126285839032985
+917,peter,Response,Surprise,31,0.3542557899008755
+918,peter,Response,Trust,1,0.018830051211121964
+919,peter,Response,Trust,3,0.05566858984637111
+920,peter,Response,Trust,5,0.09190050541421818
+921,peter,Response,Trust,7,0.12749514752072602
+922,peter,Response,Trust,9,0.162726727650943
+923,peter,Response,Trust,16,0.28312692068657713
+924,peter,Response,Trust,21,0.36659275969019284
+925,peter,Response,Trust,26,0.44865839333990404
+926,peter,Response,Trust,31,0.5293564626539917
+927,peter,Response,Valence,1,0.1322060238418822
+928,peter,Response,Valence,3,0.36321574081181235
+929,peter,Response,Valence,5,0.5678318322649947
+930,peter,Response,Valence,7,0.757846050891113
+931,peter,Response,Valence,9,0.9292336061119529
+932,peter,Response,Valence,16,1.3862125900428117
+933,peter,Response,Valence,21,1.6112653173068883
+934,peter,Response,Valence,26,1.801184790117916
+935,peter,Response,Valence,31,1.9785338551023197
+936,peter,Stimulus,Anger,1,0.22334214717867062
+937,peter,Stimulus,Anger,3,0.6681811046156381
+938,peter,Stimulus,Anger,5,1.1122072872228352
+939,peter,Stimulus,Anger,7,1.5536539797654894
+940,peter,Stimulus,Anger,9,1.9914141647663752
+941,peter,Stimulus,Anger,16,3.4916376050480045
+942,peter,Stimulus,Anger,21,4.509978021073676
+943,peter,Stimulus,Anger,26,5.46981513280803
+944,peter,Stimulus,Anger,31,6.36211792830588
+945,peter,Stimulus,Anticipation,1,0.3644570073037514
+946,peter,Stimulus,Anticipation,3,1.0914085063544807
+947,peter,Stimulus,Anticipation,5,1.816028877789127
+948,peter,Stimulus,Anticipation,7,2.5346431130647673
+949,peter,Stimulus,Anticipation,9,3.243860077162769
+950,peter,Stimulus,Anticipation,16,5.61384652254478
+951,peter,Stimulus,Anticipation,21,7.142212734094396
+952,peter,Stimulus,Anticipation,26,8.50086813052295
+953,peter,Stimulus,Anticipation,31,9.637612084624493
+954,peter,Stimulus,Arousal,1,0.7483036294724732
+955,peter,Stimulus,Arousal,3,2.238088862661648
+956,peter,Stimulus,Arousal,5,3.725279474112157
+957,peter,Stimulus,Arousal,7,5.207734470590445
+958,peter,Stimulus,Arousal,9,6.672555686090715
+959,peter,Stimulus,Arousal,16,10.963506036151124
+960,peter,Stimulus,Arousal,21,12.542944847316594
+961,peter,Stimulus,Arousal,26,13.213943190234462
+962,peter,Stimulus,Arousal,31,13.467352464416129
+963,peter,Stimulus,Disgust,1,0.1682864626564286
+964,peter,Stimulus,Disgust,3,0.502812821121698
+965,peter,Stimulus,Disgust,5,0.835694327186223
+966,peter,Stimulus,Disgust,7,1.1671234412300175
+967,peter,Stimulus,Disgust,9,1.4965388157482182
+968,peter,Stimulus,Disgust,16,2.629555982447125
+969,peter,Stimulus,Disgust,21,3.4022257913374085
+970,peter,Stimulus,Disgust,26,4.132536478592504
+971,peter,Stimulus,Disgust,31,4.814320923465781
+972,peter,Stimulus,Dominance,1,0.9311988120893064
+973,peter,Stimulus,Dominance,3,2.7867845846820223
+974,peter,Stimulus,Dominance,5,4.637228283653898
+975,peter,Stimulus,Dominance,7,6.482069160643284
+976,peter,Stimulus,Dominance,9,8.309328801856697
+977,peter,Stimulus,Dominance,16,12.8269685119337
+978,peter,Stimulus,Dominance,21,13.449998001828154
+979,peter,Stimulus,Dominance,26,13.561511080547021
+980,peter,Stimulus,Dominance,31,13.582317644294092
+981,peter,Stimulus,Fear,1,0.2521508188597106
+982,peter,Stimulus,Fear,3,0.7526660230593494
+983,peter,Stimulus,Fear,5,1.2514019454209224
+984,peter,Stimulus,Fear,7,1.7455452431485967
+985,peter,Stimulus,Fear,9,2.234428979312509
+986,peter,Stimulus,Fear,16,3.8794741208284944
+987,peter,Stimulus,Fear,21,4.982490935601279
+988,peter,Stimulus,Fear,26,6.011112931401036
+989,peter,Stimulus,Fear,31,6.953889402625188
+990,peter,Stimulus,Joy,1,0.3037631286903792
+991,peter,Stimulus,Joy,3,0.9076119882776311
+992,peter,Stimulus,Joy,5,1.5089730573588744
+993,peter,Stimulus,Joy,7,2.1070621088919776
+994,peter,Stimulus,Joy,9,2.7010091373828913
+995,peter,Stimulus,Joy,16,4.707622481851581
+996,peter,Stimulus,Joy,21,6.024684673726399
+997,peter,Stimulus,Joy,26,7.215730699749562
+998,peter,Stimulus,Joy,31,8.258663988333591
+999,peter,Stimulus,Sadness,1,0.2626295823730832
+1000,peter,Stimulus,Sadness,3,0.7864665771457097
+1001,peter,Stimulus,Sadness,5,1.3087564708850699
+1002,peter,Stimulus,Sadness,7,1.8285644246575303
+1003,peter,Stimulus,Sadness,9,2.3444788131543692
+1004,peter,Stimulus,Sadness,16,4.094531223573125
+1005,peter,Stimulus,Sadness,21,5.267240047751886
+1006,peter,Stimulus,Sadness,26,6.353986051521657
+1007,peter,Stimulus,Sadness,31,7.33487441495726
+1008,peter,Stimulus,Surprise,1,0.2128699323334939
+1009,peter,Stimulus,Surprise,3,0.6379412455450643
+1010,peter,Stimulus,Surprise,5,1.0616681872202478
+1011,peter,Stimulus,Surprise,7,1.4833640848555596
+1012,peter,Stimulus,Surprise,9,1.9028838396646457
+1013,peter,Stimulus,Surprise,16,3.345311013888983
+1014,peter,Stimulus,Surprise,21,4.333689781207089
+1015,peter,Stimulus,Surprise,26,5.276313463770432
+1016,peter,Stimulus,Surprise,31,6.17236795676752
+1017,peter,Stimulus,Trust,1,0.31238563130121455
+1018,peter,Stimulus,Trust,3,0.9330500030286558
+1019,peter,Stimulus,Trust,5,1.5507460067955445
+1020,peter,Stimulus,Trust,7,2.1629793167218256
+1021,peter,Stimulus,Trust,9,2.7696629637474075
+1022,peter,Stimulus,Trust,16,4.809846706799477
+1023,peter,Stimulus,Trust,21,6.141837827848812
+1024,peter,Stimulus,Trust,26,7.3317546886363285
+1025,peter,Stimulus,Trust,31,8.381706270142411
+1026,peter,Stimulus,Valence,1,0.9853287404007254
+1027,peter,Stimulus,Valence,3,2.9386885163699983
+1028,peter,Stimulus,Valence,5,4.88213897858719
+1029,peter,Stimulus,Valence,7,6.8197223088435885
+1030,peter,Stimulus,Valence,9,8.738347174488153
+1031,peter,Stimulus,Valence,16,13.19129901196432
+1032,peter,Stimulus,Valence,21,13.534495887956703
+1033,peter,Stimulus,Valence,26,13.576414217701723
+1034,peter,Stimulus,Valence,31,13.586541405463342
+1035,peter walsh,Other,Unknown,1,0.1953448384711223
+1036,peter walsh,Other,Unknown,3,0.5556701704616143
+1037,peter walsh,Other,Unknown,5,0.9026620140340997
+1038,peter walsh,Other,Unknown,7,1.2426278184890787
+1039,peter walsh,Other,Unknown,9,1.5684554991076005
+1040,peter walsh,Other,Unknown,16,2.622614170795755
+1041,peter walsh,Other,Unknown,21,3.3172130628733396
+1042,peter walsh,Other,Unknown,26,3.9662615065963913
+1043,peter walsh,Other,Unknown,31,4.566644861435486
+1044,peter walsh,Response,Anger,1,0.011120847348561145
+1045,peter walsh,Response,Anger,3,0.032950357318507484
+1046,peter walsh,Response,Anger,5,0.05435775980883507
+1047,peter walsh,Response,Anger,7,0.07575602537518922
+1048,peter walsh,Response,Anger,9,0.09715577590057775
+1049,peter walsh,Response,Anger,16,0.16983080988737606
+1050,peter walsh,Response,Anger,21,0.22107048208175017
+1051,peter walsh,Response,Anger,26,0.2722706148890317
+1052,peter walsh,Response,Anger,31,0.3225591495701264
+1053,peter walsh,Response,Anticipation,1,0.025987554820068124
+1054,peter walsh,Response,Anticipation,3,0.07583114939178258
+1055,peter walsh,Response,Anticipation,5,0.12141886319396304
+1056,peter walsh,Response,Anticipation,7,0.1635534930837553
+1057,peter walsh,Response,Anticipation,9,0.2048551340594075
+1058,peter walsh,Response,Anticipation,16,0.34358083716497023
+1059,peter walsh,Response,Anticipation,21,0.438387157400635
+1060,peter walsh,Response,Anticipation,26,0.5268834389183967
+1061,peter walsh,Response,Anticipation,31,0.6042020301814282
+1062,peter walsh,Response,Arousal,1,0.039914011014409334
+1063,peter walsh,Response,Arousal,3,0.11157262445127283
+1064,peter walsh,Response,Arousal,5,0.17867667651947144
+1065,peter walsh,Response,Arousal,7,0.24184085319892973
+1066,peter walsh,Response,Arousal,9,0.30062839393147606
+1067,peter walsh,Response,Arousal,16,0.477077349289385
+1068,peter walsh,Response,Arousal,21,0.5801560520846496
+1069,peter walsh,Response,Arousal,26,0.6752623869791209
+1070,peter walsh,Response,Arousal,31,0.7634072926001754
+1071,peter walsh,Response,Disgust,1,0.00948036449044838
+1072,peter walsh,Response,Disgust,3,0.027030653192526177
+1073,peter walsh,Response,Disgust,5,0.04295246267096662
+1074,peter walsh,Response,Disgust,7,0.05872502443761907
+1075,peter walsh,Response,Disgust,9,0.07447677321428452
+1076,peter walsh,Response,Disgust,16,0.12962918391576028
+1077,peter walsh,Response,Disgust,21,0.16904400636027217
+1078,peter walsh,Response,Disgust,26,0.20847566468434647
+1079,peter walsh,Response,Disgust,31,0.24478040991452318
+1080,peter walsh,Response,Dominance,1,0.0689943137419818
+1081,peter walsh,Response,Dominance,3,0.18951703110753268
+1082,peter walsh,Response,Dominance,5,0.2924688324000685
+1083,peter walsh,Response,Dominance,7,0.3856487161286726
+1084,peter walsh,Response,Dominance,9,0.46836990310061294
+1085,peter walsh,Response,Dominance,16,0.712575153897087
+1086,peter walsh,Response,Dominance,21,0.8541835377789935
+1087,peter walsh,Response,Dominance,26,0.9772453668870014
+1088,peter walsh,Response,Dominance,31,1.0897976020771751
+1089,peter walsh,Response,Fear,1,0.012722186752604897
+1090,peter walsh,Response,Fear,3,0.037791091410811904
+1091,peter walsh,Response,Fear,5,0.06208302026960781
+1092,peter walsh,Response,Fear,7,0.08595453878659849
+1093,peter walsh,Response,Fear,9,0.10979725151786661
+1094,peter walsh,Response,Fear,16,0.1932196886178579
+1095,peter walsh,Response,Fear,21,0.2528165941965424
+1096,peter walsh,Response,Fear,26,0.3086365358496754
+1097,peter walsh,Response,Fear,31,0.35787726223598365
+1098,peter walsh,Response,Joy,1,0.014290010996676122
+1099,peter walsh,Response,Joy,3,0.04217509632190093
+1100,peter walsh,Response,Joy,5,0.06915649017268123
+1101,peter walsh,Response,Joy,7,0.09387864888468239
+1102,peter walsh,Response,Joy,9,0.11857391318315558
+1103,peter walsh,Response,Joy,16,0.20466648265125828
+1104,peter walsh,Response,Joy,21,0.2661640806944818
+1105,peter walsh,Response,Joy,26,0.32767083142664966
+1106,peter walsh,Response,Joy,31,0.3891865241936468
+1107,peter walsh,Response,Sadness,1,0.011120847348561145
+1108,peter walsh,Response,Sadness,3,0.033363173030027476
+1109,peter walsh,Response,Sadness,5,0.05478104813160159
+1110,peter walsh,Response,Sadness,7,0.07618978925615437
+1111,peter walsh,Response,Sadness,9,0.09758938126139573
+1112,peter walsh,Response,Sadness,16,0.16694095863968875
+1113,peter walsh,Response,Sadness,21,0.21247796491822066
+1114,peter walsh,Response,Sadness,26,0.2556804351460366
+1115,peter walsh,Response,Sadness,31,0.2983898130581799
+1116,peter walsh,Response,Surprise,1,0.004220240830635061
+1117,peter walsh,Response,Surprise,3,0.012662091388966647
+1118,peter walsh,Response,Surprise,5,0.02110576724862501
+1119,peter walsh,Response,Surprise,7,0.029551268534888896
+1120,peter walsh,Response,Surprise,9,0.03799859537187387
+1121,peter walsh,Response,Surprise,16,0.06757861727773913
+1122,peter walsh,Response,Surprise,21,0.08872089976183128
+1123,peter walsh,Response,Surprise,26,0.10987459715905741
+1124,peter walsh,Response,Surprise,31,0.1310397112469721
+1125,peter walsh,Response,Trust,1,0.011926017379960706
+1126,peter walsh,Response,Trust,3,0.03498195405204179
+1127,peter walsh,Response,Trust,5,0.05761661257054779
+1128,peter walsh,Response,Trust,7,0.07901472097833857
+1129,peter walsh,Response,Trust,9,0.09998072667741499
+1130,peter walsh,Response,Trust,16,0.17173111618230827
+1131,peter walsh,Response,Trust,21,0.22290644682150731
+1132,peter walsh,Response,Trust,26,0.2740942964901666
+1133,peter walsh,Response,Trust,31,0.32529454716079537
+1134,peter walsh,Response,Valence,1,0.0842345053532761
+1135,peter walsh,Response,Valence,3,0.21842861917368395
+1136,peter walsh,Response,Valence,5,0.33450636245052
+1137,peter walsh,Response,Valence,7,0.4384559758349312
+1138,peter walsh,Response,Valence,9,0.5309720637441029
+1139,peter walsh,Response,Valence,16,0.801178462555255
+1140,peter walsh,Response,Valence,21,0.9602961248626
+1141,peter walsh,Response,Valence,26,1.1014729059660475
+1142,peter walsh,Response,Valence,31,1.232544254345598
+1143,peter walsh,Stimulus,Anger,1,0.22449323086758521
+1144,peter walsh,Stimulus,Anger,3,0.6716822507520667
+1145,peter walsh,Stimulus,Anger,5,1.118186032313248
+1146,peter walsh,Stimulus,Anger,7,1.5625475164915867
+1147,peter walsh,Stimulus,Anger,9,2.003302780960245
+1148,peter walsh,Stimulus,Anger,16,3.51363522620443
+1149,peter walsh,Stimulus,Anger,21,4.539150042574323
+1150,peter walsh,Stimulus,Anger,26,5.506323628042524
+1151,peter walsh,Stimulus,Anger,31,6.405353575327562
+1152,peter walsh,Stimulus,Anticipation,1,0.3656668575794867
+1153,peter walsh,Stimulus,Anticipation,3,1.0953286343168513
+1154,peter walsh,Stimulus,Anticipation,5,1.8228225714730224
+1155,peter walsh,Stimulus,Anticipation,7,2.544682967292839
+1156,peter walsh,Stimulus,Anticipation,9,3.257229630235656
+1157,peter walsh,Stimulus,Anticipation,16,5.6490993160333804
+1158,peter walsh,Stimulus,Anticipation,21,7.192273054047119
+1159,peter walsh,Stimulus,Anticipation,26,8.56332893421856
+1160,peter walsh,Stimulus,Anticipation,31,9.712127064366317
+1161,peter walsh,Stimulus,Arousal,1,0.7543465869865646
+1162,peter walsh,Stimulus,Arousal,3,2.256335840968966
+1163,peter walsh,Stimulus,Arousal,5,3.755925815222538
+1164,peter walsh,Stimulus,Arousal,7,5.250416016814762
+1165,peter walsh,Stimulus,Arousal,9,6.727214723750974
+1166,peter walsh,Stimulus,Arousal,16,11.03586979638283
+1167,peter walsh,Stimulus,Arousal,21,12.60789938269081
+1168,peter walsh,Stimulus,Arousal,26,13.247447942381571
+1169,peter walsh,Stimulus,Arousal,31,13.481023072890672
+1170,peter walsh,Stimulus,Disgust,1,0.1708483138498101
+1171,peter walsh,Stimulus,Disgust,3,0.5104455625205514
+1172,peter walsh,Stimulus,Disgust,5,0.8489331943379418
+1173,peter walsh,Stimulus,Disgust,7,1.185772671741309
+1174,peter walsh,Stimulus,Disgust,9,1.5205025771444318
+1175,peter walsh,Stimulus,Disgust,16,2.668367271572614
+1176,peter walsh,Stimulus,Disgust,21,3.446569349458733
+1177,peter walsh,Stimulus,Disgust,26,4.183994094686433
+1178,peter walsh,Stimulus,Disgust,31,4.876902110557843
+1179,peter walsh,Stimulus,Dominance,1,0.9353445789786948
+1180,peter walsh,Stimulus,Dominance,3,2.799252104302782
+1181,peter walsh,Stimulus,Dominance,5,4.657868841405601
+1182,peter walsh,Stimulus,Dominance,7,6.510391193279097
+1183,peter walsh,Stimulus,Dominance,9,8.34383358086875
+1184,peter walsh,Stimulus,Dominance,16,12.863983840436736
+1185,peter walsh,Stimulus,Dominance,21,13.460395188710605
+1186,peter walsh,Stimulus,Dominance,26,13.560260077985715
+1187,peter walsh,Stimulus,Dominance,31,13.579646858991786
+1188,peter walsh,Stimulus,Fear,1,0.2525153729674431
+1189,peter walsh,Stimulus,Fear,3,0.7535839314870052
+1190,peter walsh,Stimulus,Fear,5,1.2523374416021495
+1191,peter walsh,Stimulus,Fear,7,1.7467635464442246
+1192,peter walsh,Stimulus,Fear,9,2.235517302522684
+1193,peter walsh,Stimulus,Fear,16,3.876367897237367
+1194,peter walsh,Stimulus,Fear,21,4.969389353875269
+1195,peter walsh,Stimulus,Fear,26,5.9850535181606315
+1196,peter walsh,Stimulus,Fear,31,6.916932801186187
+1197,peter walsh,Stimulus,Joy,1,0.306429285187828
+1198,peter walsh,Stimulus,Joy,3,0.9156662061076948
+1199,peter walsh,Stimulus,Joy,5,1.5224489931283567
+1200,peter walsh,Stimulus,Joy,7,2.1259814726625184
+1201,peter walsh,Stimulus,Joy,9,2.725522484927098
+1202,peter walsh,Stimulus,Joy,16,4.751739654588109
+1203,peter walsh,Stimulus,Joy,21,6.078284120772811
+1204,peter walsh,Stimulus,Joy,26,7.273598071041238
+1205,peter walsh,Stimulus,Joy,31,8.317932116391281
+1206,peter walsh,Stimulus,Sadness,1,0.2633452570775958
+1207,peter walsh,Stimulus,Sadness,3,0.7884336105274186
+1208,peter walsh,Stimulus,Sadness,5,1.3119281141622385
+1209,peter walsh,Stimulus,Sadness,7,1.8329480383518508
+1210,peter walsh,Stimulus,Sadness,9,2.3498277891370885
+1211,peter walsh,Stimulus,Sadness,16,4.101693582103528
+1212,peter walsh,Stimulus,Sadness,21,5.272035555734953
+1213,peter walsh,Stimulus,Sadness,26,6.359527979507419
+1214,peter walsh,Stimulus,Sadness,31,7.343767693095076
+1215,peter walsh,Stimulus,Surprise,1,0.21482478984588427
+1216,peter walsh,Stimulus,Surprise,3,0.6433687179684733
+1217,peter walsh,Stimulus,Surprise,5,1.070831562956525
+1218,peter walsh,Stimulus,Surprise,7,1.4963740228454963
+1219,peter walsh,Stimulus,Surprise,9,1.919384964652421
+1220,peter walsh,Stimulus,Surprise,16,3.3732140641026893
+1221,peter walsh,Stimulus,Surprise,21,4.369373168276823
+1222,peter walsh,Stimulus,Surprise,26,5.3145719114560785
+1223,peter walsh,Stimulus,Surprise,31,6.20771518202733
+1224,peter walsh,Stimulus,Trust,1,0.3146863320134746
+1225,peter walsh,Stimulus,Trust,3,0.940157633958316
+1226,peter walsh,Stimulus,Trust,5,1.562590165723564
+1227,peter walsh,Stimulus,Trust,7,2.1796499740649518
+1228,peter walsh,Stimulus,Trust,9,2.7915805224423
+1229,peter walsh,Stimulus,Trust,16,4.84763521922384
+1230,peter walsh,Stimulus,Trust,21,6.190760756678966
+1231,peter walsh,Stimulus,Trust,26,7.392837947307531
+1232,peter walsh,Stimulus,Trust,31,8.452702834357668
+1233,peter walsh,Stimulus,Valence,1,0.9877616753093167
+1234,peter walsh,Stimulus,Valence,3,2.9452963543158193
+1235,peter walsh,Stimulus,Valence,5,4.892859175233126
+1236,peter walsh,Stimulus,Valence,7,6.834574423949713
+1237,peter walsh,Stimulus,Valence,9,8.75895111826746
+1238,peter walsh,Stimulus,Valence,16,13.201276696847485
+1239,peter walsh,Stimulus,Valence,21,13.538480099308764
+1240,peter walsh,Stimulus,Valence,26,13.576900835706589
+1241,peter walsh,Stimulus,Valence,31,13.586541405463342
+1242,rezia,Other,Unknown,1,0.1953448384711223
+1243,rezia,Other,Unknown,3,0.5556701704616143
+1244,rezia,Other,Unknown,5,0.9026620140340997
+1245,rezia,Other,Unknown,7,1.2426278184890787
+1246,rezia,Other,Unknown,9,1.5684554991076005
+1247,rezia,Other,Unknown,16,2.622614170795755
+1248,rezia,Other,Unknown,21,3.3172130628733396
+1249,rezia,Other,Unknown,26,3.9662615065963913
+1250,rezia,Other,Unknown,31,4.566644861435486
+1251,rezia,Response,Anger,1,0.008643097250317859
+1252,rezia,Response,Anger,3,0.025447111085306146
+1253,rezia,Response,Anger,5,0.04175506886071321
+1254,rezia,Response,Anger,7,0.05805063005906002
+1255,rezia,Response,Anger,9,0.07434842815809849
+1256,rezia,Response,Anger,16,0.12929208591882085
+1257,rezia,Response,Anger,21,0.16733845593670937
+1258,rezia,Response,Anger,26,0.20536135697743282
+1259,rezia,Response,Anger,31,0.24334110946078394
+1260,rezia,Response,Anticipation,1,0.018830051211121964
+1261,rezia,Response,Anticipation,3,0.05566858984637111
+1262,rezia,Response,Anticipation,5,0.08957212312841126
+1263,rezia,Response,Anticipation,7,0.12294823271654025
+1264,rezia,Response,Anticipation,9,0.15588073049376958
+1265,rezia,Response,Anticipation,16,0.2653704010791026
+1266,rezia,Response,Anticipation,21,0.3355121258620847
+1267,rezia,Response,Anticipation,26,0.40085628024045367
+1268,rezia,Response,Anticipation,31,0.4604994071451134
+1269,rezia,Response,Arousal,1,0.04922672787458589
+1270,rezia,Response,Arousal,3,0.13812123976859128
+1271,rezia,Response,Arousal,5,0.21797847916779994
+1272,rezia,Response,Arousal,7,0.29201572999922576
+1273,rezia,Response,Arousal,9,0.36026553688279533
+1274,rezia,Response,Arousal,16,0.571459091854467
+1275,rezia,Response,Arousal,21,0.6931877031353634
+1276,rezia,Response,Arousal,26,0.8029268400894899
+1277,rezia,Response,Arousal,31,0.9010508756692608
+1278,rezia,Response,Disgust,1,0.006927897301054599
+1279,rezia,Response,Disgust,3,0.020238887116574292
+1280,rezia,Response,Disgust,5,0.03298619795293617
+1281,rezia,Response,Disgust,7,0.04571625457602928
+1282,rezia,Response,Disgust,9,0.057277824240461385
+1283,rezia,Response,Disgust,16,0.09324531134771297
+1284,rezia,Response,Disgust,21,0.11690481432114107
+1285,rezia,Response,Disgust,26,0.14049824655173615
+1286,rezia,Response,Disgust,31,0.16410506516905252
+1287,rezia,Response,Dominance,1,0.06505124784791659
+1288,rezia,Response,Dominance,3,0.17977775316135117
+1289,rezia,Response,Dominance,5,0.2829278516007612
+1290,rezia,Response,Dominance,7,0.3776931745108962
+1291,rezia,Response,Dominance,9,0.4627026369159544
+1292,rezia,Response,Dominance,16,0.6971993911081562
+1293,rezia,Response,Dominance,21,0.8160021126132266
+1294,rezia,Response,Dominance,26,0.9193940309541936
+1295,rezia,Response,Dominance,31,1.0174460269984176
+1296,rezia,Response,Fear,1,0.013509998832253902
+1297,rezia,Response,Fear,3,0.03963358479059844
+1298,rezia,Response,Fear,5,0.06443264199061714
+1299,rezia,Response,Fear,7,0.08674707902137892
+1300,rezia,Response,Fear,9,0.10790955318442029
+1301,rezia,Response,Fear,16,0.1740367821868578
+1302,rezia,Response,Fear,21,0.22004157922584028
+1303,rezia,Response,Fear,26,0.2633237386982833
+1304,rezia,Response,Fear,31,0.30467770728087307
+1305,rezia,Response,Joy,1,0.015062710805215014
+1306,rezia,Response,Joy,3,0.044522336662731116
+1307,rezia,Response,Joy,5,0.07221520425186508
+1308,rezia,Response,Joy,7,0.09984013118812934
+1309,rezia,Response,Joy,9,0.12742936094932736
+1310,rezia,Response,Joy,16,0.22399440885219593
+1311,rezia,Response,Joy,21,0.2888359330435904
+1312,rezia,Response,Joy,26,0.35012249881056
+1313,rezia,Response,Joy,31,0.40535078893898524
+1314,rezia,Response,Sadness,1,0.008643097250317859
+1315,rezia,Response,Sadness,3,0.025447111085306146
+1316,rezia,Response,Sadness,5,0.04175506886071321
+1317,rezia,Response,Sadness,7,0.05805063005906002
+1318,rezia,Response,Sadness,9,0.07434842815809849
+1319,rezia,Response,Sadness,16,0.13140828751135677
+1320,rezia,Response,Sadness,21,0.17218199878654425
+1321,rezia,Response,Sadness,26,0.21296953876109612
+1322,rezia,Response,Sadness,31,0.253770852015464
+1323,rezia,Response,Surprise,1,0.011926017379960706
+1324,rezia,Response,Surprise,3,0.034569147822460955
+1325,rezia,Response,Surprise,5,0.05584584293962868
+1326,rezia,Response,Surprise,7,0.07630417826684117
+1327,rezia,Response,Surprise,9,0.09676457128133702
+1328,rezia,Response,Surprise,16,0.16593158637089278
+1329,rezia,Response,Surprise,21,0.21455253537100388
+1330,rezia,Response,Surprise,26,0.2631219469386067
+1331,rezia,Response,Surprise,31,0.31168999677218767
+1332,rezia,Response,Trust,1,0.010305925718035654
+1333,rezia,Response,Trust,3,0.030918722660296313
+1334,rezia,Response,Trust,5,0.05066486163310332
+1335,rezia,Response,Trust,7,0.07040113439338111
+1336,rezia,Response,Trust,9,0.09012752791159191
+1337,rezia,Response,Trust,16,0.15918413951097954
+1338,rezia,Response,Trust,21,0.2061901429734512
+1339,rezia,Response,Trust,26,0.2516566143024524
+1340,rezia,Response,Trust,31,0.2924221235437069
+1341,rezia,Response,Valence,1,0.09569865582804808
+1342,rezia,Response,Valence,3,0.2439978903849323
+1343,rezia,Response,Valence,5,0.3707627933993814
+1344,rezia,Response,Valence,7,0.48720288963940495
+1345,rezia,Response,Valence,9,0.5865136933401014
+1346,rezia,Response,Valence,16,0.8355358782083755
+1347,rezia,Response,Valence,21,0.9657927688882714
+1348,rezia,Response,Valence,26,1.080644048446555
+1349,rezia,Response,Valence,31,1.191880957032182
+1350,rezia,Stimulus,Anger,1,0.22410980812232756
+1351,rezia,Stimulus,Anger,3,0.6706728659361637
+1352,rezia,Stimulus,Anger,5,1.1164170387141081
+1353,rezia,Stimulus,Anger,7,1.5596911097574926
+1354,rezia,Stimulus,Anger,9,1.9993511372495585
+1355,rezia,Stimulus,Anger,16,3.5065633351485683
+1356,rezia,Stimulus,Anger,21,4.5288110612332195
+1357,rezia,Stimulus,Anger,26,5.493128845476174
+1358,rezia,Stimulus,Anger,31,6.3919602549505345
+1359,rezia,Stimulus,Anticipation,1,0.36928249790299694
+1360,rezia,Stimulus,Anticipation,3,1.1061844465179733
+1361,rezia,Stimulus,Anticipation,5,1.8408279497914268
+1362,rezia,Stimulus,Anticipation,7,2.5696653671621315
+1363,rezia,Stimulus,Anticipation,9,3.288926340257972
+1364,rezia,Stimulus,Anticipation,16,5.694369897225765
+1365,rezia,Stimulus,Anticipation,21,7.2391805364653905
+1366,rezia,Stimulus,Anticipation,26,8.604458717596149
+1367,rezia,Stimulus,Anticipation,31,9.739552788401687
+1368,rezia,Stimulus,Arousal,1,0.7535961070136195
+1369,rezia,Stimulus,Arousal,3,2.254177066825698
+1370,rezia,Stimulus,Arousal,5,3.752812283894209
+1371,rezia,Stimulus,Arousal,7,5.246907969580756
+1372,rezia,Stimulus,Arousal,9,6.722559973617243
+1373,rezia,Stimulus,Arousal,16,11.032253688633821
+1374,rezia,Stimulus,Arousal,21,12.59954528411631
+1375,rezia,Stimulus,Arousal,26,13.243522127542578
+1376,rezia,Stimulus,Arousal,31,13.482244737131825
+1377,rezia,Stimulus,Disgust,1,0.17169919886395507
+1378,rezia,Stimulus,Disgust,3,0.5127882936510827
+1379,rezia,Stimulus,Disgust,5,0.8524105820937431
+1380,rezia,Stimulus,Disgust,7,1.190358313812701
+1381,rezia,Stimulus,Disgust,9,1.526229486155673
+1382,rezia,Stimulus,Disgust,16,2.6794809496772842
+1383,rezia,Stimulus,Disgust,21,3.4628193214303082
+1384,rezia,Stimulus,Disgust,26,4.205882454544029
+1385,rezia,Stimulus,Disgust,31,4.903640284106533
+1386,rezia,Stimulus,Dominance,1,0.9368379627621867
+1387,rezia,Stimulus,Dominance,3,2.8038951430150867
+1388,rezia,Stimulus,Dominance,5,4.665278450210151
+1389,rezia,Stimulus,Dominance,7,6.521478161207103
+1390,rezia,Stimulus,Dominance,9,8.359811290882122
+1391,rezia,Stimulus,Dominance,16,12.8649417628029
+1392,rezia,Stimulus,Dominance,21,13.45930228403727
+1393,rezia,Stimulus,Dominance,26,13.563010693279832
+1394,rezia,Stimulus,Dominance,31,13.583190251799339
+1395,rezia,Stimulus,Fear,1,0.253243780912113
+1396,rezia,Stimulus,Fear,3,0.756043283694884
+1397,rezia,Stimulus,Fear,5,1.2565218952415804
+1398,rezia,Stimulus,Fear,7,1.7530699326397496
+1399,rezia,Stimulus,Fear,9,2.2438627091579955
+1400,rezia,Stimulus,Fear,16,3.893476590983436
+1401,rezia,Stimulus,Fear,21,4.993225188393065
+1402,rezia,Stimulus,Fear,26,6.014850710186589
+1403,rezia,Stimulus,Fear,31,6.954492447378949
+1404,rezia,Stimulus,Joy,1,0.30543085213669185
+1405,rezia,Stimulus,Joy,3,0.9126024484065668
+1406,rezia,Stimulus,Joy,5,1.5172861958948334
+1407,rezia,Stimulus,Joy,7,2.11883301299877
+1408,rezia,Stimulus,Joy,9,2.71605645138762
+1409,rezia,Stimulus,Joy,16,4.7329378473281976
+1410,rezia,Stimulus,Joy,21,6.052464051616268
+1411,rezia,Stimulus,Joy,26,7.24479757692047
+1412,rezia,Stimulus,Joy,31,8.284451148909184
+1413,rezia,Stimulus,Sadness,1,0.26406004604680855
+1414,rezia,Stimulus,Sadness,3,0.7907440876049652
+1415,rezia,Stimulus,Sadness,5,1.3158179511692425
+1416,rezia,Stimulus,Sadness,7,1.8382121143739576
+1417,rezia,Stimulus,Sadness,9,2.356350249634161
+1418,rezia,Stimulus,Sadness,16,4.112994171175833
+1419,rezia,Stimulus,Sadness,21,5.287102884308117
+1420,rezia,Stimulus,Sadness,26,6.3726811504167475
+1421,rezia,Stimulus,Sadness,31,7.352659937176871
+1422,rezia,Stimulus,Surprise,1,0.21247809407996032
+1423,rezia,Stimulus,Surprise,3,0.6363936787411008
+1424,rezia,Stimulus,Surprise,5,1.0592557263917408
+1425,rezia,Stimulus,Surprise,7,1.4804747551782251
+1426,rezia,Stimulus,Surprise,9,1.8990529600188575
+1427,rezia,Stimulus,Surprise,16,3.3401058018391248
+1428,rezia,Stimulus,Surprise,21,4.328425674051315
+1429,rezia,Stimulus,Surprise,26,5.266621820755109
+1430,rezia,Stimulus,Surprise,31,6.155410353943524
+1431,rezia,Stimulus,Trust,1,0.31501429620600246
+1432,rezia,Stimulus,Trust,3,0.9411559170775348
+1433,rezia,Stimulus,Trust,5,1.5644051324418677
+1434,rezia,Stimulus,Trust,7,2.18240819245909
+1435,rezia,Stimulus,Trust,9,2.795323785795134
+1436,rezia,Stimulus,Trust,16,4.855354505689201
+1437,rezia,Stimulus,Trust,21,6.201745435529209
+1438,rezia,Stimulus,Trust,26,7.405492012522919
+1439,rezia,Stimulus,Trust,31,8.466012507573954
+1440,rezia,Stimulus,Valence,1,0.9875468875066888
+1441,rezia,Stimulus,Valence,3,2.945583524215528
+1442,rezia,Stimulus,Valence,5,4.8935489149291085
+1443,rezia,Stimulus,Valence,7,6.835501465783505
+1444,rezia,Stimulus,Valence,9,8.75865881342584
+1445,rezia,Stimulus,Valence,16,13.193342915704202
+1446,rezia,Stimulus,Valence,21,13.53640182837051
+1447,rezia,Stimulus,Valence,26,13.576738629704966
+1448,rezia,Stimulus,Valence,31,13.586541405463342
+1449,richard,Other,Unknown,1,0.1953448384711223
+1450,richard,Other,Unknown,3,0.5556701704616143
+1451,richard,Other,Unknown,5,0.9026620140340997
+1452,richard,Other,Unknown,7,1.2426278184890787
+1453,richard,Other,Unknown,9,1.5684554991076005
+1454,richard,Other,Unknown,16,2.622614170795755
+1455,richard,Other,Unknown,21,3.3172130628733396
+1456,richard,Other,Unknown,26,3.9662615065963913
+1457,richard,Other,Unknown,31,4.566644861435486
+1458,richard,Response,Anger,1,0.007792819263269474
+1459,richard,Response,Anger,3,0.021791107804459923
+1460,richard,Response,Anger,5,0.03512700789114309
+1461,richard,Response,Anger,7,0.04844188288094677
+1462,richard,Response,Anger,9,0.061759247948455186
+1463,richard,Response,Anger,16,0.10838962194217855
+1464,richard,Response,Anger,21,0.1417156789650828
+1465,richard,Response,Anger,26,0.175057258680123
+1466,richard,Response,Anger,31,0.20841434629255304
+1467,richard,Response,Anticipation,1,0.025290516770986288
+1468,richard,Response,Anticipation,3,0.07456136466567088
+1469,richard,Response,Anticipation,5,0.12039064099340113
+1470,richard,Response,Anticipation,7,0.1628357025489907
+1471,richard,Response,Anticipation,9,0.20270429742302612
+1472,richard,Response,Anticipation,16,0.3358119941217972
+1473,richard,Response,Anticipation,21,0.4249761850748787
+1474,richard,Response,Anticipation,26,0.5058368465944535
+1475,richard,Response,Anticipation,31,0.5763392227110102
+1476,richard,Response,Arousal,1,0.044314543327400126
+1477,richard,Response,Arousal,3,0.12824207045498118
+1478,richard,Response,Arousal,5,0.2063239574310725
+1479,richard,Response,Arousal,7,0.27956835100590655
+1480,richard,Response,Arousal,9,0.3481934330656472
+1481,richard,Response,Arousal,16,0.5645818779261546
+1482,richard,Response,Arousal,21,0.704836317008206
+1483,richard,Response,Arousal,26,0.8283338733898243
+1484,richard,Response,Arousal,31,0.9331010028207855
+1485,richard,Response,Disgust,1,0.007792819263269474
+1486,richard,Response,Disgust,3,0.022158834731018873
+1487,richard,Response,Disgust,5,0.03522666361391153
+1488,richard,Response,Disgust,7,0.0482175090158896
+1489,richard,Response,Disgust,9,0.06003998966963156
+1490,richard,Response,Disgust,16,0.10061576397529745
+1491,richard,Response,Disgust,21,0.1294746929212579
+1492,richard,Response,Disgust,26,0.1583486462255393
+1493,richard,Response,Disgust,31,0.1872376210493944
+1494,richard,Response,Dominance,1,0.07616971867928096
+1495,richard,Response,Dominance,3,0.21226368658017727
+1496,richard,Response,Dominance,5,0.33500125362779276
+1497,richard,Response,Dominance,7,0.445992028581149
+1498,richard,Response,Dominance,9,0.5472449668478611
+1499,richard,Response,Dominance,16,0.8457774420943888
+1500,richard,Response,Dominance,21,1.0261294484724
+1501,richard,Response,Dominance,26,1.17729062702482
+1502,richard,Response,Dominance,31,1.30531447255843
+1503,richard,Response,Fear,1,0.00948036449044838
+1504,richard,Response,Fear,3,0.027514212130976805
+1505,richard,Response,Fear,5,0.04454095851182382
+1506,richard,Response,Fear,7,0.06152415222363897
+1507,richard,Response,Fear,9,0.07849305560241795
+1508,richard,Response,Fear,16,0.13790349257674536
+1509,richard,Response,Fear,21,0.1803578174426389
+1510,richard,Response,Fear,26,0.22282733083324788
+1511,richard,Response,Fear,31,0.26316492544128484
+1512,richard,Response,Joy,1,0.01956646912517181
+1513,richard,Response,Joy,3,0.057025003088742754
+1514,richard,Response,Joy,5,0.09325059732834488
+1515,richard,Response,Joy,7,0.12826011875856103
+1516,richard,Response,Joy,9,0.16228921611957461
+1517,richard,Response,Joy,16,0.27965948759380777
+1518,richard,Response,Joy,21,0.3600505616825583
+1519,richard,Response,Joy,26,0.43580748331532154
+1520,richard,Response,Joy,31,0.5029855508567901
+1521,richard,Response,Sadness,1,0.005144994889310926
+1522,richard,Response,Sadness,3,0.01543649053404376
+1523,richard,Response,Sadness,5,0.025729993714025692
+1524,richard,Response,Sadness,7,0.03602550408332711
+1525,richard,Response,Sadness,9,0.04632302129320899
+1526,richard,Response,Sadness,16,0.08238013029617786
+1527,richard,Response,Sadness,21,0.10815024831877411
+1528,richard,Response,Sadness,26,0.13393289333284455
+1529,richard,Response,Sadness,31,0.1597280594984523
+1530,richard,Response,Surprise,1,0.012722186752604897
+1531,richard,Response,Surprise,3,0.037406803201918706
+1532,richard,Response,Surprise,5,0.06127734393952345
+1533,richard,Response,Surprise,7,0.0838392768903568
+1534,richard,Response,Surprise,9,0.10492781488357963
+1535,richard,Response,Surprise,16,0.17764027260095988
+1536,richard,Response,Surprise,21,0.22922382448020462
+1537,richard,Response,Surprise,26,0.28082532212037653
+1538,richard,Response,Surprise,31,0.331451810626481
+1539,richard,Response,Trust,1,0.02174602464717033
+1540,richard,Response,Trust,3,0.060611706800750786
+1541,richard,Response,Trust,5,0.09738970052833266
+1542,richard,Response,Trust,7,0.13381555054169342
+1543,richard,Response,Trust,9,0.16993018763464612
+1544,richard,Response,Trust,16,0.29237605308032705
+1545,richard,Response,Trust,21,0.37765027203649565
+1546,richard,Response,Trust,26,0.4572791404919428
+1547,richard,Response,Trust,31,0.5324627422028658
+1548,richard,Response,Valence,1,0.09977100298564702
+1549,richard,Response,Valence,3,0.26295609757508637
+1550,richard,Response,Valence,5,0.4088794788043246
+1551,richard,Response,Valence,7,0.5424416874764078
+1552,richard,Response,Valence,9,0.6612343023478533
+1553,richard,Response,Valence,16,0.9817611193705925
+1554,richard,Response,Valence,21,1.1618707452596242
+1555,richard,Response,Valence,26,1.3146886356366274
+1556,richard,Response,Valence,31,1.4541676275614521
+1557,richard,Stimulus,Anger,1,0.22487638257586962
+1558,richard,Stimulus,Anger,3,0.6729868006085689
+1559,richard,Stimulus,Anger,5,1.120563072637843
+1560,richard,Stimulus,Anger,7,1.5657641538874427
+1561,richard,Stimulus,Anger,9,2.0073633594849833
+1562,richard,Stimulus,Anger,16,3.5218796487426323
+1563,richard,Stimulus,Anger,21,4.55014178417033
+1564,richard,Stimulus,Anger,26,5.518965248100637
+1565,richard,Stimulus,Anger,31,6.419767550199834
+1566,richard,Stimulus,Anticipation,1,0.367175902045232
+1567,richard,Stimulus,Anticipation,3,1.0996550936661202
+1568,richard,Stimulus,Anticipation,5,1.8300836173607664
+1569,richard,Stimulus,Anticipation,7,2.554682086725336
+1570,richard,Stimulus,Anticipation,9,3.2709617333366228
+1571,richard,Stimulus,Anticipation,16,5.669268208440202
+1572,richard,Stimulus,Anticipation,21,7.211370509903273
+1573,richard,Stimulus,Anticipation,26,8.579017356365252
+1574,richard,Stimulus,Anticipation,31,9.723839889663841
+1575,richard,Stimulus,Arousal,1,0.7541966023625866
+1576,richard,Stimulus,Arousal,3,2.2549541042538923
+1577,richard,Stimulus,Arousal,5,3.75325100861174
+1578,richard,Stimulus,Arousal,7,5.246758130948343
+1579,richard,Stimulus,Arousal,9,6.722865433112191
+1580,richard,Stimulus,Arousal,16,11.014479149461318
+1581,richard,Stimulus,Arousal,21,12.576968467269802
+1582,richard,Stimulus,Arousal,26,13.232328069614105
+1583,richard,Stimulus,Arousal,31,13.47625400653163
+1584,richard,Stimulus,Disgust,1,0.1708483138498101
+1585,richard,Stimulus,Disgust,3,0.5102431138776389
+1586,richard,Stimulus,Disgust,5,0.8484737763087987
+1587,richard,Stimulus,Disgust,7,1.185139689216303
+1588,richard,Stimulus,Disgust,9,1.5197871898334365
+1589,richard,Stimulus,Disgust,16,2.668469594945724
+1590,richard,Stimulus,Disgust,21,3.4497794466354397
+1591,richard,Stimulus,Disgust,26,4.189286085859928
+1592,richard,Stimulus,Disgust,31,4.884583646919067
+1593,richard,Stimulus,Dominance,1,0.9354161068301758
+1594,richard,Stimulus,Dominance,3,2.799061889205787
+1595,richard,Stimulus,Dominance,5,4.657384964987389
+1596,richard,Stimulus,Dominance,7,6.5099437028050335
+1597,richard,Stimulus,Dominance,9,8.344596098000482
+1598,richard,Stimulus,Dominance,16,12.849513071769133
+1599,richard,Stimulus,Dominance,21,13.45528072224506
+1600,richard,Stimulus,Dominance,26,13.56116520362029
+1601,richard,Stimulus,Dominance,31,13.583027979994066
+1602,richard,Stimulus,Fear,1,0.25433464853099846
+1603,richard,Stimulus,Fear,3,0.7593572034403812
+1604,richard,Stimulus,Fear,5,1.2621661626444733
+1605,richard,Stimulus,Fear,7,1.7608732302194707
+1606,richard,Stimulus,Fear,9,2.254022976147678
+1607,richard,Stimulus,Fear,16,3.912760647454696
+1608,richard,Stimulus,Fear,21,5.020192292478318
+1609,richard,Stimulus,Fear,26,6.047774533849578
+1610,richard,Stimulus,Fear,31,6.989318471142764
+1611,richard,Stimulus,Joy,1,0.30543085213669185
+1612,richard,Stimulus,Joy,3,0.9127368494221108
+1613,richard,Stimulus,Joy,5,1.5173065456808594
+1614,richard,Stimulus,Joy,7,2.118716966601456
+1615,richard,Stimulus,Joy,9,2.71644566869782
+1616,richard,Stimulus,Joy,16,4.738172664391346
+1617,richard,Stimulus,Joy,21,6.064519807397813
+1618,richard,Stimulus,Joy,26,7.264231090477072
+1619,richard,Stimulus,Joy,31,8.314641197248388
+1620,richard,Stimulus,Sadness,1,0.2658431633266614
+1621,richard,Stimulus,Sadness,3,0.7960498105293499
+1622,richard,Stimulus,Sadness,5,1.3246944999290102
+1623,richard,Stimulus,Sadness,7,1.850723519899882
+1624,richard,Stimulus,Sadness,9,2.372259926917132
+1625,richard,Stimulus,Sadness,16,4.143331420581484
+1626,richard,Stimulus,Sadness,21,5.32810997420911
+1627,richard,Stimulus,Sadness,26,6.424600569413235
+1628,richard,Stimulus,Sadness,31,7.41132797685721
+1629,richard,Stimulus,Surprise,1,0.2128699323334939
+1630,richard,Stimulus,Surprise,3,0.6375957511864434
+1631,richard,Stimulus,Surprise,5,1.0612716272251543
+1632,richard,Stimulus,Surprise,7,1.482971220436201
+1633,richard,Stimulus,Surprise,9,1.9020675232222974
+1634,richard,Stimulus,Surprise,16,3.342905667479233
+1635,richard,Stimulus,Surprise,21,4.330144671675155
+1636,richard,Stimulus,Surprise,26,5.266855051467915
+1637,richard,Stimulus,Surprise,31,6.153818917139786
+1638,richard,Stimulus,Trust,1,0.3130438609137205
+1639,richard,Stimulus,Trust,3,0.9356263491531936
+1640,richard,Stimulus,Trust,5,1.5554510171307692
+1641,richard,Stimulus,Trust,7,2.1707601925338715
+1642,richard,Stimulus,Trust,9,2.7810757123081493
+1643,richard,Stimulus,Trust,16,4.834485641434795
+1644,richard,Stimulus,Trust,21,6.180853914880411
+1645,richard,Stimulus,Trust,26,7.390228752854942
+1646,richard,Stimulus,Trust,31,8.459506434922934
+1647,richard,Stimulus,Valence,1,0.9873302148131138
+1648,richard,Stimulus,Valence,3,2.945772253757625
+1649,richard,Stimulus,Valence,5,4.894930413615242
+1650,richard,Stimulus,Valence,7,6.839204919959851
+1651,richard,Stimulus,Valence,9,8.76555000001091
+1652,richard,Stimulus,Valence,16,13.208651292469051
+1653,richard,Stimulus,Valence,21,13.538610593064293
+1654,richard,Stimulus,Valence,26,13.576738629704966
+1655,richard,Stimulus,Valence,31,13.586541405463342
+1656,sally,Other,Unknown,1,0.1953448384711223
+1657,sally,Other,Unknown,3,0.5556701704616143
+1658,sally,Other,Unknown,5,0.9026620140340997
+1659,sally,Other,Unknown,7,1.2426278184890787
+1660,sally,Other,Unknown,9,1.5684554991076005
+1661,sally,Other,Unknown,16,2.622614170795755
+1662,sally,Other,Unknown,21,3.3172130628733396
+1663,sally,Other,Unknown,26,3.9662615065963913
+1664,sally,Other,Unknown,31,4.566644861435486
+1665,sally,Response,Anger,1,0.018830051211121964
+1666,sally,Response,Anger,3,0.05648429029030489
+1667,sally,Response,Anger,5,0.09272074191930402
+1668,sally,Response,Anger,7,0.1289287343916653
+1669,sally,Response,Anger,9,0.16482012189746037
+1670,sally,Response,Anger,16,0.2886752636090956
+1671,sally,Response,Anger,21,0.37427534799700374
+1672,sally,Response,Anger,26,0.45715171411860883
+1673,sally,Response,Anger,31,0.5397980081538305
+1674,sally,Response,Anticipation,1,0.030096596702903107
+1675,sally,Response,Anticipation,3,0.08860732976677897
+1676,sally,Response,Anticipation,5,0.14555072546107778
+1677,sally,Response,Anticipation,7,0.20085648902163217
+1678,sally,Response,Anticipation,9,0.25390625914304227
+1679,sally,Response,Anticipation,16,0.43269186604585197
+1680,sally,Response,Anticipation,21,0.5522094013435386
+1681,sally,Response,Anticipation,26,0.6669404056504523
+1682,sally,Response,Anticipation,31,0.7779753662350317
+1683,sally,Response,Arousal,1,0.08210489254860474
+1684,sally,Response,Arousal,3,0.2314357865447971
+1685,sally,Response,Arousal,5,0.36900035640026546
+1686,sally,Response,Arousal,7,0.5005213628434939
+1687,sally,Response,Arousal,9,0.6187838623729965
+1688,sally,Response,Arousal,16,0.9658419820026983
+1689,sally,Response,Arousal,21,1.153145983526814
+1690,sally,Response,Arousal,26,1.3059571880626208
+1691,sally,Response,Arousal,31,1.4308911990227098
+1692,sally,Response,Disgust,1,0.006046227226184793
+1693,sally,Response,Disgust,3,0.018140256266538098
+1694,sally,Response,Disgust,5,0.02906540583251326
+1695,sally,Response,Disgust,7,0.039969243163313586
+1696,sally,Response,Disgust,9,0.05085175657752396
+1697,sally,Response,Disgust,16,0.08895784296734822
+1698,sally,Response,Disgust,21,0.11619293755345383
+1699,sally,Response,Disgust,26,0.14344174515832547
+1700,sally,Response,Disgust,31,0.17070426137505837
+1701,sally,Response,Dominance,1,0.12706376335070446
+1702,sally,Response,Dominance,3,0.34838132777526176
+1703,sally,Response,Dominance,5,0.5394167321136534
+1704,sally,Response,Dominance,7,0.7156792260282357
+1705,sally,Response,Dominance,9,0.8700729541845093
+1706,sally,Response,Dominance,16,1.2634870151751367
+1707,sally,Response,Dominance,21,1.430336992316847
+1708,sally,Response,Dominance,26,1.5400933411182784
+1709,sally,Response,Dominance,31,1.6193307252479452
+1710,sally,Response,Fear,1,0.017341005267916813
+1711,sally,Response,Fear,3,0.05201893347057604
+1712,sally,Response,Fear,5,0.08611367523126237
+1713,sally,Response,Fear,7,0.11989726250964312
+1714,sally,Response,Fear,9,0.15305710238221645
+1715,sally,Response,Fear,16,0.265786038673851
+1716,sally,Response,Fear,21,0.34405584636068415
+1717,sally,Response,Fear,26,0.42170082417130617
+1718,sally,Response,Fear,31,0.49770416257576516
+1719,sally,Response,Joy,1,0.024589701814730525
+1720,sally,Response,Joy,3,0.07316502460856496
+1721,sally,Response,Joy,5,0.12030686708291305
+1722,sally,Response,Joy,7,0.16713267253514213
+1723,sally,Response,Joy,9,0.21319575703686408
+1724,sally,Response,Joy,16,0.36201103397356516
+1725,sally,Response,Joy,21,0.46248805035656165
+1726,sally,Response,Joy,26,0.5580887478016768
+1727,sally,Response,Joy,31,0.6496954559964984
+1728,sally,Response,Sadness,1,0.014290010996676122
+1729,sally,Response,Sadness,3,0.04252584487228173
+1730,sally,Response,Sadness,5,0.07005173839087672
+1731,sally,Response,Sadness,7,0.09719487509185262
+1732,sally,Response,Sadness,9,0.12431255147014784
+1733,sally,Response,Sadness,16,0.21919445694341938
+1734,sally,Response,Sadness,21,0.28502876711988767
+1735,sally,Response,Sadness,26,0.3487213912530958
+1736,sally,Response,Sadness,31,0.41230031967231245
+1737,sally,Response,Surprise,1,0.024589701814730525
+1738,sally,Response,Surprise,3,0.07241962477769516
+1739,sally,Response,Surprise,5,0.11759547447146089
+1740,sally,Response,Surprise,7,0.1610913433180626
+1741,sally,Response,Surprise,9,0.20318137538230202
+1742,sally,Response,Surprise,16,0.34425250043510724
+1743,sally,Response,Surprise,21,0.43734075806831435
+1744,sally,Response,Surprise,26,0.5285007271164509
+1745,sally,Response,Surprise,31,0.6161289349800442
+1746,sally,Response,Trust,1,0.02174602464717033
+1747,sally,Response,Trust,3,0.06453482792678214
+1748,sally,Response,Trust,5,0.10704827557127916
+1749,sally,Response,Trust,7,0.14930197938701703
+1750,sally,Response,Trust,9,0.19001163861889842
+1751,sally,Response,Trust,16,0.32009777136421075
+1752,sally,Response,Trust,21,0.40856287353579496
+1753,sally,Response,Trust,26,0.4917041547605349
+1754,sally,Response,Trust,31,0.571997923236881
+1755,sally,Response,Valence,1,0.16051582432999556
+1756,sally,Response,Valence,3,0.43384895838348003
+1757,sally,Response,Valence,5,0.6560523975014982
+1758,sally,Response,Valence,7,0.8592966636096986
+1759,sally,Response,Valence,9,1.033191213994372
+1760,sally,Response,Valence,16,1.4140458159420488
+1761,sally,Response,Valence,21,1.5541135673696702
+1762,sally,Response,Valence,26,1.6528554234382902
+1763,sally,Response,Valence,31,1.7315344309525995
+1764,sally,Stimulus,Anger,1,0.22180354693481522
+1765,sally,Stimulus,Anger,3,0.6634883178912281
+1766,sally,Stimulus,Anger,5,1.1046164313296822
+1767,sally,Stimulus,Anger,7,1.5431777694664526
+1768,sally,Stimulus,Anger,9,1.978186541956685
+1769,sally,Stimulus,Anger,16,3.4677872200179185
+1770,sally,Stimulus,Anger,21,4.475727224108538
+1771,sally,Stimulus,Anger,26,5.42223250212857
+1772,sally,Stimulus,Anger,31,6.300581971827823
+1773,sally,Stimulus,Anticipation,1,0.3650622236904727
+1774,sally,Stimulus,Anticipation,3,1.093492935798651
+1775,sally,Stimulus,Anticipation,5,1.8198530437842932
+1776,sally,Stimulus,Anticipation,7,2.540467203957198
+1777,sally,Stimulus,Anticipation,9,3.2504458564407197
+1778,sally,Stimulus,Anticipation,16,5.625312269571848
+1779,sally,Stimulus,Anticipation,21,7.155371413616924
+1780,sally,Stimulus,Anticipation,26,8.510353043334094
+1781,sally,Stimulus,Anticipation,31,9.640360929352092
+1782,sally,Stimulus,Arousal,1,0.7449416919539475
+1783,sally,Stimulus,Arousal,3,2.227295372882394
+1784,sally,Stimulus,Arousal,5,3.7068914223918874
+1785,sally,Stimulus,Arousal,7,5.181966239640329
+1786,sally,Stimulus,Arousal,9,6.638222184368958
+1787,sally,Stimulus,Arousal,16,10.875916304445093
+1788,sally,Stimulus,Arousal,21,12.44380714299719
+1789,sally,Stimulus,Arousal,26,13.140022208004966
+1790,sally,Stimulus,Arousal,31,13.421701241953654
+1791,sally,Stimulus,Disgust,1,0.1729726850863179
+1792,sally,Stimulus,Disgust,3,0.5166411727629734
+1793,sally,Stimulus,Disgust,5,0.8590439091496905
+1794,sally,Stimulus,Disgust,7,1.1998006178312584
+1795,sally,Stimulus,Disgust,9,1.538427939682035
+1796,sally,Stimulus,Disgust,16,2.700539656822274
+1797,sally,Stimulus,Disgust,21,3.4896429958949367
+1798,sally,Stimulus,Disgust,26,4.236508157848638
+1799,sally,Stimulus,Disgust,31,4.93852336063497
+1800,sally,Stimulus,Dominance,1,0.9287367294383284
+1801,sally,Stimulus,Dominance,3,2.778320774576363
+1802,sally,Stimulus,Dominance,5,4.621775585576612
+1803,sally,Stimulus,Dominance,7,6.458988851916023
+1804,sally,Stimulus,Dominance,9,8.276866518327836
+1805,sally,Stimulus,Dominance,16,12.767803392680772
+1806,sally,Stimulus,Dominance,21,13.432051781920919
+1807,sally,Stimulus,Dominance,26,13.557553741737642
+1808,sally,Stimulus,Dominance,31,13.582378892772969
+1809,sally,Stimulus,Fear,1,0.2514210082307971
+1810,sally,Stimulus,Fear,3,0.7503502472703965
+1811,sally,Stimulus,Fear,5,1.2470641661596054
+1812,sally,Stimulus,Fear,7,1.73909265520604
+1813,sally,Stimulus,Fear,9,2.225371750199669
+1814,sally,Stimulus,Fear,16,3.857234478467696
+1815,sally,Stimulus,Fear,21,4.942361849373595
+1816,sally,Stimulus,Fear,26,5.948199570578716
+1817,sally,Stimulus,Fear,31,6.869689694663094
+1818,sally,Stimulus,Joy,1,0.30342903142740074
+1819,sally,Stimulus,Joy,3,0.9068210041512983
+1820,sally,Stimulus,Joy,5,1.5080872789112931
+1821,sally,Stimulus,Joy,7,2.1064142868831173
+1822,sally,Stimulus,Joy,9,2.7006097334933092
+1823,sally,Stimulus,Joy,16,4.711716723956431
+1824,sally,Stimulus,Joy,21,6.028175993324607
+1825,sally,Stimulus,Joy,26,7.220345273255308
+1826,sally,Stimulus,Joy,31,8.261804366952889
+1827,sally,Stimulus,Sadness,1,0.2633452570775958
+1828,sally,Stimulus,Sadness,3,0.7884336105274186
+1829,sally,Stimulus,Sadness,5,1.3119477352181517
+1830,sally,Stimulus,Sadness,7,1.832933950918144
+1831,sally,Stimulus,Sadness,9,2.3497671977264893
+1832,sally,Stimulus,Sadness,16,4.100990631322412
+1833,sally,Stimulus,Sadness,21,5.269062437775362
+1834,sally,Stimulus,Sadness,26,6.347381514879509
+1835,sally,Stimulus,Sadness,31,7.315297803120738
+1836,sally,Stimulus,Surprise,1,0.20854362268219812
+1837,sally,Stimulus,Surprise,3,0.6246008416440576
+1838,sally,Stimulus,Surprise,5,1.0396404041888585
+1839,sally,Stimulus,Surprise,7,1.4529317375274362
+1840,sally,Stimulus,Surprise,9,1.8648877582278904
+1841,sally,Stimulus,Surprise,16,3.282306795839811
+1842,sally,Stimulus,Surprise,21,4.255746334870362
+1843,sally,Stimulus,Surprise,26,5.183472541043593
+1844,sally,Stimulus,Surprise,31,6.064695278274433
+1845,sally,Stimulus,Trust,1,0.3120562495713799
+1846,sally,Stimulus,Trust,3,0.9323575260081268
+1847,sally,Stimulus,Trust,5,1.549845640915638
+1848,sally,Stimulus,Trust,7,2.1619582854787334
+1849,sally,Stimulus,Trust,9,2.768937261015444
+1850,sally,Stimulus,Trust,16,4.808456777854805
+1851,sally,Stimulus,Trust,21,6.1445867324227965
+1852,sally,Stimulus,Trust,26,7.3432736337117985
+1853,sally,Stimulus,Trust,31,8.40455288571443
+1854,sally,Stimulus,Valence,1,0.9832506026782477
+1855,sally,Stimulus,Valence,3,2.927924703209346
+1856,sally,Stimulus,Valence,5,4.861549896950111
+1857,sally,Stimulus,Valence,7,6.78888932013985
+1858,sally,Stimulus,Valence,9,8.69721468842955
+1859,sally,Stimulus,Valence,16,13.127726544848887
+1860,sally,Stimulus,Valence,21,13.517856570326819
+1861,sally,Stimulus,Valence,26,13.571878999787206
+1862,sally,Stimulus,Valence,31,13.58528300586867
