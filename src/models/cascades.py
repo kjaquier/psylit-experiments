@@ -14,6 +14,7 @@ import pandas as pd
 import numpy as np
 
 from utils.misc import progress
+from utils.io import file_parts
 
 ROOT = pathlib.Path()
 DATA_ROOT = ROOT  / 'data' / 'processed' / 'train'
@@ -21,6 +22,7 @@ DATA_ROOT = ROOT  / 'data' / 'processed' / 'train'
 ROLE_LEVEL, ENT_LEVEL, FEAT_LEVEL = 0, 1, 2
 
 logger = logging.getLogger()
+
 
 class Cascades:
     """Wraps a pandas.DataFrame with index levels [Subject, t] and binary columns."""
@@ -34,7 +36,7 @@ class Cascades:
             self.stashed = {k: v.copy() for k, v in casc.stashed.items()} if copy else dict(casc.stashed)
         
     @staticmethod
-    def from_raw_df(df, document_name=None, document_col='document'):
+    def from_raw_df(df, document_name=None, document_col='Document'):
         df = df.copy()
         for c in [c for c in df.columns if c.endswith('_nan')]:
             df.pop(c)
@@ -47,10 +49,10 @@ class Cascades:
         
     @staticmethod
     def from_csv(csv_path, add_document_index=False):
-        document_name = csv_path.stem.split('.')[0] if add_document_index else None
+        document_name = file_parts(csv_path)[0] if add_document_index else None
 
         def get_dtype(col_name):
-            fixed = {'Subject': str, 't': int, 'document': str, 'book': str}
+            fixed = {'Subject': str, 't': int, 'Document': str, 'book': str}
             dtype = fixed.get(col_name, np.int8)
             return dtype
 
@@ -210,8 +212,8 @@ class Cascades:
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
             if window_size > 1:
                 df = ((df.rolling(window=window_size).sum() > 0)
-                    .astype(np.int8)
-                    .fillna(0))
+                      .astype(np.int8)
+                      .fillna(0))
             for c in progress(df.columns, print_func=logger.debug):
                 for k in k_values:
                     series = df[c].to_numpy()
@@ -220,6 +222,32 @@ class Cascades:
                     B.append(row)
         return pd.DataFrame(B, columns=cols)
 
+    def batch_pairwise_measure(self, trajectory_group, measure, measure_name,
+                               src_cols=None, dest_cols=None, window_size=1,
+                               get_args=(lambda src, dst: {})):
+        casc = self.casc
+        src_cols = src_cols or casc.columns.values
+        dest_cols = dest_cols or casc.columns.values
+
+        col_pairs = list(it.product(src_cols, dest_cols))
+        logger.debug("%d x %d = %d column pairs", len(src_cols), len(dest_cols), len(col_pairs))
+
+        trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
+        rows = []
+        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
+            lbl = [lbl] if isinstance(lbl, str) else list(lbl)
+            if window_size > 1:
+                df = ((df.rolling(window=window_size).sum() > 0)
+                      .astype(np.int8)
+                      .fillna(0))
+
+            for src, dst in col_pairs:
+                kwargs = get_args(src, dst)
+                m = measure(df[src], df[dst], **kwargs)
+                row = {'Source': src, 'Destination': dst, measure_name: m}
+                rows.append(row)
+        return pd.DataFrame(rows).set_index(['Source', 'Destination'])
+
 
 class MultiCascades:
     """Cascades from multiple documents, distinguished by an additional index level"""
@@ -227,16 +255,40 @@ class MultiCascades:
     def __init__(self, cascades):
         self.casc = cascades
         
-    def get_dt(self, group_by=('Subject', 'document')): # if document present should group by document
+    def get_dt(self, group_by=('Subject', 'Document')): # if document present should group by document
         return (self.casc
                 .reset_index('t')[['t']]
                 .groupby(level=list(group_by))
                 .transform(pd.Series.diff)
                 .t)
     
-    @staticmethod
-    def from_cascades(cascades, document_values, document_col='document'):
-        return MultiCascades(Cascades.concat(cascades, document_values, document_col))
+    @classmethod
+    def from_cascades(cls, cascades, document_values, document_col='Document'):
+        return cls(Cascades.concat(cascades, document_values, document_col))
+
+    @classmethod
+    def from_csvs(cls, files, document_col='Document'):
+        doc_name = lambda f: file_parts(f)[0]
+        return cls.from_cascades(
+            (Cascades.from_csv(f) for f in files),
+            document_values=list(map(doc_name, files)),
+            document_col=document_col,
+        )
+
+    def pair(self, sources, destinations, keep_single=(), split=' & ', name_fmt="{src}{split}{dst}"):
+        # Copy of Cascades.pair
+        casc = self.casc.copy()
+        singles = [(c, casc.pop(c)) for c in keep_single]
+        pairs = list(it.product(sources, destinations))
+        df = pd.DataFrame({
+            #name_fmt.format(src=s, split=split, dst=d): casc[s] * casc[d]
+            (s, d): casc[s] * casc[d]
+            for s, d in pairs})
+        for c_name, c in singles:
+            df[c_name] = c
+        
+        df.columns = pd.MultiIndex.from_tuples(list(df.columns))
+        return Cascades(df)
 
     def _repr_html_(self):
         return display(self.casc)
@@ -246,7 +298,19 @@ class MultiCascades:
 
     def memory_size(self):
         return sys.getsizeof(self.casc)
-
+    
+    @property
+    def n_rows(self):
+        return len(self.casc.index)
+    
+    @property
+    def subjects(self):
+        return self.casc.index.get_level_values('Subject').unique().array
+    
+    def match_cols(self, *match_funcs):
+        # copy of Cascades.match_cols
+        return [c for c in self.casc.columns if all(f(c) for f in match_funcs)]
+        
 
 def map_col_to_stimulus_response(col):
     role, ent, feat = col

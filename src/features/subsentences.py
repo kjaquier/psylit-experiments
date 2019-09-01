@@ -7,10 +7,11 @@ from .dependencies import DEP_INSIDE_SUBSENTENCE
 
 def iter_subsent_roots(doc):
     matcher = spmatch.Matcher(doc.vocab)
-    matcher.add('subsent_root', None, [{'DEP': {'NOT_IN': DEP_INSIDE_SUBSENTENCE}}])
+    matcher.add('subsent_root', None, [
+                {'DEP': {'NOT_IN': DEP_INSIDE_SUBSENTENCE}}])
     for _, start, end in matcher(doc):
         yield doc[start:end].root
-    
+
 
 def time_remapping(doc):
     subsent_roots = iter_subsent_roots(doc)
