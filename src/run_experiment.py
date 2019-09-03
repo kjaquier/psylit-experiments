@@ -14,6 +14,7 @@ EXPERIMENTS = {
     for c in [
         blockent_exp.BlockEntropy_StimulusResponse,
         tfr_exp.TransferEntropy_StimulusResponse,
+        tfr_exp.CompleteTransferEntropy_StimulusResponse,
     ]
 }
 

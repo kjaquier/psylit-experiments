@@ -1,6 +1,7 @@
 import pathlib
 import sys
 import logging
+from itertools import product
 
 
 LOGGING_PARAMETERS = dict(
@@ -47,13 +48,19 @@ EXPERIMENTS_PARAMETERS = dict(
             window_size=1,
         ),
         TransferEntropy_StimulusResponse=dict(
-            k=1,
-            conditional=False,
-            measure_name='$T^{(k)}$',
+            k=10,
+            #measure_name='$T^{(k)}$',
             window_size=1,
-            src_cols=['Valence', 'Arousal', 'Dominance', 'Unknown', 'Joy', 'Fear', 'Anger'],
-            dest_cols=['Valence', 'Arousal', 'Dominance', 'Unknown', 'Joy', 'Fear', 'Anger'],
-        )
+            src_cols=['Arousal', 'Dominance', 'Joy', 'Fear'],
+            dest_cols=['Arousal', 'Dominance', 'Joy', 'Fear'],  
+        ),
+        CompleteTransferEntropy_StimulusResponse=dict(
+            k=10,
+            #measure_name='$T^{(k)}$',
+            window_size=1,
+            cols=list(product(['Stimulus','Response'], ['Valence', 'Fear'])),
+            min_p_value=0.05,
+        ),
     ),
     extensions=dict(
         dataframe='.csv',
@@ -62,4 +69,8 @@ EXPERIMENTS_PARAMETERS = dict(
 
 CACHE_PARAMETERS = dict(
     dir=pathlib.Path() / 'cache',
+)
+
+JVM_PARAMETERS = dict(
+    jvm_args=[],#"-Xmx5g"],
 )

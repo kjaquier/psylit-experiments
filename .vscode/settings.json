@@ -9,5 +9,6 @@
     "search.exclude": {
         "data/**": true,
         "notebooks/**": true,
-    }
+    },
+    "python.linting.enabled": false
 }

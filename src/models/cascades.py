@@ -229,6 +229,8 @@ class Cascades:
         src_cols = src_cols or casc.columns.values
         dest_cols = dest_cols or casc.columns.values
 
+        many_results = not isinstance(measure_name, str)
+
         col_pairs = list(it.product(src_cols, dest_cols))
         logger.debug("%d x %d = %d column pairs", len(src_cols), len(dest_cols), len(col_pairs))
 
@@ -243,10 +245,62 @@ class Cascades:
 
             for src, dst in col_pairs:
                 kwargs = get_args(src, dst)
-                m = measure(df[src], df[dst], **kwargs)
-                row = {'Source': src, 'Destination': dst, measure_name: m}
+                meas = measure(df[src], df[dst], **kwargs)
+                if many_results:
+                    row = {'Source': src, 'Target': dst, 
+                           **dict(zip(measure_name, meas))}
+                else:
+                    row = {'Source': src, 'Target': dst, measure_name: meas}
                 rows.append(row)
-        return pd.DataFrame(rows).set_index(['Source', 'Destination'])
+        return pd.DataFrame(rows).set_index(['Source', 'Target'])
+
+    def batch_pairwise_df_measure(self, trajectory_group, measure,
+                                  src_cols=None, dest_cols=None, window_size=1,
+                                  get_args=(lambda src, dst: {})):
+        casc = self.casc
+        src_cols = list(src_cols or casc.columns.values)
+        dest_cols = list(dest_cols or casc.columns.values)
+
+        col_pairs = list(it.product(src_cols, dest_cols))
+        logger.debug("%d x %d = %d column pairs", len(src_cols), len(dest_cols), len(col_pairs))
+
+        trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
+        rows = []
+        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
+            lbl = [lbl] if isinstance(lbl, str) else list(lbl)
+            if window_size > 1:
+                df = ((df.rolling(window=window_size).sum() > 0)
+                      .astype(np.int8)
+                      .fillna(0))
+
+            for src, dst in col_pairs:
+                kwargs = get_args(src, dst)
+                meas = measure(df, src, dst, **kwargs)
+                rows.append({'Source': src, 'Target': dst, **meas})
+        return pd.DataFrame(rows).set_index(['Source', 'Target'])
+
+    def batch_multi_df_measure(self, trajectory_group, measure,
+                               cols=None, window_size=1,
+                               get_args=(lambda src, dst: {})):
+        casc = self.casc
+        cols = list(cols or casc.columns.values)
+
+        logger.debug("%d columns", len(cols))
+
+        trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
+        rows = []
+        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
+            lbl = [lbl] if isinstance(lbl, str) else list(lbl)
+            if window_size > 1:
+                df = ((df.rolling(window=window_size).sum() > 0)
+                      .astype(np.int8)
+                      .fillna(0))
+
+            kwargs = get_args(cols)
+            meas_rows = measure(df, cols, **kwargs)
+            rows.append({'Subject': lbl, **r} for r in meas_rows)
+
+        return pd.DataFrame(rows).set_index(['Source', 'Target'])
 
 
 class MultiCascades:

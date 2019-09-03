@@ -71,13 +71,25 @@
             ]
         },
         {
-            "name": "Transfer entropy (dev)",
+            "name": "Apparent Transfer entropy (dev)",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}\\src\\run_experiment.py",
             "console": "integratedTerminal",
             "args": [
                 "TransferEntropy_StimulusResponse",
+                "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
+                "data\\analytics"
+            ]
+        },
+        {
+            "name": "Complete Transfer entropy (dev)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\run_experiment.py",
+            "console": "integratedTerminal",
+            "args": [
+                "CompleteTransferEntropy_StimulusResponse",
                 "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
                 "data\\analytics"
             ]

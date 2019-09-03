@@ -1,4 +1,4 @@
-from functools import wraps
+from functools import wraps, update_wrapper
 import logging
 import time
 from math import ceil
@@ -168,3 +168,59 @@ class FuncRegister(UserDict):
 
         self.data[func.__name__] = wrapper
         return wrapper
+
+
+def trace(func):
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        s = "{func_name}({args}{sep}{kwargs})".format(
+            func_name=func.__name__,
+            args=", ".join("{}".format(repr(x)) for x in args),
+            sep=(", " if args and kwargs else ""),
+            kwargs=", ".join("{}={}".format(k, repr(v)) for k, v in kwargs.items())
+        )
+        res = ""
+        try:
+            res = func(*args, **kwargs)
+            print(s, "=", repr(res))
+            return res
+        except:
+            print(s)
+            raise
+
+    return wrapper
+
+
+def hashable_or_ref(x):
+    try:
+        hash(x)
+        return x
+    except:
+        return id(x)
+
+
+class HashableDict(UserDict):
+
+    def __hash__(self):
+        return tuple(sorted(self.data.items()))
+
+
+class CachedFunction(UserDict):
+
+    def __init__(self, func):
+        self._func = func
+        super().__init__()
+
+    def __call__(self, *args, **kwargs):
+        h = tuple(hashable_or_ref(x) for x in args) + tuple(sorted(kwargs.items()))
+        try:
+            return self.data[h]
+        except KeyError:
+            res = self._func(*args, **kwargs)
+            self.data[h] = res
+            return res
+
+
+def cached(func):
+    return update_wrapper(CachedFunction(func), func)
