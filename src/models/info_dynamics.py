@@ -40,7 +40,7 @@ def cond_transfer_entropy(casc, src_col, dst_col, cond_cols, k, n_permutations=1
     source_series = df_as_java_array(casc, src_col)
     dest_series = df_as_java_array(casc, dst_col)
     conds_series = df_as_java_array(casc, cond_cols)
-    te_calc.addObservations(source_series, dest_series, dest_series)
+    te_calc.addObservations(source_series, dest_series, conds_series)
 
     te = te_calc.computeAverageLocalOfObservations()
     surrogate_dist = te_calc.computeSignificance(n_permutations) # distribution of measurement under null hypothesis

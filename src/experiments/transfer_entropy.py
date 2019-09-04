@@ -76,7 +76,7 @@ class TransferEntropy_StimulusResponse(BaseCascadeExperiment):
 
         measure = {
             'apparent': info_dynamics.apparent_tfr_entropy,
-            'cond': info_dynamics.cond_tfr_entropy,
+            'cond': info_dynamics.cond_transfer_entropy,
         }[self.setup.variant]
 
         get_args = lambda src, dst: {
