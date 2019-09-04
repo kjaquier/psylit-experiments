@@ -24,10 +24,12 @@ def apparent_tfr_entropy(casc, src_col, dst_col, k, n_permutations=100, base=2):
     te_calc.addObservations(source_series, dest_series)
     
     meas = te_calc.computeAverageLocalOfObservations()
+    surrogate_dist_an = te_calc.computeSignificance() # analytic distribution of measurement under null hypothesis
+    p_val_an = surrogate_dist_an.pValue # analytic probability that the surrogate is greater than the measurement (i.e measurement non-significant)
     surrogate_dist = te_calc.computeSignificance(n_permutations) # distribution of measurement under null hypothesis
     p_val = surrogate_dist.pValue # probability that the surrogate is greater than the measurement (i.e measurement non-significant)
 
-    return {'apparent_te': meas, 'apparent_te_p_value': p_val}
+    return {'k': k, apparent_te': meas, 'apparent_te_p_value': p_val, 'apparent_te_p_value_analytical': p_val_an}
 
 
 @cached
@@ -42,11 +44,13 @@ def cond_transfer_entropy(casc, src_col, dst_col, cond_cols, k, n_permutations=1
     conds_series = df_as_java_array(casc, cond_cols)
     te_calc.addObservations(source_series, dest_series, conds_series)
 
-    te = te_calc.computeAverageLocalOfObservations()
+    meas = te_calc.computeAverageLocalOfObservations()
+    surrogate_dist_an = te_calc.computeSignificance() # analytic distribution of measurement under null hypothesis
+    p_val_an = surrogate_dist_an.pValue # analytic probability that the surrogate is greater than the measurement (i.e measurement non-significant)
     surrogate_dist = te_calc.computeSignificance(n_permutations) # distribution of measurement under null hypothesis
     p_val = surrogate_dist.pValue # probability that the surrogate is greater than the measurement (i.e measurement non-significant)
 
-    return {'cond_te': te, 'cond_te_p_value': p_val}
+    return {'k': k, cond_te': meas, 'cond_te_p_value': p_val, 'cond_te_p_value_analytical': p_val_an}
 
 
 def multi_complete_tfr_entropy(df, cols, k, n_permutations=100, base=2, min_p_value=0.05):
