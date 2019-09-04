@@ -12,6 +12,7 @@ from functools import partial
 from IPython.display import display
 import pandas as pd
 import numpy as np
+import dask.dataframe as dd
 
 from utils.misc import progress
 from utils.io import file_parts
@@ -364,7 +365,25 @@ class MultiCascades:
     def match_cols(self, *match_funcs):
         # copy of Cascades.match_cols
         return [c for c in self.casc.columns if all(f(c) for f in match_funcs)]
-        
+
+
+class DaskMultiCascades:
+
+    def __init__(self, df):
+        self.df = df
+
+    @classmethod
+    def from_csvs(cls, files, document_col='Document'):
+        return DaskMultiCascades(dd.read_csv(files, include_path_column=document_col, compression='zip', blocksize=None))
+
+    @property
+    def n_rows(self):
+        return self.df.groupby(['Document', 'Subject']).size().compute()
+
+    @property
+    def subjects(self):
+        return self.df[['Document', 'Subject']].drop_duplicates()
+            
 
 def map_col_to_stimulus_response(col):
     role, ent, feat = col

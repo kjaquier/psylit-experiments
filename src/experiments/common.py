@@ -81,6 +81,7 @@ class BaseExperiment(ABC):
 
     @classmethod
     def clear_missing_results(cls, output_path):
+        """Removes empty entries from results"""
         for run_name in cls.find_run_names(output_path):
             d = cls._get_run_output_dir(output_path, run_name)
             if not list(d.iterdir()):

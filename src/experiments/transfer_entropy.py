@@ -2,6 +2,7 @@ import logging
 from dataclasses import dataclass
 from typing import Optional, List
 
+import pandas as pd
 import pyinform
 
 from models.cascades import Cascades, FEATURE_TRANSFORMERS
@@ -14,7 +15,7 @@ logger = logging.getLogger()
 
 @dataclass
 class TransferEntropy_StimulusResponse_Setup(Setup):
-    k: int
+    k_values: List[int]
     variant: str = 'apparent'
     window_size: int = 1
     src_cols: Optional[List[str]] = None
@@ -23,7 +24,6 @@ class TransferEntropy_StimulusResponse_Setup(Setup):
 
 @dataclass
 class CompleteTransferEntropy_StimulusResponse_Setup(Setup):
-    k: int
     window_size: int = 1
     cols: Optional[List[str]] = None
     min_p_value: float = 0.05
@@ -42,7 +42,7 @@ class CompleteTransferEntropy_StimulusResponse(BaseCascadeExperiment):
         casc = transform_function(raw_casc)
 
         get_args = lambda col: {
-            'k': self.setup.k,
+            'k': self.setup.k_values[0],
             'min_p_value': self.setup.min_p_value,
         }
 
@@ -79,10 +79,7 @@ class TransferEntropy_StimulusResponse(BaseCascadeExperiment):
             'cond': info_dynamics.cond_transfer_entropy,
         }[self.setup.variant]
 
-        get_args = lambda src, dst: {
-            'k': self.setup.k
-        }
-
+        
         src_cols = self.setup.src_cols or [
             c for c in casc.casc.columns if c in self.setup.src_cols
         ]
@@ -90,14 +87,24 @@ class TransferEntropy_StimulusResponse(BaseCascadeExperiment):
             c for c in casc.casc.columns if c in self.setup.dest_cols
         ]
 
-        res = casc.batch_pairwise_df_measure(trajectory_group='Subject',
-                                             measure=measure,
-                                             src_cols=src_cols,
-                                             dest_cols=dest_cols,
-                                             window_size=self.setup.window_size,
-                                             get_args=get_args,
-                                             )
+        all_res = []
+        for k in self.setup.k_values:
+            logger.info('k = %d', k)
+            get_args = lambda src, dst: {
+                'k': k,
+            }
+
+            res = casc.batch_pairwise_df_measure(trajectory_group='Subject',
+                                                measure=measure,
+                                                src_cols=src_cols,
+                                                dest_cols=dest_cols,
+                                                window_size=self.setup.window_size,
+                                                get_args=get_args,
+                                                )
+            all_res.append(res.reset_index())#.set_index('k', append=True))
+
+        all_res = pd.concat(all_res, axis='rows', ignore_index=True, verify_integrity=True)
 
         return {
-            'persubj': res.reset_index(),
+            'persubj': all_res.reset_index(),
         }

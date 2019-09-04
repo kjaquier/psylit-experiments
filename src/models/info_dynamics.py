@@ -29,7 +29,11 @@ def apparent_tfr_entropy(casc, src_col, dst_col, k, n_permutations=100, base=2):
     surrogate_dist = te_calc.computeSignificance(n_permutations) # distribution of measurement under null hypothesis
     p_val = surrogate_dist.pValue # probability that the surrogate is greater than the measurement (i.e measurement non-significant)
 
-    return {'k': k, apparent_te': meas, 'apparent_te_p_value': p_val, 'apparent_te_p_value_analytical': p_val_an}
+    return {'n': len(source_series),
+            'k': k,
+            'apparent_te': meas,
+            'apparent_te_p_value': p_val,
+            'apparent_te_p_value_analytical': p_val_an}
 
 
 @cached
@@ -50,7 +54,11 @@ def cond_transfer_entropy(casc, src_col, dst_col, cond_cols, k, n_permutations=1
     surrogate_dist = te_calc.computeSignificance(n_permutations) # distribution of measurement under null hypothesis
     p_val = surrogate_dist.pValue # probability that the surrogate is greater than the measurement (i.e measurement non-significant)
 
-    return {'k': k, cond_te': meas, 'cond_te_p_value': p_val, 'cond_te_p_value_analytical': p_val_an}
+    return {'n': len(source_series),
+            'k': k,
+            'cond_te': meas,
+            'cond_te_p_value': p_val,
+            'cond_te_p_value_analytical': p_val_an}
 
 
 def multi_complete_tfr_entropy(df, cols, k, n_permutations=100, base=2, min_p_value=0.05):
@@ -88,6 +96,12 @@ def multi_complete_tfr_entropy(df, cols, k, n_permutations=100, base=2, min_p_va
     }
 
     return [
-        {'Source': c, 'Target': var, 'complete_te': te, 'complete_te_p_value': p, **{p: (p in parents) for p in cols}}
+        {'n': len(source_series),
+         'k': k,
+         'Source': c,
+         'Target': var,
+         'complete_te': te,
+         'complete_te_p_value': p,
+         **{p: (p in parents) for p in cols}}
         for (c, var, parents), (te, p) in results.items()
     ]

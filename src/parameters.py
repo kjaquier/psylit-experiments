@@ -48,7 +48,8 @@ EXPERIMENTS_PARAMETERS = dict(
             window_size=1,
         ),
         TransferEntropy_StimulusResponse=dict(
-            k=20,
+            # k=20,
+            k_values=[1, 3],#, 5, 7, 9, 16, 21, 26],
             #measure_name='$T^{(k)}$',
             window_size=1,
             src_cols=list(product(['Stimulus','Response'], ['Arousal', 'Joy'])),
