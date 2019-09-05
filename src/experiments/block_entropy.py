@@ -1,9 +1,8 @@
 from dataclasses import dataclass
 from typing import Iterable
 
-import pyinform
-
 from models.cascades import Cascades, FEATURE_TRANSFORMERS
+from models.info_dynamics import fast_block_entropy
 from .common import BaseCascadeExperiment, Setup
 
 
@@ -28,7 +27,7 @@ class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
         
         be = casc.batch_single_measure(
             trajectory_group='Subject',
-            measure=pyinform.blockentropy.block_entropy, 
+            measure=fast_block_entropy, 
             measure_name=self.setup.measure_name,
             k_values=self.setup.k_values, 
             local=False,

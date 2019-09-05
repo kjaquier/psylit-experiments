@@ -44,7 +44,7 @@ EXPERIMENTS_PARAMETERS = dict(
     experiments=dict(
         BlockEntropy_StimulusResponse=dict(
             measure_name='$H(k)$',
-            k_values=[1, 3, 5, 7, 9, 16, 21, 26, 31],
+            k_values=[1, 5, 10, 15, 20, 30, 40, 50, 60, 70],
             window_size=1,
         ),
         TransferEntropy_StimulusResponse=dict(
