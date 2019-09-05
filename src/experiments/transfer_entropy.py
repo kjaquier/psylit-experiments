@@ -80,12 +80,20 @@ class TransferEntropy_StimulusResponse(BaseCascadeExperiment):
         }[self.setup.variant]
 
         
-        src_cols = self.setup.src_cols or [
-            c for c in casc.casc.columns if c in self.setup.src_cols
-        ]
-        dest_cols = self.setup.dest_cols or [
-            c for c in casc.casc.columns if c in self.setup.dest_cols
-        ]
+        if self.setup.src_cols:
+            src_cols = [
+                c for c in casc.casc.columns if c in self.setup.src_cols
+            ]
+        else:
+            src_cols = None
+
+        if self.setup.dest_cols:
+            dest_cols = [
+                c for c in casc.casc.columns if c in self.setup.dest_cols
+            ]
+        else:
+            dest_cols = None
+
 
         all_res = []
         for k in self.setup.k_values:

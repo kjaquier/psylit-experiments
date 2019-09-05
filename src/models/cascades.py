@@ -266,7 +266,7 @@ class Cascades:
 
         trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
         rows = []
-        for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
+        for lbl, df in casc.groupby(level=trajectory_group):#progress(, print_func=logger.debug):
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
             if window_size > 1:
                 df = ((df.rolling(window=window_size).sum() > 0)
