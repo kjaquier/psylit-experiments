@@ -7,11 +7,38 @@ from utils.java import df_as_java_array
 from utils.misc import trace, cached, HashableDict
 from parameters import CACHE_PARAMETERS
 
+import numpy as np
+import pandas as pd
+import pyinform
 
 logger = logging.getLogger()
 
 TransferEntropyDiscrete = infodynamics_measures_discrete.TransferEntropyCalculatorDiscrete
 CondTransferEntropyDiscrete = infodynamics_measures_discrete.ConditionalTransferEntropyCalculatorDiscrete
+
+
+@cached
+def coalesce_history(series, k):
+    pows = 2**np.arange(k)
+    black_box = lambda h: pows[h.astype(np.bool)].sum()
+    bb = series.rolling(k, min_periods=k).apply(black_box, raw=True)
+    #_, coalesced = np.unique(bb.values, return_inverse=True)
+    coalesced, base = pyinform.utils.coalesce_series(bb)
+    return coalesced[k-1:], base
+
+
+
+@cached
+def fast_block_entropy(series, k, **kwargs):
+    series_c, base = coalesce_history(series, k)
+    be = pyinform.block_entropy(series_c, 1, **kwargs)
+    # er = pyinform.entropy_rate(series_c, 1, **kwargs)
+
+    return {'n': len(series_c),
+            'k': k,
+            'be': be,
+            # 'er': er,
+            }
 
 
 @cached

@@ -217,10 +217,9 @@ class Cascades:
                       .fillna(0))
             for c in progress(df.columns, print_func=logger.debug):
                 for k in k_values:
-                    series = df[c].to_numpy()
-                    m = measure(series, k=k, local=local)
-                    row = (*lbl, *c, k, m)
-                    B.append(row)
+                    kwargs = dict(k=k, local=local)
+                    meas = measure(df[c], **kwargs)
+                    B.append({'Subject': lbl, 'Feature': c, **meas})
         return pd.DataFrame(B, columns=cols)
 
     def batch_pairwise_measure(self, trajectory_group, measure, measure_name,
