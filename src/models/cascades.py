@@ -219,8 +219,8 @@ class Cascades:
                 for k in k_values:
                     kwargs = dict(k=k, local=local)
                     meas = measure(df[c], **kwargs)
-                    B.append({**{k: v for k, v in zip(lbl, trajectory_group)},
-                              **{k: v for k, v in zip(c, casc.columns.names)},
+                    B.append({**{k: v for k, v in zip(trajectory_group, lbl)},
+                              **{k: v for k, v in zip(casc.columns.names, c)},
                               **meas})
         return pd.DataFrame(B)#, columns=cols)
 
