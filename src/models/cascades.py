@@ -208,7 +208,7 @@ class Cascades:
         casc = self.casc
         B = []
         trajectory_group = [trajectory_group] if isinstance(trajectory_group, str) else list(trajectory_group)
-        cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
+        #cols = [*trajectory_group, *casc.columns.names, 'k', measure_name]
         for lbl, df in progress(casc.groupby(level=trajectory_group), print_func=logger.debug):
             lbl = [lbl] if isinstance(lbl, str) else list(lbl)
             if window_size > 1:
@@ -219,8 +219,10 @@ class Cascades:
                 for k in k_values:
                     kwargs = dict(k=k, local=local)
                     meas = measure(df[c], **kwargs)
-                    B.append({'Subject': lbl, 'Feature': c, **meas})
-        return pd.DataFrame(B, columns=cols)
+                    B.append({**{k: v for k, v in zip(lbl, trajectory_group)},
+                              **{k: v for k, v in zip(c, casc.columns.names)},
+                              **meas})
+        return pd.DataFrame(B)#, columns=cols)
 
     def batch_pairwise_measure(self, trajectory_group, measure, measure_name,
                                src_cols=None, dest_cols=None, window_size=1,
