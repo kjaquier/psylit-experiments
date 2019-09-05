@@ -66,8 +66,8 @@
             "console": "integratedTerminal",
             "args": [
                 "BlockEntropy_StimulusResponse",
-                "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
-                "data\\block_entropy"
+                "data\\dev\\processed\\EN_*",
+                "data\\dev\\experiments"
             ]
         },
         {
