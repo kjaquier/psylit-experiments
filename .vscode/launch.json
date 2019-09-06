@@ -71,6 +71,18 @@
             ]
         },
         {
+            "name": "Block entropy (dev)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\run_experiment.py",
+            "console": "integratedTerminal",
+            "args": [
+                "BlockEntropy_StimulusResponse",
+                "data\\dev\\processed\\EN_*",
+                "data\\dev\\experiments"
+            ]
+        },
+        {
             "name": "Apparent Transfer entropy (dev)",
             "type": "python",
             "request": "launch",

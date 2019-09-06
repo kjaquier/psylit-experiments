@@ -125,10 +125,14 @@ class Cascades:
     #    self.casc.columns = pd.MultiIndex.from_tuples(map(mapper, self.casc.columns))
 
 
-    def group_columns(self, by, func):
-        new_casc = Cascades(self.casc
-                            .groupby(by, axis='columns')
-                            .apply(lambda c: c.agg(func, axis=1).astype(np.int8)))
+    def group_columns(self, by, func, use_dask=False):
+        df = dd(self.casc) if use_dask else self.casc
+        processed = (df
+                     .groupby(by, axis='columns')
+                     .apply(lambda c: c.agg(func, axis=1).astype(np.int8)))
+        if use_dask:
+            processed = processed.compute()
+        new_casc = Cascades(processed)
 
         return new_casc
 
@@ -171,15 +175,20 @@ class Cascades:
         return Cascades(casc)
     
     def pair(self, sources, destinations, keep_single=(), split=' & ', name_fmt="{src}{split}{dst}"):
-        casc = self.casc.copy()
-        singles = [(c, casc.pop(c)) for c in keep_single]
-        pairs = list(it.product(sources, destinations))
+        casc = self.casc
+        pairs = [
+            (s, d)
+            for s in sources
+            for d in destinations
+            if s not in keep_single
+            if d not in keep_single
+        ]
         df = pd.DataFrame({
             #name_fmt.format(src=s, split=split, dst=d): casc[s] * casc[d]
             (s, d): casc[s] * casc[d]
             for s, d in pairs})
-        for c_name, c in singles:
-            df[c_name] = c
+        for c_name in keep_single:
+            df[c_name] = casc[c_name]
         
         df.columns = pd.MultiIndex.from_tuples(list(df.columns))
         return Cascades(df)
@@ -326,7 +335,7 @@ class MultiCascades:
     def from_csvs(cls, files, document_col='Document'):
         doc_name = lambda f: file_parts(f)[0]
         return cls.from_cascades(
-            (Cascades.from_csv(f) for f in files),
+            (Cascades.from_csv(f) for f in progress(files)),
             document_values=list(map(doc_name, files)),
             document_col=document_col,
         )
@@ -395,22 +404,29 @@ def map_col_to_stimulus_response(col):
     return ('Stimulus', feat)
 
 
-def features_transform(casc, column_grouper):
+def features_transform(casc, column_grouper, use_dask=False):
     keep_single = ['neg', 'R_unknown']
+    print('pairing...')
     #name_fmt=lambda src, dst: f"{src[2:]} {dst[2:]}".replace('_',' ').title())
     casc = casc.pair(casc.match_cols(lambda c: c.startswith('R_') and c not in keep_single),
                      casc.match_cols(lambda c: c.startswith(
                          'L_') and c not in keep_single),
                      keep_single=keep_single)
+    print('renaming...')
     casc.rename_cols(lambda c: c.replace('R_', '').replace('L_', '').title())
+    print('splitting...')
     casc.split_cols()
 
     def str_join_grouper_decorator(col_tuple):
         return '_'.join(column_grouper(col_tuple))
 
-    casc = casc.group_columns(str_join_grouper_decorator, 'any')
+    print('grouping...')
+    casc = casc.group_columns(str_join_grouper_decorator, 'any', use_dask=use_dask)
+    print('splitting...')
     casc.split_cols()
+    print('setting level...')
     casc.set_column_levels(['Category', 'Feature'])
+    print('removing...')
     casc.remove_cols([
         ('Response', 'Positive'),
         ('Response', 'Negative'),
