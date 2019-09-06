@@ -12,7 +12,7 @@ from functools import partial
 from IPython.display import display
 import pandas as pd
 import numpy as np
-import dask.dataframe as dd
+import dask
 
 from utils.misc import progress
 from utils.io import file_parts
@@ -126,7 +126,7 @@ class Cascades:
 
 
     def group_columns(self, by, func, use_dask=False):
-        df = dd(self.casc) if use_dask else self.casc
+        df = dask.dataframe(self.casc) if use_dask else self.casc
         processed = (df
                      .groupby(by, axis='columns')
                      .apply(lambda c: c.agg(func, axis=1).astype(np.int8)))
@@ -192,6 +192,26 @@ class Cascades:
         
         df.columns = pd.MultiIndex.from_tuples(list(df.columns))
         return Cascades(df)
+
+    def pair_dask(self, sources, destinations, keep_single=(), split=' & ', name_fmt="{src}{split}{dst}"):
+        casc = self.casc
+        pairs = [
+            (s, d)
+            for s in sources
+            for d in destinations
+            if s not in keep_single
+            if d not in keep_single
+        ]
+        pair_cascs = lambda c, s, d: {(s, d): c[s] * c[d]}
+        paired = [dask.delayed(pair_cascs)(casc, s, d) for s, d in pairs]
+        df = dask.dataframe.from_delayed(paired)
+        df.assign(**{
+            c_name: casc[c_name]
+            for c_name in keep_single
+        })
+
+        df.columns = pd.MultiIndex.from_tuples(list(df.columns))
+        return df
 
     def memory_size(self):
         return sys.getsizeof(self.casc)
@@ -340,6 +360,11 @@ class MultiCascades:
             document_col=document_col,
         )
 
+    def pair_dask(self, sources, destinations, keep_single=(), split=' & ', name_fmt="{src}{split}{dst}"):
+        casc = Cascades(self.casc)
+        df = casc.pair_dask(sources, destinations, keep_single, split, name_fmt)
+        return DaskMultiCascades(df)
+
     def pair(self, sources, destinations, keep_single=(), split=' & ', name_fmt="{src}{split}{dst}"):
         # Copy of Cascades.pair
         casc = self.casc.copy()
@@ -406,27 +431,21 @@ def map_col_to_stimulus_response(col):
 
 def features_transform(casc, column_grouper, use_dask=False):
     keep_single = ['neg', 'R_unknown']
-    print('pairing...')
     #name_fmt=lambda src, dst: f"{src[2:]} {dst[2:]}".replace('_',' ').title())
     casc = casc.pair(casc.match_cols(lambda c: c.startswith('R_') and c not in keep_single),
                      casc.match_cols(lambda c: c.startswith(
                          'L_') and c not in keep_single),
                      keep_single=keep_single)
-    print('renaming...')
+    # casc = Cascades(casc.compute())
     casc.rename_cols(lambda c: c.replace('R_', '').replace('L_', '').title())
-    print('splitting...')
     casc.split_cols()
 
     def str_join_grouper_decorator(col_tuple):
         return '_'.join(column_grouper(col_tuple))
 
-    print('grouping...')
     casc = casc.group_columns(str_join_grouper_decorator, 'any', use_dask=use_dask)
-    print('splitting...')
     casc.split_cols()
-    print('setting level...')
     casc.set_column_levels(['Category', 'Feature'])
-    print('removing...')
     casc.remove_cols([
         ('Response', 'Positive'),
         ('Response', 'Negative'),
