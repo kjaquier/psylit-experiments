@@ -5,9 +5,10 @@ from typing import Optional, List
 import pandas as pd
 import pyinform
 
-from models.cascades import Cascades, FEATURE_TRANSFORMERS
+from models.cascades import Cascades, transform_to_stimulus_response
 import models.info_dynamics as info_dynamics
-from .common import BaseCascadeExperiment, Setup
+from .common import Setup
+from .stim_res import BaseStimResCascadeExperiment
 
 
 logger = logging.getLogger()
@@ -29,17 +30,14 @@ class CompleteTransferEntropy_StimulusResponse_Setup(Setup):
     min_p_value: float = 0.05
 
 
-class CompleteTransferEntropy_StimulusResponse(BaseCascadeExperiment):
+class CompleteTransferEntropy_StimulusResponse(BaseStimResCascadeExperiment):
 
     exp_name = 'ctfrent_stimres'
     setup_class = CompleteTransferEntropy_StimulusResponse_Setup
     result_keys = {'persubj'}
 
     def _execute(self, data, **kwargs):
-        raw_casc: Cascades = data['cascades']
-        
-        transform_function = FEATURE_TRANSFORMERS['StimulusResponse']
-        casc = transform_function(raw_casc)
+        casc: Cascades = data['cascades']
 
         get_args = lambda col: {
             'k': self.setup.k_values[0],
@@ -62,17 +60,14 @@ class CompleteTransferEntropy_StimulusResponse(BaseCascadeExperiment):
         }
 
 
-class TransferEntropy_StimulusResponse(BaseCascadeExperiment):
+class TransferEntropy_StimulusResponse(BaseStimResCascadeExperiment):
 
     exp_name = 'tfrent_stimres'
     setup_class = TransferEntropy_StimulusResponse_Setup
     result_keys = {'persubj'}
 
     def _execute(self, data, **kwargs):
-        raw_casc: Cascades = data['cascades']
-        
-        transform_function = FEATURE_TRANSFORMERS['StimulusResponse']
-        casc = transform_function(raw_casc)
+        casc: Cascades = data['cascades']
 
         measure = {
             'apparent': info_dynamics.apparent_tfr_entropy,

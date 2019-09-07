@@ -89,9 +89,10 @@
             "program": "${workspaceFolder}\\src\\run_experiment.py",
             "console": "integratedTerminal",
             "args": [
+                "-e",
                 "TransferEntropy_StimulusResponse",
-                "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
-                "data\\analytics"
+                "data\\dev\\experiments\\stimres\\*",
+                "data\\dev\\experiments"
             ]
         },
         {
@@ -104,6 +105,18 @@
                 "CompleteTransferEntropy_StimulusResponse",
                 "data\\processed\\train\\?\\EN_*_Dickens,Charles_*.csv.zip",
                 "data\\analytics"
+            ]
+        },
+        {
+            "name": "Transform to Stimulus-Response (dev)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\run_experiment.py",
+            "console": "integratedTerminal",
+            "args": [
+                "StimulusResponse",
+                "data\\dev\\processed\\EN_*",
+                "data\\dev\\experiments"
             ]
         }
     ]
