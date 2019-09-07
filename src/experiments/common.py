@@ -35,8 +35,8 @@ class BaseExperiment(ABC):
         self.no_rerun = no_rerun
 
     def run(self, **kwargs):
-        if self.no_rerun and self._has_already_run(self.setup.output_path, self.run_name):
-            self._logger.info("Skipped: %s (already exists)", self.setup.output_dest)
+        if self.no_rerun and self._has_already_run(self.setup.output_dest, self.run_name):
+            self._logger.info("Skipped: %s (already exists)", self.run_name)
             return
         
         data: DataType = self._load_data()
