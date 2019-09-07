@@ -21,6 +21,11 @@ ResultType = Dict[str, pd.DataFrame]
 DataType = Dict[str, pd.DataFrame]
 
 
+class BaseStore(ABC):
+    # should use this to properly decouple Experiment from underlying data sources and formats
+    pass
+
+
 class BaseExperiment(ABC):
 
     exp_name = 'experiment'
@@ -69,7 +74,9 @@ class BaseExperiment(ABC):
 
     @classmethod
     def _has_already_run(cls, output_path, run_name):
-        return cls._get_run_output_dir(output_path, run_name).exists()
+        run_dir = cls._get_run_output_dir(output_path, run_name)
+        run_dir_exists = run_dir.exists()
+        return run_dir_exists
 
     @classmethod
     def _get_run_output_dir(cls, output_path, run_name):
@@ -96,6 +103,8 @@ class BaseExperiment(ABC):
     def _get_format_for_type(data_type):
         if issubclass(data_type, pd.DataFrame):
             return EXPERIMENTS_PARAMETERS['extensions']['dataframe']
+        if issubclass(data_type, Cascades):
+            return EXPERIMENTS_PARAMETERS['extensions']['cascades']
         raise KeyError(f'No format implemented for type {data_type}')
 
     def save_results(self):
@@ -112,14 +121,15 @@ class BaseExperiment(ABC):
             res_value.to_csv(output_filename)  # TODO separate class for reading/writing data in different formats
 
     @classmethod
-    def load_results_for_run(cls, output_path, run_name):
+    def load_results_for_run(cls, output_path, run_name, datatype=pd.DataFrame, loading_args=None):
         if not cls._has_already_run(output_path, run_name):
             raise Exception(f"No results found in '{output_path}' for run '{run_name}'")
         results = {}
+        loading_args = {'index_col': False, **(loading_args or {})}
         for res_name in cls.result_keys:
-            filename = cls._get_path_for_result(output_path, run_name, res_name, pd.DataFrame)
+            filename = cls._get_path_for_result(output_path, run_name, res_name, datatype)
             logging.info("Loading %s", filename)
-            results[res_name] = pd.read_csv(filename, index_col=False)
+            results[res_name] = datatype(pd.read_csv(filename, **loading_args))
         return results
 
     @classmethod
@@ -155,3 +165,4 @@ class BaseCascadeExperiment(BaseExperiment):
         data_source = self.setup.data_source
         raw_casc = Cascades.from_csv(data_source['doc_path'])
         return {'cascades': raw_casc}
+

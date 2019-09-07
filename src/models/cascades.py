@@ -49,7 +49,7 @@ class Cascades:
         return casc
         
     @staticmethod
-    def from_csv(csv_path, add_document_index=False):
+    def from_csv(csv_path, add_document_index=False, **kwargs):
         document_name = file_parts(csv_path)[0] if add_document_index else None
 
         def get_dtype(col_name):
@@ -60,12 +60,19 @@ class Cascades:
         col_names = pd.read_csv(csv_path, nrows=0, engine='python').columns
         
         dtype_map = {k: get_dtype(k) for k in col_names}
-        raw_df = pd.read_csv(csv_path, 
-                             index_col=['Subject', 't'],
-                             dtype=dtype_map,
-                             )
+        kwargs = {
+            **dict(
+                dtype=dtype_map,
+                index_col=['Subject', 't'],
+            ),
+            **kwargs
+        }
+        raw_df = pd.read_csv(csv_path, **kwargs)
         return Cascades.from_raw_df(raw_df, document_name=document_name)
         
+    def to_csv(self, *args, **kwargs):
+        return self.casc.to_csv(*args, **kwargs)
+    
     def _repr_html_(self):
         return display(self.casc)
     
@@ -289,6 +296,9 @@ class Cascades:
                                   src_cols=None, dest_cols=None, window_size=1,
                                   get_args=(lambda src, dst: {})):
         casc = self.casc
+        print("Columns: ", casc.columns)
+        print("Index: ", casc.index)
+        print("trajectory_group: ", trajectory_group)
         src_cols = list(src_cols or casc.columns.values)
         dest_cols = list(dest_cols or casc.columns.values)
 
@@ -456,6 +466,6 @@ def features_transform(casc, column_grouper, use_dask=False):
     return casc
 
 
-FEATURE_TRANSFORMERS = {
-    'StimulusResponse': partial(features_transform, column_grouper=map_col_to_stimulus_response),
-}
+def transform_to_stimulus_response(casc, use_dask=False):
+    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+

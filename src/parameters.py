@@ -62,9 +62,11 @@ EXPERIMENTS_PARAMETERS = dict(
             cols=list(product(['Stimulus','Response'], ['Valence', 'Fear'])),
             min_p_value=0.05,
         ),
+        StimulusResponse=dict(),
     ),
     extensions=dict(
         dataframe='.csv',
+        cascades='.csv.zip',
     ),
 )
 

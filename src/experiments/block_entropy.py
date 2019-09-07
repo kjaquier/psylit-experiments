@@ -1,9 +1,10 @@
 from dataclasses import dataclass
 from typing import Iterable
 
-from models.cascades import Cascades, FEATURE_TRANSFORMERS
+from models.cascades import Cascades, transform_to_stimulus_response
 from models.info_dynamics import fast_block_entropy
-from .common import BaseCascadeExperiment, Setup
+from .common import Setup
+from .stim_res import BaseStimResCascadeExperiment
 
 
 @dataclass
@@ -13,17 +14,14 @@ class BlockEntropy_StimulusResponse_Setup(Setup):
     window_size: int = 1
 
 
-class BlockEntropy_StimulusResponse(BaseCascadeExperiment):
+class BlockEntropy_StimulusResponse(BaseStimResCascadeExperiment):
 
     exp_name = 'blockent_stimres'
     setup_class = BlockEntropy_StimulusResponse_Setup
     result_keys = {'persubj'}
 
     def _execute(self, data, **kwargs):
-        raw_casc: Cascades = data['cascades']
-        
-        transform_function = FEATURE_TRANSFORMERS['StimulusResponse']
-        casc = transform_function(raw_casc)
+        casc: Cascades = data['cascades']
         
         be = casc.batch_single_measure(
             trajectory_group='Subject',

@@ -4,7 +4,7 @@ from glob import glob
 
 from utils.misc import progress
 from utils.io import file_parts
-from experiments import block_entropy as blockent_exp, transfer_entropy as tfr_exp
+from experiments import block_entropy, transfer_entropy, stim_res
 from parameters import LOGGING_PARAMETERS, EXPERIMENTS_PARAMETERS
 
 logging.basicConfig(**LOGGING_PARAMETERS)
@@ -12,9 +12,10 @@ logging.basicConfig(**LOGGING_PARAMETERS)
 EXPERIMENTS = {
     c.__name__: c
     for c in [
-        blockent_exp.BlockEntropy_StimulusResponse,
-        tfr_exp.TransferEntropy_StimulusResponse,
-        tfr_exp.CompleteTransferEntropy_StimulusResponse,
+        block_entropy.BlockEntropy_StimulusResponse,
+        transfer_entropy.TransferEntropy_StimulusResponse,
+        transfer_entropy.CompleteTransferEntropy_StimulusResponse,
+        stim_res.StimulusResponse,
     ]
 }
 
@@ -22,6 +23,7 @@ EXPERIMENTS = {
 def main(experiment: f"Name of experiment to run. Available: {'|'.join(EXPERIMENTS.keys())}",
          input_filename: "File name or pattern of input file",
          output_dir: "Folder to write the results to",
+         from_experiment: ("Input is a directory with the results from another experiment", 'flag', 'e')=False,
          skip_if_exists: ("Skip experiment when result already exists", 'flag', 'k')=False,
          **kwargs):
 
@@ -34,10 +36,17 @@ def main(experiment: f"Name of experiment to run. Available: {'|'.join(EXPERIMEN
     for filename in progress(files, print_func=logging.info):
         path = pathlib.Path(filename)
 
-        run_name = file_parts(path)[0]
+        if from_experiment:
+            # each experiment is a folder, each run is a subfolder
+            doc_path = path 
+            run_name = path.name
+        else:
+            # each run is a file, which folder contains it doesn't matter
+            doc_path = path
+            run_name = file_parts(path)[0]
 
         setup = Experiment.make_setup(
-            data_source={'doc_path': path},
+            data_source={'doc_path': doc_path},
             output_dest=output_path,
             **EXPERIMENTS_PARAMETERS['experiments'][Experiment.__name__],
             **kwargs,
