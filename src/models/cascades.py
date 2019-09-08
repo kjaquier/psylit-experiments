@@ -296,9 +296,6 @@ class Cascades:
                                   src_cols=None, dest_cols=None, window_size=1,
                                   get_args=(lambda src, dst: {})):
         casc = self.casc
-        print("Columns: ", casc.columns)
-        print("Index: ", casc.index)
-        print("trajectory_group: ", trajectory_group)
         src_cols = list(src_cols or casc.columns.values)
         dest_cols = list(dest_cols or casc.columns.values)
 
