@@ -439,12 +439,20 @@ def map_col_to_stimulus_response(col):
     return ('Stimulus', feat)
 
 
+def map_col_to_eps(col):
+    role, ent, feat = col
+    if not ent and not feat:
+        return ('Other', role)
+    if (role, ent) == ('Agent', 'Subject'):
+        return ('Response', feat)
+    return ('Stimulus', feat)
+
+
 def features_transform(casc, column_grouper, use_dask=False):
     keep_single = ['neg', 'R_unknown']
     #name_fmt=lambda src, dst: f"{src[2:]} {dst[2:]}".replace('_',' ').title())
     casc = casc.pair(casc.match_cols(lambda c: c.startswith('R_') and c not in keep_single),
-                     casc.match_cols(lambda c: c.startswith(
-                         'L_') and c not in keep_single),
+                     casc.match_cols(lambda c: c.startswith('L_') and c not in keep_single),
                      keep_single=keep_single)
     # casc = Cascades(casc.compute())
     casc.rename_cols(lambda c: c.replace('R_', '').replace('L_', '').title())
@@ -468,4 +476,7 @@ def features_transform(casc, column_grouper, use_dask=False):
 
 def transform_to_stimulus_response(casc, use_dask=False):
     return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+
+def transform_to_eps(casc, use_dask=False):
+    return features_transform(casc, map_col_to_eps, use_dask=use_dask)
 
