@@ -427,24 +427,6 @@ class DaskMultiCascades:
         return self.df[['Document', 'Subject']].drop_duplicates()
             
 
-def map_col_to_stimulus_response(col):
-    role, ent, feat = col
-    if not ent and not feat:
-        return ('Other', role)
-    if (role, ent) == ('Agent', 'Subject'):
-        return ('Response', feat)
-    return ('Stimulus', feat)
-
-
-def map_col_to_eps(col):
-    role, ent, feat = col
-    if not ent and not feat:
-        return ('Other', role)
-    if (role, ent) == ('Agent', 'Subject'):
-        return ('Response', feat)
-    return ('Stimulus', feat)
-
-
 def features_transform(casc, column_grouper, use_dask=False):
     keep_single = ['neg', 'R_unknown']
     #name_fmt=lambda src, dst: f"{src[2:]} {dst[2:]}".replace('_',' ').title())
@@ -472,8 +454,47 @@ def features_transform(casc, column_grouper, use_dask=False):
 
 
 def transform_to_stimulus_response(casc, use_dask=False):
+    def map_col_to_stimulus_response(col):
+        role, ent, feat = col
+        if not ent and not feat:
+            return ('Other', role)
+        if (role, ent) == ('Agent', 'Subject'):
+            return ('Response', feat)
+        return ('Stimulus', feat)
+
+    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+    
+
+def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
+    # Baseline 2
+    def map_col_to_stimulus_response(col):
+        role, ent, feat = col
+        if not ent and not feat:
+            return ('Other', role)
+        if ent == 'Subject':
+            return ('Response', feat)
+        return ('Stimulus', feat)
+
     return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
 
+
+def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
+    # Baseline 3
+    def map_col_to_stimulus_response(col):
+        role, ent, feat = col
+        if not ent and not feat:
+            return ('Other', role)
+        if ent == 'Subject':
+            return ('Response', feat)
+        return ('Stimulus', feat)
+
+    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+
+
 def transform_to_eps(casc, use_dask=False):
+    
+    def map_col_to_eps(col):
+        raise NotImplemented()
+
     return features_transform(casc, map_col_to_eps, use_dask=use_dask)
 
