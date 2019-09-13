@@ -104,24 +104,24 @@ def test_coalesce_entropy_rate():
     entropy_rate(history_series, k=1)
 
 
-# def test_coalesce_transfer_entropy():
-#     # T(x^k->y^k) ~ T_k(x->y)
-#     x = (np.random.random([L]) > .5).astype(np.uint8)
-#     y = np.logical_xor(x, (np.random.random([L]) > .5)).astype(np.uint8)
-#     for k in range(1, 29):
-#         xc = coalesce_history(x, k)
-#         yc = coalesce_history(y, k)
-#         assert np.isclose(transfer_entropy(xc, y[:L-k+1], k=1), transfer_entropy(x, y, k=k), atol=1.e-3)
-#         assert np.isclose(transfer_entropy(yc, x[:L-k+1], k=1), transfer_entropy(y, x, k=k), atol=1.e-3)
+def test_coalesce_transfer_entropy():
+    # T(x^k->y^k) ~ T_k(x->y)
+    x = (np.random.random([L]) > .5).astype(np.uint8)
+    y = np.logical_xor(x, (np.random.random([L]) > .5)).astype(np.uint8)
+    for k in range(1, 29):
+        xc = coalesce_history(x, k)
+        yc = coalesce_history(y, k)
+        assert np.isclose(transfer_entropy(xc, y[:L-k+1], k=1), transfer_entropy(x, y, k=k), atol=1.e-3)
+        assert np.isclose(transfer_entropy(yc, x[:L-k+1], k=1), transfer_entropy(y, x, k=k), atol=1.e-3)
 
-#     # Doesn't overflow as early
-#     for k in range(1, 100):
-#         history_series = coalesce_history(series, 100)
-#         transfer_entropy(history_series, k=1)
+    # Doesn't overflow as early
+    for k in range(1, 100):
+        history_series = coalesce_history(series, 100)
+        transfer_entropy(history_series, k=1)
 
-#     # for k in range(29, 50):
-#     #     history_series = coalesce_history(series, k)
-#     #     print(k, transfer_entropy(history_series, k=1))
+    # for k in range(29, 50):
+    #     history_series = coalesce_history(series, k)
+    #     print(k, transfer_entropy(history_series, k=1))
 
 
 if __name__ == "__main__":
