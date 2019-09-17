@@ -63,6 +63,7 @@ EXPERIMENTS_PARAMETERS = dict(
             min_p_value=0.05,
         ),
         StimulusResponse=dict(),
+        StimulusResponse_NoSemanticRole=dict(),
     ),
     extensions=dict(
         dataframe='.csv',

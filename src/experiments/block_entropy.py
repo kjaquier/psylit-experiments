@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Iterable
 
-from models.cascades import Cascades, transform_to_stimulus_response
+from models.cascades import Cascades
 from models.info_dynamics import fast_block_entropy
 from .common import Setup
 from .stim_res import BaseStimResCascadeExperiment
