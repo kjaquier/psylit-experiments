@@ -16,6 +16,7 @@ EXPERIMENTS = {
         transfer_entropy.TransferEntropy_StimulusResponse,
         transfer_entropy.CompleteTransferEntropy_StimulusResponse,
         stim_res.StimulusResponse,
+        stim_res.StimulusResponse_NoSemanticRole,
     ]
 }
 
@@ -31,7 +32,7 @@ def main(experiment: f"Name of experiment to run. Available: {'|'.join(EXPERIMEN
 
     output_path = pathlib.Path(output_dir)
 
-    files = list(glob(input_filename))
+    files = list(glob(input_filename, recursive=True))
     logging.info("%s files matching '%s'", len(files), input_filename)
     for filename in progress(files, print_func=logging.info):
         path = pathlib.Path(filename)

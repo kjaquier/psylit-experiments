@@ -5,7 +5,7 @@ from typing import Optional, List
 import pandas as pd
 import pyinform
 
-from models.cascades import Cascades, transform_to_stimulus_response
+from models.cascades import Cascades
 import models.info_dynamics as info_dynamics
 from .common import Setup
 from .stim_res import BaseStimResCascadeExperiment

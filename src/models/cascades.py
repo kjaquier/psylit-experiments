@@ -478,19 +478,6 @@ def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
     return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
 
 
-def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
-    # Baseline 3
-    def map_col_to_stimulus_response(col):
-        role, ent, feat = col
-        if not ent and not feat:
-            return ('Other', role)
-        if ent == 'Subject':
-            return ('Response', feat)
-        return ('Stimulus', feat)
-
-    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
-
-
 def transform_to_eps(casc, use_dask=False):
     
     def map_col_to_eps(col):
