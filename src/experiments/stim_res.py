@@ -29,7 +29,7 @@ class StimulusResponse(BaseCascadeExperiment):
 
 class StimulusResponse_NoSemanticRole(BaseCascadeExperiment):
 
-    exp_name = 'stimres_nosemrole'
+    exp_name = 'stimres'
     setup_class = StimulusResponse_Setup
     result_keys = {'cascades'}
 
