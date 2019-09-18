@@ -2,7 +2,7 @@ import pathlib
 from dataclasses import dataclass
 from typing import Iterable
 
-from models.cascades import Cascades, transform_to_stimulus_response_no_semantic_role
+from models.cascades import Cascades, transform_to_stimulus_response, transform_to_stimulus_response_no_semantic_role
 from .common import BaseExperiment, BaseCascadeExperiment, Setup
 
 
