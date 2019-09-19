@@ -92,6 +92,17 @@ class Cascades:
     def match_cols(self, *match_funcs):
         return [c for c in self.casc.columns if all(f(c) for f in match_funcs)]
         
+    def shuffle_index(self, col):
+        self.casc.reset_index(col, inplace=True)
+        self.casc[col] = np.random.shuffle(self.casc[col].values)
+        self.casc.set_index(col, append=True, inplace=True)
+
+    def randomise_index(self, col):
+        self.casc.reset_index(col, inplace=True)
+        unique_vals = self.casc[col].unique()
+        self.casc[col] = np.random.choice(unique_vals, len(self.casc[col]))
+        self.casc.set_index(col, append=True, inplace=True)
+
     def split_cols(self, split='_', default=''):
 
         def col_len(col):
@@ -452,22 +463,21 @@ def features_transform(casc, column_grouper, use_dask=False):
     ])
     return casc
 
+def _map_col_to_stimulus_response(col):
+    role, ent, feat = col
+    if not ent and not feat:
+        return ('Other', role)
+    if (role, ent) == ('Agent', 'Subject'):
+        return ('Response', feat)
+    return ('Stimulus', feat)
 
 def transform_to_stimulus_response(casc, use_dask=False):
-    def map_col_to_stimulus_response(col):
-        role, ent, feat = col
-        if not ent and not feat:
-            return ('Other', role)
-        if (role, ent) == ('Agent', 'Subject'):
-            return ('Response', feat)
-        return ('Stimulus', feat)
-
-    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+    return features_transform(casc, _map_col_to_stimulus_response, use_dask=use_dask)
     
 
 def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
-    # Baseline 2
-    def map_col_to_stimulus_response(col):
+    # Baseline 1
+    def map_col(col):
         role, ent, feat = col
         if not ent and not feat:
             return ('Other', role)
@@ -475,7 +485,23 @@ def transform_to_stimulus_response_no_semantic_role(casc, use_dask=False):
             return ('Response', feat)
         return ('Stimulus', feat)
 
-    return features_transform(casc, map_col_to_stimulus_response, use_dask=use_dask)
+    return features_transform(casc, map_col, use_dask=use_dask)
+
+
+def transform_to_stimulus_response_random_subject_uniform(casc, use_dask=False):
+    # Baseline 2a
+
+    casc.randomise_index('Subject')
+
+    return features_transform(casc, _map_col_to_stimulus_response, use_dask=use_dask)
+
+
+def transform_to_stimulus_response_random_subject_probabilistic(casc, use_dask=False):
+    # Baseline 2b
+
+    casc.shuffle_index('Subject')
+
+    return features_transform(casc, _map_col_to_stimulus_response, use_dask=use_dask)
 
 
 def transform_to_eps(casc, use_dask=False):

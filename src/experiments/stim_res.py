@@ -2,7 +2,7 @@ import pathlib
 from dataclasses import dataclass
 from typing import Iterable
 
-from models.cascades import Cascades, transform_to_stimulus_response, transform_to_stimulus_response_no_semantic_role
+from models.cascades import *
 from .common import BaseExperiment, BaseCascadeExperiment, Setup
 
 
@@ -37,6 +37,38 @@ class StimulusResponse_NoSemanticRole(BaseCascadeExperiment):
         raw_casc: Cascades = data['cascades']
         
         casc = transform_to_stimulus_response_no_semantic_role(raw_casc)
+
+        return {
+            'cascades': casc,
+        }
+
+
+class StimulusResponse_RandSubjUnif(BaseCascadeExperiment):
+
+    exp_name = 'stimres'
+    setup_class = StimulusResponse_Setup
+    result_keys = {'cascades'}
+
+    def _execute(self, data, **kwargs):
+        raw_casc: Cascades = data['cascades']
+        
+        casc = transform_to_stimulus_response_random_subject_uniform(raw_casc)
+
+        return {
+            'cascades': casc,
+        }
+
+
+class StimulusResponse_RandSubjProb(BaseCascadeExperiment):
+
+    exp_name = 'stimres'
+    setup_class = StimulusResponse_Setup
+    result_keys = {'cascades'}
+
+    def _execute(self, data, **kwargs):
+        raw_casc: Cascades = data['cascades']
+        
+        casc = transform_to_stimulus_response_random_subject_probabilistic(raw_casc)
 
         return {
             'cascades': casc,

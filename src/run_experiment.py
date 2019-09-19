@@ -17,6 +17,8 @@ EXPERIMENTS = {
         transfer_entropy.CompleteTransferEntropy_StimulusResponse,
         stim_res.StimulusResponse,
         stim_res.StimulusResponse_NoSemanticRole,
+        stim_res.StimulusResponse_RandSubjUnif,
+        stim_res.StimulusResponse_RandSubjProb,
     ]
 }
 

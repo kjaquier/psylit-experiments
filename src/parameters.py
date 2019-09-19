@@ -64,6 +64,8 @@ EXPERIMENTS_PARAMETERS = dict(
         ),
         StimulusResponse=dict(),
         StimulusResponse_NoSemanticRole=dict(),
+        StimulusResponse_RandSubjUnif=dict(),
+        StimulusResponse_RandSubjProb=dict(),
     ),
     extensions=dict(
         dataframe='.csv',
