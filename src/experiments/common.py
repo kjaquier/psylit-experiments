@@ -136,7 +136,7 @@ class BaseExperiment(ABC):
         loading_args = {'index_col': False, **(loading_args or {})}
         for res_name in cls.result_keys:
             filename = cls._get_path_for_result(output_path, run_name, res_name, datatype)
-            logging.info("Loading %s", filename)
+            logging.debug("Loading %s", filename)
             results[res_name] = datatype(pd.read_csv(filename, **loading_args))
         return results
 
